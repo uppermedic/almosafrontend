@@ -1,0 +1,61 @@
+.cooperation {
+    .hero {
+        background-size: cover;
+        height: 700px !important;
+        padding: 50px 0;
+        position: relative;
+        .top_left_title {
+            color: #fff;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 40%;
+            h2 {
+                font-size: 55px;
+                font-weight: bold;
+            }
+        }
+        @include respond-below(xl) {
+            .top_left_title {
+                width: auto;
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+        @include respond-below(sm) {
+            .top_left_title {
+                position: unset;
+            }
+        }
+        .right_ticket {
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            width: 70%;
+            background-color: #ffffff85;
+            text-align: right;
+            padding: 50px 0;
+            div {
+                display: inline-block;
+                margin-right: 50px;
+            }
+        }
+        @include respond-below(xl) {
+            .right_ticket {
+                width: 100%;
+                text-align: center;
+            }   
+        }
+        @include respond-below(sm) {
+            .right_ticket {
+                .title {
+                    margin: 20px auto;
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }   
+        }
+    }
+}

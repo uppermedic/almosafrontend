@@ -1,0 +1,14 @@
+._single-post-page{
+    .content-wrapper {
+        .inner-content{
+            padding: 80px 0;
+            position: relative;
+        }
+        h2 {
+            @include sectionHeading($almoose-dark-green)
+        }
+
+        
+        // 
+    }
+}

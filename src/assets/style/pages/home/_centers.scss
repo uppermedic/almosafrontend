@@ -1,0 +1,59 @@
+section.home-centers {
+  padding: 60px 0 100px 0;
+  position: relative;
+  h3.section-title {
+    font-size: $heading-size;
+    line-height: 73px;
+    color: $primary-color;
+    font-weight: bold;
+    font-family: Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+    padding-bottom: 28px;
+    @include Border-bottom(3px, $primary-color);
+  }
+
+  .owl-nav {
+    .owl-prev:hover,
+    .owl-next:hover .owl-prev:focus,
+    .owl-next:focus,
+    .owl-prev:active,
+    .owl-next:active {
+      background: #fff;
+      color: $secondary-color-light !important;
+      border: 2px solid $secondary-color-light !important;
+    }
+    .owl-prev,
+    .owl-next {
+      background: #fff;
+      border: 2px solid $secondary-color-light !important;
+      color: $secondary-color-light !important;
+      font-size: 20px;
+      padding: 0px 8px !important;
+      border-radius: 5px;
+    }
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      left: -60px;
+      transform: translateY(-50%);
+      @include respond-below(lg) {
+        position: relative;
+        top: 0;
+        left: -10px;
+        transform: translateY(0);
+      }
+    }
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      right: -60px;
+      transform: translateY(-50%);
+      @include respond-below(lg) {
+        position: relative;
+        top: 0;
+        right: -10px;
+        transform: translateY(0);
+      }
+    }
+  }
+}

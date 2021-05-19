@@ -1,0 +1,24 @@
+.stroke-management {
+  padding-bottom: 50px;
+  .second-post {
+    background-color: #47677a;
+    padding: 50px;
+    text-align: center;
+    p {
+      font-size: $paragraph-text-mob-size;
+      color: #fff;
+      text-align: left;
+      @include respond-below(xl) {
+        margin-top: 50px;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .items-content {
+    text-align: center;
+    min-height: 500px;
+  }
+}

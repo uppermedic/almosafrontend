@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1242" width="1920" height="1242">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M0 -373L1920 -373L1920 2502L0 2502Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.8;fill: #55b047 } 
+		.shp1 { opacity: 0.302;fill: #55b047;stroke: #707070 } 
+	</style>
+	<g id="inpatient" clip-path="url(#cp1)">
+		<g id="title">
+			<path id="Path 39" class="shp0" d="M0 1241.42L988.42 906.88L988.42 528.7L0 0.21L0 1241.42Z" />
+			<path id="Rectangle 118" class="shp1" d="M988 530L1920 530L1920 906L988 906L988 530Z" />
+		</g>
+	</g>
+</svg>

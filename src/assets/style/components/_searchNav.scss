@@ -1,0 +1,32 @@
+.search-nav {
+  width: auto;
+  background-color: #ffffff;
+  @include Radius(20px);
+  padding: 2px 2px 2px 5px;
+  @include respond-below(lg) {
+    margin: 1em 0;
+  }
+  input {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+    &::placeholder {
+      color: $secondary-color-light;
+    }
+  }
+  .input-group-append .input-group-text {
+    // width: 53px;
+    // height: 55px;
+    background-color: $secondary-color-light;
+    color: #fff;
+    padding: 10px;
+    @include Radius(50%);
+    svg {
+      margin: 0;
+    }
+  }
+}

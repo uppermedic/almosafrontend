@@ -1,0 +1,59 @@
+.photo-Gallery {
+  .gallery {
+    h2 {
+      @include sectionHeading($almoosa-light-green-color);
+    }
+    .categories {
+      ul {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin-right: 10px;
+          margin-bottom: 25px;
+          a {
+            transition: 0.3s;
+            color: $primary-color;
+            padding: 8px 30px;
+            border: 1px solid $primary-color;
+            display: block;
+            font-size: 20px;
+            font-family: "diodrum-arabic";
+          }
+          &.active,
+          &:hover {
+            a {
+              background-color: $primary-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3)
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+    button {
+      color: #fff;
+      font-size: 37px;
+      line-height: 49px;
+      outline: none;
+      border: none;
+      background-color: $almoosa-light-green-color;
+      padding: 15px 80px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  }
+}

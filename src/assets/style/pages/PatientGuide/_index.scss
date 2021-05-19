@@ -1,0 +1,75 @@
+@import "./ForPatients";
+@import "./ForVisitors";
+@import "./HospitalAmenities";
+@import "./Directions";
+.patient-guide {
+  .guides {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      color: $primary-color;
+      font-size: $heading-size;
+      font-weight: bold;
+      @include Border-bottom(3px, $primary-color);
+      padding-bottom: 29px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+
+    .guide-card {
+      @include background-image;
+      position: relative;
+      min-height: 500px;
+      margin-top: 74px;
+      @include Radius(3px);
+      &:hover {
+        transition: 0.3s;
+        box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.16);
+        transform: translate(-2px, -2px);
+      }
+      .ribbon {
+        position: absolute;
+        bottom: 11.5%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.green {
+          background-color: rgba(
+            $color: $secondary-color-light,
+            $alpha: 0.85
+          );
+        }
+        &.blue {
+          background-color: rgba($color: $primary-color, $alpha: 0.85);
+        }
+        &.purple {
+          background-color: rgba(
+            $color: $secondary-bg-color,
+            $alpha: 0.85
+          );
+        }
+        &.brown {
+          background-color: rgba(
+            $color: $almoosa-brown-color,
+            $alpha: 0.85
+          );
+        }
+        h3 {
+          padding: 0;
+          margin: 0;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

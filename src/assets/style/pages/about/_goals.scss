@@ -1,0 +1,32 @@
+.goals{
+    padding-top: 30px;
+    padding-bottom: 100px;
+    @include background-image;
+    h2 {
+        color: $primary-color;
+        font-size: $heading-size;
+        font-weight: bold;
+        @include Border-bottom(3px, $primary-color);
+        padding-bottom: 29px;
+        @include respond-below(lg){
+            font-size: $heading-mob-size;
+        }
+        @include respond-below (sm) {
+            font-size: $heading-sm-size;
+        }
+    }  
+    p {
+    line-height: 58px;
+    font-size: $paragraph-text-size;
+    font-family: "diodrum-arabic-meduim";
+    @include respond-below(lg){
+        text-align: center;
+        line-height: 50px;
+        font-size: $paragraph-text-mob-size;
+    }
+    }
+
+    img{
+    display: block;
+    }
+}

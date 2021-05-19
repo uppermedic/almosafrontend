@@ -1,0 +1,154 @@
+.almoosa-doctors {
+  .our-doctors {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    h2 {
+      color: $primary-color;
+      font-size: $heading-size;
+      font-weight: bold;
+      @include Border-bottom(3px, $primary-color);
+      padding-bottom: 29px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+    .doctor-details {
+      padding-bottom: 110px;
+      @include Border-bottom(2px, rgba(#707070, 0.6));
+
+      .doctor-img {
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover .doctor-social {
+          opacity: 1;
+        }
+        .doctor-social {
+          text-align: center;
+          padding: 10px;
+          background-color: rgba($color: #c2c4c5, $alpha: 0.4);
+          position: absolute;
+          bottom: 0%;
+          width: 100%;
+          margin: auto;
+          border-radius: 10px 10px 0 0;
+          transition: all 0.5s ease-in-out;
+          opacity: 0;
+          i {
+            padding: 4px;
+            &:nth-child(1) {
+              color: #2867b2;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              color: #00acee;
+            }
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .doctor-name {
+        font-weight: bold;
+        font-size: $heading-size;
+        color: $almoose-dark-green;
+        @include respond-below(md) {
+          font-size: $heading-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $heading-sm-size;
+        }
+        & ~ p {
+          font-size: $sub-heading-size;
+          line-height: 47px;
+          font-weight: 300;
+          @include respond-below(md) {
+            font-size: $sub-heading-mob-size;
+          }
+          @include respond-below(sm) {
+            font-size: $sub-heading-sm-size;
+          }
+        }
+      }
+      .doctor-qualifications,
+      .doctor-position {
+        color: $secondary-color-purple;
+        font-weight: bold;
+        // font-size: 45px;
+        padding-bottom: 10px;
+        @include Border-bottom(3px, $secondary-color-purple);
+        font-size: $heading-size;
+        @include respond-below(md) {
+          font-size: $heading-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $heading-sm-size;
+        }
+        & ~ ul {
+          padding: 0;
+          list-style-position: inside;
+          li {
+            font-size: 20px;
+            font-weight: medium;
+            line-height: 53px;
+            margin-left: 0;
+            @include respond-below(sm) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .doctor-position {
+        color: $almoosa-brown-color;
+        border-color: $almoosa-brown-color;
+      }
+    }
+    .doctors-cards {
+      padding-top: 80px;
+      padding-bottom: 50px;
+
+      .card {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        margin-bottom: 50px;
+        border: 1px solid #eee;
+        width: 350px;
+        @include respond-below(md) {
+          margin: 20px auto;
+        }
+        &:hover {
+          border-color: rgba($primary-color, 0.5);
+          transform: translate(-2px, -2px);
+          box-shadow: 3px 3px 3px rgba($color: $primary-color, $alpha: 0.5);
+          .banner {
+            opacity: 1;
+          }
+        }
+        img {
+          width: 345px;
+          height: 350px;
+        }
+        .banner {
+          transition: opacity 0.5s ease-in-out;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+          text-align: center;
+          background-color: rgba($color: #c2c4c5, $alpha: 0.4);
+          opacity: 0;
+          h4 {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}

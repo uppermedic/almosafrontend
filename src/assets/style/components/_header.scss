@@ -1,0 +1,212 @@
+header {
+  .top-header {
+    padding: 10px 0;
+    .navbar-brand {
+      img {
+        display: inline-block;
+        // height: $logo-height;
+        width: $logo-width;
+        @include respond-below(xl) {
+          width: 100%;
+        }
+      }
+    }
+    .brand-right {
+      width: 11rem; //167px;
+      height: 8rem; //101px;;
+      // @include respond-below(xl) {
+      //   width: auto;
+      //   height: auto;
+      // }
+      img {
+        // display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    a[class*='bt'] {
+      text-align: center;
+      width: 100%;
+      line-height: 40px;
+      position: relative;
+      height: 100%;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 18px;
+      &.big-words {
+        font-size: 13px;
+      }
+      &.bt-light {
+        color: $almoosa-light-green-color;
+        font-family: 'diodrum-arabic-meduim';
+        border: 1px solid $almoosa-light-green-color;
+      }
+      &.bt-green {
+        font-family: 'diodrum-arabic-meduim';
+        background-color: $primary-color;
+        color: #fff;
+      }
+      @include respond-below(md) {
+        font-size: 16px !important;
+      }
+      @include respond-below(sm) {
+        font-size: 14px !important;
+        width: 44px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        &.icon {
+          float: left;
+          margin-left: 10px;
+          font-size: 20px;
+          padding-right: 5px;
+          border-right: 2px solid $almoosa-light-green-color;
+          @include respond-below(sm) {
+            border-right: none;
+            margin: 0;
+          }
+          &.user_btn {
+            border: 0;
+            padding-right: 0;
+            margin-top: 5px;
+            background: #fff;
+            color: $primary-color;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            @include respond-below(sm) {
+              margin: 0;
+            }
+          }
+        }
+        &.text {
+          @include respond-below(sm) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Start Edit the right links for responsive
+  .right_links {
+    @include respond-below(sm) {
+      flex-direction: column;
+    }
+    .right_link {
+      margin: 5px auto;
+      height: 40px;
+    }
+  }
+
+  .navbar {
+    z-index: 10;
+    background-color: $primary-color !important;
+    align-items: flex-end;
+    padding: 1em 0;
+    .nav-toggler-wrapper {
+      @include respond-below(xl) {
+        width: 100%;
+      }
+      .navbar-toggler {
+        margin-right: 2em;
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+    .navbar-collapse.show {
+      margin-top: 1em;
+    }
+    .nav-item {
+      .nav-link {
+        color: $nav-item-color !important;
+        position: relative;
+        font-size: $nav-item-font-size;
+        margin: 0 1.3em;
+        font-family: 'diodrum-arabic-meduim';
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 0;
+          background: $nav-item-active-underline-color;
+          left: 0;
+          transition: width 0.3s;
+        }
+        &::before {
+          top: 0;
+        }
+        &::after {
+          bottom: 0;
+        }
+        &.active {
+          //   color: $primary-color;
+          font-family: 'diodrum-arabic-bold';
+          &::before,
+          &::after {
+            width: 100%;
+            height: 2px;
+          }
+          &::before {
+            @include respond-below(xl) {
+              display: none;
+            }
+          }
+        }
+        &:hover {
+          &::before,
+          &::after {
+            width: 100%;
+            height: 2px;
+          }
+          &::before {
+            @include respond-below(xl) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // Start Handle The dropdown Menu
+    .dropdown-toggle {
+      .down-arrow {
+        margin-left: 20px;
+        @include respond-below(xl) {
+          float: right;
+        }
+      }
+      &::after {
+        border: 0;
+        margin: 0;
+      }
+    }
+    .dropdown-menu {
+      background-color: $primary-color;
+      color: #fff;
+      @include respond-above(xl) {
+        top: 57px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+      }
+      button {
+        li {
+          a {
+            color: #fff;
+          }
+        }
+        &:hover {
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

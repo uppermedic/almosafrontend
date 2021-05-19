@@ -1,0 +1,58 @@
+.not-found{
+    .content-wrapper{
+        padding: 190px 0 130px;
+        @include respond-below(xl) {
+            padding: 100px 0 80px;
+        }
+    }
+    .left,
+    .right{
+        display: flex;
+        align-items: center;
+    }
+    .left{
+        justify-content: center;
+        p{
+            font-size: 200px;
+            margin: 0;
+            font-family: "diodrum-arabic-bold";
+            font-weight: 900;
+            color: $primary-color;
+        }
+        @include respond-below(xl) {
+            p{font-size: 100px;}
+        }
+    }
+    .right{
+        p{
+            font-size: 80px;
+            margin: 0;
+            font-family: "diodrum-arabic-meduim";
+            font-weight: 900;
+            color: $primary-color;
+        }
+        a{
+            display: block;
+            text-align: center;
+            font-size: 60px;
+            margin: 0;
+            font-family: "diodrum-arabic-bold";
+            font-weight: 900;
+            color: #FFF;
+            padding: 49px 130px;
+            background-color: $almoosa-light-green-color;
+        }
+        @include respond-below(xl) {
+            justify-content: center;
+            text-align: center;
+            p{
+                font-size: 30px;
+                margin: 1em 0;
+            }
+            a{
+                font-size: 25px;
+                padding: 25px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.asha-marathon {
+  .hero {
+    height: 1100px;
+  }
+  .content-wrapper {
+    padding-top: 63px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      @include sectionHeading($primary-color);
+    }
+    .marathon-sponsor {
+      h4 {
+        font-family: 'diodrum-arabic-meduim';
+        font-size: $sub-heading-size;
+        line-height: 55px;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        padding: 20px 10px 70px;
+        color: $primary-color;
+        @include respond-below(lg) {
+          font-size: 32px;
+          // margin: 0;
+          width: 100%;
+        }
+        // @include respond-below(sm) {
+        //   font-size: $sub-heading-sm-size;
+        // }
+      }
+    }
+    .marathon-info {
+      position: relative;
+      background-color: $primary-color;
+      // height: 465px;
+      .bottom-zigzag {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @include respond-below(md) {
+          display: none;
+        }
+      }
+      h4 {
+        font-size: $sub-heading-size;
+        line-height: 55px;
+        color: #fff;
+        padding-top: 100px;
+        padding-bottom: 160px;
+        @include respond-below(md) {
+          padding-bottom: 80px;
+          font-size: 35px;
+        }
+      }
+      p {
+        background-color: $gray;
+        color: #000;
+        font-size: 40px;
+        line-height: 55px;
+        margin: 0;
+      }
+    }
+    .marathon-vedio {
+      h2 {
+        @include sectionHeading($almoosa-light-green-color);
+      }
+    }
+  }
+}

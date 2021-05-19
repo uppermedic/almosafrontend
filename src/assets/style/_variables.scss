@@ -1,0 +1,88 @@
+//backgrounds
+$primary-color: #0f425e;
+$primary-bg-color: #537435;
+//colors
+$secondary-color: #537435;
+$secondary-color-light: #81b03a;
+$secondary-color-light-lessOpacity: #81b03ab2;
+$secondary-bg-color: #6e3694;
+$secondary-color-purple: #6e3694;
+$almoosa-brown-color: #593d1a;
+$almoosa-light-green: #55b047;
+$medical-centers: #78a044;
+$almoosa-color-green: #7aa244;
+$almoosa-light-green-color: #55b047;
+$almoose-dark-green: #78a044;
+$almoosa-offwhite-color: #eeeae3;
+$dark-blue: #1e455c;
+$gray: #efeae0;
+$gray-2: #5a5a5aee;
+
+//nav
+$top-nav-height: 80px;
+$top-nav-height-mob: auto;
+//header
+$header-bg: #fff;
+$header-height: 146;
+$header-height-mob: auto;
+
+$nav-item-font-size: 18px;
+// $nav-item-color: #000;
+$nav-item-color: #fff;
+// $nav-item-active-underline-color: #6f3896;
+$nav-item-active-underline-color: #ffffff;
+
+//home
+$hero-height: 500px;
+
+//Logo
+$logo-height: 135px;
+$logo-width: 219px;
+//spaceing
+$spaces: 24px;
+/*******************
+** social colors
+**************/
+$fb-color: #1877f2;
+$twitter-color: #1da1f2;
+$insta-color: #c32aa3;
+$in-color: #007bb5;
+$youtube-color: #ff0000;
+/*******************
+** socail size
+**************/
+$social-size: 40px;
+$social-mob-size: 30px;
+/*********************
+** text sizes 
+**************/
+//heading
+$heading-size: 42px; //52
+$heading-mob-size: 32px; //42
+$heading-sm-size: 22px; //32
+//small headeing
+$sub-heading-size: 32px; //42
+$sub-heading-mob-size: 22px;
+$sub-heading-sm-size: 18px;
+
+//paragraph
+$paragraph-text-size: 28px; //32
+$paragraph-text-mob-size: 22px; //24
+$paragraph-text-sm-size: 18px; //20
+$paragraph-text-xs-size: 16px;
+//button
+$button-text-size: 42px; //52
+$button-text-mob-size: 22px; //32
+$button-text-sm-size: 20px; //24
+//footer
+$footer-heading: 26px;
+$footer-paragraph: 18px;
+$breakpoints: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  ml: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);

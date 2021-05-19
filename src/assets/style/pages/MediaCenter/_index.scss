@@ -1,0 +1,53 @@
+@import "./hakeem-magazine";
+@import "./photo-galary";
+@import "./video-galary";
+.media-center {
+  .centers {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      color: $primary-color;
+      font-size: $heading-size;
+      font-weight: bold;
+      @include Border-bottom(3px, $primary-color);
+      padding-bottom: 29px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+
+    .center-card {
+      @include background-image;
+      position: relative;
+      min-height: 500px;
+      margin-top: 74px;
+      @include Radius(3px);
+      &:hover {
+        transition: 0.3s;
+        box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.16);
+        transform: translate(-2px, -2px);
+      }
+      .ribbon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          padding: 0;
+          margin: 0;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.custom-tabs {
+  margin: 50px 0;
+  .items-list {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    li {
+      a {
+        border-radius: unset;
+        cursor: pointer;
+        border: 0;
+        font-weight: bold;
+        color: #ffffff;
+        transition: all 0.1s linear;
+        clip-path: polygon(87% 1%, 87% 50%, 87% 100%, 0 100%, 0 0);
+        i {
+          margin-right: 15px;
+        }
+        &.active {
+          clip-path: polygon(87% 1%, 100% 49%, 87% 100%, 0 100%, 0 0);
+          color: #ffffff;
+          cursor: unset;
+          @include respond-below(md) {
+            // background-color: transparent !important;
+            // color: #000;
+            // border: 1px solid #eeeeee;
+
+            // border-left: 10px solid #ffffff;
+
+            transform: scale(1.02);
+            box-shadow: 1px 1px 5px #424242;
+          }
+        }
+        @include respond-below(md) {
+          clip-path: unset !important;
+        }
+      }
+    }
+  }
+  .tab-content {
+    h2 {
+      font-size: $heading-sm-size;
+      font-weight: bold;
+      @include respond-below(md) {
+        margin-top: 20px;
+      }
+    }
+    hr {
+      margin: 10px 0;
+    }
+    p {
+      font-size: $paragraph-text-sm-size;
+    }
+  }
+}

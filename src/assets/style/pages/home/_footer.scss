@@ -1,0 +1,124 @@
+footer {
+  .footer-top {
+    // height: 650px;
+    padding: 195px 0 135px;
+    font-family: 'diodrum-arabic-bold';
+    @include background-image;
+    @include respond-below(lg) {
+      text-align: center;
+      background-image: none !important;
+      background-color: $secondary-color;
+    }
+    .container {
+      .intro {
+        max-width: 100%;
+        h2 {
+          font-family: 'diodrum-arabic-bold';
+          font-size: $footer-heading;
+          font-weight: 900;
+          color: #fff;
+          line-height: 64px;
+        }
+        p {
+          font-size: $footer-paragraph;
+          font-family: 'diodrum-arabic-meduim';
+          color: #fff;
+          line-height: 43px;
+        }
+
+        .social {
+          color: #fff;
+          @include respond-below(lg) {
+            margin: 1em 0;
+          }
+          a {
+            margin-right: 10px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: $social-size;
+            line-height: 1;
+            @include respond-below(lg) {
+              font-size: $social-mob-size;
+            }
+            // &.fb{
+            //   background-color: $fb-color;
+            // }
+            // &.twitter{
+            //   background-color: $twitter-color;
+            // }
+            // &.insta{
+            //   background-color: $insta-color;
+            // }
+            // &.in{
+            //   background-color: $in-color;
+            // }
+            // &.youtube{
+            //   background-color: $youtube-color;
+            // }
+          }
+        }
+      }
+      .links {
+        // padding-right: 15%;
+        @include respond-below(lg) {
+          display: inline-block;
+        }
+        h3 {
+          border-bottom: 2px solid #fff;
+          font-size: $footer-heading;
+          padding-bottom: 15px;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: 'diodrum-arabic-bold';
+          @include respond-below(sm) {
+            display: inline-block;
+            margin-top: 1em;
+          }
+        }
+        a {
+          color: #fff;
+          line-height: 34px;
+          text-transform: capitalize;
+          font-size: $footer-paragraph;
+          font-weight: 900;
+          font-family: 'diodrum-arabic';
+          &.btn-blog {
+            font-family: 'diodrum-arabic-meduim';
+            font-size: 35px;
+            padding: 10px 47px;
+            background-color: #0f425e;
+            color: #fff;
+            border-radius: 8px;
+            display: inline-block;
+            width: 5em;
+            margin: auto 0;
+            margin-top: 30px;
+            @include respond-below(lg) {
+              margin-left: 1.2em;
+            }
+          }
+        }
+      }
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .footer-rights {
+    padding: 34px 0 29px;
+    background-color: #593d1a;
+    color: #fff;
+    @include respond-below(lg) {
+      text-align: center;
+    }
+    p,
+    a {
+      font-size: 14px;
+    }
+    a {
+      margin: 0 1em;
+    }
+  }
+}

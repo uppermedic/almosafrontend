@@ -1,0 +1,40 @@
+.overview {
+  .over-view-section {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      color: $almoosa-color-green;
+      font-size: $heading-size;
+      font-weight: bold;
+      @include Border-bottom(3px, $almoosa-color-green);
+      padding-bottom: 29px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+    .top-section {
+      p {
+        font-family: "diodrum-arabic-medium";
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 29px;
+        @include respond-below(lg) {
+          font-size: $paragraph-text-sm-size;
+        }
+        @include respond-below(sm) {
+          font-size: $paragraph-text-sm-size;
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      @include Border-bottom(3px, $almoosa-color-green);
+      // margin-bottom: 50px;
+    }
+  }
+}
