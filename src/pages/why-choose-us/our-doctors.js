@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import OurDoctors from 'src/components/why-us/our-doctors';
+import OurDoctors from 'src/components/why-Us/our-doctors';
 
 export default function Our_Doctors() {
   return (
