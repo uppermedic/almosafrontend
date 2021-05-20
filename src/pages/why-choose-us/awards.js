@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import Awards from 'src/components/why-us/awards';
+import Awards from 'src/components/why-Us/awards';
 
 export default function Awards_accreditation() {
   return (

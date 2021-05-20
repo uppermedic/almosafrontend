@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import OverviewComp from 'src/components/why-us/overview';
+import OverviewComp from 'src/components/why-Us/overview';
 
 export default function Overview() {
   return (

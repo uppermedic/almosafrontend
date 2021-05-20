@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import WhyUs from 'src/components/why-us';
+import WhyUs from 'src/components/why-Us';
 
 export default function Why_Choose_Us() {
   return (
