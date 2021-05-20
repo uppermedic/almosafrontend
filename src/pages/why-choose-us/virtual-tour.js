@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
-import VirtualHosptialTour from 'src/components/why-us/virtual-tour';
+import VirtualHosptialTour from 'src/components/why-Us/virtual-tour';
 
 export default function Virtual_Tour() {
   return (
