@@ -1,0 +1,31 @@
+.library {
+  .library-content {
+    // margin: 50px 0;
+    .content {
+      margin: 50px auto;
+      .box {
+        box-shadow: 0px 3px 6px #00000029;
+        padding: 20px;
+        height: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px auto;
+        .icon {
+          font-size: 50px;
+        }
+        .title {
+          font-size: 16px;
+          color: $almoosa-light-green;
+          font-weight: bold;
+          margin: 10px auto;
+          @include respond-below(md) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

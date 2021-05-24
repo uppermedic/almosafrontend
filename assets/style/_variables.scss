@@ -1,0 +1,142 @@
+//backgrounds
+$primary-color: #0f425e;
+$primary-bg-color: #537435;
+//colors
+$secondary-color: #537435;
+$secondary-color-light: #81b03a;
+$secondary-color-light-lessOpacity: #81b03ab2;
+$secondary-bg-color: #6e3694;
+$secondary-color-purple: #6e3694;
+$almoosa-brown-color: #593d1a;
+$almoosa-light-green: #55b047;
+$almoosa-green-extralight: #5bac32;
+$medical-centers: #78a044;
+$almoosa-color-green: #7aa244;
+$almoosa-light-green-color: #55b047;
+$almoose-dark-green: #78a044;
+$almoosa-offwhite-color: #eeeae3;
+$dark-blue: #1e455c;
+$gray: #efeae0;
+$gray-1: #f0ebe1;
+$gray-2: #5a5a5aee;
+
+//nav
+$top-nav-height: 80px;
+$top-nav-height-mob: auto;
+
+//header
+$header-bg: #fff;
+$header-height: 146;
+$header-height-mob: auto;
+
+$nav-item-font-size: 13px;
+// $nav-item-color: #000;
+$nav-item-color: #fff;
+// $nav-item-active-underline-color: #6f3896;
+$nav-item-active-underline-color: #ffffff;
+
+//home
+$hero-height: 500px;
+
+//Logo
+$logo-height: 135px;
+$logo-width: 219px;
+//spaceing
+$spaces: 24px;
+/*******************
+** social colors
+**************/
+$fb-color: #1877f2;
+$twitter-color: #1da1f2;
+$insta-color: #c32aa3;
+$in-color: #007bb5;
+$youtube-color: #ff0000;
+/*******************
+** socail size
+**************/
+$social-size: 40px;
+$social-mob-size: 24px;
+/*********************
+** text sizes 
+**************/
+//heading
+$heading-size: 42px; //52
+$heading-mob-size: 32px; //42
+$heading-sm-size: 22px; //32
+$heading-banner: 3vw;
+//small headeing
+$sub-heading-size: 28px; //42
+$sub-heading-mob-size: 22px;
+$sub-heading-sm-size: 18px;
+
+//paragraph
+$paragraph-text-size: 20px; //32
+$paragraph-text-mob-size: 22px; //24
+$paragraph-text-sm-size: 18px; //20
+$paragraph-text-xs-size: 16px;
+//button
+$button-text-size: 42px; //52
+$button-text-mob-size: 22px; //32
+$button-text-sm-size: 20px; //24
+
+// Fonts
+$font-sm: 16px;
+$font-xs: 14px;
+$font-xxs: 12px;
+
+//footer
+$footer-heading: 22px;
+$footer-heading-md: 18px;
+$footer-heading-sm: 16px;
+$footer-heading-xs: 14px;
+
+$footer-paragraph: 14px;
+$footer-paragraph-xs: 12px;
+$breakpoints: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  ml: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 1700px
+);
+/**********
+* upate sizes 
+*****/
+//heading h1
+$heading: 30px;
+$heading-md: 24px;
+$heading-sm: 18px;
+$heading-xs: 16px;
+$heading-xs: 16px;
+//sub heading h3
+$sub-heading: 24px;
+$sub-heading-md: 18px;
+$sub-heading-sm: 16px;
+$sub-heading-xs: 14px;
+//section paragraph
+$paragraph: 20px;
+$paragraph-md: 18px;
+$paragraph-sm: 16px;
+$paragraph-xs: 14px;
+//
+$small-text: 16px;
+//images
+$photo-section-half-width: 350px;
+$photo-section-half-height: 350px;
+$photo-section-big-banner: 800px;
+
+$photo-section-width: 300px;
+$photo-section-height: 300px;
+
+$photo-section-width-md: 200px;
+$photo-section-height-md: 200px;
+
+//logo
+$logo-width: 180px;
+$logo-height: 120px;
+//
+$second-logo-width: 100px;
+$second-logo-height: 100px;

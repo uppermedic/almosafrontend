@@ -1,0 +1,76 @@
+.reusable-related-links {
+  margin: 50px auto;
+  .related-links-title {
+    display: flex;
+    align-items: center;
+  }
+  .shape {
+    border-top: 50px solid transparent;
+    border-left: 130px solid $almoosa-light-green;
+    border-bottom: 50px solid transparent;
+    display: inline-block;
+    margin-left: 10px;
+    @include rtl() {
+      border-left: 0;
+      margin-left: 0;
+      border-right: 130px solid $almoosa-light-green;
+      margin-right: 10px;
+    }
+    @include respond-below(xl) {
+      display: none;
+    }
+  }
+  .pointer {
+    text-align: left;
+    display: inline-block;
+    background-color: $almoosa-light-green;
+    color: #fff;
+    font-size: $heading-mob-size;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    i {
+      margin: auto 20px;
+    }
+    @include respond-below(xl) {
+      font-size: $heading-sm-size;
+    }
+    @include respond-below(lg) {
+      margin-bottom: 20px;
+      height: auto;
+    }
+    @include respond-below(sm) {
+      font-size: $paragraph-text-xs-size;
+    }
+  }
+
+  .links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    .one-link {
+      border: 2px solid $secondary-bg-color;
+      padding: 2px;
+      border-radius: 10px;
+      width: fit-content;
+      margin: 10px auto;
+      a {
+        background-color: $secondary-bg-color;
+        padding: 10px 50px;
+        display: inline-block;
+        border-radius: 5px;
+        font-size: $paragraph-text-mob-size;
+        color: #fff;
+        @include respond-below(sm) {
+          font-size: $paragraph-text-xs-size;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}

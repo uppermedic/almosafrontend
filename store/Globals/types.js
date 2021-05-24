@@ -1,0 +1,6 @@
+module.exports = {
+  ACTION_TYPE: '[ ACTION_TYPE ]',
+  LOADING: '[ LOADING ]',
+  GET_ALL_CATEGORIES: '[ GET_ALL_CATEGORIES ]',
+  GET_ALL_TAGS: '[ GET_ALL_TAGS ]'
+};

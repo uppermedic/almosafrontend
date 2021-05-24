@@ -1,0 +1,37 @@
+.icons-section {
+  font-family: 'diodrum-arabic-bold';
+  padding: 75px 0;
+
+  .card {
+    padding: 40px 50px 50px;
+    height: 200px;
+    background-color: #f0ebe0;
+    border: none;
+    color: $primary-color;
+    // cursor: pointer;
+    margin-bottom: 20px;
+    &:hover {
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      color: #fff;
+      background-color: $secondary-color-light;
+      @include respond-below(sm) {
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+    .icon {
+      padding-bottom: 10px;
+      font-size: 35px;
+    }
+
+    .stores-wrapper {
+      position: absolute;
+      width: 100%;
+      bottom: 5px;
+      left: 0;
+      display: flex;
+      justify-content: space-around !important;
+    }
+  }
+}

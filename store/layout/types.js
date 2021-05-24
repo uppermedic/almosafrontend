@@ -1,0 +1,4 @@
+module.exports = {
+  ACTION_TYPE: '[ ACTION_TYPE ]',
+  TOGGLE_MEDIA_PLAYER: '[ TOGGLE_MEDIA_PLAYER ]'
+};

@@ -1,0 +1,161 @@
+.directions {
+  .guide-directions {
+    padding-bottom: 100px;
+    @include background-image;
+    .heading-card {
+      h2 {
+        @include sectionHeading($almoosa-light-green);
+      }
+      h3 {
+        color: $secondary-color-light;
+        font-size: 20px;
+        font-family: 'diodrum-arabic-bold';
+        @include Border-bottom(3px, $secondary-color-light);
+        padding-bottom: 10px;
+        @include respond-below(md) {
+          font-size: 16px;
+        }
+      }
+    }
+    .info-section {
+      background-color: #efeae0;
+      justify-content: center;
+      align-content: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 50px 0;
+      font-size: 22px;
+      @include respond-below(xl) {
+        padding: 30px 10px;
+      }
+      @include respond-below(md) {
+        font-size: 16px;
+        padding: 30px 10px;
+      }
+      p {
+        max-width: 1000px;
+        text-align: center;
+        margin: 10px auto;
+      }
+    }
+
+    .guide-card-item {
+      width: 95%;
+      padding: 20px;
+      @include respond-below(lg) {
+        width: auto;
+        // padding: 40px 20px;
+      }
+      @include respond-below(md) {
+        // padding: 20px;
+      }
+      h3 {
+        // font-family: 'diodrum-arabic';
+        color: #fff;
+        font-size: 22px;
+        text-align: left !important;
+        @include rtl {
+          text-align: right !important;
+        }
+        @include respond-below(xxl) {
+          font-size: 30px;
+        }
+        @include respond-below(sm) {
+          font-size: 20px;
+        }
+      }
+      &:nth-child(1) {
+        background-color: rgba($primary-color, 1);
+      }
+      &:nth-child(2) {
+        background-color: rgba($primary-color, 0.8);
+      }
+      &:nth-child(3) {
+        background-color: rgba($almoosa-light-green-color, 1);
+      }
+      &:nth-child(4) {
+        background-color: rgba($almoosa-light-green-color, 0.8);
+      }
+      &:nth-child(5) {
+        background-color: rgba($secondary-color-purple, 1);
+      }
+      &:nth-child(6) {
+        background-color: rgba($secondary-color-purple, 0.8);
+      }
+    }
+
+    .map-col {
+      padding: 50px 0;
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          font-size: 16px;
+          font-family: 'diodrum-arabic-meduim';
+          //line-height: 2;
+          &.bold-par {
+            font-size: 16px;
+          }
+          @include respond-below(md) {
+            font-size: 14px;
+            &.bold-par {
+              font-size: 14px;
+            }
+          }
+        }
+        .img {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .blocks {
+      .parking {
+        .heading-card {
+          // h3 {
+          //   color: $almoosa-light-green-color;
+          //   border-bottom-color: $almoosa-light-green-color;
+          // }
+        }
+      }
+      .public-trans {
+        .heading-card {
+          // h3 {
+          //   color: $secondary-color-purple;
+          //   border-bottom-color: $secondary-color-purple;
+          // }
+        }
+      }
+      h4 {
+        background-color: $primary-bg-color;
+        padding: 10px;
+        display: flex;
+        color: #fff;
+        font-size: 20px;
+        @include respond-below(lg) {
+          font-size: 18px;
+        }
+        @include respond-below(md) {
+          font-size: 16px;
+        }
+        &.mobility-subHeading {
+          width: 50%;
+          @include respond-below(lg) {
+            width: 100%;
+          }
+        }
+      }
+      .inner-p {
+        font-size: 16px;
+        font-family: 'diodrum-arabic-meduim';
+        //line-height: 2;
+
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

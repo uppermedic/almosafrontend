@@ -1,0 +1,153 @@
+@mixin text($text-size, $text-color, $text-font) {
+  color: $text-color;
+  font-size: $text-size;
+  font-family: $text-font;
+}
+
+@mixin rtl() {
+  &:lang(ar) {
+    @content;
+  }
+}
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) ==false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+
+    @if (map-has-key($breakpoints, $upper) ==false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+@mixin lightFontUtil {
+  @each $size, $px in $typography {
+    '.light-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-light;
+    }
+  }
+}
+
+@mixin regularFontUtil {
+  @each $size, $px in $typography {
+    '.regular-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-base;
+    }
+  }
+}
+
+@mixin mediumFontUtil {
+  @each $size, $px in $typography {
+    '.medium-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-medium;
+    }
+  }
+}
+
+@mixin semiBoldFontUtil {
+  @each $size, $px in $typography {
+    '.semiBold-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-semi-bold;
+    }
+  }
+}
+
+@mixin boldFontUtil {
+  @each $size, $px in $typography {
+    '.bold-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-bold;
+    }
+  }
+}
+
+@mixin extraBoldFontUtil {
+  @each $size, $px in $typography {
+    '.extraBold-#{$size}' {
+      font-size: $px;
+      font-family: $font-family-extra-bold;
+    }
+  }
+}
+
+@mixin regular() {
+  font-family: 'nunito-reg', Helvetica, Arial, sans-serif;
+  html[lang='ar'] & {
+    font-family: 'Cairo-Regular', Helvetica, Arial, sans-serif;
+  }
+}
+
+@mixin bold() {
+  font-family: 'nunito-bold', Helvetica, Arial, sans-serif;
+  html[lang='ar'] & {
+    font-family: 'Cairo-Bold', Helvetica, Arial, sans-serif;
+  }
+}
+
+@mixin Radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin Border($dir, $height, $color) {
+  border-#{$dir}: $height solid $color;
+}
+@mixin Border-bottom($height, $color) {
+  border-bottom: $height solid $color;
+}
+
+@mixin background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin sectionHeading($color) {
+  color: $color;
+  font-size: $sub-heading-size;
+  font-family: 'diodrum-arabic-bold';
+  @include Border-bottom(3px, $color);
+  padding-bottom: 15px;
+  @include respond-below(lg) {
+    font-size: $sub-heading-mob-size;
+  }
+  @include respond-below(sm) {
+    font-size: $sub-heading-sm-size;
+  }
+}

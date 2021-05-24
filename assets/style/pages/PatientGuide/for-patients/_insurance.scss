@@ -1,0 +1,81 @@
+.insurance {
+  .hero {
+    display: flex;
+    align-items: center;
+    .heading {
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 100%;
+      h2 {
+        padding: 50px;
+        margin-left: 100px;
+        font-size: $heading-size;
+        color: $primary-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include respond-below(lg) {
+          margin-left: 0;
+          font-size: $heading-mob-size;
+        }
+      }
+    }
+  }
+
+  .brands {
+    margin: 50px auto;
+    .col {
+      margin: 20px 0;
+    }
+    .brand-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0px 3px 6px #00000045;
+      height: 100%;
+      @include respond-below(md) {
+        margin: 20px auto;
+      }
+      @include respond-below(sm) {
+        max-width: 250px;
+      }
+      .brand-name {
+        margin: 30px auto;
+        padding: 10px;
+        background-color: $almoosa-light-green;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      .brand-logo {
+        margin: 0 30px;
+        img {
+          max-width: 100%;
+        }
+      }
+      .button-link {
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+        a {
+          display: inline-block;
+          background-color: $primary-color;
+          text-align: center;
+          color: #ffffff;
+          padding: 5px 0;
+          width: 90%;
+          border-radius: 100px;
+          &:hover {
+            transform: translateY(-1px);
+          }
+        }
+      }
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// This Style for the  brand box reusable component

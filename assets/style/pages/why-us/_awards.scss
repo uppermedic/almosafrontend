@@ -1,0 +1,101 @@
+.awards_accreditation {
+  .hero {
+    .hero-content {
+      h2 {
+        color: $almoosa-color-green;
+      }
+    }
+  }
+
+  .awards {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    @include background-image;
+    h2 {
+      @include sectionHeading($almoosa-color-green);
+    }
+    h3 {
+      font-size: $sub-heading-size;
+      color: $primary-color;
+      padding-bottom: 20px;
+      @include respond-below(lg) {
+        font-size: $sub-heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $sub-heading-sm-size;
+      }
+    }
+
+    .card-item {
+      padding-bottom: 20px;
+      @include respond-below(sm) {
+        width: 100%;
+      }
+
+      div:last-child {
+        padding-top: 20px;
+      }
+      h4 {
+        background-color: red;
+        font-size: 18px;
+        padding: 20px;
+        color: #fff;
+        @include respond-below(lg) {
+          font-size: 16px;
+        }
+        @include respond-below(sm) {
+          font-size: 14px;
+        }
+      }
+      p {
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+        strong,
+        a,
+        h6 {
+          font-family: 'diodrum-arabic-bold';
+        }
+        a {
+          color: $primary-color;
+        }
+        h6 {
+          color: $almoosa-light-green;
+          text-decoration: underline;
+        }
+      }
+    }
+    .col_1 {
+      &:nth-child(1) h4,
+      &:nth-child(5) h4,
+      &:nth-child(9) h4,
+      &:nth-child(13) h4 {
+        background-color: $almoosa-color-green;
+      }
+      &:nth-child(2) h4,
+      &:nth-child(6) h4,
+      &:nth-child(10) h4 {
+        background-color: $primary-color;
+      }
+      &:nth-child(3) h4,
+      &:nth-child(7) h4,
+      &:nth-child(11) h4 {
+        background-color: $secondary-color;
+      }
+      &:nth-child(4) h4,
+      &:nth-child(8) h4,
+      &:nth-child(12) h4 {
+        background-color: $almoosa-brown-color;
+      }
+    }
+    .col_2 {
+      &:nth-child(1) h4 {
+        background-color: $almoosa-color-green;
+      }
+      &:nth-child(2) h4 {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

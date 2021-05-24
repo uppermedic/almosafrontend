@@ -1,0 +1,144 @@
+.medical-centers {
+  .hero {
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      @include rtl() {
+        right: 8%;
+        left: auto;
+      }
+    }
+    .hero-cover {
+      transform: scaleX(-1);
+      @include rtl() {
+        transform: scaleX(1);
+      }
+    }
+    .title {
+      color: $primary-color;
+    }
+  }
+  .centers {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      @include sectionHeading($almoose-dark-green);
+    }
+
+    .center-card {
+      @include background-image;
+      position: relative;
+      min-height: 300px;
+      cursor: pointer;
+      margin-top: 74px;
+      &:hover {
+        transition: 0.3s;
+        box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.16);
+        transform: translate(-2px, -2px);
+      }
+      .overlay {
+        @include background-image;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          padding-bottom: 100px;
+        }
+        .ribbon {
+          position: absolute;
+          bottom: 34px;
+          background-color: rgba($color: #fff, $alpha: 0.8);
+          width: 100%;
+          height: 70px;
+          color: $almoose-dark-green;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h3 {
+            font-size: 20px;
+            @include respond-below(lg) {
+              font-size: 18px;
+            }
+            @include respond-below(md) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .cols {
+      &:nth-child(1n) .overlay {
+        background-color: rgba($color: $almoosa-light-green, $alpha: 0.9);
+      }
+      &:nth-child(2n) .overlay {
+        background-color: rgba($color: $secondary-bg-color, $alpha: 0.8);
+      }
+      &:nth-child(3n) .overlay {
+        background-color: rgba($color: $primary-color, $alpha: 0.9);
+      }
+      &:nth-child(4n) .overlay {
+        background-color: rgba($color: $almoosa-brown-color, $alpha: 0.7);
+        // background-color: rgba($color: $primary-bg-color, $alpha: 0.9);
+      }
+      // &:nth-child(2) .overlay {
+      //   background-color: rgba($color: $almoosa-light-green-color, $alpha: 0.8);
+      // }
+      // &:nth-child(3) .overlay {
+      //   background-color: rgba($color: $almoosa-light-green-color, $alpha: 0.7);
+      // }
+      // &:nth-child(4) .overlay {
+      //   background-color: rgba($color: $primary-color, $alpha: 0.9);
+      // }
+      // &:nth-child(5) .overlay {
+      //   background-color: rgba($color: $primary-color, $alpha: 0.8);
+      // }
+      // &:nth-child(6) .overlay {
+      //   background-color: rgba($color: $primary-color, $alpha: 0.7);
+      // }
+      // &:nth-child(7) .overlay {
+      //   background-color: rgba($color: $secondary-bg-color, $alpha: 0.9);
+      // }
+      // &:nth-child(8) .overlay {
+      //   background-color: rgba($color: $secondary-bg-color, $alpha: 0.8);
+      // }
+      // &:nth-child(9) .overlay {
+      //   background-color: rgba($color: $secondary-bg-color, $alpha: 0.7);
+      // }
+      // &:nth-child(10) .overlay {
+      //   background-color: rgba($color: $almoosa-brown-color, $alpha: 0.9);
+      // }
+      // &:nth-child(11) .overlay {
+      //   background-color: rgba($color: $almoosa-brown-color, $alpha: 0.8);
+      // }
+      // &:nth-child(12) .overlay {
+      //   background-color: rgba($color: $almoosa-brown-color, $alpha: 0.7);
+      // }
+      // &:nth-child(13) .overlay {
+      //   background-color: rgba($color: #efeae0, $alpha: 0.9);
+      //   .ribbon {
+      //     background-color: rgba($color: $secondary-bg-color, $alpha: 0.8);
+      //     color: #fff;
+      //   }
+      // }
+      // &:nth-child(14) .overlay {
+      //   background-color: rgba($color: #efeae0, $alpha: 0.8);
+      //   .ribbon {
+      //     background-color: rgba($color: $secondary-bg-color, $alpha: 0.7);
+      //     color: #fff;
+      //   }
+      // }
+    }
+  }
+}
+
+// Import The inner pages style files
+@import './medical-center-subpages';

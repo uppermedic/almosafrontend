@@ -1,0 +1,16 @@
+.post_title {
+  font-size: $sub-heading-size;
+  border-bottom: 5px solid;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  @include sectionHeading($primary-color);
+  @include respond-below(md) {
+    font-size: $heading-mob-size;
+    margin: 20px 0;
+  }
+  @include respond-below(sm) {
+    font-size: $heading-sm-size;
+  }
+}

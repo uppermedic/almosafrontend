@@ -1,0 +1,104 @@
+.custom-tabs {
+  margin: 50px 0;
+  .items-list {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    padding: 0;
+    li {
+      border-radius: unset;
+      cursor: pointer;
+      border: 0;
+      transition: all 0.1s linear;
+      clip-path: polygon(87% 1%, 87% 50%, 87% 100%, 0 100%, 0 0);
+      padding: 1em;
+      background-color: $primary-color;
+      padding-right: 13%;
+      @include rtl() {
+        padding-left: 13%;
+        padding-right: 1em;
+        clip-path: polygon(100% 1%, 100% 50%, 100% 100%, 10% 100%, 10% 0);
+      }
+      i {
+        margin-right: 15px;
+        @include rtl() {
+          margin-right: 0;
+          margin-left: 15px;
+        }
+      }
+      &.active {
+        clip-path: polygon(87% 1%, 100% 49%, 87% 100%, 0 100%, 0 0);
+        color: #ffffff;
+        background-color: $secondary-color;
+        cursor: unset;
+        padding-right: 0;
+        @include rtl() {
+          padding-right: 1em;
+          padding-left: 0;
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 48%);
+        }
+        @include respond-below(md) {
+          // background-color: transparent !important;
+          // color: #000;
+          // border: 1px solid #eeeeee;
+
+          // border-left: 10px solid #ffffff;
+
+          transform: scale(1.02);
+          box-shadow: 1px 1px 5px #424242;
+        }
+      }
+      @include respond-below(md) {
+        clip-path: unset !important;
+      }
+      a {
+        color: #fcfcfc;
+        font-size: 16px;
+        padding: 0;
+        padding-right: 8px;
+        @include rtl() {
+          padding-right: 0;
+          padding-left: 8px;
+        }
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+  .tab-content {
+    h2 {
+      font-size: 22px;
+      // font-family: 'diodrum-arabic';
+      @include respond-below(md) {
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+    hr {
+      margin: 10px 0;
+    }
+    p {
+      font-size: 16px;
+      span {
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+      @include respond-below(md) {
+        font-size: 14px;
+      }
+    }
+
+    ul {
+      li {
+        margin: 20px 0;
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

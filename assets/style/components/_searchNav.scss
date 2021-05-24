@@ -1,0 +1,139 @@
+.green-top-nav {
+  .search-nav {
+    width: auto;
+    background-color: #ffffff;
+    @include Radius(20px);
+    padding: 2px 2px 2px 15px;
+    @include rtl() {
+      padding: 2px 15px 2px 2px;
+    }
+    @include respond-below(lg) {
+      // margin: 1em 0;
+    }
+    input {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+      height: auto;
+      font-size: 16px;
+      &:focus {
+        background-color: transparent;
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: $secondary-color-light;
+      }
+      @include respond-below(sm) {
+        font-size: 14px;
+        // margin: 1em 0;
+      }
+    }
+    .input-group-append .input-group-text {
+      width: 410%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+      background-color: #81b03a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 10px;
+        height: 10px;
+        margin: 0;
+      }
+    }
+  }
+  a[class*='bt'] {
+    margin-left: 5px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 30px;
+    transition: 0.4s;
+    &.bt-light {
+      font-family: 'diodrum-arabic-meduim';
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    &.bt-blue {
+      font-family: 'diodrum-arabic-meduim';
+      background-color: $primary-color;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    @include respond-below(md) {
+      font-size: 16px !important;
+    }
+    @include respond-below(sm) {
+      font-size: 12px !important;
+      display: inline-block;
+      height: 30px;
+    }
+    span {
+      &.icon {
+        height: 100%;
+        float: right;
+        margin-left: 10px;
+        font-size: 16px;
+        padding-right: 5px;
+        border-left: 1px solid #fff;
+        border-right: none;
+        @include rtl() {
+          float: left;
+          margin-right: 10px;
+          padding-left: 5px;
+          //border-left: 2px solid $almoosa-light-green-color;
+          border-left: 1px solid #fff;
+          //reset
+          margin-left: 0;
+          padding-right: 0;
+          border-left: none;
+          border-right: 1px solid #fff;
+        }
+        @include respond-below(md) {
+          font-size: 16px;
+        }
+        @include respond-below(sm) {
+          margin-left: 5px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include rtl() {
+            margin-left: 0;
+            margin-right: 5px;
+          }
+        }
+      }
+      &.text {
+        font-size: 13px;
+
+        @include respond-below(sm) {
+          font-size: 11px;
+          display: flex;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  // Start Edit the right links for responsive
+  .right_links {
+    @include respond-below(sm) {
+      //flex-direction: column;
+    }
+    .right_link {
+      margin: 5px auto;
+      height: 30px;
+    }
+  }
+}

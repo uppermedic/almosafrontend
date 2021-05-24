@@ -1,0 +1,122 @@
+.home-hero-content,
+.carosel-content {
+  width: 100%;
+  height: 100%;
+  //display: flex;
+  // justify-content: flex-end;
+  align-items: center;
+  @include respond-below(lg) {
+    display: block;
+  }
+  > div {
+    // display: flex;
+    // flex-direction: column;
+    //width: 60%;
+    @include respond-below(lg) {
+      width: 'min-content';
+    }
+  }
+  h2 {
+    color: $primary-color;
+    // font-size: $heading-size;
+    font-size: $heading;
+    font-family: 'diodrum-arabic-meduim';
+    padding: $spaces 0;
+    @include Border-bottom(3px, $primary-color);
+
+    @include respond-below(lg) {
+      font-size: $heading-md;
+    }
+    @include respond-below(sm) {
+      font-size: $heading-sm;
+    }
+    span {
+      display: block;
+      margin: 0;
+      // font-family: 'diodrum-arabic-meduim';
+      // font-size: $sub-heading-size;
+      // font-weight: 700;
+      &:last-child {
+        // width: 85%;
+      }
+    }
+    @include respond-below(lg) {
+      // font-size: $heading-mob-size;
+      display: inline-block;
+      span {
+        // font-size: $sub-heading-mob-size;
+      }
+    }
+  }
+  .stores-wrapper {
+    display: flex;
+    margin: $spaces 0;
+    @include respond-below(lg) {
+      position: relative;
+      z-index: 10;
+      justify-content: center;
+    }
+    @include respond-below(sm) {
+      margin: 0;
+    }
+    a {
+      display: inline-block;
+      // height: 80px;
+      // width: 186px;
+      img {
+        // height: 100%;
+        width: 150px;
+        @include respond-below(sm) {
+          width: 130px;
+        }
+      }
+      &:first-child {
+        margin: 10px 10px 10px 0;
+        @include rtl() {
+          margin: 10px 0 10px 10px;
+        }
+      }
+      &:last-child {
+        margin: 10px 0 10px 10px;
+        @include rtl() {
+          margin: 10px 10px 10px 0;
+        }
+      }
+    }
+  }
+  p {
+    margin: $spaces 0;
+    color: $secondary-color;
+    // font-size: $paragraph-text-size;
+    font-size: $sub-heading;
+    font-family: 'diodrum-arabic';
+    width: 648px;
+    @include respond-below(lg) {
+      width: auto;
+      font-size: $sub-heading-md;
+    }
+    @include respond-below(md) {
+      font-size: $sub-heading-sm;
+    }
+    @include respond-below(sm) {
+      font-size: $sub-heading-xs;
+    }
+  }
+
+  .book-now a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: $secondary-color-light;
+    font-family: 'diodrum-arabic-meduim';
+    border-radius: 10px;
+    color: #fff;
+    font-size: 22px;
+    padding: 0.5em 2em;
+    @include respond-below(md) {
+      font-size: 16px;
+    }
+  }
+}

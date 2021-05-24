@@ -1,0 +1,171 @@
+.day-surgey {
+  padding-bottom: 100px;
+  .hero {
+    position: relative;
+    height: 500px;
+
+    .title {
+      position: absolute;
+      bottom: 10%;
+      background-color: $primary-color;
+      width: 100%;
+      padding: 50px 0px 100px 65px;
+      font-family: 'diodrum-arabic-bold';
+      font-size: 36px;
+      color: #fff;
+      //line-height: 80px;
+      @include respond-below(xl) {
+        padding: 30px 0px 70px 45px;
+        font-size: 26px;
+      }
+      @include respond-below(lg) {
+        padding: 10px 0px 25px 25px;
+        font-size: 22px;
+      }
+      @include respond-below(sm) {
+        padding: 10px 0px 20px 25px;
+        // font-size: 25px;
+      }
+    }
+  }
+  .info-container {
+    position: relative;
+    top: -20%;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0px 3px 6px #00000054;
+    @include respond-below(md) {
+      padding: 40px 20px;
+    }
+    .surgey-info {
+      p {
+        font-family: 'diodrum-arabic-light';
+        font-size: 16px;
+        //line-height: 25px;
+        @include respond-below(sm) {
+          font-size: $font-xs;
+        }
+        &:first-child {
+          padding-top: 20px;
+          border-top: 2px solid $almoosa-light-green;
+        }
+        &:last-child {
+          padding-bottom: 20px;
+          border-bottom: 25px solid $primary-color;
+          @include respond-below(md) {
+            padding-bottom: 30px;
+            border-bottom-width: 10px;
+          }
+        }
+      }
+    }
+    @include respond-below(xl) {
+      top: -15%;
+    }
+    @include respond-below(lg) {
+      top: -5%;
+    }
+  }
+  .tabs-container {
+    box-shadow: 0px 3px 6px #00000029;
+    border: 0;
+    .nav-tabs {
+      width: 100%;
+      padding: 0;
+      li {
+        width: 50%;
+        text-align: center;
+        a {
+          position: relative;
+          height: 100%;
+          display: block;
+          cursor: pointer;
+          font-size: 24px;
+          background-color: #f3f3f3;
+          padding: 20px 0;
+          color: $secondary-color;
+          font-family: 'diodrum-arabic';
+          // font-size: 40px;
+          //line-height: 53px;
+          &.active {
+            cursor: unset;
+            background-color: #fff;
+            border-top: 14px solid $primary-color;
+            &::after {
+              content: '';
+              border-bottom: 1px solid;
+              color: $secondary-color;
+              width: 90%;
+              display: block;
+              margin: auto;
+              position: absolute;
+              bottom: 0;
+              left: 5%;
+            }
+            @include respond-below(sm) {
+              border-top-width: 8px;
+            }
+          }
+
+          @include respond-below(xl) {
+            padding: 10px 0;
+            font-size: $heading-sm-size;
+          }
+          @include respond-below(sm) {
+            font-size: $font-xs;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 100%;
+      .tab-pane {
+        // width: 90%;
+        // margin: auto;
+        padding: 20px;
+        // padding-bottom: 20px;
+        .tab-item-title {
+          background-color: $primary-color;
+          padding: 20px;
+          color: #fff;
+          font-size: 16px;
+          @include respond-below(sm) {
+            padding: 10px;
+          }
+        }
+        .tab-item-content {
+          * {
+            font-size: 14px;
+            font-family: 'diodrum-arabic-light';
+          }
+        }
+        ul {
+          padding-top: 30px;
+          list-style-type: none;
+          padding-left: 20px;
+          font-family: 'diodrum-arabic-light';
+          @include respond-below(sm) {
+            padding-top: 10px;
+          }
+          li {
+            font-size: 20px;
+            margin: 10px 0;
+            @include respond-below(sm) {
+              font-size: $font-xxs;
+            }
+          }
+        }
+        * {
+          font-size: $paragraph-text-mob-size;
+          @include respond-below(md) {
+            font-size: $paragraph-text-xs-size;
+          }
+          @include respond-below(md) {
+            font-size: $font-xxs;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.photo-Gallery {
+  .gallery {
+    h2 {
+      @include sectionHeading($almoosa-light-green-color);
+    }
+    .categories {
+      ul {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin-right: 10px;
+          margin-bottom: 25px;
+          a {
+            transition: 0.3s;
+            color: $primary-color;
+            padding: 8px 30px;
+            border: 1px solid $primary-color;
+            display: block;
+            font-size: 20px;
+            font-family: 'diodrum-arabic';
+            cursor: pointer;
+          }
+          &.active,
+          &:hover {
+            a {
+              background-color: $primary-color;
+              color: #fff;
+            }
+          }
+          .active {
+            background-color: $primary-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    img {
+      height: 300px;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($primary-color, $alpha: 0.4);
+      z-index: 2;
+      // pointer-events: none;
+      cursor: pointer;
+    }
+    button {
+      color: #fff;
+      font-size: 37px;
+      //line-height: 49px;
+      outline: none;
+      border: none;
+      background-color: $almoosa-light-green-color;
+      padding: 15px 80px;
+      font-weight: bold;
+      border-radius: 10px;
+      @include respond-below(md) {
+        //line-height: 1;
+        padding: 15px 40px;
+        font-size: 20px;
+      }
+    }
+  }
+}

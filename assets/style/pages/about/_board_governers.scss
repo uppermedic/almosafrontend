@@ -1,0 +1,7 @@
+.almoosa-doctors {
+  .our-doctors {
+    .title {
+      @include sectionHeading($almoosa-light-green-color);
+    }
+  }
+}

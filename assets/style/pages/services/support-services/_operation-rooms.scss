@@ -1,0 +1,68 @@
+.operation-rooms {
+  .content {
+    .page-desc {
+      margin: 50px;
+      background-color: $primary-color;
+      padding: 50px;
+      color: #ffffff;
+      margin-top: -400px;
+      max-width: 600px;
+      position: relative;
+      @include respond-below(lg) {
+        margin-top: -100px;
+      }
+      @include respond-below(md) {
+        padding: 20px;
+        margin: 20px;
+        margin-top: -100px;
+      }
+      h2.title {
+        border-bottom: 2px solid #ffffff;
+        font-size: $heading-size;
+        font-weight: bold;
+        padding: 20px 0;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        @include respond-below(md) {
+          font-size: $heading-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $sub-heading-sm-size;
+        }
+      }
+      p {
+        font-size: $paragraph-text-mob-size;
+        margin: 30px auto;
+        @include respond-below(sm) {
+          font-size: $font-sm;
+        }
+      }
+    }
+    .infos {
+      margin: 50px auto;
+      .col {
+        padding: 0;
+        @include respond-below(lg) {
+          padding: 10px 0;
+        }
+      }
+      .the-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        min-height: 500px;
+      }
+      .info {
+        background-color: #55b04726;
+        padding: 50px;
+        p {
+          margin: 30px 0;
+          //line-height: 2;
+        }
+        @include respond-below(sm) {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}

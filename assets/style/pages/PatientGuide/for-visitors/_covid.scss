@@ -1,0 +1,142 @@
+.covid-panemic {
+  position: relative;
+  .hero {
+    position: relative;
+    min-height: 750px;
+    padding: 3% 15%;
+    img {
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      width: 52%;
+    }
+    @include respond-below(xl) {
+      padding: 4% 15%;
+      background-position: 0 0;
+      //padding-top: 50px;
+      //min-height: 500px;
+    }
+    @include respond-below(lg) {
+      min-height: auto;
+    }
+    @include respond-below(md) {
+      padding: 3% 10%;
+    }
+    @include respond-below(sm) {
+      padding: 3%;
+    }
+    .covid-message {
+      background-color: #fff;
+      z-index: 2;
+      padding: 25px 15px;
+      //margin-left: 170px;
+      max-width: 750px;
+      @include respond-below(xl) {
+        margin-left: 50px;
+      }
+      @include respond-below(lg) {
+        margin-left: 0;
+        padding: 10px;
+      }
+      @include respond-below(md) {
+        margin: auto;
+      }
+      h2 {
+        color: $almoosa-light-green;
+        border-bottom: 1px solid $almoosa-light-green;
+        font-size: $paragraph-text-size;
+        font-family: 'diodrum-arabic-bold';
+        padding-bottom: 10px;
+        @include respond-below(md) {
+          padding-bottom: 3px;
+          font-size: $paragraph-text-sm-size;
+        }
+      }
+      h3 {
+        font-family: 'diodrum-arabic-bold';
+        font-size: 16px;
+        padding-top: 5px;
+        span {
+          display: block;
+          border-bottom: 1px solid rgba($color: #707070, $alpha: 0.7);
+          width: 56%;
+          padding-top: 10px;
+        }
+        @include respond-below(lg) {
+          font-size: 17px;
+          padding-top: 5px;
+          span {
+            width: 65%;
+            margin: auto;
+          }
+        }
+      }
+      p {
+        padding-top: 5px;
+        //line-height: 38px;
+        font-family: 'diodrum-arabic-meduim';
+        font-size: 16px;
+        span {
+          display: block;
+          padding-top: 35px;
+        }
+        @include respond-below(md) {
+          font-size: 16px;
+          padding-top: 10px;
+          //line-height: 25px;
+          span {
+            padding-top: 15px;
+          }
+        }
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .covid-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .covid-card {
+      margin-bottom: 40px;
+      h3 {
+        font-family: 'diodrum-arabic-bold';
+        color: #fff;
+        font-size: 16px;
+        background-color: $primary-color;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        @include respond-below(md) {
+          padding: 10px;
+        }
+      }
+      .card-content {
+        border: 1px solid rgba($color: #707070, $alpha: 0.7);
+        padding: 20px;
+
+        h4 {
+          font-family: 'diodrum-arabic-bold';
+          font-size: 15px;
+          //line-height: 38px;
+          @include respond-below(md) {
+            font-size: 16px;
+            //line-height: 25px;
+          }
+        }
+        p {
+          font-family: 'diodrum-arabic-meduim';
+          font-size: 15px;
+          //line-height: 38px;
+          @include respond-below(md) {
+            font-size: 16px;
+          }
+          @include respond-below(sm) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

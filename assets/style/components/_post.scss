@@ -1,0 +1,103 @@
+.post_with_title {
+  .two_columns_post {
+    margin: 50px auto;
+    .post-paragraph {
+      font-size: $paragraph-text-size;
+      padding-right: 50px;
+      font-weight: bold;
+      height: 100%;
+      @include respond-below(md) {
+        font-size: $paragraph-text-sm-size;
+      }
+      @include respond-below(sm) {
+        font-size: $font-sm !important;
+      }
+      .single_paragraph {
+        margin: 20px auto;
+        //line-height: 2.5;
+      }
+    }
+    .post-img {
+      img {
+        width: 100%;
+        border-radius: 5px;
+        height: 340px;
+      }
+    }
+  }
+  .one_column_post {
+    margin: 50px;
+    .sub_titles {
+      text-align: center;
+      margin: 50px auto;
+      max-width: 1000px;
+
+      @include respond-below(lg) {
+        margin: 20px auto;
+      }
+      .subtitle {
+        font-size: 45px;
+        font-weight: bolder;
+        margin: 20px auto;
+        @include respond-below(lg) {
+          margin: 20px auto;
+          font-size: 30px;
+        }
+        @include respond-below(sm) {
+          font-size: 20px;
+        }
+      }
+    }
+    .post-paragraph {
+      font-size: $paragraph-text-size;
+      font-weight: bold;
+      text-align: center;
+      margin: 50px auto;
+      @include respond-below(md) {
+        font-size: $font-sm;
+        margin: 20px 0;
+        text-align: left;
+        @include rtl() {
+          text-align: right;
+        }
+      }
+    }
+    .post-img {
+      margin-bottom: 50px 0;
+      img {
+        width: 100%;
+        max-height: 450px;
+      }
+    }
+    .video-wrapper {
+      position: relative;
+      padding-top: 50%;
+      .video-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        iframe {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+// Under 768px
+@include respond-below(md) {
+  .post_with_title {
+    .two_columns_post {
+      .post-paragraph {
+        padding-right: 0;
+        font-size: 20px;
+      }
+    }
+    .one_column_post {
+      margin: 20px;
+    }
+  }
+}

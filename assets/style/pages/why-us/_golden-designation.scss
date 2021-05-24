@@ -1,0 +1,57 @@
+.golden-designation {
+  .head-banner {
+    background-color: $medical-centers;
+    text-align: center;
+    padding: 200px 0;
+    h2 {
+      font-size: 50px;
+      font-weight: bolder;
+      color: #ffffff;
+    }
+  }
+
+  .content {
+    margin-top: 100px;
+    .single-section,
+    .single-section-nosubitems {
+      margin-bottom: 50px;
+      //line-height: 36px;
+      strong {
+        font-family: 'diodrum-arabic-bold';
+      }
+
+      .golden-designation-title {
+        font-size: 22px;
+        color: $secondary-color-light;
+        text-decoration: underline;
+        font-family: 'diodrum-arabic-bold';
+      }
+      .golden-designation-paragraph {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px 0 30px 0;
+      }
+      .golden-designation-menu {
+        font-weight: bold;
+        font-size: 16px;
+        & > li {
+          margin-top: 20px;
+        }
+        .sub-item {
+          color: rgb(51, 51, 51);
+        }
+      }
+    }
+  }
+}
+
+@include respond-below(md) {
+  .golden-designation {
+    .head-banner {
+      padding: 50px;
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}

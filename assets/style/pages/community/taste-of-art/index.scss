@@ -1,0 +1,64 @@
+.taste_of_art {
+  .hero {
+    // height: 1000px;
+    position: relative;
+    .top-ticket {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 30%;
+      height: 20%;
+      opacity: 0.8;
+      @include respond-below(lg) {
+        width: 40%;
+        height: 50%;
+      }
+      @include respond-below(sm) {
+        position: unset;
+        width: 100%;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    .bottom-ticket {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      width: fit-content;
+      background-color: $secondary-color-light-lessOpacity;
+      @include respond-below(sm) {
+        position: unset;
+        width: 100%;
+        margin-top: 20px;
+      }
+      h3 {
+        font-size: $heading-size;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        @include respond-below(lg) {
+          font-size: $heading-mob-size;
+        }
+        @include respond-below(md) {
+          font-size: $heading-sm-size;
+        }
+      }
+    }
+  }
+  .post_with_title {
+    .one_column_post {
+      .post-paragraph {
+        width: 80%;
+      }
+    }
+  }
+
+  .small-gallary {
+    .img-container {
+      height: 350px;
+    }
+  }
+}

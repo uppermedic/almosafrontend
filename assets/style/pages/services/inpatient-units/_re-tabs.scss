@@ -1,0 +1,66 @@
+.reusable-tabs {
+  .container {
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 0;
+    .nav-tabs {
+      width: 100%;
+      border: 0;
+      li {
+        width: 50%;
+        text-align: center;
+        a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 600;
+          background-color: #f3f3f3;
+          padding: 20px 0;
+          box-shadow: 0px 3px 6px #00000029;
+          &.active {
+            cursor: unset;
+            color: $almoosa-light-green;
+            background-color: #fff;
+            border-top: 8px solid $almoosa-light-green;
+          }
+          @include respond-below(xl) {
+            padding: 10px 0;
+            font-size: 20px;
+          }
+          @include respond-below(sm) {
+            font-size: 16px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+    .tab-pane {
+      padding: 25px 80px;
+      .content {
+        position: relative;
+        width: 100%;
+        p {
+          font-size: 16px !important;
+          span {
+            font-size: 16px !important;
+          }
+        }
+      }
+      .green-txt {
+        color: $almoosa-light-green;
+      }
+      * {
+        font-size: 14px;
+        //color: $gray-2;
+        @include respond-below(md) {
+          // font-size: $paragraph-text-xs-size;
+        }
+      }
+      @include respond-below(md) {
+        padding: 20px;
+      }
+    }
+  }
+}

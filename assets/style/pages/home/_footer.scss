@@ -1,0 +1,181 @@
+footer {
+  .footer-top {
+    // height: 650px;
+    padding: 80px 0 60px;
+    font-family: 'diodrum-arabic-bold';
+    @include rtl() {
+      transform: scaleX(-1);
+    }
+    @include background-image;
+    &.home-footer {
+      padding: 120px 0 60px;
+    }
+    @include respond-below(lg) {
+      // text-align: center;
+      background-image: none !important;
+      background-color: $primary-color;
+    }
+    .container {
+      > div {
+        @include rtl() {
+          transform: scaleX(-1);
+        }
+      }
+      .intro {
+        max-width: 100%;
+        h2 {
+          font-family: 'diodrum-arabic-meduim';
+          font-size: $footer-heading;
+          color: #fff;
+          //line-height: 64px;
+          @include respond-below(xl) {
+            font-size: $footer-heading-md;
+          }
+          @include respond-below(lg) {
+            font-size: $footer-heading-sm;
+          }
+          @include respond-below(sm) {
+            font-size: $footer-heading-xs;
+          }
+        }
+        p {
+          font-size: $footer-paragraph;
+          font-family: 'diodrum-arabic-light';
+          color: #fff;
+          //line-height: 43px;
+          @include respond-below(sm) {
+            font-size: $footer-paragraph-xs;
+          }
+        }
+
+        .social {
+          color: #fff;
+          @include respond-below(lg) {
+            margin: 1em 0;
+          }
+          a {
+            margin-right: 10px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: $social-size;
+            //line-height: 1;
+            @include respond-below(lg) {
+              font-size: $social-mob-size;
+            }
+            @include respond-below(md) {
+              margin-right: 0px;
+            }
+            transition: 0.4s;
+            // &.fb:hover {
+            //   color: $fb-color;
+            // }
+            // &.twitter:hover {
+            //   color: $twitter-color;
+            // }
+            // &.insta:hover {
+            //   color: $insta-color;
+            // }
+            // &.in:hover {
+            //   color: $in-color;
+            // }
+            // &.youtube:hover {
+            //   color: $youtube-color;
+            // }
+          }
+        }
+      }
+      .links {
+        // padding-right: 15%;
+        @include respond-below(lg) {
+          display: inline-block;
+        }
+        h3 {
+          border-bottom: 2px solid #fff;
+          font-size: $footer-heading;
+          padding-bottom: 15px;
+          color: #fff;
+          text-transform: uppercase;
+          font-family: 'diodrum-arabic-meduim';
+          @include respond-below(xl) {
+            font-size: $footer-heading-md;
+          }
+          @include respond-below(lg) {
+            font-size: $footer-heading-sm;
+          }
+          @include respond-below(sm) {
+            display: inline-block;
+            margin-top: 1em;
+            font-size: $footer-heading-xs;
+          }
+        }
+        a {
+          color: #fff;
+          //line-height: 34px;
+          text-transform: capitalize;
+          font-size: $footer-paragraph;
+          font-weight: 900;
+          font-family: 'diodrum-arabic-meduim';
+          margin-bottom: 7px;
+          transition: 0.4s;
+          @include respond-below(sm) {
+            font-size: 12px;
+          }
+          &:hover {
+            color: $secondary-color;
+          }
+
+          &.btn-blog {
+            font-family: 'diodrum-arabic-meduim';
+            font-size: 26px;
+            padding: 10px 47px;
+            background-color: #0f425e;
+            color: #fff;
+            border-radius: 8px;
+            display: inline-block;
+            // width: 5em;
+            margin: auto 0;
+            margin-top: 30px;
+            // @include respond-below(lg) {
+            //   margin-left: 1.2em;
+            // }
+          }
+        }
+      }
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .footer-rights {
+    padding: 34px 0 29px;
+    background-color: #fff;
+    color: #000;
+    @include respond-below(lg) {
+      padding: 15px 0 10px;
+      background-color: $primary-color;
+      color: #fff;
+      // text-align: center;
+    }
+    @include respond-below(sm) {
+      padding: 20px 0 40px;
+    }
+
+    p,
+    a {
+      font-size: 14px;
+      @include respond-below(sm) {
+        font-size: 12px;
+      }
+    }
+    a {
+      // margin: 0 1em;
+      display: inline-block;
+      margin-bottom: 1em;
+      @include respond-below(md) {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}

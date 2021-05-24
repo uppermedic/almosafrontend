@@ -1,0 +1,86 @@
+.whyalmoosaWrapper {
+  font-family: 'diodrum-arabic-meduim';
+  padding: 30px 0;
+
+  @include respond-below(lg) {
+    padding: 30px 0;
+  }
+
+  .top-section {
+    padding-bottom: 5px;
+    align-items: center;
+    @include Border-bottom(3px, rgba($secondary-color-purple, 0.6));
+    h2 {
+      color: $secondary-color-purple;
+      font-family: 'diodrum-arabic-bold';
+      font-size: $sub-heading;
+      @include respond-below(lg) {
+        font-size: $sub-heading-md;
+      }
+      @include respond-below(md) {
+        font-size: $sub-heading-sm;
+      }
+      @include respond-below(sm) {
+        font-size: $sub-heading-xs;
+      }
+    }
+
+    .link_div {
+      text-align: right;
+      @include rtl() {
+        text-align: left;
+      }
+      span {
+        color: $primary-color;
+        font-size: $small-text;
+        cursor: pointer;
+      }
+      @include respond-below(lg) {
+        text-align: left;
+        @include rtl() {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .bottom-section {
+    padding-top: 70px;
+    p {
+      //line-height: 58px;
+      font-size: $paragraph;
+      font-weight: medium;
+      @include respond-below(lg) {
+        text-align: center;
+        //line-height: 42px;
+        font-size: $paragraph-md;
+      }
+      @include respond-below(md) {
+        //line-height: 32px;
+        font-size: $paragraph-sm;
+      }
+      @include respond-below(sm) {
+        //line-height: 32px;
+        font-size: $paragraph-xs;
+      }
+    }
+    @include respond-below(lg) {
+      padding-top: 30px;
+      .txt {
+        margin-top: 20px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: $photo-section-width;
+      max-height: $photo-section-height;
+      margin: 0 auto;
+      @include respond-below(md) {
+        max-width: $photo-section-width-md;
+        max-height: $photo-section-height-md;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.center-paragraph * {
+  font-size: 14px;
+  // font-family: 'diodrum-arabic';
+  @include respond-below(sm) {
+    // font-size: $sub-heading-sm-size;
+  }
+}
+
+.block-content {
+  .item {
+    // font-size: 20px;
+    // font-size: $paragraph-text-mob-size;
+    font-family: 'diodrum-arabic-meduim';
+    @include respond-below(sm) {
+      // font-size: $sub-heading-sm-size;
+    }
+    margin: 20px auto;
+    h2 {
+      padding: 20px;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 18px;
+      font-family: 'diodrum-arabic-bold';
+      @include respond-below(lg) {
+        font-size: 16px;
+      }
+      @include respond-below(sm) {
+        // font-size: 14px;
+      }
+    }
+    ul li,
+    p,
+    span {
+      font-size: 16px;
+      // font-family: 'diodrum-arabic';
+      @include respond-below(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+}

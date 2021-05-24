@@ -1,0 +1,66 @@
+.patients-responsibilities-page {
+  .content {
+    //background-image: url('/images/patient-guide/for_patient/patient_respons_cover.jpg');
+    //background-size: cover;
+    position: relative;
+    //padding: 50px 0;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      //background-color: #00000046;
+      z-index: 1;
+    }
+
+    .items {
+      position: relative;
+      z-index: 2;
+      //margin: 50px auto;
+      margin-bottom: 100px;
+      background-color: #fff;
+      padding: 50px 0;
+      border-radius: 10px;
+      .items-title {
+        h5 {
+          font-family: 'diodrum-arabic-bold';
+          color: $secondary-color-light;
+          font-size: 20px;
+          text-decoration: underline;
+          @include respond-below(md) {
+            font-size: 16px;
+          }
+        }
+        p {
+          color: $secondary-color-light;
+          font-size: 16px;
+          font-family: 'diodrum-arabic-meduim';
+        }
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+      }
+      .list {
+        li {
+          margin: 20px 0;
+          font-size: 16px;
+          @include respond-below(md) {
+            font-size: 14px;
+          }
+        }
+      }
+      .side-img {
+        .img {
+          img {
+            max-width: 100%;
+            min-height: 350px;
+          }
+        }
+        @include respond-below(xl) {
+          display: none;
+        }
+      }
+    }
+  }
+}

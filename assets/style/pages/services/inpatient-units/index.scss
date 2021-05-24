@@ -1,0 +1,124 @@
+.inpatient-units {
+  .hero {
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      @include rtl() {
+        right: 8%;
+        left: auto;
+      }
+    }
+    .hero-cover {
+      transform: scaleX(1);
+      @include rtl() {
+        transform: scaleX(-1);
+      }
+    }
+    .title {
+      color: $primary-color;
+    }
+  }
+  // .hero {
+  //   position: relative;
+  //   .overlay-1 {
+  //     position: absolute;
+  //     width: 100%;
+  //     height: 100%;
+  //     top: 0;
+  //     left: 0;
+  //     background-color: rgba(185, 185, 185, 0.527);
+  //     .overlay-2 {
+  //       position: absolute;
+  //       width: 50%;
+  //       height: 100%;
+  //       top: 0;
+  //       left: 0;
+  //       background-color: $secondary-color-light-lessOpacity;
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       @include rtl() {
+  //         left: auto;
+  //         right: 0;
+  //       }
+  //       .title {
+  //         font-size: 120px;
+  //         color: #fff;
+  //         font-weight: bold;
+  //         margin-left: 50px;
+  //         @include rtl() {
+  //           margin-left: 0;
+  //           margin-right: 50px;
+  //         }
+  //         @include respond-below(xl) {
+  //           font-size: 80px;
+  //         }
+  //         @include respond-below(lg) {
+  //           margin-left: 10px;
+  //           font-size: 50px;
+  //         }
+  //       }
+  //       @include respond-below(sm) {
+  //         width: 100%;
+  //         .title {
+  //           margin: 20px 0 !important;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  .inpatient-units-content {
+    //transform: translateY(-80px);
+    padding-top: 70px;
+    padding-bottom: 100px;
+    @include respond-below(lg) {
+      transform: translateY(0);
+      .col {
+        margin: 20px auto;
+      }
+    }
+
+    h2 {
+      @include sectionHeading($almoosa-light-green);
+    }
+  }
+  .card {
+    //padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      font-size: 20px;
+      color: $almoosa-light-green;
+      @include respond-below(xl) {
+        font-size: 18px;
+      }
+      @include respond-below(md) {
+        font-size: 16px;
+      }
+    }
+    hr {
+      background-color: $almoosa-light-green;
+      height: 3px;
+      border: 0;
+      display: block;
+    }
+    .desc {
+      * {
+        font-size: 14px;
+      }
+    }
+    .span-link {
+      margin: 20px 0;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}
+
+@import './re-pages-heading';
+@import './re-columns-text';
+@import './re-tabs';

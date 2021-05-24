@@ -1,12 +1,12 @@
 module.exports = {
   apps: [
     {
-      name: 'almoosa_hospital',
+      name: 'almoosa_hospital_2',
       script: 'npm',
       args: 'start',
       watch: true,
       env: {
-        NODE_ENV: 'development'
+        NODE_ENV: 'production'
       },
       env_production: {
         NODE_ENV: 'production'

@@ -1,0 +1,169 @@
+.family-rights-page {
+  .family-rights-content {
+    .top-content {
+      .description {
+        // background-color: $secondary-bg-color;
+        // color: white;
+        // padding: 30px 0;
+        p {
+          // font-size: $sub-heading-mob-size;
+          // font-weight: bold;
+          // @include respond-below(lg) {
+          //   font-size: 16px;
+          // }
+          // @include respond-below(md) {
+          //   font-size: 14px;
+          // }
+          font-weight: 500;
+          padding-top: 50px;
+          color: $secondary-color-light;
+          font-size: 18px;
+          font-family: 'diodrum-arabic-meduim';
+          @include respond-below(md) {
+            font-size: 16px;
+          }
+        }
+      }
+      // @include respond-below(xl) {
+      //   .title h2 {
+      //     font-size: $heading-mob-size;
+      //     width: 100%;
+      //   }
+      //   .description p {
+      //     font-size: $heading-mob-size;
+      //   }
+      // }
+      // @include respond-below(md) {
+      //   .title h2 {
+      //     font-size: $heading-sm-size;
+      //   }
+      //   .description p {
+      //     font-size: $heading-sm-size;
+      //   }
+      // }
+    }
+    .content {
+      //margin: 50px auto;
+      .col {
+        margin: 20px 0;
+      }
+      .info {
+        box-shadow: 0px 3px 6px #00000054;
+        padding: 30px 10px;
+        .info-title {
+          margin: 20px;
+          font-size: $font-sm;
+          font-weight: bold;
+          //line-height: 2;
+          @include respond-below(sm) {
+            font-size: $font-xxs;
+            //line-height: unset;
+            margin-top: 5px;
+          }
+        }
+        hr {
+          background-color: $almoosa-light-green;
+        }
+        .info-list {
+          margin-top: 20px;
+          list-style: none;
+          padding: 0;
+          li {
+            display: flex;
+            margin: 20px 0;
+            .num {
+              font-size: $paragraph-text-mob-size;
+              height: fit-content;
+              padding-right: 5px;
+              margin-right: 10px;
+              font-weight: bold;
+              border-right: 4px solid $almoosa-light-green;
+              @include rtl() {
+                padding-right: 0;
+                margin-right: 0;
+                border-right: 0;
+                border-left: 4px solid $almoosa-light-green;
+                padding-left: 5px;
+                margin-left: 10px;
+              }
+            }
+            .desc {
+              font-size: 14px;
+              color: $gray-2;
+              @include respond-below(md) {
+                font-size: 12px;
+              }
+            }
+
+            ul {
+              list-style: circle;
+              li {
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+      }
+      .img-col {
+        .the-img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
+        @include respond-below(lg) {
+          display: none;
+        }
+      }
+      .second-rights {
+        .info {
+          height: 100%;
+          background-color: $almoosa-light-green;
+          color: #ffffff;
+          .title {
+            margin: 20px;
+            font-size: $font-sm;
+            font-weight: bold;
+          }
+          hr {
+            background-color: #fff;
+          }
+          ul {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            li {
+              display: flex;
+              margin: 20px 0;
+              .num {
+                font-size: $paragraph-text-mob-size;
+                height: fit-content;
+                padding-right: 5px;
+                margin-right: 10px;
+                font-weight: bold;
+                border-right: 4px solid #fff;
+                @include rtl() {
+                  padding-right: 0;
+                  margin-right: 0;
+                  border-right: 0;
+                  border-left: 4px solid #fff;
+                  padding-left: 5px;
+                  margin-left: 10px;
+                }
+              }
+              .desc {
+                font-size: $paragraph-text-xs-size;
+                color: rgba(255, 255, 255, 0.801);
+                @include respond-below(sm) {
+                  font-size: $font-xxs;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

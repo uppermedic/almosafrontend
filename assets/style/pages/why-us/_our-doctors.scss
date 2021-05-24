@@ -1,0 +1,191 @@
+.almoosa-doctors {
+  .filters {
+    align-items: center;
+    border-bottom: 3px solid #0f425e;
+    padding: 20px 0;
+    span {
+      font-size: 22px;
+      display: block;
+      @include respond-below(md) {
+        font-size: 16px;
+      }
+    }
+  }
+  .hero-content {
+    .title-directors {
+      color: $primary-color;
+    }
+  }
+  .our-doctors {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    h2 {
+      @include sectionHeading($primary-color);
+    }
+
+    .doctor-details {
+      padding-bottom: 110px;
+      // @include Border-bottom(2px, rgba(#707070, 0.6));
+
+      .doctor-img {
+        position: relative;
+        @include respond-below(lg) {
+          margin: auto;
+          width: 400px;
+        }
+        @include respond-below(md) {
+          width: 300px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 450px;
+          object-fit: cover;
+        }
+        &:hover .doctor-social {
+          opacity: 1;
+        }
+        .doctor-social {
+          text-align: center;
+          padding: 10px;
+          background-color: rgba($color: #c2c4c5, $alpha: 0.4);
+          position: relative;
+          bottom: 76px;
+          left: 0;
+          width: 100%;
+          margin: auto;
+          transition: all 0.5s ease-in-out;
+          opacity: 0;
+          i {
+            cursor: pointer;
+            padding: 4px;
+            &:nth-child(1) {
+              color: #2867b2;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              color: #00acee;
+            }
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .doctor-name {
+        font-size: $sub-heading-size;
+        color: $almoose-dark-green;
+        @include respond-below(lg) {
+          text-align: center;
+        }
+        @include respond-below(md) {
+          font-size: $sub-heading-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $sub-heading-sm-size;
+        }
+        & ~ p {
+          font-size: 16px;
+          font-weight: 300;
+          @include respond-below(md) {
+            font-size: 14px;
+          }
+        }
+      }
+      .doctor-title {
+        color: $primary-color;
+        font-size: 22px !important;
+        @include respond-below(lg) {
+          text-align: center;
+        }
+        @include respond-below(md) {
+          font-size: 16px !important;
+        }
+      }
+      .doctor-qualifications + p {
+        font-size: 16px;
+        @include respond-below(sm) {
+          font-size: 14px;
+        }
+      }
+      .doctor-qualifications,
+      .doctor-position {
+        color: $secondary-color-purple;
+        font-weight: bold;
+        padding-bottom: 10px;
+        @include Border-bottom(3px, $secondary-color-purple);
+        font-size: $sub-heading-mob-size;
+        @include respond-below(md) {
+          font-size: $sub-heading-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $sub-heading-sm-size;
+        }
+        & ~ ul {
+          padding: 0;
+          list-style-position: inside;
+          li {
+            font-size: 16px;
+            font-weight: medium;
+            //line-height: 53px;
+            margin-left: 0;
+            @include respond-below(sm) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .doctors-cards {
+      padding-top: 80px;
+      padding-bottom: 50px;
+
+      .card {
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        margin-bottom: 50px;
+        border: 11px solid #eee;
+        height: 90%;
+        cursor: pointer;
+        @include respond-below(md) {
+          margin: 20px auto;
+        }
+        @include respond-below(sm) {
+          max-width: 250px;
+        }
+        &:hover {
+          border-color: rgba($primary-color, 0.5);
+          transform: translate(-2px, -2px);
+          box-shadow: 3px 3px 3px rgba($color: $primary-color, $alpha: 0.5);
+          .banner {
+            opacity: 1;
+          }
+        }
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        .banner {
+          transition: opacity 0.5s ease-in-out;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+          text-align: center;
+          background-color: rgba($color: #c2c4c5, $alpha: 0.4);
+          opacity: 0;
+          h4 {
+            padding: 5px;
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.medical-center-subpage {
+  .hero {
+    // background-color: #215487;
+    // margin: 50px auto;
+    padding: 20px 0;
+    height: auto;
+    @include respond-below(xl) {
+      height: auto;
+      padding: 50px 0;
+    }
+    .img-div {
+      margin-bottom: 15px;
+      img {
+        height: 290px;
+        width: 100%;
+      }
+    }
+    .par-div {
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      p {
+        font-size: $paragraph-text-sm-size;
+        //line-height: 2;
+        @include respond-below(xl) {
+          margin-top: 50px;
+        }
+      }
+    }
+    .post_title {
+      padding-top: 0;
+    }
+  }
+
+  .info-popups {
+    margin: 50px auto;
+    button {
+      border: 0;
+      padding: 20px;
+      color: #ffffff;
+      font-size: 20px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      width: 30%;
+      display: block;
+    }
+    .popup-wrapper {
+      .popup-content {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .tab-content {
+    h2 {
+      @include sectionHeading($almoosa-color-green);
+    }
+    .tab-details {
+      padding: 30px 0;
+
+      // p {
+      //   font-size: 16px !important;
+      //   font-family: 'diodrum-arabic-meduim';
+      //   span {
+      //     font-size: 16px !important;
+      //     font-family: 'diodrum-arabic-meduim';
+      //   }
+      // }
+    }
+  }
+}

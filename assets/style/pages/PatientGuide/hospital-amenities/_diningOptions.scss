@@ -1,0 +1,54 @@
+.hospitality-services-content {
+  .container {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .card-wrapper {
+      .dining-card {
+        margin: 50px auto;
+        border-radius: 10px;
+        position: relative;
+
+        .card-title {
+          position: relative;
+          z-index: 2;
+          h2 {
+            color: $almoosa-light-green;
+            font-size: 26px;
+            border-left: 4px solid $almoosa-light-green;
+            border-bottom: 4px solid $almoosa-light-green;
+            padding: 10px;
+            margin: 0;
+            width: fit-content;
+            @include rtl() {
+              border-right: 4px solid $almoosa-light-green;
+              border-left: 0;
+            }
+          }
+        }
+        .description {
+          position: relative;
+          z-index: 2;
+          h5 {
+            font-family: 'diodrum-arabic-bold';
+            color: $secondary-color-light;
+            font-size: 20px;
+            text-decoration: underline;
+            @include respond-below(md) {
+              font-size: 16px;
+            }
+          }
+          p {
+            font-size: 16px;
+            @include respond-below(md) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

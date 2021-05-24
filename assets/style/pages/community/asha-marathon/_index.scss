@@ -1,0 +1,116 @@
+.asha-marathon {
+  .hero {
+    //height: 800px;
+    .right_ticket-title {
+      margin-left: auto;
+      text-align: right;
+      position: relative;
+      top: 53%;
+      right: 11%;
+      padding-top: 30px;
+      .banner-title {
+        text-align: right;
+        color: $secondary-color;
+        font-size: $heading-banner;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .content-wrapper {
+    padding-top: 63px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      @include sectionHeading($primary-color);
+    }
+    .marathon-sponsor {
+      margin: 10px auto;
+      h4 {
+        font-family: 'diodrum-arabic-meduim';
+        font-size: $paragraph-text-size;
+        //line-height: 2;
+        width: 60%;
+        margin: 0 auto 20px;
+        color: $primary-color;
+        text-align: center;
+        @include respond-below(xl) {
+          width: 100%;
+        }
+        @include respond-below(md) {
+          font-size: $paragraph-text-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $font-xs;
+        }
+      }
+    }
+    .marathon-info {
+      position: relative;
+      background-color: $primary-color;
+      .bottom-zigzag {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        @include rtl() {
+          left: auto;
+          right: 0;
+        }
+        @include respond-below(md) {
+          display: none;
+        }
+      }
+      h4 {
+        font-size: 26px;
+        //line-height: 2;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include respond-below(md) {
+          font-size: $paragraph-text-mob-size;
+        }
+        @include respond-below(sm) {
+          padding-bottom: 20px;
+          padding-top: 20px;
+          font-size: $paragraph-text-xs-size;
+          //line-height: 35px;
+        }
+      }
+      p {
+        background-color: $gray;
+        color: #000;
+        font-size: $paragraph-text-xs-size;
+        margin: 0;
+        @include respond-below(md) {
+          font-size: $paragraph-text-mob-size;
+        }
+        @include respond-below(sm) {
+          font-size: $paragraph-text-xs-size;
+        }
+      }
+    }
+    .marathon-vedio {
+      h2 {
+        @include sectionHeading($almoosa-light-green-color);
+      }
+      .video-wrapper {
+        position: relative;
+        width: 90%;
+        padding-top: 50%;
+        .video-div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

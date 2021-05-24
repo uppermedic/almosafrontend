@@ -1,0 +1,111 @@
+.visiting-hours {
+  .content {
+    //margin: 50px auto;
+
+    .info {
+      position: relative;
+      .overlay {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        width: 20%;
+        z-index: -1;
+        @include rtl() {
+          right: auto;
+          left: 0;
+          transform: scale(-1);
+        }
+      }
+      height: 100%;
+
+      .desc {
+        margin: 50px auto;
+        p {
+          font-family: 'diodrum-arabic-meduim';
+          font-weight: 500;
+          font-size: 16px;
+          @include respond-below(sm) {
+            font-size: 14px;
+          }
+        }
+      }
+      .time {
+        .time-title {
+          span {
+            color: $primary-color;
+            display: inline-block;
+            font-size: 23px;
+          }
+          h3 {
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+            display: inline-block;
+            font-size: 16px;
+            font-family: 'diodrum-arabic-bold';
+            margin-left: 10px;
+            padding: 5px 0;
+            @include rtl() {
+              margin-left: 0;
+              margin-right: 10px;
+            }
+            @include respond-below(sm) {
+              // font-size: $sub-heading-sm-size;
+            }
+          }
+        }
+        .hours {
+          p {
+            font-size: 14px;
+            span {
+              color: $almoosa-light-green;
+            }
+            strong {
+              font-family: 'diodrum-arabic-bold';
+            }
+            @include respond-below(sm) {
+              font-size: $font-xs;
+            }
+          }
+        }
+        .note {
+          color: $primary-color;
+          margin: 10px 0;
+          font-size: 16px;
+          font-family: 'diodrum-arabic-bold';
+        }
+      }
+      button {
+        background-color: $almoosa-light-green;
+        color: white;
+        padding: 5px;
+        font-weight: bold;
+        border: 0;
+        border-radius: 10px;
+        font-size: 16px;
+        @include respond-below(sm) {
+          font-size: $font-xxs;
+        }
+      }
+    }
+    .img-col {
+      @include respond-below(lg) {
+        margin: 30px auto;
+        text-align: center;
+      }
+    }
+    .the-img {
+      padding: 10px;
+      // border: 2px solid $almoosa-light-green;
+      width: fit-content;
+      height: 415px;
+      @include respond-below(lg) {
+        // margin: 10px auto;
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

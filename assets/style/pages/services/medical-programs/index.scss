@@ -1,0 +1,106 @@
+.medical-programs {
+  .hero {
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      @include rtl() {
+        right: 8%;
+        left: auto;
+      }
+    }
+    .hero-cover {
+      transform: scaleX(-1);
+      @include rtl() {
+        transform: scaleX(1);
+      }
+    }
+    .title {
+      color: $primary-color;
+    }
+  }
+  .medical-programs-card {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      @include sectionHeading($almoose-dark-green);
+    }
+    .cols {
+      .card-item {
+        @include background-image;
+        position: relative;
+        padding: 30px;
+        color: #fff;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        //cursor: pointer;
+        @include respond-below(sm) {
+          padding: 20px;
+        }
+        h3 {
+          font-size: 18px;
+          font-family: 'diodrum-arabic-bold';
+          cursor: pointer;
+          @include Border-bottom(3px, #fff);
+          padding-bottom: 15px;
+          @include respond-below(sm) {
+            font-size: 18px;
+          }
+        }
+        p,
+        span,
+        .read-more {
+          display: block;
+          margin: 0;
+          font-size: 14px;
+          padding-top: 20px;
+          font-family: 'diodrum-arabic-light';
+          font-weight: bold;
+          @include respond-below(lg) {
+            font-size: 14px;
+          }
+        }
+        .read-more {
+          font-family: 'diodrum-arabic-bold';
+        }
+      }
+      &:nth-child(1n) .card-item {
+        background-color: $almoosa-light-green-color;
+      }
+      &:nth-child(2n) .card-item {
+        background-color: rgba($primary-color, 0.9);
+      }
+      &:nth-child(3n) .card-item {
+        background-color: rgba($secondary-color-purple, 0.8);
+      }
+      &:nth-child(4n) .card-item {
+        background-color: $almoosa-offwhite-color;
+        color: rgba($primary-color, 1);
+        h3 {
+          @include Border-bottom(3px, $primary-color);
+        }
+        span {
+          color: rgba($primary-color, 1);
+        }
+      }
+    }
+  }
+}
+
+/* Import files */
+// Pages
+@import './hair-transplant';
+
+// reusable Components
+@import './page-heading';
+@import './shared-post';
+@import './dropdown';
+@import './_block-of-content';
+@import './stroke-management';
+@import './vaccination-program';
+@import './related-links';

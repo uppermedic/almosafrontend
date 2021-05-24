@@ -1,0 +1,136 @@
+.support-groubs {
+  .hero {
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      @include rtl() {
+        right: 8%;
+        left: auto;
+      }
+    }
+    .hero-cover {
+      transform: scaleX(-1);
+      @include rtl() {
+        transform: scaleX(1);
+      }
+    }
+    .title {
+      color: $primary-color;
+    }
+  }
+  // .head-banner {
+  //   background-color: $medical-centers;
+  //   text-align: center;
+  //   padding: 200px 0;
+  //   h2 {
+  //     font-size: 80px;
+  //     font-weight: bolder;
+  //     color: #ffffff;
+  //   }
+  // }
+  .support-groubs-content {
+    .content {
+      margin: 50px auto;
+      //box-shadow: 0px 9px 12px #00000054;
+      .info {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+        @include respond-below(xl) {
+          padding: 30px;
+        }
+        @include respond-below(sm) {
+          padding: 30px 0;
+        }
+        .title {
+          margin-top: 50px;
+          margin-bottom: 30px;
+          font-size: $heading-sm-size;
+          font-weight: bold;
+          color: $primary-color;
+          width: fit-content;
+          @include respond-below(sm) {
+            margin: auto;
+            margin-bottom: 40px;
+          }
+        }
+        hr {
+          background-color: $primary-color;
+          border-color: $primary-color;
+          width: 120%;
+        }
+        p {
+          font-family: 'diodrum-arabic-meduim';
+          font-size: $paragraph-text-sm-size;
+          @include respond-below(sm) {
+            font-size: $paragraph-text-xs-size;
+          }
+        }
+        .sections {
+          // margin-top: 100px;
+          .single-section {
+            margin-bottom: 50px;
+            //line-height: 36px;
+            .support-groubs-title {
+              font-family: 'diodrum-arabic-bold';
+              color: $secondary-color-light;
+              font-size: 20px;
+              text-decoration: underline;
+              @include respond-below(md) {
+                font-size: 16px;
+              }
+            }
+            .support-groubs-paragraph {
+              font-size: 16px;
+              @include respond-below(md) {
+                font-size: 14px;
+              }
+            }
+            .support-groubs-menu {
+              font-weight: bold;
+              font-size: 16px;
+              li {
+                margin: 20px 0;
+                font-size: 16px;
+                @include respond-below(md) {
+                  font-size: 14px;
+                }
+              }
+              .sub-item {
+                margin-top: 0;
+                color: rgb(51, 51, 51);
+              }
+            }
+          }
+        }
+        .overlay {
+          position: absolute;
+          width: 100%;
+          height: 200px;
+          bottom: -50px;
+          z-index: 1;
+          opacity: 0.05;
+          display: flex;
+        }
+      }
+      .img-col {
+        @include respond-below(xl) {
+          display: none;
+        }
+        .img {
+          padding: 50px;
+          img {
+            // clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

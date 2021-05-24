@@ -1,0 +1,31 @@
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import CarouselContent from 'src/components/Home/CarouselContent';
+import { i18n, withTranslation } from 'root/i18n';
+
+class ReactSlickDemo extends Component {
+  render() {
+    var settings = {
+      dots: true
+    };
+
+    const { language } = i18n;
+    const { data } = this.props;
+    return (
+      <div className="carousel">
+        <Slider {...settings}>
+          {data.map((slide, idx) => (
+            <div>
+              <img className="carousel-image" src={slide.image} />
+              <div className="overlay">
+                <CarouselContent data={slide} index={idx} />
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
+  }
+}
+
+export default ReactSlickDemo;

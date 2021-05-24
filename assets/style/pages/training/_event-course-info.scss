@@ -1,0 +1,166 @@
+.event-info,
+.course-info {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #efeae0;
+  }
+  .info {
+    padding: 70px 40px 20px;
+    background-color: #efeae0;
+    @include respond-below(md) {
+      padding: 20px;
+    }
+    h2 {
+      font-family: 'diodrum-arabic-bold';
+      letter-spacing: 2px;
+      font-size: 23px;
+      font-weight: bold;
+      text-align: center;
+      height: 115px;
+      overflow: hidden;
+      @include respond-below(lg) {
+        font-size: 22px;
+        height: 100px;
+      }
+      @include respond-below(md) {
+        font-size: 25px;
+      }
+    }
+    .date-location {
+      justify-content: center;
+      display: grid;
+      @include Border-bottom(1px, #888888);
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+          margin: 5px 10px;
+          font-weight: bold;
+          @include respond-below(sm) {
+            font-size: 14px;
+          }
+          i {
+            padding-right: 20px;
+            color: $secondary-color-light;
+            font-size: 25px;
+            display: inline-block;
+            @include rtl() {
+              padding-left: 20px;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .cost {
+      padding: 20px 30px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+        font-size: 16px;
+        @include respond-below(sm) {
+          font-size: 14px;
+        }
+      }
+      i {
+        color: $primary-color;
+        padding-right: 10px;
+        font-size: 16px;
+        display: inline-block;
+        @include respond-below(sm) {
+          font-size: 15px;
+        }
+      }
+    }
+    button {
+      font-family: 'diodrum-arabic-bold';
+      color: #fff;
+      background-color: $primary-color;
+      width: 100%;
+      padding: 10px;
+      letter-spacing: 2px;
+      font-size: 26px;
+      border: 0;
+      @include respond-below(lg) {
+        font-size: 20px;
+      }
+      @include respond-below(md) {
+        font-size: 25px;
+      }
+      @include respond-below(sm) {
+        font-size: 20px;
+      }
+    }
+  }
+  .about p {
+    font-size: 16px;
+    line-height: 2;
+    font-weight: medium;
+    @include respond-below(sm) {
+      font-size: 16px;
+    }
+  }
+  .topics {
+    h4 {
+      min-width: 35%;
+      font-size: 25px;
+      font-weight: bold;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: inline;
+      color: $primary-color;
+      font-family: 'diodrum-arabic-bold';
+      @include Border-bottom(1px, $primary-color);
+      @include respond-below(md) {
+        font-size: $sub-heading-mob-size;
+      }
+    }
+    .times {
+      p {
+        font-size: 20px;
+        font-weight: medium;
+        display: inline-block;
+        width: 30%;
+        @include respond-below(lg) {
+          font-size: 20px;
+        }
+        @include respond-below(sm) {
+          width: auto;
+          display: block;
+        }
+        &.lecture {
+          width: 70%;
+          font-weight: bold;
+          span {
+            font-size: 20px;
+          }
+          @include respond-below(sm) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+  .about,
+  .topics {
+    h2 {
+      font-family: 'diodrum-arabic-bold';
+      font-size: 26px;
+      font-weight: bold;
+      @include Border-bottom(1px, #707070);
+      padding-bottom: 10px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+  }
+}

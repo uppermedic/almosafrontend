@@ -1,0 +1,28 @@
+.carousel {
+  .carousel-image {
+    width: 100%;
+  }
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    z-index: 5;
+    &::before,
+    &::before {
+      font-size: 50px;
+    }
+  }
+  .slick-next {
+    right: 5%;
+  }
+  .slick-prev {
+    left: 5%;
+  }
+  .slick-dots {
+    bottom: 20px;
+    button {
+      &::before {
+        font-size: 15px;
+      }
+    }
+  }
+}
