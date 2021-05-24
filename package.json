@@ -7,7 +7,7 @@
     "build": "next build",
     "build:max": "cross-env NODE_OPTIONS=--max_old_space_size=4096 next build",
     "build:maxx": "cross-env NODE_OPTIONS=--max_old_space_size=1024 next build",
-    "start": "next start"
+    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}"
   },
   "keywords": [],
   "author": "",
