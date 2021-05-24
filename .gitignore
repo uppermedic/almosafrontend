@@ -10,8 +10,6 @@ build.zip
 /build
 /dist
 /.next
-#
-package-lock.json
 # misc
 .DS_Store
 .env
