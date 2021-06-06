@@ -25,6 +25,11 @@ a:hover {
   padding-bottom: 100px;
 }
 
+b,
+strong {
+  font-family: 'diodrum-arabic-bold' !important;
+}
+
 button:focus,
 input:focus {
   outline: 0;
