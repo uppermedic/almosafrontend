@@ -2,19 +2,53 @@
   .two_columns_post {
     margin: 50px auto;
     .post-paragraph {
-      font-size: $paragraph-text-size;
+      // font-size: $paragraph-text-size;
       padding-right: 50px;
       font-weight: bold;
       height: 100%;
-      @include respond-below(md) {
-        font-size: $paragraph-text-sm-size;
+      p,
+      span,
+      li,
+      h3,
+      a {
+        font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important ;
+        @include respond-below(md) {
+          font-size: 14px !important;
+        }
       }
-      @include respond-below(sm) {
-        font-size: $font-sm !important;
-      }
+      // @include respond-below(md) {
+      //   font-size: $paragraph-text-sm-size;
+      // }
+      // @include respond-below(sm) {
+      //   font-size: $font-sm !important;
+      // }
       .single_paragraph {
         margin: 20px auto;
-        //line-height: 2.5;
+        p,
+        span,
+        li,
+        h3,
+        a {
+          font-size: 16px !important;
+          font-family: 'diodrum-arabic-meduim' !important ;
+          @include respond-below(md) {
+            font-size: 14px !important;
+          }
+        }
+
+        b,
+        strong {
+          font-family: 'diodrum-arabic-bold' !important;
+          p,
+          span,
+          a,
+          li,
+          h3,
+          h4 {
+            font-family: 'diodrum-arabic-bold' !important;
+          }
+        }
       }
     }
     .post-img {
@@ -49,12 +83,36 @@
       }
     }
     .post-paragraph {
-      font-size: $paragraph-text-size;
+      // font-size: $paragraph-text-size;
       font-weight: bold;
       text-align: center;
       margin: 50px auto;
+      p,
+      span,
+      li,
+      h3,
+      a {
+        font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important ;
+        @include respond-below(md) {
+          font-size: 14px !important;
+        }
+      }
+
+      b,
+      strong {
+        font-family: 'diodrum-arabic-bold' !important;
+        p,
+        span,
+        a,
+        li,
+        h3,
+        h4 {
+          font-family: 'diodrum-arabic-bold' !important;
+        }
+      }
       @include respond-below(md) {
-        font-size: $font-sm;
+        // font-size: $font-sm;
         margin: 20px 0;
         text-align: left;
         @include rtl() {
@@ -93,7 +151,7 @@
     .two_columns_post {
       .post-paragraph {
         padding-right: 0;
-        font-size: 20px;
+        font-size: 14px;
       }
     }
     .one_column_post {

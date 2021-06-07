@@ -1,19 +1,14 @@
 .center-paragraph * {
-  font-size: 14px;
-  // font-family: 'diodrum-arabic';
-  @include respond-below(sm) {
-    // font-size: $sub-heading-sm-size;
+  font-size: 16px !important;
+  font-family: 'diodrum-arabic-meduim' !important ;
+  @include respond-below(md) {
+    font-size: 14px !important;
   }
 }
 
 .block-content {
   .item {
-    // font-size: 20px;
-    // font-size: $paragraph-text-mob-size;
     font-family: 'diodrum-arabic-meduim';
-    @include respond-below(sm) {
-      // font-size: $sub-heading-sm-size;
-    }
     margin: 20px auto;
     h2 {
       padding: 20px;
@@ -24,17 +19,16 @@
       @include respond-below(lg) {
         font-size: 16px;
       }
-      @include respond-below(sm) {
-        // font-size: 14px;
-      }
     }
-    ul li,
+    li,
     p,
-    span {
-      font-size: 16px;
-      // font-family: 'diodrum-arabic';
-      @include respond-below(lg) {
-        font-size: 14px;
+    span,
+    h3,
+    a {
+      font-size: 16px !important;
+      font-family: 'diodrum-arabic-meduim' !important ;
+      @include respond-below(md) {
+        font-size: 14px !important;
       }
     }
   }

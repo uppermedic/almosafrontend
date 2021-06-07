@@ -15,7 +15,7 @@
       background-color: $primary-color;
       padding-right: 13%;
       &:hover {
-        background-color: #6c8357;
+        background-color: #6c8357 !important;
       }
       @include rtl() {
         padding-left: 13%;
@@ -41,12 +41,6 @@
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 48%);
         }
         @include respond-below(md) {
-          // background-color: transparent !important;
-          // color: #000;
-          // border: 1px solid #eeeeee;
-
-          // border-left: 10px solid #ffffff;
-
           transform: scale(1.02);
           box-shadow: 1px 1px 5px #424242;
         }
@@ -56,10 +50,11 @@
       }
       a {
         color: #fcfcfc;
-        font-size: 16px;
+        font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important;
         padding: 0;
         padding-right: 8px;
-        border: none;
+        border: none !important;
 
         @include rtl() {
           padding-right: 0;
@@ -74,35 +69,42 @@
   .tab-content {
     h2 {
       font-size: 22px;
-      // font-family: 'diodrum-arabic';
       @include respond-below(md) {
         margin-top: 20px;
-        font-size: 16px;
+        font-size: 16px !important;
       }
     }
     hr {
       margin: 10px 0;
     }
-    p {
-      font-size: 16px;
-      span {
-        font-size: 16px;
-        @include respond-below(md) {
-          font-size: 14px;
-        }
-      }
+    p,
+    span,
+    li,
+    h3,
+    a {
+      font-size: 16px !important;
+      font-family: 'diodrum-arabic-meduim' !important;
       @include respond-below(md) {
-        font-size: 14px;
+        font-size: 14px !important;
+      }
+    }
+
+    b,
+    strong {
+      font-family: 'diodrum-arabic-bold' !important;
+      p,
+      span,
+      a,
+      li,
+      h3,
+      h4 {
+        font-family: 'diodrum-arabic-bold' !important;
       }
     }
 
     ul {
       li {
         margin: 20px 0;
-        font-size: 16px;
-        @include respond-below(md) {
-          font-size: 14px;
-        }
       }
     }
   }
