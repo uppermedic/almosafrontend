@@ -57,17 +57,32 @@
     h2 {
       @include sectionHeading($almoosa-color-green);
     }
+    p,
+    span,
+    li,
+    h3,
+    a {
+      font-size: 16px !important;
+      font-family: 'diodrum-arabic-meduim';
+      @include respond-below(md) {
+        font-size: 14px !important;
+      }
+    }
+
+    b,
+    strong {
+      font-family: 'diodrum-arabic-bold' !important;
+      p,
+      span,
+      a,
+      li,
+      h3,
+      h4 {
+        font-family: 'diodrum-arabic-bold' !important;
+      }
+    }
     .tab-details {
       padding: 30px 0;
-
-      // p {
-      //   font-size: 16px !important;
-      //   font-family: 'diodrum-arabic-meduim';
-      //   span {
-      //     font-size: 16px !important;
-      //     font-family: 'diodrum-arabic-meduim';
-      //   }
-      // }
     }
   }
 }

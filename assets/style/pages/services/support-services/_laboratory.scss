@@ -2,20 +2,8 @@
   .content {
     .page-desc {
       margin: 50px;
-      //background-color: $primary-color;
-      // padding: 50px;
-      //color: #ffffff;
-      // margin-top: -400px;
-      //max-width: 600px;
       position: relative;
-      // @include respond-below(lg) {
-      //   margin-top: -100px;
-      // }
-      // @include respond-below(md) {
-      //   padding: 20px;
-      //   margin: 20px;
-      //   margin-top: -100px;
-      // }
+
       h2.title {
         border-bottom: 2px solid #ffffff;
         font-size: $heading-mob-size;
@@ -27,17 +15,19 @@
           font-size: $sub-heading-sm-size;
         }
       }
-      p {
+      li,
+      p,
+      span,
+      h3,
+      a {
         font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important ;
+        @include respond-below(md) {
+          font-size: 14px !important;
+        }
+      }
+      p {
         margin: 30px auto;
-        font-family: 'diodrum-arabic-meduim';
-        span {
-          font-family: 'diodrum-arabic-meduim';
-          font-size: 16px !important;
-        }
-        @include respond-below(sm) {
-          // font-size: $font-sm;
-        }
       }
     }
     .info {
@@ -67,63 +57,10 @@
         }
       }
     }
-    // .tabs {
-    //   margin: 50px auto;
-    //   .col {
-    //     padding: 15px;
-    //   }
-    //   ul.nav-tabs {
-    //     border: 1px solid #707070;
-    //     padding: 0;
-    //     li {
-    //       margin-bottom: 0;
-    //       padding: 0;
-    //       &.tab-one {
-    //         width: 30%;
-    //       }
-    //       &.tab-two {
-    //         width: 70%;
-    //       }
-    //       @include respond-below(sm) {
-    //         width: 50% !important;
-    //       }
-    //       a {
-    //         display: inline-block;
-    //         padding: 20px 50px;
-    //         border: 0;
-    //         width: 100%;
-    //         background-color: #f1f3ef;
-    //         color: #000;
-    //         font-weight: bold;
-    //         border-radius: 0;
-    //         cursor: pointer;
-    //         transition: all 0.1s linear;
-    //         height: 100%;
-    //         display: flex;
-    //         align-items: center;
-    //         &.active {
-    //           background-color: $primary-color;
-    //           color: #ffffff;
-    //           cursor: unset;
-    //           transform: scale(1.02);
-    //         }
-    //         @include respond-below(md) {
-    //           padding: 10px;
-    //           // justify-content: center;
-    //           font-size: $font-xs;
-    //         }
-    //       }
-    //     }
-    //   }
-    //   .tab-content {
-    //     background-color: #eee;
-    //   }
-    // }
+
     .collapse-component {
       font-size: 14px;
-      @include respond-below(sm) {
-        // font-size: $font-sm;
-      }
+
       .toggle-button {
         width: 100%;
         background-color: $primary-color;

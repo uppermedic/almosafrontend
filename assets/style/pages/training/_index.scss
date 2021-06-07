@@ -97,6 +97,7 @@
           background-color: #fff;
           color: $almoosa-green-extralight;
           padding: 20px 0;
+          height: 100%;
           @include respond-below(sm) {
             font-size: 16px;
           }

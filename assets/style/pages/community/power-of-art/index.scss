@@ -1,4 +1,5 @@
 .power_of_art {
+  font-family: 'diodrum-arabic-meduim' !important;
   .hero {
     //height: $photo-section-big-banner;
     .right-title {
@@ -51,11 +52,14 @@
     }
     .location_paragraph {
       margin: 20px auto;
-      font-size: $paragraph-text-size;
+      font-size: 18px !important;
+      font-family: 'diodrum-arabic-meduim' !important;
       font-weight: bolder;
       text-align: center;
+      @include respond-below(md) {
+        font-size: 16px !important;
+      }
       @include respond-below(sm) {
-        font-size: 20px;
         text-align: left;
         @include rtl() {
           text-align: right;
@@ -106,7 +110,11 @@
         }
       }
       .text {
-        font-size: $paragraph-text-sm-size;
+        font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important;
+        @include respond-below(md) {
+          font-size: 14px !important;
+        }
       }
       @include respond-below(sm) {
         margin: 20px 0;
@@ -118,11 +126,14 @@
     margin: 50px auto;
     .par_groups_paragraph {
       margin: 20px auto;
-      font-size: $paragraph-text-size;
       font-weight: bolder;
       text-align: center;
+      font-size: 18px !important;
+      font-family: 'diodrum-arabic-meduim' !important;
+      @include respond-below(md) {
+        font-size: 16px !important;
+      }
       @include respond-below(sm) {
-        font-size: 20px;
         text-align: left;
         @include rtl() {
           text-align: right;
@@ -166,14 +177,17 @@
       }
       img {
         width: 100%;
-        height: 500px;
+        height: 400px;
         @include respond-below(sm) {
           height: 300px;
         }
       }
     }
     p {
-      font-size: $paragraph-text-size;
+      font-size: 16px !important;
+      @include respond-below(md) {
+        font-size: 14px !important;
+      }
       @include respond-below(sm) {
         font-size: $font-sm;
       }
