@@ -89,7 +89,7 @@
     color: $secondary-color;
     // font-size: $paragraph-text-size;
     font-size: $sub-heading;
-    font-family: 'diodrum-arabic';
+    font-family: 'diodrum-arabic-meduim';
     width: 648px;
     @include respond-below(lg) {
       width: auto;

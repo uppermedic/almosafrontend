@@ -22,6 +22,10 @@ section.academic-affairs {
       padding: 50px 0 25px;
       p {
         color: darkslategray;
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
       }
       @include respond-below(sm) {
         padding: 0;
@@ -38,6 +42,9 @@ section.academic-affairs {
           font-size: 22px;
           font-family: 'diodrum-arabic-bold';
           color: $primary-color;
+          @include respond-below(md) {
+            font-size: 20px;
+          }
         }
         .box-content {
           background-color: $primary-color;
@@ -47,17 +54,22 @@ section.academic-affairs {
           ul {
             li {
               padding-bottom: 15px;
+              font-size: 16px;
+
               @include respond-below(xl) {
                 padding-left: 0;
+              }
+              @include respond-below(md) {
+                font-size: 14px;
               }
             }
           }
           @include respond-below(xl) {
-            font-size: 15px;
             height: 300px;
           }
           @include respond-below(md) {
             height: auto;
+            font-size: 14px;
           }
         }
       }
@@ -142,6 +154,10 @@ section.academic-affairs {
             width: (100%/3);
             text-align: center;
             box-shadow: 0px 3px 6px #00000029;
+            font-size: 16px;
+            @include respond-below(md) {
+              font-size: 14px;
+            }
             a {
               display: flex;
               align-items: center;
@@ -151,10 +167,9 @@ section.academic-affairs {
               font-weight: bold;
               background-color: #fff;
               color: $primary-color;
-              padding: 20px 0;
-              @include respond-below(sm) {
-                font-size: 16px;
-              }
+              padding: 20px 10px;
+              height: 100%;
+
               &.active {
                 cursor: unset;
                 color: #fff;
@@ -163,20 +178,21 @@ section.academic-affairs {
                 border-bottom-width: 2px;
               }
               @include respond-below(xl) {
-                padding: 10px 0;
                 font-size: 18px;
               }
-
-              @include respond-below(sm) {
-                font-size: $paragraph-text-xs-size;
-                padding: 10px 0;
+              @include respond-below(md) {
                 font-size: 16px;
+              }
+              @include respond-below(sm) {
+                font-size: 14px;
+                padding: 10px;
               }
             }
           }
         }
         .tab-pane {
           margin: 0;
+          padding: 0 !important;
           .content {
             position: relative;
             width: 100%;
@@ -184,9 +200,6 @@ section.academic-affairs {
           }
           .green-txt {
             color: $almoosa-green-extralight;
-          }
-          @include respond-below(md) {
-            padding: 20px;
           }
         }
       }
@@ -256,7 +269,11 @@ section.academic-affairs {
         }
       }
       p {
-        padding: 20px;
+        padding: 20px 0;
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -271,6 +288,9 @@ section.academic-affairs {
           font-size: 22px;
           font-family: 'diodrum-arabic-bold';
           color: #fff;
+          @include respond-below(md) {
+            font-size: 20px;
+          }
         }
         .box-content {
           background-color: #cccccc4f;
@@ -327,6 +347,10 @@ section.academic-affairs {
         }
         p {
           padding-left: 15px;
+          font-size: 16px;
+          @include respond-below(md) {
+            font-size: 14px;
+          }
         }
         img {
           height: 100%;
@@ -367,6 +391,10 @@ section.academic-affairs {
 
           li {
             padding-bottom: 15px;
+            font-size: 16px;
+            @include respond-below(md) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -386,6 +414,9 @@ section.academic-affairs {
           font-size: 22px;
           font-family: 'diodrum-arabic-bold';
           color: #fff;
+          @include respond-below(md) {
+            font-size: 20px;
+          }
         }
         .box-content {
           background-color: #cccccc4f;
@@ -408,6 +439,10 @@ section.academic-affairs {
     section.fellowship {
       p {
         color: darkslategray;
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
       }
       .card {
         background-color: $primary-color;
@@ -421,6 +456,10 @@ section.academic-affairs {
 
           li {
             padding-bottom: 15px;
+            font-size: 16px;
+            @include respond-below(md) {
+              font-size: 14px;
+            }
           }
         }
       }

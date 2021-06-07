@@ -86,14 +86,14 @@
         }
       }
       p {
-        font-size: 30px;
-        font-family: 'diodrum-arabic-meduim';
+        font-size: 16px !important;
+        padding: 20px;
+        font-family: 'diodrum-arabic-meduim' !important;
         @include respond-below(lg) {
-          font-size: $paragraph-text-size;
           margin-top: 1em;
         }
         @include respond-below(md) {
-          font-size: $font-sm;
+          font-size: 14px !important;
         }
       }
 
@@ -101,7 +101,7 @@
         display: block;
         width: 100%;
         //height: 100%;
-        height: 450px;
+        height: 300px;
         margin-bottom: 20px;
         @include respond-below(lg) {
           height: 300px;

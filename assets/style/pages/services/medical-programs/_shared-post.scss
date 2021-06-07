@@ -2,13 +2,14 @@
   margin: 50px auto;
   font-size: 16px;
   p,
-  ul li {
-    font-size: 14px;
-    span {
-      // color: $secondary-color-light;
-    }
-    @include respond-below(sm) {
-      font-size: 14px;
+  li,
+  span,
+  h3,
+  a {
+    font-size: 16px !important;
+    font-family: 'diodrum-arabic-meduim' !important ;
+    @include respond-below(md) {
+      font-size: 14px !important;
     }
   }
   img {

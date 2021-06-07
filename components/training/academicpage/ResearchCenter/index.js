@@ -8,14 +8,14 @@ const index = ({ t }) => {
   return (
     <section className="research-center">
       <Row>
-        <Col>
+        <Col xs={12}>
           <h2 className="section-title">
             {lang == 'en' ? 'Research Center (RC)' : 'مركز الأبحاث (RC)'}
           </h2>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col xs={12}>
           <div className="overlay">
             <Card>
               {lang === 'en' && (
@@ -44,7 +44,7 @@ const index = ({ t }) => {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col xs={12}>
           {lang === 'en' && (
             <p>
               The center also maintains the ethical standards of practice in
