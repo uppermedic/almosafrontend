@@ -65,7 +65,7 @@ const data = [
   },
   {
     id: 9,
-    title: { en: 'ATMs', ar: 'اجهزة الصراف الالي' },
+    title: { en: 'ATMs', ar: 'أجهزة الصراف الالي' },
     component: atms,
     className: 'atms'
   },

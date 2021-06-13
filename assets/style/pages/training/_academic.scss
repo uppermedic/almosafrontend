@@ -295,12 +295,16 @@ section.academic-affairs {
         .box-content {
           background-color: #cccccc4f;
           color: $primary-color;
-          padding: 30px;
-          height: 300px;
+          padding: 30px 30px 15px;
+          height: 310px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           button {
-            position: absolute;
-            bottom: 5vw;
-            left: 20px;
+            // position: absolute;
+            // bottom: 5vw;
+            // left: 20px;
+            text-align: left;
             font-family: 'diodrum-arabic-bold';
             color: $primary-color;
             &:hover {
@@ -313,12 +317,23 @@ section.academic-affairs {
             }
           }
 
+          @include rtl() {
+            button {
+              text-align: right;
+            }
+          }
+
           @include respond-below(xl) {
             font-size: 15px;
-            height: 300px;
+            height: 320px;
+          }
+
+          @include respond-below(lg) {
+            height: 310px;
           }
           @include respond-below(md) {
             height: auto;
+            font-size: 14px;
           }
         }
       }
