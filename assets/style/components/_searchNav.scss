@@ -48,7 +48,7 @@
     }
   }
   a[class*='bt'] {
-    margin-left: 5px;
+    // margin-left: 5px;
     text-align: center;
     width: 100%;
     position: relative;
@@ -81,28 +81,29 @@
       &.icon {
         height: 100%;
         float: right;
-        margin-left: 10px;
+        // margin-left: 10px;
         font-size: 16px;
         padding-right: 5px;
         border-left: 1px solid #fff;
         border-right: none;
         @include rtl() {
           float: left;
-          margin-right: 10px;
+          // margin-right: 10px;
           padding-left: 5px;
           //border-left: 2px solid $almoosa-light-green-color;
           border-left: 1px solid #fff;
           //reset
-          margin-left: 0;
+          // margin-left: 0;
           padding-right: 0;
           border-left: none;
           border-right: 1px solid #fff;
         }
+
         @include respond-below(md) {
-          font-size: 16px;
+          font-size: 14px;
         }
         @include respond-below(sm) {
-          margin-left: 5px;
+          font-size: 12px;
           height: 100%;
           display: flex;
           justify-content: center;
@@ -115,25 +116,32 @@
       }
       &.text {
         font-size: 13px;
-
-        @include respond-below(sm) {
+        padding: 0 10px;
+        @include respond-below(xl) {
           font-size: 11px;
+          padding: 0 5px;
+        }
+        @include respond-below(sm) {
           display: flex;
           height: 100%;
           align-items: center;
           justify-content: center;
+          padding: 0 1px;
+        }
+        @include respond-below(xs) {
+          font-size: 9px;
         }
       }
     }
   }
   // Start Edit the right links for responsive
   .right_links {
-    @include respond-below(sm) {
-      //flex-direction: column;
-    }
     .right_link {
       margin: 5px auto;
       height: 30px;
+      @include respond-below(xs) {
+        display: none;
+      }
     }
   }
 }

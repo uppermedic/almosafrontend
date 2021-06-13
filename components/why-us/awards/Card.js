@@ -8,7 +8,9 @@ const Card = ({ item }) => {
   return (
     <div className="card-item">
       <div>
-        <h4>{language && item[language].title}</h4>
+        <h4>
+          <Markdown>{language ? item[language].title : ''}</Markdown>
+        </h4>
       </div>
       <div>
         <p>
