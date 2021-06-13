@@ -2,6 +2,7 @@ header {
   .top-header {
     padding: 10px 0;
     .logos-wrapper {
+      width: 217px;
       @include respond-below(lg) {
         text-align: center;
       }
@@ -37,7 +38,7 @@ header {
           height: 100px;
         }
         @include respond-below(sm) {
-          max-width: 100px;
+          max-width: 116px;
           height: 90px;
         }
       }

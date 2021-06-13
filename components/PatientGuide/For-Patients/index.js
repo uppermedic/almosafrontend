@@ -67,7 +67,7 @@ const data = [
   },
   {
     id: 6,
-    title: { en: 'Preparing For Your Appointment', ar: 'الحضير لموعدك' },
+    title: { en: 'Preparing For Your Appointment', ar: 'التحضير لموعدك' },
     component: preparingAppointment,
     className: 'preparing-appointment'
   },
@@ -149,7 +149,7 @@ const data = [
 
   {
     id: 18,
-    title: { en: 'ATMs', ar: 'اجهزة الصراف الالي' },
+    title: { en: 'ATMs', ar: 'أجهزة الصراف الالي' },
     component: atms,
     className: 'atms'
   },

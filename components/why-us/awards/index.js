@@ -100,8 +100,7 @@ const data = [
   {
     id: 7,
     en: {
-      title:
-        'King Abdulaziz Quality Award <strong>2018</strong> - KAQA   (Silver Award)',
+      title: `King Abdulaziz Quality Award <strong>2018</strong> - KAQA   (Silver Award)`,
       content:
         'King Abdulaziz Quality Award: <a href="https://kaqa.org.sa/">KAQA</a> aims at honoring the best performing establishments that achieve the highest standards of quality by obtaining the appropriate recognition at the national level for their achievements and ranking among the best local establishments.'
     },
@@ -115,8 +114,7 @@ const data = [
   {
     id: 8,
     en: {
-      title:
-        'Bariatric Center of Excellence (BCOE) from SRC in <strong>2018</strong>',
+      title: `Bariatric Center of Excellence (BCOE) from SRC in <strong>2018</strong>`,
       content: `The global standard for quality of surgical care from <a href="https://www.surgicalreview.org/">SRC</a>. It is focused on improving the safety and quality of patient care and lowering the cost associated with successful treatment.`
     },
     ar: {
@@ -127,8 +125,7 @@ const data = [
   {
     id: 9,
     en: {
-      title:
-        'C. Everett Koop National Health Award - KOOP <strong>2019 </strong>',
+      title: `C. Everett Koop National Health Award - KOOP <strong>2019 </strong>`,
       content: `The C. Everett Koop National Health Awards recognize outstanding worksite health promotion and improvement programs. The Health Project's mission is to seek out, evaluate, promote, and disseminate the lessons learned from good health promotion and disease prevention programs with demonstrated effectiveness in influencing personal health habits and cost-effective use of health care resources. We achieved bronze award.  `
     },
     ar: {

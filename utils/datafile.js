@@ -392,7 +392,7 @@ export const TeamData = [
     image: '/images/about/leadership-team/mona.png',
     id: 3,
     ar: {
-      name: ' منى خميس. ماجستير في إدارة الأعمال. فاش',
+      name: ' منى خميس. ماجستير في إدارة الأعمال',
       title: 'مدير تجربة المريض',
       paragraph: `
       انضمت منى إلى مستشفى الموسى في عام 2014 ، بخبرة أكثر من 12 عاماً  كأخصائية علاج طبيعي ، جاءت لأول مرة إلى المملكة في عام 2005 ، حيث انضمت إلى مجموعة الدكتور سليمان الحبيب الطبية كمدير للخدمات الطبية المساندة من عام 2005 حتى عام 2013. بعدها انضمت منى إلى الموسى كرئيسة لقسم العلاج الطبيعي في وقت لاحق قادت انشاء قسم تجربة المريض،  منى حاصلة على بكالوريوس العلاج الطبيعي وإدارة الرعاية الصحية ، وماجستير في إدارة الأعمال (M.B.A.) ودكتوراه في الإدارة المالية لمنظمات الرعاية الصحية من جامعة القديس يوسف في لبنان. منى زميلة الكلية الأمريكية للمديرين التنفيذيين للصحة F.A.C.H.E.وزميلة منظمة البلانتري الدولية للرعاية التي تركز على الانسان
@@ -407,7 +407,7 @@ export const TeamData = [
       ]
     },
     en: {
-      name: 'Mona Khamis. MBA .PhD. FACHE',
+      name: 'Mona Khamis. MBA',
       title: 'Patient experience director',
       paragraph: `Mona joined A.S.H. in 2014, bringing with her more than 12 years of experience. She began her career as a physiotherapist and first came to the kingdom in 2005, where she joined Dr. Suliamn Alhabib Medical Group as Medical Support Manager from 2005 until 2013. Mona Joined Almoosa as The head of the physical therapy department later led the Patient experience department's establishment. Mona holds a bachelor of physical therapy and healthcare management and a master's in business administration (M.B.A.) and Ph.D. in Financial Management for healthcare organizations from ST Joseph University in Lebanon. Mona is a fellow of the American college of health executives F.A.C.H.E. 
           <br> <br>
