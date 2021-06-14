@@ -77,7 +77,7 @@ const data = [
         حصل مستشفى الموسى التخصصي  على الوسام الفضي في عام <strong>2015</strong> كأول مستشفى في الشرق الأوسط  يحصل على هذا الوسام <br/><br/>
         وفي عام <strong>2017</strong>، منحت منظمة <a href="https://planetree.org/certification/about-planetree/">Planetree</a>  الوسام الذهبي لمستشفى الموسى التخصصي لدوره في توفير الرعاية الصحية المتركزة حوال الانسان ولتميزه في مجال تجربة المرضى <br/><br/>
         في عام <strong>2020</strong> حصل المسشتفى مرة أخرى على الوسام الذهبي مع مرتبة الشرف لالتزامه ومواصلته تقديم رعاية صحية تتميز بالتعاطف والانسانية وتضع المريض في محور اهتمامها  <br/><br/>
-        <a href="/about/awards/golden-designation"><strong>إقرأ المزيد ... </strong></a>`
+        <a href="/about/awards/golden-designation"><strong>اقرأ المزيد ... </strong></a>`
     }
   },
   {

@@ -31,36 +31,6 @@ const Content = ({ data, sections, seo }) => {
   };
   return (
     <div className="medical-center-subpage">
-      {/* <Hero>
-        <div className="container">
-          <PostHeading title={language && seo[language]?.title} color="#fff" />
-          <Container>
-            <Row xs="1">
-               <Col>
-                <div className="img-div">
-                  <img src={data.image} alt="Header" />
-                </div>
-              </Col> 
-              <Col>
-                <div className="par-div">
-                  <p>
-                    {
-                    {language && seo[language]?.content && (
-                      <>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: seo[language]?.content
-                          }}
-                        />
-                      </>
-                    )}
-                  </p>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </Hero> */}
       <CustomTabs
         physicians={data.physicians}
         items={sections}
