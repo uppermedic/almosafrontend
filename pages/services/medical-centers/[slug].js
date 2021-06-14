@@ -19,10 +19,10 @@ const Post = ({ data }) => {
   }, [lang]);
 
   return (
-    <div className="_single-post-page">
-      <Head data={data['seo']}></Head>
-      <Hero bg={data.image}>
-        {/* <img src={data.image} alt="hero-cover" className="hero-cover" /> */}
+    <div className="_single-post-page single-medical-center">
+      <Head data={data['seo']} />
+      <Hero>
+        <img src={data.image} alt="hero-cover" className="hero-cover" />
         {/* <div className="hero-content">
           <h2 className="title">{lang &&data.seo[lang].title}</h2>
         </div> */}
