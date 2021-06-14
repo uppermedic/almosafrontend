@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 /*Content Components */
 import SupportServiceSengle from './single';
 import pharmacy from '../../PatientGuide/HospitalAmenities/pharmacy';
+import Nursing from './Nursing';
 
 export default function index({ dataSectionTabs, dataSectionContent }) {
   const router = useRouter();
@@ -25,6 +26,14 @@ export default function index({ dataSectionTabs, dataSectionContent }) {
       title: { en: 'The Pharmacy', ar: 'الصيدلية' },
       component: pharmacy,
       className: 'pharmacy',
+      path: '/services/supportive-services',
+      dataType: 'static'
+    },
+    {
+      id: 2,
+      title: { en: 'Nursing Department', ar: 'قسم التمريض' },
+      component: Nursing,
+      className: 'nursing',
       path: '/services/supportive-services',
       dataType: 'static'
     }
