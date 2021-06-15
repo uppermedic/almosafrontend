@@ -52,7 +52,7 @@ const data = [
   },
   {
     id: 4,
-    title: { en: 'Request Medical Records', ar: 'طلب تقرير طبي' },
+    title: { en: 'Request Medical Report', ar: 'طلب تقرير طبي' },
     component: medicalRecords,
     className: 'medical-records'
   },
@@ -97,7 +97,7 @@ const data = [
   },
   {
     id: 10,
-    title: { en: 'Parking and valet parking', ar: 'المواقف وخدمة صف السيارات' },
+    title: { en: 'Parking and Valet', ar: 'المواقف وخدمة صف السيارات' },
     component: parking,
     className: 'directions'
   },

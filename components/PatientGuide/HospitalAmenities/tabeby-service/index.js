@@ -95,12 +95,11 @@ const Content = ({ t }) => {
                       Annual subscription fee is :<strong> 2500 R.S</strong>
                     </h6>
                     <div className="items-content">
-                      It includes <strong> 4 </strong> people, and
+                      It includes <strong> 4 </strong> people +
                       <strong> 250 R.S </strong> for each additional person.
                       <br />
                       The quality for TABEBY subscribers is the same as the
-                      quality and effectiveness of the service for other
-                      patients, with no distinction.
+                      service for other patients, with no distinction.
                     </div>
                   </>
                 )}

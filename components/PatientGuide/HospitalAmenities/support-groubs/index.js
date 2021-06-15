@@ -21,7 +21,7 @@ const Content = ({ t }) => {
                   <div className="sections">
                     <div className="single-section">
                       <Title title="Post TKR (Total knee replacement) :" />
-                      <Paragraph paragraph="attendees different from 11 to 14 patients (between females and males)" />
+                      <Paragraph paragraph="Attendees : 11 to 14 patients (between females and males)" />
                       <Menu
                         items={[
                           {
@@ -29,9 +29,9 @@ const Content = ({ t }) => {
                             subItems: [
                               'Enhance Patient education ',
                               'Copping with the new joint',
-                              'Enhance Life style ',
+                              'Enhance Lifestyle ',
                               'Motivation for exercises ',
-                              'Self pain management ',
+                              'Self-pain management ',
                               'Sharing experience '
                             ]
                           }
@@ -58,7 +58,7 @@ const Content = ({ t }) => {
                     </div>
                     <div className="single-section">
                       <Title title="Oncology support group:" />
-                      <Paragraph paragraph="Established: 2020 with more than 29 members 10 sessions done (face to face and online)" />
+                      <Paragraph paragraph="Established: 2020 with more than 29 members , sessions are held (face to face virtually)" />
                       <Menu
                         items={[
                           {
@@ -78,7 +78,7 @@ const Content = ({ t }) => {
                               'Allow members to learn from others facing similar situations.',
                               'Partner with members to enhance their journey in our hospital',
                               'Provide them with educational sessions in many aspects of their journey of healing',
-                              'Professional hospital members supporting members all the time to answer their questions.',
+                              'Professional hospital workers : supporting members all the time and answer their questions.',
                               'Applying the person-centered care approach in the group to enhance their overall experience.'
                             ]
                           },
@@ -201,7 +201,7 @@ const SVG = (
         <path d="M-482 -421L1438 -421L1438 1286L-482 1286Z" />
       </clipPath>
     </defs>
-    <style></style>
+    <style />
     <g id="dining" clipPath="url(#cp1)">
       <g id="Group 107">
         <path
@@ -216,7 +216,7 @@ const SVG = (
 
 // small components
 const Title = ({ title }) => {
-  return <h3 className="support-groubs-title">{title}</h3>;
+  return <h5 className="support-groubs-title">{title}</h5>;
 };
 
 const Paragraph = ({ paragraph }) => {

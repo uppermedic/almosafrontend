@@ -40,22 +40,6 @@ const Header = ({ t, data }) => {
   return (
     <header>
       <Container>
-        {/* <Row className="top-header align-items-center ">
-          <Col xs={6} className="logos-wrapper">
-            <Link href="/">
-              <a className="navbar-brand">
-                <img src="/images/logo.jpg" />
-              </a>
-            </Link>
-          </Col>
-          <Col xs={6} className="logos-wrapper text-right">
-            <Link href="/">
-              <a className="navbar-brand brand-right">
-                <img src="/images/logo-2.jpg" />
-              </a>
-            </Link>
-          </Col>
-        </Row> */}
         <div className="top-header align-items-center d-flex justify-content-between">
           <div className="logos-wrapper">
             <Link href="/">
@@ -65,11 +49,17 @@ const Header = ({ t, data }) => {
             </Link>
           </div>
           <div className="logos-wrapper text-right">
-            <Link href="/">
-              <a className="navbar-brand brand-right">
-                <img src="/images/logo-2.jpg" />
-              </a>
-            </Link>
+            <div className="navbar-brand brand-right">
+              <img className="pl-2 pr-2 logo1" src="/images/logo1.png" />
+              <Link href="/services/supportive-services">
+                <img
+                  className="logo2"
+                  src="/images/logo2.png"
+                  alt="magent"
+                  style={{ cursor: 'pointer' }}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </Container>
@@ -86,7 +76,7 @@ const Header = ({ t, data }) => {
         <Container>
           <div className="d-flex justify-content-end nav-toggler-wrapper">
             <NavbarToggler onClick={() => setIsOpen(!isOpen)}>
-              <i className="fas fa-bars"></i>
+              <i className="fas fa-bars" />
             </NavbarToggler>
           </div>
           <Collapse isOpen={isOpen} navbar>

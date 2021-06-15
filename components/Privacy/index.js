@@ -6,18 +6,15 @@ const PrivacyPolicy = () => {
   const { language } = i18n;
   return (
     <section className="privacy">
-      <div className="head-banner">
-        <div className="container">
+      <div className="container">
+        <div className="title">
           <h2>{(language == 'en' && 'Privacy Policy') || 'سياسة الخصوصية'}</h2>
         </div>
-      </div>
-      <div className="container">
         {/* **********English Content ********** */}
 
         {language == 'en' && (
           <div className="content">
             <div className="single-section">
-              <Title title="Privacy-policy" />
               <Paragraph paragraph="Almoosa Specialist Hospital website puts the confidential information of its users and visitors at the top of the list of priorities, and its management makes every effort to provide valuable services to all its participants." />
               <Paragraph paragraph="All visitors and users of the website must become aware of the conditions and the principles that govern the privacy and confidential information in order to know and understand the mechanism of updating them although the website management is not obliged to declare of any amendments or changes related to these conditions or principles. Your use of the site will therefore mean your acceptance to all the conditions and to whatever changes or amendments here after." />
             </div>
@@ -112,7 +109,6 @@ const PrivacyPolicy = () => {
         {language == 'ar' && (
           <div className="content">
             <div className="single-section">
-              <Title title="الخصوصية وسرية المعلومات" />
               <Paragraph paragraph="تضع بوابة مستشفي الموسي التخصصي سرية معلومات مستخدميها وزوارها على رأس قائمة الأولويات، وتبذل إدارة البوابة كل جهودها لتقديم خدمة ذات جودة عالية لكل المستفيدين." />
               <Paragraph paragraph="يجب على زوار البوابة والمستفيدين من خدماتها الاطلاع المستمر على شروط ومبادئ الخصوصية وسرية المعلومات لمعرفة أية تحديثات تتم عليها، علماً بأن إدارة البوابة غير مطالبة بالإعلان عن أية تحديثات تتم على تلك الشروط والمبادئ، ويعني استخدامك للبوابة اطلاعك وموافقتك على تلك الشروط والمبادئ وما يتم عليها من تعديلات مستمرة." />
             </div>

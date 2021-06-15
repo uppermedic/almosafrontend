@@ -93,7 +93,7 @@ const Directions = ({ t }) => {
                     `ولأننا نعتني بكم، فقد وفرنا داخل مستشفى الموسى التخصصي مواقف للسيارات تتسع في المجمل إلى 150 سيارة تقع في أسفل البرج الطبي إضافة إلى مواقف أخرى مقابل مبنى المستشفى تتسع لـ100 سيارة أخرى.`}
                   {language === 'en' &&
                     `The hospital has underground parking for 150 cars and surface
-                  parking for 100 cars. Both are easily accessible from Dharhan
+                  parking for 100 vehicles. Both are easily accessible from Dharhan
                   Street.`}
                 </p>
               </Col>
@@ -123,15 +123,14 @@ const Directions = ({ t }) => {
               <Col md={12}>
                 <h4 className="mobility-subHeading">
                   {language === 'ar' && `طرق التنقل في الأحساء`}
-                  {language === 'en' && `Mobility in Al-Ahsa`}
+                  {language === 'en' && `Golf Cart Service`}
                 </h4>
                 <p className="inner-p">
                   {language === 'ar' &&
                     `يتوفر شبكة مواصلات من الأحساء وإليها في كل الأوقات، لذلك يمكن الوصول إلى مدينة الأحساء عبر وسائل التنقل الحديثة والمختلفة بكل سهولة ويُسر.
 `}
                   {language === 'en' &&
-                    `Al –Ahsa can be reached using modern transport services at all
-                  times.`}
+                    `To ensure our patients' maximum convenience, we introduced the Gold Cart service to transport patients from the parking to the hospital entrance.`}
                 </p>
               </Col>
             </Row>

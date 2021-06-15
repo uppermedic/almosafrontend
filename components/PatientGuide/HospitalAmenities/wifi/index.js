@@ -18,7 +18,7 @@ const Content = ({ t }) => {
               {language === 'ar' &&
                 `يمكنك الاستمتاع بخدمة الإنترنت (واي فاي) المجانية داخل المستشفى. كل ما عليك القيام به هو`}
               {language === 'en' &&
-                `You can enjoy free internet (Wi-Fi) service inside the hospital. All you have to do is`}
+                `We can enjoy a free internet (Wi-Fi) service while in the hospital`}
             </h5>
           </div>
           <div className="description">
@@ -26,13 +26,13 @@ const Content = ({ t }) => {
               <li>
                 {language === 'ar' && `اختر شبكة مستشفى الموسى من قائمة الشبكة`}
                 {language === 'en' &&
-                  `Select the of Al-Moosa Hospital network  from the network list`}
+                  `You can get it by selecting the network of Al-Moosa Hospital from the network list .`}
               </li>
               <li>
                 {language === 'ar' &&
                   `اطلب كلمة المرور من أي مقدم رعاية في مستشفى الموسى.`}
                 {language === 'en' &&
-                  `Request the password from any ASH caregiver.`}
+                  `Requesting a password from any receptionist .`}
               </li>
             </ul>
           </div>

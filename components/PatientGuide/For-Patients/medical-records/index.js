@@ -6,19 +6,19 @@ const Content = ({ t }) => {
 
   return (
     <div className="content">
-      <div className="overlay"></div>
+      <div className="overlay" />
       <div className="container">
         <div className="inner-content">
           <div className="title">
             <h2>
-              {language === 'ar' ? `طلب تقرير طبي` : `Request Medical Records`}
+              {language === 'ar' ? `طلب تقرير طبي` : `Request Medical Report`}
             </h2>
           </div>
           <div className="card">
             <p>
               {language === 'ar'
                 ? `يمكن للمريض طلب تقرير طبي من مكتب التقارير الطبية ASH بدون أي رسوم لأول مرة.`
-                : `The patient can request a medical report from ASH  medical reports office without any fees for the first time.`}
+                : `The patient can request a medical report from ASH medical reports office without any fees for the first time.`}
             </p>
             <p>
               {language === 'ar'
@@ -28,18 +28,14 @@ const Content = ({ t }) => {
             <ul className="info">
               <li>
                 <span className="icon">
-                  <i className="fas fa-phone-square-alt"></i>
+                  <i className="fas fa-phone-square-alt" />
                 </span>
                 <span className="text">
                   <strong>
                     {language === 'ar' ? `الهاتف: ` : `Telephone: `}
                   </strong>
                   <a href="tel:0135369666">
-                    {language === 'ar' ? (
-                      <strong>0135369666 </strong>
-                    ) : (
-                      <strong>0135369666 </strong>
-                    )}
+                    <strong>0135369666 </strong>
                   </a>
                   --
                   {language === 'ar' ? (
@@ -51,7 +47,7 @@ const Content = ({ t }) => {
               </li>
               <li>
                 <span className="icon">
-                  <i className="fas fa-envelope"></i>
+                  <i className="fas fa-envelope" />
                 </span>
                 <span className="text">
                   <strong>{language === 'ar' ? `إيميل: ` : `Email: `}</strong>

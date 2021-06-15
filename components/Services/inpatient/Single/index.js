@@ -44,7 +44,14 @@ const Content = props => {
           </Row>
         </Container>
       </div>
-      <ReusableTabs tab1Data={sections[0]} physicians={physicians} {...props} />
+      {((sections[0]?.items && sections[0].items.length > 0) ||
+        (physicians && physicians.length > 0)) && (
+        <ReusableTabs
+          tab1Data={sections[0]}
+          physicians={physicians}
+          {...props}
+        />
+      )}
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Nursing = () => {
   const { language } = i18n;
 
   return (
-    <section className="nursing">
+    <section className="nursing" id="nursing-section">
       <Container>
         <h2 className="title">
           {language === 'en' ? 'Nursing Department' : 'قسم التمريض'}
