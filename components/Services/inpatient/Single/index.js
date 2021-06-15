@@ -22,8 +22,16 @@ const Content = props => {
           <Row>
             <Col>
               <div className="text">
-                {language && seo[language]?.content && (
+                {/* {language && seo[language]?.content && (
                   <Markdown>{strippedContent(seo[language]?.content)}</Markdown>
+                )} */}
+
+                {language && seo[language]?.content && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: seo[language]?.content
+                    }}
+                  />
                 )}
               </div>
             </Col>
@@ -44,7 +52,14 @@ const Content = props => {
           </Row>
         </Container>
       </div>
-      <ReusableTabs tab1Data={sections[0]} physicians={physicians} {...props} />
+      {((sections[0]?.items && sections[0].items.length > 0) ||
+        (physicians && physicians.length > 0)) && (
+        <ReusableTabs
+          tab1Data={sections[0]}
+          physicians={physicians}
+          {...props}
+        />
+      )}
     </div>
   );
 };

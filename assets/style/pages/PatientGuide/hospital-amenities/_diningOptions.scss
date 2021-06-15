@@ -41,6 +41,17 @@
               font-size: 16px;
             }
           }
+
+          h6 {
+            font-family: 'diodrum-arabic-bold';
+            color: $primary-color;
+            font-size: 18px;
+            text-decoration: underline;
+            @include respond-below(md) {
+              font-size: 15px;
+            }
+          }
+
           p {
             font-size: 16px;
             @include respond-below(md) {

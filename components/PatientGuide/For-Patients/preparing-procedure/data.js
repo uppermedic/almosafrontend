@@ -38,35 +38,35 @@ export const data = {
     `
   },
   en: {
-    title: `Before medical procedures:`,
+    title: `Before medical procedures :`,
     content: `
     <ul>
       <li>
-      Before surgery, your doctor will perform a complete physical examination to ensure no conditions that might interfere with the surgery or the results. He usually performs routine tests, such as blood tests and X-rays, a week before any major surgery.
+      Before surgery, your doctor will perform a complete physical examination to ensure no conditions that might interfere with the surgery or the results. He usually performs routine tests, such as blood tests and X-rays, a week before any major surgery. 
       </li>
       <li>
-      Discuss with your doctor and family physician any medications you are taking to determine which ones you should refrain from before surgery.
+      Discuss with your doctor and family physician any medications you are taking to determine which ones you should refrain from before surgery. 
       </li>
       <li>
-      Discuss options for preparing for a potential blood transfusion with your doctors, such as blood donation, medical interventions, and other treatments, before surgery.
+      Discuss options for preparing for a potential blood transfusion with your doctors, such as blood donation, medical interventions, and other treatments, before surgery. 
       </li>
       <li>
-      If you are obese, losing weight before surgery can help reduce stress on the new joint. However, you must not follow a diet during the month before the surgery.
+      If you are obese, losing weight before surgery can help reduce stress on the new joint. However, you must not follow a diet during the month before the surgery. 
       </li>
       <li>
-      If you are taking aspirin, anti-inflammatory drugs, warfarin, or any medications that increase bleeding risk, you should stop them a week before surgery to reduce bleeding.
+      If you take aspirin, anti-inflammatory drugs, warfarin, or any medications that increase bleeding risk, you should stop them a week before surgery to reduce bleeding.
       </li>
       <li>
       If you smoke, you should quit or reduce smoking to reduce surgery risks and improve healing and recovery.
       </li>
       <li>
-      Treat any problems with the teeth, gums, bladder, or bowel before surgery to reduce the risk of infection later.
+      Treat any problems with the teeth, gums, bladder, or bowel before surgery to reduce the risk of infection later. 
       </li>
       <li>
       Follow a balanced diet with multivitamin and iron supplements.
       </li>
       <li>
-      Inform your surgeon of any infections you have. Surgery cannot be performed until any conditions are entirely gone.
+      Inform your surgeon of any diseases you have. Surgery cannot be performed until any conditions are entirely gone.
       </li>
     </ul>
     `

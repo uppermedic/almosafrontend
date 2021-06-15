@@ -9,13 +9,14 @@ const Content = ({ t }) => {
     يجب عليك إحضار جميع المستندات الطبية والأدوية التي تتناولها (في عبواتها الأصلية) عند وصولك إلى المستشفى. بمجرد دخولك المستشفى ، يمكن لفريق رعاية المستشفى تزويدك بالعلاجات الموصوفة لك.
   `,
     en: `
-    Before starting the admission procedures, you will receive all the necessary information related to your stay in the hospital from your doctor, the assigned nurse, or the patient educator. We at Al-Moosa Hospital take care of all the details associated with patients' stay.</br></br>
+    Before starting the admission procedures, you will receive all necessary information about your stay in the hospital from your doctor, the nurse assigned to care for you, or the patient educator. We at Al-Moosa Hospital take care of the details related to the stay of patients in the hospital.
+    </br></br>
     You must bring all medical documents and medicines you take (in their original packages) when you arrive at the hospital. As soon as you enter the hospital, the hospital care team can provide you with the prescribed treatments.
   `
   };
   return (
     <div className="content">
-      <div className="overlay"></div>
+      <div className="overlay" />
       <div className="container">
         <div className="inner-content">
           <div className="title">
@@ -27,7 +28,7 @@ const Content = ({ t }) => {
               dangerouslySetInnerHTML={{
                 __html: data['ar']
               }}
-            ></div>
+            />
           )}
           {language === 'en' && (
             <div
@@ -35,7 +36,7 @@ const Content = ({ t }) => {
               dangerouslySetInnerHTML={{
                 __html: data['en']
               }}
-            ></div>
+            />
           )}
         </div>
       </div>

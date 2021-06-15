@@ -20,28 +20,30 @@ const Content = ({ t }) => {
                   The design of the north tower is based on the green
                   architecture style, the optimal use of energy, maintaining a
                   clean environment, the integration of natural elements such as
-                  sunlight and gardens, and easy access ، more than two floors
-                  “second and fifth floor"
+                  sunlight and gardens, and easy access .
+                  <p className="mt-2">
+                    <strong>Hanging gardens :</strong> on the second and fifth
+                    floor of the North Tower .
+                  </p>
                 </p>
               </div>
               <div className="description">
                 <h5>Alfaisal Park:</h5>
                 <p>
-                  In Front of the north tower, provides recreational attractions
-                  such as children's games and seating umbrellas, the park also
-                  represents a natural outlet for patients
+                  Located In Front of the North Tower: provides recreational
+                  attractions such as children's games and seating umbrellas.
+                  The park also represents a natural outlet for patients.
                 </p>
               </div>
               <div className="description">
                 <h5>Play together Park:</h5>
                 <p>
-                  One of “Play Together initiatives” in Al-Ahsa in Al-Faisal
-                  neighborhood in Al-mubarraz on an area of more than
-                  <strong> 2200 </strong>
-                  square meters to include more than 12 games specialized in the
-                  integration of children with disabilities with their healthy
-                  peers to contribute to the realization of the values of
-                  integration.
+                  One of the "Play Together initiatives" in Al-Ahsa in Al-Faisal
+                  neighborhood in Al-mubarraz on more than <strong>2200</strong>{' '}
+                  square meters to include more than <strong>12</strong> games
+                  specialized in integrating children with disabilities with
+                  their healthy peers to contribute to the realization of the
+                  values of integration.
                 </p>
               </div>
             </>
