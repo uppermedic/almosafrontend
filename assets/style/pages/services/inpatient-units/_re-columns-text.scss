@@ -14,6 +14,13 @@
           font-size: 14px !important;
         }
       }
+
+      strong {
+        font-family: 'diodrum-arabic-bold' !important ;
+        > * {
+          font-family: 'diodrum-arabic-bold' !important ;
+        }
+      }
     }
     @include respond-below(lg) {
       margin: 20px auto;

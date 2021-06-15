@@ -22,8 +22,16 @@ const Content = props => {
           <Row>
             <Col>
               <div className="text">
-                {language && seo[language]?.content && (
+                {/* {language && seo[language]?.content && (
                   <Markdown>{strippedContent(seo[language]?.content)}</Markdown>
+                )} */}
+
+                {language && seo[language]?.content && (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: seo[language]?.content
+                    }}
+                  />
                 )}
               </div>
             </Col>

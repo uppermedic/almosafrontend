@@ -25,15 +25,10 @@ a:hover {
   padding-bottom: 100px;
 }
 
-b,
-strong {
+strong,
+b {
   font-family: 'diodrum-arabic-bold' !important;
-  p,
-  span,
-  a,
-  li,
-  h3,
-  h4 {
+  > * {
     font-family: 'diodrum-arabic-bold' !important;
   }
 }
