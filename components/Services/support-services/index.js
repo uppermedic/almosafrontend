@@ -9,6 +9,7 @@ import Nursing from './Nursing';
 
 export default function index({ dataSectionTabs, dataSectionContent }) {
   const router = useRouter();
+
   const data = dataSectionTabs.services.map(obj => {
     return {
       id: obj.id,
@@ -20,20 +21,32 @@ export default function index({ dataSectionTabs, dataSectionContent }) {
     };
   });
 
+  // const dynamicSections = [
+  // 	...data,
+  // 	{
+  // 		id: 0,
+  // 		title: { en: 'Nursing Department', ar: 'قسم التمريض' },
+  // 		component: Nursing,
+  // 		className: 'nursing',
+  // 		path: '/services/supportive-services',
+  // 		dataType: 'dynamic'
+  // 	}
+  // ];
+
   const pharmacyData = [
     {
       id: 1,
-      title: { en: 'The Pharmacy', ar: 'الصيدلية' },
-      component: pharmacy,
-      className: 'pharmacy',
+      title: { en: 'Nursing Department', ar: 'قسم التمريض' },
+      component: Nursing,
+      className: 'nursing',
       path: '/services/supportive-services',
       dataType: 'static'
     },
     {
       id: 2,
-      title: { en: 'Nursing Department', ar: 'قسم التمريض' },
-      component: Nursing,
-      className: 'nursing',
+      title: { en: 'The Pharmacy', ar: 'الصيدلية' },
+      component: pharmacy,
+      className: 'pharmacy',
       path: '/services/supportive-services',
       dataType: 'static'
     }

@@ -17,14 +17,14 @@ export const data = [
       `
     },
     en: {
-      title: `Patients are requested to arrive half an hour before their scheduled appointment to complete the following procedures:`,
+      title: `Patients are requested to arrive half an hour before their scheduled appointment to complete the following procedures :`,
       content: `
       <ul>
         <li>
-        All patients must go to the cashier's office to pay the inspection fees and obtain a receipt.
+        All patients must go to the cashier's office to pay the inspection fees and obtain a receipt. 
         </li>
         <li>
-        Take the receipt of payment to the reception desk, where the receptionist will prepare your file, and then you can go to your clinic or dental clinic and wait for your appointment.
+        Take the receipt of payment to the reception desk, where the receptionist will prepare your file, and then you can go to your clinic or dental clinic and wait for your appointment. 
         </li>
         <li>
         We will do our best for you to see the doctor at your appointment. In the event of any delay, our staff will inform you of the matter. If you arrive at a walk-in, patients who have pre-booked appointments will be given priority.
@@ -41,7 +41,7 @@ export const data = [
     en: {
       title: `Book patient follow-up appointments`,
       content: `
-      Suppose your condition requires booking an additional appointment for a review with the specialist doctor. In that case, the nurse will record the date of the next appointment on the appointment card based on the attending physician's instructions. Therefore, you have to go with this card to the reception desk to complete the appointment reservation procedures.
+      Suppose your condition requires booking an additional appointment for a review with the specialist doctor. In that case, the nurse will record the date of the next appointment on the appointment card based on the attending physician's instructions. Therefore, you have to go with this card to the reception desk to complete the appointment reservation procedures. 
       `
     }
   },
@@ -53,8 +53,7 @@ export const data = [
     en: {
       title: `Cancel the appointment`,
       content: `
-      There is usually a waiting list for the names of patients who need to make an appointment in the outpatient setting. Therefore, if you are unable to attend your appointment, you must contact us at least two days before the date of your appointment to give your appointment to another patient.
-
+      there is usually a waiting list for patients who need to make an appointment in the outpatient setting. Therefore, if you are unable to attend your appointment, you must contact us at least two days before the date of your appointment to give your appointment to another patient. 
       `
     }
   },
@@ -69,9 +68,9 @@ export const data = [
     en: {
       title: `Checks and procedures`,
       content: `
-      The attending physician may ask you to perform additional examinations and procedures immediately after the medical appointment, and the nurse will direct you to the appropriate department where you can complete the required tests.</br></br>
+      The attending physician may ask you to perform additional examinations and functions immediately after the medical appointment. The nurse will direct you to the appropriate department to complete the required tests. 
+      <br/><br/>
       If these examinations are urgent, you will be asked after completing these examinations to return to the reception desk in the clinic you were in. The attending doctor will search the results of these examinations with you on the same day, and if these tests are not urgent, the results of the tests will be deposited in your file. The doctor will discuss these results with you when you meet with you at the next appointment.
-
       `
     }
   }

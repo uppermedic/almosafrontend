@@ -23,44 +23,49 @@ const Content = ({ t }) => {
             <Col sm={12} lg={8}>
               <div className="content-col">
                 <div className="content-title">
-                  {language === 'ar' && (
-                    <p>
-                      حرصنا في مستشفى الموسى التخصصي على وجود عدد كافي من
-                      الصرافات الآلية داخل المستشفى من باب التيسير على المرضى
-                      والمراجعين وذويهم،
-                    </p>
-                  )}
+                  {/* {language === 'ar' && (
+										<p>
+											حرصنا في مستشفى الموسى التخصصي على وجود عدد كافي من الصرافات الآلية داخل
+											المستشفى من باب التيسير على المرضى والمراجعين وذويهم،
+										</p>
+									)} */}
 
                   {language === 'ar' && (
                     <h5> لذلك يمكنكم إيجاد الصرافات الآلية في :</h5>
                   )}
 
-                  {language === 'en' && (
-                    <p>
-                      At Al-Moosa Specialist Hospital, we were keen on the
-                      existence of a sufficient number of ATMs inside the
-                      hospital for the sake of convenience for patients,
-                      visitors, and their families.
-                    </p>
-                  )}
+                  {/* {language === 'en' && (
+										<p>
+											At Al-Moosa Specialist Hospital, we were keen on the existence of a
+											sufficient number of ATMs inside the hospital for the sake of convenience
+											for patients, visitors, and their families.
+										</p>
+									)} */}
 
-                  {language === 'en' && <h5>So you can find ATMs in:</h5>}
+                  {language === 'en' && <h5>You can find ATMs in:</h5>}
                 </div>
                 <div className="content-description">
                   {language === 'ar' && (
                     <ul>
-                      <li> الطابق الأرضي في المبنى القديم: بوابة رقم .3</li>
                       <li>
-                        · الطابق الثاني في البرج الجديد: أمام مصاعد الموظفين.
+                        <strong>الطابق الأرضي في المبنى القديم :</strong> بوابة
+                        رقم .3
+                      </li>
+                      <li>
+                        <strong> الطابق الثاني في البرج الجديد :</strong> أمام
+                        مصاعد الموظفين.
                       </li>
                     </ul>
                   )}
                   {language === 'en' && (
                     <ul>
-                      <li>Ground floor in the old building: Gate No. 3</li>
                       <li>
-                        The second floor in the new tower: in front of the staff
-                        elevators.
+                        <strong>Ground floor in the old building :</strong> Gate
+                        No. 3
+                      </li>
+                      <li>
+                        <strong>The second floor in the new tower :</strong> in
+                        Front of the staff elevators.
                       </li>
                     </ul>
                   )}

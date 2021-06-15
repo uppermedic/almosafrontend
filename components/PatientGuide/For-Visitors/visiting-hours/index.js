@@ -21,7 +21,7 @@ const Content = ({ t }) => {
                   {language === 'ar' &&
                     `نرحب بالزوار في مستشفى الموسى التخصي - نحن ندعم مرضانا ، ونعلم على وجه اليقين أن الزوار جزء لا يتجزأ من عملية العلاج والشفاء.`}
                   {language === 'en' &&
-                    `Visitors are welcome to ASH - we support our patients, and we know for sure that visitors are an integral part of the treatment and recovery process.`}
+                    `Visitors are welcome to ASH - we support our patients, and we know for sure that having visitors is an integral part of the treatment and recovery process.`}
                 </p>
               </div>
               <div className="time">
@@ -32,8 +32,7 @@ const Content = ({ t }) => {
                   <h3>
                     {language === 'ar' &&
                       `لذلك يسرنا أن نبلغكم بأن مواعيد زيارة المرضى كالآتي:`}
-                    {language === 'en' &&
-                      `The dates of the visit are as follows:`}
+                    {language === 'en' && `Visiting hours :`}
                   </h3>
                 </div>
                 {language === 'ar' && (

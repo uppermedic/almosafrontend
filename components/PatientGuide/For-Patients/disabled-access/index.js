@@ -8,8 +8,8 @@ const Content = ({ t }) => {
     <div className="content">
       <div className="container">
         <div className="card">
-          <div className="top-border"></div>
-          <div className="bottom-border"></div>
+          <div className="top-border" />
+          <div className="bottom-border" />
           <div className="title">
             <h2>{t('menu:disabled access')}</h2>
           </div>
@@ -17,9 +17,7 @@ const Content = ({ t }) => {
             {language === 'ar' &&
               `يقوم مستشفى الموسى التخصصي بدعم ذوي الاحتياجات الخاصة والإعاقة وذويهم من خلال توفير بيئة آمنة ومريحة لهم، وتوفير الدعم اللازم لهم من أجل حصولهم على رعاية طبية متكاملة ومريحة، والتي تتميز ب:`}
             {language === 'en' &&
-              `Almoosa Specialist Hospital cares for disabled patients and their
-            families by providing a safe environment and support to receive the
-            optimum care.`}
+              `Almoosa Specialist Hospital cares for disabled patients and their families by providing a safe environment and support to receive the optimum care.`}
           </h5>
 
           <ul>

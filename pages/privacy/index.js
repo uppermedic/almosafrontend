@@ -2,8 +2,9 @@ import React from 'react';
 import Head from 'src/components/layout/head';
 import i18n from 'root/i18n';
 import Content from 'src/components/Privacy';
+import { withTranslation } from 'root/i18n';
 
-const index = () => {
+const index = ({ t }) => {
   const { language } = i18n;
   const seo = {
     ar: {
@@ -21,10 +22,15 @@ const index = () => {
   };
   return (
     <div className="privacy">
-      <Head data={seo}></Head>
+      <Head data={seo} />
+      <div className="head-banner">
+        <div className="container">
+          <h2>{t('menu:privacy')}</h2>
+        </div>
+      </div>
       <Content />
     </div>
   );
 };
 
-export default index;
+export default withTranslation(['menu'])(index);

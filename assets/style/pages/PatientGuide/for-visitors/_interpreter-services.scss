@@ -8,6 +8,7 @@
         p {
           font-family: 'diodrum-arabic-meduim';
           font-size: 16px;
+
           @include respond-below(md) {
             font-size: 14px;
           }

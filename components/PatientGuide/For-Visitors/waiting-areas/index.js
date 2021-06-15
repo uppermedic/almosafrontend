@@ -19,7 +19,7 @@ const Content = ({ t }) => {
                 {language === 'ar' &&
                   `نحن نهتم بمرضانا وعائلاتهم. لذلك. منطقة انتظار مستشفى الموسى التخصصي انتظار مساحة واسعة، مريحة، وكبيرة بما يكفي لاستيعاب الزوار والمرضى `}
                 {language === 'en' &&
-                  `We care about our patients and their families. Therefor. ASH waiting Area is spacious, restful, and large enough to accommodate visitors and patients.`}
+                  `We care about our patients and their families. Therefor. ASH waiting Area is spacious, restful, and large enough to accommodate visitors and patients .`}
               </p>
             </div>
             <div className="note">
@@ -32,7 +32,7 @@ const Content = ({ t }) => {
             <ul className="info">
               <li>
                 <span className="icon">
-                  <i className="fas fa-chair"></i>
+                  <i className="fas fa-chair" />
                 </span>
                 <span className="text">
                   {' '}
@@ -43,7 +43,7 @@ const Content = ({ t }) => {
               </li>
               <li>
                 <span className="icon">
-                  <i className="fas fa-tv"></i>
+                  <i className="fas fa-tv" />
                 </span>
                 <span className="text">
                   {' '}
@@ -53,7 +53,7 @@ const Content = ({ t }) => {
               </li>
               <li>
                 <span className="icon">
-                  <i className="fas fa-wifi"></i>
+                  <i className="fas fa-wifi" />
                 </span>
                 <span className="text">
                   {' '}
@@ -72,7 +72,7 @@ const Content = ({ t }) => {
                 backgroundImage:
                   'url("/images/patient-guide/for_visitors/waiting-area.jpg")'
               }}
-            ></div>
+            />
             <div className="zigzag">
               <img src="/images/patient-guide/green-zigzag.png" alt="zigzag" />
             </div>

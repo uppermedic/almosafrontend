@@ -10,7 +10,7 @@ export const data = [
         },
         en: {
           content: `
-          Once the patient enters Al-Moosa Specialist Hospital, he will obtain a written copy of the regulations and laws from the reception department - the registration office - the nursing staff. If the patient has any problems understanding any of these regulations, he can contact the Patient Relations Office, to provide him with immediate assistance.
+          You have the right to understand and use all your rights: (You will receive a written copy of these rights from the Reception, Registration Office or Nursing Staff). If, for any reason, you did not understand them, please contact Patient Relation Office asks for help including an interpreter.
           `
         }
       },
@@ -23,7 +23,7 @@ export const data = [
         },
         en: {
           content: `
-          We believe in the right of everyone to obtain equal medical care and respect for the patient's beliefs and personal values. All employees of Al Moosa Specialist Hospital must provide health care without any discrimination according to the laws and regulations of the hospital and the Kingdom of Saudi Arabia.
+          You have the right to receive impartial care without discrimination, including a request for pastoral services or similar request respecting your values and spiritual I religious beliefs from all authorized hospital staff. This shall be subject to availability without interfering with other patient's safety, ASH work environment, and without contradiction with ASH rules & regulations.
           `
         }
       },
@@ -36,7 +36,7 @@ export const data = [
         },
         en: {
           content: `
-          It is the right of the patient inside Al-Moosa Specialist Hospital to obtain complete and professional medical care to reach a correct medical diagnosis according to the medical norms in force, and to access later to appropriate treatment.
+          You have the right to receive comprehensive Medical Care to reach the proper diagnosis and treatment of illness and injury.
           `
         }
       },
@@ -49,7 +49,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to receive emergency and immediate care whenever the need arises, without laziness or negligence from the nursing staff or doctors.
+          You have the right to know the identity of the physician or other practitioner responsible for your care.
           `
         }
       },
@@ -62,7 +62,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to know the identity of the treating physician and the medical staff following the case, including nurses, administrators, or supervisors.
+          You have the right to receive comprehensive information in a manner you can understand (from the attending physician) about the diagnosis, proposed treatment, any change in your health status, and the cause of these changes. Alternative treatments, potential benefits and drawbacks to the proposed treatment, likelihood of successful treatment, possible problems related to recovery, and possible results of non-treatment.
           `
         }
       }
@@ -103,30 +103,7 @@ export const data = [
         },
         en: {
           content: `
-          Obtaining complete information smoothly and understandably through the attending physician who is following the case is the patient's full right once the patient is diagnosed, this information may include:
-          <ul>
-            <li>
-            Suggested regimen
-            </li>
-            <li>
-            Any changes that may occur to the patient's health condition and its causes.
-            </li>
-            <li>
-            Alternative and possible treatments.
-            </li>
-            <li>
-            The likelihood of success or failure of treatment.
-            </li>
-            <li>
-            Treatment features and risks (if applicable)
-            </li>
-            <li>
-            Expected complications during treatment.
-            </li>
-            <li>
-            Expected results in case of neglect of treatment and non-compliance with the advice of the attending physician.
-            </li>
-          </ul>
+          You have the right to have an interpreter (if available) if the language barrier presents a problem of understanding the details of your care and the treatment provided to you.
           `
         }
       },
@@ -139,7 +116,7 @@ export const data = [
         },
         en: {
           content: `
-          If the language constitutes an obstacle without understanding the medical instructions, or the patient suffers from difficulty in communicating with the medical or administrative staff, he is entitled to obtain an interpreter - if he is present -.
+          You have the right to give your written General Consent for treatment when you enter the hospital.
           `
         }
       },
@@ -152,7 +129,7 @@ export const data = [
         },
         en: {
           content: `
-          Please give consent for hospital treatment in writing by the patient or his family as soon as the patient enters Al-Moosa Specialist Hospital.
+          You have the right to give your written consent before surgical, invasive procedures, anesthesia, and the use of blood and its products, and any other high-risk procedures and treatments, and for research participation.
           `
         }
       },
@@ -165,7 +142,7 @@ export const data = [
         },
         en: {
           content: `
-          Patients are requested to give prior written consent before undergoing any surgery, endoscopy, or anesthesia, the first transfusion of blood and its components, or any other procedures that require that procedure, such as participating in scientific research.
+          You have the right to receive all information that you needed before giving your consent for any proposed procedure or treatment. This information should include the benefits, available alternatives, and the possible risks of the procedure or the treatment.
           `
         }
       },
@@ -189,18 +166,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to obtain all the information and details he needs before agreeing to the treatment plan or proposed procedure, which includes:
-          <ul>
-            <li>
-            Benefits from the treatment plan or proposed procedure.
-            </li>
-            <li>
-            Available alternatives for this procedure.
-            </li>
-            <li>
-            Possible risks and expected complications after the 
-            </li>
-          </ul>
+          You have the right to participate in care decisions. ASH encourages Patients, Parents, or Legal Guardians to participate in planning and implementing treatment with nurses and physicians to the extent they wish.
           `
         }
       }
@@ -218,7 +184,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient or his representative has the right to participate in the medical team in making health decisions related to the patient’s condition. This comes as a matter of encouraging Al Moosa Specialist Hospital and their families to take appropriate decisions to achieve complete comfort for the patient and his family.
+          You have the right to maintain your need for privacy for all examinations, procedures, clinical interviews, transport, treatments, and the confidentiality of all of your information.
           `
         }
       },
@@ -231,7 +197,7 @@ export const data = [
         },
         en: {
           content: `
-          All the examinations, procedures, clinical interviews, organ transfer, and treatment inside Al-Moosa Specialist Hospital are confidential patient information that no one has the right to see or know except for those concerned.
+          You have the right to choose the treating physician (depending on availability) in addition to the right to reject the treating physician upon furnishing a genuine reason. Also, you have the right to ask for a second opinion without fear of compromise, in case of complications expected or unexpected, unsatisfied results of treatment, or in making a risky decision in management. In addition, you have the choice to have face-to-face consultation or virtual consultation through the ASH application.
           `
         }
       },
@@ -244,7 +210,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to choose the physician treating him from among the available doctors, and to object to the treating doctor after stating the convincing reasons for this request. He is also entitled to consult another doctor without the slightest objection from the management of Al-Moosa Specialist Hospital, by the hospital's internal rules and regulations, in the event of unexpected or unexpected complications or unsatisfactory results of treatment.
+          You have the right to refuse the treatment (if you would like to) and be informed of the medical consequences due to your refusal. Accordingly, you will sign a form prepared to that effect and leave the hospital.
           `
         }
       },
@@ -257,7 +223,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient can choose a face-to-face consultation or a virtual consultation through the Al-Moosa Specialist Hospital application.
+          You have the right to refuse examination or observation by a trainee not directly responsible for your care. In such cases, they should have the permission of the patient to be present during the case discussion, consultation, examination, and treatment.
           `
         }
       },
@@ -270,7 +236,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to refuse treatment if he so desires, then the patient or his family must be informed of the health consequences of this refusal. He will sign an acknowledgment prepared by the hospital administration for this purpose, and leave the hospital afterward.
+          You have the right to be protected from physical, verbal, and psychological assault.
           `
         }
       }
@@ -288,7 +254,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to refuse to examine him or to follow up on the details of his treatment by any person who is not directly responsible for his treatment. Those who do not directly participate in his treatment must obtain prior permission from him so that they can attend during the discussion of his illness, examination, and supervision of his treatment.
+          You have the right to receive information from the organization that supports your choice to donate organs and other tissues. This information includes potential benefits and Risks. Call Toll-free number #8001245500, and you will receive the full knowledge that supports your choice from the Saudi Center for Organ Donation.
           `
         }
       },
@@ -301,7 +267,7 @@ export const data = [
         },
         en: {
           content: `
-          Al-Moosa Specialist Hospital cannot be satisfied with assaulting any patient financially, verbally, or psychologically, and the patient has the right to complain to the hospital administration if this is proven.
+          According to Hospital Policies and Procedures, depending on availability and your health status, you have the right to have a family member or a guardian or care partner as a companion (if needed). However, specific units will not allow this due to some medical reasons, such as ICU, Nursery, etc.
           `
         }
       },
@@ -314,7 +280,8 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to receive information and details that support his choice to donate organs or other tissues, and this information includes the benefits and potential risks expected from Approved procedures, and this is done through the Saudi Society for Organ Donation (Tel: 800124500).
+          You have the right to receive a complete explanation of the need to be transferred to another Treatment Center and all reasonable alternatives to such a transfer. The
+          The institution to which the patient is to be transferred must accept the patient before being transferred.
           `
         }
       },
@@ -327,7 +294,7 @@ export const data = [
         },
         en: {
           content: `
-          According to the hospital's policies and procedures and depending on the patient's health condition, the patient is entitled to have a family member, guardian, or care partner as a companion (if necessary) in some of the departments that the patient is allowed to do, while it is not possible in other certain departments such as intensive care And custody, for medical reasons related to the procedures and sensitivity of the situation.
+          You have the right to complain at any time through Patient Relation Officer (contact internal number: 1423, mobile: 0552952660) without any fear of reprisals about the care and services you are receiving, and the hospital should respond to you. Whether inpatients and outpatients, patients can contact Personal Relation Office to give complaints and suggestions about services and have them addressed to the concerned department.
           `
         }
       },
@@ -340,7 +307,7 @@ export const data = [
         },
         en: {
           content: `
-          If the patient is transferred to another treatment center, he is entitled to obtain a comprehensive explanation of the reasons and all the financial and administrative obligations that result from that, if any, and to specify alternative options to that, then the hospital
+          You have the right to view your medical record under the doctor's supervision or the medical team, who is in charge of your treatment and according to the hospital policy & regulations, through the office of patient relation.
           `
         }
       }
@@ -358,7 +325,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient can submit any inquiry, suggestion, or complaint through the Patient Relations Office (Office 1423) Tel: 0552952660, without feeling fear or anxiety about the impact of the service and care provided to the patient, and the patient is also entitled to obtain a response from the management of Al-Moosa Specialist Hospital regarding the complaint submitted.
+          The organization respects and supports patient's right to appropriate assessment and pain management and provides education for patients and their families about pain and pain management.
           `
         }
       },
@@ -371,7 +338,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to view his medical file under the supervision of the attending physician or a member of the medical staff, according to the system and laws followed in the hospital through the Patient Relations Office.
+          ASH is committed to providing (End of life care) for the dying patient with Respectful and compassionate care and respects his unique needs.
           `
         }
       },
@@ -384,7 +351,7 @@ export const data = [
         },
         en: {
           content: `
-          The hospital is committed to treating patients with advanced and difficult stages of the disease with dignity according to the international principles followed in palliative treatment and pain relief, including respect for the exceptional needs of them and their families.
+          You have the right to obtain a Medical Reports and a copy of the Medical test results from the Medical Reports Section (if you would like to) for which the hospital at no additional charges; however, this will only be applied for the 1st time for which the hospital will charge you.
           `
         }
       },
@@ -397,7 +364,7 @@ export const data = [
         },
         en: {
           content: `
-          The patient can request a medical report and a copy of the analyzes through the Medical Records Department, from paying any fees the first time the request is made, after which the prescribed fees are collected by the hospital.
+          You have the right to receive an itemized bill and explanation of all charges regardless it is paid by the patient or by another source.
           `
         }
       },
@@ -410,23 +377,23 @@ export const data = [
         },
         en: {
           content: `
-          The patient has the right to obtain a detailed bill indicating all costs, regardless of whether the bill will be paid by the other party.
-          `
-        }
-      },
-      {
-        num: '26',
-        ar: {
-          content: `
-          عند خروج المريض من مستشفى الموسى التخصصي يحصل على إرشادات الخروج من قبل فريق التمريض، والتي تحتوي على الخطة العلاجية والنصائح الطبية اللازمة للعناية الكاملة للمريض.
-          `
-        },
-        en: {
-          content: `
-          When the patient is discharged from Al-Moosa Specialist Hospital, he obtains exit instructions from the nursing team, which contain the treatment plan and medical advice necessary for the patient's full care.
+          You have the right to receive written Discharge Instructions or Plans from the nursing team. This plan will highlight treatment follow-up and medical instructions on how to take care of yourself.
           `
         }
       }
+      // {
+      // 	num: '26',
+      // 	ar: {
+      // 		content: `
+      //     عند خروج المريض من مستشفى الموسى التخصصي يحصل على إرشادات الخروج من قبل فريق التمريض، والتي تحتوي على الخطة العلاجية والنصائح الطبية اللازمة للعناية الكاملة للمريض.
+      //     `
+      // 	},
+      // 	en: {
+      // 		content: `
+      //     When the patient is discharged from Al-Moosa Specialist Hospital, he obtains exit instructions from the nursing team, which contain the treatment plan and medical advice necessary for the patient's full care.
+      //     `
+      // 	}
+      // }
     ],
     img: '/images/patient-guide/for_patient/patient_rights_5.jpg'
   }

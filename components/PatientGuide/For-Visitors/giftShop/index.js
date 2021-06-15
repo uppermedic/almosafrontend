@@ -21,11 +21,10 @@ const Content = ({ t }) => {
               </div>
               <div className="description">
                 <h5>Working hours:</h5>
-                <p>
-                  9:00 am -12:00 noon
-                  <br />
-                  5:00 pm-9: 00 pm
-                </p>
+                <ul>
+                  <li>9:00 am -12:00 noon</li>
+                  <li>5:00 pm-9: 00 pm</li>
+                </ul>
               </div>
               <div className="description">
                 <h5>Available items:</h5>
@@ -51,11 +50,10 @@ const Content = ({ t }) => {
               </div>
               <div className="description">
                 <h5>ساعات العمل:</h5>
-                <p>
-                  9:00 صباحاً -12:00 ظهراً
-                  <br />
-                  5:00عصراً -9:00 مساءاً
-                </p>
+                <ul>
+                  <li>9:00 صباحاً -12:00 ظهراً</li>
+                  <li>5:00عصراً -9:00 مساءاً</li>
+                </ul>
               </div>
               <div className="description">
                 <h5>الأصناف المتوفر:</h5>

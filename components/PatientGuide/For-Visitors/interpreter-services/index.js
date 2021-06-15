@@ -14,39 +14,36 @@ const Content = ({ t }) => {
         <Col>
           <div className="left-info">
             <div className="desc">
-              <p>
-                {language === 'ar' && (
-                  <>
-                    التفاصيل الصغيرة هي التي تميزنا!
-                    <br />
-                    <br />
-                    إذا كانت اللغة عائقًا أو واجهت صعوبة في فهم التعليمات الطبية
-                    داخل مستشفى الموسى التخصصي، أو بحاجة إلى معلومات طبية بلغة
-                    غير العربية، فإننا نوفر لكم خدمات الترجمة الشفوية ولأحبابكم،
-                    ترجمة فورية ومجانية وبجودة عالية، للوصول إلى خدمة طبية
-                    متكاملة دون وجود أي حواجز. الترجمات المتوفرة للغة العربية:
-                    الإنجليزية – الروسية – التاغلوغية – الأردية – الهندية
-                    مالايالامية – البرتغالية - البنجلادشية – الكشميرية –
-                    الإيطالية – الفرنسية .
-                  </>
-                )}
-                {language === 'en' && (
-                  <>
-                    The little details set us apart!
-                    <br />
-                    <br />
-                    If the language is a hindrance or you have difficulty
-                    understanding medical instructions inside Al-Moosa
-                    Specialist Hospital, or you need medical information in a
-                    language other than Arabic, we provide interpretation
-                    services for you and your loved ones, free instant
-                    translation and high quality, to reach an integrated medical
-                    service without any barriers. Available Arabic translations:
-                    English - Russian - Tagalog - Urdu - Hindi - Malayalam -
-                    Portuguese - Bangladeshi - Kashmiri - Italian - French.
-                  </>
-                )}
-              </p>
+              {language === 'ar' && (
+                <p>
+                  <strong>التفاصيل الصغيرة هي التي تميزنا!</strong>
+                  <br />
+                  <br />
+                  إذا كانت اللغة عائقًا أو واجهت صعوبة في فهم التعليمات الطبية
+                  داخل مستشفى الموسى التخصصي، أو بحاجة إلى معلومات طبية بلغة غير
+                  العربية، فإننا نوفر لكم خدمات الترجمة الشفوية ولأحبابكم، ترجمة
+                  فورية ومجانية وبجودة عالية، للوصول إلى خدمة طبية متكاملة دون
+                  وجود أي حواجز. الترجمات المتوفرة للغة العربية: الإنجليزية –
+                  الروسية – التاغلوغية – الأردية – الهندية مالايالامية –
+                  البرتغالية - البنجلادشية – الكشميرية – الإيطالية – الفرنسية .
+                </p>
+              )}
+              {language === 'en' && (
+                <p>
+                  <strong>Little details set us apart!</strong>
+                  <br />
+                  <br />
+                  If the language is a hindrance, or you have difficulty
+                  understanding medical instructions inside Al-Moosa Specialist
+                  Hospital or need medical information in a language other than
+                  Arabic.
+                  <br />
+                  In that case, we provide interpretation services for you and
+                  your loved ones Available : Arabic translations- English -
+                  Russian - Tagalog - Urdu - Hindi - Malayalam - Portuguese -
+                  Bangladeshi - Kashmiri - Italian - French.
+                </p>
+              )}
             </div>
           </div>
         </Col>
@@ -66,7 +63,7 @@ const Content = ({ t }) => {
                   `}
                 {language === 'en' &&
                   `
-                  All Al Moosa Hospital staff can help you arrange language services
+                  All the Al Moosa Hospital caregivers can help you arrange language services
                   `}
               </p>
               <div className="note">
@@ -77,13 +74,13 @@ const Content = ({ t }) => {
                   `}
                   {language === 'en' &&
                     `
-                      You can also call the interpreter services office at
+                    You can also call the interpreter services office at
                   `}
                 </p>
               </div>
               <div className="tel">
                 <span className="icon">
-                  <i className="fas fa-phone-square-alt"></i>
+                  <i className="fas fa-phone-square-alt" />
                 </span>
                 <span className="info">
                   <a href="tel:0135369666">

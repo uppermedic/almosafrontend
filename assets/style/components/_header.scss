@@ -26,9 +26,15 @@ header {
       }
     }
     .brand-right {
+      .logo1 {
+        width: 45%;
+      }
+      .logo2 {
+        width: 55%;
+      }
       img {
         display: inline-block;
-        width: 100%;
+        // width: 50%;
         height: 120px;
         @include respond-below(lg) {
           max-width: 200px;

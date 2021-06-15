@@ -38,7 +38,7 @@ const data = [
   },
   {
     id: 5,
-    title: { en: 'Parking and valet parking', ar: 'المواقف وخدمة صف السيارات' },
+    title: { en: 'Parking and Valet', ar: 'المواقف وخدمة صف السيارات' },
     component: parking,
     className: 'directions'
   },
