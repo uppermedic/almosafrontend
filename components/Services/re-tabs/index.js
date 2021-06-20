@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   TabContent,
   TabPane,
@@ -18,6 +18,20 @@ const ReusableTabs = props => {
   const { physicians, tab1Data, t } = props;
   const { language } = i18n;
   const [activeTab, setActiveTab] = useState('1');
+  const physiciansExist = physicians && physicians.length > 0;
+  const itemsExist = tab1Data && tab1Data.items.length > 0;
+  console.log(!itemsExist);
+
+  useEffect(() => {
+    if (itemsExist && !physiciansExist) {
+      setActiveTab('1');
+    } else if (physiciansExist && !itemsExist) {
+      setActiveTab('2');
+    } else if (physiciansExist && itemsExist) {
+      setActiveTab('1');
+    }
+    return () => {};
+  }, []);
 
   const toggle = tab => {
     if (activeTab !== tab) setActiveTab(tab);
@@ -26,31 +40,40 @@ const ReusableTabs = props => {
     <div className="reusable-tabs">
       <div className="container">
         <Nav tabs>
-          <NavItem className="tab-one">
-            <NavLink
-              className={classnames({ active: activeTab === '1' })}
-              onClick={() => {
-                toggle('1');
-              }}
+          {itemsExist && (
+            <NavItem
+              className="tab-one"
+              style={{ width: itemsExist && !physiciansExist ? '100%' : '50%' }}
             >
-              {language && tab1Data[language]?.title}
-            </NavLink>
-          </NavItem>
-          <NavItem className="tab-two">
-            <NavLink
-              className={classnames({ active: activeTab === '2' })}
-              onClick={() => {
-                toggle('2');
-              }}
+              <NavLink
+                className={classnames({ active: activeTab === '1' })}
+                onClick={() => {
+                  toggle('1');
+                }}
+              >
+                {language && tab1Data[language]?.title}
+              </NavLink>
+            </NavItem>
+          )}
+          {physiciansExist && (
+            <NavItem
+              className="tab-two"
+              style={{ width: physiciansExist && !itemsExist ? '100%' : '50%' }}
             >
-              {t('our physicians')}
-            </NavLink>
-          </NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '2' })}
+                onClick={() => {
+                  toggle('2');
+                }}
+              >
+                {t('our physicians')}
+              </NavLink>
+            </NavItem>
+          )}
         </Nav>
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1">
-            {tab1Data &&
-              tab1Data.items.length > 0 &&
+            {itemsExist &&
               tab1Data.items.map((item, idx) => (
                 <div className={classnames({ content: true })}>
                   {language && item[language]?.content && (
@@ -67,15 +90,16 @@ const ReusableTabs = props => {
           </TabPane>
           <TabPane tabId="2" className="physician">
             <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards m-0">
-              {physicians.map((doctor, index) => (
-                <Col>
-                  <DoctorCard
-                    key={index}
-                    doctor={doctor}
-                    setcurrentDoctor={() => {}}
-                  />
-                </Col>
-              ))}
+              {physiciansExist &&
+                physicians.map((doctor, index) => (
+                  <Col>
+                    <DoctorCard
+                      key={index}
+                      doctor={doctor}
+                      setcurrentDoctor={() => {}}
+                    />
+                  </Col>
+                ))}
             </Row>
           </TabPane>
         </TabContent>
