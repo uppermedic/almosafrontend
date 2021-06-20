@@ -20,7 +20,6 @@ const ReusableTabs = props => {
   const [activeTab, setActiveTab] = useState('1');
   const physiciansExist = physicians && physicians.length > 0;
   const itemsExist = tab1Data && tab1Data.items.length > 0;
-  console.log(!itemsExist);
 
   useEffect(() => {
     if (itemsExist && !physiciansExist) {
