@@ -51,8 +51,8 @@ const Content = ({ t }) => {
                   <>
                     <div className="hours">
                       <p>
-                        <span>From</span> <strong> 12 </strong> noon to
-                        <strong> 1 </strong> noon <span>And</span> from{' '}
+                        <span>From</span> <strong> 12 </strong> pm to
+                        <strong> 1 </strong> pm <span>And</span> from{' '}
                         <strong> 6 </strong> pm to <strong>7</strong> pm
                       </p>
                     </div>

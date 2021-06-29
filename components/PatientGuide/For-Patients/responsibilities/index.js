@@ -16,9 +16,9 @@ const Content = ({ t }) => {
           <div className="items-title">
             <h5>
               {language === 'ar'
-                ? 'اللوائح الخاصة بالواجبات والمسؤوليات التي يتحملها المرضى وأسرهم:'
+                ? 'اللوائح الخاصة بالواجبات والمسؤوليات التي يتحملها المرضى وأسرهم :'
                 : `Policies regarding duties and responsibilities of patients and
-            their families:`}
+            their families :`}
             </h5>
           </div>
           <Container>

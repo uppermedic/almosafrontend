@@ -26,14 +26,14 @@ const Cooperation = ({ data }) => {
   };
   return (
     <section className="cooperation">
-      <Head data={head_data}></Head>
+      <Head data={head_data} />
       <Hero bg={data.cover_image}>
-        <div className="layout"></div>
+        <div className="layout" />
         <div className="top_left_title">
           <h2>
             {(lang == 'en' && 'Cooperation with') || 'التعاون مع الأسر المنتجة'}
           </h2>
-          <h2>{lang == 'en' && 'Produsctive Familes'}</h2>
+          <h2>{lang == 'en' && ' Productive Families'}</h2>
         </div>
         <div className="right_ticket">
           <img

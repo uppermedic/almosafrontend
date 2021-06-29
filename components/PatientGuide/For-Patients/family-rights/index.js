@@ -23,7 +23,7 @@ const Content = ({ t }) => {
               {language === 'ar'
                 ? `بصفتك أحد مرضى المستشفى الأعزاء: يحق لك أنت وأفراد عائلتك الكريمة ممارسة الحقوق التالية أثناء تلقيك الخدمة بالمستشفى`
                 : `Being a valued patient in Almoosa Specialist Hospital (ASH), you
-                and your family have the following Rights:`}
+                and your family have the following Rights :`}
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Content = ({ t }) => {
                           <p>
                             {language === 'ar'
                               ? `علما بأنه في حالة الأطفال وكبار السن والمرضى الذين لا تسمح حالتهم الصحية بممارسة بعض حقوقهم فسوف يتم ممارسة هذه الحقوق من قبل ذويهم نيابة عنهم.`
-                              : `(Rights of Children, Old people and Patients not able to practice their rights, will be granted to their families/ guardians):`}
+                              : `(Rights of Children, Old people and Patients not able to practice their rights, will be granted to their families/ guardians) :`}
                           </p>
                           <hr />
                         </div>

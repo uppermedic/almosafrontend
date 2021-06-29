@@ -19,6 +19,7 @@ section.home-centers {
 
   .owl-carousel {
     .owl-nav {
+      direction: ltr !important;
       .owl-prev:hover,
       .owl-next:hover {
         // background: #fff;
@@ -64,6 +65,13 @@ section.home-centers {
             transform: rotateY(180deg);
             right: -60px;
           }
+        }
+      }
+    }
+    @include rtl {
+      .owl-nav {
+        @include respond-below(sm) {
+          direction: rtl;
         }
       }
     }

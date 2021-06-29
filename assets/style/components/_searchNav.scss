@@ -58,6 +58,8 @@
     font-size: 12px;
     line-height: 30px;
     transition: 0.4s;
+    margin: 0 2px;
+
     &.bt-light {
       font-family: 'diodrum-arabic-meduim';
       border: 1px solid #fff;
@@ -81,19 +83,14 @@
       &.icon {
         height: 100%;
         float: right;
-        // margin-left: 10px;
         font-size: 16px;
         padding-right: 5px;
         border-left: 1px solid #fff;
         border-right: none;
         @include rtl() {
           float: left;
-          // margin-right: 10px;
           padding-left: 5px;
-          //border-left: 2px solid $almoosa-light-green-color;
           border-left: 1px solid #fff;
-          //reset
-          // margin-left: 0;
           padding-right: 0;
           border-left: none;
           border-right: 1px solid #fff;
@@ -108,17 +105,17 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          @include rtl() {
-            margin-left: 0;
-            margin-right: 5px;
-          }
         }
       }
       &.text {
-        font-size: 13px;
+        font-size: 12px !important;
         padding: 0 10px;
         @include respond-below(xl) {
-          font-size: 11px;
+          font-size: 11px !important;
+          padding: 0 5px;
+        }
+        @include respond-below(md) {
+          font-size: 10px !important;
           padding: 0 5px;
         }
         @include respond-below(sm) {
@@ -127,9 +124,10 @@
           align-items: center;
           justify-content: center;
           padding: 0 1px;
+          font-size: 2.5vw !important;
         }
         @include respond-below(xs) {
-          font-size: 9px;
+          font-size: 7px !important;
         }
       }
     }

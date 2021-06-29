@@ -8,24 +8,6 @@ header {
       }
     }
     .navbar-brand {
-      img {
-        display: inline-block;
-        width: 100%;
-        height: 120px;
-        @include respond-below(lg) {
-          max-width: 200px;
-        }
-        @include respond-below(md) {
-          max-width: 150px;
-          height: 100px;
-        }
-        @include respond-below(sm) {
-          max-width: 100px;
-          height: 90px;
-        }
-      }
-    }
-    .brand-right {
       .logo1 {
         width: 45%;
       }
@@ -34,19 +16,7 @@ header {
       }
       img {
         display: inline-block;
-        // width: 50%;
-        height: 120px;
-        @include respond-below(lg) {
-          max-width: 200px;
-        }
-        @include respond-below(md) {
-          max-width: 150px;
-          height: 100px;
-        }
-        @include respond-below(sm) {
-          max-width: 116px;
-          height: 90px;
-        }
+        width: 100%;
       }
     }
   }
@@ -190,8 +160,9 @@ header {
             transition: 0.3s;
             &.active {
               background-color: #fff;
-              color: #000;
+              color: #000 !important;
             }
+
             @include rtl() {
               text-align: right;
             }

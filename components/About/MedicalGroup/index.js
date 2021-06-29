@@ -33,7 +33,7 @@ function index({ t }) {
                   </p>
                   <br />
                   <div className="description">
-                    <h6>Almoosa Specialist Hospital</h6>
+                    <h6>Almoosa Specialist Hospital :</h6>
                     <p>
                       The healthcare sector's flagship is the existing hospital
                       established in 1996 as the first private hospital in the
@@ -46,7 +46,7 @@ function index({ t }) {
                     </p>
                   </div>
                   <div className="description">
-                    <h6>Almoosa for rehabilitation and long term care: </h6>
+                    <h6>Almoosa for rehabilitation and long term care : </h6>
                     <p>
                       The new 300-bed facility will be a rehabilitation and
                       long-term care oasis in the region, including
@@ -66,7 +66,7 @@ function index({ t }) {
                     </p>
                   </div>
                   <div className="description">
-                    <h6>Almoosa College of health sciences:</h6>
+                    <h6>Almoosa College of health sciences :</h6>
                     <p>
                       {' '}
                       <a
@@ -105,7 +105,7 @@ function index({ t }) {
                     </p>
                   </div>
                   <div className="description">
-                    <h6>كلية الموسى للعلوم الصحية:</h6>
+                    <h6>كلية الموسى للعلوم الصحية :</h6>
                     <p>
                       <a
                         href="https://www.almoosacollege.edu.sa/about-ar/"

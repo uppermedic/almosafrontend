@@ -22,14 +22,14 @@ const Content = ({ t }) => {
                   `We care about our patients and their families. Therefor. ASH waiting Area is spacious, restful, and large enough to accommodate visitors and patients .`}
               </p>
             </div>
-            <div className="note">
+            {/* <div className="note">
               <p>
                 {language === 'ar' && `كل صالة انتظار تم توفير:`}
                 {language === 'en' &&
                   `In Each lounge, the following services are provided:`}
               </p>
-            </div>
-            <ul className="info">
+            </div> */}
+            {/* <ul className="info">
               <li>
                 <span className="icon">
                   <i className="fas fa-chair" />
@@ -61,7 +61,7 @@ const Content = ({ t }) => {
                   {language === 'en' && `open, high-speed Internet.`}
                 </span>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </Col>
         <Col>

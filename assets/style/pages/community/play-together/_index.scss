@@ -46,31 +46,29 @@
   .content-wrapper {
     padding-top: 63px;
     padding-bottom: 100px;
+    > * {
+      font-family: 'diodrum-arabic-meduim' !important;
+      > span {
+        font-family: 'diodrum-arabic-meduim' !important;
+      }
+    }
 
     @include background-image;
     h2 {
       @include sectionHeading($primary-color);
     }
 
-    // .post_with_title {
-    //   .two_columns_post {
-    //     .post-img {
-    //       img {
-    //         height: 450px;
-    //       }
-    //     }
-    //   }
-    // }
     .section-one {
       margin: 20px 0;
       span {
-        font-size: $paragraph-text-size;
-        padding-right: 50px;
+        font-size: 16px !important;
+        font-family: 'diodrum-arabic-meduim' !important;
+        padding: 40px;
         font-weight: bold;
         height: 100%;
-        @include respond-below(lg) {
+        @include respond-below(md) {
           padding-right: 0;
-          font-size: $paragraph-text-sm-size;
+          font-size: 14px !important;
         }
       }
       .col-12 {
@@ -129,6 +127,7 @@
       }
       p {
         font-size: $paragraph-text-size;
+        font-family: 'diodrum-arabic-meduim' !important;
         text-align: center;
         margin: 20px 0;
         @include respond-below(lg) {
@@ -139,6 +138,7 @@
         }
         span {
           font-size: $paragraph-text-size;
+          font-family: 'diodrum-arabic-meduim' !important;
         }
       }
     }

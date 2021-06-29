@@ -28,7 +28,7 @@ const Content = ({ t }) => {
                 </p>
               </div>
               <div className="description">
-                <h5>Alfaisal Park:</h5>
+                <h5>Alfaisal Park :</h5>
                 <p>
                   Located In Front of the North Tower: provides recreational
                   attractions such as children's games and seating umbrellas.
@@ -36,7 +36,7 @@ const Content = ({ t }) => {
                 </p>
               </div>
               <div className="description">
-                <h5>Play together Park:</h5>
+                <h5>Play together Park :</h5>
                 <p>
                   One of the "Play Together initiatives" in Al-Ahsa in Al-Faisal
                   neighborhood in Al-mubarraz on more than <strong>2200</strong>{' '}
@@ -66,7 +66,7 @@ const Content = ({ t }) => {
                 </p>
               </div>
               <div className="description">
-                <h5>حديقة نلعب معاً:</h5>
+                <h5>حديقة نلعب معاً :</h5>
                 <p>
                   تقع حديقة الموسى إحدى حدائق مبادرة نلعب معاً بالاحساء في حي
                   الفيصل بالمبرز على مساحة تزيد عن <strong>2200</strong> متر

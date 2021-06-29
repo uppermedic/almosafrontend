@@ -31,85 +31,90 @@ const LetsLearn = ({ data }) => {
   };
   return (
     <section className="lets_learn_section">
-      <Head data={head_data}></Head>
+      <Head data={head_data} />
       <Hero customClassNames="custom_banner_class" bg={data.cover_image}>
         <BannerOverlay data={data} />
       </Hero>
 
-      <PostWithRightImg
-        title={
-          (lang && data.contents[0][lang].title) || 'Lets Learn initiative'
-        }
-        color="#1E455C"
-        paragraphs={[
-          (lang && data.contents[0][lang].content) || 'Lets Learn initiative'
-        ]}
-        theImg={data.contents[0].images[0]}
-      />
-      <div className="middle-paragraph">
-        <div className="container">
-          <Markdown>
-            {(lang && strippedContent(data.contents[1][lang].content)) ||
-              'No Data Added Yet'}
-          </Markdown>
+      {data?.contents[0] && (
+        <PostWithRightImg
+          title={(lang && data?.contents[0][lang]?.title) || ''}
+          color="#1E455C"
+          paragraphs={[(lang && data?.contents[0][lang]?.content) || '']}
+          theImg={data?.contents[0]?.images[0]}
+        />
+      )}
+
+      {data?.contents[1] && (
+        <div className="middle-paragraph">
+          <div className="container">
+            <Markdown>
+              {(lang && strippedContent(data?.contents[1][lang]?.content)) ||
+                ''}
+            </Markdown>
+          </div>
         </div>
-      </div>
+      )}
 
-      <SmallGallery
-        imgs={data.contents[2].images.map(img => {
-          return img;
-        })}
-        bgColor="#1E455C"
-      />
-      <div className="middle-paragraph">
-        <div className="container">
-          <Markdown>
-            {(lang &&
-              data.contents[3] &&
-              strippedContent(data.contents[3][lang].content)) ||
-              'No Data Added Yet'}
-          </Markdown>
+      {data?.contents[2] && (
+        <SmallGallery
+          imgs={data?.contents[2]?.images.map(img => {
+            return img;
+          })}
+          bgColor="#1E455C"
+        />
+      )}
+
+      {data?.contents[3] && (
+        <div className="middle-paragraph">
+          <div className="container">
+            <Markdown>
+              {(lang && strippedContent(data?.contents[3][lang]?.content)) ||
+                ' '}
+            </Markdown>
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className="post-two">
-        <Container>
-          <Row xs="1" lg="2">
-            <Col>
-              <div className="post-img">
-                <img src={data.contents[4].images[0]} alt="post-img" />
-              </div>
-            </Col>
-            <Col>
-              <div className="post-paragraph">
-                <Markdown>
-                  {(lang &&
-                    data.contents[4] &&
-                    strippedContent(data.contents[4][lang].content)) ||
-                    'No Data Added Yet'}
-                </Markdown>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      {data?.contents[4] && (
+        <div className="post-two">
+          <Container>
+            <Row xs="1" lg="2">
+              {data?.contents[4]?.images[0] && (
+                <Col>
+                  <div className="post-img">
+                    <img src={data?.contents[4]?.images[0]} alt="post-img" />
+                  </div>
+                </Col>
+              )}
+              {data?.contents[4][lang]?.content && (
+                <Col>
+                  <div className="post-paragraph">
+                    <Markdown>
+                      {(lang &&
+                        strippedContent(data?.contents[4][lang]?.content)) ||
+                        ' '}
+                    </Markdown>
+                  </div>
+                </Col>
+              )}
+            </Row>
+          </Container>
+        </div>
+      )}
 
-      <PostWithCenterImg
-        title={
-          (lang &&
-            data.contents[5] &&
-            strippedContent(data.contents[5][lang].title)) ||
-          'No Data Added Yet'
-        }
-        paragraphs={[
-          (lang &&
-            data.contents[5] &&
-            strippedContent(data.contents[5][lang].content)) ||
-            'No Data Added Yet'
-        ]}
-        theImg={data.contents[5].images[0]}
-        color="#1E455C"
-      />
+      {data?.contents[5] && (
+        <PostWithCenterImg
+          title={
+            (lang && strippedContent(data?.contents[5][lang]?.title)) || ''
+          }
+          paragraphs={[
+            (lang && strippedContent(data?.contents[5][lang]?.content)) || ''
+          ]}
+          theImg={data?.contents[5]?.images[0]}
+          color="#1E455C"
+        />
+      )}
     </section>
   );
 };
@@ -132,7 +137,6 @@ const BannerOverlay = ({ data }) => {
           <Col>
             <div className="initiative-name">
               <h2>{lang && data[lang].title}</h2>
-              {/* <h2>Let's Learn Initiative</h2> */}
             </div>
           </Col>
         </Row>
