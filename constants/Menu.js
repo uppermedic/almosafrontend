@@ -1,9 +1,4 @@
 export default [
-  // {
-  //   path: '/',
-  //   label: 'home',
-  //   icon: 'fas fa-home'
-  // },
   {
     isDropDown: true,
     label: 'about',
@@ -73,10 +68,13 @@ export default [
       {
         path: '/services/inpatient-units',
         label: 'inpatient'
+      },
+      {
+        path: '/services/nursing-department',
+        label: 'nursing department'
       }
     ]
   },
-
   {
     path: '/for-patient',
     label: 'for patient',

@@ -1,4 +1,4 @@
-.nursing {
+.nursing-department {
   .hero {
     .hero-content {
       h2 {
@@ -7,6 +7,7 @@
     }
   }
   section.nursing {
+    padding-top: 70px;
     padding-bottom: 100px;
     .title {
       @include sectionHeading($almoosa-light-green-color);

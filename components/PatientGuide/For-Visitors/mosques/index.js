@@ -19,12 +19,16 @@ const Content = ({ t }) => {
           <div className="desc">
             <div className="one">
               <div className="type">
-                <h6>للرجال:</h6>
+                <strong>
+                  <h6>
+                    <strong>للرجال :</strong>
+                  </h6>
+                </strong>
               </div>
               <div className="location">
                 <p>
                   <span className="icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt" />
                   </span>
                   <span className="txt">
                     مقابل الاستقبال الرئيسي في الدور الثاني.
@@ -34,12 +38,14 @@ const Content = ({ t }) => {
             </div>
             <div className="one">
               <div className="type">
-                <h6> للنساء :</h6>
+                <h6>
+                  <strong>للنساء :</strong>
+                </h6>
               </div>
               <div className="location">
                 <p>
                   <span className="icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt" />
                   </span>
                   <span className="txt">
                     يقع في الطابق الثالث من البرج الطبي الجنوبي
@@ -53,12 +59,14 @@ const Content = ({ t }) => {
           <div className="desc">
             <div className="one">
               <div className="type">
-                <h6>For Men:</h6>
+                <h6>
+                  <strong>For Men :</strong>
+                </h6>
               </div>
               <div className="location">
                 <p>
                   <span className="icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt" />
                   </span>
                   <span className="txt">
                     Located In front of the main reception on the second floor.
@@ -68,12 +76,14 @@ const Content = ({ t }) => {
             </div>
             <div className="one">
               <div className="type">
-                <h6>For Women:</h6>
+                <h6>
+                  <strong>For Women :</strong>
+                </h6>
               </div>
               <div className="location">
                 <p>
                   <span className="icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt" />
                   </span>
                   <span className="txt">
                     Located on the 3rd floor of the south Medical Tower

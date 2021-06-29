@@ -16,52 +16,45 @@ export default function index({ data }) {
       <Container>
         <Row>
           <Col>
-            <h2>{lang && data.contents[0][lang].title}</h2>
+            <h2>{lang && data?.contents[0][lang]?.title}</h2>
           </Col>
         </Row>
-        <Row className="d-flex justify-content-between align-items-center section-one no-gutters">
-          <Col xs={12} lg={6}>
-            <Markdown>
-              {(lang && strippedContent(data.contents[0][lang].content)) ||
-                'No Data'}
-            </Markdown>
-          </Col>
-          <Col xs={12} lg={6}>
-            <img src={data.contents[0].images[0]} alt="" />
-          </Col>
-        </Row>
-      </Container>
-      {/* <PostWithRightImg
-        title={lang && data.contents[0][lang].title}
-        color="#1E455C"
-        paragraphs={[lang && data.contents[0][lang].content]}
-        theImg={data.contents[0].images[0]}
-      /> */}
-
-      <div className="container">
-        <div className="section-two">
-          {/* <Markdown>
-            {(lang && data.contents[1][lang].content) || 'No Data'}
-          </Markdown> */}
-          <PostWithCenterImg
-            paragraphs={[lang && data.contents[1][lang].content]}
-          />
-          <p></p>
-        </div>
-      </div>
-      <div className="last-section">
-        <Container>
-          <Row>
-            {data.contents[2].images.map((img, idx) => {
-              return (
-                <Col xs={12} sm={6} key={idx}>
-                  <img src={img} alt="" />
-                </Col>
-              );
-            })}
+        {data?.contents[0][lang]?.content && (
+          <Row className="d-flex justify-content-between align-items-center section-one no-gutters">
+            <Col xs={12} lg={6}>
+              <Markdown>
+                {(lang && data?.contents[0][lang]?.content) || ''}
+              </Markdown>
+            </Col>
+            <Col xs={12} lg={6}>
+              <img src={data?.contents[0]?.images[0]} alt="" />
+            </Col>
           </Row>
-        </Container>
-      </div>
+        )}
+
+        {lang && data?.contents[1][lang]?.content && (
+          <div className="section-two">
+            <PostWithCenterImg
+              paragraphs={[lang && data?.contents[1][lang]?.content]}
+            />
+            <p></p>
+          </div>
+        )}
+
+        {data?.contents[2]?.images && (
+          <div className="last-section">
+            <Row>
+              {data?.contents[2]?.images.map((img, idx) => {
+                return (
+                  <Col xs={12} sm={6} key={idx}>
+                    <img src={img} alt="" />
+                  </Col>
+                );
+              })}
+            </Row>
+          </div>
+        )}
+      </Container>
     </section>
   );
 }

@@ -15,19 +15,19 @@ const Content = ({ t }) => {
               <div className="description">
                 <p>
                   Florist and gift shop is located in the main lobby of the
-                  North Tower, the store offers a collection of fresh roses and
-                  flower bouquets for your beloved ones.
+                  North Tower , and the store offers a collection of fresh roses
+                  and flower bouquets for your beloved ones.
                 </p>
               </div>
               <div className="description">
-                <h5>Working hours:</h5>
+                <h5>Working hours :</h5>
                 <ul>
                   <li>9:00 am -12:00 noon</li>
                   <li>5:00 pm-9: 00 pm</li>
                 </ul>
               </div>
               <div className="description">
-                <h5>Available items:</h5>
+                <h5>Available items :</h5>
                 <ul>
                   <li>Children's gifts.</li>
                   <li>Candles.</li>
@@ -49,14 +49,14 @@ const Content = ({ t }) => {
                 </p>
               </div>
               <div className="description">
-                <h5>ساعات العمل:</h5>
+                <h5>ساعات العمل :</h5>
                 <ul>
                   <li>9:00 صباحاً -12:00 ظهراً</li>
                   <li>5:00عصراً -9:00 مساءاً</li>
                 </ul>
               </div>
               <div className="description">
-                <h5>الأصناف المتوفر:</h5>
+                <h5>الأصناف المتوفر :</h5>
                 <ul>
                   <li>هدايا الأطفال.</li>
                   <li>شموع.</li>

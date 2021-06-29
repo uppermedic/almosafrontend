@@ -25,7 +25,7 @@ const Content = ({ t }) => {
                       <Menu
                         items={[
                           {
-                            text: 'Objectives: ',
+                            text: 'Objectives : ',
                             subItems: [
                               'Enhance Patient education ',
                               'Copping with the new joint',
@@ -44,7 +44,7 @@ const Content = ({ t }) => {
                       <Menu
                         items={[
                           {
-                            text: 'Objectives: ',
+                            text: 'Objectives : ',
                             subItems: [
                               'Enhance Patient education',
                               'Sharing experience',
@@ -57,12 +57,12 @@ const Content = ({ t }) => {
                       />
                     </div>
                     <div className="single-section">
-                      <Title title="Oncology support group:" />
+                      <Title title="Oncology support group :" />
                       <Paragraph paragraph="Established: 2020 with more than 29 members , sessions are held (face to face virtually)" />
                       <Menu
                         items={[
                           {
-                            text: 'who should join: ',
+                            text: 'who should join : ',
                             subItems: [
                               'Patients with current condition of cancer',
                               'Recovered patients',
@@ -71,7 +71,7 @@ const Content = ({ t }) => {
                             ]
                           },
                           {
-                            text: 'Objectives:',
+                            text: 'Objectives :',
                             subItems: [
                               'Help patients feel supported socially, emotionally and not isolated.',
                               'provide a safe place to share and work through feelings and challenges of cancer patients.',
@@ -83,7 +83,7 @@ const Content = ({ t }) => {
                             ]
                           },
                           {
-                            text: 'Hospital members:',
+                            text: 'Hospital members :',
                             subItems: [
                               'Dr. Taraq Mohammed ( Oncology consultant )',
                               'Dr. Ahmed Anter ( Oncology and hematology consultant )',
@@ -105,7 +105,7 @@ const Content = ({ t }) => {
                       <Menu
                         items={[
                           {
-                            text: 'الأهداف: ',
+                            text: 'الأهداف : ',
                             subItems: [
                               'تعزيز تثقيف المريض',
                               'التعامل مع المفصل الجديد',
@@ -120,11 +120,11 @@ const Content = ({ t }) => {
                     </div>
 
                     <div className="single-section">
-                      <Title title="مجموعة دعم الصرع: الحضور: 9" />
+                      <Title title="مجموعة دعم الصرع: الحضور : 9" />
                       <Menu
                         items={[
                           {
-                            text: 'الأهداف: ',
+                            text: 'الأهداف : ',
                             subItems: [
                               'تعزيز تثقيف المريض',
                               'مشاركة الخبرة',
@@ -137,12 +137,12 @@ const Content = ({ t }) => {
                       />
                     </div>
                     <div className="single-section">
-                      <Title title="مجموعة دعم الأورام:" />
+                      <Title title="مجموعة دعم الأورام :" />
                       <Paragraph paragraph="التأسيس: 2020 مع أكثر من 29 عضوًا 10 جلسات (وجهًا لوجه وعبر الإنترنت)" />
                       <Menu
                         items={[
                           {
-                            text: 'من يجب أن ينضم: ',
+                            text: 'من يجب أن ينضم : ',
                             subItems: [
                               'المرضى الذين يعانون من حالة السرطان الحالية',
                               'المرضى المتعافين',
@@ -151,7 +151,7 @@ const Content = ({ t }) => {
                             ]
                           },
                           {
-                            text: 'الأهداف:',
+                            text: 'الأهداف :',
                             subItems: [
                               ' مساعدة المرضى على الشعور بالدعم الاجتماعي والعاطفي وعدم العزلة.',
                               'توفير مكان آمن للمشاركة والعمل من خلال مشاعر وتحديات مرضى السرطان.',
@@ -163,7 +163,7 @@ const Content = ({ t }) => {
                             ]
                           },
                           {
-                            text: ' أعضاء المستشفى:',
+                            text: ' أعضاء المستشفى :',
                             subItems: [
                               'د.طارق محمد (استشاري الأورام)',
                               ' د.أحمد عنتر (إستشاري الأورام وأمراض الدم)',
@@ -229,7 +229,7 @@ const Menu = ({ items }) => {
       {items.map((item, index) => {
         return (
           <li>
-            {item.text}
+            <strong>{item.text}</strong>
             {item.subItems && (
               <ul>
                 {item.subItems.map((subItem, index) => {

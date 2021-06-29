@@ -39,22 +39,12 @@ const index = ({
   }, [data]);
   return (
     <section className="our-doctors">
-      {/* <Row className="pt-3" id="doc-info-section">
-        <Col>
-          <h2>{t('common:meet_our_team')}</h2>
-        </Col>
-      </Row> */}
-
       <Row className="doctor-details m-auto">
         {/*  the comming data will come when create main doctor key and value  */}
         <Col lg={4} className="doctor-img">
-          {/* <img
-              src="/images/why_choose_us/our-doctors/dr-malek.png"
-              alt="doctor-img"
-            /> */}
           <img
-            src={currentDoctor.image}
-            alt={language && currentDoctor[language].name}
+            src={currentDoctor?.image}
+            alt={language && currentDoctor && currentDoctor[language]?.name}
             className="shadow"
           />
 
@@ -72,12 +62,13 @@ const index = ({
         </Col>
         <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 ">
           <h3 className="doctor-name">
-            {language && currentDoctor[language]?.name}
+            {language && currentDoctor && currentDoctor[language]?.name}
           </h3>
           <p className="py-2 doctor-title">
-            {language && currentDoctor[language]?.title}
+            {language && currentDoctor && currentDoctor[language]?.title}
           </p>
           {language &&
+            currentDoctor &&
             currentDoctor[language].qualifications &&
             currentDoctor[language].qualifications.length > 0 && (
               <>
@@ -93,6 +84,7 @@ const index = ({
               </>
             )}
           {language &&
+            currentDoctor &&
             currentDoctor[language].current_positions &&
             currentDoctor[language].current_positions.length > 0 && (
               <>
@@ -100,7 +92,7 @@ const index = ({
                   {t('common:current_positions')}
                 </h3>
                 <Markdown>
-                  {language
+                  {language && currentDoctor
                     ? strippedContent(
                         currentDoctor[language].current_positions || ''
                       )
@@ -108,9 +100,6 @@ const index = ({
                 </Markdown>
               </>
             )}
-          {/* <ul>
-              <li>CEO of Almoosa Specialist Hospital</li>
-            </ul> */}
         </Col>
       </Row>
       <Row>
@@ -135,8 +124,6 @@ const index = ({
           <ReactPaginate
             nextLabel={<NextFC />}
             previousLabel={<PrevFC />}
-            // previousLabel={'<'}
-            // nextLabel={'>'}
             breakLabel={'...'}
             breakClassName={'break-me'}
             pageCount={last_page}

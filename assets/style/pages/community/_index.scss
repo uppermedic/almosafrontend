@@ -1,4 +1,6 @@
 .community {
+  font-family: 'diodrum-arabic-meduim' !important;
+
   .hero {
     .hero-content {
       left: 45%;
@@ -21,6 +23,14 @@
   .content-wrapper {
     padding-top: 70px;
     padding-bottom: 100px;
+    font-family: 'diodrum-arabic-meduim' !important;
+
+    > * {
+      font-family: 'diodrum-arabic-meduim' !important;
+      > span {
+        font-family: 'diodrum-arabic-meduim' !important;
+      }
+    }
 
     @include background-image;
     h2 {
