@@ -14,7 +14,7 @@ const Content = ({ t }) => {
           <div className="dining-card">
             {language == 'en' && (
               <div className="description">
-                <h5>Sidra Lounge:</h5>
+                <h5>Sidra Lounge :</h5>
                 <p>
                   With its signature approach, Sidra Lounge creates a refined
                   culinary and lifestyle experience for visitors to Almoosa
@@ -31,7 +31,7 @@ const Content = ({ t }) => {
             )}
             {language == 'ar' && (
               <div className="description">
-                <h5>ردهة السدرة:</h5>
+                <h5>ردهة السدرة :</h5>
                 <p>
                   من خلال تصميمها المميّز، تخلق ردهة السدرة تجربة طهي باسلوب
                   عالمي راق لزوّار مستشفى الموسى التخصصي. اُقتبس إسمها من شجرة
@@ -44,7 +44,7 @@ const Content = ({ t }) => {
 
             {language == 'en' && (
               <div className="description">
-                <h5>The Leaf Kitchen:</h5>
+                <h5>The Leaf Kitchen :</h5>
                 <p>
                   Set atop the tallest hospital in the Middle East, The Leaf
                   Kitchen welcomes its visitors to an elevated experience, where
@@ -69,7 +69,7 @@ const Content = ({ t }) => {
             )}
             {language == 'ar' && (
               <div className="description">
-                <h5>مطبخ ورقة الشجرة:</h5>
+                <h5>مطبخ ورقة الشجرة :</h5>
                 <p>
                   يقع مطبخ الأوراق على قمة أعلى مستشفى في الشرق الأوسط ،
                   ويرحبيقع في أطول مستشفى في الشرق الأوسط، ويرحب بزوّاره لتجربة
@@ -83,7 +83,7 @@ const Content = ({ t }) => {
 
             {language == 'en' && (
               <div className="description">
-                <h5>Hospitality services:</h5>
+                <h5>Hospitality services :</h5>
                 <p>
                   In line with the leading-edge, patient-centric approach at
                   Almoosa Specialist Hospital, patients access round-the-clock
@@ -122,7 +122,7 @@ const Content = ({ t }) => {
             )}
             {language == 'ar' && (
               <div className="description">
-                <h5>خدمات الضيافة:</h5>
+                <h5>خدمات الضيافة :</h5>
                 <p>
                   تماشيا مع النهج الرائد والمتمحور حول الانسان في مستشفى الموسى
                   التخصصي، يمكن للمرضى الوصول إلى خدمة الغرف على مدار الساعة،

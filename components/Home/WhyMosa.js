@@ -22,12 +22,12 @@ const WhyMosa = ({ data, t }) => {
           </Col>
         </Row>
         <Row className="bottom-section">
-          <Col xs={12} lg={6} data-aos="fade-up" data-aos-duration="1000">
+          <Col xs={12} md={5} data-aos="fade-up" data-aos-duration="1000">
             <img src={data.image} alt="mosabuilding" />
           </Col>
           <Col
             xs={12}
-            lg={6}
+            md={7}
             className="txt"
             data-aos="fade-up"
             data-aos-duration="1000"

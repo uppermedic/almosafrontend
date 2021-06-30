@@ -53,7 +53,7 @@ const Content = ({ t }) => {
             <li>
               <span>
                 {language === 'en' &&
-                  `Wheelchair transfer assistance for people with disabilities.`}
+                  `Wheelchair transfer assistance for people.`}
                 {language === 'ar' &&
                   `خدمة المساعدة على نقل الكرسي المتحرك للأشخاص ذوي الاحتياجات الخاصة والإعاقة.`}
               </span>

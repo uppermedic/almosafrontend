@@ -13,7 +13,7 @@ const Index = ({ article, categories, tags, t }) => {
         <Row>
           <Col>
             <h2 className="d-flex d-lg-blog justify-content-between align-items-center">
-              {article?.title}{' '}
+              {contentWithLang?.title}
               <i
                 className="fas fa-cogs d-lg-none"
                 onClick={() => setControllerOpen(!controllerOpen)}

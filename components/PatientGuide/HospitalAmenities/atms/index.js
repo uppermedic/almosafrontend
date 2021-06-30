@@ -42,7 +42,7 @@ const Content = ({ t }) => {
 										</p>
 									)} */}
 
-                  {language === 'en' && <h5>You can find ATMs in:</h5>}
+                  {language === 'en' && <h5>You can find ATMs in :</h5>}
                 </div>
                 <div className="content-description">
                   {language === 'ar' && (

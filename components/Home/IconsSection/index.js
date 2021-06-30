@@ -37,7 +37,7 @@ const index = () => {
   return (
     <div className="icons-section text-center">
       <Container>
-        <Row xs="1" sm="2" lg="4">
+        <Row xs="2" sm="2" lg="4">
           {data.map(box => (
             <Col key={box.id}>
               <Card>
@@ -55,13 +55,14 @@ const index = () => {
                       href="https://apps.apple.com/sa/app/almoosa-hospital/id1509215027"
                       target="_blank"
                     >
-                      <FaApple /> App Store
+                      <FaApple /> <span className="store-name">App Store</span>
                     </a>
                     <a
                       href="https://play.google.com/store/apps/details?id=com.almoosa.almoosa"
                       target="_blank"
                     >
-                      <DiAndroid /> Google Play
+                      <DiAndroid />
+                      <span className="store-name"> Google Play</span>
                     </a>
                   </div>
                 )}

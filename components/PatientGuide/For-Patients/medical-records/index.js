@@ -22,8 +22,8 @@ const Content = ({ t }) => {
             </p>
             <p>
               {language === 'ar'
-                ? `للتواصل مع مكتب التقارير الطبية:`
-                : `To contact the medical reports office:`}
+                ? `للتواصل مع مكتب التقارير الطبية :`
+                : `To contact the medical reports office :`}
             </p>
             <ul className="info">
               <li>

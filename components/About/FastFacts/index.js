@@ -28,7 +28,7 @@ const index = ({ t }) => {
                   </div>
 
                   <div className="single-section">
-                    <Title title="Cutting edge technologies:" />
+                    <Title title="Cutting edge technologies :" />
                     <Menu
                       items={[
                         { text: 'Fully automated lab' },
@@ -67,7 +67,7 @@ const index = ({ t }) => {
                     />
                   </div>
                   <div className="single-section">
-                    <Title title="Pharmacy Automation:" />
+                    <Title title="Pharmacy Automation :" />
                     <Paragraph paragraph="Automated dispensing cabinet designed to improve patient safety outcomes." />
                     <Paragraph paragraph="The inpatient pharmacy system will reduce medication errors and improve quality of care." />
                     <Paragraph paragraph="It will give more time to focus on the patient by improving nursing and pharmacy staff efficiency." />
@@ -87,7 +87,7 @@ const index = ({ t }) => {
                         items={[
                           {
                             text:
-                              'The benefits of pursuing LEED certification include the following:',
+                              'The benefits of pursuing LEED certification include the following :',
                             subItems: [
                               'Reduced environmental impact.',
                               'Optimal building performance and lower operational costs',
@@ -154,7 +154,7 @@ const index = ({ t }) => {
                   </div>
                   <div className="single-section">
                     <Title title="First-Ins :" />
-                    <Paragraph paragraph="ASH was the first hospital in the eastern province to perform:" />
+                    <Paragraph paragraph="ASH was the first hospital in the eastern province to perform :" />
                     <Menu
                       items={[
                         { text: 'First awake craniotomy' },

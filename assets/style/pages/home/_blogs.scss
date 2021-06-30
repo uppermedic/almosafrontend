@@ -29,6 +29,7 @@ section.home-blogs {
 
   .owl-carousel {
     .owl-nav {
+      direction: ltr;
       .owl-prev:hover,
       .owl-next:hover {
         // background: #fff;
@@ -77,9 +78,15 @@ section.home-blogs {
         }
       }
     }
+    @include rtl {
+      .owl-nav {
+        @include respond-below(sm) {
+          direction: rtl;
+        }
+      }
+    }
   }
   .caro-card {
-    // height: 427.01px;
     height: 400px;
     background: transparent;
     position: relative;
@@ -87,6 +94,10 @@ section.home-blogs {
       height: 50%;
       width: 100%;
       display: block;
+      @include respond-below(sm) {
+        width: 90%;
+        margin: auto;
+      }
     }
 
     .content {
