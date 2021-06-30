@@ -113,9 +113,9 @@ export const GovernersData = [
       qualifications: [
         'بكالوريوس الطب والجراحة من جامعة الملك فيصل بالدمام عام 2007.',
         'البورد العربي والبورد السعودي لطب الأطفال 2011.',
-        'الزمالة الإكلينيكية في أمراض الأطفال المعدية 2016.',
-        'مجلس توثيق مكافحة العدوى 2018',
-        'ماجستير في إدارة أعمال الطب التنفيذي - جامعة تينيسي ، 2020'
+        'الزمالة السريرية في أمراض الأطفال المعدية 2016.',
+        'شهادة مجلس مكافحة العدوى 2018.',
+        'ماجستير في إدارة الأعمال ، جامعة تينيسي 2020.'
       ],
       positions: ['استشاري امراض الاطفال المعدية بمستشفى الموسى التخصصي.']
     },
@@ -124,11 +124,11 @@ export const GovernersData = [
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
-        'MBBS from King Faisal University, Dammam in 2007.',
+        'M.B.B.S. from King Faisal University, Dammam in 2007.',
         'Arab board and Saudi board of pediatrics in 2011.',
         'Clinical fellowship in pediatric infectious diseases, 2016.',
-        ' Certification board of infection control, 2018.',
-        'Physician executive MBA, University of Tennessee, 2020.'
+        'Certification board of infection control, 2018.',
+        'Physician executive M.B.A., University of Tennessee, 2020.'
       ],
       positions: [
         'Consultant pediatric infectious diseases at Almoosa Specialist Hospital.'
@@ -218,25 +218,7 @@ export const GovernersData = [
       ]
     }
   },
-  {
-    image:
-      'http://admin.almoosahospital.live/storage/doctors/doctor-placeholder.jpg',
-    id: 8,
-    ar: {
-      name: 'الدكتور/ حازم المادحي',
-      title: 'عضو مجلس الإدارة',
-      paragraph: ``,
-      qualifications: [],
-      positions: []
-    },
-    en: {
-      name: 'Dr. Hazem Al-Madhi',
-      title: 'Board Member',
-      paragraph: ``,
-      qualifications: [],
-      positions: []
-    }
-  },
+
   {
     image: '/images/about/leadership-team/Ahmed-Al-Badr.jpg',
     id: 9,
@@ -669,7 +651,7 @@ export const TeamData = [
       <br/><br/>
       م. محمود متزوج من الدكتورة ندى بدوي ، طبيبة أسنان ، وأب لابنتين سلمى و جود
       <br/>
-  في أوقات فراغه ، يستمتع محمود بحل الألغاز والقراءة ولعب كرة القدم - وهو أيضًا مشجع لنادي متحمس لنادي برشلونة
+  في أوقات فراغه ، يستمتع محمود بحل الألغاز والقراءة ولعب كرة القدم - وهو أيضًا مشجع متحمس لنادي برشلونة
 
       `,
       qualifications: []

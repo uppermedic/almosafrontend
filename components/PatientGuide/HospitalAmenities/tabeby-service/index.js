@@ -51,8 +51,10 @@ const Content = ({ t }) => {
                     </div>
 
                     <div className="items-content">
-                      جودة الخدمة المقدمة للمشتركين بخدمة طبيبي نفس جودة وفعالية
-                      الخدمة لباقي المرضى ولا يوجد أي تفرقة.
+                      <strong>
+                        جودة الخدمة المقدمة للمشتركين بخدمة طبيبي نفس جودة
+                        وفعالية الخدمة لباقي المرضى ولا يوجد أي تفرقة.
+                      </strong>
                     </div>
                   </>
                 )}
@@ -97,9 +99,12 @@ const Content = ({ t }) => {
                     <div className="items-content">
                       It includes <strong> 4 </strong> people +
                       <strong> 250 R.S </strong> for each additional person.
-                      <br />
-                      The quality for TABEBY subscribers is the same as the
-                      service for other patients, with no distinction.
+                    </div>
+                    <div className="items-content">
+                      <strong>
+                        The quality for TABEBY subscribers is the same as the
+                        service for other patients, with no distinction.
+                      </strong>
                     </div>
                   </>
                 )}

@@ -10,12 +10,18 @@ function CenterItem({ t, center }) {
         <a>
           <img src={center.ar.thumbnail} alt="" srcSet="" />
           <div className="content">
-            <h3>{lang && center[lang].title}</h3>
+            <h3>
+              {truncate(
+                strippedContent((lang && center[lang].title) || 'No Data'),
+                20,
+                '......'
+              )}
+            </h3>
             <p>
               <Markdown>
                 {truncate(
                   strippedContent((lang && center[lang].excerpt) || 'No Data'),
-                  90,
+                  70,
                   '......'
                 )}
               </Markdown>

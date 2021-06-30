@@ -19,14 +19,10 @@ const Homepage = props => {
     return (
       <div className="home">
         <Head data={props.data.page.seo}></Head>
-        {/* <Hero bg={props.data.page.page_cover || '/images/home/hero.png'}>
-          <div className="overlay" />
-          {<HeroContent data={props.data.page.seo[i18n.language]} />}
-        </Hero> */}
+
         <Carousel data={props.data.sliders} />
         <IconsSection />
         <WhyMosa data={props.data.content[1]} />
-        {/* <MeetOurTeam data={props.data.content[0]} /> */}
         <Centers data={props.data.home_services} />
         <Testimonial data={props.data.testimonials} />
         <Statistics
@@ -53,17 +49,5 @@ export async function getServerSideProps(context) {
     props: { data, namespacesRequired: ['common', 'menu', 'header'] }
   };
 }
-// Homepage.getInitialProps = async context => ({
-//   namespacesRequired: ['common', 'menu', 'header']
-// });
-
-// const mapStateToProps = state => ({
-//   home: state.Home,
-//   loading: state.Globals.loading
-// });
-
-// const mapDispatchToProps = {
-//   getHomeData
-// };
 
 export default withTranslation('common')(Homepage);

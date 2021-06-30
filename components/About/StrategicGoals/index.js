@@ -22,7 +22,11 @@ function index({ t, data }) {
                   <div className="description">
                     <h5>Strategic Priorities</h5>
                     <ul>
-                      <li>Attract, educate, develop.</li>
+                      <li>
+                        Attract, educate, develop, and Retain talented
+                        professionals who deliver excellent care and promote
+                        wellness.
+                      </li>
                       <li>
                         Retain talented professionals who deliver excellent care
                         and promote wellness.
@@ -47,7 +51,7 @@ function index({ t, data }) {
                 {language === 'ar' && (
                   <>
                     <div className="description">
-                      <h5>الاستثمار في الطاقة البشرية:</h5>
+                      <h5>الاستثمار في الطاقة البشرية :</h5>
                       <p>
                         تعليم وتطوير المهنيين من ذوي المواهب والكفاءات العالية
                         الذين يعززون الصحة ويقمون رعاية صحية مميزة والمحافظة

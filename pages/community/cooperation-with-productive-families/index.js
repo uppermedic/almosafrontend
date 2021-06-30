@@ -42,20 +42,23 @@ const Cooperation = ({ data }) => {
           />
         </div>
       </Hero>
-      <PostWithLeftImg
-        title={lang && data.contents[0][lang].title}
-        color="#55B047"
-        theImg={data.contents[0].images[0]}
-        paragraphs={[lang && data.contents[0][lang].content]}
-      />
-      <PostWithCenterImg
-        title={lang && data.contents[1][lang].title}
-        // subTitles={['Six families benefited from the program.']}
-        color="#55B047"
-        // theImg={data.contents[1].images[0]}
-        paragraphs={[lang && data.contents[1][lang].content]}
-        theVideo={data.contents[1].video}
-      />
+      {data.contents[0] && (
+        <PostWithLeftImg
+          title={lang && data.contents[0][lang].title}
+          color="#55B047"
+          theImg={data.contents[0].images[0]}
+          paragraphs={[lang && data.contents[0][lang].content]}
+        />
+      )}
+
+      {data.contents[1] && (
+        <PostWithCenterImg
+          title={lang && data.contents[1][lang].title}
+          color="#55B047"
+          paragraphs={[lang && data.contents[1][lang].content]}
+          theVideo={data.contents[1].video}
+        />
+      )}
     </section>
   );
 };
