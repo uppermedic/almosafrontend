@@ -26,7 +26,7 @@ const Cleft = ({ data }) => {
   };
   return (
     <div className="cleft">
-      <Head data={head_data}></Head>
+      <Head data={head_data} />
       <Hero bg={data.cover_image}>
         <div className="right-ticket">
           <img src="/images/heading-banner.svg" alt="banner" />
@@ -38,23 +38,27 @@ const Cleft = ({ data }) => {
         </div>
       </Hero>
 
-      <PostWithRightImg
-        title={(lang && data.contents[0][lang].title) || 'No Title Yet'}
-        paragraphs={[
-          (lang && data.contents[0][lang].content) || 'No Content Yet'
-        ]}
-        theImg={data.contents[0].images[0]}
-        color="#55B047"
-      />
+      {data.contents[0] && (
+        <PostWithRightImg
+          title={(lang && data.contents[0][lang].title) || 'No Title Yet'}
+          paragraphs={[
+            (lang && data.contents[0][lang].content) || 'No Content Yet'
+          ]}
+          theImg={data.contents[0].images[0]}
+          color="#55B047"
+        />
+      )}
 
-      <PostWithCenterImg
-        title={(lang && data.contents[1][lang].title) || 'No Title Yet'}
-        paragraphs={[
-          (lang && data.contents[1][lang].content) || 'No Content Yet'
-        ]}
-        theVideo={data.contents[1].video}
-        color="#1E455C"
-      />
+      {data.contents[1] && (
+        <PostWithCenterImg
+          title={(lang && data.contents[1][lang].title) || 'No Title Yet'}
+          paragraphs={[
+            (lang && data.contents[1][lang].content) || 'No Content Yet'
+          ]}
+          theVideo={data.contents[1].video}
+          color="#1E455C"
+        />
+      )}
     </div>
   );
 };

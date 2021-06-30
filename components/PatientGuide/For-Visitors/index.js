@@ -57,7 +57,7 @@ const data = [
   {
     id: 8,
     title: {
-      en: 'Gardens and outdoor spaces',
+      en: 'Gardens and greenery',
       ar: 'الحدائق والمساحات الخارجية '
     },
     component: gardens,

@@ -18,18 +18,18 @@ function BlogItem({ blog, t }) {
         <a>
           <img src={blog.thumbnail} alt="" srcSet="" />
           <div className="content">
-            <h3>
+            <h5>
               {truncate(
                 strippedContent((lang && blog[lang].title) || 'No Data'),
                 20,
                 '......'
               )}
-            </h3>
+            </h5>
             <p>
               <Markdown>
                 {truncate(
                   strippedContent((lang && blog[lang].content) || 'No Data'),
-                  100,
+                  60,
                   '......'
                 )}
               </Markdown>
