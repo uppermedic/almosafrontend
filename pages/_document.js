@@ -29,14 +29,13 @@ class MyDocument extends Document {
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
           ></script>
           <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-          <script
-            type="text/javascript"
-            src="https://cdn.labiba.ai/static/js/bundle.js"
-            id="labibaWebChat"
-            cdn="https://cdn.labiba.ai"
-            storyId="b9d2feb1-9d0c-44ea-afa8-d005d3a3d3b7"
-            baseURL="https://botbuilder.labiba.ai"
-          ></script>
+          <script type="text/javascript"
+                  src="https://cdn.labiba.ai/static/js/bundle.js"
+                  id="labibaWebChat"
+                  cdn="https://cdn.labiba.ai"
+                  storyId="dded4da5-f160-4074-beb3-86116ec4535b"
+                  baseURL="https://botbuilder.labiba.ai">
+          </script>
           <script type="text/javascript">AOS.init();</script>
         </body>
       </Html>
