@@ -8,13 +8,7 @@ import { i18n, Link, withTranslation } from 'root/i18n';
 function Blogs({ data, t }) {
   const lang = i18n.language;
   return (
-    <section
-      className="home-blogs"
-      // style={{
-      //   backgroundImage: `url(/images/home/zigzag.png)`,
-      //   backgroundSize: 'cover'
-      // }}
-    >
+    <section className="home-blogs">
       <div className="overlay-blog">
         <img src="/images/home/zigzag.png" alt="blog section" />
       </div>

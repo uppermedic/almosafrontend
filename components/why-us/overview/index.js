@@ -21,8 +21,7 @@ const index = ({ t }) => {
                 <Col md={6}>
                   {language === 'ar' ? (
                     <p>
-                      أنشأنا مستشفى الموسى التخصصي عام 1996 كأول مستشفى خاص
-                      فيمستشفى الموسى التخصصي هو نظام صحي متكامل يحمل مفهوم
+                      مستشفى الموسى التخصصي هو نظام صحي متكامل يحمل مفهوم
                       الرعاية الإنسانية الدؤوبة مع طاقم طبي وتكنولوجي وإداري
                       عالي الكفاءة ، مما يضمن توفير رعاية مثالية تركز على
                       الإنسان في منطقة الأحساء بشكل خاص وباقي دول مجلس التعاون
@@ -94,7 +93,7 @@ const index = ({ t }) => {
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
-                  ></iframe>
+                  />
                 </Col>
               </Row>
             </Container>

@@ -26,7 +26,7 @@ const Paramedic = ({ data }) => {
   };
   return (
     <section className="paramedic">
-      <Head data={head_data}></Head>
+      <Head data={head_data} />
       <Hero bg={data.cover_image}>
         <div className="banner">
           <img src="/images/heading-banner.svg" alt="banner" />
@@ -36,29 +36,37 @@ const Paramedic = ({ data }) => {
         </div>
       </Hero>
 
-      <PostWithCenterImg
-        title={lang && data.contents[0][lang].title}
-        paragraphs={[lang && data.contents[0][lang].content]}
-        theVideo={data.contents[0].video}
-        color="#1E455C"
-      />
+      {data.contents[0] && (
+        <PostWithCenterImg
+          title={lang && data.contents[0][lang].title}
+          paragraphs={[lang && data.contents[0][lang].content]}
+          theVideo={data.contents[0].video}
+          color="#1E455C"
+        />
+      )}
 
-      <PostWithCenterImg
-        title={lang && data.contents[1][lang].title}
-        paragraphs={[lang && data.contents[1][lang].content]}
-        color="#54AF46"
-      />
-      <SmallGallery
-        imgs={data.contents[2].images.map(img => {
-          return img;
-        })}
-        bgColor="#EFEAE0"
-      />
-      <PostWithCenterImg
-        title={lang && data.contents[3][lang].title}
-        theVideo={data.contents[3].video}
-        color="#1E455C"
-      />
+      {data.contents[1] && (
+        <PostWithCenterImg
+          title={lang && data.contents[1][lang].title}
+          paragraphs={[lang && data.contents[1][lang].content]}
+          color="#54AF46"
+        />
+      )}
+      {data.contents[2] && (
+        <SmallGallery
+          imgs={data.contents[2].images.map(img => {
+            return img;
+          })}
+          bgColor="#EFEAE0"
+        />
+      )}
+      {data.contents[3] && (
+        <PostWithCenterImg
+          title={lang && data.contents[3][lang].title}
+          theVideo={data.contents[3].video}
+          color="#1E455C"
+        />
+      )}
     </section>
   );
 };

@@ -116,15 +116,15 @@ const data = [
   {
     id: 13,
     title: {
-      en: 'Gardens and outdoor spaces',
-      ar: 'الحدائق والمساحات الخارجية '
+      en: 'Gardens and greenery',
+      ar: 'الحدائق والمساحات الخارجية'
     },
     component: gardens,
     className: 'gardens'
   },
   {
     id: 14,
-    title: { en: 'Bicycle use', ar: ' استخدام الدراجات ' },
+    title: { en: 'Bike to work', ar: ' مبادرة ركوب الدراجات' },
     component: bicycleUse,
     className: 'bicycle-use'
   },

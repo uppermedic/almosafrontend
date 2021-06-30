@@ -24,40 +24,37 @@ const GoldenDesignation = () => {
               <Paragraph paragraph="To attain this, our hospital partnered with the Planetree organization. Founded in <strong>1978 </strong>, Planetree is an international nonprofit organization that promotes patient-centered care in healthcare. Its mission is to establish and evaluate standards for healthcare providers based on a simple philosophy of designing healthcare services to suit patient needs, enhancing the role of personal compassion and human interaction in patient care, providing education and information resources in healthcare institutions, and highlighting the role of health care providers in promoting human communication, independence, freedom, family, friends, social support, and nutrition in healing and educating patients." />
               <Paragraph paragraph="Guided by their principles and framework, the hospital embarked to pursue its own Planetree Journey. Started in the latter part of the year <strong>2014  </strong>and was, later on, received the recognition of Planetree Silver Merit Certification for Excellence in Person-Centered Care in <strong>2015 </strong>. It was then in August 2017, that the hospital achieved the Golden Merit Certification for Excellence in Person-Centered Care and was Re-Certified in the year <strong>2020</strong>." />
               <Paragraph paragraph="Being the First Hospital in the Middle East to be awarded as a Planetree Certified hospital, it continues to excel in providing high-quality service and care to its patients. True to its commitment to employing Person-Centered Care, initiatives have been embedded in the daily practices in the organization." />
-              <strong>
-                Person-Centered Care in Al Moosa Specialist Hospital at a glance
-              </strong>
             </div>
             <div className="single-section">
               <Title title="Initiatives for Patient" />
               <Menu
                 items={[
                   {
-                    text: 'Care Partner Program:',
+                    text: 'Care Partner Program :',
                     subItems: [
-                      'At Al Moosa Specialist Hospital, we value the importance of family and friends in the overall healing of the patient that is why we encourage family members to partner with us in enhancing the hospital experience of your loved ones by giving you the opportunity to care for them. A Care Partner is a spouse, family members, a significant other or a friend chosen by the patient to learn ways of supporting his/her hospitalized loved one. Responsibility of a Care Partner lies in caring for the patient which includes, but not limited to any of the following activities such as; helping in personal needs; providing caring touch; assist in feeding and meal selection; assisting in the mobility of the patient; helps in providing emotional and spiritual support and assist in providing distractive activities.'
+                      "At Al Moosa Specialist Hospital, we value the importance of family and friends in the patient's overall healing. That is why we encourage family members to partner with us in enhancing the hospital experience of your loved ones by allowing you to care for them. A Care Partner can be a spouse, family members, a significant other, or a friend chosen by the patient to learn ways of supporting his/her hospitalized loved one."
                     ]
                   },
                   {
-                    text: 'Valet Parking Services:',
+                    text: 'Valet Parking Services :',
                     subItems: [
                       'We offer you an unrivalled valet parking service that is being offered to the visitors and clients for a minimum fee of <strong>SR </strong> <strong>10 </strong>for the first <strong>2</strong> hours.'
                     ]
                   },
                   {
-                    text: 'Bed Side Reporting:',
+                    text: 'Bed Side Reporting :',
                     subItems: [
-                      'Every shift change, patients are encouraged to participate in the daily bedside reporting together with the outgoing and the incoming caregivers on duty to talk about the patient plan of care, plan for the day, and safety check.'
+                      'Every shift change, patients are encouraged to participate in the daily bedside reporting. The outgoing and the incoming caregivers on duty talk about the patient plan of care, plan for the day, and safety check.'
                     ]
                   },
                   {
-                    text: 'Open Medical Records:',
+                    text: 'Open Medical Records :',
                     subItems: [
-                      'Open Medical Records and Patient Portal and Almoosa App allow patients to view their medical records in terms of their Laboratory and Radiologic results as well as their prescribed medications to take.'
+                      'Open Medical Records and Patient Portal, and Almoosa App allow patients to view their medical records in terms of their Laboratory and Radiologic results and their prescribed medications to take.'
                     ]
                   },
                   {
-                    text: 'Patient Directed Visitation:',
+                    text: 'Patient Directed Visitation :',
                     subItems: [
                       'Al Moosa Specialist Hospital allows visitation that gives the patient the preference for their visitation.'
                     ]
@@ -69,31 +66,31 @@ const GoldenDesignation = () => {
                     ]
                   },
                   {
-                    text: 'Quiet Time:',
+                    text: 'Quiet Time :',
                     subItems: [
                       'At Al Moosa Specialist Hospital, we offer you a quiet & peaceful place to stay and recover. Quiet time happens between <strong>2300H (11:00pm) </strong>  until <strong>0500H (5:00pm)  </strong> to which limited movement in the halls, keeping the level of your voice low and silencing your phone is expected.'
                     ]
                   },
                   {
-                    text: 'Patient Choice Award:',
+                    text: 'Patient Choice Award :',
                     subItems: [
-                      'It is an initiative that acknowledges and awards top performing Physician who have gotten a high accumulated percentage out from their Press Ganey scores – an integrated survey that ask patient-centered questions and gives clients the most comprehensive picture of their patient’s care experiences. '
+                      "To acknowledge top-performing physicians who have gotten a high accumulated percentage out from their Press Ganey scores – an integrated survey that asks patient-centered questions and gives clients the most comprehensive picture of their patient's care experiences."
                     ]
                   },
                   {
-                    text: 'Art Carts/Crafts and Activities in Pedia Ward:',
+                    text: 'Art Carts/Crafts and Activities in Pedia Ward :',
                     subItems: [
-                      'Scheduled rounds by the person-in-charge offering a variety of activities that a patient can choose from. Ranging from coloring books, art crafts and the like that will surely be enjoyed by the patient. It is being offered to Pediatric patients admitted in the hospital as a positive distraction. '
+                      'Scheduled rounds by the event officer, offering a variety of activities that a patient can choose from. They range from coloring books, art crafts and the like that the patient will surely enjoy. It is being offered to Pediatric patients admitted to the hospital as a positive distraction.'
                     ]
                   },
                   {
-                    text: 'Story Hour for Pedia patients:',
+                    text: 'Story Hour for Pedia patients :',
                     subItems: [
                       'Aside from the art crafts being offered to Pediatric patients, scheduled story hour by the Social Worker staff is also integral to make the hospital stay of the patient memorable'
                     ]
                   },
                   {
-                    text: 'Playstation/Xbox game:',
+                    text: 'Playstation/Xbox game :',
                     subItems: [
                       'Our Pedia Ward also offers Playstation/Xbox which the patient can play whenever they like it during their hospital stay as long as their conditions permits.'
                     ]
@@ -101,19 +98,19 @@ const GoldenDesignation = () => {
                   {
                     text: 'Music Time:',
                     subItems: [
-                      'Music time is an initiative being offered to patient and staff. It started when one former patient of the hospital volunteered to offer his musical expertise to render music through the playing of his violin.'
+                      'Music time is an initiative being offered to patients and staff. It started when one former patient of the hospital volunteered to provide his musical expertise to render music through playing his violin.'
                     ]
                   },
                   {
                     text: 'Winter Cart:',
                     subItems: [
-                      'Simple treats offered to the patient during winter season. Ranging from sweets, dates, snacks and traditional coffee.'
+                      'Simple treats are offered to the patient during the winter season, serving sweets, dates, snacks, and traditional coffee.'
                     ]
                   },
                   {
                     text: 'Wellness stairs:',
                     subItems: [
-                      'To encourage staff and visitors to use the stairs, Al Moosa Specialist Hospital employs encouraging inscriptions and visual images placed in the stairways. '
+                      'Al Moosa Specialist Hospital employs enabling inscriptions and visual images placed in the stairways to encourage staff and visitors to use the stairs.'
                     ]
                   },
                   {
@@ -131,7 +128,7 @@ const GoldenDesignation = () => {
                   {
                     text: 'Communication Boards:',
                     subItems: [
-                      'Communication Boards is strategically placed in the patient rooms to encourage constant communication and information sharing between the caregivers and the patient.'
+                      'Communication Boards are strategically placed in the patient rooms to encourage constant communication and information sharing between the caregivers and the patient.'
                     ]
                   }
                 ]}
@@ -142,75 +139,75 @@ const GoldenDesignation = () => {
               <Menu
                 items={[
                   {
-                    text: 'Thank You and Birthday Card from CEO: ',
+                    text: 'Thank You and Birthday Card from CEO : ',
                     subItems: [
                       'Celebrating a birthday in Al Moosa Specialist Hospital comes with a twist. Each staff who has a scheduled birthday will receive birthday card greetings signed by the CEO himself.'
                     ]
                   },
                   {
-                    text: 'Caregiver of the month and Caregiver of the Year:',
+                    text: 'Caregiver of the month and Caregiver of the Year :',
                     subItems: [
-                      'Acknowledging exceptional caregivers and one of the Caring for the Caregiver initiative is having the Caregiver of the Month/Year award. Being given and rewarded to caregivers who are excellent and exceeded their expected clinical efforts.'
+                      'Acknowledging exceptional caregivers and caring for the Caregiver initiative is having the Caregiver of the Month/Year award. Being given and rewarded to caregivers who are excellent and exceeded their expected clinical efforts.'
                     ]
                   },
                   {
                     text: 'Diwaniyah :',
                     subItems: [
-                      'It is a town hall meeting with the leaders and caregivers who can let their voices be heard. Part of the meeting was letting all the staff know what is currently happening and where the hospital is heading. It is a meeting that is open for all to attend and can let everyone gets the information right from the leaders themselves.'
+                      'It is a gathering with the leaders and caregivers to let their voices be heard. It is open for all to let everyone get the information right from the leaders themselves.'
                     ]
                   },
                   {
-                    text: 'Lunch with the CEO:',
+                    text: 'Lunch with the CEO :',
                     subItems: [
                       'An informal meeting with the <strong>CEO   </strong> , held every quarter participated by frontline staff from every department. Conversation among the participants and the <strong>CEO   </strong>  revolves around the department and individual concerns, suggestions and ideas.'
                     ]
                   },
                   {
-                    text: 'Breakfast with the Bosses:',
+                    text: 'Breakfast with the Bosses :',
                     subItems: [
                       'A breakfast meeting session was given among Doctors who got the highest-ranking scores raked in Press Ganey. It is a way for the Hospital Administration to give back to its deserving Physician for their job well done.'
                     ]
                   },
                   {
-                    text: 'Planetree Retreat:',
+                    text: 'Planetree Retreat :',
                     subItems: [
-                      'Retreat offers tools and support for nurturing compassion among all caregivers and leaders, and for embedding compassionate human interactions into organizational processes and practices.'
+                      'The retreat offers tools and support for nurturing compassion among all caregivers and leaders and embedding compassionate human interactions into organizational processes and practices.'
                     ]
                   },
                   {
-                    text: 'Remittance Day:',
+                    text: 'Remittance Day :',
                     subItems: [
-                      'A monthly support service offered to the staff to help them in sending their remittances to their love ones back home. A Telemoney kiosk is being set-up to render services to the staff instead of going to the branch where the bank is located.'
+                      'Monthly support service is offered to the staff to help them send their remittances to their loved ones back home.'
                     ]
                   },
                   {
-                    text: 'Massage on the go!:',
+                    text: 'Massage on the go! :',
                     subItems: [
                       'Massage on the go! Is one of the initiative under Caring for the Caregiver. It is a brief massage <strong>(3-4mins)   </strong>  offered to the staff upon request.'
                     ]
                   },
                   {
-                    text: 'Bike2Work:',
+                    text: 'Bike2Work :',
                     subItems: [
-                      'An initiative to encourage staff to come and report to work and improve their health using their bikes.'
+                      'It aims to encourage staff to come and report to work and improve their health using their bikes.'
                     ]
                   },
                   {
-                    text: 'Staff Bazaar:',
+                    text: 'Staff Bazaar :',
                     subItems: [
-                      'A quarterly event for the staff to have a platform for them to showcase their products made by them be it crafts, food, garments, etc. being sold to fellow colleagues.'
+                      'A quarterly event for the team to have a platform for them to showcase their products made by them be it crafts, food, garments, etc. being sold to fellow colleagues.'
                     ]
                   },
                   {
-                    text: 'Leadership Rounds:',
+                    text: 'Leadership Rounds :',
                     subItems: [
-                      'Each Director is assigned to designated departments to have rounds with, and to connect with the staff and patients alike and to ask for their concerns for the day. The rounds are then followed by debriefing session for the associated action to be taken.'
+                      'Each Director is assigned to designated departments to have rounds with and connect, and to connect with the staff and patients alike and to ask for their concerns for the day. The rounds are then followed by debriefing session for the associated action to be taken.'
                     ]
                   },
                   {
-                    text: 'WalkwithUs:',
+                    text: 'WalkwithUs :',
                     subItems: [
-                      'An event that encourages staff to walk a certain distance with a purpose to promote healthy living and active lifestyle.'
+                      'An event that encourages staff to walk a certain distance to promote healthy living and an active lifestyle .'
                     ]
                   }
                 ]}
@@ -221,48 +218,16 @@ const GoldenDesignation = () => {
               <Menu
                 items={[
                   {
-                    text: 'Spend A Night:',
+                    text: 'Spend A Night :',
                     subItems: [
-                      'A newly birthed concept that was implemented recently, that place one of the directors of the hospital to have a sleepover for a night to have an immersive experience of what it feels like to be treated in Al Moosa Specialist Hospital.​​​​​​​'
+                      'A newly birthed concept that was implemented recently that place one of the hospital directors to have a sleepover for a night to have an immersive experience of what it feels like to be treated in Al Moosa Specialist Hospital.'
                     ]
                   },
                   {
-                    text: 'Wear A New Hat:',
+                    text: 'Wear A New Hat :',
                     subItems: [
-                      'This is an Initiative that Directors suits up to become a regular staff to adopt his/her normal day to day duties. Placing themselves in that person’s shoes, they experienced first-hand what it feels like to be in their place.'
+                      "Directors suit up to become a regular staff to adopt his/her typical day to day duties. Placing themselves in that person's shoes, they experienced first-hand what it feels like to be in their place."
                     ]
-                  }
-                ]}
-              />
-            </div>
-            <div className="single-section-nosubitems">
-              <Title title="Health Care Institution who visited Al Moosa Specialist Hospital" />
-              <Menu2
-                items={[
-                  {
-                    text:
-                      'Johns Hopkins Aramco Healthcare <strong> (JHAH)</strong>  '
-                  },
-                  {
-                    text:
-                      'King Abdullah bin Abdulaziz University Hospital <strong> (KAAUH)</strong> '
-                  },
-                  {
-                    text:
-                      'King Faisal Specialist Hospital & Research Centre <strong> (KFSHRC)</strong> '
-                  },
-                  {
-                    text: 'King Fahad Medical City <strong> (KFMC)</strong> '
-                  },
-                  {
-                    text: 'Ministry of Health <strong> (MOH)</strong> '
-                  },
-                  {
-                    text: 'Fakeeh Hospital'
-                  },
-                  {
-                    text:
-                      'Sultan Bin Abdulaziz Huminatarian City <strong> (SBAHC)</strong> '
                   }
                 ]}
               />
@@ -275,92 +240,82 @@ const GoldenDesignation = () => {
         {language == 'ar' && (
           <div className="content">
             <div className="single-section">
-              <Paragraph paragraph="في مستشفى الموسى التخصصي، يتحول المرض إلى عافية وصحة، ولكن ذلك يتطلب أكثر من مجرد نظام علاجي، عن طريق توفير أجواء محيطة مليئة بالرعاية والاهتمام. " />
-              <Paragraph paragraph="لذلك فالرعاية التي تركز على المريض هي عنصر أساسي في منظمة الرعاية الصحية، التي تعود بالكثير من الإيجابيات على المرضى والموظفين والمجتمع على حدٍ سواء." />
-              <Paragraph paragraph="ولتحقيق ذلك، دخل مستشفانا في شراكة مع منظمة 'بلان تري' التي تأسست في عام <strong>1978 </strong>، وهي منظمة دولية غير ربحية تعمل على تعزيز الرعاية الصحية التي تركز على المريض." />
-              <Paragraph paragraph="تتمثل مهمتها في إنشاء وتقييم معايير لمقدمي الرعاية الصحية تناسب احتياجات المرضى، وتعزيز دور الاهتمام والتفاعل البشري في رعايتهم، وتوفير موارد التعليم والمعلومات في مؤسسات الرعاية الصحية، وتسليط الضوء على دور مقدمي الرعاية الصحية في تعزيز التواصل البشري والأسرة والأصدقاء والدعم الاجتماعي في شفاء وتثقيف المرضى." />
-              <Paragraph paragraph="كما تابعت المستشفى رحلتها مع 'بلان تري' التي بدأت في الجزء الأخير من عام <strong>2014  </strong>وحصلت لاحقًا على الاعتراف بشهادة الاستحقاق الفضية من 'بلان تري' للتميز في الرعاية المركزة على الأشخاص في عام <strong>2015 </strong>. وفي أغسطس 2017 ، حصلت المستشفى على شهادة الاستحقاق الذهبي للتميز في الرعاية المركزة على الأشخاص وتم إعادة اعتماده في عام <strong>2020</strong>." />
-              <Paragraph paragraph="نظرًا لكوننا أول مستشفى معتمد في الشرق الأوسط من 'بلان تري' ، فإننا نواصل التفوق في تقديم خدمة ورعاية عالية الجودة لمرضانا. إيمانًا بمسؤوليتنا نحو تطبيق نظام الرعاية التي تركز على المريض، وذلك عن طريق إدخال بعض المبادرات التفاعلية في الممارسات اليومية داخل المستشفى." />
-              <strong>
-                لمحة عن "الرعاية التي ترتكز على المرضى" في مستشفى الموسى
-              </strong>
+              <Paragraph paragraph="تعمل منظمة البلانتري الغير ربحية مع المستشفيات حول العالم على تأسيس معايير لمقدمي الرعاية الصحية تناسب احتياجات المرضى، ووتعمل أيضا على تعزيز التفاعل البشري في رعاية المرضى، وتثقيف المرضى ووتزويدهم بجميع المعلومات اللازمة عن حالتهم الصحية كما  تولي اهتماما بالغا لدور والأسرة والأصدقاء والدعم الاجتماعي في رحلة العلاج " />
+              <Paragraph paragraph="بدأ مستشفى الموسى التخصصي رحلته مع البلينتري  في أواخر عامـ 2014 وحصل لاحقًا على الاعتراف بشهادة الاستحقاق الفضية للتميز في الرعاية المتمحورة  على الانسان في عام 2015. وفي أغسطس 2017 ، حصل المستشفى على شهادة الاستحقاق الذهبي للتميز في الرعاية المتمحورة حول الانسان  وتم إعادة اعتماده في عام 2020." />
+              <Paragraph paragraph="نظرًا لكوننا أول مستشفى معتمد في الشرق الأوسط من 'بلين تري' ، فإننا نواصل مساعينا الدؤوبة لـ تقديم خدمة ورعاية عالية الجودة لمرضانا. إيمانًا بمسؤوليتنا نحو تطبيق نظام الرعاية التي تركز على المريض، وذلك عن طريق إدخال بعض المبادرات  في الممارسات اليومية داخل المستشفى التي من شانها تحسين تجربة المرضى ومقدمي الرعاية الصحية على حد سواء ." />
             </div>
             <div className="single-section">
               <Title title="مبادرات للمرضى" />
               <Menu
                 items={[
                   {
-                    text: ' برنامج رعاية المرافقين:',
+                    text: 'برنامج شريك الرعاية :',
                     subItems: [
-                      'في مستشفى الموسى التخصصي، نقدر أهمية دور العائلة والأصدقاء في شفاء للمريض ولهذا نشجع أفراد الأسرة على المشاركة معنا في تعزيز تجربة المستشفى. شريك الرعاية هو الزوج أو أحد أفراد الأسرة أو أحد الأشخاص المهمين أو الصديق الذي يختاره المريض ليشاركه رحلة الإقامة والعلاج داخل المستشفى.  تكمن مسؤولية المُرافق في رعاية المريض والتي تشمل؛ المساعدة في الاحتياجات الشخصية، المساعدة في التغذية واختيار الوجبات، المساعدة في حركة المريض، بالإضافة إلى تقديم الدعم العاطفي والمعنوي.'
+                      'نحن  نؤمن بـدور العائلة والأصدقاء في رحلة شفاء المريض ولهذا نشجع أفراد الأسرة على المشاركة في رعاية المرضى. شريك الرعاية هو الزوج أو أحد أفراد الأسرة أو صديق يختاره المريض ليشاركه رحلة الإقامة والعلاج داخل المستشفى. يمكن للمرافق مساعدة المريض على الحركة و التنقلات ، اختيار الوجبات ، مساعدة المريض في تغيير ملابسة والأمور الشخصية ،  بالإضافة إلى تقديم الدعم العاطفي والمعنوي.'
                     ]
                   },
                   {
-                    text: 'خدمات ركن السيارات: ',
+                    text: 'خدمة صف لسيارات :',
                     subItems: [
-                      'نقدم لك خدمة ركن السيارات المتميزة والتي يتم تقديمها للزوار والعملاء مقابل رسوم لا تقل عن <strong>10 </strong>ريال سعودي لأول ساعتين.'
+                      'يتم تقديم خدمة صف السيارات  للزوار مقابل رسوم رمزية .'
                     ]
                   },
                   {
                     text: 'التقارير السريرية:',
                     subItems: [
-                      'يتم تشجيع المريض على المشاركة في التقارير اليومية جنبًا إلى جنب مع مقدمي الرعاية الصحية والحديث عن خطة الرعاية للمريض والتخطيط لليوم وفحوصات السلامة.'
+                      'نشجع مرضانا  على المشاركة في التقارير اليومية جنبًا إلى جنب مع مقدمي الرعاية الصحية ليكونوا جزءاً من خطة رعايتهم  .'
                     ]
                   },
                   {
-                    text: 'فتح السجلات الطبية:',
+                    text: 'تطبيق الموسى :',
                     subItems: [
-                      ' فتح السجلات الطبية وتطبيق الموسى للسماح للمرضى بالاطلاع على سجلاتهم الطبية من حيث نتائج المختبرات والأشعة وكذلك الأدوية الموصوفة لهم.'
+                      'يسمح تطبيق الموسى للمرضى بالاطلاع على سجلاتهم الطبية و نتائج الأشعة والتحاليل  وكذلك معرفة الأدوية الموصوفة لهم.في اي وقت ومن اي مكان .'
                     ]
                   },
                   {
-                    text: ' زيارة موجهة للمريض:',
+                    text: '	الزيارات :',
                     subItems: [
-                      'يسمح مستشفى الموسى التخصصي للمريض بتحديد الأفضلية للأشخاص المُرحب بزيارتهم.'
+                      'ُتيح مستشفى الموسى التخصصي للمريض تحديد الأشخاص المُرحب بزيارتهم.في الاوقات التي يفضلها المريض .'
                     ]
                   },
                   {
-                    text: 'زيارة افتراضية لمدة 24 ساعة:',
+                    text: 'زيارة افتراضية لمدة 24 ساعة :',
                     subItems: [
-                      'نوفر زيارة  تسمح للمريض أن يزوره أحباؤه في الأوقات التي يفضلونها.'
+                      'نوفر خدمة الزيارات الإفتراضية لمرضانا في الأوقات التي يفضلونها بأريحية و خصوصية .'
                     ]
                   },
                   {
                     text: 'وقت الهدوء:',
                     subItems: [
-                      'في مستشفى الموسى التخصصي، نقدم لك مكانًا هادئًا للإقامة والتعافي، يكون هذا الوقت بين الساعة 23:00 (11:00 مساءً) وحتى 5:00 مساءً حيث تكون الحركة محدودة في الصالات، وتنخفض الأصوات، وتُغلق الهواتف الجوالة.'
+                      'بين الساعة 11:00 م وحتى 5:00 م ، خلال هذا الوقت تكون الحركة محدودة في الممرات مع وجوب غلق الهواتف الجوالة و انخفاض الأصوات الخارجية  .'
                     ]
                   },
                   {
-                    text: ' جائزة من اختيار المريض:',
+                    text: 'جائزة أفضل طبيب :',
                     subItems: [
-                      'إنها مبادرة تعترف بالأطباء الأفضل أداءً وتكافئهم بناءً على نتائج استبيان متكامل يطرح أسئلة تخص المريض تمنحه الفرصة لعرض تجربته مع فريق الرعاية الصحية في المستشفى.'
+                      'تُمنح الجائزة للأطباء المتميزين بناءً على نتائج استبيان متكامل للمرضى ،  يطرح الاستبيان  أسئلة تخص المريض و تمنحه الفرصة لعرض تجربته مع فريق الرعاية الصحية في المستشفى .'
                     ]
                   },
                   {
-                    text: 'عربات فنية / أشغال يدوية وأنشطة في عالم بيديا:',
+                    text: 'أنشطة للأطفال :',
                     subItems: [
-                      'مبادرة تقدم مجموعة متنوعة من الأنشطة التي يمكن للمريض الاختيار من بينها. بدءًا من كتب التلوين والحرف الفنية التي يستمتع بها المريض. يتم تقديم المبادرة لمرضى الأطفال داخل المستشفى  باعتبارها وسيلة إيجابية للتسلية ورفع الروح المعنوية لديهم.'
+                      'تقدم المبادرة  مجموعة متنوعة من الأنشطة التي يمكن للطفل الاختيار من بينها،  تشمل الأنشطة الرسم والتلوين وقراءة القصص .',
+                      'توفر مبادرة الاطفال أيضًا جهاز "بلاي ستيشن" و "إكس بوكس" يمكن للمريض تشغيله في الوقت الذي يريده أثناء إقامته في المستشفى طالما تسمح حالته الصحية بذلك .'
                     ]
                   },
                   {
-                    text: ' ساعة القصة لمرضى بيديا:',
+                    text: 'كشتة الشتاء :',
                     subItems: [
-                      'مبادرة تقدم ساعة يقوم خلالها الأخصائي الاجتماعي بإلقاء القصص القصيرة على مرضى الأطفال.'
+                      'هدايا عينية بسيطة تُقدم للمريض خلال فصل الشتاء، تشمل الحلويات والتمر والوجبات الخفيفة والقهوة العربية .'
                     ]
                   },
                   {
-                    text: ' لعبة بلاي ستيشن / إكس بوكس:',
+                    text: 'مبادرة "سلالم العافية" :',
                     subItems: [
-                      'توفر مبادرة بيديا أيضًا جهاز "بلاي ستيشن" و "إكس بوكس" الذي يمكن للمريض تشغيله في الوقت الذي يريده أثناء إقامته في المستشفى طالما تسمح حالته الصحية بذلك.'
+                      'لتشجيع الموظفين والزوار على استخدام السلالم، استخدم مستشفى الموسى التخصصي الرسوم و النقوش الجذابة بالاضافة الى تمارين بسيطة يمكن للزائر أو الموظف عملها أثناء صعودة .'
                     ]
                   },
-                  {
-                    text: 'وقت الموسيقى:',
-                    subItems: [
-                      'وقت الموسيقى هو مبادرة يتم تقديمها للمريض والموظفين. بدأ الأمر عندما تطوع مريض سابق في المستشفى لتقديم خبرته الموسيقية من خلال العزف على كمانه.'
-                    ]
-                  },
+
                   {
                     text: 'عربة الشتاء:',
                     subItems: [
@@ -374,35 +329,27 @@ const GoldenDesignation = () => {
                     ]
                   },
                   {
-                    text: 'توصيل الأدوية:',
+                    text: 'توصيل الأدوية :',
                     subItems: [
-                      'توصيل الأدوية للمرضى إحدى المبادرات التي تم وضعها أثناء حظر التجول. حيث يقدم مستشفى الموسى التخصصي مساعدته لتوصيل الدواء مباشرة إلى باب المريض.'
+                      'تم تفعيلها  أثناء حظر التجول ، لتخفيف العبء على مرضانا و ضمان وصول العلاج مباشرة إلى باب المريض. خاصة لكبار السن و مرضى الأمراض المزمنة .'
                     ]
                   },
                   {
-                    text: ' توفير وسائل النقل لمرضى وحدة الاعتماد العالي HDU :',
+                    text: 'توفير وسائل النقل لمرضى الغسيل الكلوي :',
                     subItems: [
-                      'يقدم مستشفى الموسى التخصصي خدمات النقل لمرضى وحدة الاعتماد العالي <strong>HDU  </strong> خاصة  للمرضى الذين ليس لديهم وسيلة نقل مستمرة من منازلهم إلى المستشفى أو العكس.'
-                    ]
-                  },
-                  {
-                    text: ' لوحات التواصل:',
-                    subItems: [
-                      ' يتم وضع لوحات التواصل في غرف المرضى للتشجيع على التواصل المستمر وتبادل المعلومات بين مقدمي الرعاية الصحية والمريض.'
+                      'يقدم مستشفى الموسى التخصصي خدمات النقل لمرضى وحدة الغسيل الكلوي من والى المستشفى .'
                     ]
                   }
                 ]}
               />
             </div>
             <div className="single-section">
-              <Title title="مبادرات لطاقم العمل" />
+              <Title title="مبادرات لمقدمي الرعاية :" />
               <Menu
                 items={[
                   {
-                    text: 'شكر وبطاقة عيد ميلاد من المدير التنفيذي: ',
-                    subItems: [
-                      'الاحتفال بعيد ميلاده في مستشفى الموسى التخصصي يأتي مع مبادرة ذوقية من المستشفى، حيث يحصل كل موظف على بطاقة عيد ميلاد موقعة من الرئيس التنفيذي بنفسه.'
-                    ]
+                    text:
+                      'بطاقات أعياد الميلاد موقعة ومهداة من المدير التنفيذي '
                   },
                   {
                     text: 'جائزة مقدم الرعاية المثالي خلال الشهر أو العام',
@@ -411,115 +358,67 @@ const GoldenDesignation = () => {
                     ]
                   },
                   {
-                    text: 'الديوانية:',
+                    text: 'ديوانية الموسى :',
                     subItems: [
-                      'اجتماع مفتوح مع القادة ومقدمي الرعاية للسماح لجميع الموظفين بمعرفة الأحداث الحالية وإلى أين يتجه المستشفى. إنه اجتماع مفتوح للجميع للحضور ويتيح للجميع الحصول على المعلومات مباشرة من الإداريين.'
+                      'اجتماع مفتوح بين القادة ومقدمي الرعاية يتيح لجميع الموظفين معرفة الأحداث الحالية وتوجهات المستشفى والمشاريع المستقبلية .'
                     ]
                   },
                   {
-                    text: 'غداء مع الرئيس التنفيذي:',
+                    text: 'غداء مع المدير التنفيذي :',
                     subItems: [
-                      'اجتماع غير رسمي مع الرئيس التنفيذي خارج إطار العمل، يتم كل ثلاثة أشهر في موعد على الغداء، ويشارك فيه الموظفين من جميع الأقسام. وتدور المحادثة بين المشاركين والرئيس التنفيذي حول اهتمامات الإدارة والأفراد والاقتراحات والأفكار.'
+                      'اجتماع غير رسمي مع المدير التنفيذي خارج إطار العمل، يتم كل ثلاثة أشهر في موعد على الغداء، ويشارك فيه موظفين من جميع الأقسام. يستمع فيه المدير التنفيذي للموظفين و أفكاراهم و شكواهم .'
                     ]
                   },
                   {
-                    text: 'الإفطار مع الرؤساء:',
+                    text: 'بلانتري ريتريت (Plantree retreat) :',
                     subItems: [
-                      'جلسة إفطار بين الأطباء الحاصلين على أعلى الدرجات في "بريس جاني" فهي مبادرة من إدارة المستشفى لرد الجميل لطبيبها وتقدريرًا لعمله الجيد.'
+                      'يهدف الى غرس مبادئ الخدمة المتركزة حول الانسان وتريخ مبدأ التعاطف والرحمة بين جميع مقدمي الرعاية والقادة .'
+                    ]
+                  },
+
+                  {
+                    text: 'يوم الحوالات :',
+                    subItems: [
+                      'خدمة دعم شهرية للموظفين لمساعدتهم في إرسال تحويلاتهم إلى بلادهم .'
+                    ]
+                  },
+
+                  {
+                    text: 'مبادرة ركوب الدراجات :',
+                    subItems: [
+                      'مبادرة لتشجيع الموظفين على الحضور للعمل باستخدام الدراجة بدلاً من السيارة لمساعدتهم على تبني نظام حياة صحي و التشجيع على ممارسة الرياضة '
                     ]
                   },
                   {
-                    text: 'بلانتري ريتريت (Plantree retreat):',
+                    text: ' بازار الموظفين :',
                     subItems: [
-                      'يقدم الأدوات والدعم لتنمية التعاطف بين جميع مقدمي الرعاية والقادة، ودمج التفاعلات البشرية الرحيم في العمليات والممارسات التنظيمية.'
+                      'حدث ربع سنوي للموظفين ليكون لديهم منصة لعرض منتجاتهم من الحرف اليدوية أو المواد الغذائية أو الملابس وما إلى ذلك، ويتم بيعها لزملائهم .'
                     ]
                   },
                   {
-                    text: 'يوم الحوالات:',
+                    text: 'امشي معنا:',
                     subItems: [
-                      'خدمة دعم شهرية للموظفين لمساعدتهم في إرسال تحويلاتهم إلى أحبائهم في الوطن. يتم إنشاء كشك "تيلي ماني ( Telemoney)" لتقديم الخدمات للموظفين بدلاً من الذهاب إلى فروع البنك.'
-                    ]
-                  },
-                  {
-                    text: 'مبادرة التدليك والمساج:',
-                    subItems: [
-                      'مبادرة التدليك هي إحدى المبادرات التي تهدف لراحة مقدمي الرعاية الصحية واسترخائهم، عن طريق جلسة تدليك قصيرة <strong>(3-4 دقائق)  </strong>  تقدم للموظفين عند الطلب.'
-                    ]
-                  },
-                  {
-                    text: 'مبادرة لاستخدام الدراجات:',
-                    subItems: [
-                      'مبادرة لتشجيع الموظفين على الحضور والعمل وتحسين صحتهم باستخدام دراجاتهم.'
-                    ]
-                  },
-                  {
-                    text: ' بازار الموظفين:',
-                    subItems: [
-                      'حدث ربع سنوي للموظفين ليكون لديهم منصة لعرض منتجاتهم التي صنعوها سواء كانت الحرف اليدوية أو المواد الغذائية أو الملابس وما إلى ذلك، ويتم بيعها لزملائهم.'
-                    ]
-                  },
-                  {
-                    text: 'جولات القيادة:',
-                    subItems: [
-                      'يتم تعيين كل مدير في الأقسام لإجراء الجولات والتواصل مع الموظفين والمرضى على حد سواء والاستفسار عن مخاوفهم لهذا اليوم. ويلي الجولات جلسة لجمع المعلومات واتخاذ الإجراءات المناسبة.'
-                    ]
-                  },
-                  {
-                    text: 'امشوا معنا:',
-                    subItems: [
-                      'حدث يشجع الموظفين على المشي لمسافة معينة بهدف تعزيز الحياة الصحية ونمط الحياة النشيط.'
+                      'لتشجيع الموظفين على المشي لمسافة معينة بهدف تعزيز الحياة الصحية .'
                     ]
                   }
                 ]}
               />
             </div>
             <div className="single-section">
-              <Title title="المبادرات الموجهة نحو الخدمة" />
+              <Title title="المبادرات الموجهة نحو تحسين الخدمات" />
               <Menu
                 items={[
                   {
-                    text: 'مبادرة "اقضي ليلة"',
+                    text: 'مبادرة ليلة في المستشفي',
                     subItems: [
-                      'مفهوم جديد تم تطبيقه مؤخرًا، وهو ما يجعل أحد مديري المستشفى يحصل على تجربة لمدة ليلة ليقوم بتقييم وتجربة خدمات الرعاية الصحية وتلقي العلاج داخل مستشفى الموسى.'
+                      'مفهوم جديد تم تطبيقه مؤخرًا، وفيه يقوم  أحد المدراء بالمبيت داخل أحد غرف التنويم بالمستشفى  ليقوم بتقييم وتجربة خدمات الرعاية الصحية وتلقي العلاج داخل مستشفى الموسى .'
                     ]
                   },
                   {
-                    text: 'مبادرة "ارتدي قبعة جديدة"',
+                    text: 'مبادرة تبادل الأدوار',
                     subItems: [
-                      'مبادرة يأخد فيها أحد المدراء دور الموظف العادي بكافة أدواره ومهامه الوظيفية، بهدف اختبار شعور الموظفين بشكل مباشر.'
+                      'فية يقوم المدراء بتبديل مهامهم مع موظفين من إدارات مختلفة و القيام بكافة أعمالهم لمدة يوم عمل كامل  لتقدير جهودهم .'
                     ]
-                  }
-                ]}
-              />
-            </div>
-            <div className="single-section-nosubitems">
-              <Title title="مؤسسات الرعاية الصحية التي زارت مستشفى الموسى التخصصي:" />
-              <Menu2
-                items={[
-                  {
-                    text:
-                      'مركز جونز هوبكنز أرامكو الطبي <strong> (JHAH)</strong> .'
-                  },
-                  {
-                    text:
-                      'مستشفى جامعة الملك عبد الله بن عبد العزيز <strong> (KAAUH)</strong> .'
-                  },
-                  {
-                    text:
-                      'مستشفى الملك فيصل التخصصي ومركز الأبحاث <strong> (KFSHRC)</strong> .'
-                  },
-                  {
-                    text: 'مدينة الملك فهد الطبية <strong> (KFMC)</strong> .'
-                  },
-                  {
-                    text: 'وزارة الصحة <strong> (MOH)</strong> .'
-                  },
-                  {
-                    text: 'مستشفى فقيه.'
-                  },
-                  {
-                    text:
-                      'مدينة سلطان بن عبد العزيز الهومينتارية <strong> (SBAHC)</strong> .'
                   }
                 ]}
               />

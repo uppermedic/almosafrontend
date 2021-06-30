@@ -23,7 +23,7 @@ const index = ({ GovernersData, TeamData, t }) => {
                 <Row>
                   <Col>
                     <h2 className="title">
-                      {(language == 'en' && 'Board Governers') ||
+                      {(language == 'en' && 'Board of Governers') ||
                         'أعضاء مجلس الإدارة'}
                     </h2>
                   </Col>
