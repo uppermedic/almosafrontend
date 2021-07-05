@@ -1,5 +1,6 @@
 import React from 'react';
 import { withTranslation, i18n } from 'root/i18n';
+import { Container } from 'reactstrap';
 
 const Content = ({ t }) => {
   const { language } = i18n;
@@ -11,8 +12,8 @@ const Content = ({ t }) => {
             'الحدائق والمساحات الخضراء'}
         </h2>
       </div>
-      <div className="container">
-        <div className="inner-content">
+      <div className="inner-content">
+        <Container>
           {language == 'en' && (
             <>
               <div className="description">
@@ -83,7 +84,7 @@ const Content = ({ t }) => {
               </div>
             </>
           )}
-        </div>
+        </Container>
       </div>
     </div>
   );

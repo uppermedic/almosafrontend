@@ -1,22 +1,10 @@
 .planning-hospital-stay {
   .content {
-    position: relative;
-    .overlay {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-    }
     .inner-content {
-      position: relative;
-      z-index: 2;
-
       .desc {
         max-width: 700px;
         font-size: 16px;
-        padding: 50px 0;
+        padding: 30px 0;
         @include respond-below(md) {
           font-size: 14px;
         }

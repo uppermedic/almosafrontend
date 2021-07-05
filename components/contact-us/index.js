@@ -131,14 +131,6 @@ const index = ({ data, t }) => {
                 rows={5}
                 type="textarea"
               />
-              {/* <ReCAPTCHA
-                style={{ display: 'inline-block' }}
-                // theme="dark"
-                ref={_reCaptchaRef}
-                sitekey={TEST_SITE_KEY}
-                onChange={verifyCallback}
-                asyncScriptOnLoad={asyncScriptOnLoad}
-              /> */}
               <Button className="w-100" type="submit" id="submit">
                 {t('send')}
               </Button>

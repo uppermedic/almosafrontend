@@ -15,8 +15,9 @@ function index({ t, data }) {
             <SideTabs items={dataAboutTabs} index={3} />
           </Col>
           <Col sm="12" md="8">
+            <h2 className="title">{t('menu:strategic priorities')}</h2>
+
             <Container>
-              <h2 className="title">{t('menu:strategic priorities')}</h2>
               <div className="section-content">
                 {language === 'en' && (
                   <div className="description">
@@ -26,10 +27,6 @@ function index({ t, data }) {
                         Attract, educate, develop, and Retain talented
                         professionals who deliver excellent care and promote
                         wellness.
-                      </li>
-                      <li>
-                        Retain talented professionals who deliver excellent care
-                        and promote wellness.
                       </li>
                       <li>
                         To Be a regional leader in quality outcomes and patient

@@ -35,12 +35,8 @@ const DropdownMenuBar = ({ t, item, options, setIsOpen }) => {
         className="dropdown-toggle"
         onMouseEnter={() => setDropdownOpen(true)}
       >
-        {/* <i className={CN(item.icon, 'mr-1')}></i> */}
         <div>
           <span>{t('menu:' + item.label)}</span>
-          {/* <span className="down-arrow">
-            <i className="fas fa-caret-down"></i>
-          </span> */}
         </div>
       </DropdownToggle>
       <DropdownMenu
