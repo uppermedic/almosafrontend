@@ -14,10 +14,10 @@ const index = ({ t }) => {
             <SideTabs items={dataAboutTabs} index={0} />
           </Col>
           <Col sm="12" md="8">
-            <Container>
-              <h2>{t('menu:overview')}</h2>
+            <h2>{t('menu:overview')}</h2>
 
-              <Row className="py-5 top-section">
+            <Container>
+              <Row className="top-section">
                 <Col md={6}>
                   {language === 'ar' ? (
                     <p>
@@ -29,7 +29,7 @@ const index = ({ t }) => {
                       <br />
                       <br />
                       تبلغ سعة مستشفى الموسى التخصصي ، وهو أحد أكبر المستشفيات
-                      في المنطقة ، 450 سريرًا ، ويعمل به أكثر من 2300 من مقدمي
+                      في المنطقة ، 200 سريرًا ، ويعمل به أكثر من 2300 من مقدمي
                       الرعاية ، مع أكثر من 700 ممرض و 280 طبيبًا بدوام كامل.
                       <br />
                       <br />
@@ -55,7 +55,7 @@ const index = ({ t }) => {
                       <br />
                       <br />
                       Almoosa Specialist Hospital's capacity, one of the largest
-                      hospitals in the region, exceeds 450 hospital beds, and
+                      hospitals in the region, exceeds 200 hospital beds, and
                       more than 2300 caregivers are employed by the hospital,
                       with over 700 nurses and 280 full-time doctors.
                       <br />

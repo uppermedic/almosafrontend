@@ -1,6 +1,5 @@
 import React from 'react';
-import PageTitle from 'src/components/PatientGuide/HospitalAmenities/re-page-title/index.js';
-
+import { Container } from 'reactstrap';
 import { withTranslation, i18n } from 'root/i18n';
 
 const Content = ({ t }) => {
@@ -13,29 +12,32 @@ const Content = ({ t }) => {
 
       <div className="cover">
         <div className="inner-content">
-          <div className="info">
-            <h5>
-              {language === 'ar' &&
-                `يمكنك الاستمتاع بخدمة الإنترنت (واي فاي) المجانية داخل المستشفى. كل ما عليك القيام به هو`}
-              {language === 'en' &&
-                `We can enjoy a free internet (Wi-Fi) service while in the hospital`}
-            </h5>
-          </div>
-          <div className="description">
-            <ul>
-              <li>
-                {language === 'ar' && `اختر شبكة مستشفى الموسى من قائمة الشبكة`}
-                {language === 'en' &&
-                  `You can get it by selecting the network of Al-Moosa Hospital from the network list .`}
-              </li>
-              <li>
+          <Container>
+            <div className="info">
+              <h5>
                 {language === 'ar' &&
-                  `اطلب كلمة المرور من أي مقدم رعاية في مستشفى الموسى.`}
+                  `يمكنك الاستمتاع بخدمة الإنترنت (واي فاي) المجانية داخل المستشفى. كل ما عليك القيام به هو`}
                 {language === 'en' &&
-                  `Requesting a password from any receptionist .`}
-              </li>
-            </ul>
-          </div>
+                  `We can enjoy a free internet (Wi-Fi) service while in the hospital`}
+              </h5>
+            </div>
+            <div className="description">
+              <ul>
+                <li>
+                  {language === 'ar' &&
+                    `اختر شبكة مستشفى الموسى من قائمة الشبكة`}
+                  {language === 'en' &&
+                    `You can get it by selecting the network of Al-Moosa Hospital from the network list .`}
+                </li>
+                <li>
+                  {language === 'ar' &&
+                    `اطلب كلمة المرور من أي مقدم رعاية في مستشفى الموسى.`}
+                  {language === 'en' &&
+                    `Requesting a password from any receptionist .`}
+                </li>
+              </ul>
+            </div>
+          </Container>
         </div>
       </div>
     </div>

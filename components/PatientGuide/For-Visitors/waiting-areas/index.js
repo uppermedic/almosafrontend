@@ -7,29 +7,29 @@ const Content = ({ t }) => {
 
   return (
     <div className="content">
-      {/* <Container> */}
       <div className="title">
         <h2>{t('patient_guide:waiting_areas')}</h2>
       </div>
-      <Row xs="1" xl="2">
-        <Col>
-          <div className="left-col">
-            <div className="desc">
-              <p>
-                {language === 'ar' &&
-                  `نحن نهتم بمرضانا وعائلاتهم. لذلك. منطقة انتظار مستشفى الموسى التخصصي انتظار مساحة واسعة، مريحة، وكبيرة بما يكفي لاستيعاب الزوار والمرضى `}
-                {language === 'en' &&
-                  `We care about our patients and their families. Therefor. ASH waiting Area is spacious, restful, and large enough to accommodate visitors and patients .`}
-              </p>
-            </div>
-            {/* <div className="note">
+      <Container>
+        <Row xs="1" xl="2">
+          <Col>
+            <div className="left-col">
+              <div className="desc">
+                <p>
+                  {language === 'ar' &&
+                    `نحن نهتم بمرضانا وعائلاتهم. لذلك. منطقة انتظار مستشفى الموسى التخصصي انتظار مساحة واسعة، مريحة، وكبيرة بما يكفي لاستيعاب الزوار والمرضى `}
+                  {language === 'en' &&
+                    `We care about our patients and their families. Therefor. ASH waiting Area is spacious, restful, and large enough to accommodate visitors and patients .`}
+                </p>
+              </div>
+              {/* <div className="note">
               <p>
                 {language === 'ar' && `كل صالة انتظار تم توفير:`}
                 {language === 'en' &&
                   `In Each lounge, the following services are provided:`}
               </p>
             </div> */}
-            {/* <ul className="info">
+              {/* <ul className="info">
               <li>
                 <span className="icon">
                   <i className="fas fa-chair" />
@@ -62,24 +62,27 @@ const Content = ({ t }) => {
                 </span>
               </li>
             </ul> */}
-          </div>
-        </Col>
-        <Col>
-          <div className="right-col">
-            <div
-              className="img"
-              style={{
-                backgroundImage:
-                  'url("/images/patient-guide/for_visitors/waiting-area.jpg")'
-              }}
-            />
-            <div className="zigzag">
-              <img src="/images/patient-guide/green-zigzag.png" alt="zigzag" />
             </div>
-          </div>
-        </Col>
-      </Row>
-      {/* </Container> */}
+          </Col>
+          <Col>
+            <div className="right-col">
+              <div
+                className="img"
+                style={{
+                  backgroundImage:
+                    'url("/images/patient-guide/for_visitors/waiting-area.jpg")'
+                }}
+              />
+              <div className="zigzag">
+                <img
+                  src="/images/patient-guide/green-zigzag.png"
+                  alt="zigzag"
+                />
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

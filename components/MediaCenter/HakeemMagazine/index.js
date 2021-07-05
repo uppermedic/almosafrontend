@@ -21,30 +21,6 @@ const Index = ({ data, t }) => {
           <Col lg={6} className="px-1">
             <span>{t('menu:hakeem magazine')}</span>
           </Col>
-          {/* <Col lg={3} xs={6}>
-            <SelectBox
-              options={[ 
-                ['Show', 'show'],
-                ['6', '6'],
-                ['9', '9'],
-                ['12', '12'],
-                ['15', '15'], 
-                ['ALL', 'all']
-              ]}
-            />
-          </Col>
-          <Col lg={3} xs={6}>
-            <SelectBox
-              options={[
-                ['Date', 'date'],
-                ['2020', '2020'],
-                ['2017 - 2019', '2017-2019'],
-                ['2014 - 2016', '2014-2016'],
-                ['2011 - 2013', '2011-2013'],
-                ['ALL', 'all']
-              ]}
-            />
-          </Col> */}
         </Row>
         <Row className="mx-1">
           {data.data.map((item, index) => (

@@ -18,16 +18,16 @@ const index = ({ GovernersData, TeamData, t }) => {
             <SideTabs items={dataAboutTabs} index={6} />
           </Col>
           <Col sm="12" md="8">
+            <Row>
+              <Col>
+                <h2 className="title">
+                  {(language == 'en' && 'Board of Governers') ||
+                    'أعضاء مجلس الإدارة'}
+                </h2>
+              </Col>
+            </Row>
             <Container>
               <div className="board-governers">
-                <Row>
-                  <Col>
-                    <h2 className="title">
-                      {(language == 'en' && 'Board of Governers') ||
-                        'أعضاء مجلس الإدارة'}
-                    </h2>
-                  </Col>
-                </Row>
                 <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards">
                   {GovernersData.map((doctor, index) => (
                     <Col>

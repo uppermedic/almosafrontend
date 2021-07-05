@@ -15,13 +15,14 @@ const index = ({ t }) => {
             <SideTabs items={dataAboutTabs} index={7} />
           </Col>
           <Col sm="12" md="8">
+            <h2 className="title">{t('menu:fast facts')}</h2>
+
             <Container>
               {/* **********English Content ********** */}
-              <h2 className="title">{t('menu:fast facts')}</h2>
               {language == 'en' && (
                 <div className="content">
                   <div className="single-section">
-                    <Paragraph paragraph="Almoosa Specialist Hospital was founded in 1996, now the hospital’s bed capacity is 450" />
+                    <Paragraph paragraph="Almoosa Specialist Hospital was founded in 1996, now the hospital’s bed capacity is 200" />
                     <Paragraph paragraph="The 17-story medical tower is the tallest hospital in Al-Ahsa - Saudi Arabia. Its majesty is seen for miles, and the gleaming structure portrays the level of care within, representing a beacon of hope for health care and wellness for the community." />
                     <Paragraph paragraph="Almoosa’s emblem, the local Sidra tree, symbolizes life and nurturing care for patients, visitors, and the local community. Influences of the Sidra tree are found in the building's gentle curving façade. Throughout the interior architecture, features referencing nature continue to soothe anxiety and reinforce the Almoosa brand." />
                     <Paragraph paragraph="The building embraces the Al-Ahsa community and the Almoosa brand. A three-story-high glass Atrium graciously welcomes visitors into the building. The ground level hosts food, retail, and respite spaces, reinforcing a sense of hospitality and reducing anxiety upon arrival." />
@@ -184,7 +185,7 @@ const index = ({ t }) => {
                 <div className="content">
                   <div className="single-section">
                     <Paragraph paragraph="سنة التأسيس 1996" />
-                    <Paragraph paragraph="السعة السريرية 450 سريرًا" />
+                    <Paragraph paragraph="السعة السريرية 200 سريرًا" />
                   </div>
 
                   <div className="single-section">
@@ -199,7 +200,6 @@ const index = ({ t }) => {
                     <Title title="التقنيات المتطورة" />
                     <Menu
                       items={[
-                        { text: 'مختبر مؤتمت بالكامل' },
                         { text: 'مختبر مؤتمت بالكامل' },
                         { text: 'الصيدلية المؤتمتة.' },
                         { text: 'نظام صرف الأدوية المؤتمت لمرضى التنويم.' },

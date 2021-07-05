@@ -1,11 +1,8 @@
 .patient-complains {
   .content {
     .inner-content {
-      position: relative;
-      z-index: 2;
-
       .desc {
-        margin-top: 50px;
+        padding: 30px 0;
         max-width: 700px;
         font-size: 16px;
         @include respond-below(md) {

@@ -202,13 +202,12 @@ const index = ({ t }) => {
             <SideTabs items={dataAboutTabs} index={4} />
           </Col>
           <Col sm="12" md="8">
+            <Row>
+              <Col>
+                <h2>{t('menu:awards')}</h2>
+              </Col>
+            </Row>
             <Container>
-              <Row>
-                <Col>
-                  <h2>{t('menu:awards')}</h2>
-                </Col>
-              </Row>
-
               <Row className="mt-5">
                 {data.map(item => (
                   <Col xl={6} className="col_1">

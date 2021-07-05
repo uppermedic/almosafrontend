@@ -15,8 +15,8 @@
       @include sectionHeading($almoosa-color-green);
     }
     .top-section {
+      padding: 30px 0;
       p {
-        // font-family: "diodrum-arabic-meduim";
         font-size: 16px;
 
         @include respond-below(sm) {

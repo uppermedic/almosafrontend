@@ -1,18 +1,17 @@
 import React from 'react';
 import { i18n, withTranslation } from 'root/i18n';
+import { Container } from 'reactstrap';
 
 const Content = ({ t }) => {
   let { language } = i18n;
 
   return (
-    <div className="content">
-      <div className="container">
-        <div className="card">
-          <div className="top-border" />
-          <div className="bottom-border" />
-          <div className="title">
-            <h2>{t('menu:disabled access')}</h2>
-          </div>
+    <div className="disabled-access-content">
+      <div className="title">
+        <h2>{t('menu:disabled access')}</h2>
+      </div>
+      <div className="inner-content">
+        <Container>
           <h5 className="description">
             {language === 'ar' &&
               `يقوم مستشفى الموسى التخصصي بدعم ذوي الاحتياجات الخاصة والإعاقة وذويهم من خلال توفير بيئة آمنة ومريحة لهم، وتوفير الدعم اللازم لهم من أجل حصولهم على رعاية طبية متكاملة ومريحة، والتي تتميز ب:`}
@@ -59,7 +58,7 @@ const Content = ({ t }) => {
               </span>
             </li>
           </ul>
-        </div>
+        </Container>
       </div>
     </div>
   );

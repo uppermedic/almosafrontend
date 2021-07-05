@@ -94,7 +94,6 @@ const Header = ({ t, data }) => {
                             active: router.pathname === item.path
                           })}
                         >
-                          {/* <i className={CN(item.icon)}></i> */}
                           {t('menu:' + item.label)}
                         </a>
                       </Link>

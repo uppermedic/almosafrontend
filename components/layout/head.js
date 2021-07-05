@@ -39,7 +39,6 @@ const Head = ({ data, children }) => {
         sizes="180x180"
         href="/apple-touch-icon.png"
       />
-      {/* <link rel="mask-icon" href="/favicon-mask.svg" color="#000000" /> */}
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta property="og:title" content={data && data[lang]?.title} />
       <meta

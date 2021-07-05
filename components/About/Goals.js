@@ -25,17 +25,6 @@ export default function Goals({ data }) {
             className="d-flex justify-content-center justify-content-lg-start align-items-center"
           >
             <Markdown>{language ? data[language]?.content : ''}</Markdown>
-            {/* <p>
-              We are proud to be a leading integrated health services provider,
-              focusing on human-centered care.
-            </p>
-            <p>
-              With highly qualified medical, technical and administrative staff
-              using the latest equipment, thus keeping pace with the needs of
-              visitors from all regions of the Kingdom and neighboring Gulf. We
-              are proud to be a leading integrated health services provider,
-              focusing on human-centered care.
-            </p> */}
           </Col>
           <Col xs={12} lg={6}>
             <img src={data?.image} alt="" className="half_section_img " />

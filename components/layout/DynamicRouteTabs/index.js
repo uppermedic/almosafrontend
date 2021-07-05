@@ -48,31 +48,6 @@ const DynamicRouteTabs = ({ t, items, index }) => {
           );
         })}
       </Nav>
-
-      {/* <Col sm="12" md="8">
-          <TabContent activeTab={activeTab}>
-            <>
-              {items.map((item, index) => {
-                const Component = item.component;
-                return (
-                  <TabPane tabId={index} key={item.id}>
-                    <div className={item.className}>
-                      {Component && (
-                        <Component
-                          contentData={
-                            dataContent && Object.entries(dataContent).length
-                              ? dataContent
-                              : {}
-                          }
-                        />
-                      )}
-                    </div>
-                  </TabPane>
-                );
-              })}
-            </>
-          </TabContent>
-        </Col> */}
     </div>
   );
 };

@@ -16,9 +16,9 @@ function index({ t, data }) {
             <SideTabs items={dataAboutTabs} index={2} />
           </Col>
           <Col sm="12" md="8">
-            <Container>
-              <h2 className="title">{t('menu:core values')}</h2>
+            <h2 className="title">{t('menu:core values')}</h2>
 
+            <Container>
               <div className="section-content">
                 <div className="description">
                   <Markdown>

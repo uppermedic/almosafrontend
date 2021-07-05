@@ -150,51 +150,6 @@ const Content = ({ t }) => {
               );
             }
           })}
-          {/* <div className="second-rights">
-            <Row xs="1" md="2">
-              <Col>
-                <div className="info">
-                  <div className="title">
-                    <p>
-                      Patients and family in the ASH, have the following
-                      responsibilities:
-                    </p>
-                  </div>
-                  <hr />
-                  <ul>
-                    {secondRights.map((right, index) => {
-                      if (index <= 6) {
-                        return (
-                          <li key={index}>
-                            <span className="num">{right.num}</span>
-                            <div className="desc">{right.content}</div>
-                          </li>
-                        );
-                      }
-                    })}
-                  </ul>
-                </div>
-              </Col>
-              {secondRights.length > 7 && (
-                <Col>
-                  <div className="info">
-                    <ul>
-                      {secondRights.map((right, index) => {
-                        if (index > 6) {
-                          return (
-                            <li key={index}>
-                              <span className="num">{right.num}</span>
-                              <div className="desc">{right.content}</div>
-                            </li>
-                          );
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </Col>
-              )}
-            </Row>
-          </div> */}
         </Container>
       </div>
     </div>

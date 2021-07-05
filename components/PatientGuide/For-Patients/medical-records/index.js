@@ -1,20 +1,20 @@
 import React from 'react';
 import { i18n, withTranslation } from 'root/i18n';
+import { Container } from 'reactstrap';
 
 const Content = ({ t }) => {
   let { language } = i18n;
 
   return (
     <div className="content">
-      <div className="overlay" />
-      <div className="container">
-        <div className="inner-content">
-          <div className="title">
-            <h2>
-              {language === 'ar' ? `طلب تقرير طبي` : `Request Medical Report`}
-            </h2>
-          </div>
-          <div className="card">
+      <div className="inner-content">
+        <div className="title">
+          <h2>
+            {language === 'ar' ? `طلب تقرير طبي` : `Request Medical Report`}
+          </h2>
+        </div>
+        <div className="card">
+          <Container>
             <p>
               {language === 'ar'
                 ? `يمكن للمريض طلب تقرير طبي من مكتب التقارير الطبية ASH بدون أي رسوم لأول مرة.`
@@ -60,7 +60,7 @@ const Content = ({ t }) => {
                 </span>
               </li>
             </ul>
-          </div>
+          </Container>
         </div>
       </div>
     </div>

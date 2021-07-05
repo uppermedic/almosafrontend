@@ -21,19 +21,18 @@ const Content = ({ t }) => {
   };
   return (
     <div className="content">
-      <div className="overlay"></div>
-      <div className="container">
-        <div className="inner-content">
-          <div className="title">
-            <h2>{t('menu:patient complains')}</h2>
-          </div>
+      <div className="inner-content">
+        <div className="title">
+          <h2>{t('menu:patient complains')}</h2>
+        </div>
+        <div className="container">
           {language === 'ar' && (
             <div
               className="desc"
               dangerouslySetInnerHTML={{
                 __html: data['ar']
               }}
-            ></div>
+            />
           )}
           {language === 'en' && (
             <div
@@ -41,7 +40,7 @@ const Content = ({ t }) => {
               dangerouslySetInnerHTML={{
                 __html: data['en']
               }}
-            ></div>
+            />
           )}
         </div>
       </div>

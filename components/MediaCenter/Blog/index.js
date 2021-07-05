@@ -52,9 +52,6 @@ const Index = ({ data, latest, tags, categories, t }) => {
               ))}
             </Row>
             <Row>
-              {/* <Col md={12} className="d-flex justify-content-center">
-            <button>Show All</button>
-          </Col> */}
               <Col xs={12} className="d-flex justify-content-center mb-4">
                 <ReactPaginate
                   nextLabel={<NextFC />}

@@ -71,7 +71,7 @@ export const GovernersData = [
       paragraph: ``,
       qualifications: [
         'DBA from University of Warwick – Warwick Business School',
-        'master’s in healthcare management from the Royal College of Surgeons in Ireland',
+        'Master’s in healthcare management from the Royal College of Surgeons in Ireland',
         'Diploma in Healthcare Management from University of Surrey',
         'Bachelor of Science (BSc) in Healthcare Administration'
       ],
@@ -173,7 +173,8 @@ export const GovernersData = [
         ' ماجستير في إدارة الأعمال (MBA) ، جامعة تينيسي ، نوكسفيل ، 2015 - 2016',
         ' البورد الأمريكي في الجراحة ، تخصص الجراحة العامة بجامعة مينيسوتا ، 1994 - 1999',
         'حاصل على درجة الـ دكتوراه من كلية الطب بجامعة الملك سعود 1982 - 1988'
-      ]
+      ],
+      positions: ['رئييس قسم القلب']
     },
     en: {
       name: 'Dr. Ghannam Aldossari MD, MSc, MBA, ACHE.',
@@ -186,7 +187,7 @@ export const GovernersData = [
         'M.D, KSU Medical School, 1982 – 1988'
       ],
       positions: [
-        'Professor, Chief of Medical Staff & Chairman of the Heart Center at Almoosa Specialist Hospital'
+        'Professor, Chief of Medical Staff & Head of the Heart Center at Almoosa Specialist Hospital'
       ]
     }
   },
@@ -236,7 +237,7 @@ export const GovernersData = [
       positions: [
         'مستشار وزير الاقتصاد والتخطيط',
         'عضو لجنة المشاريع في برنامج المشروعات الوطني.',
-        'عضو مؤسس شركة صحتك التكنولوجيا الصحة'
+        'عضو مؤسس شركة صحة-تك'
       ]
     },
     en: {
@@ -268,7 +269,7 @@ export const TeamData = [
       title: 'المدير التنفيذي لمستشفى الموسى',
       paragraph: `أ. مالك عضو مجلس إدارة والمدير التنفيذي لمجموعة الموسى الطبية.
       <br>
-      بدأ حياته المهنية كمدير للشؤون الإدارية في مستشفى الموسى في عام 2007. وتدرج في المناصب حتى شغل منصب المدير التنفيذي لمستشفى الموسى التخصصي  عامـ2012 ، حيث وضع الرؤية التحويلية لادارة التغيير ، والتى زادت الطاقة الاستيعابية لـ الموسى من مستشفى 100 سرير إلى صرح طبي  يضم 450 سريرًا. مع وجود خطط للتوسع إلى 750 سريرًا مع افتتاح مستشفى إعادة التأهيل والرعاية الممتدة الجديد في عام 2022.
+      بدأ حياته المهنية كمدير للشؤون الإدارية في مستشفى الموسى في عام 2007. وتدرج في المناصب حتى شغل منصب المدير التنفيذي لمستشفى الموسى التخصصي  عامـ2012 ، حيث وضع الرؤية التحويلية لادارة التغيير ، والتى زادت الطاقة الاستيعابية لـ الموسى من مستشفى 100 سرير إلى صرح طبي  يضم 440 سريرًا. مع وجود خطط للتوسع إلى 750 سريرًا مع افتتاح مستشفى إعادة التأهيل والرعاية الممتدة الجديد في عام 2022.
       <br> <br>
       تحت قيادته ، كان الموسى أول مستشفى يحصل على اعتماد Planetree في الشرق الأوسط في عام 2015. وأصبح فيما بعد عضوًا في مجلس إدارة منظمة البلانتري العالمية  ، وهو عضو في مجلس إدارة تجمع الرياض الصحي الثاني، ورئيس اللجنة الصحية بالغرفة التجارية بـ الأحساء ، ونائب رئيس اللجنة الوطنية للمستشفيات الخاصة بمجلس الغرف السعودية .
       <br> <br>
@@ -295,7 +296,7 @@ export const TeamData = [
       name: 'Mr. Malek Almoosa',
       title: 'CEO',
       paragraph: `Mr. Malek is a board member and CEO of Almoosa Specialist Hospital. 
-          He began his career as administrative affairs director in Almoosa Hospital in 2007. In 2012 became the CEO of Almoosa, where he set the transformational vision that turned Almoosa from a 100 Bed hospital to a 450-bed tertiary level hospital today. With plans to expand to 750 beds with the new rehabilitation and long-term care hospital in 2022. 
+          He began his career as administrative affairs director in Almoosa Hospital in 2007. In 2012 became the CEO of Almoosa, where he set the transformational vision that turned Almoosa from a 100 Bed hospital to a 440-bed tertiary level hospital today. With plans to expand to 750 beds with the new rehabilitation and long-term care hospital in 2022. 
           <br> <br>
           Under his leadership, Almoosa was the first hospital to receive the Planetree Accreditation in the Middle East in 2015. He later became a board member of Planetree International, and he serves in the Board of Riyadh Second Cluster. He is the chairman of the health committee in Alahsa Chamber of Commerce and Vice-Chairman of the national hospital committee,
           <br/> <br>
@@ -374,10 +375,10 @@ export const TeamData = [
     image: '/images/about/leadership-team/mona.png',
     id: 3,
     ar: {
-      name: ' منى خميس. ماجستير في إدارة الأعمال',
+      name: 'منى خميس',
       title: 'مدير تجربة المريض',
       paragraph: `
-      انضمت منى إلى مستشفى الموسى في عام 2014 ، بخبرة أكثر من 12 عاماً  كأخصائية علاج طبيعي ، جاءت لأول مرة إلى المملكة في عام 2005 ، حيث انضمت إلى مجموعة الدكتور سليمان الحبيب الطبية كمدير للخدمات الطبية المساندة من عام 2005 حتى عام 2013. بعدها انضمت منى إلى الموسى كرئيسة لقسم العلاج الطبيعي في وقت لاحق قادت انشاء قسم تجربة المريض،  منى حاصلة على بكالوريوس العلاج الطبيعي وإدارة الرعاية الصحية ، وماجستير في إدارة الأعمال (M.B.A.) ودكتوراه في الإدارة المالية لمنظمات الرعاية الصحية من جامعة القديس يوسف في لبنان. منى زميلة الكلية الأمريكية للمديرين التنفيذيين للصحة F.A.C.H.E.وزميلة منظمة البلانتري الدولية للرعاية التي تركز على الانسان
+      انضمت منى إلى مستشفى الموسى في عام 2014 ، بخبرة أكثر من 12 عاماً  كأخصائية علاج طبيعي ، جاءت لأول مرة إلى المملكة في عام 2005 ، حيث انضمت إلى مجموعة الدكتور سليمان الحبيب الطبية كمدير للخدمات الطبية المساندة من عام 2005 حتى عام 2013. بعدها انضمت منى إلى الموسى كرئيسة لقسم العلاج الطبيعي في وقت لاحق قادت انشاء قسم تجربة المريض ، منى حاصلة على بكالوريوس العلاج الطبيعي وإدارة الرعاية الصحية ، وماجستير في إدارة الأعمال (M.B.A.) ودكتوراه في الإدارة المالية لمنظمات الرعاية الصحية من جامعة القديس يوسف في لبنان. منى زميلة الكلية الأمريكية للمديرين التنفيذيين للصحة F.A.C.H.E.وزميلة منظمة البلانتري الدولية للرعاية التي تركز على الانسان
       <br/> <br>
       تستمتع منى بتسلق الجبال ، وقد تسلقت 3 من القمم السبع في العالم ، بما في ذلك جبل إيفرست.
       `,
@@ -536,7 +537,7 @@ export const TeamData = [
     id: 7,
     ar: {
       name: 'أ. سارة الموسى',
-      title: 'مديرة التسويق والمسؤلية الاجتماعية',
+      title: 'مديرة التسويق والشراكة المجتمعية',
       paragraph: `سارة هي خبيرة تسويق شغوفة  بخدمة المجتمع ، تفخر بقيادة مشاريع المسؤولية الاجتماعية الفعالة والمؤثرة التي تضيف قيمة للمجتمع وللعلامة التجارية لمستشفى الموسى.
       <br/><br/>
       كمديرة للتسويق والمسؤولية الاجتماعية تشمل أهدافها تعزيز صحة المجتمع والترويج لاتباع أسلوب حياة صحي.
@@ -718,7 +719,7 @@ export const TeamData = [
         'P.M.P. certified',
         'MBA student at York St. John University, England',
         "Member of the Egyptian pharmacists' syndicate",
-        'Lean 6 Sigma yellow belt certifies',
+        'Lean 6 Sigma yellow belt certified',
         '19 years’ experience in healthcare'
       ]
     }

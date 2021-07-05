@@ -61,7 +61,7 @@ const Content = ({ t }) => {
                 )}
               </div>
               <button>
-                <Link href="/patient-guide/for-visitors/visiting-hours/covid-pandemic">
+                <Link href="/for-visitors/visiting-hours/covid-pandemic">
                   <a>
                     {(language === 'en' &&
                       'Click Here to Read: Visitor, Family, and Care Partner Restrictions Related to COVID-19 Pandemic') ||
