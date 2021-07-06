@@ -8,10 +8,10 @@ const Pharmacy = () => {
 
   return (
     <section className="pharmacy" id="pharmacy-section">
+      <h2 className="title">
+        {language === 'en' ? 'The Pharmacy' : 'الصيدلية'}
+      </h2>
       <Container>
-        <h2 className="title">
-          {language === 'en' ? 'The Pharmacy' : 'الصيدلية'}
-        </h2>
         {language === 'en' ? (
           <div className="content">
             {/* **********English Content ********** */}

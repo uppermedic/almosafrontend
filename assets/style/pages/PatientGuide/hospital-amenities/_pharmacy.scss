@@ -1,10 +1,6 @@
 .pharmacy-content {
-  //margin: 50px auto;
   .container {
     .page-title {
-      // display: flex;
-      // align-items: center;
-      //margin: 50px auto;
       padding: 0;
       h2 {
         @include sectionHeading($almoosa-light-green);
