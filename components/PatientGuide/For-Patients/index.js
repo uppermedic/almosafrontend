@@ -29,15 +29,6 @@ const data = [
   {
     id: 1,
     title: {
-      en: 'Patient and Family Rights',
-      ar: 'اللوائح الخاصة بحقوق المرضى وذويهم'
-    },
-    component: familyRights,
-    className: 'family-rights-page'
-  },
-  {
-    id: 2,
-    title: {
       en: 'Patient Responsibilities',
       ar: 'اللوائح الخاصة بالواجبات والمسؤوليات التي يتحملها المرضى وأسرهم'
     },
@@ -45,19 +36,19 @@ const data = [
     className: 'patients-responsibilities-page'
   },
   {
-    id: 3,
+    id: 2,
     title: { en: 'Insurance', ar: 'شركات التأمين' },
     component: Insurance,
     className: 'insurance'
   },
   {
-    id: 4,
+    id: 3,
     title: { en: 'Request Medical Report', ar: 'طلب تقرير طبي' },
     component: medicalRecords,
     className: 'medical-records'
   },
   {
-    id: 5,
+    id: 4,
     title: {
       en: 'Disabled Access & Services',
       ar: 'خدمات ذوي الاحتياجات الخاصة'
@@ -66,13 +57,13 @@ const data = [
     className: 'disabled-access'
   },
   {
-    id: 6,
+    id: 5,
     title: { en: 'Preparing For Your Appointment', ar: 'التحضير لموعدك' },
     component: preparingAppointment,
     className: 'preparing-appointment'
   },
   {
-    id: 7,
+    id: 6,
     title: {
       en: 'Planning your Hospital Stay',
       ar: 'تخطيط إقامتك في المستشفى'
@@ -81,7 +72,7 @@ const data = [
     className: 'planning-hospital-stay'
   },
   {
-    id: 8,
+    id: 7,
     title: {
       en: 'Preparing For Medical Procedures',
       ar: 'التحضير للإجراءات الطبية'
@@ -90,31 +81,31 @@ const data = [
     className: 'preparing-procedure'
   },
   {
-    id: 9,
+    id: 8,
     title: { en: 'Patient Complains', ar: 'شكاوي المرضى' },
     component: patientComplains,
     className: 'patient-complains'
   },
   {
-    id: 10,
+    id: 9,
     title: { en: 'Parking and Valet', ar: 'المواقف وخدمة صف السيارات' },
     component: parking,
     className: 'directions'
   },
   {
-    id: 11,
+    id: 10,
     title: { en: 'Hospitality services', ar: 'خدمات الضيافة' },
     component: hospitalitServices,
     className: 'hospitality-services'
   },
   {
-    id: 12,
+    id: 11,
     title: { en: 'Wi-Fi', ar: 'خدمة الواي فاي' },
     component: wifi,
     className: 'wifi-page'
   },
   {
-    id: 13,
+    id: 12,
     title: {
       en: 'Gardens and greenery',
       ar: 'الحدائق والمساحات الخارجية'
@@ -123,41 +114,50 @@ const data = [
     className: 'gardens'
   },
   {
-    id: 14,
+    id: 13,
     title: { en: 'Bike to work', ar: ' مبادرة ركوب الدراجات' },
     component: bicycleUse,
     className: 'bicycle-use'
   },
   {
-    id: 15,
+    id: 14,
     title: { en: 'Interpreter Services', ar: 'خدمات الترجمة' },
     component: interpreterServices,
     className: 'interpreter-services'
   },
   {
-    id: 16,
+    id: 15,
     title: { en: 'Mosques', ar: 'المسجد' },
     component: mosques,
     className: 'mosques'
   },
   {
-    id: 17,
+    id: 16,
     title: { en: 'TABEBY Service', ar: 'خدمة طبيبي' },
     component: tabebyService,
     className: 'tabeby-service'
   },
 
   {
-    id: 18,
+    id: 17,
     title: { en: 'ATMs', ar: 'أجهزة الصراف الالي' },
     component: atms,
     className: 'atms'
   },
   {
-    id: 19,
+    id: 18,
     title: { en: 'ASH Support Groups', ar: 'مجموعات الدعم' },
     component: supportGroubs,
     className: 'support-groubs'
+  },
+  {
+    id: 19,
+    title: {
+      en: 'Patient and Family Rights',
+      ar: 'اللوائح الخاصة بحقوق المرضى وذويهم'
+    },
+    component: familyRights,
+    className: 'family-rights-page'
   }
 ];
 const Index = ({ t }) => {

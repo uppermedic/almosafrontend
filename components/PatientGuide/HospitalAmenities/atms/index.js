@@ -23,24 +23,9 @@ const Content = ({ t }) => {
             <Col sm={12} lg={8}>
               <div className="content-col">
                 <div className="content-title">
-                  {/* {language === 'ar' && (
-										<p>
-											حرصنا في مستشفى الموسى التخصصي على وجود عدد كافي من الصرافات الآلية داخل
-											المستشفى من باب التيسير على المرضى والمراجعين وذويهم،
-										</p>
-									)} */}
-
                   {language === 'ar' && (
-                    <h5> لذلك يمكنكم إيجاد الصرافات الآلية في :</h5>
+                    <h5> يمكنكم إيجاد الصرافات الآلية في :</h5>
                   )}
-
-                  {/* {language === 'en' && (
-										<p>
-											At Al-Moosa Specialist Hospital, we were keen on the existence of a
-											sufficient number of ATMs inside the hospital for the sake of convenience
-											for patients, visitors, and their families.
-										</p>
-									)} */}
 
                   {language === 'en' && <h5>You can find ATMs in :</h5>}
                 </div>

@@ -20,7 +20,6 @@ export default function Testimonial({ data }) {
         <Row>
           <Col xs={12} className="top-head d-flex justify-content-center">
             <div>
-              {/* <h3>Testimonial</h3> */}
               <h3>{language == 'en' ? 'Testimonials' : 'يقولون عنا'}</h3>
               <span className="qoutes">
                 <FontAwesomeIcon icon={faQuoteLeft} />

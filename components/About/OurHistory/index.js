@@ -148,12 +148,12 @@ function index({ t, histories }) {
             <SideTabs items={dataAboutTabs} index={5} />
           </Col>
           <Col sm="12" md="8">
+            <Row className="mb-3">
+              <Col>
+                <h2>{t('menu:history')}</h2>
+              </Col>
+            </Row>
             <Container>
-              <Row className="mb-3">
-                <Col>
-                  <h2>{t('menu:history')}</h2>
-                </Col>
-              </Row>
               <Slider {...settings}>
                 {data.map((tab, idx) => (
                   <span

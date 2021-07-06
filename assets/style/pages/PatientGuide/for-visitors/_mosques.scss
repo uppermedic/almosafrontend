@@ -7,7 +7,7 @@
       width: fit-content;
       @include rtl() {
         margin-left: 0;
-        margin-right: 100px;
+        // margin-right: 100px;
       }
       @include respond-below(lg) {
         margin: 30px;

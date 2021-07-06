@@ -25,14 +25,6 @@ const index = ({
   return (
     <sectio className="gallery">
       <div className="main-vid">
-        {/* <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/L0Vz6-iHoFo" // need the main video url
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe> */}
         <ReactPlayer
           url="https://www.youtube.com/embed/L0Vz6-iHoFo"
           width="100%"
@@ -43,36 +35,6 @@ const index = ({
       <Container className="pb-5 pt-5">
         <h2>{t('menu:video gallery')}</h2>
         <Row className="filters pt-5">
-          {/* <Col xl={1} md={2} sm={3}>
-            <span>Show</span>
-          </Col>
-          <Col xl={3} md={4} sm={9}>
-            <SelectBox
-              options={[
-                ['3', '3'],
-                ['6', '6'],
-                ['9', '9'],
-                ['12', '12'],
-                ['15', '15'],
-                ['ALL', 'all']
-              ]}
-            />
-          </Col>
-          <Col xl={1} md={2} sm={3}>
-            <span>Date</span>
-          </Col>
-          <Col xl={3} md={4} sm={9}>
-            <SelectBox
-              options={[
-                ['2020', '2020'],
-                [('2017 - 2019', '2017-2019')],
-                ['2014 - 2016', '2014-2016'],
-                ['2011 - 2013', '2011-2013'],
-                ['2008 - 2010', '2008-2010'],
-                ['ALL', 'all']
-              ]}
-            />
-          </Col> */}
           <Col xl={1} md={2} sm={3}>
             <span>{t('playlist')}</span>
           </Col>
@@ -94,16 +56,8 @@ const index = ({
                     className="overlay"
                     onClick={() => openVideoPlayer(video)}
                   >
-                    <i className="fas fa-play-circle"></i>
+                    <i className="fas fa-play-circle" />
                   </div>
-                  {/* <iframe
-                    width="100%"
-                    height="100%"
-                    src={video.url}
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe> */}
                 </div>
                 <h3>
                   {lang &&

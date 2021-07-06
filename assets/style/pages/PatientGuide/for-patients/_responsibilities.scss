@@ -1,26 +1,13 @@
 .patients-responsibilities-page {
   .content {
-    //background-image: url('/images/patient-guide/for_patient/patient_respons_cover.jpg');
-    //background-size: cover;
     position: relative;
-    //padding: 50px 0;
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      //background-color: #00000046;
-      z-index: 1;
-    }
 
     .items {
       position: relative;
       z-index: 2;
-      //margin: 50px auto;
       margin-bottom: 100px;
       background-color: #fff;
-      padding: 50px 0;
+      padding: 30px 0;
       border-radius: 10px;
       .items-title {
         h5 {

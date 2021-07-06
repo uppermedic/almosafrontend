@@ -30,18 +30,6 @@ export default function FooterRights() {
                   {language === 'ar' && 'سياسة الخصوصية'}
                 </a>
               </Link>
-              {/* <Link href="/privacy">
-                <a>
-                  {language === 'en' && 'Privacy Policy'}
-                  {language === 'ar' && 'سياسة الاستخدام'}
-                </a>
-              </Link> */}
-              {/* <Link href="#!">
-                <a>Link one</a>
-              </Link>
-              <Link href="#!">
-                <a>Link one</a>
-              </Link> */}
             </div>
           </Col>
         </Row>

@@ -80,15 +80,6 @@ const Footer = ({ data, customClass, t }) => {
                 <Link href={location_url}>
                   <a target="_blank">{t('footer:our_location')}</a>
                 </Link>
-                {/* <Link href="#!">
-                  <a>Training & Education</a>
-                </Link>
-                <Link href="/community">
-                  <a>Community services</a>
-                </Link> */}
-                {/* <Link href="/blog">
-                  <a className="btn-blog">Blog</a>
-                </Link> */}
               </div>
             </div>
           </Col>
@@ -98,15 +89,15 @@ const Footer = ({ data, customClass, t }) => {
               <div className="d-flex flex-column ">
                 <Link href={location_url}>
                   <a target="_blank">
-                    <i className="fas fa-map-marker-alt mr-1"></i>{' '}
+                    <i className="fas fa-map-marker-alt mr-1" />{' '}
                     {location[language]}
                   </a>
                 </Link>
                 <a target="_blank" href={`tel:${contact_phone}`}>
-                  <i className="fas fa-phone-alt mr-1"></i> {contact_phone}
+                  <i className="fas fa-phone-alt mr-1" /> {contact_phone}
                 </a>
                 <a target="_blank" href={`mailto:${contact_email}`}>
-                  <i className="fas fa-envelope mr-1"></i> {contact_email}
+                  <i className="fas fa-envelope mr-1" /> {contact_email}
                 </a>
               </div>
             </div>
@@ -122,9 +113,6 @@ const Footer = ({ data, customClass, t }) => {
               screenName={String(twitter_url).split('/').pop()}
               options={{ height: 300 }}
             />
-            {/* <div>
-              <img src="/images/home/twitterpage.png" />
-            </div> */}
           </Col>
         </Row>
       </Container>
