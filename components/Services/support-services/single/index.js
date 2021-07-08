@@ -24,20 +24,19 @@ const Content = props => {
 
   return (
     <div className="content">
-      {/* <Hero>
-        <img src={data.image} alt="hero-cover" className="hero-cover" />
-      </Hero> */}
       <h2 className="title">{language && seo[language]?.title} </h2>
       <div className="page-desc">
-        {language && seo[language]?.content && (
-          <>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: seo[language]?.content
-              }}
-            />
-          </>
-        )}
+        <Container>
+          {language && seo[language]?.content && (
+            <>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: seo[language]?.content
+                }}
+              />
+            </>
+          )}
+        </Container>
       </div>
       <div className="info">
         {language &&

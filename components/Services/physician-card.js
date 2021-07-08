@@ -5,6 +5,11 @@ const Physician = ({ doctor, setcurrentDoctor }) => {
   const { language } = i18n;
   const handleClick = () => {
     setcurrentDoctor(doctor);
+    if (window.innerWidth < 992) {
+      window.scrollTo(0, 1100);
+    } else {
+      window.scrollTo(0, 900);
+    }
   };
   return (
     <div className="card" onClick={handleClick}>
