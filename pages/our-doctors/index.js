@@ -67,10 +67,12 @@ function Our_Doctors({ data, getCategories, categories }) {
       </Hero>
       <div className="container">
         <Row className="filters mt-5 mb-5">
-          <Col xl={2} md={2} sm={3}>
-            <span>{(language === 'en' && 'Department') || 'القسم'} :</span>
+          <Col xl={2} md={3} sm={3}>
+            <span className="pb-3">
+              {(language === 'en' && 'Department ') || ' القسم'} :
+            </span>
           </Col>
-          <Col xl={3} md={4} sm={9}>
+          <Col xl={4} md={5} sm={9}>
             <SelectBox
               options={categories}
               default_title="all_sections"

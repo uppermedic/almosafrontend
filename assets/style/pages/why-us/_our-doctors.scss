@@ -26,6 +26,17 @@
     .doctor-details {
       padding-bottom: 110px;
       // @include Border-bottom(2px, rgba(#707070, 0.6));
+      @include respond-below(lg) {
+        padding-bottom: 70px;
+      }
+
+      @include respond-below(md) {
+        padding-bottom: 50px;
+      }
+
+      @include respond-below(md) {
+        padding-bottom: 30px;
+      }
 
       .doctor-img {
         position: relative;
