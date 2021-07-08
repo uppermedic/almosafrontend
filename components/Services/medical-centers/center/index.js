@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { i18n } from 'root/i18n';
+import { i18n, Link, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
 import Markdown from 'markdown-to-jsx';
 import Hero from 'src/components/layout/Hero';
@@ -10,7 +10,7 @@ import BlockWithTitle from 'src/components/Services/medical-programs/reusable-el
 import { cardiologyCenter } from 'src/constants/DB.js';
 import DoctorCard from 'src/components/Services/physician-card';
 
-const Content = ({ data, sections, seo }) => {
+const Content = ({ data, sections, seo, t }) => {
   const [activeTab, setActive] = useState({ id: '0', items: [] });
   const { language } = i18n;
   const [currentDoctor, setcurrentDoctor] = useState(
@@ -43,7 +43,78 @@ const Content = ({ data, sections, seo }) => {
           <>
             {language && data.physicians && (
               <div className="physician">
-                <Row xs="1" sm="2" md="3" lg="4" className="m-0">
+                <h2>{t('common:our physicians')}</h2>
+
+                <Row className="physician-details m-auto">
+                  {/*  the comming data will come when create main doctor key and value  */}
+                  <Col lg={4} className="physician-img">
+                    <img
+                      src={currentDoctor?.image}
+                      alt={
+                        language &&
+                        currentDoctor &&
+                        currentDoctor[language]?.name
+                      }
+                      className="shadow"
+                    />
+                  </Col>
+                  <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 ">
+                    <h3 className="physician-name">
+                      {language &&
+                        currentDoctor &&
+                        currentDoctor[language]?.name}
+                    </h3>
+                    <p className="py-2 physician-title">
+                      {language &&
+                        currentDoctor &&
+                        currentDoctor[language]?.title}
+                    </p>
+                    {language &&
+                      currentDoctor &&
+                      currentDoctor[language].qualifications &&
+                      currentDoctor[language].qualifications.length > 0 && (
+                        <>
+                          <h3 className="physician-qualifications">
+                            {t('common:qualifications')}
+                          </h3>
+
+                          <Markdown>
+                            {language
+                              ? strippedContent(
+                                  currentDoctor[language].qualifications
+                                )
+                              : ''}
+                          </Markdown>
+                        </>
+                      )}
+                    {language &&
+                      currentDoctor &&
+                      currentDoctor[language].current_positions &&
+                      currentDoctor[language].current_positions.length > 0 && (
+                        <>
+                          <h3 className="physician-position">
+                            {t('common:current_positions')}
+                          </h3>
+                          <Markdown>
+                            {language && currentDoctor
+                              ? strippedContent(
+                                  currentDoctor[language].current_positions ||
+                                    ''
+                                )
+                              : ''}
+                          </Markdown>
+                        </>
+                      )}
+                  </Col>
+                </Row>
+
+                <Row
+                  xs="1"
+                  sm="2"
+                  md="3"
+                  lg="4"
+                  className="m-0 py-3 physicians-cards"
+                >
                   {data.physicians.map((doctor, index) => (
                     <Col>
                       <DoctorCard
@@ -84,4 +155,4 @@ const Content = ({ data, sections, seo }) => {
     </div>
   );
 };
-export default Content;
+export default withTranslation(['common', 'menu'])(Content);
