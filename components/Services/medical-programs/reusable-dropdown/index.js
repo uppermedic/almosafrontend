@@ -25,26 +25,6 @@ const ReusableDropdown = ({
   return (
     <section className="reusable-dropdown">
       <div className="container">
-        {/* <button
-          className="dropdown-button"
-          // onClick={() => {
-          //   setShowdrop(!showDrop);
-          // }}
-        >
-          <div className="button-content">
-            <img src={title.icon && title.icon} alt="" />
-            {title.text}
-          </div>
-          <div className="arrow">
-            <i className="fas fa-sort-down"></i>
-          </div>
-          <div className="arrow">
-            {showDrop ? (
-              <i className="fas fa-sort-up"></i>
-            ) : (
-            )}
-          </div>
-        </button> */}
         <ul className={cn('menu')}>
           {items &&
             items.map((item, index) => {
@@ -59,7 +39,7 @@ const ReusableDropdown = ({
                 </li>
               );
             })}
-          {physicians && physicians[0] && (
+          {physicians && (
             <li
               className={cn('', { active: activeItemIndex === 'physicians' })}
               onClick={() => clickItemFun({ id: 'physicians' })}
