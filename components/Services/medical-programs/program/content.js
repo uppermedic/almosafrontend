@@ -62,7 +62,7 @@ const Content = ({ physicians, data }) => {
                     sm="2"
                     md="3"
                     lg="4"
-                    className="doctors-cards m-0"
+                    className="physicians-cards m-0"
                   >
                     {physicians.map((doctor, index) => (
                       <Col>

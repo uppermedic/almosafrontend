@@ -8,7 +8,7 @@ const Physician = ({ doctor, setcurrentDoctor }) => {
     if (window.innerWidth < 992) {
       window.scrollTo(0, 1100);
     } else {
-      window.scrollTo(0, 900);
+      window.scrollTo(0, 700);
     }
   };
   return (

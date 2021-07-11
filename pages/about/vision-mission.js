@@ -24,6 +24,7 @@ const VisionMessage = ({ t, data }) => {
     <div className="vision-mission">
       <Head data={seo}></Head>
       <Hero>
+        <div className="banner-overlay"></div>
         <img
           src={data.page.page_cover}
           alt="hero-cover"
