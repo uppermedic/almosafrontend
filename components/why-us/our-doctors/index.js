@@ -48,7 +48,7 @@ const index = ({
             className="shadow"
           />
 
-          <div className="doctor-social">
+          {/* <div className="doctor-social">
             <Link href="#">
               <i className="fab fa-linkedin fa-3x"></i>
             </Link>
@@ -58,7 +58,7 @@ const index = ({
             <Link href="#">
               <i className="fas fa-link fa-3x"></i>
             </Link>
-          </div>
+          </div> */}
         </Col>
         <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 ">
           <h3 className="doctor-name">

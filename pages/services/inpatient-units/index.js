@@ -3,11 +3,12 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Inpatient from 'src/components/Services/inpatient';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
 
 function InpatientPage({ t, services, servicesDataSingle }) {
   const router = useRouter();
+  const lang = i18n.language;
 
   useEffect(() => {
     router.push(`/services/inpatient-units?id=${services.services[0].id}`);
@@ -20,18 +21,15 @@ function InpatientPage({ t, services, servicesDataSingle }) {
       <div className="inpatient-units">
         <Hero>
           <img
-            src={services.page_cover}
+            src={servicesDataSingle.thumbnail}
             alt="hero-cover"
             className="hero-cover"
           />
           <div className="hero-content">
-            <h2 className="title">{t('menu:inpatient units')}</h2>
+            <h2 className="title">
+              {lang && servicesDataSingle.seo[lang].title}
+            </h2>
           </div>
-          {/* <div className="overlay-1">
-          <div className="overlay-2">
-            <div className="title">Inpatient Units</div>
-          </div>
-        </div> */}
         </Hero>
         <Inpatient
           dataSectionTabs={services}

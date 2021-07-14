@@ -32,11 +32,10 @@ function index({ data, categories, yearsData, banner }) {
 
   return (
     <section className="events">
-      <Hero bg={banner}>
-        <div className="heroText">
-          <p>
-            <span>{(lang == 'en' && 'EVENTS') || 'الفعاليات'}</span>
-          </p>
+      <Hero>
+        <img src={banner} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{(lang == 'en' && 'EVENTS') || 'الفعاليات'}</h2>
         </div>
       </Hero>
       <Container>

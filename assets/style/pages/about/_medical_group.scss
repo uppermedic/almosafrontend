@@ -1,15 +1,15 @@
 .almoosa-medical-group {
-  .hero {
-    .hero-content {
-      left: 9%;
-      @include rtl() {
-        right: 10%;
-      }
-      h2 {
-        color: $primary-color;
-      }
-    }
-  }
+  // .hero {
+  //   .hero-content {
+  //     left: 9%;
+  //     @include rtl() {
+  //       right: 10%;
+  //     }
+  //     h2 {
+  //       color: $primary-color;
+  //     }
+  //   }
+  // }
 
   section.almoosa-medical-group {
     padding-top: 70px;

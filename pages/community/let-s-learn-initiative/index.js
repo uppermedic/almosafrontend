@@ -32,8 +32,11 @@ const LetsLearn = ({ data }) => {
   return (
     <section className="lets_learn_section">
       <Head data={head_data} />
-      <Hero customClassNames="custom_banner_class" bg={data.cover_image}>
-        <BannerOverlay data={data} />
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
+        </div>
       </Hero>
 
       {data?.contents[0] && (

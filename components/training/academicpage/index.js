@@ -10,13 +10,16 @@ const index = ({ ourTeamData }) => {
   const lang = i18n.language;
   return (
     <section className="academic-affairs">
-      <Hero bg="/images/training/academic/academic-banner1.jpg">
-        <div className="heroText">
-          <p>
-            <span>
-              {(lang == 'en' && 'Academic Affairs') || 'الشؤون الأكادمية'}
-            </span>
-          </p>
+      <Hero>
+        <img
+          src="/images/training/academic/academic-banner1.jpg"
+          alt="hero-cover"
+          className="hero-cover"
+        />
+        <div className="hero-content">
+          <h2 className="title">
+            {(lang == 'en' && 'Academic Affairs') || 'الشؤون الأكادمية'}
+          </h2>
         </div>
       </Hero>
       <div className="container">

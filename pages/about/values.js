@@ -32,7 +32,7 @@ const Values = ({ t, data }) => {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:core values')}</h2>
+          <h2 className="title">{t('menu:core values')}</h2>
         </div>
       </Hero>
       <OurValues data={data} />

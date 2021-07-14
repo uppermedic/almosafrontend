@@ -24,12 +24,12 @@ const Awards_accreditation = ({ t }) => {
       <Head data={seo}></Head>
       <Hero>
         <img
-          src="/images/why_choose_us/awards-hero.png"
+          src="/images/about/hero-bg.png"
           alt="hero-cover"
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:awards')}</h2>
+          <h2 className="title">{t('menu:awards')}</h2>
         </div>
       </Hero>
       <Awards />

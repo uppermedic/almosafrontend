@@ -30,7 +30,7 @@ const index = ({ t }) => {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:nursing department')}</h2>
+          <h2 className="title">{t('menu:nursing department')}</h2>
         </div>
       </Hero>
       <Content />

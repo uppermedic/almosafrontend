@@ -111,7 +111,13 @@ const OneDaySurgeryContent = ({ t, data }) => {
             )}
             {language && physicians && (
               <TabPane tabId={2} className="physician">
-                <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards m-0">
+                <Row
+                  xs="1"
+                  sm="2"
+                  md="3"
+                  lg="4"
+                  className="physicians-cards m-0"
+                >
                   {physicians.map((doctor, index) => (
                     <Col>
                       <DoctorCard

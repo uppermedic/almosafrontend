@@ -31,7 +31,7 @@ const VisionMessage = ({ t, data }) => {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:vision and mission')}</h2>
+          <h2 className="title">{t('menu:vision and mission')}</h2>
         </div>
       </Hero>
       <VisionAndMessage data={data} />

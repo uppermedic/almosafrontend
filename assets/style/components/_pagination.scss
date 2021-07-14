@@ -1,3 +1,7 @@
+.pagination {
+  display: block;
+  text-align: center;
+}
 .pagination ul {
   display: inline-block;
   padding-left: 15px;
@@ -6,7 +10,7 @@
 
 .pagination li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 5px;
   a {
     font-family: 'diodrum-arabic-meduim';
     border: 2px solid $secondary-color;

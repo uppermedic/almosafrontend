@@ -23,9 +23,9 @@ const Post = ({ data }) => {
       <Head data={data['seo']} />
       <Hero>
         <img src={data.image} alt="hero-cover" className="hero-cover" />
-        {/* <div className="hero-content">
-          <h2 className="title">{lang &&data.seo[lang].title}</h2>
-        </div> */}
+        <div className="hero-content">
+          <h2 className="title">{lang && data.seo[lang].title}</h2>
+        </div>
       </Hero>
       {data['sections'].length > 0 && (
         <Center data={data} sections={data['sections']} seo={data['seo']} />

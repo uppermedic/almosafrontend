@@ -27,7 +27,4 @@ const Inpatient = ({ dataSectionTabs, dataSectionContent }) => {
     </section>
   );
 };
-// Inpatient.getInitialProps = async context => ({
-//   namespacesRequired: ['common']
-// });
 export default withTranslation('common')(Inpatient);

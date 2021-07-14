@@ -32,9 +32,10 @@ const PowerOfArt = ({ data }) => {
   return (
     <section className="power_of_art">
       <Head data={head_data} />
-      <Hero bg={data.cover_image}>
-        <div className="right-title">
-          <h3>{lang && data[lang].title}</h3>
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
         </div>
       </Hero>
       {data?.contents[0] && (

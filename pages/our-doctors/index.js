@@ -51,6 +51,8 @@ function Our_Doctors({ data, getCategories, categories }) {
     }
   };
 
+  console.log('doctors', data);
+
   return (
     <div className="almoosa-doctors">
       <Head data={data.page.seo}></Head>
@@ -62,7 +64,7 @@ function Our_Doctors({ data, getCategories, categories }) {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{data.page.seo[language]?.title}</h2>
+          <h2 className="title">{data.page.seo[language]?.title}</h2>
         </div>
       </Hero>
       <div className="container">
@@ -75,7 +77,7 @@ function Our_Doctors({ data, getCategories, categories }) {
           <Col xl={4} md={5} sm={9}>
             <SelectBox
               options={categories}
-              default_title="all_sections"
+              default_title="all_departments"
               handleChange={handleFilter}
             />
           </Col>
@@ -122,7 +124,7 @@ export async function getServerSideProps(context) {
   if (page) {
     path = `/doctors?page=${page}`;
   }
-  if (page & id) {
+  if (page && id) {
     path = `/doctors/filter/id=${id}?page=${page}`;
   }
   let { error, data } = await fetchData(path);

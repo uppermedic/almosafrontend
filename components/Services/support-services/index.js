@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 /*Content Components */
 import SupportServiceSengle from './single';
 import pharmacy from '../../PatientGuide/HospitalAmenities/pharmacy';
-import Nursing from './Nursing';
 
 export default function index({ dataSectionTabs, dataSectionContent }) {
   const router = useRouter();
