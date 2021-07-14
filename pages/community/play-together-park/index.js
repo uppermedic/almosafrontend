@@ -24,14 +24,10 @@ export default function index({ data }) {
   return (
     <div className="play-together">
       <Head data={head_data}></Head>
-      <Hero bg={data.cover_image}>
-        <div className="banner">
-          <img src="/images/heading-banner.svg" alt="" />
-        </div>
-        <div className="left-ticket">
-          <h3>
-            <span>{lang && data[lang].title} </span>
-          </h3>
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
         </div>
       </Hero>
       <Content data={data} />

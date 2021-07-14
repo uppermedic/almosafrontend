@@ -1,50 +1,47 @@
 .paramedic {
-  .hero {
-    //height: 800px;
-    //margin: 10px 0;
-    position: relative;
-    .banner {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      width: 40%;
-      //height: 20%;
-      @include respond-below(lg) {
-        position: unset;
-        width: 100%;
-      }
-      img {
-        opacity: 0.8;
-        max-width: 85%;
-      }
-      h3 {
-        width: 85%;
-        background-color: $secondary-color-light-lessOpacity;
-        font-size: $heading-mob-size;
-        color: #fff;
-        font-weight: bold;
-        text-align: center;
-        padding: 30px;
-        margin: 0;
-        text-transform: uppercase;
-        //min-height: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        @include respond-below(lg) {
-          font-size: $heading-mob-size;
-          padding: 30px 0;
-          margin: 20px 0;
-        }
-        @include respond-below(md) {
-          font-size: $heading-sm-size;
-        }
-        span {
-          display: block;
-          margin: 10px 0;
-        }
-      }
-    }
-  }
+  // .hero {
+  //   position: relative;
+  //   .banner {
+  //     position: absolute;
+  //     top: 0px;
+  //     right: 0px;
+  //     width: 40%;
+  //     @include respond-below(lg) {
+  //       position: unset;
+  //       width: 100%;
+  //     }
+  //     img {
+  //       opacity: 0.8;
+  //       max-width: 85%;
+  //     }
+  //     h3 {
+  //       width: 85%;
+  //       background-color: $secondary-color-light-lessOpacity;
+  //       font-size: $heading-mob-size;
+  //       color: #fff;
+  //       font-weight: bold;
+  //       text-align: center;
+  //       padding: 30px;
+  //       margin: 0;
+  //       text-transform: uppercase;
+  //       //min-height: 250px;
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       flex-direction: column;
+  //       @include respond-below(lg) {
+  //         font-size: $heading-mob-size;
+  //         padding: 30px 0;
+  //         margin: 20px 0;
+  //       }
+  //       @include respond-below(md) {
+  //         font-size: $heading-sm-size;
+  //       }
+  //       span {
+  //         display: block;
+  //         margin: 10px 0;
+  //       }
+  //     }
+  //   }
+  // }
 }

@@ -135,7 +135,7 @@ const Tabs = withTranslation('common')(props => {
         </TabPane>
         <TabPane tabId="2" className="physician">
           <Container>
-            <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards">
+            <Row xs="1" sm="2" md="3" lg="4" className="physicians-cards">
               {physicians.map((doctor, index) => (
                 <Col>
                   <DoctorCard

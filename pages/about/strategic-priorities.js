@@ -29,7 +29,7 @@ const FutureProjects = ({ t }) => {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:strategic priorities')}</h2>
+          <h2 className="title">{t('menu:strategic priorities')}</h2>
         </div>
       </Hero>
       <StrategicGoals />

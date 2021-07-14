@@ -27,12 +27,10 @@ const Paramedic = ({ data }) => {
   return (
     <section className="paramedic">
       <Head data={head_data} />
-      <Hero bg={data.cover_image}>
-        <div className="banner">
-          <img src="/images/heading-banner.svg" alt="banner" />
-          <h3>
-            <span>{lang && data[lang].title} </span>
-          </h3>
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
         </div>
       </Hero>
 

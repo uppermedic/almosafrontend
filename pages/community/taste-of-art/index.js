@@ -28,13 +28,10 @@ const TasteOfArt = ({ data, t }) => {
   return (
     <section className="taste_of_art">
       <Head data={head_data}></Head>
-      <Hero bg={data.cover_image}>
-        <div className="top-ticket">
-          <img src="/images/community/tastOfArt/heading-banner.svg" alt="" />
-          {t('menu:')}
-        </div>
-        <div className="bottom-ticket">
-          <h3>{lang && data[lang].title}</h3>
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
         </div>
       </Hero>
       <PostWithCenterImg

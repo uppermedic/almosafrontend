@@ -11,6 +11,7 @@ import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/MediaCenter/Blog';
+import { i18n } from 'root/i18n';
 
 const Index = ({
   data,
@@ -18,12 +19,12 @@ const Index = ({
   categories,
   blogData,
   router,
-
   getAllPosts,
   getBlogTags,
   getBlogCategories
 }) => {
   const { seo, page_cover } = blogData.page;
+  const lang = i18n.language;
   useEffect(() => {
     getAllPosts('/blog/articles', router.query);
     getBlogTags('/blog/tags');
@@ -33,7 +34,12 @@ const Index = ({
   return (
     <div className="blog">
       <Head data={seo}></Head>
-      <Hero bg={page_cover}></Hero>
+      <Hero>
+        <img src={page_cover} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && seo[lang].title} </h2>
+        </div>
+      </Hero>
       <Content
         data={data}
         latest={data.data.slice(0, 3)}
