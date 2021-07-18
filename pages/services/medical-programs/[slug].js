@@ -24,9 +24,10 @@ const HairTranplant = ({ data }) => {
     <div className="hair-transplant">
       <Head data={data.seo}></Head>
       <SectionHeading data={data} />
-      {data['sections'].length > 0 && (
+      {(data['sections'].length > 0 || data['physicians'].length > 0) && (
         <Content physicians={data['physicians']} data={data.sections} />
       )}
+      {/* <Content physicians={data['physicians']} data={data.sections} /> */}
     </div>
   );
 };

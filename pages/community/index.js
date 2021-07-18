@@ -10,9 +10,14 @@ export default function index({ data }) {
   return (
     <div className="community">
       <Head data={data.page.seo}></Head>
-      <Hero bg={data.page.page_cover}>
+      <Hero>
+        <img
+          src={data.page.page_cover}
+          alt="hero-cover"
+          className="hero-cover"
+        />
         <div className="hero-content">
-          <h2>{lang && data.page.seo[lang].title}</h2>
+          <h2 className="title">{lang && data.page.seo[lang].title} </h2>
         </div>
       </Hero>
       <Community data={data.communities} />

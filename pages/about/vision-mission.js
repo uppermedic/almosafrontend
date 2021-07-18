@@ -24,13 +24,14 @@ const VisionMessage = ({ t, data }) => {
     <div className="vision-mission">
       <Head data={seo}></Head>
       <Hero>
+        <div className="banner-overlay"></div>
         <img
           src={data.page.page_cover}
           alt="hero-cover"
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:vision and mission')}</h2>
+          <h2 className="title">{t('menu:vision and mission')}</h2>
         </div>
       </Hero>
       <VisionAndMessage data={data} />

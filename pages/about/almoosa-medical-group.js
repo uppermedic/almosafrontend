@@ -29,7 +29,7 @@ const FutureProjects = ({ t }) => {
           className="hero-cover"
         />
         <div className="hero-content">
-          <h2>{t('menu:almoosa medical group')}</h2>
+          <h2 className="title">{t('menu:almoosa medical group')}</h2>
         </div>
       </Hero>
       <MedicalGroup />

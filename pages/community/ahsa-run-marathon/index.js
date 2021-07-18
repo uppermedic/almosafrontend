@@ -24,9 +24,10 @@ export default function index({ data }) {
   return (
     <div className="asha-marathon">
       <Head data={head_data}></Head>
-      <Hero bg={data.cover_image}>
-        <div className="right_ticket-title">
-          <h2 className="banner-title">{lang && data[lang].title}</h2>
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title}</h2>
         </div>
       </Hero>
       <Content data={data.contents} />

@@ -11,7 +11,11 @@ const Content = ({ physicians, data }) => {
   const [active, setActive] = useState({ id: '0', items: [] });
   const { language } = i18n;
   useEffect(() => {
-    setActive(data && data[0]);
+    if (data?.length > 0) {
+      setActive(data && data[0]);
+    } else {
+      setActive({ id: 'physicians', items: [] });
+    }
     return () => {};
   }, [data]);
   const clickItemFun = item => {
@@ -24,13 +28,13 @@ const Content = ({ physicians, data }) => {
         physicians={physicians}
         items={data}
         clickItemFun={clickItemFun}
-        activeItemIndex={active.id}
+        activeItemIndex={active?.id}
       />
 
       {/* Here will be the content will change according to the dropdown selected item */}
 
       {/* will depending on the active index on the dropdown item wich will pass with the click item function */}
-      {active.items && active.items[0] && (
+      {active?.items && active?.items[0] && (
         <section className="center-paragraph">
           <div className="container">
             {/* <p>
@@ -40,10 +44,10 @@ const Content = ({ physicians, data }) => {
                 </Markdown>
               )}
             </p> */}
-            {language && active.items[0][language]?.content && (
+            {language && active?.items[0][language]?.content && (
               <div
                 dangerouslySetInnerHTML={{
-                  __html: active.items[0][language]?.content
+                  __html: active?.items[0][language]?.content
                 }}
               />
             )}
@@ -53,7 +57,7 @@ const Content = ({ physicians, data }) => {
 
       <section className="grid-info">
         <Container>
-          {active.id === 'physicians' ? (
+          {active?.id === 'physicians' ? (
             <>
               {language && physicians && (
                 <div className="physician">
@@ -62,7 +66,7 @@ const Content = ({ physicians, data }) => {
                     sm="2"
                     md="3"
                     lg="4"
-                    className="doctors-cards m-0"
+                    className="physicians-cards m-0"
                   >
                     {physicians.map((doctor, index) => (
                       <Col>
@@ -79,8 +83,8 @@ const Content = ({ physicians, data }) => {
             </>
           ) : (
             <Row xs="1" md="2">
-              {active.items
-                .slice(active.items.length > 0 ? 1 : 0) //remove frist ele as this is used to title of tabs and it's description?
+              {active?.items
+                .slice(active?.items.length > 0 ? 1 : 0) //remove frist ele as this is used to title of tabs and it's description?
                 .map((item, index) => {
                   return (
                     <Col key={index}>

@@ -27,19 +27,10 @@ const Cooperation = ({ data }) => {
   return (
     <section className="cooperation">
       <Head data={head_data} />
-      <Hero bg={data.cover_image}>
-        <div className="layout" />
-        <div className="top_left_title">
-          <h2>
-            {(lang == 'en' && 'Cooperation with') || 'التعاون مع الأسر المنتجة'}
-          </h2>
-          <h2>{lang == 'en' && ' Productive Families'}</h2>
-        </div>
-        <div className="right_ticket">
-          <img
-            src="/images/community/tastOfArt/heading-banner.svg"
-            alt="banner"
-          />
+      <Hero>
+        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+        <div className="hero-content">
+          <h2 className="title">{lang && data[lang].title} </h2>
         </div>
       </Hero>
       {data.contents[0] && (
