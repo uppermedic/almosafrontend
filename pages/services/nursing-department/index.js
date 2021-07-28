@@ -25,7 +25,7 @@ const index = ({ t }) => {
       <Head data={seo} />
       <Hero>
         <img
-          src="/images/why_choose_us/overview-hero.png"
+          src="/images/services/nursing.png"
           alt="hero-cover"
           className="hero-cover"
         />
