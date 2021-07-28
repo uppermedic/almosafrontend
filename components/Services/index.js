@@ -23,7 +23,7 @@ const ServicesContent = ({ data }) => {
           <Col className="m-auto card-wrapper">
             <Service
               item={{
-                thumbnail: '/images/services/nursing.png',
+                thumbnail: '/images/services/nursingS.png',
                 en: {
                   slug: 'nursing-department',
                   title: 'Nursing Department'
