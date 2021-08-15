@@ -86,9 +86,24 @@ export default [
     icon: 'fas fa-file-medical-alt'
   },
   {
+    isDropDown: true,
     path: '/training-education',
     label: 'training education',
-    icon: 'fas fa-calendar-check'
+    icon: 'fas fa-calendar-check',
+    options: [
+      {
+        path: '/training-education/events',
+        label: 'events'
+      },
+      {
+        path: '/training-education/courses',
+        label: 'courses'
+      },
+      {
+        path: '/training-education/academic-affairs',
+        label: 'academic affairs'
+      }
+    ]
   },
 
   {

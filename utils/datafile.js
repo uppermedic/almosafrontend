@@ -37,6 +37,21 @@ export const dataAboutTabs = [
   }
 ];
 
+export const dataACademicTabs = [
+  {
+    path: '/training-education/events',
+    label: 'events'
+  },
+  {
+    path: '/training-education/courses',
+    label: 'courses'
+  },
+  {
+    path: '/training-education/academic-affairs',
+    label: 'academic affairs'
+  }
+];
+
 export const GovernersData = [
   {
     image: '/images/about/leadership-team/Abdulaziz.jpg',

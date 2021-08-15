@@ -1,9 +1,12 @@
 .events {
-  padding-top: 15px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  h2 {
+    @include sectionHeading($almoosa-color-green);
+  }
   .event-filters {
     @include Border-bottom(3px, $primary-color);
-    padding: 20px 0;
-    margin-top: 30px;
+    padding: 30px 0;
     @include respond-below(lg) {
       text-align: center;
     }

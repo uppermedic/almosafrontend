@@ -8,7 +8,7 @@ const courseCard = ({ cardData, t }) => {
   const lang = i18n.language;
   return (
     <Link
-      href={`/training-education/course/${
+      href={`/training-education/courses/${
         lang && String(cardData[lang].title).split(' ').join('-')
       }?id=${cardData.id}`}
     >
