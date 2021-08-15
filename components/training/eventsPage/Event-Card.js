@@ -29,7 +29,7 @@ const Event_Card = ({ cardData, t }) => {
   return (
     // need to be cosider for this url ===??? /education/single/1
     <Link
-      href={`/training-education/event/${
+      href={`/training-education/events/${
         lang && String(cardData[lang].title).split(' ').join('-')
       }?id=${cardData.id}`}
     >
