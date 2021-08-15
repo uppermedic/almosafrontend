@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import EventInfo from 'src/components/training/event-info';
+import CurseInfo from 'src/components/training/course-info';
 import Head from 'src/components/layout/head';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
@@ -11,7 +11,7 @@ const Event = ({ data }) => {
 
   useEffect(() => {
     router.push(
-      `/training-education/event/${
+      `/training-education/courses/${
         lang && String(data[lang].title).split(' ').join('-')
       }?id=${data.id}`
     );
@@ -21,7 +21,7 @@ const Event = ({ data }) => {
   return (
     <div>
       <Head data={data}></Head>
-      <EventInfo data={data} />
+      <CurseInfo data={data} />
     </div>
   );
 };

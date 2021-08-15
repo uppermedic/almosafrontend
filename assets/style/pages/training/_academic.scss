@@ -1,7 +1,11 @@
 section.academic-affairs {
-  padding-top: 15px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  h2 {
+    @include sectionHeading($almoosa-color-green);
+  }
   .content-sections {
-    margin: 50px 0;
+    padding: 30px 0;
     h2.section-title {
       color: $primary-color;
       padding-bottom: 28px;
@@ -19,7 +23,7 @@ section.academic-affairs {
       @include Border-bottom(3px, $primary-color);
     }
     section.intro-section {
-      padding: 50px 0 25px;
+      // padding: 50px 0 25px;
       p {
         color: darkslategray;
         font-size: 16px;
