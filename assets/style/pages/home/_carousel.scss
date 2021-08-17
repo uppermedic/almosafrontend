@@ -1,5 +1,6 @@
 .carousel {
   z-index: 0;
+  position: relative;
   .carousel-image {
     width: 100%;
     height: 700px;
@@ -9,15 +10,21 @@
   }
   .overlay {
     background-color: #ffffff75;
-    width: 100%;
+    width: 20%;
     height: 100%;
     position: absolute;
     top: 0;
-    z-index: 5555;
+    z-index: 0;
+
     .carosel-content {
-      width: min-content;
-      position: relative;
-      margin-top: 5rem;
+      width: 60%;
+      padding-top: 6rem;
+      margin-right: auto;
+      margin-left: 0;
+      @include rtl() {
+        margin-left: auto;
+        margin-right: 0;
+      }
     }
   }
 }
