@@ -10,7 +10,7 @@ const AcademicTraning = ({ data, t }) => {
 
   const seo = {
     ar: {
-      title: 'الشؤون الأكادمية',
+      title: 'الشؤون الأكاديمية',
       meta_description: 'ميتا',
       meta_keywords: 'ميتا',
       url: ''
