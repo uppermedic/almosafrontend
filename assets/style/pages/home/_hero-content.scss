@@ -49,7 +49,7 @@
     }
   }
   .stores-wrapper {
-    display: flex;
+    // display: flex;
     margin: $spaces 0;
     @include respond-below(lg) {
       position: relative;
