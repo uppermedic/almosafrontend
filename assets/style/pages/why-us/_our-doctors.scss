@@ -56,33 +56,6 @@
         &:hover .doctor-social {
           opacity: 1;
         }
-        .doctor-social {
-          text-align: center;
-          padding: 10px;
-          background-color: rgba($color: #c2c4c5, $alpha: 0.4);
-          position: relative;
-          bottom: 76px;
-          left: 0;
-          width: 100%;
-          margin: auto;
-          transition: all 0.5s ease-in-out;
-          opacity: 0;
-          i {
-            cursor: pointer;
-            padding: 4px;
-            &:nth-child(1) {
-              color: #2867b2;
-            }
-            &:nth-child(2),
-            &:nth-child(3) {
-              color: #00acee;
-            }
-            transition: all 0.2s ease-in-out;
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
-        }
       }
       .doctor-name {
         font-size: $sub-heading-size;
@@ -198,6 +171,37 @@
             font-size: 14px;
           }
         }
+      }
+    }
+  }
+}
+.doctor-social {
+  text-align: center;
+  a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #f4f4f4;
+    margin: 25px 5px 20px;
+    font-size: 14px;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      &:nth-child(1) {
+        color: #2867b2;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        color: #00acee;
+      }
+      &:nth-child(4) {
+        color: #78a748;
+      }
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }

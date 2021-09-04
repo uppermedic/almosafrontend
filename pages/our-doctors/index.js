@@ -5,16 +5,15 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import OurDoctors from 'src/components/why-us/our-doctors';
 import { fetchData, postData } from 'src/store/Request.js';
-import ReactPaginate from 'react-paginate';
-import NextFC from 'src/components/layout/ReactPaginate/NextFC';
-import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
+// import ReactPaginate from 'react-paginate';
+// import NextFC from 'src/components/layout/ReactPaginate/NextFC';
+// import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 import { i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import SelectBox from 'src/components/layout/SelectBox';
 
 function Our_Doctors({ data, getCategories, categories }) {
-  console.log('data', data);
   const { language } = i18n;
   const router = useRouter();
   const {
@@ -118,7 +117,6 @@ function Our_Doctors({ data, getCategories, categories }) {
 }
 
 export async function getServerSideProps(context) {
-  console.log('context');
   const { page, id } = context.query;
   let path = '/doctors';
   if (page) {
