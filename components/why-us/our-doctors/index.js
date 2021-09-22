@@ -24,7 +24,7 @@ const index = ({
     filter
       ? data.SectionHead && data.SectionHead
       : data.doctors.data.length > 0
-      ? data.doctors.data[0]
+      ? data.doctors.data
       : []
   );
   useEffect(() => {
@@ -32,11 +32,14 @@ const index = ({
       filter
         ? data.SectionHead && data.SectionHead
         : data.doctors.data.length > 0
-        ? data.doctors.data[0]
+        ? data.doctors.data
         : []
     );
     return () => {};
   }, [data]);
+
+  console.log('currentDoctor', currentDoctor);
+  console.log('data', data);
   return (
     <section className="our-doctors">
       <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards">

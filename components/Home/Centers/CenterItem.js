@@ -26,7 +26,11 @@ function CenterItem({ t, center }) {
                 )}
               </Markdown>
             </p>
-            <Link href={lang && `/services/medical-centers/${center.id}`}>
+            <Link
+              href={`/services/medical-centers/${
+                lang && String(center[lang].title).split(' ').join('-')
+              }?id=${center.id}`}
+            >
               <a className="details_link">{t('read_more')}</a>
             </Link>
           </div>
