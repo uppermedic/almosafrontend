@@ -78,23 +78,22 @@ section.home-centers {
   }
   .caro-card {
     // height: 427.01px;
-    height: 370px;
+    height: 400px;
     background: transparent;
     position: relative;
     img {
-      height: 69.81%;
+      height: 50%;
       width: 100%;
       display: block;
+      @include respond-below(sm) {
+        width: 90%;
+        margin: auto;
+      }
     }
 
     .content {
       text-align: center;
-      position: absolute;
-      bottom: 6px;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 215px;
-      width: 90%;
+      height: 197px;
       z-index: 2;
       box-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.16);
       background: #fff;

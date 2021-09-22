@@ -6,9 +6,11 @@
   .slick-prev {
     position: absolute;
     z-index: 5;
-    &::before,
     &::before {
       font-size: 50px;
+      @include respond-below(sm) {
+        display: none;
+      }
     }
   }
   .slick-next {
