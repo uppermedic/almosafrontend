@@ -31,6 +31,7 @@
 
     .center-card {
       @include background-image;
+      background-size: contain;
       position: relative;
       min-height: 300px;
       cursor: pointer;
@@ -77,16 +78,16 @@
     }
     .cols {
       &:nth-child(1n) .overlay {
-        background-color: rgba($color: $almoosa-light-green, $alpha: 0.9);
+        background-color: rgba($color: $almoosa-light-green, $alpha: 0.5);
       }
       &:nth-child(2n) .overlay {
-        background-color: rgba($color: $secondary-bg-color, $alpha: 0.8);
+        background-color: rgba($color: $secondary-bg-color, $alpha: 0.5);
       }
       &:nth-child(3n) .overlay {
-        background-color: rgba($color: $primary-color, $alpha: 0.9);
+        background-color: rgba($color: $primary-color, $alpha: 0.5);
       }
       &:nth-child(4n) .overlay {
-        background-color: rgba($color: $almoosa-brown-color, $alpha: 0.7);
+        background-color: rgba($color: $almoosa-brown-color, $alpha: 0.5);
       }
     }
   }

@@ -17,9 +17,9 @@ export default function MedicalCenter({ item }) {
         style={{ backgroundImage: `url(${item.thumbnail})` }}
       >
         <div className={`text-center overlay`}>
-          <div className="icon">
+          {/* <div className="icon">
             <img src={item.icon} alt="Icon" />
-          </div>
+          </div> */}
           <div className="ribbon">
             <h3>{(language && item[language].title) || 'No Title Here'}</h3>
           </div>

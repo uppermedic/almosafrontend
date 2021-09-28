@@ -91,8 +91,8 @@ const SingleDoctor = ({ doctor }) => {
                     >
                       <span
                         style={{
-                          marginRight: lang === 'ar' && '-50px',
-                          marginLeft: lang === 'en' && '-50px',
+                          marginRight: lang === 'ar' && '-20px',
+                          marginLeft: lang === 'en' && '-20px',
                           position: 'absolute',
                           color: '#78a748'
                         }}
