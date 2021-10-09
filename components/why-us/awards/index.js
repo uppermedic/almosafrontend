@@ -58,7 +58,7 @@ const data = [
     en: {
       title: 'HCCAP',
       content: `In <strong>2015</strong>, the Nutrition and Food Services Department at Almoosa Hospital won accreditation by <a href="https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines">HACCP</a>, an international food safety certification in all stages, from catering, storage, cooking, to serving the meal to the final consumer. The criteria have been audited by an independent team of international surveyors from the United Kingdom authorized by the HACCP.<br/><br/>
-      <h6>ISO 45001</h6> Almoosa Specialist Hospital always strive to implement world class standard, and this makes us to go for ISO standards for Nutrition and Food Services department by replacing <a href="https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines">HACCP</a> .`
+      `
     },
     ar: {
       title: ' شهادة سلامة الخدمات الغذائية من HACCP',
@@ -189,6 +189,31 @@ const data = [
     وتقديم توصيات مصممة لتحسين السلامة والجودة والكفاءة والفعالية لقسم الأشعه بالإضافة إلى مراجعة مؤهلات الأطباء والفنين والإداريين  لضمان جودة وراحة المريض. <br/><br/>
     في عام <strong>2020</strong> حصل قسم الاشعة في مسشتفة الموسى التخصصي على اعتماد <a href="https://www.acr.org/">ACR </a>  الامر الذي يعني حصول مرضانا على التصوير الدقيق والعالي الجودة الذي يحتاجه مقدمي الرعاية لاكتشاف وتشخيص الامراض بشكل سريع ودقيق . 
     `
+    }
+  },
+  {
+    id: 14,
+    en: {
+      title: ' ASHP accreditation',
+      content: `The Almoosa Specialist Hospital achieved the  American Society of Health-System Pharmacists – <strong>ASHP</strong> accreditation in September <strong>2021</strong>, to be  the 2nd international hospital to achieve <strong>ASHP</strong> outside the US . <br/><br/> (ASHP) is a professional organization representing the interests of pharmacists who practice in hospitals, health maintenance organizations, long-term care facilities, home care, and other components of health care.
+                <br/> <br/> Accreditation criteria : <ul> <li>Quality</li> <li>Medication safety</li> <li>Leadership and management</li> <li>Education and Training</li> <li>Information management</li> <li>Supply chain</li> <li>Drug policy and drug information</li> </ul>`
+    },
+    ar: {
+      title: 'اعتماد ASHP',
+      content: `حصل مستشفى الموسى التخصصي على اعتماد الجمعية الأمريكية لصيادلة النظام الصحي - <strong>ASHP</strong> في سبتمبر <strong>2021</strong>، ليكون ثاني مستشفى دولي يحصل على اعتماد ASHP خارج الولايات المتحدة.
+      . <br/><br/> <strong>(ASHP)</strong> هي منظمة مهنية تمثل شؤون الصيادلة في المستشفيات ومؤسسات الصحة ومرافق الرعاية طويلة الأجل والرعاية المنزلية ومكونات الرعاية الصحية الأخرى. <br/> <br/> معايير الاعتماد : <ul> <li>جودة</li> <li>سلامة الدواء</li> <li>القيادة والإدارة</li> <li>التعليم والتدريب</li> <li>دارة المعلومات</li> <li>الموردين</li> <li>السياسة الدوائية والمعلومات الدوائية</li> </ul>`
+    }
+  },
+  {
+    id: 15,
+    en: {
+      title: 'ISO 45001',
+      content: `Almoosa Specialist Hospital always strive to implement world class standard, and this makes us to go for <strong>ISO</strong> standards for Nutrition and Food Services department by replacing HCCAP. <br/> <br/> In <strong>2018</strong>, the Nutrition and Food Services Department at Almoosa Hospital successfully achieved ISO accreditation .`
+    },
+    ar: {
+      title: ' اعتماد الأيزو 45001',
+      content: `يسعى مستشفى الموسى دائمًا لتطبيق المعايير العالمية ويجلعنا ذلك ملتزمين تجاه تطبيق معايير الأيزو لقسم خدمات التغذية والغذاء عن طريق استبدال HCCAP.
+<br/> <br/> في عام <strong>2018</strong> نجح قسم التغذية وخدمات الغذاء في مستشفى الموسى في الحصول على اعتماد الأيزو 45001`
     }
   }
 ];

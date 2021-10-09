@@ -177,36 +177,6 @@ export const GovernersData = [
     }
   },
   {
-    image: '/images/about/leadership-team/ghannam.jpg',
-    id: 6,
-    ar: {
-      name: 'الدكتور/ غنام الدوسري',
-      title: 'عضو مجلس الإدارة',
-      paragraph: ``,
-      qualifications: [
-        'البورد الأمريكي لجراحة القلب والصدر من جامعة جنوب غرب تكساس الطبية ، 1999-2001',
-        ' ماجستير في إدارة الأعمال (MBA) ، جامعة تينيسي ، نوكسفيل ، 2015 - 2016',
-        ' البورد الأمريكي في الجراحة ، تخصص الجراحة العامة بجامعة مينيسوتا ، 1994 - 1999',
-        'حاصل على درجة الـ دكتوراه من كلية الطب بجامعة الملك سعود 1982 - 1988'
-      ],
-      positions: ['رئييس قسم القلب']
-    },
-    en: {
-      name: 'Dr. Ghannam Aldossari MD, MSc, MBA, ACHE.',
-      title: 'Board Member',
-      paragraph: ``,
-      qualifications: [
-        'American Board of Thoracic Surgery,UT SWMC Cardiothoracic Surgery, 1999 – 2001',
-        'Master of Business Administration (MBA), University of Tennessee, Knoxville, 2015 – 2016',
-        'American Board of Surgery, University of Minnesota General Surgery Residency, 1994 – 1999',
-        'M.D, KSU Medical School, 1982 – 1988'
-      ],
-      positions: [
-        'Professor, Chief of Medical Staff & Head of the Heart Center at Almoosa Specialist Hospital'
-      ]
-    }
-  },
-  {
     image: '/images/about/leadership-team/alafaleq.jpg',
     id: 7,
     ar: {
@@ -605,48 +575,7 @@ export const TeamData = [
       ]
     }
   },
-  {
-    image: '/images/about/leadership-team/ghannam.jpg',
-    id: 8,
-    ar: {
-      name: 'الدكتور/ غنام الدوسري',
-      title: 'رئيس الطاقم الطبي ورئيس مركز القلب',
-      paragraph: `د. الدوسري هو جراح قلب ورئيس الطاقم الطبي في مستشفى الموسى التخصصي،  وُلد في المملكة العربية السعودية وتخرج في كلية الطب بجامعة الملك سعود. ذهب إلى الولايات المتحدة في عام 1990 لتطوير تعليمه الطبي والحصول على تدريب طبي متميز. أكمل تدريبه الأكاديمي والطبي في جامعة مينيسوتا وجامعة تكساس. بعد الانتهاء من برنامج إقامته في جراحة القلب والصدر في جامعة تكساس ، حصل على البورد الأمريكي للجراحة والبورد الأمريكي لجراحة القلب. 
-      <br/><br/>
-      تم تعيينه من قبل مستشفى الملك فيصل التخصصي بالرياض لبدء أول برنامج لعلاج فشل القلب في المملكة العربية السعودية. بعد أربع سنوات ذهب للعمل في كليفلاند كلينك لإجراء جراحة القلب ذات الشق الجراحي المصغر.
-      <br/><br/>
-      انتقل لاحقًا إلى مستشفى سعد التخصصي للعمل كرئيس لخدمات جراحة القلب والصدر والأوعية الدموية ، وشغل العديد من المناصب القيادية ، بما في ذلك نائب الرئيس الطبي ، ومدير الجودة ، ورئيس غرف العمليات. في عام 2012 ، تم تعيينه من قبل جامعة كاليفورنيا - سان فرانسيسكو للمساعدة في إعادة بناء برنامج فشل القلب.
-      <br/><br/>
-      كان للدكتور الدوسري دور فعال في تطوير العديد من الخدمات في جامعة كاليفورنيا - سان فرانسيسكو ، والتي تضمنت برنامج ECMO ، وبرنامج استبدال الصمام الأورطي عبر القسطرة TAVR ، وبرنامج جراحة عدم انتظام ضربات القلب. في عام 2015 ، 
-      <br/><br/>
-      والدكتور الدوسري متحدث محلي ودولي ويقدم العديد من المحاضرات سنويًا حول قصور القلب وتقنية الـ ECMO واستبدال الصمام الأورطي عبر القسطرة ، مع التركيز على إصلاح الرعاية الصحية والجودة باستخدام منهجية lean six sigma .
-      <br/><br/>
-      انضم الدكتور الدوسري إلى مستشفانا في عام 2019  و معه أكثر من 20 عامًا من الخبرة الواسعة في مجال الرعاية الصحية و الجودة والسلامة. منذ انضامة و د. الدوسري له بصمة ملموسة في تغيير  وانشاء وتنفيذ  استراتيجيات المستشفى بالتعاون مغ فرق المستشفى المختلفة
-      <br/><br/>
-      شعاره  في الحياة ان لا شئ مستحيل ..
-      <br/><br/>
-      د.  الدوسري يستمتع في اوقات فراغة بالسفر والتزلج والرسم و البولينج  
-      `,
-      qualifications: []
-    },
-    en: {
-      name: 'Dr. Ghannam Aldossari MD, MSc, MBA, ACHE.',
-      title: 'Chief of Medical Staff and Director of ASH heart center',
-      paragraph: `Dr. Al-Dossari Is a heart surgeon and chief of medical staff in ASH. He was born in Saudi Arabia where he graduated from the medical school in King Saud University. He went to the United States in 1990 to advance his medical education and training. He completed all of his academic and medical training at the University of Minnesota and the University of Texas. After completion of his Cardiothoracic Surgery residency at the University of Texas, Southwestern Medical Center, he had his American Board of surgery and the American Board of Cardiothoracic surgery. He was hired by King Faisal Specialist Hospital in Riyadh to start the first heart failure program in Saudi Arabia. After four years he went to work in Cleveland Clinic for minimally invasive heart surgery.
-      <br/><br/>
-      Later he moved to Saad Specialist Hospital to serve as the Chief of Cardiovascular and Thoracic Surgery services, he served in several leadership positions, including The Deputy Chief Medical Officer, the Director of Quality assurance, and the chair of the OR committee. In 2012, he was recruited by the University of California - San Francisco to help rebuild the heart failure program.
-      <br/><br/>
-      Dr. Al-Dossari was instrumental in developing many service lines at the University of California - San Francisco, which included the ECMO program , The Transcatheter Aortic Valve Replacement program TAVR, and the Arrhythmia surgery program. In 2015, he was recruited by UTMB (university of Texas medical branch in Galveston . as the Chief of Cardiac Surgery Division and the Director of the Heart Failure Program. He is actively involved in the Heart Transplantation, Lung Transplant and the Mechanical Circulatory Support Societies and has served on its Regulatory Committees. Dr. Al-Dossari is a national and international proctor and speaker and gives many lectures annually on Heart Failure, ECMO, and Transcatheter Aortic Valve Replacement. Dr. Al-Dossaei completed his Physician Executive MBA from the University of Tennessee in 2016, focusing on healthcare reform and quality utilizing six sigma and lean methodology.
-        <br/><br/>
-        Dr. Al-Dossari Joined our ASH in 2019, bringing over 20 years of vast healthcare experience in today's growing demand for quality, safety, effectiveness, and economy. He has created and implemented hospital strategies and led teams with moving parts to carrying forth programs while ensuring all work smoothly together utilizing team approach methodology.
-      <br/><br/>
-      His internal rule is never to say "nothing can be done." Instead, his mantra is ‘ let’s get together and think how to do it”
-      <br/><br/>
-      He is a father of 5 (including triplets) and he  enjoy travel and skiing
-          `,
-      qualifications: []
-    }
-  },
+
   {
     image: '/images/about/leadership-team/mahmoud-yaseen.jpg',
     id: 9,
