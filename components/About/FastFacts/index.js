@@ -22,10 +22,14 @@ const index = ({ t }) => {
               {language == 'en' && (
                 <div className="content">
                   <div className="single-section">
-                    <Paragraph paragraph="Almoosa Specialist Hospital was founded in 1996, now the hospital’s bed capacity is 200" />
-                    <Paragraph paragraph="The 17-story medical tower is the tallest hospital in Al-Ahsa - Saudi Arabia. Its majesty is seen for miles, and the gleaming structure portrays the level of care within, representing a beacon of hope for health care and wellness for the community." />
-                    <Paragraph paragraph="Almoosa’s emblem, the local Sidra tree, symbolizes life and nurturing care for patients, visitors, and the local community. Influences of the Sidra tree are found in the building's gentle curving façade. Throughout the interior architecture, features referencing nature continue to soothe anxiety and reinforce the Almoosa brand." />
-                    <Paragraph paragraph="The building embraces the Al-Ahsa community and the Almoosa brand. A three-story-high glass Atrium graciously welcomes visitors into the building. The ground level hosts food, retail, and respite spaces, reinforcing a sense of hospitality and reducing anxiety upon arrival." />
+                    <Paragraph paragraph="Almoosa Specialist Hospital was founded in 1996 as the first private hospital in Ahsa, now the hospital’s bed capacity is 440 with the opening of the North Tower" />
+                  </div>
+
+                  <div className="single-section">
+                    <Title title="About the new expansion – the North Tower" />
+                    <Paragraph paragraph="The 17-story medical tower is the tallest hospital in Al-Ahsa - Saudi Arabia. Its majesty is seen for miles, and the gleaming structure portrays the level of care within, representing a beacon of hope for health care and wellness for the community ." />
+                    <Paragraph paragraph="Almoosa’s emblem, the local Sidra tree, symbolizes life and nurturing care for patients, visitors, and the local community. Influences of the Sidra tree are found in the building's gentle curving façade. Throughout the interior architecture, features referencing nature continue to soothe anxiety and reinforce the Almoosa brand ." />
+                    <Paragraph paragraph="The building embraces the Al-Ahsa community and the Almoosa brand. A three-story-high glass Atrium graciously welcomes visitors into the building. The ground level hosts food, retail, and respite spaces, reinforcing a sense of hospitality and reducing anxiety upon arrival ." />
                   </div>
 
                   <div className="single-section">
@@ -184,17 +188,16 @@ const index = ({ t }) => {
               {language == 'ar' && (
                 <div className="content">
                   <div className="single-section">
-                    <Paragraph paragraph="سنة التأسيس 1996" />
-                    <Paragraph paragraph="السعة السريرية 200 سريرًا" />
+                    <Paragraph paragraph="تأسس مستشفى الموسى التخصصي في عام 1996 كأول مستشفى خاص في الأحساء، والآن تبلغ سعة المستشفى 440 سرير مع افتتاح البرج الشمالي ." />
                   </div>
 
                   <div className="single-section">
-                    <Title title="البرج الشمالي" />
+                    <Title title="عن البرج الشمالي" />
 
-                    <Paragraph paragraph=" 17 طابقًا هو أطول مستشفى في الأحساء." />
+                    <Paragraph paragraph="مكون من 17 طابق كأطول مستشفى في الأحساء - المملكة العربية السعودية، يمكن رؤيته على بعد أميال، ويصور الهيكل اللامع مستوى الرعاية في الداخل، مما يمثل منارة الأمل للرعاية الصحية والعافية للمجتمع ." />
 
-                    <Paragraph paragraph="برج طبي مجهز بـــ 200 سرير ويضم العديد من المراكز المتميزة ، سيكون هذا البرج تحفة فنية في مجال المنشآت الطبية، حيث تم تصميمه ليراعي العديد من عناصر البيئة الاستشفائية من خال توفير البهو الفسيح والدهاليز الواسعة والألوان المريحة، وكذلك الأسطح الخضراء لكل من المريض والزائر ومقدمي الرعاية." />
-                    <Paragraph paragraph="هذا المشروع سوف يضيف 220 سريراً وسيكون مقرا لـ 4 مراكز (مركز العظام والمفاصل ومركز القلب ومركز السرطان ومركز العلوم العصبية)." />
+                    <Paragraph paragraph="يرمز شعار مستشفى الموسى 'شجرة السدرة المحلية' إلى الحياة والرعاية الصحية للمرضى والزوار والمجتمع المحلي في الأحساء، يمكن ملاحظة شكل وتأثير شجرة السدرة في مبنى مستشفى الموسى والعمارة الداخلية مما يشير إلى الطبيعية ويساعد في تخفيف التوتر وتعزيز علامة الموسى التجارية ." />
+                    <Paragraph paragraph="المبنى يعبر عن مجتمع الأحساء واسم الموسى، حيث الردهة الزجاجية المكونة من ثلاثة طوابق تستقبل الزوار إذ يحتوي الطابق الأول على مناطق الراحة والأكل ومنطقة شراء الهدايا مما يعزز الشعور بالضيافة وتخفيف القلق عند الوصول ." />
                   </div>
                   <div className="single-section">
                     <Title title="التقنيات المتطورة" />
