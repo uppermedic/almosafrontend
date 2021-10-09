@@ -21,21 +21,28 @@ function index({ t }) {
               {language == 'en' && (
                 <div className="section-content">
                   <p>
-                    The healthcare sector's investment as one of the vital
-                    sectors to society comes from the belief that the group
-                    focuses on value-added projects that will provide better
-                    services and high quality to the community. Therefore, the
-                    group invested in many healthcare projects over the years.
+                    Investing in the healthcare sector as one of the vital
+                    sectors to society was driven by our long-drawn vision to
+                    focus on value-added projects that will provide better
+                    medical services to our community. Therefore, the group
+                    invested in many healthcare projects over the past years.
+                    The healthcare sector's flagship was the main Hospital
+                    established in 1996 as the first private Hospital in the
+                    Al-Ahsaa region, followed by the South tower and the grand
+                    expansion of " the North Tower .
+                    <br /> <br />
+                    Almoosa Health Group consists of :
                     <ul>
-                      <li> Almoosa Specialist Hospital</li>
-                      <li> Almoosa hospital for rehab & LTC</li>
-                      <li> Almoosa College of health sciences</li>
+                      <li>Almoosa Specialist Hospital</li>
+                      <li>Almoosa for rehabilitation and LTC</li>
+                      <li>Almoosa College of health sciences</li>
+                      <li>Almoosa Home Health Care</li>
                     </ul>
                   </p>
                   <br />
-                  <div className="description">
-                    <h6>Almoosa Specialist Hospital :</h6>
-                    <p>
+                  {/* <div className="description">
+                    <h6>Almoosa Specialist Hospital </h6>
+                     <p>
                       The healthcare sector's flagship is the existing hospital
                       established in 1996 as the first private hospital in the
                       Kingdom of Saudi Arabia in the Al-Ahsaa region, our love
@@ -45,7 +52,7 @@ function index({ t }) {
                       a source of passion, and an insight that brings hope for
                       the bright future.
                     </p>
-                  </div>
+                  </div> */}
                   <div className="description">
                     <h6>Almoosa for rehabilitation and long term care : </h6>
                     <p>
@@ -53,7 +60,7 @@ function index({ t }) {
                       long-term care oasis in the region, including
                       rehabilitation programs for sports injuries, bone injuries
                       for adults and children, spinal injuries, and neural and
-                      brain injuries.
+                      brain injuries .
                       <br />
                       The rehabilitation and long-term care hospital will be in
                       Eastern Province, Al Ahsa. It is designed as a micro
@@ -63,13 +70,20 @@ function index({ t }) {
                       building design fosters healing through its connection to
                       nature. The new facility will stand as the northern
                       gateway to Al-Ahsa, leaving a lasting impression as a
-                      striking landmark.
+                      striking landmark .
                     </p>
                   </div>
                   <div className="description">
                     <h6>Almoosa College of health sciences :</h6>
                     <p>
-                      {' '}
+                      AlMoosa College of Health Science is the first
+                      not-for-profit private college in the eastern region. The
+                      college opened its doors in September 2020 with innovative
+                      programs focusing on inter-professional education, state
+                      of the art simulation labs and a curriculum developed in
+                      collaboration with the MGH Institute of Health professions
+                      in Boston
+                      <br />
                       <a
                         href="https://www.almoosacollege.edu.sa/"
                         target="_blank"
@@ -78,42 +92,77 @@ function index({ t }) {
                       </a>
                     </p>
                   </div>
+                  <div className="description">
+                    <h6>Almoosa Home Health Care :</h6>
+                    <p>
+                      Almoosa HHC offers comprehensive care given by skilled
+                      medical professionals, including skilled nursing care,
+                      physical therapy, occupational therapy, and assistance
+                      with daily living from highly qualified home health
+                      professionals .
+                    </p>
+                  </div>
                 </div>
               )}
               {language == 'ar' && (
                 <div className="section-content">
                   <p>
-                    استثمرنا في قطاع الرعاية الصحية لكونه أحد القطاعات الحيوية
-                    في المجتمع ، تركز المجموعة على المشاريع ذات القيمة المضافة
-                    التي توفر خدمات أفضل وجودة استثنائية للمجتمع. لذلك ، استثمرت
-                    المجموعة في العديد من مشاريع الرعاية الصحية على مر السنين :
+                    استثمرت المجموعة في العديد من مشاريع الرعاية الصحية خلال
+                    السنوات الماضية لتوفير خدمات صحية ذات جودة عالمية يستحقها
+                    أهلنا في الأحساء و مرضانا من كافة المملكة و الخليج ، كانت
+                    البداية مع المستشفى الرئيسي الذي أُنشئ عام 1996 كأول مستشفى
+                    خاص في منطقة الأحساء ، تلاه البرج الجنوبي ، حتى افتتاح البرج
+                    الشمالي في نهاية 2021 والذي يتميز بتصميم عالمي يناسب
+                    احتياجات مرضانا و خدمات متميزة باستخدام أحدث التقنيات
+                    التكنولوجية .
+                    <br /> <br />
+                    تتكون مجموعة الموسى الصحية من :
                     <ul>
                       <li>مسشتفى الموسى التخصصي </li>
-                      <li>مركز التأهيل والرعاية الدائمة</li>
+                      <li>مستشفى الموسى للتأهيل و الرعاية الممتدة</li>
                       <li>كلية الموسى للعلوم الصحية</li>
+                      <li>الموسى للرعاية الصحية المنزلية</li>
                     </ul>
                   </p>
                   <br />
 
                   <div className="description">
-                    <h6>مركز التأهيل والرعاية الدائمة : </h6>
+                    <h6>مستشفى الموسى للتأهيل و الرعاية الممتدة : </h6>
                     <p>
-                      مركز التأهيل الشامل ومستشفى الرعاية الدائمة بسعة 300 سرير،
+                      تبلغ سعة مستشفى التأهيل الشامل والرعاية الممتدة 300 سرير،
                       ويمتد على أرض مساحتها 30 ألف متر مربع، وسيكون المركز
                       الجديد الأول من نوعه في المملكة بإذن الله، حيث سيكون
                       المركز واحة استشفائية شاملة تخدم أهالي المنطقة والمملكة
-                      والخليج
+                      والخليج.
                     </p>
                   </div>
                   <div className="description">
                     <h6>كلية الموسى للعلوم الصحية :</h6>
                     <p>
+                      تم تأسيس كلية الموسى للعلوم الصحية عام ٢٠١٩ وتعد أول كلية
+                      خاصة غير ربحية في المنطقة.
+                      <br />
+                      تتطلع كلية الموسى للعلوم الصحية لتخريج نخبة من ممرضات
+                      المستقبل بتوفير بيئة تشجع على التعلم مزودة بالتكنولوجيا
+                      الحديثة ومناهج مطورة بطرق تدريس مبتكرة من خلال تعاونهامع
+                      معهد MGH للمهن الصحية في بوستن. ويلتزم جميع العاملين في
+                      الكلية بتوفير مستوى تعليمي راقي على قدر من الكفاءة
+                      والجودة. <br />
                       <a
-                        href="https://www.almoosacollege.edu.sa/about-ar/"
+                        href="https://www.almoosacollege.edu.sa"
                         target="_blank"
                       >
-                        https://www.almoosacollege.edu.sa/about-ar/
+                        https://www.almoosacollege.edu.sa
                       </a>
+                    </p>
+                  </div>
+                  <div className="description">
+                    <h6>الموسى للرعاية الصحية المنزلية :</h6>
+                    <p>
+                      يقدم مستشفى الموسى للرعاية الصحية خدمات رعاية شاملة على يد
+                      كفاءات طبية وتمريضية متميزة، بما في ذلك الرعاية التمريضية،
+                      والعلاج الطبيعي والتأهيلي، رعاية كبار السن، رعاية ما بعد
+                      العمليات الجراحية وادارة الأمراض المزمنة بالمنزل
                     </p>
                   </div>
                 </div>

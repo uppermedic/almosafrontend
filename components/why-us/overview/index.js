@@ -25,55 +25,109 @@ const index = ({ t }) => {
                       الرعاية الإنسانية الدؤوبة مع طاقم طبي وتكنولوجي وإداري
                       عالي الكفاءة ، مما يضمن توفير رعاية مثالية تركز على
                       الإنسان في منطقة الأحساء بشكل خاص وباقي دول مجلس التعاون
-                      الخليجي بشكل عام.
+                      الخليجي بشكل عام .
                       <br />
                       <br />
-                      تبلغ سعة مستشفى الموسى التخصصي ، وهو أحد أكبر المستشفيات
-                      في المنطقة ، 200 سريرًا ، ويعمل به أكثر من 2300 من مقدمي
-                      الرعاية ، مع أكثر من 700 ممرض و 280 طبيبًا بدوام كامل.
-                      <br />
-                      <br />
-                      مستشفى الموسى حاصل على حصل على اعتمادات من هيئات دولية
-                      وإقليمية مثل JCI و CBAHI وكلية الأطباء الأمريكيين (CAP ) ،
-                      وجائزة التميز لمركز السمنة.
-                      <br />
-                      <br />
-                      بالاضافة لكوننا أول مستشفى في الشرق الأوسط يحصل على شهادة
-                      بلانيتري الذهبية للتميز في تجربة المرضى كما تم اعتماد
-                      مستشفى الموسى التخصصي كمستشفى تعليمي معتمد من الهيئة
-                      السعودية للتخصصات الطبية لتدريب الأطباء.
+                      تبلغ سعة مستشفى الموسى التخصصي 440 سريرًا ، ويعمل بها أكثر
+                      من 2653 من مقدمي الرعاية :
+                      <ul>
+                        <li>746 ممرضة .</li>
+                        <li>331 طبيب بدوام كامل .</li>
+                        <li>556 مشرف .</li>
+                        <li>524 عامل في قطاع الصحة .</li>
+                        <li>70 FMS .</li>
+                      </ul>
+                      من خلال رؤيتنا الطويلة وإيماننا بعالمية الطب ، وكجزء من
+                      سعينا المستمر لتحسين خدماتنا الطبية، حصل مستشفى الموسى
+                      التخصصي على اعتمادات من هيئات دولية وإقليمية :
+                      <ul>
+                        <li>
+                          جائزة الملك عبد العزيز للجودة 2018 - KAQA (الجائزة
+                          الفضية) .
+                        </li>
+                        <li>اعتماد Planetree .</li>
+                        <li>اعتماد اللجنة الدولية المشتركة (JCI) .</li>
+                        <li>اعتماد كلية علماء الأمراض الأمريكية - CAP .</li>
+                        <li>جائزة Everett Koop الوطنية للصحة - KOOP 2019 .</li>
+                        <li>ACR - الكلية الأمريكية للأشعة .</li>
+                        <li>
+                          جائزة الغرفة التجارية لأفضل منشأة على مستوى الكيانات
+                          الاقتصادية الكبرى .
+                        </li>
+                        <li>برنامج التعرف على Magnet - رحلتنا إلى Magnet .</li>
+                        <li>
+                          المجلس المركزي السعودي لاعتماد المؤسسات الصحية (CBAHI)
+                          .
+                        </li>
+                        <li>الجمعية الأمريكية لبنوك الدم - AABB .</li>
+                        <li>
+                          مركز التميز لعلاج السمنة (BCOE) من SRC في عام 2018 .
+                        </li>
+                        <li>اعتمادHCCAP .</li>
+                        <li>شعهادة الأيزو 45001 .</li>
+                        <li>شهادة HIMSS .</li>
+                        <li>اعتماد ASHP .</li>
+                      </ul>
                     </p>
                   ) : (
                     <p>
                       Almoosa Specialist Hospital is an integrated health system
                       that carries the concept of diligent human care with
                       highly effective, competent, and accountable integrated
-                      medical, technological, and administrative staff ,
-                      ensuring the provision of ideal and human centered care
-                      for patients in the Al-Ahsaa region in particular and the
-                      rest of the GCC in general.
+                      medical, technological, and administrative staff to ensure
+                      providing the best human-centered care for our patients in
+                      the Al-Ahsaa and the GCC .
                       <br />
                       <br />
-                      Almoosa Specialist Hospital's capacity, one of the largest
-                      hospitals in the region, exceeds 200 hospital beds, and
-                      more than 2300 caregivers are employed by the hospital,
-                      with over 700 nurses and 280 full-time doctors.
-                      <br />
-                      <br />
-                      Through our long-term vision and our belief in the
+                      Almoosa Specialist Hospital's capacity is 440 beds, with
+                      More than 2653 caregivers employed :
+                      <ul>
+                        <li>746 nurses .</li>
+                        <li>331 -full-time doctors .</li>
+                        <li>556 admins .</li>
+                        <li>524 allied health .</li>
+                        <li>70 FMS .</li>
+                        <li>426 support services .</li>
+                      </ul>
+                      Through our long-drawn vision and our belief in the
                       universality of medicine, and as part of our continuous
                       endeavor to improve our medical services, ASH has obtained
-                      accreditations from international and regional bodies such
-                      as JCI, CBAHI, the College of American Physicians (CAP),
-                      and the Excellence Award for the Bariatric Center.
-                      <br />
-                      <br />
-                      We were the first hospital in the Middle East to obtain
-                      the Planetree Gold Certificate of Excellence Inpatient
-                      care and the accreditation of Al-Moosa Specialist Hospital
-                      as a teaching hospital accredited by the Saudi Commission
-                      for Medical Specialties to train doctors within the
-                      framework of the Saudi Council program.
+                      accreditations from international and regional bodies :
+                      <ul>
+                        <li>
+                          King Abdulaziz Quality Award 2018 - KAQA (Silver
+                          Award) .
+                        </li>
+                        <li>Planetree Designation .</li>
+                        <li>
+                          Joint Commission International Accreditation (JCI) .
+                        </li>
+                        <li>College of American Pathologists - CAP .</li>
+                        <li>
+                          Everett Koop National Health Award - KOOP 2019 .
+                        </li>
+                        <li>ACR - American College of Radiology .</li>
+                        <li>
+                          Chamber of Commerce Award for Best Facility at the
+                          Major Economic Entities Level .
+                        </li>
+                        <li>
+                          Magnet Recognition Program – our journey to Magnet .
+                        </li>
+                        <li>
+                          Saudi Central Board for Accreditation of Healthcare
+                          Institutions- CBAHI .
+                        </li>
+                        <li>American Association of Blood Banks - AABB .</li>
+                        <li>
+                          Bariatric Center of Excellence (BCOE) from SRC in 2018
+                          .
+                        </li>
+                        <li>HCCAP .</li>
+                        <li>ISO 45001 .</li>
+                        <li>HIMSS Certification .</li>
+                        <li>ASHP accreditation .</li>
+                      </ul>
                     </p>
                   )}
                 </Col>

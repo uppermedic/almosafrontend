@@ -20,30 +20,47 @@ function index({ t, data }) {
             <Container>
               <div className="section-content">
                 {language === 'en' && (
-                  <div className="description">
-                    <h5>Strategic Priorities</h5>
-                    <ul>
-                      <li>
+                  <>
+                    <div className="description">
+                      <h5>People</h5>
+                      <p>
                         Attract, educate, develop, and Retain talented
                         professionals who deliver excellent care and promote
                         wellness.
-                      </li>
-                      <li>
+                      </p>
+                    </div>
+                    <div className="description">
+                      <h5>Patient Safety and Quality</h5>
+                      <p>
                         To Be a regional leader in quality outcomes and patient
-                        safety through continuous and effective improvement.
-                      </li>
-                      <li>
+                        safety through continuous and effective improvement .
+                      </p>
+                    </div>
+                    <div className="description">
+                      <h5>Patient Experience</h5>
+                      <p>
                         Achieve national leadership in enhancing the patient
-                        experience for patients and families.
-                      </li>
-                      <li>
+                        experience for patients and families .
+                      </p>
+                    </div>
+                    <div className="description">
+                      <h5>Promoting Wellness</h5>
+                      <p>
                         Foster Physical, Emotional, Intellectual, Social,
                         Spiritual, Environmental, and Occupational Wellness by
                         incorporating these dimensions in all our decisions and
-                        actions.
-                      </li>
-                    </ul>
-                  </div>
+                        actions .
+                      </p>
+                    </div>
+                    <div className="description">
+                      <h5>Performance</h5>
+                      <p>
+                        Continuously improve personal, profession, company, and
+                        financial performance to achieve our Mission and Vission
+                        .
+                      </p>
+                    </div>
+                  </>
                 )}
                 {language === 'ar' && (
                   <>
@@ -51,8 +68,7 @@ function index({ t, data }) {
                       <h5>الاستثمار في الطاقة البشرية :</h5>
                       <p>
                         تعليم وتطوير المهنيين من ذوي المواهب والكفاءات العالية
-                        الذين يعززون الصحة ويقمون رعاية صحية مميزة والمحافظة
-                        عليهم.
+                        الذين يعززون الصحة ويقدمون رعاية صحية مميزة .
                       </p>
                     </div>
                     <div className="description">
