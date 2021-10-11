@@ -22,12 +22,7 @@ const services = ({ t }) => {
   return (
     <div className="for-visitors">
       <Head data={seo}></Head>
-      <Hero>
-        <img
-          src="/images/patient-guide/for_visitors/hero.png"
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg="/images/patient-guide/for_visitors/hero.png">
         <div className="hero-content">
           <h2 className="title">{t('menu:for visitors')}</h2>
         </div>

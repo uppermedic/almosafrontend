@@ -34,8 +34,7 @@ const Index = ({
   return (
     <div className="blog">
       <Head data={seo}></Head>
-      <Hero>
-        <img src={page_cover} alt="hero-cover" className="hero-cover" />
+      <Hero bg={page_cover}>
         <div className="hero-content">
           <h2 className="title">{lang && seo[lang].title} </h2>
         </div>

@@ -25,12 +25,7 @@ const AcademicTraning = ({ data, t }) => {
   return (
     <div className="training-education">
       <Head data={seo}></Head>
-      <Hero>
-        <img
-          src="/images/training/academic/academic-banner1.jpg"
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg="/images/training/academic/academic-banner1.jpg">
         <div className="hero-content">
           <h2 className="title">{t('menu:academic affairs')}</h2>
         </div>

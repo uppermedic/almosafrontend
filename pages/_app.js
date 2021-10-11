@@ -49,15 +49,6 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-// MyApp.getInitialProps = async ctx => {
-//   const { data } = await fetchData('/layout');
-//   return {
-//     pageProps: {
-//       // namespacesRequired: ['common','menu'], // we won't need to add in every grtServerSideProps method
-//       AppPageData: data
-//     }
-//   };
-// };
 MyApp.getInitialProps = async appContext => {
   const { data } = await fetchData('/layout');
   let appProps = await App.getInitialProps(appContext);

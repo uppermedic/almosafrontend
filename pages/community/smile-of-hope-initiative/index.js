@@ -27,8 +27,7 @@ const Cleft = ({ data }) => {
   return (
     <div className="cleft">
       <Head data={head_data} />
-      <Hero>
-        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+      <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h2 className="title">{lang && data[lang].title} </h2>
         </div>

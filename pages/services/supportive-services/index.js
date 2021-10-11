@@ -48,16 +48,11 @@ function Supportive({ t, services, servicesDataSingle }) {
   return (
     <div className="support-services">
       <Head data={seo}></Head>
-      <Hero>
-        <img
-          src={
-            url?.includes('?')
-              ? servicesDataSingle.thumbnail
-              : pharmacy.thumbnail
-          }
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero
+        bg={
+          url?.includes('?') ? servicesDataSingle.thumbnail : pharmacy.thumbnail
+        }
+      >
         <div className="hero-content">
           <h2 className="title">
             {url?.includes('?')

@@ -9,8 +9,7 @@ function MedicalCenters({ t, data }) {
   return (
     <div className="medical-centers">
       <Head data={data.seo || false}></Head>
-      <Hero>
-        <img src={data.page_cover} alt="hero-cover" className="hero-cover" />
+      <Hero bg={data.page_cover}>
         <div className="hero-content">
           <h2 className="title">{t('menu:medical centers')}</h2>
         </div>

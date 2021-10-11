@@ -22,12 +22,7 @@ const FutureProjects = ({ t }) => {
   return (
     <div className="almoosa-medical-group">
       <Head data={seo}></Head>
-      <Hero>
-        <img
-          src="/images/about/hero-bg.png"
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg="/images/about/hero-bg.png">
         <div className="hero-content">
           <h2 className="title">{t('menu:almoosa medical group')}</h2>
         </div>
