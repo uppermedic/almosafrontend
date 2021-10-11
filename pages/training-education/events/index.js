@@ -24,12 +24,7 @@ const EventsTraning = ({ eventData, educationData, t }) => {
   return (
     <div className="training-education">
       <Head data={seo}></Head>
-      <Hero>
-        <img
-          src={educationData.page.page_cover}
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
           <h2 className="title">{t('menu:events')}</h2>
         </div>

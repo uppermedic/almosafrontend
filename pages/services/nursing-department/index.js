@@ -23,12 +23,7 @@ const index = ({ t }) => {
   return (
     <div className="nursing-department">
       <Head data={seo} />
-      <Hero>
-        <img
-          src="/images/services/nursing.png"
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg="/images/services/nursing.png">
         <div className="hero-content">
           <h2 className="title">{t('menu:nursing department')}</h2>
         </div>

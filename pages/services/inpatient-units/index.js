@@ -19,12 +19,7 @@ function InpatientPage({ t, services, servicesDataSingle }) {
     <React.Fragment>
       <Head data={services.seo}></Head>
       <div className="inpatient-units">
-        <Hero>
-          <img
-            src={servicesDataSingle.thumbnail}
-            alt="hero-cover"
-            className="hero-cover"
-          />
+        <Hero bg={servicesDataSingle.thumbnail}>
           <div className="hero-content">
             <h2 className="title">
               {lang && servicesDataSingle.seo[lang].title}

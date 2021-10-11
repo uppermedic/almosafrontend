@@ -23,16 +23,6 @@ const golden_designation = ({ t }) => {
   return (
     <div className="golden-designation">
       <Head data={seo}></Head>
-      {/* <Hero>
-        <img
-          src="/images/why_choose_us/awards-hero.png"
-          alt="hero-cover"
-          className="hero-cover"
-        />
-        <div className="hero-content">
-          <h2>{t('menu:golden_designation')}</h2>
-        </div>
-      </Hero> */}
       <GoldenDesignation />
     </div>
   );

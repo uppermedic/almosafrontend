@@ -28,8 +28,7 @@ const TasteOfArt = ({ data, t }) => {
   return (
     <section className="taste_of_art">
       <Head data={head_data}></Head>
-      <Hero>
-        <img src={data.cover_image} alt="hero-cover" className="hero-cover" />
+      <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h2 className="title">{lang && data[lang].title} </h2>
         </div>

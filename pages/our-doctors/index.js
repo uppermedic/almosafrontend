@@ -55,13 +55,7 @@ function Our_Doctors({ data, getCategories, categories }) {
   return (
     <div className="almoosa-doctors">
       <Head data={data.page.seo}></Head>
-      {/* /images/why_choose_us/our-doctors/our-doctors-hero.png */}
-      <Hero>
-        <img
-          src={data.page.page_cover}
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg={data.page.page_cover}>
         <div className="hero-content">
           <h2 className="title">{data.page.seo[language]?.title}</h2>
         </div>
