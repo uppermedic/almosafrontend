@@ -23,14 +23,7 @@ const Values = ({ t, data }) => {
   return (
     <div className="values">
       <Head data={seo}></Head>
-      <Hero>
-        <div className="banner-overlay"></div>
-
-        <img
-          src={data.page.page_cover}
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg={data.page.page_cover}>
         <div className="hero-content">
           <h2 className="title">{t('menu:core values')}</h2>
         </div>

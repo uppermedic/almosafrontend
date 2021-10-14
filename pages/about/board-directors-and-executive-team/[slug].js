@@ -39,16 +39,6 @@ function BordDirectors() {
   return (
     <div className="almoosa-doctors doctor-slug-page">
       <Head data={seo}></Head>
-      {/* <Hero>
-        <img
-          src="/images/why_choose_us/overview-hero.png"
-          alt="hero-cover"
-          className="hero-cover"
-        />
-        <div className="hero-content">
-          <h2>{seo[language]?.title}</h2>
-        </div>
-      </Hero> */}
       <DoctorPage doctorData={doctorData} />
     </div>
   );

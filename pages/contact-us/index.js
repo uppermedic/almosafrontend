@@ -10,12 +10,7 @@ export default function index({ data }) {
   return (
     <div className="contact-us">
       <Head data={data.page.seo}></Head>
-      <Hero>
-        <img
-          src={data.page.page_cover}
-          alt="hero-cover"
-          className="hero-cover"
-        />
+      <Hero bg={data.page.page_cover}>
         <div className="hero-content">
           <h2 className="title">{lang && data.page.seo[lang].title}</h2>
         </div>

@@ -813,5 +813,82 @@ export const TeamData = [
         'European Society of Clinical Microbiology and Infectious Diseases, 2007 - present '
       ]
     }
+  },
+  {
+    image: 'http://admin.almoosahospital.live/storage/doctors/rida khadra.jpeg',
+    id: 13,
+    ar: {
+      name: 'د. رضا الخضرا',
+      title: 'الرئيس التنفيذي لتطوير الأعمال و الاستراتيجية',
+      paragraph: `وُلد في صور .. المدينة الفينيقية العريقة  التي اشتهرت بشجاعة ابنائها امام زحف الأسكندر المقدوني
+      <br/><br/>
+      والدته كانت من أوائل السيدات اللواتى التحقن بكلية الصيدلة بالجامعة الأمريكية بلبنان .. في أربعينيات القرن الماضي
+      <br/><br/>
+      انتقل من لبنان الى مصر والتحق بمدارس دي لاسال و عاش مع أسرته هناك  حتى انهي الدراسة الثانوية ، بعدها التحق بالجامعة الأمريكية ومن ثم بكلية الطب في لبنان .. بعد التخرج سافر  الى الأردن لدراسة تخصص طب وجراحة العيون بمدينة الحسين الطبية 
+      <br/><br/>
+      كما انهي زمالة ودراسات متعددة في مجال تصحيح البصر بالليزر منها تدربه على يد يانيس پاليكاريس محدث عملية الليزك
+      <br/><br/>
+      تنوع الأماكن و الثقافات ، ودور الأم كناشطة في حقوق المرأة ،  كان له أثر كبير في تكوين شخصيته .. فبجانب عمله بالبصر  إلا انه دوما ما كان مهتمًا بالبصيرة .
+      <br/><br/>
+      حياته الشخصية والمهنية مليئة بالانجازات المشرفة .. فهو متزوج من د.  غنوة ، طبيبة عامة ، وهو أب لولدين احدهما مهندس والثاني دارس للطب كلاهما بكندا .. يفتخر بمكتبته ويستمتع بالقراءة وممارسة الرياضة 
+      <br/><br/>
+      اما على الصعيد المهني فهو حاصل على البورد العربي في طب العيون ، البورد الأردني في طب العيون، شهادة محترف العائد على الاستثمار ROI من معهد Fournaise ، و شهادة إدارة العلامات التجارية بالإضافة الى ماجستير إدارة الأعمال  من جامعة مورسيا للرعاية الصحية - إسبانيا (UCAM)
+      <br/><br/>
+      بجانب ممارسة الطب منذ اكثر  من عشرين عامًا .. أغرم بدراسة الإدارة و الإستراتيجية ليبدأ فصلا مهنياً جديداً في حياته
+      <br/><br/>
+      هو  د. رضا الخضرا ،استشاري طب وجراحة العيون و الرئيس التنفيذي لتطوير الأعمال و الاستراتيجية بمستشفانا `
+    },
+    en: {
+      name: 'Dr. Rida khadra',
+      title: 'Chief executive of Strategy and Business Development',
+      paragraph: `Born in Tyre, the ancient Phoenician city, famous for the intrepidity of its sons against the advance of Alexander the Great.
+      <br/><br/>
+      His mother was one of the first women to join the Faculty of Pharmacy at the American University in Lebanon in the 1940s
+      <br/><br/>
+      He and his family moved from Lebanon to Egypt, where the 6-years-old Rida joined the De La Salle Schools and lived with his family there until he finished high school. 
+      <br/><br/>
+      After that He joined the American University and then the Faculty of Medicine in the Lebanese university in Lebanon. 
+      <br/><br/>
+      After graduation, he traveled to Jordan to specialize in ophthalmology in King Hussein Medical City.
+      <br/><br/>
+      The diversity of places and cultures, and the mother figure as a feminist activist, had a significant impact on his personality... In addition to practicing  of preserving sight, he was always interested in the enlightenment of insights.
+      <br/><br/>
+      His personal and professional life is full of honorable achievements... He is married to Dr.  Ghinwa, a general practitioner He is also father of two sons, Ali, an electrical engineer working in Montréal and Mohamad,  a pre-medical student, in Ottawa, Canada. 
+      <br/><br/>
+      He is proud of his library and enjoys reading and playing sports.
+      <br/><br/>
+      On the professional level, he holds the Arab Board of Ophthalmology, the Jordanian Board of Ophthalmology, the ROI Professional Certificate from Fournaise Institute, the Brand Management Certificate, and an MBA from the University of Murcia Healthcare - Spain (UCAM).
+      <br/><br/>
+      After practicing medicine for more than twenty years,  he entered into management moving from healthcare marketing and communication to healthcare business development then to strategy customers management starting a new professional chapter in his life.
+      <br/><br/>
+      This is Dr. Rida Al-Khadra, a Consultant Ophthalmologist and chief executive of Strategy and Business Development at our hospital`
+    }
+  },
+  {
+    image: 'http://admin.almoosahospital.live/storage/doctors/ساااااااامر.png',
+    id: 13,
+    ar: {
+      name: 'د. سامر قارة',
+      title: 'المدير الطبي',
+      paragraph: `لفت إليه الأنظار منذ صغره ، وُلد في عائلة تحترم العلم و توليه أهمية كبرى ، فتعلم منذ الصغر أن علمه هو سلاحه
+        <br/><br/>
+        تميز بعلامات مرتفعة و سلوك مهذب جعل كل من حوله يتنبأ له بمستقبل باهر د. سار قاره ، و الذي حمل لقب دكتور قبل أن يدخل الطب ، فتميزه الدراسي وحلمه أن يصبح طبيباً كان صادقاً و حقيقاً لدرجة أن عائلته و أصدقائه كانوا ينادونه بالدكتور و كبر الشاب الطموح و كبر معه الحلم ، و دخل الطب و تفوق فيه .
+        <br/><br/>
+        واختار العناية الحرجة تخصصاً من خلاله ينقذ أرواحاً و يترك أثراً مشوار حياته يذخر بالعلم والعمل ، فبعد تخرجه استمر مشاور العلم و معه التدرج في المناصب ، فحصل اولاً على البورد الامريكي في طب الامراض الباطنية من مستشفى وجامعة كورنيل في الولايات المتحدة الامريكية ثم حصل على البورد الامريكي في طب الامراض الصدرية، من مستشفى وجامعة كورنيل ومستشفيات نيويورك في الولايات المتحدة الامريكية ، ثم حصل على البورد الامريكي في طب العناية الحرجة في مستشفى موني فيوري البرت اينشتاين ، نيويورك الولايات المتحدة الامريكية و شغل عدة مناصب منها رئيس الأطباء و رئيس قسم العناية الحرجة بمستشفانا ، كما شغل منصب رئيس الأطباء و رئيس قسم العناية الحرجة بمستشفى سعد التخصصي بالخبر ، ورئيس قسم العناية الحرجة بمستشفى الملك فهد بجدة د. سامر متحدث لبق و مستمع جيد لمرضاه ، و في وقت فراغه يستمتع بالقراءة و الكاراتية و الصيد ، و هو متزوج و لديه 4 أبناء.`
+    },
+    en: {
+      name: 'Dr. Samer Qara',
+      title: 'Chief of Staff',
+      paragraph: `Born into a family that respects science and places great importance on it. 
+        Learned from a young age that his knowledge is his weapon. He was distinguished by high marks and good behavior that made everyone around him predict a bright future for him
+        <br/><br/>
+         Dr. Samer Qarah, who held the title of the doctor before entering medicine, putting his study first and dreamed of becoming a doctor,  he was so honest and genuine that his family and friends called him the doctor of the family.
+         <br/><br/>
+        His life journey is rich in science and work and his pursue of learning has no roof, after graduation he obtained the American Board in Internal Medicine from Cornell Hospital and University in the United States of America, then he earned the American Board in pulmonary medicine from Cornell University Hospital and New York Hospitals in the United States of America
+        <br/><br/>
+         After that, he got the American Board of Critical Care Medicine at Money Fury Albert Einstein Hospital, New York, United States of America
+         <br/><br/>
+        Held several positions, including Chief of staff and Head of Critical Care Department in our hospital. Also, he became the Chief of staff and Head of the Critical Care Department at Saad Specialist Hospital in Al-Khobar. The Head of the Critical Care Department at King Fahd Hospital in Jeddah, Dr. Samer, is a tactful and good listener. In his spare time, he enjoys reading, karate, and fishing. He is married and has four children`
+    }
   }
 ];
