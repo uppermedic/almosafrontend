@@ -67,12 +67,22 @@ function index({ t, histories }) {
   const [activeTab, setActiveTab] = useState({});
   const [data, setData] = useState([]);
   const [transform, setTransform] = useState(0);
+  const [slideDir, setslideDir] = useState(-1);
 
   const toggle = tab => {
     if (String(activeTab.head) !== String(tab.head)) {
       setActiveTab(tab);
     }
   };
+
+  useEffect(() => {
+    if (language == 'en') {
+      setslideDir(1);
+    } else if (language == 'ar') {
+      setslideDir(-1);
+    }
+  }, [language]);
+
   useEffect(() => {
     setData(Array.isArray(histories) ? histories.reverse() : []);
     setActiveTab(
@@ -99,7 +109,7 @@ function index({ t, histories }) {
     infinite: true,
     centerMode: true,
     slidesToShow: data.length >= 6 ? 6 : data.length,
-    slidesToScroll: 1,
+    slidesToScroll: slideDir,
     autoplay: false,
     autoplaySpeed: 2000,
     rtl: true,
@@ -113,7 +123,7 @@ function index({ t, histories }) {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: slideDir,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
         }
@@ -122,7 +132,7 @@ function index({ t, histories }) {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: slideDir,
           initialSlide: 2,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
@@ -132,7 +142,7 @@ function index({ t, histories }) {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: slideDir,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
         }
