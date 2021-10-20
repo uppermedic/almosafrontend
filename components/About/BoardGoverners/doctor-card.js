@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { i18n, Link } from 'root/i18n';
 
 const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const handleClick = async () => {
     setcurrentDoctor(doctor);
     localStorage.setItem('doctor', JSON.stringify(doctor));
@@ -10,7 +16,11 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
   return (
     <Link
       href={
-        hasRef ? `/about/board-directors-and-executive-team/${doctor.id}` : '#'
+        hasRef
+          ? `/${locale}/about/board-directors-and-executive-team/${
+              language && String(doctor[language]?.slug)
+            }?id=${doctor?.id}`
+          : '#'
       }
     >
       <div className="card" onClick={handleClick}>

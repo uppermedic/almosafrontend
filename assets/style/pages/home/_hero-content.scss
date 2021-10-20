@@ -79,10 +79,7 @@
         }
       }
       &:first-child {
-        margin: 10px 10px 10px 0;
-        @include rtl() {
-          margin: 10px 0 10px 10px;
-        }
+        margin: 10px;
       }
       &:last-child {
         margin: 10px 0 10px 10px;
@@ -128,6 +125,11 @@
     }
 
     @include respond-below(sm) {
+      font-size: 12px;
+      padding: 0.5em 1em;
+    }
+
+    @include respond-below(xs) {
       display: none;
     }
   }

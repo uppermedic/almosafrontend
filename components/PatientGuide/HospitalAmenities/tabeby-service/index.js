@@ -60,50 +60,51 @@ const Content = ({ t }) => {
                 )}
                 {language === 'en' && (
                   <>
-                    <h6 className="items-title">What is TABEBY Service?</h6>
+                    <h6 className="items-title">What is Tabibi Service?</h6>
                     <div className="items-content">
-                      TABEBY service is designed for you to end all procedures
-                      and services starting with the request of the file and
-                      ending with taking the appointment for the next visit.
+                      Tabibi service is designed for your comfort. Through
+                      Tabibi, all your procedures and services started by
+                      requesting your medical file and ending with taking the
+                      appointment to the next visit will make easy.
                     </div>
 
-                    <h6 className="items-title">TABEBY card features :</h6>
+                    <h6 className="items-title">Tabibi card features :</h6>
                     <div className="items-content">
                       <ul>
                         <li>
-                          Special coordinator to book appointments and
-                          facilitate procedures.
+                          Special coordinator to book your appointments and
+                          facilitate procedures .
                         </li>
-                        <li>A private waiting area.</li>
+                        <li>A private waiting area .</li>
+                        <li>Easy access to clinics, labs, and radiology .</li>
                         <li>
-                          Easy access to clinics, laboratories and radiology.
-                        </li>
-                        <li>
-                          Special offers and discounts for a specific services.
+                          Special offers and discounts on specific services .
                         </li>
                         <li>
-                          Ability to upgrade the room according to availability.
+                          Ability to upgrade the room according to availability
+                          .
                         </li>
-                        <li>Medicines delivery to the home.</li>
-                        <li>10% discount on home visits.</li>
+                        <li>Medication delivery .</li>
+                        <li>10% discount on home visits .</li>
                         <li>
-                          Parking, reception and escort service from the gate to
-                          the reception hall.
+                          Parking, area, and escort service from the gate to the
+                          reception hall .
                         </li>
                       </ul>
                     </div>
 
                     <h6 className="items-title">
-                      Annual subscription fee is :<strong> 2500 R.S</strong>
+                      Annual subscription fee :<strong> 2500 SR</strong>
                     </h6>
                     <div className="items-content">
-                      It includes <strong> 4 </strong> people +
-                      <strong> 250 R.S </strong> for each additional person.
+                      It include four people +<strong> 250 SR </strong> for each
+                      additional person .
                     </div>
                     <div className="items-content">
                       <strong>
-                        The quality for TABEBY subscribers is the same as the
-                        service for other patients, with no distinction.
+                        All patients get the absolute best healthcare services,
+                        and there is no difference in the services quality
+                        between Tabibi subscribers and other patients .
                       </strong>
                     </div>
                   </>

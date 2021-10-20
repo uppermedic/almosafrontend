@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-// import {  } from '@fortawesome/free-solid-svg-icons';
-// import {  } from '@fortawesome/free-regular-svg-icons';
-import Markdown from 'markdown-to-jsx';
-import { truncate, strippedContent } from 'src/utils/helpers.js';
+import { strippedContent } from 'src/utils/helpers.js';
 import {
   faFacebookSquare,
   faTwitterSquare,
@@ -17,6 +14,12 @@ import {
 
 const Footer = ({ data, customClass, t }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const {
     welcome_title,
     welcome_msg,
@@ -71,7 +74,7 @@ const Footer = ({ data, customClass, t }) => {
             <div className="links">
               <h3>{t('footer:useful_links')}</h3>
               <div className="d-flex flex-column">
-                <Link href="/contact-us">
+                <Link href={`/${locale}/contact-us`}>
                   <a>{t('footer:contact_page')}</a>
                 </Link>
                 <Link href="#!">

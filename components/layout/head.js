@@ -57,16 +57,7 @@ const Head = ({ data, children }) => {
       />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      {/* <script
-  type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-></script> */}
-      {/* <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-        crossOrigin="anonymous"
-      /> */}
+
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       {children}

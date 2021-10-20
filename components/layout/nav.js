@@ -10,20 +10,18 @@ import SearchNav from 'src/components/layout/SearchNav';
 
 const TopNav = ({ t }) => {
   const router = useRouter();
-  const { locale, pathname } = router;
+  const { asPath } = router;
 
-  // useEffect(() => {
-  //   switch (i18n.language) {
-  //     case 'en':
-  //       i18n.changeLanguage('en');
-  //       router.push('/' + pathname, { locale: 'en' });
-  //       break;
-  //     case 'ar':
-  //       router.push('/ar' + pathname, { locale: 'ar' });
-  //       i18n.changeLanguage('ar');
-  //       break;
-  //   }
-  // }, []);
+  const handleChangeLang = () => {
+    let langTo = i18n.language === 'ar' ? 'en' : 'ar';
+    i18n.changeLanguage(langTo);
+    document.getElementsByTagName('html')[0].setAttribute('lang', langTo);
+
+    langTo &&
+      router.push(`/${langTo}` + asPath, `/${langTo}` + asPath, {
+        locale: langTo
+      });
+  };
 
   return (
     <div className="top-nav">
@@ -31,16 +29,7 @@ const TopNav = ({ t }) => {
         <Row>
           <Col xs={12} sm={2}>
             <Nav className="left-items">
-              <NavItem
-                style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  let langTo = i18n.language === 'en' ? 'ar' : 'en';
-                  i18n.changeLanguage(langTo);
-                  document
-                    .getElementsByTagName('html')[0]
-                    .setAttribute('lang', langTo);
-                }}
-              >
+              <NavItem style={{ cursor: 'pointer' }} onClick={handleChangeLang}>
                 <a>
                   <FontAwesomeIcon icon={faGlobe} /> {t('lang')}
                 </a>

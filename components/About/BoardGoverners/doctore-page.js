@@ -1,21 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link, i18n, withTranslation } from 'root/i18n';
-import { useRouter } from 'next/router';
 
 const index = ({ doctorData, t }) => {
   const { language } = i18n;
-  const router = useRouter();
 
-  // useEffect(() => {
-  //   router.push(
-  //     `/about/board-directors-and-executive-team/${
-  //       language && String(doctorData[language].name).split(' ').join('-')
-  //     }?id=${doctorData.id}`
-  //   );
-
-  //   return () => {};
-  // }, [language]);
   return (
     <section className="our-doctors">
       <Container>

@@ -6,6 +6,7 @@ import DoctorPage from 'src/components/About/BoardGoverners/doctore-page';
 import { i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
+import { useRouter } from 'next/router';
 
 function BordDirectors() {
   const { language } = i18n;
@@ -23,8 +24,17 @@ function BordDirectors() {
       url: ''
     }
   };
-
+  const router = useRouter();
   const [doctorData, setdoctorData] = useState({});
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('doctor'));
+    router.push(
+      `/${language}/about/board-directors-and-executive-team/${
+        language && String(data[language]?.slug)
+      }?id=${data?.id}`
+    );
+  }, [language]);
 
   useEffect(() => {
     setdoctorData(

@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, withTranslation } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
-import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-  Col
-} from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import { useRouter } from 'next/router';
 
 const DynamicRouteTabs = ({ t, items, index }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const [activeTab, setActiveTab] = useState(index);
   const router = useRouter();
 
@@ -24,7 +20,7 @@ const DynamicRouteTabs = ({ t, items, index }) => {
   };
 
   const handleRouteById = item => {
-    router.push(item.path);
+    router.push(`/${locale}/${item.path}`);
   };
 
   return (

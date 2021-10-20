@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
+
 const WhyMosa = ({ data, t }) => {
+  const { language } = i18n;
+
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <div className="whyalmoosaWrapper">
       <Container>
         <Row className="top-section m-0">
           <Col xs={12} lg={6} className="p-0">
             <h2>
-              {i18n.language
-                ? strippedContent(data[i18n.language].title)
-                : 'Loading'}
+              {language ? strippedContent(data[language].title) : 'Loading'}
             </h2>
           </Col>
           <Col className="link_div p-0" xs={12} lg={6}>
-            <Link href="/why-choose-us">
+            <Link href={`/${locale}/why-choose-us`}>
               <span>{t('know_about_us')}</span>
             </Link>
           </Col>
@@ -33,9 +40,7 @@ const WhyMosa = ({ data, t }) => {
             data-aos-duration="1000"
           >
             <Markdown>
-              {i18n.language
-                ? strippedContent(data[i18n.language].content)
-                : 'Loading'}
+              {language ? strippedContent(data[language].content) : 'Loading'}
             </Markdown>
           </Col>
         </Row>

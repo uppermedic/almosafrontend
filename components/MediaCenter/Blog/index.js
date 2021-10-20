@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import ClassNames from 'classnames';
@@ -10,22 +10,17 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 import PostCard from './PostCard';
 
-// const data = [
-//   {
-//     id: 1,
-//     title: 'Power of Art Initiative',
-//     bg: '/images/community/power-of-art.png',
-//     ribbon_class: 'green',
-//     url: '/community/for-patients'
-//   }
-// ];
 const Index = ({ data, latest, tags, categories, t }) => {
   const router = useRouter();
   const [controllerOpen, setControllerOpen] = useState(false);
   const { last_page } = data;
+  const [locale, setlocale] = useState('');
+  const { language } = i18n;
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const handlePageClick = ({ selected }) => {
-    //console.log('🚀 ~ file: index.js ~ line 19 ~ Index ~ selected', selected);
-    //console.log(selected + 1);
     router.push(`?page=${selected + 1}`);
   };
   return (
@@ -90,13 +85,15 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/blog`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {categories.map(cat => (
                   <li key={cat.id}>
-                    <Link href={`/media-center/blog?cats=${cat.slug}`}>
+                    <Link
+                      href={`/${locale}/media-center/blog?cats=${cat.slug}`}
+                    >
                       <a>{cat[i18n.language].category_name}</a>
                     </Link>
                   </li>
@@ -112,7 +109,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {latest.map((post, idx) => (
                   <li key={String(post.id)}>
                     <Link
-                      href={`/media-center/blog/post/${String(
+                      href={`/${locale}/media-center/blog/post/${String(
                         i18n.language ? post[i18n.language]?.title : ''
                       )
                         .split(' ')
@@ -149,13 +146,15 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('tags')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/blog`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {tags.map(tag => (
                   <li key={tag.id}>
-                    <Link href={`/media-center/blog?tags=${tag.tag_name}`}>
+                    <Link
+                      href={`/${locale}/media-center/blog?tags=${tag.tag_name}`}
+                    >
                       <a>{tag.tag_name}</a>
                     </Link>
                   </li>

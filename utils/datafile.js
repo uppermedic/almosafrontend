@@ -1,53 +1,53 @@
 export const dataAboutTabs = [
   {
-    path: '/about/overview',
+    path: 'about/overview',
     label: 'overview'
   },
   {
-    path: '/about/vision-mission',
+    path: 'about/vision-mission',
     label: 'vision and mission'
   },
   {
-    path: '/about/values',
+    path: 'about/values',
     label: 'core values'
   },
   {
-    path: '/about/strategic-priorities',
+    path: 'about/strategic-priorities',
     label: 'strategic priorities'
   },
   {
-    path: '/about/awards',
+    path: 'about/awards',
     label: 'awards'
   },
   {
-    path: '/about/our-history',
+    path: 'about/our-history',
     label: 'history'
   },
   {
-    path: '/about/board-directors-and-executive-team',
+    path: 'about/board-directors-and-executive-team',
     label: 'board governers and leadership team'
   },
   {
-    path: '/about/fast-facts',
+    path: 'about/fast-facts',
     label: 'fast facts'
   },
   {
-    path: '/about/almoosa-medical-group',
+    path: 'about/almoosa-medical-group',
     label: 'almoosa medical group'
   }
 ];
 
 export const dataACademicTabs = [
   {
-    path: '/training-education/events',
+    path: 'training-education/events',
     label: 'events'
   },
   {
-    path: '/training-education/courses',
+    path: 'training-education/courses',
     label: 'courses'
   },
   {
-    path: '/training-education/academic-affairs',
+    path: 'training-education/academic-affairs',
     label: 'academic affairs'
   }
 ];
@@ -58,10 +58,12 @@ export const GovernersData = [
     id: 1,
     ar: {
       name: 'الشيخ/ عبد العزيز الموسى',
+      slug: 'الشيخ-عبد-العزيز-الموسى',
       title: 'رئيس مجلس الإدارة لمجموعة الموسى الطبية'
     },
     en: {
       name: 'Sheikh. Abdulaziz Al-Mousa',
+      slug: 'sheikh-abdulaziz-al-mousa',
       title: 'Chairman of Almoosa Medical Group'
     }
   },
@@ -70,6 +72,7 @@ export const GovernersData = [
     id: 2,
     ar: {
       name: 'الأستاذ / مالك الموسى',
+      slug: 'أ-مالك-الموسى',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
       qualifications: [
@@ -82,6 +85,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Mr. Malek Almoosa',
+      slug: 'mr-malek-almoosa',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -98,6 +102,7 @@ export const GovernersData = [
     id: 3,
     ar: {
       name: 'الأستاذة / سارة الموسى',
+      slug: 'أ-سارة-الموسى',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
       qualifications: [
@@ -108,6 +113,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Mrs. Sara Almoosa',
+      slug: 'mrs-sara-almoosa',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -123,6 +129,7 @@ export const GovernersData = [
     id: 4,
     ar: {
       name: 'الدكتورة/ زينب الموسى',
+      slug: 'الدكتورة-زينب-الموسى',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
       qualifications: [
@@ -136,6 +143,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Dr. Zainab Al Moosa',
+      slug: 'dr-zainab-al-moosa',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -155,6 +163,7 @@ export const GovernersData = [
     id: 5,
     ar: {
       name: 'الأستاذ/ مساعد الموسى',
+      slug: 'أ-مساعد-الموسى',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
       qualifications: [
@@ -166,6 +175,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Mr. Musaed AlMoosa',
+      slug: 'mr-musaed-alMoosa',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -181,6 +191,7 @@ export const GovernersData = [
     id: 7,
     ar: {
       name: 'الأستاذ/ حسن العفالق',
+      slug: 'أ-حسن-العفالق',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
       qualifications: [
@@ -193,6 +204,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Mr. Hassen AlAfaaleq',
+      slug: 'mr-hassen-al-afaaleq',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -201,45 +213,6 @@ export const GovernersData = [
       ],
       positions: [
         'Deputy Chief Executive Officer for Finance at Ahdaf holding Development Company, ahsa'
-      ]
-    }
-  },
-
-  {
-    image: '/images/about/leadership-team/Ahmed-Al-Badr.jpg',
-    id: 9,
-    ar: {
-      name: 'الأستاذ / أحمد البدر',
-      title: 'عضو مجلس الإدارة',
-      paragraph: ``,
-      qualifications: [
-        'ماجستير ادارة مشاريع وبرامج من جامعة اكسفورد',
-        'ماجستير ادارة اعمال كلية الامير محمد بن سلمان',
-        'بكالوريوس هندسة جامعة الملك فهد للبترول والمعادن ',
-        'دبلوم ادارة منشئات صحية كلية راس الخيمة',
-        'البرنامج السعودي المتقدم للقيادة والادارة بجامعة اكسفورد.'
-      ],
-      positions: [
-        'مستشار وزير الاقتصاد والتخطيط',
-        'عضو لجنة المشاريع في برنامج المشروعات الوطني.',
-        'عضو مؤسس شركة صحة-تك'
-      ]
-    },
-    en: {
-      name: 'Mr. Ahmed Al-Badr',
-      title: 'Board Member',
-      paragraph: ``,
-      qualifications: [
-        'Master’s in Projects and Program Management from Oxford University ',
-        'Master’s in Business Administration, Prince Muhammad bin Salman College ',
-        'BA of Engineering, King Fahd University of Petroleum and Minerals. ',
-        'Diploma in Health care facilities Management, Ras Al Khaimah College. ',
-        'Saudi Advanced Program for Leadership and Management at Oxford University.'
-      ],
-      positions: [
-        'Advisor to the Minister of Economy and Planning.',
-        'Member of the Projects Committee of the National Projects Program.',
-        'Founder and CEO of Seha-Tech.com.'
       ]
     }
   }
@@ -251,6 +224,7 @@ export const TeamData = [
     id: 1,
     ar: {
       name: 'الأستاذ مالك الموسى',
+      slug: 'أ-مالك-الموسى',
       title: 'المدير التنفيذي لمستشفى الموسى',
       paragraph: `أ. مالك عضو مجلس إدارة والمدير التنفيذي لمجموعة الموسى الطبية.
       <br>
@@ -279,6 +253,7 @@ export const TeamData = [
     },
     en: {
       name: 'Mr. Malek Almoosa',
+      slug: 'mr-malek-almoosa',
       title: 'CEO',
       paragraph: `Mr. Malek is a board member and CEO of Almoosa Specialist Hospital. 
           He began his career as administrative affairs director in Almoosa Hospital in 2007. In 2012 became the CEO of Almoosa, where he set the transformational vision that turned Almoosa from a 100 Bed hospital to a 440-bed tertiary level hospital today. With plans to expand to 750 beds with the new rehabilitation and long-term care hospital in 2022. 
@@ -306,6 +281,7 @@ export const TeamData = [
     id: 2,
     ar: {
       name: 'الدكتورة/ زينب الموسى',
+      slug: 'الدكتورة-زينب-الموسى',
       title: 'استشارية اطفال و أمراض معدية',
       paragraph: `استشاري أمراض الأطفال المعدية ومدير الشؤون الأكاديمية بمستشفى الموسى التخصصي.
       
@@ -334,6 +310,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Zainab Al Moosa',
+      Slug: 'dr-zainab-al-moosa',
       title:
         'Consultant pediatric infectious diseases & Director of the Academic Affairs at Almoosa Specialist Hospital.',
       paragraph: `Dr. Zainab Is a Board Certified pediatric infectious disease consultant. She leads the Academic affairs department in the hospital. She led the expansion of the academic activities and transformation of Almoosa hospital towards a teaching hospital with more than ten residency and two fellowship programs. She served previously as Director of the infection control department in Almoosa.  
@@ -361,6 +338,7 @@ export const TeamData = [
     id: 3,
     ar: {
       name: 'منى خميس',
+      slug: 'منى-خميس',
       title: 'مدير تجربة المريض',
       paragraph: `
       انضمت منى إلى مستشفى الموسى في عام 2014 ، بخبرة أكثر من 12 عاماً  كأخصائية علاج طبيعي ، جاءت لأول مرة إلى المملكة في عام 2005 ، حيث انضمت إلى مجموعة الدكتور سليمان الحبيب الطبية كمدير للخدمات الطبية المساندة من عام 2005 حتى عام 2013. بعدها انضمت منى إلى الموسى كرئيسة لقسم العلاج الطبيعي في وقت لاحق قادت انشاء قسم تجربة المريض ، منى حاصلة على بكالوريوس العلاج الطبيعي وإدارة الرعاية الصحية ، وماجستير في إدارة الأعمال (M.B.A.) ودكتوراه في الإدارة المالية لمنظمات الرعاية الصحية من جامعة القديس يوسف في لبنان. منى زميلة الكلية الأمريكية للمديرين التنفيذيين للصحة F.A.C.H.E.وزميلة منظمة البلانتري الدولية للرعاية التي تركز على الانسان
@@ -376,6 +354,7 @@ export const TeamData = [
     },
     en: {
       name: 'Mona Khamis. MBA',
+      slug: 'mona-khamis',
       title: 'Patient experience director',
       paragraph: `Mona joined A.S.H. in 2014, bringing with her more than 12 years of experience. She began her career as a physiotherapist and first came to the kingdom in 2005, where she joined Dr. Suliamn Alhabib Medical Group as Medical Support Manager from 2005 until 2013. Mona Joined Almoosa as The head of the physical therapy department later led the Patient experience department's establishment. Mona holds a bachelor of physical therapy and healthcare management and a master's in business administration (M.B.A.) and Ph.D. in Financial Management for healthcare organizations from ST Joseph University in Lebanon. Mona is a fellow of the American college of health executives F.A.C.H.E. 
           <br> <br>
@@ -395,6 +374,7 @@ export const TeamData = [
     id: 4,
     ar: {
       name: 'عبد الرحيم الناطور',
+      slug: 'عبد-الرحيم-الناطور',
       title: 'مدير الادارة الهندسية',
       paragraph: `المهندس  عبد الرحيم  مدير الادارة الهندسية وإدارة المرافق ، انضم إلى مستشفى الموسى في عام 2014 ، قبيل ذلك عمل كرئيس للادارة الهندسية بمجمع فرح الطبي بعمان ، الاردن
       <br> <br>
@@ -412,6 +392,7 @@ export const TeamData = [
     },
     en: {
       name: 'Abdul Rahim Al-Natour',
+      slug: 'abdul-rahim-al-natour',
       title: 'FMS DIRECTOR',
       paragraph: `Eng. Abdul Rahim Heads facility management and engineering department, he joined Almoosa hospital in 2014. Previously he was the F.M.S. director in Farah Hospital in Amman, Jordan. 
           <br> <br>
@@ -432,6 +413,7 @@ export const TeamData = [
     id: 5,
     ar: {
       name: 'دكتور محمود مصطفى',
+      Slug: 'دكتور-محمود-مصطفى',
       title:
         'المدير الطبي ورئيس قسم الجودة وسلامة المرضى واستشاري الطب الباطني',
       paragraph: `د. محمود هو  أول طبيب انضم إلى الموسى منذ افتتاحها  في عام 1996. بدأ حياته المهنية في الطب الباطني والغدد الصماء ثم أصبح فيما بعد رئيس قسم الطب الباطني. بعد سنوات ، أصبح المدير الطبي للمستشفى. عمل سابقًا في المستشفى التخصصي في عمان كاستشاري في الطب الباطني. تخرج من جامعة الموصل في العراق عام 1984 ثم حصل على البورد العربي في الطب الباطني عام 1994.
@@ -450,6 +432,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Mahmoud Mustafa',
+      slug: 'dr-mahmoud-mustafa',
       title:
         'Chief Medical Officer & Chief of Quality and Patient Safety Internal Medicine Consultant',
       paragraph: `Dr. Mahmoud was the first physician who joined Almoosa since the very beginning in 1996. He started his internal medicine and endocrinology career and later became the chief of internal medicine. Years after, he became the hospital's Medical Director. He previously worked in the Specialty Hospital in Amman as an internal medicine consultant. He graduated from Mosul University in Iraq in 1990 and then did his Arab Board in Internal Medicine in 1993. 
@@ -472,8 +455,9 @@ export const TeamData = [
     id: 6,
     ar: {
       name: 'أ. هيرا تاشجيان',
+      slug: 'أ-هيرا-تاشجيان',
       title: 'رئيسة قسم التمريض',
-      paragraph: `هيرا ممرضة سريرية متخصصة في الرعاية الحرجة ، معتمدة من الجمعية الأمريكية لتمريض الرعاية الحرجة،  حاصلة على درجة الماجستير في التمريض من الجامعة الأمريكية في بيروت وشهادة الدراسات العليا من جامعة ديوك بالولايات المتحدة الأمريكية (ماجستير في الرعاية الحرجة للبالغين) ،  و دكتوراه في أبحاث التمريض ، منكلية كينغز لندن ، المملكة المتحدة ، 2018
+      paragraph: `هيرا ممرضة سريرية متخصصة في الرعاية الحرجة ، معتمدة من الجمعية الأمريكية لتمريض الرعاية الحرجة،  حاصلة على درجة الماجستير في التمريض من الجامعة الأمريكية في بيروت وشهادة الدراسات العليا من جامعة ديوك بالولايات المتحدة الأمريكية (ماجستير في الرعاية الحرجة للبالغين) ،  و دكتوراه في أبحاث التمريض ، من كلية كينغز-  لندن - المملكة المتحدة 
       <br/> <br>
       لديها أكثر من 20 عامًا خبرة في ممارسة الرعاية الحرجة والتعليم والقيادة والبحوث في المركز الطبي للجامعة الأمريكية في بيروت حيث كانت جزءًا  فاعلاً  من فريق التمريض بأول مستشفى يحصل على اعتماد Magnet في الشرق الأوسط في عام 2009  كما كانت أول من يحصل على شهادة مُعتمدة من الجمعية الأمريكية لممرضي الرعاية الحرجة (AACN) كـ اختصاصي تمريض سريري في الرعاية الحرجة للبالغين (CCNS)  في لبنان
       <br/> <br>
@@ -495,6 +479,7 @@ export const TeamData = [
     },
     en: {
       name: 'Mrs. Hera Tashjian',
+      slug: 'mrs-hera-tashjian',
       title: 'CNO',
       paragraph: `Mrs. Hera is a critical care clinical nurse specialist, certified by the American Association of Critical-Care Nurses. She did her undergrad B.S. in Nursing at the American University of Beirut and her graduate degree from Duke University in the USA (Masters in Adult Critical Care). She is a Ph.D. candidate at King's College- London researching post-intensive care syndrome.
           <br/> <br>
@@ -522,6 +507,7 @@ export const TeamData = [
     id: 7,
     ar: {
       name: 'أ. سارة الموسى',
+      slug: 'أ-سارة-الموسى',
       title: 'مديرة التسويق والشراكة المجتمعية',
       paragraph: `سارة هي خبيرة تسويق شغوفة  بخدمة المجتمع ، تفخر بقيادة مشاريع المسؤولية الاجتماعية الفعالة والمؤثرة التي تضيف قيمة للمجتمع وللعلامة التجارية لمستشفى الموسى.
       <br/><br/>
@@ -548,6 +534,7 @@ export const TeamData = [
     },
     en: {
       name: 'Mrs. Sara Almoosa',
+      slug: 'mrs-sara-almoosa',
       title: 'Marketing director | CSR | MBA',
       paragraph: `Sara is an experienced marketing professional. Driven by her passion to serve the community, she takes the pride in leading an effective and impactful corporate social responsibility projects that added a value to the community and Almoosa hospital brand.
       <br/><br/>
@@ -581,6 +568,7 @@ export const TeamData = [
     id: 9,
     ar: {
       name: 'م. محمود ياسين',
+      slug: 'م-محمود-ياسين',
       title: 'رئيس قسم تكنولوجيا المعلومات',
       paragraph: `وُلد في عائلة محبة للتكنولوجيا .. فوالده أستاذ في علوم الكمبيوتر ورجل أعمال أسس واحدة من أولى شركات تكنولوجيا المعلومات للرعاية الصحية في المنطقة. . في هذه البيئة العلمية  نشأ المهندس محمود ،. وهو ما شكل لاحقا  مسيرته المهنية
       <br/><br/>
@@ -603,6 +591,7 @@ export const TeamData = [
     },
     en: {
       name: 'Eng. Mahmoud Yaseen',
+      slug: 'eng-mahmoud-yaseen',
       title: 'Chief Information Officer.',
       paragraph: `
       Born in Tech family. His father is a professor of computer science and serial entrepreneur who founded one of the first Healthcare IT Company in the region. It was in this environment that Eng Mahmoud was raised, which shaped his career. 
@@ -631,6 +620,7 @@ export const TeamData = [
     id: 10,
     ar: {
       name: 'دكتور محمد قنديل',
+      slug: 'دكتور-محمد-قنديل',
       title: 'مدير العمليات',
       paragraph: `يشغل الدكتور محمد منصب مدير العمليات في  مستشفى الموسى التخصصي منذ عام 2019. قبل هذا المنصب ، كان رئيس الصيدلة والإمدادات الطبية لأكثر من ثماني سنوات ، وقسم التدريب والتطوير لمدة 3 سنوات. حاليًا ، هو مسؤول عن سلسلة التوريد والامداد، وخدمات الدعم ، والموارد البشرية ، والرواتب ، والضيافة ، وقسم العيادات الداخلية
       <br/><br/>
@@ -649,7 +639,8 @@ export const TeamData = [
       ]
     },
     en: {
-      name: 'Dr.Mohammed Kandil',
+      name: 'Dr. Mohammed Kandil',
+      slug: 'dr-Mohammed-kandil',
       title: 'COO',
       paragraph: `
       Dr. Mohammed is serving as Chief operating officer at ASH. since 2019. Before this position, he was the chief of Pharmacy and medical supply for over eight years, training and development department for 3 years. Currently, he is responsible for supply Chain, Support Services, Human resources, payroll, Hospitality, and O.P.D. Department.
@@ -673,6 +664,7 @@ export const TeamData = [
     id: 11,
     ar: {
       name: 'محمد سالم',
+      slug: 'محمد-سالم',
       title: 'المدير المالي',
       paragraph: `انضم محمد إلى فريق مستشفى الموسى التخصصي في فبراير 2011 بـ اكثر من 13 عامًا من الخبرة في التخطيط المالي والميزانية والتحليل والتقييم والتخطيط واتخاذ القرار.
       <br/><br/>
@@ -692,7 +684,8 @@ export const TeamData = [
       ]
     },
     en: {
-      name: 'MUHAMMAD SALEEM',
+      name: 'Muhammed Saleem',
+      slug: 'muhammed-saleem',
       title: 'CFO',
       paragraph: `
       Mr. Muhammad Joined A.S.H. in Feb 2011, bringing more than 13 years of experience in financial planning, budgeting, forecasting, analyzing, evaluating, and interpreting financial data to produce financial results for planning & decision making. 
@@ -721,6 +714,7 @@ export const TeamData = [
     id: 12,
     ar: {
       name: 'دكتور مصطفى سعد',
+      slug: 'دكتور-مصطفى-سعد',
       title: 'مدير قسم مكافحة العدوى',
       paragraph: `انضم الدكتور مصطفى إلى مستشفى الموسى التخصصي في عام 2019 ، مع 18 عامًا من الخبرة في الطب الباطني والأمراض المعدية
       <br/><br/>
@@ -767,6 +761,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Mustafa Saad',
+      slug: 'dr-mustafa-saad',
       title: 'Infection Control Director',
       paragraph: `Dr. Mustafa joined A.S.H. in 2019, with 18 years of experience in internal medicine and infectious diseases
       <br/><br/>
@@ -819,6 +814,7 @@ export const TeamData = [
     id: 13,
     ar: {
       name: 'د. رضا الخضرا',
+      slug: 'د-رضا-الخضرا',
       title: 'الرئيس التنفيذي لتطوير الأعمال و الاستراتيجية',
       paragraph: `وُلد في صور .. المدينة الفينيقية العريقة  التي اشتهرت بشجاعة ابنائها امام زحف الأسكندر المقدوني
       <br/><br/>
@@ -840,6 +836,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Rida khadra',
+      slug: 'dr-rida-khadra',
       title: 'Chief executive of Strategy and Business Development',
       paragraph: `Born in Tyre, the ancient Phoenician city, famous for the intrepidity of its sons against the advance of Alexander the Great.
       <br/><br/>
@@ -869,6 +866,7 @@ export const TeamData = [
     id: 13,
     ar: {
       name: 'د. سامر قارة',
+      slug: 'د-سامر-قارة',
       title: 'المدير الطبي',
       paragraph: `لفت إليه الأنظار منذ صغره ، وُلد في عائلة تحترم العلم و توليه أهمية كبرى ، فتعلم منذ الصغر أن علمه هو سلاحه
         <br/><br/>
@@ -878,6 +876,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Samer Qara',
+      slug: 'dr-samer-qara',
       title: 'Chief of Staff',
       paragraph: `Born into a family that respects science and places great importance on it. 
         Learned from a young age that his knowledge is his weapon. He was distinguished by high marks and good behavior that made everyone around him predict a bright future for him

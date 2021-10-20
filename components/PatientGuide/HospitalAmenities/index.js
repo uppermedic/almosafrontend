@@ -8,43 +8,43 @@ const data = [
     id: 1,
     content: 'tabeby service',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/tabeby-service'
+    path: 'patient-guide/hospital-amenities/tabeby-service'
   },
   {
     id: 2,
     content: 'hospitality services',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/hospitality-services'
+    path: 'patient-guide/hospital-amenities/hospitality-services'
   },
   {
     id: 3,
     content: 'support groubs',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/support-groubs'
+    path: 'patient-guide/hospital-amenities/support-groubs'
   },
   {
     id: 4,
     content: 'pharmacy',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/pharmacy'
+    path: 'patient-guide/hospital-amenities/pharmacy'
   },
   {
     id: 6,
     content: 'atm',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/atms'
+    path: 'patient-guide/hospital-amenities/atms'
   },
   {
     id: 7,
     content: 'wifi',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/wifi'
+    path: 'patient-guide/hospital-amenities/wifi'
   },
   {
     id: 8,
     content: 'library',
     feature_color: 'green',
-    path: '/patient-guide/hospital-amenities/library'
+    path: 'patient-guide/hospital-amenities/library'
   }
 ];
 const Amentities = ({ t }) => {

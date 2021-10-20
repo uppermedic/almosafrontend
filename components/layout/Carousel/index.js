@@ -6,7 +6,16 @@ import { i18n, withTranslation } from 'root/i18n';
 class ReactSlickDemo extends Component {
   render() {
     var settings = {
-      dots: true
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            autoplay: true,
+            speed: 1000
+          }
+        }
+      ]
     };
 
     const { language } = i18n;

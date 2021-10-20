@@ -13,12 +13,13 @@ const HairTranplant = ({ data }) => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push(
-      `/services/medical-programs/${
-        lang && String(data.seo[lang].title).split(' ').join('-')
-      }?id=${data.id}`
-    );
-    return () => {};
+    if (lang) {
+      router.push(
+        `/${lang}/services/medical-programs/${String(data.seo[lang].title)
+          .split(' ')
+          .join('-')}?id=${data.id}`
+      );
+    }
   }, [lang]);
   return (
     <div className="hair-transplant">

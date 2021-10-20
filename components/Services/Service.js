@@ -1,10 +1,16 @@
-import React from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React, { useState, useEffect } from 'react';
+import { i18n, Link } from 'root/i18n';
 
 export default function Service({ item }) {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
-    <Link href={`/services/${item.en.slug}`}>
+    <Link href={`/${locale}/services/${item.en.slug}`}>
       <a>
         <div
           className="service-card"
@@ -15,10 +21,7 @@ export default function Service({ item }) {
             })`
           }}
         >
-          <div
-            className={`text-center ribbon`}
-            // style={{ backgroundColor: item.color }}
-          >
+          <div className={`text-center ribbon`}>
             <h3>{language ? item[language].title : 'Loading'}</h3>
           </div>
         </div>

@@ -1,15 +1,20 @@
-import React from 'react';
-import Ratings from 'react-ratings-declarative';
+import React, { useEffect, useState } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import { truncate } from 'src/utils/helpers';
 import moment from 'moment';
 
 const courseCard = ({ cardData, t }) => {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <Link
-      href={`/training-education/courses/${
-        lang && String(cardData[lang].title).split(' ').join('-')
+      href={`/${locale}/training-education/courses/${
+        language && String(cardData[language].title).split(' ').join('-')
       }?id=${cardData.id}`}
     >
       <div className="course-card">
@@ -18,40 +23,12 @@ const courseCard = ({ cardData, t }) => {
         </div>
         <div className="info-box">
           <h3>
-            {lang &&
-              cardData[lang].title &&
-              truncate(cardData[lang].title, 20, '...')}
+            {language &&
+              cardData[language].title &&
+              truncate(cardData[language].title, 20, '...')}
           </h3>
-          <h5>{lang && cardData[lang].speaker_name}</h5>
-          {/* <div>
-            <Ratings
-              rating={cardData.rate}
-              widgetDimensions="20px"
-              widgetSpacings="5px"
-            >
-              <Ratings.Widget
-                widgetRatedColor="#5BAC32"
-                widgetDimension="25px"
-              />
-              <Ratings.Widget
-                widgetRatedColor="#5BAC32"
-                widgetDimension="25px"
-              />
-              <Ratings.Widget
-                widgetRatedColor="#5BAC32"
-                widgetDimension="25px"
-              />
-              <Ratings.Widget
-                widgetRatedColor="#5BAC32"
-                widgetDimension="25px"
-              />
-              <Ratings.Widget
-                widgetRatedColor="#5BAC32"
-                widgetDimension="25px"
-              />
-            </Ratings>
-            <span className="rate-num">{cardData.rate}</span>
-          </div> */}
+          <h5>{language && cardData[language].speaker_name}</h5>
+
           <div className="d-flex  course-date">
             <p>
               {t('start')} : {moment(cardData.start_date).format('D MMM')}
