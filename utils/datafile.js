@@ -175,7 +175,7 @@ export const GovernersData = [
     },
     en: {
       name: 'Mr. Musaed AlMoosa',
-      slug: 'mr-musaed-alMoosa',
+      slug: 'mr-musaed-almoosa',
       title: 'Board Member',
       paragraph: ``,
       qualifications: [
@@ -413,7 +413,7 @@ export const TeamData = [
     id: 5,
     ar: {
       name: 'دكتور محمود مصطفى',
-      Slug: 'دكتور-محمود-مصطفى',
+      slug: 'دكتور-محمود-مصطفى',
       title:
         'المدير الطبي ورئيس قسم الجودة وسلامة المرضى واستشاري الطب الباطني',
       paragraph: `د. محمود هو  أول طبيب انضم إلى الموسى منذ افتتاحها  في عام 1996. بدأ حياته المهنية في الطب الباطني والغدد الصماء ثم أصبح فيما بعد رئيس قسم الطب الباطني. بعد سنوات ، أصبح المدير الطبي للمستشفى. عمل سابقًا في المستشفى التخصصي في عمان كاستشاري في الطب الباطني. تخرج من جامعة الموصل في العراق عام 1984 ثم حصل على البورد العربي في الطب الباطني عام 1994.
@@ -640,7 +640,7 @@ export const TeamData = [
     },
     en: {
       name: 'Dr. Mohammed Kandil',
-      slug: 'dr-Mohammed-kandil',
+      slug: 'dr-mohammed-kandil',
       title: 'COO',
       paragraph: `
       Dr. Mohammed is serving as Chief operating officer at ASH. since 2019. Before this position, he was the chief of Pharmacy and medical supply for over eight years, training and development department for 3 years. Currently, he is responsible for supply Chain, Support Services, Human resources, payroll, Hospitality, and O.P.D. Department.
