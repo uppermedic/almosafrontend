@@ -8,19 +8,19 @@ const data = [
     id: 1,
     title: 'overview',
     icon: '/images/why_choose_us/overview.svg',
-    url: '/why-choose-us/overview'
+    url: 'why-choose-us/overview'
   },
   {
     id: 2,
     title: 'awards',
     icon: '/images/why_choose_us/awards.svg',
-    url: '/why-choose-us/awards'
+    url: 'why-choose-us/awards'
   },
   {
     id: 3,
     title: 'our doctors',
     icon: '/images/why_choose_us/doctors.svg',
-    url: '/our-doctors'
+    url: 'our-doctors'
   }
 ];
 const index = ({ t }) => {

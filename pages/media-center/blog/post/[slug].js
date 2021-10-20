@@ -22,22 +22,22 @@ const Post = ({ data }) => {
     }
   };
 
-  const lang = i18n.language;
+  const { language } = i18n;
   const router = useRouter();
 
   useEffect(() => {
     router.push(
-      `/media-center/blog/post/${
-        lang && String(data[lang].title).split(' ').join('-')
+      `/${language}/media-center/blog/post/${
+        language && String(data[language].title).split(' ').join('-')
       }?id=${data.id}`
     );
     return () => {};
-  }, [lang]);
+  }, [language]);
 
   return (
     <div className="_single-post-page">
       <Head data={head_data}></Head> {/*data={data['seo']}*/}
-      {data[i18n.language] && (
+      {data[language] && (
         <Content
           article={data}
           // latest={data.data.slice(0, 3)}

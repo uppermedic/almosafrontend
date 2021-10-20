@@ -1,53 +1,53 @@
 export const dataAboutTabs = [
   {
-    path: '/about/overview',
+    path: 'about/overview',
     label: 'overview'
   },
   {
-    path: '/about/vision-mission',
+    path: 'about/vision-mission',
     label: 'vision and mission'
   },
   {
-    path: '/about/values',
+    path: 'about/values',
     label: 'core values'
   },
   {
-    path: '/about/strategic-priorities',
+    path: 'about/strategic-priorities',
     label: 'strategic priorities'
   },
   {
-    path: '/about/awards',
+    path: 'about/awards',
     label: 'awards'
   },
   {
-    path: '/about/our-history',
+    path: 'about/our-history',
     label: 'history'
   },
   {
-    path: '/about/board-directors-and-executive-team',
+    path: 'about/board-directors-and-executive-team',
     label: 'board governers and leadership team'
   },
   {
-    path: '/about/fast-facts',
+    path: 'about/fast-facts',
     label: 'fast facts'
   },
   {
-    path: '/about/almoosa-medical-group',
+    path: 'about/almoosa-medical-group',
     label: 'almoosa medical group'
   }
 ];
 
 export const dataACademicTabs = [
   {
-    path: '/training-education/events',
+    path: 'training-education/events',
     label: 'events'
   },
   {
-    path: '/training-education/courses',
+    path: 'training-education/courses',
     label: 'courses'
   },
   {
-    path: '/training-education/academic-affairs',
+    path: 'training-education/academic-affairs',
     label: 'academic affairs'
   }
 ];

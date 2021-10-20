@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { useRouter } from 'next/router';
 import { Container } from 'reactstrap';
@@ -10,7 +10,13 @@ export const BreadCrumb = ({ t }) => {
   //remove home
   pathArr.shift();
   const current = pathArr.pop();
-  // //console.log('router ', router.query.hasOwnProperty('id'));
+
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   // function return the all pthnames routes
 
@@ -37,7 +43,7 @@ export const BreadCrumb = ({ t }) => {
             ) : (
               <span>
                 <span>
-                  <Link href="/">
+                  <Link href={`/${locale}`}>
                     <a>{t('menu:home')}</a>
                   </Link>
                 </span>
@@ -46,7 +52,7 @@ export const BreadCrumb = ({ t }) => {
                   return (
                     <React.Fragment key={idx}>
                       <span>
-                        <Link href={getTheRightPath(item)}>
+                        <Link href={`/${locale}` + `${getTheRightPath(item)}`}>
                           <a>
                             {t(`menu:${String(item).split('-').join(' ')}`)}
                           </a>

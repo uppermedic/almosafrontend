@@ -1,10 +1,16 @@
-import React from 'react';
-import { Link, withTranslation } from 'root/i18n';
+import React, { useEffect, useState } from 'react';
+import { Link, withTranslation, i18n } from 'root/i18n';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
 
 const BlogButton = ({ t, phone }) => {
   const router = useRouter();
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <>
       <div
@@ -12,7 +18,7 @@ const BlogButton = ({ t, phone }) => {
           hide: router.pathname === '/media-center/blog'
         })}
       >
-        <Link href="/media-center/blog">
+        <Link href={`/${locale}/media-center/blog`}>
           <a>
             <ButtonSVG t={t} />{' '}
           </a>

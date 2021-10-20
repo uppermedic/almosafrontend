@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { i18n, withTranslation } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
-import Hero from 'src/components/layout/Hero';
-import HeroContent from 'src/components/Home/HeroContent';
-import MeetOurTeam from 'src/components/Home/MeetOurTeam';
 import Centers from 'src/components/Home/Centers';
 import Testimonial from 'src/components/Home/Testimonial';
 import WhyMosa from 'src/components/Home/WhyMosa';
@@ -19,7 +16,6 @@ const Homepage = props => {
     return (
       <div className="home">
         <Head data={props.data.page.seo}></Head>
-
         <Carousel data={props.data.sliders} />
         <IconsSection />
         <WhyMosa data={props.data.content[1]} />

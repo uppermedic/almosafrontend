@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import dynamic from 'next/dynamic';
 import BlogItem from './BlogItem';
@@ -6,7 +6,13 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 import { i18n, Link, withTranslation } from 'root/i18n';
 
 function Blogs({ data, t }) {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <section className="home-blogs">
       <div className="overlay-blog">
@@ -17,7 +23,7 @@ function Blogs({ data, t }) {
           <Row>
             <Col>
               <h3 className="section-title-blog">
-                {lang == 'en' ? 'Blogs' : 'المدونات'}
+                {language == 'en' ? 'Blogs' : 'المدونات'}
               </h3>
             </Col>
           </Row>
@@ -69,7 +75,7 @@ function Blogs({ data, t }) {
                   <BlogItem blog={item} key={index} />
                 ))}
               </OwlCarousel>
-              <Link href="/media-center/blog">
+              <Link href={`/${locale}/media-center/blog`}>
                 <a className="show_more_blog">{t('show_more')}</a>
               </Link>
             </Col>

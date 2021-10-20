@@ -10,6 +10,8 @@ import Footer from 'src/components/Home/Footer';
 import ContactUsButton from 'src/components/contact-us/ContactUsButton';
 import BreadCrumb from 'src/components/layout/BreadCrumb';
 import { fetchData } from '../store/Request';
+import { useRouter } from 'next/router';
+
 /**
  * styles
  */
@@ -26,6 +28,21 @@ import '../assets/style/style.scss';
 let isSSR = typeof window === 'undefined';
 function MyApp({ Component, pageProps }) {
   const { header, footer } = pageProps.AppPageData;
+  const router = useRouter();
+  const { locale, asPath, pathname } = router;
+
+  useEffect(() => {
+    if (i18n.language && pathname !== '/404') {
+      i18n.changeLanguage(i18n.language);
+      document
+        .getElementsByTagName('html')[0]
+        .setAttribute('lang', i18n.language);
+      router.push(`/${i18n.language}` + asPath, `/${i18n.language}` + asPath, {
+        locale: i18n.language
+      });
+      console.log('router not found', router);
+    }
+  }, [locale, asPath]);
 
   useEffect(() => {
     if (!isSSR) {
@@ -34,6 +51,7 @@ function MyApp({ Component, pageProps }) {
         .setAttribute('lang', i18n.language);
     }
   }, []);
+
   return (
     <div style={{ overflow: 'hidden' }}>
       <Provider store={reduxStore}>

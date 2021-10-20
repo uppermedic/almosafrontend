@@ -1,10 +1,16 @@
-import React from 'react';
-import { Link } from 'root/i18n';
-import { Container, Row, Col } from 'reactstrap';
+import React, { useEffect, useState } from 'react';
+import { Link, i18n } from 'root/i18n';
+import { Row, Col } from 'reactstrap';
 
 export default function Why_Us_Card({ item, t }) {
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
   return (
-    <Link href={item.url}>
+    <Link href={`/${locale}/${item.url}`}>
       <a>
         <Row className="card-item shadow">
           <Col className="icon m-0" md={12}>

@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { fetchData } from 'src/store/Request.js';
 import Link from 'next/link';
 import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
-import Hero from 'src/components/layout/Hero';
 import { Col, Container, Row, Table } from 'reactstrap';
 import { FaFacebookF, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import PostHeading from 'src/components/reusableComponents/PostHeading';
 
 const SingleDoctor = ({ doctor }) => {
   const [qualifications, setQualifications] = useState({});
@@ -22,9 +19,7 @@ const SingleDoctor = ({ doctor }) => {
   return (
     <div className="almoosa-doctors">
       <Head data={doctor.page.seo}></Head>
-      {/* <Hero>
-        <div className="hero-content">{lang && doctor.data[lang].name}</div>
-      </Hero> */}
+
       <div
         className="text-white mb-4"
         style={{

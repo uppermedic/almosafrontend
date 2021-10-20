@@ -10,10 +10,11 @@ const localeSubpaths = {};
 module.exports = {
   minify: true,
   compress: true,
-  // i18n: {
-  //   locales: ['en','ar'],
-  //   defaultLocale: 'ar'
-  // },
+  i18n: {
+    localeDetection: false,
+    defaultLocale: 'ar',
+    locales: ['ar', 'en']
+  },
   images: {
     domains: ['159.65.230.116']
   },

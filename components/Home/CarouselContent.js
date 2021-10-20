@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Button } from 'reactstrap';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
@@ -9,7 +9,12 @@ import {
 } from 'src/constants/Data';
 
 function CarouselContent({ data, index, t }) {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   if (data) {
     return (
@@ -18,13 +23,13 @@ function CarouselContent({ data, index, t }) {
           <h2>
             <span>
               <Markdown>
-                {(lang && strippedContent(data[lang].title)) || ''}
+                {(language && strippedContent(data[language].title)) || ''}
               </Markdown>
             </span>
           </h2>
           <p>
             <Markdown>
-              {(lang && strippedContent(data[lang].content)) || ''}
+              {(language && strippedContent(data[language].content)) || ''}
             </Markdown>
           </p>
           {index === 0 && (
@@ -37,10 +42,12 @@ function CarouselContent({ data, index, t }) {
               </a>
             </div>
           )}
-          {lang && data[lang].btn_text && (
+          {language && data[language].btn_text && (
             <div className="book-now">
-              <Link href={data.btn_link}>
-                <a className="hvr-grow">{lang && data[lang].btn_text}</a>
+              <Link href={`/${locale}/contact-us`}>
+                <a className="hvr-grow">
+                  {language && data[language].btn_text}
+                </a>
               </Link>
             </div>
           )}

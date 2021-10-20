@@ -2,23 +2,15 @@ import React, { useState } from 'react';
 import CN from 'classnames';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Dropdown,
-  NavbarText
+  Dropdown
 } from 'reactstrap';
 import { useRouter } from 'next/router';
 
-const DropdownMenuBar = ({ t, item, options, setIsOpen }) => {
+const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -48,7 +40,7 @@ const DropdownMenuBar = ({ t, item, options, setIsOpen }) => {
           return (
             <DropdownItem key={index}>
               <NavItem onClick={() => setIsOpen(false)}>
-                <Link href={option.path}>
+                <Link href={`/${locale}/${option.path}`}>
                   <a
                     className={CN('dropdown-item', {
                       active: router.pathname === option.path

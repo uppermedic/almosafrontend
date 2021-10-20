@@ -1,17 +1,22 @@
+import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
-import { truncate, strippedContent } from 'src/utils/helpers.js';
 
 function BlogItem({ t, team }) {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <div className="item caro-card">
-      <Link href={`/services/medical-centers/${team.id}`}>
+      <Link href={`/${locale}/services/medical-centers/${team.id}`}>
         <a>
           <img src={team.image} alt="" srcSet="" />
           <div className="content-card">
-            <h3>{lang && team[lang].name}</h3>
-            <span>{lang && team[lang].title}</span>
+            <h3>{language && team[language].name}</h3>
+            <span>{language && team[language].title}</span>
           </div>
         </a>
       </Link>

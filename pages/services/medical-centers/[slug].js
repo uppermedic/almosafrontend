@@ -10,12 +10,13 @@ const Post = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
   useEffect(() => {
-    router.push(
-      `/services/medical-centers/${
-        lang && String(data.seo[lang].title).split(' ').join('-')
-      }?id=${data.id}`
-    );
-    return () => {};
+    if (lang) {
+      router.push(
+        `/${lang}/services/medical-centers/${String(data.seo[lang].title)
+          .split(' ')
+          .join('-')}?id=${data.id}`
+      );
+    }
   }, [lang]);
 
   return (
@@ -54,5 +55,17 @@ export async function getServerSideProps(context) {
     };
   }
 }
+
+// export async function getStaticPaths({ locales }) {
+// const paths = []
+
+// locales.forEach((locale, i) => {
+// posts.forEach((post, i) => {
+//   paths.push({ params: { slug: post.id }, locale })
+// });
+// });
+
+//   return { paths, fallback: false }
+// }
 
 export default Post;

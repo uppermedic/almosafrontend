@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import { Container, Row, Col } from 'reactstrap';
 import Markdown from 'markdown-to-jsx';
@@ -6,6 +6,12 @@ import { strippedContent } from 'src/utils/helpers';
 
 const index = ({ data, t }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const monthNames = [
     'January',
     'February',
@@ -68,7 +74,7 @@ const index = ({ data, t }) => {
                 {language && data[language].speaker_name}
               </p>
             </div>
-            <Link href={`/training-education/register`}>
+            <Link href={`/${locale}/training-education/register`}>
               <button onClick={handleClickReg}>
                 {language == 'en' ? 'Register' : 'سجل الأن'}
               </button>

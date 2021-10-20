@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { i18n, Link } from 'root/i18n';
 export default function FooterRights() {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <div className="footer-rights">
       <Container>
@@ -24,7 +30,7 @@ export default function FooterRights() {
           </Col>
           <Col md={6} className="order-1 order-lg-2">
             <div className="d-lg-flex justify-content-md-end">
-              <Link href="/privacy">
+              <Link href={`/${locale}/privacy`}>
                 <a>
                   {language === 'en' && 'Privacy Policy'}
                   {language === 'ar' && 'سياسة الخصوصية'}

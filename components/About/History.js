@@ -1,14 +1,21 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { withTranslation, Link } from 'root/i18n';
+import { withTranslation, Link, i18n } from 'root/i18n';
 
 const History = ({ t }) => {
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <section className="history">
       <Container>
         <Row>
           <Col>
-            <Link href="/about/our-history">
+            <Link href={`/${locale}/about/our-history`}>
               <a>
                 <h2>{t('about:our_journey')}</h2>
               </a>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import ClassNames from 'classnames';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -6,7 +6,14 @@ import Article from './Article';
 
 const Index = ({ article, categories, tags, t }) => {
   const [controllerOpen, setControllerOpen] = useState(false);
-  let contentWithLang = article[i18n.language];
+  const { language } = i18n;
+  let contentWithLang = article[language];
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <section className="content-wrapper">
       <Container>
@@ -46,14 +53,16 @@ const Index = ({ article, categories, tags, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/blog`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {categories.map(cat => (
                   <li key={cat.id}>
-                    <Link href={`/media-center/blog?cats=${cat.slug}`}>
-                      <a>{cat[i18n.language].category_name}</a>
+                    <Link
+                      href={`/${locale}/media-center/blog?cats=${cat.slug}`}
+                    >
+                      <a>{cat[language].category_name}</a>
                     </Link>
                   </li>
                 ))}

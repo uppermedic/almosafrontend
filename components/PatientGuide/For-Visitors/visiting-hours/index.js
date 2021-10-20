@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'root/i18n';
 import { Col, Container, Row } from 'reactstrap';
 import { withTranslation, i18n } from 'root/i18n';
 
 const Content = ({ t }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <div className="content">
       <div className="title">
@@ -61,7 +67,9 @@ const Content = ({ t }) => {
                 )}
               </div>
               <button>
-                <Link href="/for-visitors/visiting-hours/covid-pandemic">
+                <Link
+                  href={`/${locale}/for-visitors/visiting-hours/covid-pandemic`}
+                >
                   <a>
                     {(language === 'en' &&
                       'Click Here to Read: Visitor, Family, and Care Partner Restrictions Related to COVID-19 Pandemic') ||
