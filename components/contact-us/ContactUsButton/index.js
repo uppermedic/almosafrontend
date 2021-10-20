@@ -1,10 +1,17 @@
-import React from 'react';
-import { Link, withTranslation } from 'root/i18n';
+import React, { useEffect, useState } from 'react';
+import { Link, withTranslation, i18n } from 'root/i18n';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
 
 const ContactUsButton = ({ t, phone }) => {
   const router = useRouter();
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <>
       <div
@@ -12,7 +19,7 @@ const ContactUsButton = ({ t, phone }) => {
           hide: router.pathname === '/contact-us'
         })}
       >
-        <Link href="/contact-us">
+        <Link href={`/${locale}/contact-us`}>
           <a>
             <ButtonSVG t={t} />{' '}
           </a>

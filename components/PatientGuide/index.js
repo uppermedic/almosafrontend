@@ -9,28 +9,28 @@ const data = [
     title: 'for patient',
     bg: '/images/patient-guide/for-patients.png',
     ribbon_class: 'green',
-    url: '/patient-guide/for-patient'
+    url: 'patient-guide/for-patient'
   },
   {
     id: 2,
     title: 'for visitors',
     bg: '/images/patient-guide/for-visitors.png',
     ribbon_class: 'purple',
-    url: '/patient-guide/for-visitors'
+    url: 'patient-guide/for-visitors'
   },
   {
     id: 3,
     title: 'directions',
     bg: '/images/patient-guide/directions-parking.png',
     ribbon_class: 'brown',
-    url: '/patient-guide/directions'
+    url: 'patient-guide/directions'
   },
   {
     id: 4,
     title: 'hospital amenities',
     bg: '/images/patient-guide/hospital-aminities.png',
     ribbon_class: 'blue',
-    url: '/patient-guide/hospital-amenities'
+    url: 'patient-guide/hospital-amenities'
   }
 ];
 const PatientGuide = ({ t }) => {

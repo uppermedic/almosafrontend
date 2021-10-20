@@ -5,24 +5,25 @@ import { useRouter } from 'next/router';
 import Classnames from 'classnames';
 import {
   Container,
-  Row,
-  Col,
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem
 } from 'reactstrap';
 import Dropdown from './Dropdown';
 import Menu from 'src/constants/Menu';
-import { employee_portal, volunteering, join_us } from 'src/constants/Data';
-const Header = ({ t, data }) => {
+
+const Header = ({ t }) => {
   const router = useRouter();
+  const { language } = i18n;
   const [isOpen, setIsOpen] = useState(false);
   const [transform, setTransform] = useState(0);
+  const [locale, setlocale] = useState('');
 
-  //Router.pathname
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -42,7 +43,7 @@ const Header = ({ t, data }) => {
       <Container>
         <div className="top-header align-items-center d-flex justify-content-between">
           <div className="logos-wrapper">
-            <Link href="/">
+            <Link href={`/${locale}`}>
               <a className="navbar-brand">
                 <img src="/images/logo.jpg" />
               </a>
@@ -51,7 +52,7 @@ const Header = ({ t, data }) => {
           <div className="logos-wrapper text-right">
             <div className="navbar-brand brand-right">
               <img className="pl-2 pr-2 logo1" src="/images/logo1.png" />
-              <Link href="/services/nursing-department">
+              <Link href={`/${locale}/services/nursing-department`}>
                 <img
                   className="logo2"
                   src="/images/logo2.png"
@@ -88,7 +89,7 @@ const Header = ({ t, data }) => {
                 <div key={idx}>
                   {!item.isDropDown && (
                     <NavItem onClick={() => setIsOpen(false)}>
-                      <Link href={item.path}>
+                      <Link href={`/${locale}/${item.path}`}>
                         <a
                           className={Classnames('nav-link', {
                             active: router.pathname === item.path
@@ -104,6 +105,7 @@ const Header = ({ t, data }) => {
                       item={item}
                       options={item.options}
                       setIsOpen={setIsOpen}
+                      locale={locale}
                     />
                   )}
                 </div>

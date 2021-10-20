@@ -1,8 +1,15 @@
-import React from 'react';
-import { Link } from 'root/i18n';
+import React, { useEffect, useState } from 'react';
+import { Link, i18n } from 'root/i18n';
 export default function Service({ item, t }) {
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
-    <Link href={item.url}>
+    <Link href={`${locale}/${item.url}`}>
       <a>
         <div
           className="center-card"

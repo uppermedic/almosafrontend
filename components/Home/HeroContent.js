@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Button } from 'reactstrap';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
@@ -8,7 +8,13 @@ import {
   google_play_store_download_app
 } from 'src/constants/Data';
 function HeroContent({ data, t }) {
-  //console.log(data);
+  const { language } = i18n;
+
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   if (data) {
     return (
@@ -46,7 +52,7 @@ function HeroContent({ data, t }) {
               </a>
             </div>
             <div className="book-now" data-aos="zoom-in">
-              <Link href="/contact-us">
+              <Link href={`/${locale}/contact-us`}>
                 <a className="hvr-grow">{t('book_now')}</a>
               </Link>
             </div>

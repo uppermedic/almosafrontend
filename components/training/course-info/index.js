@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import { Container, Row, Col } from 'reactstrap';
 import Markdown from 'markdown-to-jsx';
@@ -26,6 +26,12 @@ const index = ({ data, t }) => {
   const handleClickReg = () => {
     sessionStorage.setItem('reg_id', data.id);
   };
+
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   return (
     <section className="course-info">
@@ -68,7 +74,7 @@ const index = ({ data, t }) => {
                 {language && data[language].speaker_name}
               </p>
             </div>
-            <Link href={`/training-education/register`}>
+            <Link href={`/${locale}/training-education/register`}>
               <button onClick={handleClickReg}>
                 {language == 'en' ? 'Register' : 'سجل الأن'}
               </button>

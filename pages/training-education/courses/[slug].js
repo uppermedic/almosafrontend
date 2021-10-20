@@ -10,12 +10,13 @@ const Event = ({ data }) => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push(
-      `/training-education/courses/${
-        lang && String(data[lang].title).split(' ').join('-')
-      }?id=${data.id}`
-    );
-    return () => {};
+    if (lang) {
+      router.push(
+        `/${lang}/training-education/courses/${String(data[lang].title)
+          .split(' ')
+          .join('-')}?id=${data.id}`
+      );
+    }
   }, [lang]);
 
   return (

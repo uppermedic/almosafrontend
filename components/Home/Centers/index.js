@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import dynamic from 'next/dynamic';
 import CenterItem from './CenterItem';
@@ -6,14 +6,20 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 import { i18n, Link, withTranslation } from 'root/i18n';
 
 function Centers({ data, t }) {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <section className="home-centers">
       <Container>
         <Row>
           <Col>
             <h3 className="section-title-center">
-              {lang == 'en' ? 'Centers' : 'المراكز'}
+              {language == 'en' ? 'Centers' : 'المراكز'}
             </h3>
           </Col>
         </Row>
@@ -65,7 +71,7 @@ function Centers({ data, t }) {
                 <CenterItem center={item} key={index} />
               ))}
             </OwlCarousel>
-            <Link href="/services/medical-centers">
+            <Link href={`/${locale}/services/medical-centers`}>
               <a className="show_more_center">{t('show_more')}</a>
             </Link>
           </Col>

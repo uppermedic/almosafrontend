@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { Row, Col } from 'reactstrap';
 import Markdown from 'markdown-to-jsx';
@@ -6,7 +6,15 @@ import { strippedContent, truncate } from 'src/utils/helpers';
 
 function Post({ article, t }) {
   const { id, image } = article;
-  const { title, slug, content } = i18n.language ? article[i18n.language] : {};
+  const { language } = i18n;
+  const { title, slug, content } = language ? article[language] : {};
+
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   return (
     <div className="post-card my-4 border-bottom pb-4">
       <Row className="">
@@ -26,7 +34,7 @@ function Post({ article, t }) {
               {content ? truncate(strippedContent(content), 200, '...') : ''}
             </Markdown>
             <Link
-              href={`/media-center/blog/post/${String(title)
+              href={`/${locale}/media-center/blog/post/${String(title)
                 .split(' ')
                 .join('-')}?id=${id}`}
             >

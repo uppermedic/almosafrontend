@@ -8,42 +8,42 @@ const helperData = [
   {
     id: 1,
     title: 'Hair Transplant',
-    path: '/services/medical-programs/hair-transplant',
+    path: 'services/medical-programs/hair-transplant',
     content:
       'We aim to offer a high-quality service with a very competitive price that guarantees the best result avoiding the travel ………...'
   },
   {
     id: 2,
     title: 'Stroke Management Program',
-    path: '/services/medical-programs/stroke-management-program',
+    path: 'services/medical-programs/stroke-management-program',
     content:
       'From the moment a stroke occurs, patients have a small window in which precise diagnosis and rapid treatment may …………....'
   },
   {
     id: 3,
     title: 'Medical Checkup Program',
-    path: '/services/medical-programs/medical-checkup-program',
+    path: 'services/medical-programs/medical-checkup-program',
     content:
       'A good medical checkup may be the only effort you can make to ensure your good health and to prevent any ……………...'
   },
   {
     id: 4,
     title: 'Maternity Program',
-    path: '/services/medical-programs/maternity-program',
+    path: 'services/medical-programs/maternity-program',
     content:
       'Motherhood is an interesting journey full of emotions and surprises We at almoosa specialist ………………...'
   },
   {
     id: 5,
     title: 'Vaccination Program',
-    path: '/services/medical-programs/vaccination-program',
+    path: 'services/medical-programs/vaccination-program',
     content:
       'Vaccination is one of the best ways that can protect the community from potentially harmful diseases. Vaccine-...……………...'
   },
   {
     id: 6,
     title: 'Speech Therapy Program',
-    path: '/services/medical-programs/speech-therapy-program',
+    path: 'services/medical-programs/speech-therapy-program',
     content:
       'Phoniatrics: Is the medical specialty for communicative disorders. It is related with the normal, pathological, and professional...……….'
   },

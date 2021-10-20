@@ -1,26 +1,31 @@
+import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
 import { truncate, strippedContent } from 'src/utils/helpers.js';
 
 function BlogItem({ blog, t }) {
-  const lang = i18n.language;
+  const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   return (
     <div className="item caro-card">
       <Link
-        href={
-          lang &&
-          `/media-center/blog/post/${
-            lang && String(blog[lang].title).split(' ').join('-')
-          }?id=${blog.id}`
-        }
+        href={`/${locale}/media-center/blog/post/${
+          language && String(blog[language].title).split(' ').join('-')
+        }?id=${blog.id}`}
       >
         <a>
           <img src={blog.thumbnail} alt="" srcSet="" />
           <div className="content">
             <h5>
               {truncate(
-                strippedContent((lang && blog[lang].title) || 'No Data'),
+                strippedContent(
+                  (language && blog[language].title) || 'No Data'
+                ),
                 20,
                 '......'
               )}
@@ -28,7 +33,9 @@ function BlogItem({ blog, t }) {
             <p>
               <Markdown>
                 {truncate(
-                  strippedContent((lang && blog[lang].content) || 'No Data'),
+                  strippedContent(
+                    (language && blog[language].content) || 'No Data'
+                  ),
                   60,
                   '......'
                 )}
@@ -36,9 +43,9 @@ function BlogItem({ blog, t }) {
             </p>
             <Link
               href={
-                lang &&
-                `/media-center/blog/post/${
-                  lang && String(blog[lang].title).split(' ').join('-')
+                language &&
+                `/${locale}/media-center/blog/post/${
+                  language && String(blog[language].title).split(' ').join('-')
                 }?id=${blog.id}`
               }
             >

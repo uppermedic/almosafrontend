@@ -8,12 +8,13 @@ const IntensiveCare = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
   useEffect(() => {
-    router.push(
-      `/services/inpatient-units/${
-        lang && String(data.seo[lang].title).split(' ').join('-')
-      }?id=${data.id}` || '#'
-    );
-    return () => {};
+    if (lang) {
+      router.push(
+        `/${lang}/services/inpatient-units/${String(data.seo[lang].title)
+          .split(' ')
+          .join('-')}?id=${data.id}` || '#'
+      );
+    }
   }, [lang]);
 
   return (

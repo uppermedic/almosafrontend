@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { i18n } from 'root/i18n';
 import Link from 'next/link';
 
 const doctor_card = ({ doctor, setcurrentDoctor }) => {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
   const handleClick = () => {
     setcurrentDoctor(doctor);
     if (window.innerWidth < 992) {
@@ -13,7 +19,7 @@ const doctor_card = ({ doctor, setcurrentDoctor }) => {
     }
   };
   return (
-    <Link href={`/our-doctors/${doctor.slug}`}>
+    <Link href={`/${locale}/our-doctors/${doctor.slug}`}>
       <a className="card" onClick={handleClick}>
         <img src={doctor.image} alt={language && doctor[language].name} />
         <div className="banner">

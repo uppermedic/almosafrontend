@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { i18n } from 'root/i18n';
 
 export default function MedicalCenter({ item }) {
   const { language } = i18n;
+  const [locale, setlocale] = useState('');
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
 
   return (
-    // <Link href={item.path ? item.path : '#'}>
     <Link
-      href={`/services/medical-centers/${
+      href={`/${locale}/services/medical-centers/${
         language && String(item[language].title).split(' ').join('-')
       }?id=${item.id}`}
     >
