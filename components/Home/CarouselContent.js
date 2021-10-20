@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Button } from 'reactstrap';
+import React from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
 import Markdown from 'markdown-to-jsx';
@@ -10,11 +9,6 @@ import {
 
 function CarouselContent({ data, index, t }) {
   const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   if (data) {
     return (
