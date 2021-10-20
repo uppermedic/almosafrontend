@@ -44,7 +44,7 @@ function CarouselContent({ data, index, t }) {
           )}
           {language && data[language].btn_text && (
             <div className="book-now">
-              <Link href={`/${locale}/contact-us`}>
+              <Link href="https://portal.almoosahospital.com.sa:152/">
                 <a className="hvr-grow">
                   {language && data[language].btn_text}
                 </a>

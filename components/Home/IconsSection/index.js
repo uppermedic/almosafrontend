@@ -19,7 +19,7 @@ const index = () => {
       id: 1,
       icon: BsFillCalendarFill,
       content: { en: 'Book Appointment', ar: 'احجز موعد' },
-      path: 'contact-us'
+      path: 'https://portal.almoosahospital.com.sa:152/'
     },
     {
       id: 2,
@@ -30,14 +30,14 @@ const index = () => {
     {
       id: 3,
       icon: BsSearch,
-      content: { en: 'Search for doctors', ar: 'ابحث عن طبيبك' },
-      path: 'our-doctors'
+      content: { en: 'Find your doctor', ar: 'ابحث عن طبيبك' },
+      path: `/${locale}/our-doctors`
     },
     {
       id: 4,
       icon: IoCallSharp,
       content: { en: 'Contact Us', ar: ' اتصل بنا' },
-      path: 'contact-us'
+      path: `/${locale}/contact-us`
     }
   ];
   return (
@@ -47,7 +47,7 @@ const index = () => {
           {data.map(box => (
             <Col key={box.id}>
               <Card>
-                <Link href={`/${locale}/${box.path}`}>
+                <Link href={box.path}>
                   <div style={{ cursor: box.id === 2 ? 'default' : 'pointer' }}>
                     <span className="icon">
                       <box.icon />

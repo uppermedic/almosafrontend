@@ -13,10 +13,10 @@ const Content = ({ t }) => {
           {language == 'en' && (
             <div className="description">
               <p>
-                We launched the bike to encourage employees to adopt a healthy
-                lifestyle, exercise cycling, replace the car with the bicycle as
-                a means of Transportation, save parking space and preserve the
-                environment.
+                We launched the bike to work initiative to encourage employees
+                to adopt a healthy lifestyle, exercise cycling, replace the car
+                with the bicycle as a means of Transportation, save parking
+                space and preserve the environment.
                 <br />
                 <br />
                 It is worth mentioning that the hospital offers the opportunity

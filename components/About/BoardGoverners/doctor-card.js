@@ -17,7 +17,9 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
     <Link
       href={
         hasRef
-          ? `/${locale}/about/board-directors-and-executive-team/${doctor.id}`
+          ? `/${locale}/about/board-directors-and-executive-team/${
+              language && String(doctor[language]?.slug)
+            }?id=${doctor?.id}`
           : '#'
       }
     >
