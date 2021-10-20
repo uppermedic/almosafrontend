@@ -14,12 +14,8 @@ const ContactUsButton = ({ t, phone }) => {
 
   return (
     <>
-      <div
-        className={cn('contact-us-button', 'd-none d-md-block', {
-          hide: router.pathname === '/contact-us'
-        })}
-      >
-        <Link href={`/${locale}/contact-us`}>
+      <div className={cn('contact-us-button', 'd-none d-md-block')}>
+        <Link href="https://portal.almoosahospital.com.sa:152/">
           <a>
             <ButtonSVG t={t} />{' '}
           </a>

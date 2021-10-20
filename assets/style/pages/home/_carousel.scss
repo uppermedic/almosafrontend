@@ -30,6 +30,8 @@
       @include respond-below(md) {
         width: 65%;
         padding-top: 4rem;
+        margin: auto !important;
+        text-align: center;
       }
       @include respond-below(sm) {
         width: 70%;

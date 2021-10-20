@@ -52,7 +52,7 @@ function HeroContent({ data, t }) {
               </a>
             </div>
             <div className="book-now" data-aos="zoom-in">
-              <Link href={`/${locale}/contact-us`}>
+              <Link href="https://portal.almoosahospital.com.sa:152/">
                 <a className="hvr-grow">{t('book_now')}</a>
               </Link>
             </div>
