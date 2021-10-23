@@ -94,7 +94,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     <Link
                       href={`/${locale}/media-center/blog?cats=${cat.slug}`}
                     >
-                      <a>{cat[i18n.language].category_name}</a>
+                      <a>{cat[language].category_name}</a>
                     </Link>
                   </li>
                 ))}
@@ -106,37 +106,38 @@ const Index = ({ data, latest, tags, categories, t }) => {
             <div className="popular-posts">
               <h4>{t('popular_posts')}:</h4>
               <ul className="list-unstyled">
-                {latest.map((post, idx) => (
-                  <li key={String(post.id)}>
-                    <Link
-                      href={`/${locale}/media-center/blog/post/${String(
-                        i18n.language ? post[i18n.language]?.title : ''
-                      )
-                        .split(' ')
-                        .join('-')}?id=${post.id}`}
-                    >
-                      <a>
-                        <img src={post.image} />
-                        <div>
-                          <h5>
-                            {post[i18n.language]
-                              ? truncate(post[i18n.language]?.title, 30, '...')
-                              : ''}{' '}
-                          </h5>
-                          <p>
-                            {post[i18n.language]
-                              ? truncate(
-                                  strippedContent(post[i18n.language].content),
-                                  100,
-                                  '...'
-                                )
-                              : ''}
-                          </p>
-                        </div>
-                      </a>
-                    </Link>
-                  </li>
-                ))}
+                {latest.length > 0 &&
+                  latest?.map((post, idx) => (
+                    <li key={String(post.id)}>
+                      <Link
+                        href={`/${locale}/media-center/blog/post/${String(
+                          language ? post[language]?.title : ''
+                        )
+                          .split(' ')
+                          .join('-')}?id=${post.id}`}
+                      >
+                        <a>
+                          <img src={post.image} />
+                          <div>
+                            <h5>
+                              {post[language]
+                                ? truncate(post[language]?.title, 30, '...')
+                                : ''}{' '}
+                            </h5>
+                            <p>
+                              {post[language]
+                                ? truncate(
+                                    strippedContent(post[language]?.content),
+                                    100,
+                                    '...'
+                                  )
+                                : ''}
+                            </p>
+                          </div>
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </div>
             {/*
@@ -153,7 +154,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {tags.map(tag => (
                   <li key={tag.id}>
                     <Link
-                      href={`/${locale}/media-center/blog?tags=${tag.tag_name}`}
+                      href={`/${locale}/media-center/blog?tags=${tag?.tag_name}`}
                     >
                       <a>{tag.tag_name}</a>
                     </Link>
