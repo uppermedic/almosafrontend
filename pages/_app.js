@@ -32,17 +32,15 @@ function MyApp({ Component, pageProps }) {
   const { locale, asPath, pathname } = router;
 
   useEffect(() => {
-    if (i18n.language && pathname !== '/404') {
-      i18n.changeLanguage(i18n.language);
-      document
-        .getElementsByTagName('html')[0]
-        .setAttribute('lang', i18n.language);
-      router.push(`/${i18n.language}` + asPath, `/${i18n.language}` + asPath, {
-        locale: i18n.language
+    if (locale && pathname !== '/404') {
+      i18n.changeLanguage(locale);
+      document.getElementsByTagName('html')[0].setAttribute('lang', locale);
+
+      router.push(`/${locale}` + asPath, `/${locale}` + asPath, {
+        locale: locale
       });
-      console.log('router not found', router);
     }
-  }, [locale, asPath]);
+  }, [locale, i18n.language]);
 
   useEffect(() => {
     if (!isSSR) {
@@ -56,7 +54,7 @@ function MyApp({ Component, pageProps }) {
     <div style={{ overflow: 'hidden' }}>
       <Provider store={reduxStore}>
         <ContactUsButton phone={footer?.contact_us?.contact_phone} />
-        <Head />
+        {/* <Head /> */}
         <Nav />
         <Header data={header} />
         <BreadCrumb />
