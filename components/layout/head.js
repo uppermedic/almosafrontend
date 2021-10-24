@@ -1,4 +1,5 @@
 import NextHead from 'next/head';
+import { useRouter } from 'next/router';
 import { string, shape, object } from 'prop-types';
 export const config = { amp: true };
 import { i18n } from 'root/i18n';
@@ -11,6 +12,8 @@ const defaultOGImage = '';
 const Head = ({ data, children }) => {
   const { language: lang } = i18n;
   const seoLang = data && data[lang];
+  const router = useRouter();
+  const { locale, asPath } = router;
   return (
     <NextHead>
       <meta charSet="UTF-8" />
@@ -39,6 +42,9 @@ const Head = ({ data, children }) => {
         sizes="180x180"
         href="/apple-touch-icon.png"
       />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="canonical" hrefLang={locale} href={`/${locale}` + asPath} />
+
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta property="og:title" content={data && data[lang]?.title} />
       <meta
@@ -57,8 +63,6 @@ const Head = ({ data, children }) => {
       />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       {children}
     </NextHead>
