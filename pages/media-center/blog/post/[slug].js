@@ -24,15 +24,18 @@ const Post = ({ data }) => {
 
   const { language } = i18n;
   const router = useRouter();
+  const { locale } = router;
 
   useEffect(() => {
-    router.push(
-      `/${language}/media-center/blog/post/${
-        language && String(data[language].title).split(' ').join('-')
-      }?id=${data.id}`
-    );
+    if (language && locale) {
+      router.push(
+        `/${language}/media-center/blog/post/${
+          language && String(data[language].title).split(' ').join('-')
+        }?id=${data.id}`
+      );
+    }
     return () => {};
-  }, [language]);
+  }, [language, locale]);
 
   return (
     <div className="_single-post-page">

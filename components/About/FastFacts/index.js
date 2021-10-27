@@ -22,7 +22,10 @@ const index = ({ t }) => {
               {language == 'en' && (
                 <div className="content">
                   <div className="single-section">
-                    <Paragraph paragraph="Almoosa Specialist Hospital was founded in 1996 as the first private hospital in Ahsa, now the hospital’s bed capacity is 440 with the opening of the North Tower" />
+                    <Paragraph paragraph="Almoosa Specialist Hospital is a world-class health system that promotes wellness and heals illness founded in 1996 as the first private hospital in Ahsa, offering high-quality integrated healthcare ." />
+                    <Paragraph paragraph="Ranked among the best ten hospitals in the GCC, we ensure to provide our patients with the best care in the Kingdom and GCC with qualified, competent caregivers using the latest technologies and evidence-based techniques ." />
+                    <Paragraph paragraph="Almoosa Specialist Hospital is an academic teaching hospital accredited by the Saudi Commission for Health Specialties SCHS, in 12 residency programs and two fellowships programs ." />
+                    <Paragraph paragraph="The hospital provides the best human-centered care in a capacity of over  460  beds, with a diverse team of more than 3000 caregivers working together to achieve one mission:  To promote hope and well-being for our society ." />
                   </div>
 
                   <div className="single-section">
@@ -147,13 +150,25 @@ const index = ({ t }) => {
                     </div>
                   </div>
                   <div className="single-section">
-                    <Title title="Centers of excellence :" />
+                    <Title title="Our leading programs and Centers of excellence :" />
                     <Menu
                       items={[
-                        { text: 'ASH heart and lung center' },
-                        { text: 'Orthopedic and sport injuries center' },
-                        { text: 'Cancer center' },
-                        { text: 'Neuroscience center' }
+                        {
+                          text: 'The region most favored Bone and Joint Center'
+                        },
+                        { text: 'Comprehensive cancer center' },
+                        {
+                          text:
+                            'A world-class neuroscience center with a stroke program'
+                        },
+                        {
+                          text:
+                            'Advanced heart center with all the latest cardiac modalities such as hybrid Operation room and Electrophysiology lab'
+                        },
+                        {
+                          text:
+                            "The region's largest and most comprehensive maternity and children's program"
+                        }
                       ]}
                     />
                   </div>
@@ -188,7 +203,10 @@ const index = ({ t }) => {
               {language == 'ar' && (
                 <div className="content">
                   <div className="single-section">
-                    <Paragraph paragraph="تأسس مستشفى الموسى التخصصي في عام 1996 كأول مستشفى خاص في الأحساء، والآن تبلغ سعة المستشفى 440 سرير مع افتتاح البرج الشمالي ." />
+                    <Paragraph paragraph="مستشفى الموسى التخصصي هو نظام صحي عالمي موثوق ينشر الصحة و يحارب المرض ، تأسس المستشفى عامـ1996 كأول مستشفى خاص يقدم رعاية صحية متكاملة في الأحساء.. تم تصنيف مستشفى الموسى  ضمن أفضل عشرة مستشفيات في دول مجلس التعاون الخليجي  من حيث رضا المرضى من قِبل منظمة  PressGaney ." />
+                    <Paragraph paragraph="نضمن لك  أفضل رعاية صحية  بمعايير استراتيجية باستخدام أحدث التكنولوجيا المتوفرة  والتقنيات القائمة على الأدلة على يد كادر طبي من مختلف التخصصات  الدقيقة و فريق  تمريضي معتمد ." />
+                    <Paragraph paragraph="مستشفى الموسى هو مستشفى تعليمي مُعتمد من الهيئة السعودية للتخصصات الصحية  في 10 برامج للإقامة الطبية و 2 برنامج زمالة في بيئة تعليمية ثرية تحفز على التعلم والإبداع ." />
+                    <Paragraph paragraph="يوفر المستشفى رعاية تتمحور حول الإنسان بسعة سريرية 460 سريرًا ، مع فريق متنوع يضم أكثر من 3000 مقدم رعاية يعملون معًا لتحقيق رسالة واحدة: أن نخدم بشغف، ونقود التحول المجتمعي من خلال تقديم خدمات صحية فعالة ." />
                   </div>
 
                   <div className="single-section">
@@ -231,13 +249,20 @@ const index = ({ t }) => {
                     />
                   </div>
                   <div className="single-section">
-                    <Title title="مراكزالتميز" />
+                    <Title title="مراكز التميز و البرامج الطبية" />
                     <Menu
                       items={[
-                        { text: 'مركز القلب والرئة' },
-                        { text: 'مركز علم الأعصاب' },
+                        { text: 'مركز العظام والمفاصل' },
                         { text: 'مركز السرطان' },
-                        { text: 'مركز جراحة العظام' }
+                        {
+                          text:
+                            'مركز علم الأعصاب و يقدم برنامج   متكامل لإدارة السكتة الدماغية'
+                        },
+                        {
+                          text:
+                            'مركز قلب متقدم مزود بأحدث الأجهزة التكنولوجية القلبية مثل غرف العمليات المتكاملة Hybrid OR ومختبر الفيزيولوجيا الكهربية'
+                        },
+                        { text: 'أكبر وأشمل برنامج للأم و الطفل في المنطقة' }
                       ]}
                     />
                   </div>

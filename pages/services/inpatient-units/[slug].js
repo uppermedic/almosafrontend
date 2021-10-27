@@ -7,15 +7,17 @@ import { useRouter } from 'next/router';
 const IntensiveCare = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
+  const { locale } = router;
+
   useEffect(() => {
-    if (lang) {
+    if (lang && locale) {
       router.push(
         `/${lang}/services/inpatient-units/${String(data.seo[lang].title)
           .split(' ')
           .join('-')}?id=${data.id}` || '#'
       );
     }
-  }, [lang]);
+  }, [lang, locale]);
 
   return (
     <div className="intensive-care mb-50">

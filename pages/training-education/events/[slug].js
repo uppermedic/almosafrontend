@@ -8,16 +8,17 @@ import { useRouter } from 'next/router';
 const Event = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
+  const { locale } = router;
 
   useEffect(() => {
-    if (lang) {
+    if (lang && locale) {
       router.push(
         `/${lang}/training-education/events/${String(data[lang].title)
           .split(' ')
           .join('-')}?id=${data.id}`
       );
     }
-  }, [lang]);
+  }, [lang, locale]);
 
   return (
     <div>

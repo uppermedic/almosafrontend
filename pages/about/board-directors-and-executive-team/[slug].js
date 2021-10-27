@@ -25,16 +25,19 @@ function BordDirectors() {
     }
   };
   const router = useRouter();
+  const { locale } = router;
   const [doctorData, setdoctorData] = useState({});
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('doctor'));
-    router.push(
-      `/${language}/about/board-directors-and-executive-team/${
-        language && String(data[language]?.slug)
-      }?id=${data?.id}`
-    );
-  }, [language]);
+    if (language && locale) {
+      const data = JSON.parse(localStorage.getItem('doctor'));
+      router.push(
+        `/${language}/about/board-directors-and-executive-team/${String(
+          data[language]?.slug
+        )}?id=${data?.id}`
+      );
+    }
+  }, [language, locale]);
 
   useEffect(() => {
     setdoctorData(
