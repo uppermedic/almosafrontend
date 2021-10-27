@@ -12,9 +12,19 @@ module.exports = {
   compress: true,
   i18n: {
     localeDetection: false,
-    defaultLocale: 'ar',
+    defaultLocale: 'en',
     locales: ['ar', 'en']
   },
+  // async redirects() {
+  //   return [
+  // {
+  //   source: '/',
+  //   destination: '/en',
+  //   locales:false,
+  //   permanent: false,
+  // },
+  //   ]
+  // },
   images: {
     domains: ['159.65.230.116']
   },

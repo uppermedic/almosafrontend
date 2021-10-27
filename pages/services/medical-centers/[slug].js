@@ -9,15 +9,16 @@ import Hero from '../../../components/layout/Hero';
 const Post = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
+  const { locale } = router;
   useEffect(() => {
-    if (lang) {
+    if (lang && locale) {
       router.push(
-        `/${lang}/services/medical-centers/${String(data.seo[lang].title)
+        `/${locale}/services/medical-centers/${String(data.seo[locale].title)
           .split(' ')
           .join('-')}?id=${data.id}`
       );
     }
-  }, [lang]);
+  }, [lang, locale]);
 
   return (
     <div className="_single-post-page single-medical-center">
@@ -55,17 +56,5 @@ export async function getServerSideProps(context) {
     };
   }
 }
-
-// export async function getStaticPaths({ locales }) {
-// const paths = []
-
-// locales.forEach((locale, i) => {
-// posts.forEach((post, i) => {
-//   paths.push({ params: { slug: post.id }, locale })
-// });
-// });
-
-//   return { paths, fallback: false }
-// }
 
 export default Post;

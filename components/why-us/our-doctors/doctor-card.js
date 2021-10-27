@@ -19,7 +19,11 @@ const doctor_card = ({ doctor, setcurrentDoctor }) => {
     }
   };
   return (
-    <Link href={`/${locale}/our-doctors/${doctor.slug}`}>
+    <Link
+      href={`/${locale}/our-doctors/${String(doctor[language]?.name)
+        .split(' ')
+        .join('-')}?id=${doctor?.id}`}
+    >
       <a className="card" onClick={handleClick}>
         <img src={doctor.image} alt={language && doctor[language].name} />
         <div className="banner">

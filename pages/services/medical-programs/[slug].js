@@ -11,16 +11,17 @@ const HairTranplant = ({ data }) => {
   const { aboutData, hairPostData } = hairTransplantData;
   const lang = i18n.language;
   const router = useRouter();
+  const { locale } = router;
 
   useEffect(() => {
-    if (lang) {
+    if (lang && locale) {
       router.push(
         `/${lang}/services/medical-programs/${String(data.seo[lang].title)
           .split(' ')
           .join('-')}?id=${data.id}`
       );
     }
-  }, [lang]);
+  }, [lang, locale]);
   return (
     <div className="hair-transplant">
       <Head data={data.seo}></Head>
