@@ -33,7 +33,6 @@ export const BreadCrumb = ({ t }) => {
     return custom;
   };
 
-  console.log('current', router.query.slug);
   return (
     <>
       {!isHome && (

@@ -30,15 +30,33 @@ function MyApp({ Component, pageProps }) {
   const { header, footer } = pageProps.AppPageData;
   const router = useRouter();
   const { locale, asPath, pathname } = router;
-
+  console.log(router);
   useEffect(() => {
-    if (locale && pathname !== '/404') {
-      i18n.changeLanguage(locale);
-      document.getElementsByTagName('html')[0].setAttribute('lang', locale);
+    if (pathname !== '/404' && asPath !== `/${locale}`) {
+      if (locale == i18n.language) {
+        i18n.changeLanguage(i18n.language);
+        document
+          .getElementsByTagName('html')[0]
+          .setAttribute('lang', i18n.language);
 
-      router.push(`/${locale}` + asPath, `/${locale}` + asPath, {
-        locale: locale
-      });
+        router.push(
+          `/${i18n.language}` + asPath,
+          `/${i18n.language}` + asPath,
+          {
+            locale: i18n.language
+          }
+        );
+      } else if (locale != i18n.language) {
+        i18n.changeLanguage(locale);
+        document.getElementsByTagName('html')[0].setAttribute('lang', locale);
+
+        router.push(`/${locale}` + asPath, `/${locale}` + asPath, {
+          locale: locale
+        });
+      }
+    }
+    if (asPath == `/${locale}`) {
+      router.push(`/404`);
     }
   }, [locale, i18n.language]);
 

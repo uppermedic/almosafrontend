@@ -24,6 +24,17 @@ const CustomTabs = ({ items, dataContent }) => {
     setActiveTab(tab);
   };
 
+  useEffect(() => {
+    if (router?.query?.id) {
+      console.log('active', router?.query?.id);
+
+      setActiveTab(Number(router.query.id));
+    } else {
+      console.log('active', 0);
+      setActiveTab(0);
+    }
+  }, [router.asPath]);
+
   const handleRouteById = item => {
     if (item.dataType) {
       if (item.dataType === 'dynamic') {
@@ -42,13 +53,18 @@ const CustomTabs = ({ items, dataContent }) => {
             {items.map((item, index) => {
               return (
                 <NavItem
-                  key={index}
-                  className={classnames({ active: activeTab === index })}
+                  key={item.dataType === 'dynamic' ? item.id : index}
+                  className={classnames({
+                    active:
+                      item.dataType === 'dynamic'
+                        ? activeTab === item.id
+                        : activeTab === index
+                  })}
                   onClick={() => handleRouteById(item)}
                 >
                   <NavLink
                     onClick={() => {
-                      toggle(index);
+                      toggle(item.dataType === 'dynamic' ? item.id : index);
                     }}
                   >
                     {language && item.title[language]}
@@ -64,7 +80,10 @@ const CustomTabs = ({ items, dataContent }) => {
               {items.map((item, index) => {
                 const Component = item.component;
                 return (
-                  <TabPane tabId={index} key={item.id}>
+                  <TabPane
+                    tabId={item.dataType === 'dynamic' ? item.id : index}
+                    key={item.id}
+                  >
                     <div className={item.className}>
                       {Component && (
                         <Component

@@ -5,16 +5,24 @@ import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import { Col, Container, Row, Table } from 'reactstrap';
 import { FaFacebookF, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 
 const SingleDoctor = ({ doctor }) => {
   const [qualifications, setQualifications] = useState({});
   const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
 
   useEffect(() => {
-    if (lang) {
+    if (lang && locale) {
       setQualifications(doctor.data[lang].qualifications);
+      router.push(
+        `/${lang}/our-doctors/${String(doctor?.data[lang]?.name)
+          .split(' ')
+          .join('-')}?id=${doctor?.data?.id}`
+      );
     }
-  }, [doctor, lang]);
+  }, [doctor, lang, locale]);
 
   return (
     <div className="almoosa-doctors">
@@ -110,7 +118,7 @@ const SingleDoctor = ({ doctor }) => {
 export async function getServerSideProps(context) {
   if (context.query.slug) {
     //settings
-    let { error, data } = await fetchData(`/doctors/${context.query.slug}`);
+    let { error, data } = await fetchData(`/doctors/${context.query.id}`);
     if (error) {
       return {
         notFound: true
