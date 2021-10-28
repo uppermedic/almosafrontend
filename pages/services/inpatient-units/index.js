@@ -8,12 +8,16 @@ import { useRouter } from 'next/router';
 
 function InpatientPage({ t, services, servicesDataSingle }) {
   const router = useRouter();
+  const { locale } = router;
   const lang = i18n.language;
 
   useEffect(() => {
-    router.push(`/services/inpatient-units?id=${services.services[0].id}`);
-    return () => {};
-  }, []);
+    if (lang && locale) {
+      router.push(
+        `/${lang}/services/inpatient-units?id=${services.services[0].id}`
+      );
+    }
+  }, [lang, locale]);
 
   return (
     <React.Fragment>
