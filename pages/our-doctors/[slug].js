@@ -14,15 +14,20 @@ const SingleDoctor = ({ doctor }) => {
   const { locale } = router;
 
   useEffect(() => {
-    if (lang && locale) {
+    if (lang) {
       setQualifications(doctor.data[lang].qualifications);
+    }
+  }, [doctor, lang]);
+
+  useEffect(() => {
+    if (lang && locale) {
       router.push(
         `/${lang}/our-doctors/${String(doctor?.data[lang]?.name)
           .split(' ')
           .join('-')}?id=${doctor?.data?.id}`
       );
     }
-  }, [doctor, lang, locale]);
+  }, [lang, locale]);
 
   return (
     <div className="almoosa-doctors">

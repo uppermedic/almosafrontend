@@ -21,7 +21,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
   }, [language]);
 
   const handlePageClick = ({ selected }) => {
-    router.push(`?page=${selected + 1}`);
+    router.push(`/${locale}/media-center/blog?page=${selected + 1}`);
   };
   return (
     <section className="content-wrapper">
@@ -59,7 +59,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                   onPageChange={handlePageClick}
                   containerClassName={'pagination'}
                   subContainerClassName={'pages pagination'}
-                  // activeClassName={'active'}
+                  activeClassName={'active'}
                 />
               </Col>
             </Row>
