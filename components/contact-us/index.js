@@ -28,7 +28,7 @@ const index = ({ data, t }) => {
           'success'
         ).then(result => {
           if (result) {
-            router.push(`/`);
+            router.push(`/${lang}`);
           }
         });
       })

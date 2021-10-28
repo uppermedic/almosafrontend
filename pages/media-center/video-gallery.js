@@ -28,6 +28,7 @@ const Index = ({ data, getMediaCategories }) => {
     }
   };
   const router = useRouter();
+  const { locale } = router;
   const { last_page } = data;
   const [selectId, setselectId] = useState('all');
   useEffect(() => {
@@ -38,18 +39,23 @@ const Index = ({ data, getMediaCategories }) => {
   const handleSelectChange = ({ target: { value } }) => {
     setselectId(value);
     if (value === 'all') {
-      router.push(`?page=1`);
+      router.push(`/${locale}/media-center/video-gallery?page=1`);
     } else if (value !== 'all') {
-      //console.log('not all');
-      router.push(`?category=${value}&page=1`);
+      router.push(
+        `/${locale}/media-center/video-gallery?category=${value}&page=1`
+      );
     }
   };
 
   const handlePageClick = ({ selected }) => {
     if (selectId === 'all') {
-      router.push(`?page=${selected + 1}`);
+      router.push(`/${locale}/media-center/video-gallery?page=${selected + 1}`);
     } else {
-      router.push(`?category=${selectId}&page=${selected + 1}`);
+      router.push(
+        `/${locale}/media-center/video-gallery?category=${selectId}&page=${
+          selected + 1
+        }`
+      );
     }
   };
 

@@ -16,6 +16,7 @@ import SelectBox from 'src/components/layout/SelectBox';
 function Our_Doctors({ data, getCategories, categories }) {
   const { language } = i18n;
   const router = useRouter();
+  const { locale } = router;
   const {
     doctors: { last_page }
   } = data;
@@ -25,7 +26,7 @@ function Our_Doctors({ data, getCategories, categories }) {
 
   useEffect(() => {
     getCategories('/sections');
-    router.push(`?page=1`);
+    router.push(`/${locale}/our-doctors?page=1`);
     return () => {};
   }, []);
 
@@ -33,10 +34,10 @@ function Our_Doctors({ data, getCategories, categories }) {
     setselectId(value);
     if (value === 'all') {
       setfilter(false);
-      router.push(`?page=1`);
+      router.push(`/${locale}/our-doctors?page=1`);
     } else if (value !== 'all') {
       setfilter(true);
-      router.push(`?page=1&id=${value}`);
+      router.push(`/${locale}/our-doctors?page=1&id=${value}`);
     }
   };
 
@@ -44,13 +45,11 @@ function Our_Doctors({ data, getCategories, categories }) {
 
   const handlePageClick = ({ selected }) => {
     if (selectId === 'all') {
-      router.push(`?page=${selected + 1}`);
+      router.push(`/${locale}/our-doctors?page=${selected + 1}`);
     } else {
-      router.push(`?page=${selected + 1}&id=${selectId}`);
+      router.push(`/${locale}/our-doctors?page=${selected + 1}&id=${selectId}`);
     }
   };
-
-  console.log('doctors', data);
 
   return (
     <div className="almoosa-doctors">

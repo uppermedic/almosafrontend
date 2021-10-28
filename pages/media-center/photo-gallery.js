@@ -13,6 +13,7 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 function index({ data, getMediaCategories }) {
   const router = useRouter();
+  const { locale } = router;
   const [tapId, settapId] = useState('all');
   const { last_page } = data;
   const head_data = {
@@ -38,18 +39,24 @@ function index({ data, getMediaCategories }) {
   const handleSelectTap = value => {
     settapId(value);
     if (value === 'all') {
-      router.push(`?page=1`);
+      router.push(`/${locale}/media-center/photo-gallery?page=1`);
     } else if (value !== 'all') {
       //console.log('not all');
-      router.push(`?category=${value}&page=1`);
+      router.push(
+        `/${locale}/media-center/photo-gallery?category=${value}&page=1`
+      );
     }
   };
 
   const handlePageClick = ({ selected }) => {
     if (tapId === 'all') {
-      router.push(`?page=${selected + 1}`);
+      router.push(`/${locale}/media-center/photo-gallery?page=${selected + 1}`);
     } else {
-      router.push(`?category=${tapId}&page=${selected + 1}`);
+      router.push(
+        `/${locale}/media-center/photo-gallery?category=${tapId}&page=${
+          selected + 1
+        }`
+      );
     }
   };
 

@@ -26,11 +26,8 @@ const CustomTabs = ({ items, dataContent }) => {
 
   useEffect(() => {
     if (router?.query?.id) {
-      console.log('active', router?.query?.id);
-
       setActiveTab(Number(router.query.id));
     } else {
-      console.log('active', 0);
       setActiveTab(0);
     }
   }, [router.asPath]);
@@ -38,9 +35,9 @@ const CustomTabs = ({ items, dataContent }) => {
   const handleRouteById = item => {
     if (item.dataType) {
       if (item.dataType === 'dynamic') {
-        router.push(item.path + `?id=${item.id}`);
+        router.push(`/${language}` + item.path + `?id=${item.id}`);
       } else {
-        router.push(item.path);
+        router.push(`/${language}` + item.path);
       }
     }
   };

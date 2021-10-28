@@ -10,9 +10,10 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 const Index = ({ data, t }) => {
   const router = useRouter();
+  const { locale } = router;
   const { last_page } = data;
   const handlePageClick = ({ selected }) => {
-    router.push(`?page=${selected + 1}`);
+    router.push(`/${locale}/media-center/hakeem-magazine?page=${selected + 1}`);
   };
   return (
     <section className="content-wrapper">
