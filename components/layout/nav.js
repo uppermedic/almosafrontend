@@ -24,28 +24,13 @@ const TopNav = ({ t }) => {
   };
 
   return (
-    <div className="top-nav">
-      <Container>
-        <Row>
-          <Col xs={12} sm={2}>
-            <Nav className="left-items">
-              <NavItem style={{ cursor: 'pointer' }} onClick={handleChangeLang}>
-                <a>
-                  <FontAwesomeIcon icon={faGlobe} /> {t('lang')}
-                </a>
-              </NavItem>
-            </Nav>
-          </Col>
-          <Col
-            xs={12}
-            sm={10}
-            className="d-flex justify-content-end green-top-nav"
-          >
-            <SearchNav />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Nav className="left-items">
+      <NavItem style={{ cursor: 'pointer' }} onClick={handleChangeLang}>
+        <a>
+          <FontAwesomeIcon icon={faGlobe} /> {t('lang')}
+        </a>
+      </NavItem>
+    </Nav>
   );
 };
 

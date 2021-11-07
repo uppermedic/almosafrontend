@@ -22,24 +22,30 @@ function BlogItem({ blog, t }) {
           <img src={blog.thumbnail} alt="" srcSet="" />
           <div className="content">
             <h5>
-              {truncate(
-                strippedContent(
-                  (language && blog[language].title) || 'No Data'
-                ),
-                20,
-                '......'
-              )}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncate(
+                    strippedContent(
+                      (language && blog[language].title) || 'No Data'
+                    ),
+                    20,
+                    '......'
+                  )
+                }}
+              />
             </h5>
             <p>
-              <Markdown>
-                {truncate(
-                  strippedContent(
-                    (language && blog[language].content) || 'No Data'
-                  ),
-                  60,
-                  '......'
-                )}
-              </Markdown>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncate(
+                    strippedContent(
+                      (language && blog[language].content) || 'No Data'
+                    ),
+                    60,
+                    '......'
+                  )
+                }}
+              />
             </p>
             <Link
               href={

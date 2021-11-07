@@ -1,17 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { i18n } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
-import { strippedContent } from 'src/utils/helpers';
+
 const SharedPost = ({ data, cutomImgStyle }) => {
   const { language } = i18n;
 
   return (
     <div>
-      <div
-        className="page-heading"
-        // style={customBg && { backgroundColor: customBg }}
-      >
+      <div className="page-heading">
         <div className="container">
           <h1>{language && data.seo[language].title}</h1>
         </div>
@@ -22,9 +18,6 @@ const SharedPost = ({ data, cutomImgStyle }) => {
             <Col xl="8">
               {language && data.seo[language]?.content && (
                 <>
-                  {/* <Markdown>
-                  {strippedContent(data.seo[language]?.content)}
-                </Markdown> */}
                   <div
                     dangerouslySetInnerHTML={{
                       __html: data.seo[language]?.content

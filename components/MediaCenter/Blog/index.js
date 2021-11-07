@@ -120,18 +120,28 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <img src={post.image} />
                           <div>
                             <h5>
-                              {post[language]
-                                ? truncate(post[language]?.title, 30, '...')
-                                : ''}{' '}
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: post[language]
+                                    ? truncate(post[language]?.title, 30, '...')
+                                    : ''
+                                }}
+                              />
                             </h5>
                             <p>
-                              {post[language]
-                                ? truncate(
-                                    strippedContent(post[language]?.content),
-                                    100,
-                                    '...'
-                                  )
-                                : ''}
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: post[language]
+                                    ? truncate(
+                                        strippedContent(
+                                          post[language]?.content
+                                        ),
+                                        120,
+                                        '...'
+                                      )
+                                    : ''
+                                }}
+                              />
                             </p>
                           </div>
                         </a>

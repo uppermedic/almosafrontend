@@ -4,7 +4,7 @@ import { appWithTranslation, i18n } from 'root/i18n';
 import { Provider } from 'react-redux';
 import reduxStore from 'src/store/store';
 import Head from 'src/components/layout/head';
-import Nav from 'src/components/layout/nav';
+import Nav from 'src/components/layout/SearchNav';
 import Header from 'src/components/layout/Header';
 import Footer from 'src/components/Home/Footer';
 import ContactUsButton from 'src/components/contact-us/ContactUsButton';
