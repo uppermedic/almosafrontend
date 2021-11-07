@@ -18,24 +18,30 @@ function CenterItem({ t, center }) {
           <img src={center.ar.thumbnail} alt="" srcSet="" />
           <div className="content">
             <h3>
-              {truncate(
-                strippedContent(
-                  (language && center[language].title) || 'No Data'
-                ),
-                20,
-                '......'
-              )}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncate(
+                    strippedContent(
+                      (language && center[language].title) || 'No Data'
+                    ),
+                    20,
+                    '......'
+                  )
+                }}
+              />
             </h3>
             <p>
-              <Markdown>
-                {truncate(
-                  strippedContent(
-                    (language && center[language].excerpt) || 'No Data'
-                  ),
-                  70,
-                  '......'
-                )}
-              </Markdown>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncate(
+                    strippedContent(
+                      (language && center[language].excerpt) || 'No Data'
+                    ),
+                    70,
+                    '......'
+                  )
+                }}
+              />
             </p>
             <Link
               href={`/${locale}/services/medical-centers/${

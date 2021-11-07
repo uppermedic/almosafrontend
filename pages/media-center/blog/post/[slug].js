@@ -46,6 +46,7 @@ const Post = ({ data }) => {
           // latest={data.data.slice(0, 3)}
           tags={data['tags']}
           categories={data['categories']}
+          related={data['related']}
         />
       )}
     </div>
