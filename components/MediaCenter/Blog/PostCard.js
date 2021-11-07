@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent, truncate } from 'src/utils/helpers';
-
 import { Row, Col } from 'reactstrap';
 function Post({ article, t }) {
-  const { id, image } = article;
+  const { id, image, created_at } = article;
   const { language } = i18n;
   const { title, slug, content } = language ? article[language] : {};
   const [locale, setlocale] = useState('');
@@ -25,19 +23,25 @@ function Post({ article, t }) {
         <Col xs={12} className="title-wrapper">
           <h6 className="title">{title}</h6>
           <div>
-            <span>July 20, 2020</span>
+            <span>{created_at}</span>
           </div>
         </Col>
         <Col xs={12} className="description">
-          <Markdown>
-            {content ? truncate(strippedContent(content), 200, '...') : ''}
-          </Markdown>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content
+                ? truncate(strippedContent(content), 200, '...')
+                : ''
+            }}
+          />
           <Link
             href={`/${locale}/media-center/blog/post/${String(title)
               .split(' ')
               .join('-')}?id=${id}`}
           >
-            <a className="d-block">{t('read_more')}</a>
+            <a className="d-block py-3">
+              <strong>{t('read_more')}</strong>
+            </a>
           </Link>
         </Col>
       </Row>

@@ -4,7 +4,7 @@ import ClassNames from 'classnames';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import Article from './Article';
 
-const Index = ({ article, categories, tags, t }) => {
+const Index = ({ article, categories, related, t }) => {
   const [controllerOpen, setControllerOpen] = useState(false);
   const { language } = i18n;
   let contentWithLang = article[language];
@@ -29,11 +29,16 @@ const Index = ({ article, categories, tags, t }) => {
           </Col>
         </Row>
         <Row className="inner-content justify-content-between">
-          <Col xs={12} lg={6}>
-            <Article article={contentWithLang} originalArticle={article} />
+          <Col xs={12} md={7} xl={8}>
+            <Article
+              article={contentWithLang}
+              originalArticle={article}
+              related={related}
+            />
           </Col>
           <Col
-            lg={5}
+            md={5}
+            xl={4}
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">

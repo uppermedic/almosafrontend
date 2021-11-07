@@ -37,13 +37,6 @@ const Content = ({ physicians, data }) => {
       {active?.items && active?.items[0] && (
         <section className="center-paragraph">
           <div className="container">
-            {/* <p>
-              {language && active.items[0][language]?.content && (
-                <Markdown>
-                  {strippedContent(active.items[0][language]?.content)}
-                </Markdown>
-              )}
-            </p> */}
             {language && active?.items[0][language]?.content && (
               <div
                 dangerouslySetInnerHTML={{

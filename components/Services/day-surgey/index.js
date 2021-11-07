@@ -32,7 +32,6 @@ const OneDaySurgeryContent = ({ t, data }) => {
               <div className="surgey-info">
                 {language && seo[language]?.content && (
                   <>
-                    {/* <Markdown>{strippedContent(seo[language]?.content)}</Markdown> */}
                     <div
                       dangerouslySetInnerHTML={{
                         __html: seo[language]?.content
@@ -40,25 +39,6 @@ const OneDaySurgeryContent = ({ t, data }) => {
                     />
                   </>
                 )}
-                {/* <p>
-                  Day surgery allows you to be admitted to hospital for surgery
-                  or a procedure and be discharged home on the same day. We try
-                  to reduce the length of stay in the hospital by shifting the
-                  majority of our operations to day surgery.
-                </p>
-                <p>
-                  Thanks to short-acting anesthesia and our advanced surgical
-                  techniques. High-quality specialist care is provided with
-                  specially trained nurses caring for patients during their time
-                  on our day surgery unit.
-                </p>
-                <p>
-                  If you are a day patient, you will be discharged home from the
-                  unit after only a few hours. There are a few patients who use
-                  our 23-hour overnight facility and who are discharged first
-                  thing in the morning the day after their operation. We will
-                  tell you in advance if we plan to keep you overnight.
-                </p> */}
               </div>
             </div>
           </Col>
