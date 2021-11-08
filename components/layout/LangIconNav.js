@@ -6,9 +6,8 @@ import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 //components
-import SearchNav from 'src/components/layout/SearchNav';
 
-const TopNav = ({ t }) => {
+const LangIcon = ({ t }) => {
   const router = useRouter();
   const { asPath } = router;
 
@@ -34,7 +33,7 @@ const TopNav = ({ t }) => {
   );
 };
 
-TopNav.getInitialProps = async () => ({
+LangIcon.getInitialProps = async () => ({
   namespacesRequired: ['common']
 });
-export default withTranslation('common')(TopNav);
+export default withTranslation('common')(LangIcon);
