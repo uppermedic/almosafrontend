@@ -34,7 +34,7 @@ function Post({ article, t }) {
               {content ? truncate(strippedContent(content), 200, '...') : ''}
             </Markdown>
             <Link
-              href={`/${locale}/media-center/blog/post/${String(title)
+              href={`/${locale}/media-center/news/post/${String(title)
                 .split(' ')
                 .join('-')}?id=${id}`}
             >

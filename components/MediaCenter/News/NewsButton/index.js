@@ -3,7 +3,7 @@ import { Link, withTranslation, i18n } from 'root/i18n';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
 
-const BlogButton = ({ t, phone }) => {
+const NewsButton = ({ t, phone }) => {
   const router = useRouter();
   const [locale, setlocale] = useState('');
 
@@ -14,19 +14,19 @@ const BlogButton = ({ t, phone }) => {
   return (
     <>
       <div
-        className={cn('blog-button', 'd-none d-md-block', {
-          hide: router.pathname === '/media-center/blog'
+        className={cn('news-button', 'd-none d-md-block', {
+          hide: router.pathname === '/media-center/news'
         })}
       >
-        <Link href={`/${locale}/media-center/blog`}>
+        <Link href={`/${locale}/media-center/news`}>
           <a>
             <ButtonSVG t={t} />{' '}
           </a>
         </Link>
       </div>
       <div
-        className={cn('blog-button-mob', 'd-md-none', {
-          hide: router.pathname === '/media-center/blog'
+        className={cn('news-button-mob', 'd-md-none', {
+          hide: router.pathname === '/media-center/news'
         })}
       >
         <Link href={`tel:${phone}`}>
@@ -99,7 +99,7 @@ const ButtonSVG = ({ t }) => (
         transform="translate(1847.893 706.811) rotate(-88)"
       >
         <text
-          id="Blog"
+          id="News"
           transform="translate(0 40)"
           fill="#fff"
           font-size="50"
@@ -107,7 +107,7 @@ const ButtonSVG = ({ t }) => (
           font-weight="500"
         >
           <tspan x="0" y="0">
-            {t('menu:blog')}
+            {t('menu:news')}
           </tspan>
         </text>
       </g>
@@ -124,4 +124,4 @@ const ButtonSVG = ({ t }) => (
   </svg>
 );
 
-export default withTranslation(['common', 'menu'])(BlogButton);
+export default withTranslation(['common', 'menu'])(NewsButton);

@@ -9,7 +9,7 @@ import Statistics from 'src/components/Home/Statistics';
 import Carousel from 'src/components/layout/Carousel';
 import IconsSection from 'src/components/Home/IconsSection';
 import EmergyncyCall from 'src/components/Home/EmergyncyCall';
-import Blogs from 'src/components/Home/Blogs';
+import News from 'src/components/Home/News';
 
 const Homepage = props => {
   if (props.data) {
@@ -25,7 +25,7 @@ const Homepage = props => {
           hospital={props.data?.hospital || ''}
           emergency_phone={props.data?.emergency_phone || ''}
         />
-        <Blogs data={props.data.blogs} />
+        <News data={props.data.blogs} />
         <EmergyncyCall emergency_phone={props.data?.emergency_phone || ''} />
       </div>
     );

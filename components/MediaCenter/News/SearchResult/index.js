@@ -31,7 +31,7 @@ const Index = ({ data, router, t }) => {
         <Row className="inner-content">
           <Col xs={12}>
             <div className="search">
-              <Form action="/media-center/blog/search-result?">
+              <Form action="/media-center/news/search-result?">
                 <FormGroup
                   row
                   className="m-0 p-0 justify-content-between align-items-center"
@@ -41,7 +41,7 @@ const Index = ({ data, router, t }) => {
                     type="search"
                     name="search"
                     id="exampleSearch"
-                    placeholder={t('search_blog')}
+                    placeholder={t('search_news')}
                     value={search}
                     onChange={({ target: { value } }) => setSearch(value)}
                   />

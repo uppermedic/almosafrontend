@@ -34,10 +34,10 @@ const data = [
   },
   {
     id: 1,
-    title: 'Blog',
+    title: 'News',
     bg: '/images/media-center/blog.png',
     ribbon_class: 'brown',
-    url: 'media-center/blog'
+    url: 'media-center/news'
   }
 ];
 const Index = ({ t }) => {

@@ -1,7 +1,7 @@
-section.home-blogs {
+section.home-news {
   padding: 30px 0;
   position: relative;
-  .overlay-blog {
+  .overlay-news {
     position: absolute;
     top: 0;
     height: 100%;
@@ -11,7 +11,7 @@ section.home-blogs {
       width: 100%;
     }
   }
-  h3.section-title-blog {
+  h3.section-title-news {
     color: #fff;
     padding-bottom: 28px;
     font-family: 'diodrum-arabic-bold';
@@ -145,7 +145,7 @@ section.home-blogs {
     }
   }
 
-  .show_more_blog {
+  .show_more_news {
     color: #fff;
     font-size: 25px;
     font-family: 'diodrum-arabic-bold';
