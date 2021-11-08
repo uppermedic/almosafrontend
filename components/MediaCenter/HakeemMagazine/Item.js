@@ -6,10 +6,7 @@ export default function Service({ item }) {
   return (
     <a target="_blank" href={item.url}>
       <a>
-        <div
-          className="card-item"
-          //style={{ backgroundImage: `url(${item.image}) ` }}
-        >
+        <div className="card-item">
           <div className="overlay"></div>
           <div className={`text-center ribbon`}>
             <h3>{lang && item[lang].title}</h3>

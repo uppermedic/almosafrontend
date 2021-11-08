@@ -29,9 +29,6 @@
     }
     .info {
       margin: 20px 0;
-      .col {
-        //padding: 0;
-      }
       .the-img {
         width: 100%;
         height: 100%;
@@ -44,7 +41,6 @@
         p {
           font-size: $sub-heading-sm-size;
           margin: 20px auto;
-          //line-height: 2;
         }
         @include respond-below(sm) {
           padding: 30px;

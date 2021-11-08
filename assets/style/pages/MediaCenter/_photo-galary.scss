@@ -49,13 +49,11 @@
       height: 100%;
       background: rgba($primary-color, $alpha: 0.4);
       z-index: 2;
-      // pointer-events: none;
       cursor: pointer;
     }
     button {
       color: #fff;
       font-size: 37px;
-      //line-height: 49px;
       outline: none;
       border: none;
       background-color: $almoosa-light-green-color;
@@ -63,7 +61,6 @@
       font-weight: bold;
       border-radius: 10px;
       @include respond-below(md) {
-        //line-height: 1;
         padding: 15px 40px;
         font-size: 20px;
       }

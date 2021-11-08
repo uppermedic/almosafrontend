@@ -14,7 +14,6 @@ section.testimonial {
     h3 {
       font-size: $sub-heading-size;
       font-weight: 700;
-      //line-height: 74px;
       @include Border-bottom(3px, #fff);
       padding-bottom: 15px;
       @include respond-below(lg) {
@@ -24,14 +23,12 @@ section.testimonial {
     p {
       font-size: $sub-heading-size;
       font-weight: bold;
-      //line-height: 96px;
       @include Border-bottom(3px, #fff);
       width: 50%;
       margin: 0 auto;
       padding-bottom: 15px;
       @include respond-below(lg) {
         font-size: $sub-heading-mob-size;
-        //line-height: 32px;
       }
     }
 
@@ -42,7 +39,6 @@ section.testimonial {
     }
   }
 
-  // .owl-item {
   .item {
     margin: 0 auto;
     @include rtl() {
@@ -87,7 +83,6 @@ section.testimonial {
     .owl-prev:active,
     .owl-next:active {
       color: #fff !important;
-      // border: none;
       background-color: $primary-color;
     }
     .owl-prev,
@@ -97,9 +92,6 @@ section.testimonial {
       font-size: 40px !important;
       padding: 0px 8px !important;
       border-radius: 5px;
-      i {
-        // font-size: 2em;
-      }
     }
     .owl-prev {
       position: absolute;

@@ -2,7 +2,6 @@
   .two_columns_post {
     margin: 50px auto;
     .post-paragraph {
-      // font-size: $paragraph-text-size;
       padding-right: 50px;
       font-weight: bold;
       height: 100%;
@@ -17,12 +16,7 @@
           font-size: 14px !important;
         }
       }
-      // @include respond-below(md) {
-      //   font-size: $paragraph-text-sm-size;
-      // }
-      // @include respond-below(sm) {
-      //   font-size: $font-sm !important;
-      // }
+
       .single_paragraph {
         margin: 20px auto;
         p,
@@ -83,7 +77,6 @@
       }
     }
     .post-paragraph {
-      // font-size: $paragraph-text-size;
       font-weight: bold;
       text-align: center;
       margin: 50px auto;
@@ -112,7 +105,6 @@
         }
       }
       @include respond-below(md) {
-        // font-size: $font-sm;
         margin: 20px 0;
         text-align: left;
         @include rtl() {

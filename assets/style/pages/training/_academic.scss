@@ -17,13 +17,11 @@ section.academic-affairs {
         padding-bottom: 20px;
       }
       @include respond-below(md) {
-        // font-size: $sub-heading-sm;
         padding-bottom: 10px;
       }
       @include Border-bottom(3px, $primary-color);
     }
     section.intro-section {
-      // padding: 50px 0 25px;
       p {
         color: darkslategray;
         font-size: 16px;
@@ -80,11 +78,9 @@ section.academic-affairs {
     }
 
     section.our-team {
-      // padding: 50px 0 25px;
       padding: 30px 0;
       position: relative;
       .caro-card {
-        // height: 427.01px;
         height: 400px;
         background: transparent;
         position: relative;
@@ -99,7 +95,6 @@ section.academic-affairs {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          //height: 50%;
           width: 100%;
           z-index: 2;
           background: #cccccc29;
@@ -108,7 +103,6 @@ section.academic-affairs {
           @include rtl() {
             direction: rtl;
           }
-          // font-family: '';
           h3 {
             font-size: 16px;
             color: $primary-color;
@@ -305,9 +299,6 @@ section.academic-affairs {
           flex-direction: column;
           justify-content: space-between;
           button {
-            // position: absolute;
-            // bottom: 5vw;
-            // left: 20px;
             text-align: left;
             font-family: 'diodrum-arabic-bold';
             color: $primary-color;

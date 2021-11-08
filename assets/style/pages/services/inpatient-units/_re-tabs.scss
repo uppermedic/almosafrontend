@@ -63,10 +63,6 @@
       }
       * {
         font-size: 14px;
-        //color: $gray-2;
-        @include respond-below(md) {
-          // font-size: $paragraph-text-xs-size;
-        }
       }
       @include respond-below(md) {
         padding: 20px;

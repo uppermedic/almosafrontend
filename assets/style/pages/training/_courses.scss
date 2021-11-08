@@ -26,9 +26,6 @@
   }
   .course-card {
     width: 100%;
-    // @include respond-between(xl, xxl) {
-    //   width: 280px;
-    // }
     box-shadow: 0px 3px 5px 2px hsla(0, 0%, 0%, 0.16);
     cursor: pointer;
     img {
@@ -40,7 +37,6 @@
       display: block;
       background-color: transparent;
       -webkit-appearance: none;
-      //box-shadow: 0px 3px 5px 2px hsla(0, 0%, 0%, 0.16);
       outline: none;
       border-radius: 0;
       padding: 10px 20px;
@@ -51,7 +47,6 @@
       h3 {
         font-family: 'diodrum-arabic-meduim';
         font-size: 18px;
-        //line-height: 30px;
         @include respond-below(md) {
           font-size: $paragraph-text-mob-size;
         }

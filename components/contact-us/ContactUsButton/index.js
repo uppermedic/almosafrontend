@@ -97,7 +97,6 @@ const ButtonSVG = ({ t }) => (
       >
         <text
           id="News"
-          //transform="translate(0 40)"
           transform="translate(-15 38)"
           fill="#fff"
           font-size="35"

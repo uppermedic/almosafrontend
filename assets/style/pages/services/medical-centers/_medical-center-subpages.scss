@@ -20,7 +20,6 @@
       height: 100%;
       p {
         font-size: $paragraph-text-sm-size;
-        //line-height: 2;
         @include respond-below(xl) {
           margin-top: 50px;
         }

@@ -1,18 +1,7 @@
 import React from 'react';
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Input,
-  Container,
-  Row,
-  Col,
-  Button
-} from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import { i18n } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { strippedContent } from 'src/utils/helpers';
 
 export default function MeetOurTeam({ data }) {

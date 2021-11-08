@@ -15,7 +15,6 @@ const index = ({ data, t }) => {
   let _reCaptchaRef = useRef(null);
 
   const handleValidSubmit = (event, values) => {
-    //if (!verified) return;
     const allData = {
       ...values
     };
@@ -41,13 +40,9 @@ const index = ({ data, t }) => {
       });
   };
   const verifyCallback = recaptchaToken => {
-    // Here you will get the final recaptchaToken!!!
-    //console.log('your recaptcha token >= ', recaptchaToken);
     if (recaptchaToken) setVerified(true);
   };
-  const asyncScriptOnLoad = () => {
-    //console.log('scriptLoad - reCaptcha Ref-', _reCaptchaRef);
-  };
+
   return (
     <section className="contact">
       <Container>

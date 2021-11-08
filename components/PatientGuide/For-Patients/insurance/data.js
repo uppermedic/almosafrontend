@@ -30,17 +30,6 @@ export default [
     logo: '/images/patient-guide/for_patient/insurance-companies/ميدي فيزا.png',
     link: ''
   },
-  // {
-  //   ar: {
-  //     name: 'العالمية للتأمين'
-  //   },
-  //   en: {
-  //     name: 'Alalamiya'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/العالمية للتأمين.jpeg',
-  //   link: 'https://www.alalamiya.sa/ar/home'
-  // },
   {
     ar: {
       name: 'التعاونية'
@@ -63,28 +52,6 @@ export default [
       '/images/patient-guide/for_patient/insurance-companies/الدرع العربي.png',
     link: 'https://www.der3.com/'
   },
-  // {
-  //   ar: {
-  //     name: 'شركة الاتحاد التجاري'
-  //   },
-  //   en: {
-  //     name: 'Al Itehad'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/الاتحاد التجاري.jpg',
-  //   link: 'https://www.tuci-sa.com/ar'
-  // },
-  // {
-  //   ar: {
-  //     name: 'كارز'
-  //   },
-  //   en: {
-  //     name: 'CARS'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/كارز للتأمين.jpg',
-  //   link: ''
-  // },
   {
     ar: {
       name: 'سايكو'
@@ -95,28 +62,6 @@ export default [
     logo: '/images/patient-guide/for_patient/insurance-companies/سايكو.jpg',
     link: 'https://www.saico.com.sa/'
   },
-  // {
-  //   ar: {
-  //     name: 'الشركة الخليجية العامة للتأمين'
-  //   },
-  //   en: {
-  //     name: 'Gulf General Insurance Company'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/الخليجية العامة للتأمين.png',
-  //   link: 'https://www.ggi-sa.com/'
-  // },
-  // {
-  //   ar: {
-  //     name: 'الصقر'
-  //   },
-  //   en: {
-  //     name: 'alsagr'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/الصقر للتأمين.jpg',
-  //   link: 'https://alsagr.com/'
-  // },
   {
     ar: {
       name: 'أكسا'
@@ -137,16 +82,6 @@ export default [
     logo: '/images/patient-guide/for_patient/insurance-companies/نكست كير.jpg',
     link: 'https://www.nextcarehealth.com'
   },
-  // {
-  //   ar: {
-  //     name: 'ميد جلف'
-  //   },
-  //   en: {
-  //     name: 'medgulf'
-  //   },
-  //   logo: '/images/patient-guide/for_patient/insurance-companies/ميدجلف.png',
-  //   link: 'https://medgulf.com.sa/'
-  // },
   {
     ar: {
       name: 'ملاذ للتأمين'
@@ -202,17 +137,6 @@ export default [
       '/images/patient-guide/for_patient/insurance-companies/اتحاد الخليج.jpeg',
     link: 'https://gulfunion.com.sa/'
   },
-  // {
-  //   ar: {
-  //     name: 'ولاء للتأمين'
-  //   },
-  //   en: {
-  //     name: 'walaa'
-  //   },
-  //   logo:
-  //     '/images/patient-guide/for_patient/insurance-companies/ولاء للتأمين.png',
-  //   link: 'https://walaa.com/'
-  // },
   {
     ar: {
       name: 'ميد نت'

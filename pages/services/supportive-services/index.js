@@ -25,10 +25,6 @@ function Supportive({ t, services, servicesDataSingle }) {
   };
 
   const [url, seturl] = useState('');
-  // useEffect(() => {
-  //   router.push(`/services/supportive-services?id=${services.services[0].id}`);
-  //   return () => {};
-  // }, []);
 
   useEffect(() => {
     seturl(window.location.href);

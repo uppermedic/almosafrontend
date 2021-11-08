@@ -13,7 +13,6 @@ import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 
 const LetsLearn = ({ data }) => {
-  //console.log(data);
   const lang = i18n.language;
   const head_data = {
     ar: {
