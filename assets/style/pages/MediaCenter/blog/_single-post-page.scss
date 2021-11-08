@@ -39,14 +39,21 @@
     .related-links {
       h5 {
         color: $secondary-bg-color;
+        @include respond-below(md) {
+          font-size: 17px;
+        }
       }
       ul {
         list-style: none;
         padding: 0;
         li {
           color: $primary-color;
+          @include respond-below(md) {
+            font-size: 15px;
+          }
           svg {
             margin: 0 5px;
+            color: $secondary-bg-color;
           }
         }
       }
