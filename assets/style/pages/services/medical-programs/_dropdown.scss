@@ -96,10 +96,8 @@
         }
       }
       span {
-        // margin-left: 30px;
         @include rtl() {
           margin-left: 0;
-          // margin-right: 30px;
         }
       }
       @include respond-below(md) {

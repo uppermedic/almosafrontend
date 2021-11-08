@@ -82,7 +82,6 @@ const Content = props => {
 
 export default Content;
 
-//
 const Tabs = withTranslation('common')(props => {
   const { physicians, tab1Data, t } = props;
   const { language } = i18n;

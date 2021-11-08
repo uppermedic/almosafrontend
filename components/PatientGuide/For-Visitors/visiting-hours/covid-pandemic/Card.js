@@ -4,7 +4,6 @@ import Markdown from 'markdown-to-jsx';
 
 const card = ({ item }) => {
   const lang = i18n.language;
-  // console.log('item', item, lang, lang && item[lang]);
   return (
     <div className="covid-card">
       <h3>

@@ -63,7 +63,6 @@ header {
           margin: 0 1.3em;
         }
         @include respond-below(md) {
-          // margin: 0;
           font-size: $font-xs;
         }
         &::before,
@@ -83,7 +82,6 @@ header {
           bottom: 0;
         }
         &.active {
-          //   color: $primary-color;
           font-family: 'diodrum-arabic-bold';
           &::before,
           &::after {

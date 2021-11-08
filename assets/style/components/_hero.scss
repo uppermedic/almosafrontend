@@ -5,22 +5,17 @@
   @include respond-below(xl) {
     text-align: center;
     height: $hero-height-lg;
-    // padding: 6em 0;
-    // height: auto !important;
   }
 
   @include respond-below(lg) {
-    // padding: 3em 0;
     height: $hero-height-md;
   }
 
   @include respond-below(md) {
-    // padding: 3em 0;
     height: $hero-height-sm;
   }
 
   @include respond-below(sm) {
-    // padding: 3em 0;
     height: $hero-height-xs;
   }
 
@@ -36,34 +31,7 @@
       transform: scaleX(-1);
     }
   }
-  // .hero-content {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 15%;
-  //   transform: translateY(-50%);
-  //   @include rtl() {
-  //     right: 15%;
-  //     left: auto;
-  //   }
-  //   /***/
-  //   h2 {
-  //     color: #fff;
-  //     font-size: 3rem;
-  //     font-family: 'diodrum-arabic-bold';
-  //     padding: $spaces 0;
-  //     @include respond-below(md) {
-  //       font-size: $heading-md;
-  //     }
-  //     @include respond-below(sm) {
-  //       font-size: $heading-sm;
-  //     }
-  //   }
 
-  //   p {
-  //     display: block;
-  //     margin: 0;
-  //   }
-  // }
   .hero-content {
     background-color: $secondary-color-light-lessOpacity;
     position: absolute;
@@ -87,12 +55,9 @@
     }
 
     @include respond-below(md) {
-      // position: unset;
-
       width: 60%;
     }
     @include respond-below(sm) {
-      // position: unset;
       top: 20%;
       width: 100%;
       margin-top: 20px;
@@ -107,9 +72,7 @@
       @include respond-below(xl) {
         font-size: $heading-mob-size;
       }
-      // @include respond-below(lg) {
-      //   font-size: $heading-mob-size;
-      // }
+
       @include respond-below(md) {
         font-size: $heading-sm-size;
       }

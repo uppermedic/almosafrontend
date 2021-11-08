@@ -19,7 +19,6 @@ const ReusableDropdown = ({
   clickItemFun,
   activeItemIndex
 }) => {
-  // const [showDrop, setShowdrop] = useState(true);
   const { language } = i18n;
 
   return (

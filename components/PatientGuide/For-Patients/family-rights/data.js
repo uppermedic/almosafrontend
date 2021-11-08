@@ -381,19 +381,6 @@ export const data = [
           `
         }
       }
-      // {
-      // 	num: '26',
-      // 	ar: {
-      // 		content: `
-      //     عند خروج المريض من مستشفى الموسى التخصصي يحصل على إرشادات الخروج من قبل فريق التمريض، والتي تحتوي على الخطة العلاجية والنصائح الطبية اللازمة للعناية الكاملة للمريض.
-      //     `
-      // 	},
-      // 	en: {
-      // 		content: `
-      //     When the patient is discharged from Al-Moosa Specialist Hospital, he obtains exit instructions from the nursing team, which contain the treatment plan and medical advice necessary for the patient's full care.
-      //     `
-      // 	}
-      // }
     ],
     img: '/images/patient-guide/for_patient/patient_rights_5.jpg'
   }

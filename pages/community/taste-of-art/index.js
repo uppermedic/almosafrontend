@@ -48,11 +48,6 @@ const TasteOfArt = ({ data, t }) => {
         title={lang && data.contents[2][lang].title}
         color="#1E455C"
         paragraphs={[lang && data.contents[3][lang].content]}
-
-        // subTitles={[
-        //   'More than 2000 works were received, including painting, photography, and calligraphy, of which we selected 200 works.',
-        //   ' Rewards reached 400,000 Riyals.'
-        // ]}
       />
 
       <PostWithRightImg

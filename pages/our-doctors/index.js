@@ -5,9 +5,6 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import OurDoctors from 'src/components/why-us/our-doctors';
 import { fetchData, postData } from 'src/store/Request.js';
-// import ReactPaginate from 'react-paginate';
-// import NextFC from 'src/components/layout/ReactPaginate/NextFC';
-// import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 import { i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
@@ -83,28 +80,6 @@ function Our_Doctors({ data, getCategories, categories }) {
           filter={filter}
         />
       </div>
-      <Row>
-        {/* <Col md={12} className="d-flex justify-content-center">
-            <button>Show All</button>
-          </Col> */}
-        {/* <Col xs={12} className="d-flex justify-content-center mb-4">
-          <ReactPaginate
-            nextLabel={<NextFC />}
-            previousLabel={<PrevFC />}
-            // previousLabel={'<'}
-            // nextLabel={'>'}
-            breakLabel={'...'}
-            breakClassName={'break-me'}
-            pageCount={last_page}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={2}
-            onPageChange={handlePageClick}
-            containerClassName={'pagination'}
-            subContainerClassName={'pages pagination'}
-            activeClassName={'active'}
-          />
-        </Col> */}
-      </Row>
     </div>
   );
 }

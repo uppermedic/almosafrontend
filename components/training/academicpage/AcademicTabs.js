@@ -38,13 +38,6 @@ const dataTap = [
     tabName: { en: 'CPDD', ar: 'قسم التطوير المهني المستمر' },
     component: CPDD
   }
-  // {
-  //   tabName: {
-  //     en: 'Residency & fellowship training programs',
-  //     ar: 'تدريب وتطوير الموظفين'
-  //   },
-  //   component: Fellowship
-  // }
 ];
 
 const AcademicTabs = () => {

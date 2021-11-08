@@ -1,11 +1,4 @@
 .our-identity {
-  // .hero {
-  //   .hero-content {
-  //     h2 {
-  //       color: $primary-color;
-  //     }
-  //   }
-  // }
   .ourIdentity {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -17,7 +10,6 @@
       position: relative;
       z-index: 1;
       top: -200px;
-      // background-color: rgba(15, 66, 94, 0.65);
     }
     .icon-identity,
     .icon-identity-active {
@@ -76,7 +68,6 @@
       margin-bottom: 50px;
       position: relative;
       z-index: 2;
-      //top: -200px;
       padding: 40px;
       border-radius: 10px;
       background-color: $primary-color;
@@ -100,18 +91,12 @@
       h2 {
         font-size: $heading-md;
         font-family: 'diodrum-arabic-bold';
-        @include respond-below(lg) {
-          // font-size: $sub-heading-xs;
-        }
       }
 
       p {
         margin-top: 40px;
         font-size: $sub-heading-sm;
         font-family: 'diodrum-arabic-meduim';
-        @include respond-below(sm) {
-          // font-size: 20px;
-        }
       }
     }
 

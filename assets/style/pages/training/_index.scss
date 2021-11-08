@@ -5,79 +5,7 @@
 @import './academic';
 
 .training-education {
-  // .hero {
-  //   position: relative;
-  //   height: 500px;
-  //   .heroText {
-  //     position: absolute;
-  //     top: 0;
-  //     clip-path: polygon(0 0, 52% 0, 100% 100%, 0 100%);
-  //     width: 70%;
-  //     height: 100%;
-  //     background: rgb(4 29 41 / 80%);
-  //     display: flex;
-  //     align-items: center;
-  //     padding-left: 130px;
-  //     @include rtl() {
-  //       padding-right: 130px;
-  //       padding-keft: 0;
-  //       clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
-  //       //clip-path: none;
-  //       @include respond-below(xl) {
-  //         padding-right: 30px;
-  //       }
-  //       @include respond-below(lg) {
-  //         clip-path: none;
-  //         justify-content: center;
-  //         padding-left: 0;
-  //         width: 100%;
-  //         padding-right: 30px;
-  //       }
-  //     }
-  //     @include respond-below(lg) {
-  //       clip-path: none;
-  //       justify-content: center;
-  //       padding-left: 0;
-  //       width: 100%;
-  //       padding-right: 30px;
-  //     }
-  //     p {
-  //       margin: 0;
-  //       box-sizing: border-box;
-  //       padding-left: 30px;
-  //       text-align: left;
-  //       font-family: 'diodrum-arabic-meduim';
-  //       color: #fff;
-  //       font-size: 38px;
-  //       //line-height: 1.5;
-  //       border-left: 15px solid $almoosa-green-extralight;
-  //       @include rtl() {
-  //         padding-left: 0;
-  //         padding-right: 30px;
-  //         border-left: 0;
-  //         border-right: 15px solid $almoosa-green-extralight;
-  //         text-align: right;
-  //         @include respond-below(lg) {
-  //           font-size: 25px;
-  //         }
-  //         @include respond-below(sm) {
-  //           font-size: 20px;
-  //         }
-  //       }
-  //       @include respond-below(lg) {
-  //         font-size: 25px;
-  //       }
-  //       @include respond-below(sm) {
-  //         font-size: 20px;
-  //       }
-  //       span {
-  //         font-family: 'diodrum-arabic-bold';
-  //       }
-  //     }
-  //   }
-  // }
   .events-courses-tap {
-    //margin: 50px 0;
     padding: 0 0 50px 0;
     .nav-tabs {
       width: 100%;
@@ -92,7 +20,6 @@
           justify-content: center;
           cursor: pointer;
           font-size: 28px;
-          //line-height: 1.2;
           font-weight: bold;
           background-color: #fff;
           color: $almoosa-green-extralight;
@@ -117,14 +44,12 @@
           @include respond-below(sm) {
             font-size: $paragraph-text-xs-size;
             padding: 10px 0;
-            //line-height: 2;
             font-size: 20px;
           }
         }
       }
     }
     .tab-pane {
-      //border: 1px solid $almoosa-green-extralight;
       margin: 0;
       .content {
         position: relative;

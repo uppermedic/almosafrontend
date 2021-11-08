@@ -13,8 +13,6 @@
     @include respond-below(xl) {
       padding: 4% 15%;
       background-position: 0 0;
-      //padding-top: 50px;
-      //min-height: 500px;
     }
     @include respond-below(lg) {
       min-height: auto;
@@ -29,7 +27,6 @@
       background-color: #fff;
       z-index: 2;
       padding: 25px 15px;
-      //margin-left: 170px;
       max-width: 750px;
       @include respond-below(xl) {
         margin-left: 50px;
@@ -73,7 +70,6 @@
       }
       p {
         padding-top: 5px;
-        //line-height: 38px;
         font-family: 'diodrum-arabic-meduim';
         font-size: 16px;
         span {
@@ -83,7 +79,6 @@
         @include respond-below(md) {
           font-size: 16px;
           padding-top: 10px;
-          //line-height: 25px;
           span {
             padding-top: 15px;
           }
@@ -119,16 +114,13 @@
         h4 {
           font-family: 'diodrum-arabic-bold';
           font-size: 15px;
-          //line-height: 38px;
           @include respond-below(md) {
             font-size: 16px;
-            //line-height: 25px;
           }
         }
         p {
           font-family: 'diodrum-arabic-meduim';
           font-size: 15px;
-          //line-height: 38px;
           @include respond-below(md) {
             font-size: 16px;
           }

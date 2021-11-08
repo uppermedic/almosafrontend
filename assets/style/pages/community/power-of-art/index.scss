@@ -1,34 +1,5 @@
 .power_of_art {
   font-family: 'diodrum-arabic-meduim' !important;
-  // .hero {
-  //   //height: $photo-section-big-banner;
-  //   .right-title {
-  //     text-align: center;
-  //     position: absolute;
-  //     right: 28%;
-  //     top: 48%;
-  //     @include respond-below(sm) {
-  //       position: unset;
-  //       width: 100%;
-  //       margin-top: 20px;
-  //     }
-  //     h3 {
-  //       font-size: $heading-size;
-  //       color: $secondary-color;
-  //       font-weight: bold;
-  //       text-align: center;
-  //       padding: 10px;
-  //       margin: 0;
-  //       @include respond-below(lg) {
-  //         font-size: $heading-mob-size;
-  //       }
-  //       @include respond-below(md) {
-  //         font-size: $heading-sm-size;
-  //       }
-  //     }
-  //   }
-  // }
-
   .post_with_title {
     .two_columns_post {
       .post-paragraph {
@@ -149,7 +120,6 @@
       }
       .single_col {
         h4 {
-          //font-size: 55px;
           color: $dark_blue;
           font-weight: bolder;
           margin: 30px auto 10px;
@@ -168,7 +138,6 @@
   }
 
   .why_participate {
-    //line-height: 2;
     margin: 50px 0;
     .post_img {
       text-align: center;

@@ -41,7 +41,6 @@ function index({ data, getMediaCategories }) {
     if (value === 'all') {
       router.push(`/${locale}/media-center/photo-gallery?page=1`);
     } else if (value !== 'all') {
-      //console.log('not all');
       router.push(
         `/${locale}/media-center/photo-gallery?category=${value}&page=1`
       );

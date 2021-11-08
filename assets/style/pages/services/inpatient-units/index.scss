@@ -1,25 +1,4 @@
 .inpatient-units {
-  // .hero {
-  //   .hero-content {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 8%;
-  //     transform: translateY(-50%);
-  //     @include rtl() {
-  //       right: 8%;
-  //       left: auto;
-  //     }
-  //   }
-  //   .hero-cover {
-  //     transform: scaleX(1);
-  //     @include rtl() {
-  //       transform: scaleX(-1);
-  //     }
-  //   }
-  //   .title {
-  //     color: $primary-color;
-  //   }
-  // }
   .inpatient-units-content {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -35,7 +14,6 @@
     }
   }
   .card {
-    //padding: 20px;
     height: 100%;
     display: flex;
     flex-direction: column;
