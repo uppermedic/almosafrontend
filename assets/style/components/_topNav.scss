@@ -1,6 +1,5 @@
 .top-nav {
   background-color: $primary-bg-color;
-  // height: $top-nav-height;
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
@@ -39,7 +38,6 @@
     margin-left: 10%;
     a {
       font-size: $social-size;
-      //line-height: 1;
       @include respond-below(lg) {
         font-size: $social-mob-size;
       }

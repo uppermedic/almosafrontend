@@ -6,14 +6,12 @@
     @include sectionHeading($primary-color);
   }
   ul {
-    // padding: 0;
     @include respond-below(lg) {
       margin-bottom: 1em !important;
     }
     li {
       list-style-type: none !important;
       position: relative;
-      // display: inline-block;
       &::before {
         position: absolute;
         content: '';
@@ -39,23 +37,19 @@
     }
   }
   ul * {
-    //line-height: 58px;
     font-size: 20px !important;
     font-family: 'diodrum-arabic-meduim' !important;
     @include respond-below(lg) {
       text-align: center;
-      //line-height: 50px;
       font-size: 18px !important;
     }
     @include respond-below(sm) {
-      //line-height: 32px;
       font-size: 16px !important;
     }
   }
 
   img {
     display: block;
-    // height: 400px;
     @include respond-below(md) {
       height: 100%;
     }

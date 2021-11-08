@@ -44,13 +44,9 @@
       padding: 20px;
       @include respond-below(lg) {
         width: auto;
-        // padding: 40px 20px;
       }
-      @include respond-below(md) {
-        // padding: 20px;
-      }
+
       h3 {
-        // font-family: "diodrum-arabic-meduim";
         color: #fff;
         font-size: 22px;
         text-align: left !important;
@@ -93,7 +89,6 @@
         p {
           font-size: 16px;
           font-family: 'diodrum-arabic-meduim';
-          //line-height: 2;
           &.bold-par {
             font-size: 16px;
           }
@@ -112,22 +107,6 @@
       }
     }
     .blocks {
-      .parking {
-        .heading-card {
-          // h3 {
-          //   color: $almoosa-light-green-color;
-          //   border-bottom-color: $almoosa-light-green-color;
-          // }
-        }
-      }
-      .public-trans {
-        .heading-card {
-          // h3 {
-          //   color: $secondary-color-purple;
-          //   border-bottom-color: $secondary-color-purple;
-          // }
-        }
-      }
       h4 {
         background-color: $primary-bg-color;
         padding: 10px;
@@ -150,7 +129,6 @@
       .inner-p {
         font-size: 16px;
         font-family: 'diodrum-arabic-meduim';
-        //line-height: 2;
 
         @include respond-below(md) {
           font-size: 14px;

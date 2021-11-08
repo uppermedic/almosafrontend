@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  //console.log('ready');
-  //console.log($('.home-centers .owl-carousel'));
   $('.home-centers .owl-carousel').owlCarousel({
     rtl: true,
     loop: true,

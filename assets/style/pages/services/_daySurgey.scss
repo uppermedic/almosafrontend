@@ -1,33 +1,5 @@
 .day-surgey {
   padding-bottom: 100px;
-  // .hero {
-  //   position: relative;
-  //   height: 500px;
-
-  //   .title {
-  //     position: absolute;
-  //     bottom: 10%;
-  //     background-color: $primary-color;
-  //     width: 100%;
-  //     padding: 50px 0px 100px 65px;
-  //     font-family: 'diodrum-arabic-bold';
-  //     font-size: 36px;
-  //     color: #fff;
-  //     //line-height: 80px;
-  //     @include respond-below(xl) {
-  //       padding: 30px 0px 70px 45px;
-  //       font-size: 26px;
-  //     }
-  //     @include respond-below(lg) {
-  //       padding: 10px 0px 25px 25px;
-  //       font-size: 22px;
-  //     }
-  //     @include respond-below(sm) {
-  //       padding: 10px 0px 20px 25px;
-  //       // font-size: 25px;
-  //     }
-  //   }
-  // }
   .info-container {
     position: relative;
     top: -20%;
@@ -41,7 +13,6 @@
       p {
         font-family: 'diodrum-arabic-light';
         font-size: 16px;
-        //line-height: 25px;
         @include respond-below(sm) {
           font-size: $font-xs;
         }
@@ -85,8 +56,6 @@
           padding: 20px 0;
           color: $secondary-color;
           font-family: 'diodrum-arabic-meduim';
-          // font-size: 40px;
-          //line-height: 53px;
           &.active {
             cursor: unset;
             background-color: #fff;
@@ -121,10 +90,7 @@
     .tab-content {
       width: 100%;
       .tab-pane {
-        // width: 90%;
-        // margin: auto;
         padding: 20px;
-        // padding-bottom: 20px;
         .tab-item-title {
           background-color: $primary-color;
           padding: 20px;

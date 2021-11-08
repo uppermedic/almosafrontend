@@ -143,7 +143,6 @@ const Register = ({ t }) => {
     setopen(!open);
   };
   const handleValidSubmit = (event, values) => {
-    //if (!verified) return;
     const allData = {
       event_id: sessionStorage.getItem('reg_id'),
       ...values
@@ -153,10 +152,6 @@ const Register = ({ t }) => {
         toggle();
       })
       .catch(error => {
-        // console.log(
-        //   error.response.data.errors,
-        //   error.response.data.errors === 'the event you register to Not exist.'
-        // );
         if (
           error.response.data.errors === 'the event you register to Not exist.'
         ) {
@@ -179,11 +174,7 @@ const Register = ({ t }) => {
 
   const verifyCallback = recaptchaToken => {
     // Here you will get the final recaptchaToken!!!
-    //console.log('your recaptcha token >= ', recaptchaToken);
     if (recaptchaToken) setVerified(true);
-  };
-  const asyncScriptOnLoad = () => {
-    //console.log('scriptLoad - reCaptcha Ref-', _reCaptchaRef);
   };
   return (
     <section className="register">

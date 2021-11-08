@@ -43,12 +43,7 @@ const ImageSlider = ({ images, open, handleClose, imageIndex }) => {
       onClickPrev={gotoPrev}
       onClickThumbnail={gotoImg}
       onClose={closeImgsViewer}
-      //   preventScroll={props.preventScroll}
       showThumbnails={true}
-      //   spinner={props.spinner}
-      //   spinnerColor={props.spinnerColor}
-      //   spinnerSize={props.spinnerSize}
-      //   theme={props.theme}
     />
   );
 };

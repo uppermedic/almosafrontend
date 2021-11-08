@@ -32,7 +32,6 @@ const Content = ({ t }) => {
         <Container>
           {data.map((item, index) => {
             if (index % 2 == 0) {
-              //console.log(index);
               return (
                 <Row xs="1" lg="2" key={index}>
                   <Col key={index}>

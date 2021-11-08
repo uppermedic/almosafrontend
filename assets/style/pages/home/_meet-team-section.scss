@@ -1,7 +1,6 @@
 section.meet-our-team {
   padding: 80px 0;
   background-color: $primary-color;
-  // height: 800px;
   position: relative;
   @include respond-below(lg) {
     padding: 60px 0;
@@ -40,21 +39,16 @@ section.meet-our-team {
       p {
         color: #fff;
         font-family: 'diodrum-arabic-light';
-        //line-height: 54px;
         margin-top: 34px;
-        //line-height: 58px;
         font-size: $paragraph;
         @include respond-below(lg) {
           text-align: center;
-          //line-height: 42px;
           font-size: $paragraph-md;
         }
         @include respond-below(md) {
-          //line-height: 32px;
           font-size: $paragraph-sm;
         }
         @include respond-below(sm) {
-          //line-height: 32px;
           font-size: $paragraph-xs;
         }
       }

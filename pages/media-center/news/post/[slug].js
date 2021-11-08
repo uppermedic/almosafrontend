@@ -6,7 +6,6 @@ import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/News/SinglePost';
 const Post = ({ data }) => {
-  //console.log('🚀 ~ file: [id].js ~ line 9 ~ Post ~ data', data);
   const head_data = {
     ar: {
       title: '',
@@ -39,11 +38,10 @@ const Post = ({ data }) => {
 
   return (
     <div className="_single-post-page">
-      <Head data={head_data}></Head> {/*data={data['seo']}*/}
+      <Head data={head_data}></Head>
       {data[language] && (
         <Content
           article={data}
-          // latest={data.data.slice(0, 3)}
           tags={data['tags']}
           categories={data['categories']}
           related={data['related']}

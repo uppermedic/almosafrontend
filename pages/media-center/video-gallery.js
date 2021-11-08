@@ -94,11 +94,6 @@ const Index = ({ data, getMediaCategories }) => {
 };
 
 export async function getServerSideProps(context) {
-  // //console.log(
-  //   '🚀 ~ file: video-gallery.js ~ line 55 ~ getServerSideProps ~ context',
-  //   context.query
-  // );
-
   const { page, category } = context.query;
   const { query } = context;
   let path = `/media/videos?${serialize(query)}`;

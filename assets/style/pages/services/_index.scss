@@ -6,11 +6,6 @@
 @import './nursing/index.scss';
 
 .services {
-  // .hero {
-  //   .title {
-  //     color: $primary-color;
-  //   }
-  // }
   .our-services {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -155,7 +150,6 @@
         li {
           font-size: 18px;
           font-weight: medium;
-          //line-height: 53px;
           margin-left: 0;
           @include respond-below(sm) {
             font-size: 16px;
