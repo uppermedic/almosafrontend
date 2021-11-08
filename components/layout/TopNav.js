@@ -15,9 +15,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { employee_portal, volunteering, join_us } from 'src/constants/Data';
-import LangNav from './nav';
+import LangNav from './LangIconNav';
 
-const SearchNav = ({ t, router }) => {
+const TopNav = ({ t, router }) => {
   const [search, setSearch] = useState('');
   useEffect(() => {
     setSearch(router.query.search);
@@ -64,6 +64,12 @@ const SearchNav = ({ t, router }) => {
                 </Link>
               </Col>
               <Col xs={12} sm={12} md={4} className="right_link">
+                <div
+                  className="d-block d-sm-none text-center"
+                  style={{ width: '30%' }}
+                >
+                  <LangNav />
+                </div>
                 <Form
                   action="/media-center/news/search-result?"
                   className="w-100"
@@ -82,12 +88,6 @@ const SearchNav = ({ t, router }) => {
                     </InputGroupAddon>
                   </InputGroup>
                 </Form>
-                <div
-                  className="d-block d-sm-none text-center"
-                  style={{ width: '30%' }}
-                >
-                  <LangNav />
-                </div>
               </Col>
             </Row>
           </Col>
@@ -96,7 +96,7 @@ const SearchNav = ({ t, router }) => {
     </div>
   );
 };
-SearchNav.getInitialProps = async () => ({
+TopNav.getInitialProps = async () => ({
   namespacesRequired: ['common']
 });
-export default withTranslation('common')(withRouter(SearchNav));
+export default withTranslation('common')(withRouter(TopNav));
