@@ -41,7 +41,7 @@ function Article({ article, originalArticle, related, t }) {
                     <IoIosArrowBack />
                   )}
                   <Link
-                    href={`/${locale}/media-center/blog/post/${String(
+                    href={`/${locale}/media-center/news/post/${String(
                       relLink[language]?.title
                     )
                       .split(' ')

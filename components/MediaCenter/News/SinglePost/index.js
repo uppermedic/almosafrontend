@@ -19,7 +19,7 @@ const Index = ({ article, categories, related, t }) => {
       <Container>
         <Row>
           <Col>
-            <h2 className="d-flex d-lg-blog justify-content-between align-items-center">
+            <h2 className="d-flex d-lg-news justify-content-between align-items-center">
               {contentWithLang?.title}
               <i
                 className="fas fa-cogs d-lg-none"
@@ -42,14 +42,14 @@ const Index = ({ article, categories, related, t }) => {
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">
-              <Form action="/media-center/blog/search-result?">
+              <Form action="/media-center/news/search-result?">
                 <FormGroup>
                   <Label for="exampleSearch">{t('new_search')}</Label>
                   <Input
                     type="search"
                     name="search"
                     id="exampleSearch"
-                    placeholder={t('search_blog')}
+                    placeholder={t('search_news')}
                   />
                 </FormGroup>
               </Form>
@@ -58,14 +58,14 @@ const Index = ({ article, categories, related, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/${locale}/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/news`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/blog?cats=${cat.slug}`}
+                      href={`/${locale}/media-center/news?cats=${cat.slug}`}
                     >
                       <a>{cat[language].category_name}</a>
                     </Link>

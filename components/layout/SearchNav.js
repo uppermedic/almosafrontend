@@ -65,14 +65,13 @@ const SearchNav = ({ t, router }) => {
               </Col>
               <Col xs={12} sm={12} md={4} className="right_link">
                 <Form
-                  action="/media-center/blog/search-result?"
+                  action="/media-center/news/search-result?"
                   className="w-100"
                 >
                   <InputGroup className="search-nav">
                     <Input
                       name="search"
                       type="search"
-                      // placeholder={t('search_blog')}
                       value={search}
                       onChange={({ target: { value } }) => setSearch(value)}
                     />

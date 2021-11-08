@@ -1,0 +1,62 @@
+._single-post-page {
+  .content-wrapper {
+    .inner-content {
+      padding: 80px 0;
+      position: relative;
+    }
+    h2 {
+      @include sectionHeading($almoose-dark-green);
+    }
+
+    img {
+      &.thumbnail {
+        width: 100%;
+        height: 100%;
+        max-width: 700px;
+        max-height: 500px;
+        display: block;
+      }
+    }
+    //
+    .post-content {
+      * {
+        // font-family: 'diodrum-arabic-light' !important;
+        font-size: 16px !important;
+        @include respond-below(md) {
+          font-size: 14px !important;
+        }
+      }
+      image {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        display: block;
+        margin: 2em 1em;
+      }
+    }
+
+    .related-links {
+      h5 {
+        color: $secondary-bg-color;
+        @include respond-below(md) {
+          font-size: 17px;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          color: $primary-color;
+          @include respond-below(md) {
+            font-size: 15px;
+          }
+          svg {
+            margin: 0 5px;
+            color: $secondary-bg-color;
+          }
+        }
+      }
+    }
+  }
+}

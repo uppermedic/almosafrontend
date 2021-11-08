@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { truncate, strippedContent } from 'src/utils/helpers.js';
 
-function BlogItem({ blog, t }) {
+function NewsItem({ news, t }) {
   const { language } = i18n;
   const [locale, setlocale] = useState('');
 
@@ -14,19 +13,19 @@ function BlogItem({ blog, t }) {
   return (
     <div className="item caro-card">
       <Link
-        href={`/${locale}/media-center/blog/post/${
-          language && String(blog[language].title).split(' ').join('-')
-        }?id=${blog.id}`}
+        href={`/${locale}/media-center/news/post/${
+          language && String(news[language].title).split(' ').join('-')
+        }?id=${news.id}`}
       >
         <a>
-          <img src={blog.thumbnail} alt="" srcSet="" />
+          <img src={news.thumbnail} alt="" srcSet="" />
           <div className="content">
             <h5>
               <div
                 dangerouslySetInnerHTML={{
                   __html: truncate(
                     strippedContent(
-                      (language && blog[language].title) || 'No Data'
+                      (language && news[language].title) || 'No Data'
                     ),
                     20,
                     '......'
@@ -39,7 +38,7 @@ function BlogItem({ blog, t }) {
                 dangerouslySetInnerHTML={{
                   __html: truncate(
                     strippedContent(
-                      (language && blog[language].content) || 'No Data'
+                      (language && news[language].content) || 'No Data'
                     ),
                     60,
                     '......'
@@ -50,9 +49,9 @@ function BlogItem({ blog, t }) {
             <Link
               href={
                 language &&
-                `/${locale}/media-center/blog/post/${
-                  language && String(blog[language].title).split(' ').join('-')
-                }?id=${blog.id}`
+                `/${locale}/media-center/news/post/${
+                  language && String(news[language].title).split(' ').join('-')
+                }?id=${news.id}`
               }
             >
               <a className="details_link">{t('read_more')}</a>
@@ -63,7 +62,7 @@ function BlogItem({ blog, t }) {
     </div>
   );
 }
-BlogItem.getInitialProps = async context => ({
+NewsItem.getInitialProps = async context => ({
   namespacesRequired: ['common']
 });
-export default withTranslation('common')(BlogItem);
+export default withTranslation('common')(NewsItem);

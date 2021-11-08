@@ -96,7 +96,7 @@ const ButtonSVG = ({ t }) => (
         transform="translate(1847.893 706.811) rotate(-88)"
       >
         <text
-          id="Blog"
+          id="News"
           //transform="translate(0 40)"
           transform="translate(-15 38)"
           fill="#fff"

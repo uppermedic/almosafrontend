@@ -1,7 +1,7 @@
 import React from 'react';
 
 // This is a banner section that takes a custom background Image and custom-classname
-// Features needed { Add blog button at the right side }
+// Features needed { Add news button at the right side }
 
 const Hero = ({ bg, children, customClassNames }) => {
   return (

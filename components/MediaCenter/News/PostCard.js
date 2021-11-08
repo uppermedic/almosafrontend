@@ -35,7 +35,7 @@ function Post({ article, t }) {
             }}
           />
           <Link
-            href={`/${locale}/media-center/blog/post/${String(title)
+            href={`/${locale}/media-center/news/post/${String(title)
               .split(' ')
               .join('-')}?id=${id}`}
           >
