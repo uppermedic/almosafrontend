@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 
-function BlogItem({ t, team }) {
+function NewsItem({ t, team }) {
   const { language } = i18n;
   const [locale, setlocale] = useState('');
 
@@ -23,7 +23,7 @@ function BlogItem({ t, team }) {
     </div>
   );
 }
-BlogItem.getInitialProps = async context => ({
+NewsItem.getInitialProps = async context => ({
   namespacesRequired: ['common']
 });
-export default withTranslation('common')(BlogItem);
+export default withTranslation('common')(NewsItem);

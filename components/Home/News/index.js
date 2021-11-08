@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import dynamic from 'next/dynamic';
-import BlogItem from './BlogItem';
+import NewsItem from './NewsItem';
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 import { i18n, Link, withTranslation } from 'root/i18n';
 
-function Blogs({ data, t }) {
+function News({ data, t }) {
   const { language } = i18n;
   const [locale, setlocale] = useState('');
 
@@ -14,16 +14,16 @@ function Blogs({ data, t }) {
   }, [language]);
 
   return (
-    <section className="home-blogs">
-      <div className="overlay-blog">
-        <img src="/images/home/zigzag.png" alt="blog section" />
+    <section className="home-news">
+      <div className="overlay-news">
+        <img src="/images/home/zigzag.png" alt="news section" />
       </div>
-      <div className="blog-container">
+      <div className="news-container">
         <Container>
           <Row>
             <Col>
-              <h3 className="section-title-blog">
-                {language == 'en' ? 'Blogs' : 'المدونات'}
+              <h3 className="section-title-news">
+                {language == 'en' ? 'News' : 'المدونات'}
               </h3>
             </Col>
           </Row>
@@ -72,11 +72,11 @@ function Blogs({ data, t }) {
                 }}
               >
                 {data.map((item, index) => (
-                  <BlogItem blog={item} key={index} />
+                  <NewsItem news={item} key={index} />
                 ))}
               </OwlCarousel>
-              <Link href={`/${locale}/media-center/blog`}>
-                <a className="show_more_blog">{t('show_more')}</a>
+              <Link href={`/${locale}/media-center/news`}>
+                <a className="show_more_news">{t('show_more')}</a>
               </Link>
             </Col>
           </Row>
@@ -86,4 +86,4 @@ function Blogs({ data, t }) {
   );
 }
 
-export default withTranslation('common')(Blogs);
+export default withTranslation('common')(News);

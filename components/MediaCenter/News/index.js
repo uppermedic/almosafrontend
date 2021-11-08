@@ -21,15 +21,15 @@ const Index = ({ data, latest, tags, categories, t }) => {
   }, [language]);
 
   const handlePageClick = ({ selected }) => {
-    router.push(`/${locale}/media-center/blog?page=${selected + 1}`);
+    router.push(`/${locale}/media-center/news?page=${selected + 1}`);
   };
   return (
     <section className="content-wrapper">
       <Container>
         <Row>
           <Col>
-            <h2 className="d-flex d-lg-blog justify-content-between align-items-center">
-              {t('menu:blog')}{' '}
+            <h2 className="d-flex d-lg-news justify-content-between align-items-center">
+              {t('menu:news')}{' '}
               <i
                 className="fas fa-cogs d-lg-none"
                 onClick={() => setControllerOpen(!controllerOpen)}
@@ -69,14 +69,14 @@ const Index = ({ data, latest, tags, categories, t }) => {
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">
-              <Form action="/media-center/blog/search-result?">
+              <Form action="/media-center/news/search-result?">
                 <FormGroup>
                   <Label for="exampleSearch">{t('new_search')}</Label>
                   <Input
                     type="search"
                     name="search"
                     id="exampleSearch"
-                    placeholder={t('search_blog')}
+                    placeholder={t('search_news')}
                   />
                 </FormGroup>
               </Form>
@@ -85,14 +85,14 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/${locale}/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/news`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/blog?cats=${cat.slug}`}
+                      href={`/${locale}/media-center/news?cats=${cat.slug}`}
                     >
                       <a>{cat[language].category_name}</a>
                     </Link>
@@ -110,7 +110,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                   latest?.map((post, idx) => (
                     <li key={String(post.id)}>
                       <Link
-                        href={`/${locale}/media-center/blog/post/${String(
+                        href={`/${locale}/media-center/news/post/${String(
                           language ? post[language]?.title : ''
                         )
                           .split(' ')
@@ -157,14 +157,14 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('tags')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/${locale}/media-center/blog`}>
+                  <Link href={`/${locale}/media-center/news`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {tags.map(tag => (
                   <li key={tag.id}>
                     <Link
-                      href={`/${locale}/media-center/blog?tags=${tag?.tag_name}`}
+                      href={`/${locale}/media-center/news?tags=${tag?.tag_name}`}
                     >
                       <a>{tag.tag_name}</a>
                     </Link>
@@ -179,6 +179,6 @@ const Index = ({ data, latest, tags, categories, t }) => {
   );
 };
 Index.getInitialProps = async context => ({
-  namespacesRequired: ['common', 'menu', 'blog']
+  namespacesRequired: ['common', 'menu', 'news']
 });
 export default withTranslation('common')(Index);

@@ -129,8 +129,8 @@ export default [
         label: 'hakeem magazine'
       },
       {
-        path: 'media-center/blog',
-        label: 'blog'
+        path: 'media-center/news',
+        label: 'news'
       }
     ]
   },
