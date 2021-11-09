@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'reactstrap';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { Col, Row } from 'reactstrap';
+import { i18n, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
 import Markdown from 'markdown-to-jsx';
-import Hero from 'src/components/layout/Hero';
-import PostHeading from 'src/components/reusableComponents/PostHeading';
 import CustomTabs from './CustomTabs';
 import BlockWithTitle from 'src/components/Services/medical-programs/reusable-element';
-import { cardiologyCenter } from 'src/constants/DB.js';
 import DoctorCard from 'src/components/Services/physician-card';
 
 const Content = ({ data, sections, seo, t }) => {
