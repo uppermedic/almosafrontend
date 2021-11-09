@@ -4,11 +4,9 @@ import SectionHeading from 'src/components/Services/medical-programs/program/Sec
 import Content from 'src/components/Services/medical-programs/program/content';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
-import { hairTransplantData } from 'src/constants/DB.js';
 import { useRouter } from 'next/router';
 
 const HairTranplant = ({ data }) => {
-  const { aboutData, hairPostData } = hairTransplantData;
   const lang = i18n.language;
   const router = useRouter();
   const { locale } = router;
