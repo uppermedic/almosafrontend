@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
+import { i18n } from 'root/i18n';
 
 export default function Goals({ data }) {
   const { language } = i18n;
@@ -24,7 +22,11 @@ export default function Goals({ data }) {
             lg={6}
             className="d-flex justify-content-center justify-content-lg-start align-items-center"
           >
-            <Markdown>{language ? data[language]?.content : ''}</Markdown>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: language ? data[language]?.content : ''
+              }}
+            />
           </Col>
           <Col xs={12} lg={6}>
             <img src={data?.image} alt="" className="half_section_img " />

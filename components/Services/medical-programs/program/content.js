@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { i18n } from 'root/i18n';
 import { Col, Container, Row } from 'reactstrap';
 import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
 import ReusableDropdown from 'src/components/Services/medical-programs/reusable-dropdown/';
 import BlockWithTitle from 'src/components/Services/medical-programs/reusable-element/';
 import DoctorCard from 'src/components/Services/physician-card';
@@ -84,9 +83,11 @@ const Content = ({ physicians, data }) => {
                       <BlockWithTitle title={item[language].title}>
                         <p>
                           {language && item[language]?.content && (
-                            <Markdown>
-                              {strippedContent(item[language]?.content)}
-                            </Markdown>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: strippedContent(item[language]?.content)
+                              }}
+                            />
                           )}
                         </p>
                       </BlockWithTitle>

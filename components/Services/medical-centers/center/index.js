@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'reactstrap';
 import { i18n, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
 import CustomTabs from './CustomTabs';
 import BlockWithTitle from 'src/components/Services/medical-programs/reusable-element';
 import DoctorCard from 'src/components/Services/physician-card';
@@ -38,7 +37,7 @@ const Content = ({ data, sections, seo, t }) => {
       >
         {activeTab.id === 'physicians' ? (
           <>
-            {language && data.physicians && (
+            {language && data?.physicians && (
               <div className="physician">
                 <h2>{t('common:our physicians')}</h2>
 
@@ -68,20 +67,24 @@ const Content = ({ data, sections, seo, t }) => {
                     </p>
                     {language &&
                       currentDoctor &&
-                      currentDoctor[language].qualifications &&
+                      currentDoctor[language]?.qualifications &&
                       currentDoctor[language].qualifications.length > 0 && (
                         <>
                           <h3 className="physician-qualifications">
                             {t('common:qualifications')}
                           </h3>
 
-                          <Markdown>
-                            {language
-                              ? strippedContent(
-                                  currentDoctor[language].qualifications
-                                )
-                              : ''}
-                          </Markdown>
+                          <p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: language
+                                  ? strippedContent(
+                                      currentDoctor[language].qualifications
+                                    )
+                                  : ''
+                              }}
+                            />
+                          </p>
                         </>
                       )}
                     {language &&
@@ -92,14 +95,19 @@ const Content = ({ data, sections, seo, t }) => {
                           <h3 className="physician-position">
                             {t('common:current_positions')}
                           </h3>
-                          <Markdown>
-                            {language && currentDoctor
-                              ? strippedContent(
-                                  currentDoctor[language].current_positions ||
-                                    ''
-                                )
-                              : ''}
-                          </Markdown>
+                          <p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  language && currentDoctor
+                                    ? strippedContent(
+                                        currentDoctor[language]
+                                          .current_positions || ''
+                                      )
+                                    : ''
+                              }}
+                            />
+                          </p>
                         </>
                       )}
                   </Col>
@@ -138,9 +146,13 @@ const Content = ({ data, sections, seo, t }) => {
                         titleBg="#55b047"
                       >
                         {language && item[language]?.content && (
-                          <Markdown>
-                            {strippedContent(item[language]?.content)}
-                          </Markdown>
+                          <p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: strippedContent(item[language]?.content)
+                              }}
+                            />
+                          </p>
                         )}
                       </BlockWithTitle>
                     </Col>

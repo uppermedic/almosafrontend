@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Markdown from 'markdown-to-jsx';
-import { strippedContent, truncate } from 'src/utils/helpers';
 import { withTranslation } from 'root/i18n';
 
 const ReadMore = ({ open, toggle, item, language, t }) => {

@@ -17,15 +17,20 @@ function CarouselContent({ data, index, t }) {
           <h2>
             <span>
               <Markdown>
-                {(language && strippedContent(data[language].title)) || ''}
+                {(language && strippedContent(data[language]?.title)) || ''}
               </Markdown>
             </span>
           </h2>
-          <p>
-            <Markdown>
-              {(language && strippedContent(data[language].content)) || ''}
-            </Markdown>
-          </p>
+          <div>
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    (language && strippedContent(data[language]?.content)) || ''
+                }}
+              />
+            </p>
+          </div>
           {index === 0 && (
             <div className="stores-wrapper">
               <a href={app_store_download_app} target="_blank">

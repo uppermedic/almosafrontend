@@ -9,7 +9,6 @@ import {
 import SmallGallery from 'src/components/SmallGallery';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 
 const LetsLearn = ({ data }) => {
@@ -33,7 +32,7 @@ const LetsLearn = ({ data }) => {
       <Head data={head_data} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h2 className="title">{lang && data[lang].title} </h2>
+          <h2 className="title">{lang && data[lang]?.title} </h2>
         </div>
       </Hero>
 
@@ -49,10 +48,16 @@ const LetsLearn = ({ data }) => {
       {data?.contents[1] && (
         <div className="middle-paragraph">
           <div className="container">
-            <Markdown>
-              {(lang && strippedContent(data?.contents[1][lang]?.content)) ||
-                ''}
-            </Markdown>
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    (lang &&
+                      strippedContent(data?.contents[1][lang]?.content)) ||
+                    ''
+                }}
+              />
+            </p>
           </div>
         </div>
       )}
@@ -69,10 +74,16 @@ const LetsLearn = ({ data }) => {
       {data?.contents[3] && (
         <div className="middle-paragraph">
           <div className="container">
-            <Markdown>
-              {(lang && strippedContent(data?.contents[3][lang]?.content)) ||
-                ' '}
-            </Markdown>
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    (lang &&
+                      strippedContent(data?.contents[3][lang]?.content)) ||
+                    ' '
+                }}
+              />
+            </p>
           </div>
         </div>
       )}
@@ -91,11 +102,18 @@ const LetsLearn = ({ data }) => {
               {data?.contents[4][lang]?.content && (
                 <Col>
                   <div className="post-paragraph">
-                    <Markdown>
-                      {(lang &&
-                        strippedContent(data?.contents[4][lang]?.content)) ||
-                        ' '}
-                    </Markdown>
+                    <p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            (lang &&
+                              strippedContent(
+                                data?.contents[4][lang]?.content
+                              )) ||
+                            ' '
+                        }}
+                      />
+                    </p>
                   </div>
                 </Col>
               )}
@@ -137,7 +155,7 @@ const BannerOverlay = ({ data }) => {
           </Col>
           <Col>
             <div className="initiative-name">
-              <h2>{lang && data[lang].title}</h2>
+              <h2>{lang && data[lang]?.title}</h2>
             </div>
           </Col>
         </Row>

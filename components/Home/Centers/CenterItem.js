@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { truncate, strippedContent } from 'src/utils/helpers.js';
+import Markdown from 'markdown-to-jsx';
 
 function CenterItem({ t, center }) {
   const { language } = i18n;
@@ -13,40 +13,39 @@ function CenterItem({ t, center }) {
 
   return (
     <div className="item caro-card">
-      <Link href={`/${locale}/services/medical-centers/${center.id}`}>
+      <Link
+        href={`/${locale}/services/medical-centers/${
+          language && String(center[language]?.title).split(' ').join('-')
+        }?id=${center?.id}`}
+      >
         <a>
           <img src={center.ar.thumbnail} alt="" srcSet="" />
           <div className="content">
             <h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: truncate(
-                    strippedContent(
-                      (language && center[language].title) || 'No Data'
-                    ),
-                    20,
-                    '......'
-                  )
-                }}
-              />
+              <Markdown>
+                {truncate(
+                  strippedContent((language && center[language]?.title) || ' '),
+                  20,
+                  '......'
+                )}
+              </Markdown>
             </h3>
             <p>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: truncate(
-                    strippedContent(
-                      (language && center[language].excerpt) || 'No Data'
-                    ),
-                    70,
-                    '......'
-                  )
+                  __html:
+                    truncate(
+                      strippedContent(language && center[language]?.excerpt),
+                      70,
+                      '......'
+                    ) || ' '
                 }}
               />
             </p>
             <Link
               href={`/${locale}/services/medical-centers/${
-                language && String(center[language].title).split(' ').join('-')
-              }?id=${center.id}`}
+                language && String(center[language]?.title).split(' ').join('-')
+              }?id=${center?.id}`}
             >
               <a className="details_link">{t('read_more')}</a>
             </Link>
