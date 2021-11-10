@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 import DoctorCard from 'src/components/Services/physician-card';
 import ReusableTabs from 'src/components/Services/re-tabs';
@@ -56,9 +55,13 @@ const Content = props => {
                 </Col>
                 <Col>
                   <div className="text">
-                    <Markdown>
-                      {strippedContent(seo[language]?.content2)}
-                    </Markdown>
+                    <p>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: strippedContent(seo[language]?.content2)
+                        }}
+                      />
+                    </p>
                   </div>
                 </Col>
               </Row>

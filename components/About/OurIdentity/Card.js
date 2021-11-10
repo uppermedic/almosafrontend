@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
+import { i18n, withTranslation } from 'root/i18n';
 
-function Card({ t, item }) {
+function Card({ item }) {
   const { language } = i18n;
 
   return (
     <>
       <div className="card-wrapper text-center">
-        <Markdown>{language ? item[language].content : ''}</Markdown>
+        <p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: language ? item[language]?.content : ''
+            }}
+          />
+        </p>
       </div>
     </>
   );

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link, i18n, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 
 const WhyMosa = ({ data, t }) => {
@@ -19,7 +18,7 @@ const WhyMosa = ({ data, t }) => {
         <Row className="top-section m-0">
           <Col xs={12} lg={6} className="p-0">
             <h2>
-              {language ? strippedContent(data[language].title) : 'Loading'}
+              {language ? strippedContent(data[language]?.title) : 'Loading'}
             </h2>
           </Col>
           <Col className="link_div p-0" xs={12} lg={6}>
@@ -30,7 +29,7 @@ const WhyMosa = ({ data, t }) => {
         </Row>
         <Row className="bottom-section">
           <Col xs={12} md={5} data-aos="fade-up" data-aos-duration="1000">
-            <img src={data.image} alt="mosabuilding" />
+            <img src={data?.image} alt="mosabuilding" />
           </Col>
           <Col
             xs={12}
@@ -39,9 +38,15 @@ const WhyMosa = ({ data, t }) => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <Markdown>
-              {language ? strippedContent(data[language].content) : 'Loading'}
-            </Markdown>
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: language
+                    ? strippedContent(data[language]?.content)
+                    : 'Loading'
+                }}
+              />
+            </p>
           </Col>
         </Row>
       </Container>

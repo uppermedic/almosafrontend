@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { i18n, withTranslation } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
 import {
   TabContent,
   TabPane,
@@ -13,7 +11,6 @@ import {
   Col
 } from 'reactstrap';
 import classnames from 'classnames';
-import PhysicianDetails from 'components/Services/physician-details';
 
 const CustomTabs = ({
   t,
@@ -21,8 +18,6 @@ const CustomTabs = ({
   items,
   clickItemFun,
   activeItemIndex,
-  currentDoctor,
-  setcurrentDoctor,
   children
 }) => {
   const { language } = i18n;
@@ -69,22 +64,23 @@ const CustomTabs = ({
             </Nav>
           </Col>
           <Col sm="12" md="8">
-            <TabContent activeTab={activeItemIndex.id}>
+            <TabContent activeTab={activeItemIndex?.id}>
               {items.map((item, index) => (
-                <TabPane tabId={item.id} key={item.id}>
+                <TabPane tabId={item.id} key={item?.id}>
                   <Container>
                     {item.items[0] && (
                       <>
                         <h2>{language && item.items[0][language].title}</h2>
-
-                        {language && item.items[0][language]?.content && (
-                          <div
-                            className="tab-details"
-                            dangerouslySetInnerHTML={{
-                              __html: item.items[0][language]?.content
-                            }}
-                          />
-                        )}
+                        <p>
+                          {language && item.items[0][language]?.content && (
+                            <div
+                              className="tab-details"
+                              dangerouslySetInnerHTML={{
+                                __html: item.items[0][language]?.content
+                              }}
+                            />
+                          )}
+                        </p>
                       </>
                     )}
                   </Container>

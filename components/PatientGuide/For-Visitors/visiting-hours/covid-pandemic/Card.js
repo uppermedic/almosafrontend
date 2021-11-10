@@ -7,15 +7,15 @@ const card = ({ item }) => {
   return (
     <div className="covid-card">
       <h3>
-        <Markdown>{lang ? item[lang].title : ''}</Markdown>
+        <Markdown>{lang ? item[lang]?.title : ''}</Markdown>
       </h3>
       <div className="card-content">
         {lang
-          ? item[lang].content.map(sContent => (
-              <div key={sContent.id}>
-                {sContent.question && <h4>{sContent.question}</h4>}
+          ? item[lang]?.content.map(sContent => (
+              <div key={sContent?.id}>
+                {sContent?.question && <h4>{sContent?.question}</h4>}
                 <p>
-                  <Markdown>{sContent.answer}</Markdown>
+                  <Markdown>{sContent?.answer}</Markdown>
                 </p>
               </div>
             ))

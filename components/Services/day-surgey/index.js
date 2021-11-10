@@ -10,7 +10,6 @@ import {
   NavLink
 } from 'reactstrap';
 import classnames from 'classnames';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 import { i18n, withTranslation } from 'root/i18n';
 import DoctorCard from 'src/components/Services/physician-card';
@@ -79,9 +78,13 @@ const OneDaySurgeryContent = ({ t, data }) => {
                       <>
                         <p className="tab-item-title">{item[language].title}</p>
                         <div className="tab-item-content">
-                          <Markdown>
-                            {strippedContent(item[language].content)}
-                          </Markdown>
+                          <p>
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: strippedContent(item[language].content)
+                              }}
+                            />
+                          </p>
                         </div>
                       </>
                     ))}

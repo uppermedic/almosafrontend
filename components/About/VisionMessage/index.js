@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import { i18n, withTranslation } from 'root/i18n';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
-import Markdown from 'markdown-to-jsx';
 
 function index({ t, data }) {
   const { language } = i18n;
@@ -22,15 +21,19 @@ function index({ t, data }) {
               <div className="section-content">
                 <div className="description">
                   <h5>{language ? data.content[0][language].title : ''}</h5>
-                  <Markdown>
-                    {language ? data.content[0][language].content : ''}
-                  </Markdown>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: language ? data.content[0][language].content : ''
+                    }}
+                  />
                 </div>
                 <div className="description">
                   <h5>{language ? data.content[1][language].title : ''}</h5>
-                  <Markdown>
-                    {language ? data.content[1][language].content : ''}
-                  </Markdown>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: language ? data.content[1][language].content : ''
+                    }}
+                  />
                 </div>
               </div>
             </Container>

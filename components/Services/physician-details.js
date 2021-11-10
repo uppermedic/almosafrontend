@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { Link, i18n, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
+import { Row, Col } from 'reactstrap';
+import { i18n, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers.js';
 
 const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
@@ -17,18 +15,6 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
             alt={language && currentDoctor[language].name}
             className="shadow"
           />
-
-          {/* <div className="physician-social">
-            <Link href="#">
-              <i className="fab fa-linkedin fa-3x"></i>
-            </Link>
-            <Link href="#">
-              <i className="fab fa-twitter-square fa-3x"></i>
-            </Link>
-            <Link href="#">
-              <i className="fas fa-link fa-3x"></i>
-            </Link>
-          </div> */}
         </Col>
         <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 pt-4">
           <h3 className="physician-name">
@@ -36,34 +22,44 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
           </h3>
           <p className="py-2">{language && currentDoctor[language]?.title}</p>
           {language &&
-            currentDoctor[language].qualifications &&
+            currentDoctor[language]?.qualifications &&
             currentDoctor[language].qualifications.length > 0 && (
               <>
                 <h3 className="physician-qualifications">
                   {t('common:qualifications')}
                 </h3>
 
-                <Markdown>
-                  {language
-                    ? strippedContent(currentDoctor[language].qualifications)
-                    : ''}
-                </Markdown>
+                <p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: language
+                        ? strippedContent(
+                            currentDoctor[language]?.qualifications
+                          )
+                        : ''
+                    }}
+                  />
+                </p>
               </>
             )}
           {language &&
-            currentDoctor[language].current_positions &&
-            currentDoctor[language].current_positions.length > 0 && (
+            currentDoctor[language]?.current_positions &&
+            currentDoctor[language]?.current_positions.length > 0 && (
               <>
                 <h3 className="physician-position">
                   {t('common:current_positions')}
                 </h3>
-                <Markdown>
-                  {language
-                    ? strippedContent(
-                        currentDoctor[language].current_positions || ''
-                      )
-                    : ''}
-                </Markdown>
+                <p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: language
+                        ? strippedContent(
+                            currentDoctor[language]?.qualifications
+                          )
+                        : ''
+                    }}
+                  />
+                </p>
               </>
             )}
         </Col>

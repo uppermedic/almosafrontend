@@ -4,8 +4,6 @@ import Hero from 'src/components/layout/Hero';
 import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
 import SmallGallery from 'src/components/SmallGallery';
 import { i18n } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
-import { strippedContent } from 'src/utils/helpers.js';
 import { fetchData } from 'src/store/Request.js';
 
 const Paramedic = ({ data }) => {
