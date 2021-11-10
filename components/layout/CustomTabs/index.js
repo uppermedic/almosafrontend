@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, withTranslation } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
-import Markdown from 'markdown-to-jsx';
 import {
   TabContent,
   TabPane,

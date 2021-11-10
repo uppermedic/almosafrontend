@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import { Container, Row, Col } from 'reactstrap';
-import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers';
 
 const index = ({ data, t }) => {
@@ -87,11 +86,14 @@ const index = ({ data, t }) => {
           </Col>
           <Col xs={12}>
             <p>
-              <Markdown>
-                {language && data[language] && data[language].content
-                  ? strippedContent(data[language].content)
-                  : ''}
-              </Markdown>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    language && data[language] && data[language].content
+                      ? strippedContent(data[language].content)
+                      : ''
+                }}
+              />
             </p>
           </Col>
         </Row>

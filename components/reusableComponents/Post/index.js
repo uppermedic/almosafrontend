@@ -4,13 +4,7 @@ import PostHeading from '../PostHeading';
 import Markdown from 'markdown-to-jsx';
 import { strippedContent, getEmbedVid } from 'src/utils/helpers.js';
 
-const PostWithRightImg = ({
-  title,
-  color,
-  theImg,
-  paragraphs,
-  customParagraphSize
-}) => {
+const PostWithRightImg = ({ title, color, theImg, paragraphs }) => {
   return (
     <div className="post_with_title">
       <div className="container">
@@ -25,8 +19,13 @@ const PostWithRightImg = ({
                     {paragraphs.map((paragraph, index) => {
                       return (
                         <p key={index} className="single_paragraph">
-                          {(paragraph && strippedContent(paragraph)) ||
-                            'No Data'}
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                (paragraph && strippedContent(paragraph)) ||
+                                'No Data'
+                            }}
+                          />
                         </p>
                       );
                     })}
@@ -69,10 +68,13 @@ const PostWithLeftImg = ({ title, color, theImg, paragraphs }) => {
                     {paragraphs.map((paragraph, index) => {
                       return (
                         <p key={index} className="single_paragraph">
-                          <Markdown>
-                            {(paragraph && strippedContent(paragraph)) ||
-                              'No Data'}
-                          </Markdown>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                (paragraph && strippedContent(paragraph)) ||
+                                'No Data'
+                            }}
+                          />
                         </p>
                       );
                     })}
@@ -117,9 +119,14 @@ const PostWithCenterImg = ({
             paragraphs.map((paragraph, index) => {
               return (
                 <div key={index} className="post-paragraph">
-                  <Markdown>
-                    {(paragraph && strippedContent(paragraph)) || 'No Data'}
-                  </Markdown>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          (paragraph && strippedContent(paragraph)) || 'No Data'
+                      }}
+                    />
+                  </p>
                 </div>
               );
             })}

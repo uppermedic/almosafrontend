@@ -1,12 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardImg } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import { i18n } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
-import { strippedContent } from 'src/utils/helpers.js';
-import {
-  PostWithCenterImg,
-  PostWithRightImg
-} from 'src/components/reusableComponents/Post';
+import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
 
 export default function index({ data }) {
   const lang = i18n.language;
@@ -22,9 +17,13 @@ export default function index({ data }) {
         {data?.contents[0][lang]?.content && (
           <Row className="d-flex justify-content-between align-items-center section-one no-gutters">
             <Col xs={12} lg={6}>
-              <Markdown>
-                {(lang && data?.contents[0][lang]?.content) || ''}
-              </Markdown>
+              <p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: (lang && data?.contents[0][lang]?.content) || ''
+                  }}
+                />
+              </p>
             </Col>
             <Col xs={12} lg={6}>
               <img src={data?.contents[0]?.images[0]} alt="" />

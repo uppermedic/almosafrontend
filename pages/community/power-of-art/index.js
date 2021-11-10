@@ -1,15 +1,10 @@
 import React from 'react';
-import {
-  PostWithRightImg,
-  PostWithCenterImg
-} from 'src/components/reusableComponents/Post';
+import { PostWithRightImg } from 'src/components/reusableComponents/Post';
 import PostHeading from 'src/components/reusableComponents/PostHeading';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import SmallGallery from 'src/components/SmallGallery';
 import { Container, Row, Col } from 'reactstrap';
 import { i18n } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
 import { fetchData } from 'src/store/Request.js';
 import { strippedContent } from 'src/utils/helpers';
 
@@ -59,11 +54,14 @@ const PowerOfArt = ({ data }) => {
               />
               <div className="location_paragraph">
                 <p>
-                  <Markdown>
-                    {(lang &&
-                      strippedContent(data.contents[1][lang].content)) ||
-                      'Loading....'}
-                  </Markdown>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        (lang &&
+                          strippedContent(data.contents[1][lang]?.content)) ||
+                        'Loading....'
+                    }}
+                  />
                 </p>
               </div>
             </>
@@ -176,24 +174,48 @@ const PowerOfArt = ({ data }) => {
               )}
               <Col>
                 {data?.contents[2] && (
-                  <Markdown>
-                    {(lang && data.contents[2][lang].content) || 'Loading ...'}
-                  </Markdown>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          (lang && data.contents[2][lang]?.content) ||
+                          'Loading ...'
+                      }}
+                    />
+                  </p>
                 )}
                 {data?.contents[3] && (
-                  <Markdown>
-                    {(lang && data.contents[3][lang].content) || 'Loading ...'}
-                  </Markdown>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          (lang && data.contents[3][lang].content) ||
+                          'Loading ...'
+                      }}
+                    />
+                  </p>
                 )}
                 {data?.contents[4] && (
-                  <Markdown>
-                    {(lang && data.contents[4][lang].content) || 'Loading ...'}
-                  </Markdown>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          (lang && data.contents[4][lang]?.content) ||
+                          'Loading ...'
+                      }}
+                    />
+                  </p>
                 )}
                 {data?.contents[5] && (
-                  <Markdown>
-                    {(lang && data.contents[5][lang].content) || 'Loading ...'}
-                  </Markdown>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          (lang && data.contents[5][lang]?.content) ||
+                          'Loading ...'
+                      }}
+                    />
+                  </p>
                 )}
               </Col>
             </Row>
