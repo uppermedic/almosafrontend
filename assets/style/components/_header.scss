@@ -25,7 +25,10 @@ header {
     z-index: 10;
     background-color: $primary-color !important;
     align-items: flex-end;
-    padding: 1em 0;
+    padding: 0;
+    @include respond-below(xl) {
+      padding: 1rem 0;
+    }
     .nav-toggler-wrapper {
       @include respond-below(xl) {
         width: 100%;
@@ -49,21 +52,29 @@ header {
     .navbar-collapse.show {
       margin-top: 1em;
     }
+
     .nav-item {
+      @include respond-below(xl) {
+        padding: 0;
+      }
       .nav-link {
+        padding: 1rem 0;
         color: $nav-item-color !important;
         position: relative;
         font-size: $nav-item-font-size;
         font-family: 'diodrum-arabic-meduim';
+        font-size: 18px;
+
         @include respond-between(xl, 3xl) {
           margin: 0;
-          font-size: 18px;
         }
         @include respond-below(xl) {
           margin: 0 1.3em;
+          padding: 0.5rem 0;
+          font-size: 16px;
         }
         @include respond-below(md) {
-          font-size: $font-xs;
+          font-size: 14;
         }
         &::before,
         &::after {
@@ -165,7 +176,7 @@ header {
               text-align: right;
             }
             @include respond-below(md) {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }
