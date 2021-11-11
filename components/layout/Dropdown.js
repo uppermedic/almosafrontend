@@ -20,22 +20,15 @@ const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
       inNavbar
       isOpen={dropdownOpen}
       toggle={() => setDropdownOpen(!dropdownOpen)}
+      onMouseEnter={() => setDropdownOpen(true)}
+      onMouseLeave={() => setDropdownOpen(false)}
     >
-      <DropdownToggle
-        nav
-        caret
-        className="dropdown-toggle"
-        onMouseEnter={() => setDropdownOpen(true)}
-      >
+      <DropdownToggle nav caret className="dropdown-toggle">
         <div>
           <span>{t('menu:' + item.label)}</span>
         </div>
       </DropdownToggle>
-      <DropdownMenu
-        className="dropdown-menu"
-        onMouseEnter={() => setDropdownOpen(true)}
-        onMouseLeave={() => setDropdownOpen(false)}
-      >
+      <DropdownMenu className="dropdown-menu">
         {options.map((option, index) => {
           return (
             <DropdownItem key={index}>
