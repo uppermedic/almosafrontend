@@ -88,7 +88,10 @@ const Header = ({ t }) => {
               {Menu.map((item, idx) => (
                 <div key={idx}>
                   {!item.isDropDown && (
-                    <NavItem onClick={() => setIsOpen(false)}>
+                    <NavItem
+                      onClick={() => setIsOpen(false)}
+                      style={{ padding: '0.3rem 0' }}
+                    >
                       <Link href={`/${locale}/${item.path}`}>
                         <a
                           className={Classnames('nav-link', {
