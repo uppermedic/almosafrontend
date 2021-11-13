@@ -37,6 +37,7 @@ function index({ t }) {
                       <li>Almoosa for rehabilitation and LTC</li>
                       <li>Almoosa College of health sciences</li>
                       <li>Almoosa Home Health Care</li>
+                      <li>Almoosa Pharmacies</li>
                     </ul>
                   </p>
                   <br />
@@ -61,6 +62,7 @@ function index({ t }) {
                       rehabilitation programs for sports injuries, bone injuries
                       for adults and children, spinal injuries, and neural and
                       brain injuries .
+                      <br />
                       <br />
                       The rehabilitation and long-term care hospital will be in
                       Eastern Province, Al Ahsa. It is designed as a micro
@@ -102,6 +104,64 @@ function index({ t }) {
                       professionals .
                     </p>
                   </div>
+                  <div className="description">
+                    <h6>Outpatient Pharmacy (south tower) :</h6>
+                    <p>
+                      Outpatient pharmacy located on the ground floor in the
+                      south tower, it operates around the clock (24 hours) and
+                      provides several services .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>Automated Pharmacy (north tower) :</h6>
+                    <p>
+                      A Smart Robotic Outpatient Pharmacy, which is the use of
+                      high-tech robotic machines in pharmacy practice and in the
+                      healthcare sector, which has many added values .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>Aramco pharmacy :</h6>
+                    <p>
+                      Located on the first floor in the old building, and it
+                      works around the clock .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>Inpatient pharmacies :</h6>
+                    <p>
+                      Operate around the clock (24 hours) and provides several
+                      services .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>Automated drug dispensing system (Omnicell) :</h6>
+                    <p>
+                      Inpatient pharmacies are distinguished by the automated
+                      drug dispensing system (Omnicell), which consists of
+                      medicine cabinets linked to the health information system
+                      "HIS" these cabinets identify each patient through his
+                      file number, dose are perfectly specified by the doctor
+                      promptly automatically and without any human intervention
+                      .
+                      <br />
+                      <br />
+                      This system will help reduce the possibility of medication
+                      errors, increase safety, and improve the quality of health
+                      care. It will also give more time for health care
+                      providers, including nurses and others, to focus on the
+                      patient and communicate with him humanely .
+                      <br />
+                      <br />
+                      The system also guaranteed High accuracy in medication
+                      dispensing, inventory/stock management, and automatic
+                      checking for medication validity/expiry dates .
+                    </p>
+                  </div>
                 </div>
               )}
               {language == 'ar' && (
@@ -122,6 +182,7 @@ function index({ t }) {
                       <li>مستشفى الموسى للتأهيل و الرعاية الممتدة</li>
                       <li>كلية الموسى للعلوم الصحية</li>
                       <li>الموسى للرعاية الصحية المنزلية</li>
+                      <li>صيدليات الموسى</li>
                     </ul>
                   </p>
                   <br />
@@ -164,6 +225,60 @@ function index({ t }) {
                       التمريضية، والعلاج الطبيعي والتأهيلي، رعاية كبار السن،
                       رعاية ما بعد العمليات الجراحية وادارة الأمراض المزمنة
                       بالمنزل
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>الصيدلية الخارجية في البرج الجنوبي :</h6>
+                    <p>
+                      تقع في الطابق الأرضي، وتعمل على مدار الساعة (24 ساعة)
+                      وتقدم العديد من الخدمات .{' '}
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>صيدلية خارجية في البرج الشمالي :</h6>
+                    <p>
+                      تقع في الطابق الأرضي، وتعمل على مدار الساعة (24 ساعة)، كما
+                      أنها مزودة بروبوت متطور يقوم بصرف الأدوية للمرضى بشكل آلي
+                      يقلل هذا النظام من نسبة الخطأ ويقلل من وقت انتظار المرضى
+                      للحصول على الدواء ويحسن من تجربة المرضى بشكل عام .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>صيدلية مرضى أرامكو :</h6>
+                    <p>
+                      تقع في الطابق الأول في المبنى القديم، وتعمل على مدار
+                      الساعة .
+                    </p>
+                  </div>
+
+                  <div className="description">
+                    <h6>صيدليات داخلية :</h6>
+                    <p>صيدليات داخلية لمرضى التنويم تعمل على مدار الساعة .</p>
+                  </div>
+
+                  <div className="description">
+                    <h6>نظام صرف الأدوية الآلي (Omnicell) :</h6>
+                    <p>
+                      نفخر بوجود نظام صرف الأدوية الآلي في أجنحة التنويم
+                      (Omnicell) وهو مكون من خزائن للأدوية مربوطة بنظام
+                      المعلومات الصحي بحيث تتعرف هذه الخزائن على كل مريض من خلال
+                      رقم ملفه وتصرف له الدواء بالجرعة التي حددها الطبيب في
+                      الوقت المناسب بشكل آلي وبدون أي تدخل بشري .
+                      <br />
+                      <br />
+                      يساعد هذا النظام في تقليل احتمالات الأخطاء الدوائية وزيادة
+                      الأمان ووتحسين جودة الرعاية الصحية كما سيعطي مزيدًا من
+                      الوقت لمقدمي الرعاية الصحية من تمريض وغيرهم للتركيز على
+                      المريض والتواصل معه إنسانيًا .
+                      <br />
+                      <br />
+                      يساعد النظام أيضًا على تتبع مخزون الأدوية بحيث نستطيع
+                      تأمين حاجة كل قسم من الأدوية بوقت مسبق ونتجنب خطورة نقص
+                      الأدوية وخصوصا الأدوية التي يترتب عليها أنقاذ حياة المرضى
+                      .
                     </p>
                   </div>
                 </div>

@@ -28,13 +28,13 @@ const data = [
         'Saudi Central Board for Accreditation of Healthcare Institutions- CBAHI ',
       content: `Almoosa Specialist Hospital in <strong>2013</strong> was accredited by the <a href="https://portal.cbahi.gov.sa/arabic/home">Saudi Central Board for Accreditation</a> of Healthcare Institutions, following the evaluation of 811 standards.<br/><br/>
       CBAHI is the official board authorized to grant accreditation to all healthcare facilities in Saudi Arabia. The Central Board's prominent role is establishing and evaluating quality standards for health care and patient safety in all Saudi health care establishments.<br/><br/>
-      The hospital achieved re-accreditation in in <strong>2017</strong>.`
+      The hospital achieved re-accreditation in in <strong>2017</strong>, With 99.11 success rate`
     },
     ar: {
       title: 'اعتماد المركز السعودي لاعتماد المنشآت الصحية CBAHI',
       content: `المركز السعودي لاعتماد المنشآت الصحية هو الهيئة الرسمية المسؤولة عن منح الاعتماد لجميع منشآت الرعاية الصحية في المملكة العربية السعودية.<br/><br/>
         يتمثل الدور الرئيسي لها في وضع معايير الجودة الأساسية للرعاية الصحية وسلامة المرضى، وتقييمها في جميع مؤسسات الرعاية الصحية السعودية. <br/><br/>
-        حصل مستشفى الموسى على <a href="https://portal.cbahi.gov.sa/arabic/home">اعتماد المركز السعودي لاعتماد المنشآت الصحية</a> مرتين على التوالي في عام   <strong>2013</strong>، <strong>2017</strong>
+        حصل مستشفى الموسى على <a href="https://portal.cbahi.gov.sa/arabic/home">اعتماد المركز السعودي لاعتماد المنشآت الصحية</a> مرتين على التوالي في عام   <strong>2013</strong>، <strong>2017</strong> ,وفي عام <strong>2021</strong> بنسبة 99.11% 
       `
     }
   },
@@ -138,15 +138,19 @@ const data = [
   {
     id: 10,
     en: {
-      title: 'HIMSS Certification ',
-      content: `Stage 6 Certification of Healthcare Information and Management Systems Society - <a href="https://www.himss.org">HIMSS</a>`
+      title: 'HIMSS stage 7 EMRAM',
+      content: `
+      ASH has proudly achieved the highest level of the <a href="https://www.himss.org">HIMSS</a> Analytics Electronic Medical Records Adoption Model (EMRAM) which scores hospitals from 0-7 relative to their inpatient electronic medical records (EMR) capabilities. <br/><br/>
+      This accreditation is a clear representation of the hospital’s efforts to advance health and wellness for everyone, everywhere through health information and technology and our ongoing commitment to improving patient safety and the overall quality of clinical care through the effective use and deployment of electronic medical record technology . <br/><br/>
+      In ASH, Technology is embedded in everything we do, in all clinical processes and our nursing workflows to improve patient safety and the overall quality of clinical care.
+      <a href="https://www.himss.org">HIMSS (Healthcare Information and Management Systems Society)</a> is an international organization which supports hospitals to benchmark and improve their use of digital technology, through various digitalized healthcare adoption models, ranging from 0-7.`
     },
     ar: {
-      title: 'اعتماد الجمعية الأمريكية لنظم إدارة المعلومات الصحية HIMSS',
-      content: `<a href="https://www.himss.org"> (HIMSS - Healthcare Information and Management Systems Society) </a>هي منظمة غير ربحية، امريكية تقدم استشارات رائدة في  تكنولوجيا المعلومات الصحية ، وذلك من خلال توظيف كافة خبراتها وقدراتها لتطوير الجودة والسلامة والكفاءة في الرعاية الصحية وتعمل على تمكين القادة من  استخدام المعلومات الصحيحة عند اتخاذ القرارات <br/><br/>
-        يشمل التصنيف ثماني مراحل تبدأ من المستوى صفر إلى المستوى السابع لتقييم مدى فاعلية  المستشفيات في تطبيق الانظمة المعلوماتية والتكنلوجيا الصحية .<br/><br/>
-        في عام <strong>2019 </strong> حصل مستشفى الموسى التخصصي على المستوى السادس من اعتماد الجمعية الأمريكية لنظم إدارة المعلومات الصحية  يعد هذا الانجاز انجازاً  مهماً في رحلته نحو الابتكار في تكنلوجيا المعلومات .<br/><br/>
-        حصول مستشفى الموسى التخصصي على هذه الاعتماد  يدل على مدى اهتمامه بسلامة المرضى والتزامه بتطوير وجودة الخدمات واستخدام الملف الالكتروني بفاعلية قصوى `
+      title:
+        'الحصول  على المستوى السابع من اعتماد الجمعية الأمريكية لنظم إدارة المعلومات الصحية HIMSS 7',
+      content: `حصل مستشفى الموسى التخصصي على المستوى السابع من اعتماد الجمعية الأمريكية لنظم إدارة المعلومات الصحية يعد هذا الانجاز انجازاً مهماً في رحلته نحو الابتكار في تكنولوجيا المعلومات . كما يدل على مدى اهتمام المستشفى  بسلامة المرضى والتزامه بتطوير وجودة الخدمات واستخدام الملف الالكتروني بفاعلية قصوى  ، يذكر أن المستشفى حصل على اعتماد المستوى السادس عام 2019  .<br/><br/>
+      <a href="https://www.himss.org">HIMSS</a> هي منظمة غير ربحية، امريكية تقدم استشارات رائدة في تكنولوجيا المعلومات الصحية ، وذلك من خلال توظيف كافة خبراتها وقدراتها لتطوير الجودة والسلامة والكفاءة في الرعاية الصحية وتعمل على تمكين القادة من استخدام المعلومات الصحيحة عند اتخاذ القرارات<br/><br/> يشمل التصنيف ثماني مراحل تبدأ من المستوى صفر إلى المستوى السابع لتقييم مدى فاعلية المستشفيات في تطبيق الانظمة المعلوماتية والتكنلوجيا الصحية.
+      `
     }
   },
   {
