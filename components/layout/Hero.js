@@ -8,7 +8,7 @@ const Hero = ({ bg, children, customClassNames }) => {
     <div
       className={`hero ${customClassNames || ''}`}
       style={{
-        backgroundImage: `url(${bg})`
+        backgroundImage: `url(${String(bg).split(' ').join('-')})`
       }}
     >
       {children}
