@@ -22,7 +22,7 @@ const Overview = ({ t }) => {
   return (
     <div className="overview">
       <Head data={seo}></Head>
-      <Hero bg="/images/about/hero-bg.png">
+      <Hero bg="/images/about/hero-bg.jpg">
         <div className="hero-content">
           <h2 className="title">{t('menu:overview')}</h2>
         </div>

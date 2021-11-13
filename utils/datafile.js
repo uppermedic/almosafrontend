@@ -124,8 +124,7 @@ export const GovernersData = [
     }
   },
   {
-    image:
-      'http://admin.almoosahospital.live/storage/doctors/زينب-عبدالعزيز-الموسى--395x465.jpg',
+    image: '/images/about/leadership-team/zienb.jpg',
     id: 4,
     ar: {
       name: 'الدكتورة/ زينب الموسى',
@@ -276,8 +275,7 @@ export const TeamData = [
     }
   },
   {
-    image:
-      'http://admin.almoosahospital.live/storage/doctors/زينب-عبدالعزيز-الموسى--395x465.jpg',
+    image: '/images/about/leadership-team/zienb.jpg',
     id: 2,
     ar: {
       name: 'الدكتورة/ زينب الموسى',
@@ -709,8 +707,7 @@ export const TeamData = [
     }
   },
   {
-    image:
-      'http://admin.almoosahospital.live/storage/doctors/Dr.-Mustafa-Saad-410x412.jpg',
+    image: '/images/about/leadership-team/Mustafa-Saad.jpg',
     id: 12,
     ar: {
       name: 'دكتور مصطفى سعد',
@@ -810,7 +807,7 @@ export const TeamData = [
     }
   },
   {
-    image: 'http://admin.almoosahospital.live/storage/doctors/rida khadra.jpeg',
+    image: '/images/about/leadership-team/rida.jpeg',
     id: 13,
     ar: {
       name: 'د. رضا الخضرا',
@@ -862,7 +859,7 @@ export const TeamData = [
     }
   },
   {
-    image: 'http://admin.almoosahospital.live/storage/doctors/ساااااااامر.png',
+    image: '/images/about/leadership-team/samer.png',
     id: 13,
     ar: {
       name: 'د. سامر قارة',
