@@ -13,7 +13,7 @@ const Head = ({ data, children }) => {
   const { language: lang } = i18n;
   const seoLang = data && data[lang];
   const router = useRouter();
-  const { locale, asPath } = router;
+  const { locale, asPath, pathname } = router;
   const win = typeof window !== 'undefined';
 
   return (
@@ -45,11 +45,13 @@ const Head = ({ data, children }) => {
         href="/apple-touch-icon.png"
       />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link
-        rel="canonical"
-        hrefLang={locale}
-        href={`${win && window?.location.href}`}
-      />
+      {pathname !== '/404' && (
+        <link
+          rel="canonical"
+          hrefLang={locale}
+          href={`${win && window?.location.href}`}
+        />
+      )}
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta property="og:title" content={data && data[lang]?.title} />
