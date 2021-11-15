@@ -19,7 +19,7 @@ function CenterItem({ t, center }) {
         }/?id=${center?.id}`}
       >
         <a>
-          <img src={center.ar.thumbnail} alt="" srcSet="" />
+          <img src={center.ar.thumbnail} alt="center" />
           <div className="content">
             <h3>
               <Markdown>

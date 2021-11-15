@@ -34,10 +34,10 @@ function CarouselContent({ data, index, t }) {
           {index === 0 && (
             <div className="stores-wrapper">
               <a href={app_store_download_app} target="_blank">
-                <img src="images/home/app-store-btn.svg" alt="" />
+                <img src="images/home/app-store-btn.svg" alt="app-store" />
               </a>
               <a href={google_play_store_download_app} target="_blank">
-                <img src="images/home/google-play-btn.svg" alt="" />
+                <img src="images/home/google-play-btn.svg" alt="google-play" />
               </a>
             </div>
           )}

@@ -17,6 +17,7 @@ function Article({ article, originalArticle, related, t }) {
         <img
           className="thumbnail shadow-lg rounded"
           src={originalArticle?.image}
+          alt="single new"
         />
       </Col>
       <Col xs={12} className="post-content">

@@ -213,7 +213,7 @@ function index({ t, histories }) {
                       <Col xs={12} md={7}>
                         <div className="image-wrapper">
                           <figure>
-                            <img src={single.image} alt="" />
+                            <img src={single.image} alt="our history" />
                           </figure>
                         </div>
                       </Col>

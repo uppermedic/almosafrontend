@@ -18,7 +18,7 @@ function NewsItem({ news, t }) {
         }/?id=${news.id}`}
       >
         <a>
-          <img src={news.thumbnail} alt="" srcSet="" />
+          <img src={news.thumbnail} alt="news" />
           <div className="content">
             <h5>
               <div

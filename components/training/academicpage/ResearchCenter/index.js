@@ -38,7 +38,10 @@ const index = ({ t }) => {
                   البحث والتطوير.
                 </p>
               )}
-              <img src="/images/training/academic/green-zigzag.png" />
+              <img
+                src="/images/training/academic/green-zigzag.png"
+                alt="green-zigzag"
+              />
             </Card>
           </div>
         </Col>
