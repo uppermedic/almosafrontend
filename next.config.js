@@ -2887,10 +2887,16 @@ const Links = [
     source: '/product-tag/antibiotics-101/',
     destination: '/en/training-education/courses'
   },
-  // {
-  //   source: '/product-tag/course/?add-to-cart=30224',
-  //   destination: '/en/training-education/courses'
-  // },
+  {
+    source: '/product-tag/course/',
+    has: [
+      {
+        type: 'query',
+        key: 'add-to-cart'
+      }
+    ],
+    destination: '/en/training-education/courses'
+  },
   // {
   //   source: '/product-tag/course/?add-to-cart=30833',
   //   destination: '/en/training-education/courses'
@@ -4159,10 +4165,22 @@ const Links = [
   //   source: '/bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1',
   //   destination: '/en/media-center/photo-gallery?page=1'
   // },
-  // {
-  //   source: '/bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1',
-  //   destination: '/en/media-center/video-gallery?page=1'
-  // },
+  {
+    source: '/bwg_album/general-video/',
+    has: [
+      {
+        type: 'query',
+        key: 'type_0',
+        value: 'gallery'
+      },
+      {
+        type: 'query',
+        key: 'album_gallery_id_0',
+        value: '1'
+      }
+    ],
+    destination: '/en/media-center/video-gallery?page=1'
+  },
   {
     source: '/bwg_gallery/events/',
     destination: '/en/media-center/photo-gallery?page=1'
