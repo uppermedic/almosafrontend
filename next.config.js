@@ -5126,8 +5126,14 @@ const Links = [
 ];
 
 const redLinks = Links?.map(link => {
-  return { ...link, permanent: true };
+  if (link?.source.includes('/ar/')) {
+    return { ...link, locale: false, permanent: true };
+  } else {
+    return { ...link, permanent: true };
+  }
 });
+
+console.log('redLinks', redLinks);
 
 module.exports = {
   minify: true,
@@ -5138,14 +5144,7 @@ module.exports = {
     locales: ['ar', 'en']
   },
   async redirects() {
-    return [
-      {
-        source: '/team/',
-        destination: '/en/services',
-        // locale: false,
-        permanent: true
-      }
-    ];
+    return redLinks;
   },
   images: {
     domains: ['159.65.230.116']
