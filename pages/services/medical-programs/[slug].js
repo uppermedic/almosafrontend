@@ -16,7 +16,7 @@ const HairTranplant = ({ data }) => {
       router.push(
         `/${lang}/services/medical-programs/${String(data.seo[lang].title)
           .split(' ')
-          .join('-')}?id=${data.id}`
+          .join('-')}/?id=${data.id}`
       );
     }
   }, [lang, locale]);

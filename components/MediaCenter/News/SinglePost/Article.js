@@ -45,7 +45,7 @@ function Article({ article, originalArticle, related, t }) {
                       relLink[language]?.title
                     )
                       .split(' ')
-                      .join('-')}?id=${relLink?.id}`}
+                      .join('-')}/?id=${relLink?.id}`}
                   >
                     {relLink[language]?.title + ' . '}
                   </Link>

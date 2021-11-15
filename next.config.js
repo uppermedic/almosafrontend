@@ -4858,7 +4858,7 @@ const Links = [
   },
   {
     source: '/12553-2/',
-    destination: '/en/ar/en/services/inpatient-units?id=39'
+    destination: '/en/services/inpatient-units?id=39'
   },
   {
     source: '/career/',
@@ -5127,17 +5127,23 @@ const Links = [
 
 const redLinks = Links?.map(link => {
   if (link?.source.includes('/ar/')) {
-    return { ...link, locale: false, permanent: true };
+    return {
+      ...link,
+      locale: false,
+      permanent: true
+    };
   } else {
-    return { ...link, permanent: true };
+    return {
+      ...link,
+      permanent: true
+    };
   }
 });
-
-console.log('redLinks', redLinks);
 
 module.exports = {
   minify: true,
   compress: true,
+  trailingSlash: true,
   i18n: {
     localeDetection: false,
     defaultLocale: 'en',

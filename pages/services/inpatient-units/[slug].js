@@ -14,7 +14,7 @@ const IntensiveCare = ({ data }) => {
       router.push(
         `/${lang}/services/inpatient-units/${String(data.seo[lang].title)
           .split(' ')
-          .join('-')}?id=${data.id}` || '#'
+          .join('-')}/?id=${data.id}` || '#'
       );
     }
   }, [lang, locale]);

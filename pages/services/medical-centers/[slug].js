@@ -15,7 +15,7 @@ const Post = ({ data }) => {
       router.push(
         `/${locale}/services/medical-centers/${String(data.seo[locale].title)
           .split(' ')
-          .join('-')}?id=${data.id}`
+          .join('-')}/?id=${data.id}`
       );
     }
   }, [lang, locale]);

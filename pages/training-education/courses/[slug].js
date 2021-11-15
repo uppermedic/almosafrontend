@@ -15,7 +15,7 @@ const Event = ({ data }) => {
       router.push(
         `/${lang}/training-education/courses/${String(data[lang].title)
           .split(' ')
-          .join('-')}?id=${data.id}`
+          .join('-')}/?id=${data.id}`
       );
     }
   }, [lang, locale]);

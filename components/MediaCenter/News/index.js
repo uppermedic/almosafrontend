@@ -21,7 +21,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
   }, [language]);
 
   const handlePageClick = ({ selected }) => {
-    router.push(`/${locale}/media-center/news?page=${selected + 1}`);
+    router.push(`/${locale}/media-center/news/?page=${selected + 1}`);
   };
   return (
     <section className="content-wrapper">
@@ -114,7 +114,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           language ? post[language]?.title : ''
                         )
                           .split(' ')
-                          .join('-')}?id=${post.id}`}
+                          .join('-')}/?id=${post.id}`}
                       >
                         <a>
                           <img src={post.image} />

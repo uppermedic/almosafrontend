@@ -34,7 +34,7 @@ function BordDirectors() {
       router.push(
         `/${language}/about/board-directors-and-executive-team/${String(
           data[language]?.slug
-        )}?id=${data?.id}`
+        )}/?id=${data?.id}`
       );
     }
   }, [language, locale]);
