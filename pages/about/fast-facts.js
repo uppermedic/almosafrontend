@@ -25,7 +25,7 @@ const index = ({ t }) => {
       <Head data={seo}></Head>
       <Hero bg="/images/about/hero-bg.png">
         <div className="hero-content">
-          <h2 className="title">{t('menu:fast facts')}</h2>
+          <h1 className="title">{t('menu:fast facts')}</h1>
         </div>
       </Hero>
       <Content />

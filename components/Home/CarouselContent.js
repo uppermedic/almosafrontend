@@ -14,13 +14,13 @@ function CarouselContent({ data, index, t }) {
     return (
       <div className="container">
         <div className="carosel-content">
-          <h2>
+          <h1>
             <span>
               <Markdown>
                 {(language && strippedContent(data[language]?.title)) || ''}
               </Markdown>
             </span>
-          </h2>
+          </h1>
           <div>
             <p>
               <div

@@ -32,7 +32,7 @@ const LetsLearn = ({ data }) => {
       <Head data={head_data} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h2 className="title">{lang && data[lang]?.title} </h2>
+          <h1 className="title">{lang && data[lang]?.title} </h1>
         </div>
       </Hero>
 
@@ -139,30 +139,6 @@ const LetsLearn = ({ data }) => {
 };
 
 export default LetsLearn;
-
-// small Components
-
-const BannerOverlay = ({ data }) => {
-  const lang = i18n.language;
-  return (
-    <div className="banner-overlay">
-      <Container>
-        <Row xs="1" sm="2">
-          <Col>
-            <div className="logo">
-              <img src="/images/png-logo.png" alt="logo" />
-            </div>
-          </Col>
-          <Col>
-            <div className="initiative-name">
-              <h2>{lang && data[lang]?.title}</h2>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
-};
 
 export async function getServerSideProps(context) {
   let { error, data } = await fetchData('/community/2');

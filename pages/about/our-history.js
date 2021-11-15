@@ -12,7 +12,7 @@ const History = ({ data, t }) => {
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:history')}</h2>
+          <h1 className="title">{t('menu:history')}</h1>
         </div>
       </Hero>
       <Content histories={data.data} />

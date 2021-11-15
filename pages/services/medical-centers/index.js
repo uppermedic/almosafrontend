@@ -11,7 +11,7 @@ function MedicalCenters({ t, data }) {
       <Head data={data.seo || false}></Head>
       <Hero bg={data.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:medical centers')}</h2>
+          <h1 className="title">{t('menu:medical centers')}</h1>
         </div>
       </Hero>
       <MedicalCentersComp data={data.services} />

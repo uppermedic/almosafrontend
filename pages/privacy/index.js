@@ -25,7 +25,7 @@ const index = ({ t }) => {
       <Head data={seo} />
       <div className="head-banner">
         <div className="container">
-          <h2>{t('menu:privacy')}</h2>
+          <h1>{t('menu:privacy')}</h1>
         </div>
       </div>
       <Content />

@@ -11,7 +11,7 @@ const MedicalCenters = ({ t, data }) => {
       <Head data={data.seo}></Head>
       <Hero bg={data.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:medical programs')}</h2>
+          <h1 className="title">{t('menu:medical programs')}</h1>
         </div>
       </Hero>
       <MedicalPrograms data={data.services} />

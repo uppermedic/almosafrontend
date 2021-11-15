@@ -25,7 +25,7 @@ const VisionMessage = ({ t, data }) => {
       <Head data={seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:vision and mission')}</h2>
+          <h1 className="title">{t('menu:vision and mission')}</h1>
         </div>
       </Hero>
       <VisionAndMessage data={data} />
