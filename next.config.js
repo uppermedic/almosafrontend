@@ -3962,10 +3962,11 @@ const Links = [
     source: '/strategic-priorities/',
     destination: '/en/about/strategic-priorities'
   },
-  // {
-  //   source: '/centers/womens-health-center/?lang=ar',
-  //   destination: "/en/services/medical-centers/Women's-Health-Center?id=11"
-  // },
+  ///centers/womens-health-center/?lang=ar
+  {
+    source: '/centers/womens-health-center/',
+    destination: "/en/services/medical-centers/Women's-Health-Center?id=11"
+  },
   {
     source: '/category/awards-and-accreditations/',
     destination: '/en/media-center/news'
@@ -3978,22 +3979,26 @@ const Links = [
     source: '/category/uncategorized/',
     destination: '/en/media-center/news'
   },
-  // {
-  //   source: '/departments/family-medicine-clinic/?lang=ar',
-  //   destination: '/en/services/medical-centers/Family-Medicine-Clinic?id=21'
-  // },
-  // {
-  //   source: '/departments/hematology-clinic/?lang=ar',
-  //   destination: '/en/services/medical-centers'
-  // },
-  // {
-  //   source: '/departments/infectious-diseases-division/?lang=ar',
-  //   destination: '/en/services/medical-centers'
-  // },
-  // {
-  //   source: '/departments/psychiatry-clinic/?lang=ar',
-  //   destination: '/en/services/supportive-services'
-  // },
+  //'/departments/family-medicine-clinic/?lang=ar'
+  {
+    source: '/departments/family-medicine-clinic/',
+    destination: '/en/services/medical-centers/Family-Medicine-Clinic?id=21'
+  },
+  //'/departments/hematology-clinic/?lang=ar'
+  {
+    source: '/departments/hematology-clinic/',
+    destination: '/en/services/medical-centers'
+  },
+  //'/departments/infectious-diseases-division/?lang=ar'
+  {
+    source: '/departments/infectious-diseases-division/',
+    destination: '/en/services/medical-centers'
+  },
+  //'/departments/psychiatry-clinic/?lang=ar'
+  {
+    source: '/departments/psychiatry-clinic/',
+    destination: '/en/services/supportive-services'
+  },
   {
     source: '/centers/page/2/',
     destination: '/en/services/medical-centers'
@@ -4102,26 +4107,16 @@ const Links = [
     source: '/doctors/page/9/',
     destination: '/en/our-doctors?page=1'
   },
-  // {
-  //   source: '/educational-courses/?add-to-cart=29765',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/educational-courses/?add-to-cart=30224',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/educational-courses/?add-to-cart=30679',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/educational-courses/?add-to-cart=30783',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/educational-courses/?add-to-cart=30833',
-  //   destination: '/en/training-education/courses'
-  // },
+  // '/educational-courses/?add-to-cart=29765',
+  // '/educational-courses/?add-to-cart=30224',
+  // '/educational-courses/?add-to-cart=30679',
+  // '/educational-courses/?add-to-cart=30783',
+  // '/educational-courses/?add-to-cart=30833',
+
+  {
+    source: '/educational-courses/',
+    destination: '/en/training-education/courses'
+  },
   {
     source: '/programs/page/2/',
     destination: '/en/services/medical-programs'
@@ -4154,12 +4149,12 @@ const Links = [
     source: '/3d-flip-book-category/newsletter/',
     destination: '/en/media-center/hakeem-magazine?page=1'
   },
-  ///bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1
+  //'/bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1'
   {
     source: '/bwg_album/almoosa-hospital/',
     destination: '/en/media-center/photo-gallery?page=1'
   },
-  // /bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1
+  // '/bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1'
   {
     source: '/bwg_album/general-video/',
     destination: '/en/media-center/video-gallery?page=1'

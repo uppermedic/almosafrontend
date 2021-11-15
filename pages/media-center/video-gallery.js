@@ -42,7 +42,7 @@ const Index = ({ data, getMediaCategories }) => {
       router.push(`/${locale}/media-center/video-gallery/?page=1`);
     } else if (value !== 'all') {
       router.push(
-        `/${locale}/media-center/video-gallery?category=${value}&page=1`
+        `/${locale}/media-center/video-gallery/?category=${value}&page=1`
       );
     }
   };
@@ -54,7 +54,7 @@ const Index = ({ data, getMediaCategories }) => {
       );
     } else {
       router.push(
-        `/${locale}/media-center/video-gallery?category=${selectId}&page=${
+        `/${locale}/media-center/video-gallery/?category=${selectId}&page=${
           selected + 1
         }`
       );

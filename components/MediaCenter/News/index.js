@@ -92,7 +92,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/news?cats=${cat.slug}`}
+                      href={`/${locale}/media-center/news/?cats=${cat.slug}`}
                     >
                       <a>{cat[language].category_name}</a>
                     </Link>
@@ -164,7 +164,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {tags.map(tag => (
                   <li key={tag.id}>
                     <Link
-                      href={`/${locale}/media-center/news?tags=${tag?.tag_name}`}
+                      href={`/${locale}/media-center/news/?tags=${tag?.tag_name}`}
                     >
                       <a>{tag.tag_name}</a>
                     </Link>
