@@ -53,12 +53,14 @@ const Header = ({ t }) => {
             <div className="navbar-brand brand-right">
               <img className="pl-2 pr-2 logo1" src="/images/logo1.png" />
               <Link href={`/${locale}/services/nursing-department`}>
-                <img
-                  className="logo2"
-                  src="/images/logo2.png"
-                  alt="magent"
-                  style={{ cursor: 'pointer' }}
-                />
+                <a>
+                  <img
+                    className="logo2"
+                    src="/images/logo2.png"
+                    alt="magent"
+                    style={{ cursor: 'pointer' }}
+                  />
+                </a>
               </Link>
             </div>
           </div>

@@ -48,12 +48,16 @@ const index = () => {
             <Col key={box.id}>
               <Card>
                 <Link href={box.path}>
-                  <div style={{ cursor: box.id === 2 ? 'default' : 'pointer' }}>
-                    <span className="icon">
-                      <box.icon />
-                    </span>
-                    <h4>{language && box.content[language]}</h4>
-                  </div>
+                  <a>
+                    <div
+                      style={{ cursor: box.id === 2 ? 'default' : 'pointer' }}
+                    >
+                      <span className="icon">
+                        <box.icon />
+                      </span>
+                      <h4>{language && box.content[language]}</h4>
+                    </div>
+                  </a>
                 </Link>
                 {box.id === 2 && (
                   <div className="stores-wrapper">

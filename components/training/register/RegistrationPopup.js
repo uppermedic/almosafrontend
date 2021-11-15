@@ -23,9 +23,11 @@ const RegistrationPopup = ({ open, toggle }) => {
                 'الآن سيتم توجيهك إلى'}
             </p>
             <Link href="#">
-              <span className="pay-getway-link">
-                {(lang == 'en' && 'The payment gateway') || 'بوابة الدفع '}
-              </span>
+              <a>
+                <span className="pay-getway-link">
+                  {(lang == 'en' && 'The payment gateway') || 'بوابة الدفع '}
+                </span>
+              </a>
             </Link>
           </div>
         </ModalBody>

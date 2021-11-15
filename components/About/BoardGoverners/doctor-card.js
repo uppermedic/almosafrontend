@@ -23,13 +23,15 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
           : '#'
       }
     >
-      <div className="card" onClick={handleClick}>
-        <img src={doctor.image} alt={language && doctor[language].name} />
-        <div className="banner">
-          <h4>{language && doctor[language].name}</h4>
-          <p>{language && doctor[language].title}</p>
+      <a>
+        <div className="card" onClick={handleClick}>
+          <img src={doctor.image} alt={language && doctor[language].name} />
+          <div className="banner">
+            <h4>{language && doctor[language].name}</h4>
+            <p>{language && doctor[language].title}</p>
+          </div>
         </div>
-      </div>
+      </a>
     </Link>
   );
 };

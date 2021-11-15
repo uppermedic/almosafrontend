@@ -23,7 +23,9 @@ const WhyMosa = ({ data, t }) => {
           </Col>
           <Col className="link_div p-0" xs={12} lg={6}>
             <Link href={`/${locale}/why-choose-us`}>
-              <span>{t('know_about_us')}</span>
+              <a>
+                <span>{t('know_about_us')}</span>
+              </a>
             </Link>
           </Col>
         </Row>

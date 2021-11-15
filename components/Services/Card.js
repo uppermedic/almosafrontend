@@ -13,7 +13,9 @@ function PatientFeatures({ t, item }) {
   return (
     <div className="card-item">
       <Link href={`/${locale}/${item.path}` || '#'}>
-        <h3>{language && truncate(item[language]?.title, 20, '...')}</h3>
+        <a>
+          <h3>{language && truncate(item[language]?.title, 20, '...')}</h3>
+        </a>
       </Link>
       <p>
         <div
