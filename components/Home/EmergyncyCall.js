@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, Link, withTranslation } from 'root/i18n';
-import { toArabicDigits } from 'utils/helpers';
+import { Link, withTranslation } from 'root/i18n';
 const emergyncyCall = ({ emergency_phone, t }) => {
   return (
     <div className="emergyncyContainer">

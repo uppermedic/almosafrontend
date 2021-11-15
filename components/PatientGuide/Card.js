@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'root/i18n';
-import { i18n, withTranslation } from 'root/i18n';
+import { i18n, withTranslation, Link } from 'root/i18n';
 
 const PatientFeatures = ({ item, withShapes, withBg, withTwoBg, t }) => {
   const { language } = i18n;
@@ -13,22 +12,24 @@ const PatientFeatures = ({ item, withShapes, withBg, withTwoBg, t }) => {
   return (
     <div className="guide-card-item">
       <Link href={item.path ? `/${locale}/${item.path}` : '#'}>
-        <div className={`text-center feature ${item.feature_color}`}>
-          {withBg && <div className="card-overlay"></div>}
-          {withShapes && (
-            <>
-              <div className="overlay-1">{SVG}</div>
-              <div className="overlay-2">{SVG}</div>
-            </>
-          )}
-          {withTwoBg && (
-            <>
-              <div className="top-bg"></div>
-              <div className="bottom-bg"></div>
-            </>
-          )}
-          <h3>{t(`patient_guide:${item.content}`)}</h3>
-        </div>
+        <a>
+          <div className={`text-center feature ${item.feature_color}`}>
+            {withBg && <div className="card-overlay"></div>}
+            {withShapes && (
+              <>
+                <div className="overlay-1">{SVG}</div>
+                <div className="overlay-2">{SVG}</div>
+              </>
+            )}
+            {withTwoBg && (
+              <>
+                <div className="top-bg"></div>
+                <div className="bottom-bg"></div>
+              </>
+            )}
+            <h3>{t(`patient_guide:${item.content}`)}</h3>
+          </div>
+        </a>
       </Link>
     </div>
   );

@@ -11,14 +11,16 @@ export default function Service({ item, t }) {
   return (
     <>
       <Link href={`${locale}/${item.url}`}>
-        <div
-          className="center-card"
-          style={{ backgroundImage: `url(${item.bg})` }}
-        >
-          <div className={`text-center ribbon ${item.ribbon_class}`}>
-            <h3>{t(String('menu:' + item.title).toLowerCase())}</h3>
+        <a>
+          <div
+            className="center-card"
+            style={{ backgroundImage: `url(${item.bg})` }}
+          >
+            <div className={`text-center ribbon ${item.ribbon_class}`}>
+              <h3>{t(String('menu:' + item.title).toLowerCase())}</h3>
+            </div>
           </div>
-        </div>
+        </a>
       </Link>
     </>
   );
