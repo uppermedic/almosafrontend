@@ -74,9 +74,11 @@ const index = ({ data, t }) => {
               </p>
             </div>
             <Link href={`/${locale}/training-education/register`}>
-              <button onClick={handleClickReg}>
-                {language == 'en' ? 'Register' : 'سجل الأن'}
-              </button>
+              <a>
+                <button onClick={handleClickReg}>
+                  {language == 'en' ? 'Register' : 'سجل الأن'}
+                </button>
+              </a>
             </Link>
           </Col>
         </Row>
