@@ -2887,44 +2887,40 @@ const Links = [
     source: '/product-tag/antibiotics-101/',
     destination: '/en/training-education/courses'
   },
+  // /product-tag/course/?add-to-cart=30833
   {
     source: '/product-tag/course/',
-    has: [
-      {
-        type: 'query',
-        key: 'add-to-cart'
-      }
-    ],
     destination: '/en/training-education/courses'
   },
-  // {
-  //   source: '/product-tag/course/?add-to-cart=30833',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/product-tag/ecg-interpretation/?add-to-cart=29765',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/product-tag/learning/?add-to-cart=30833',
-  //   destination: '/en/training-education/courses'
-  // },
+  // /product-tag/ecg-interpretation/?add-to-cart=29765
+  {
+    source: '/product-tag/ecg-interpretation/',
+    destination: '/en/training-education/courses'
+  },
+  // /product-tag/learning/?add-to-cart=30833
+  {
+    source: '/product-tag/learning/',
+    destination: '/en/training-education/courses'
+  },
   {
     source: '/product-tag/radiology/',
     destination: '/en/training-education/courses'
   },
-  // {
-  //   source: '/product-tag/research/?add-to-cart=30224',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/product-tag/workshop/?add-to-cart=30224',
-  //   destination: '/en/training-education/courses'
-  // },
-  // {
-  //   source: '/product-tag/workshop/?add-to-cart=30833',
-  //   destination: '/en/training-education/courses'
-  // },
+  // /product-tag/research/?add-to-cart=30224
+  {
+    source: '/product-tag/research/',
+    destination: '/en/training-education/courses'
+  },
+  // /product-tag/workshop/?add-to-cart=30224
+  {
+    source: '/product-tag/workshop/',
+    destination: '/en/training-education/courses'
+  },
+  // /product-tag/workshop/?add-to-cart=30833
+  {
+    source: '/product-tag/workshop/',
+    destination: '/en/training-education/courses'
+  },
   {
     source: '/slider/banner1/',
     destination: '/en'
@@ -4006,10 +4002,6 @@ const Links = [
     destination: '/en/media-center/photo-gallery?page=1'
   },
   {
-    source: '/bwg_album/general-video/',
-    destination: '/en/media-center/video-gallery?page=1'
-  },
-  {
     source: '/wifi/',
     destination: '/en/for-visitors'
   },
@@ -4161,24 +4153,14 @@ const Links = [
     source: '/3d-flip-book-category/newsletter/',
     destination: '/en/media-center/hakeem-magazine?page=1'
   },
-  // {
-  //   source: '/bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1',
-  //   destination: '/en/media-center/photo-gallery?page=1'
-  // },
+  ///bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1
+  {
+    source: '/bwg_album/almoosa-hospital/',
+    destination: '/en/media-center/photo-gallery?page=1'
+  },
+  // /bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1
   {
     source: '/bwg_album/general-video/',
-    has: [
-      {
-        type: 'query',
-        key: 'type_0',
-        value: 'gallery'
-      },
-      {
-        type: 'query',
-        key: 'album_gallery_id_0',
-        value: '1'
-      }
-    ],
     destination: '/en/media-center/video-gallery?page=1'
   },
   {
