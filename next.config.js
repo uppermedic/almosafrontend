@@ -5121,20 +5121,22 @@ const Links = [
   }
 ];
 
-const redLinks = Links?.map(link => {
-  if (link?.source.includes('/ar/')) {
-    return {
-      ...link,
-      locale: false,
-      permanent: true
-    };
-  } else {
-    return {
-      ...link,
-      permanent: true
-    };
-  }
-});
+const redLinks =
+  Links.length > 0 &&
+  Links?.map(link => {
+    if (link?.source.includes('/ar/')) {
+      return {
+        ...link,
+        locale: false,
+        permanent: true
+      };
+    } else {
+      return {
+        ...link,
+        permanent: true
+      };
+    }
+  });
 
 module.exports = {
   minify: true,
@@ -5151,10 +5153,10 @@ module.exports = {
   images: {
     domains: ['159.65.230.116']
   },
-  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  // publicRuntimeConfig: {
-  //   localeSubpaths
-  // },
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths
+  },
   webpack: config => {
     config.resolve.alias['root'] = path.join(__dirname);
     config.resolve.alias['src'] = path.join(__dirname);
