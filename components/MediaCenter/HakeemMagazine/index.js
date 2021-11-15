@@ -13,7 +13,9 @@ const Index = ({ data, t }) => {
   const { locale } = router;
   const { last_page } = data;
   const handlePageClick = ({ selected }) => {
-    router.push(`/${locale}/media-center/hakeem-magazine?page=${selected + 1}`);
+    router.push(
+      `/${locale}/media-center/hakeem-magazine/?page=${selected + 1}`
+    );
   };
   return (
     <section className="content-wrapper">

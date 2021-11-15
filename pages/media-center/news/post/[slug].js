@@ -30,7 +30,7 @@ const Post = ({ data }) => {
       router.push(
         `/${language}/media-center/news/post/${
           language && String(data[language].title).split(' ').join('-')
-        }?id=${data.id}`
+        }/?id=${data.id}`
       );
     }
     return () => {};

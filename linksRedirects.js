@@ -1,13 +1,4 @@
-const path = require('path');
-const webpack = require('webpack');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: true
-});
-const optimizedImages = require('next-optimized-images');
-const { nextI18NextRewrites } = require('next-i18next/rewrites');
-const localeSubpaths = {};
-
-const Links = [
+export const Links = [
   {
     source: '/ar/event/',
     destination: '/ar/training-education/events'
@@ -455,7 +446,7 @@ const Links = [
   },
   {
     source: '/ar/egypt/',
-    destination: '/ar'
+    destination: 'https://almoosahospital.live/ar'
   },
   {
     source: '/ar/departments/allergies-asthma-clinic/',
@@ -2432,17 +2423,17 @@ const Links = [
       '/ar/%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89/',
     destination: '/ar/about/overview'
   },
-  // {
-  //   destination: '/ar/contact-us'
-  // },
+  {
+    destination: '/ar/contact-us'
+  },
   {
     source:
       '/ar/%D8%A3%D9%88%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D9%85/',
     destination: '/ar'
   },
-  // {
-  //   destination: '/ar'
-  // },
+  {
+    destination: '/ar'
+  },
   {
     source:
       '/ar/event/al-mousa-specialized-hospital-uses-a-gastroenterologist/',
@@ -2888,38 +2879,36 @@ const Links = [
     source: '/product-tag/antibiotics-101/',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/course/?add-to-cart=30833
   {
-    source: '/product-tag/course/',
+    source: '/product-tag/course/?add-to-cart=30224',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/ecg-interpretation/?add-to-cart=29765
   {
-    source: '/product-tag/ecg-interpretation/',
+    source: '/product-tag/course/?add-to-cart=30833',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/learning/?add-to-cart=30833
   {
-    source: '/product-tag/learning/',
+    source: '/product-tag/ecg-interpretation/?add-to-cart=29765',
+    destination: '/en/training-education/courses'
+  },
+  {
+    source: '/product-tag/learning/?add-to-cart=30833',
     destination: '/en/training-education/courses'
   },
   {
     source: '/product-tag/radiology/',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/research/?add-to-cart=30224
   {
-    source: '/product-tag/research/',
+    source: '/product-tag/research/?add-to-cart=30224',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/workshop/?add-to-cart=30224
   {
-    source: '/product-tag/workshop/',
+    source: '/product-tag/workshop/?add-to-cart=30224',
     destination: '/en/training-education/courses'
   },
-  // /product-tag/workshop/?add-to-cart=30833
   {
-    source: '/product-tag/workshop/',
+    source: '/product-tag/workshop/?add-to-cart=30833',
     destination: '/en/training-education/courses'
   },
   {
@@ -3962,9 +3951,8 @@ const Links = [
     source: '/strategic-priorities/',
     destination: '/en/about/strategic-priorities'
   },
-  ///centers/womens-health-center/?lang=ar
   {
-    source: '/centers/womens-health-center/',
+    source: '/centers/womens-health-center/?lang=ar',
     destination: "/en/services/medical-centers/Women's-Health-Center?id=11"
   },
   {
@@ -3979,24 +3967,20 @@ const Links = [
     source: '/category/uncategorized/',
     destination: '/en/media-center/news'
   },
-  //'/departments/family-medicine-clinic/?lang=ar'
   {
-    source: '/departments/family-medicine-clinic/',
+    source: '/departments/family-medicine-clinic/?lang=ar',
     destination: '/en/services/medical-centers/Family-Medicine-Clinic?id=21'
   },
-  //'/departments/hematology-clinic/?lang=ar'
   {
-    source: '/departments/hematology-clinic/',
+    source: '/departments/hematology-clinic/?lang=ar',
     destination: '/en/services/medical-centers'
   },
-  //'/departments/infectious-diseases-division/?lang=ar'
   {
-    source: '/departments/infectious-diseases-division/',
+    source: '/departments/infectious-diseases-division/?lang=ar',
     destination: '/en/services/medical-centers'
   },
-  //'/departments/psychiatry-clinic/?lang=ar'
   {
-    source: '/departments/psychiatry-clinic/',
+    source: '/departments/psychiatry-clinic/?lang=ar',
     destination: '/en/services/supportive-services'
   },
   {
@@ -4006,6 +3990,10 @@ const Links = [
   {
     source: '/bwg_album/almoosa-hospital/',
     destination: '/en/media-center/photo-gallery?page=1'
+  },
+  {
+    source: '/bwg_album/general-video/',
+    destination: '/en/media-center/video-gallery?page=1'
   },
   {
     source: '/wifi/',
@@ -4107,14 +4095,24 @@ const Links = [
     source: '/doctors/page/9/',
     destination: '/en/our-doctors?page=1'
   },
-  // '/educational-courses/?add-to-cart=29765',
-  // '/educational-courses/?add-to-cart=30224',
-  // '/educational-courses/?add-to-cart=30679',
-  // '/educational-courses/?add-to-cart=30783',
-  // '/educational-courses/?add-to-cart=30833',
-
   {
-    source: '/educational-courses/',
+    source: '/educational-courses/?add-to-cart=29765',
+    destination: '/en/training-education/courses'
+  },
+  {
+    source: '/educational-courses/?add-to-cart=30224',
+    destination: '/en/training-education/courses'
+  },
+  {
+    source: '/educational-courses/?add-to-cart=30679',
+    destination: '/en/training-education/courses'
+  },
+  {
+    source: '/educational-courses/?add-to-cart=30783',
+    destination: '/en/training-education/courses'
+  },
+  {
+    source: '/educational-courses/?add-to-cart=30833',
     destination: '/en/training-education/courses'
   },
   {
@@ -4149,14 +4147,12 @@ const Links = [
     source: '/3d-flip-book-category/newsletter/',
     destination: '/en/media-center/hakeem-magazine?page=1'
   },
-  //'/bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1'
   {
-    source: '/bwg_album/almoosa-hospital/',
+    source: '/bwg_album/almoosa-hospital/?type_0=gallery&album_gallery_id_0=1',
     destination: '/en/media-center/photo-gallery?page=1'
   },
-  // '/bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1'
   {
-    source: '/bwg_album/general-video/',
+    source: '/bwg_album/general-video/?type_0=gallery&album_gallery_id_0=1',
     destination: '/en/media-center/video-gallery?page=1'
   },
   {
@@ -4854,7 +4850,7 @@ const Links = [
   },
   {
     source: '/12553-2/',
-    destination: '/en/services/inpatient-units?id=39'
+    destination: '/en/ar/en/services/inpatient-units?id=39'
   },
   {
     source: '/career/',
@@ -5120,55 +5116,3 @@ const Links = [
       '/en/about/board-directors-and-executive-team/sheikh-abdulaziz-al-mousa?id=1'
   }
 ];
-
-const redLinks = Links?.map(link => {
-  if (link?.source.includes('/ar/')) {
-    return {
-      ...link,
-      locale: false,
-      permanent: true
-    };
-  } else {
-    return {
-      ...link,
-      permanent: true
-    };
-  }
-});
-
-module.exports = {
-  minify: true,
-  compress: true,
-  trailingSlash: true,
-  i18n: {
-    localeDetection: false,
-    defaultLocale: 'en',
-    locales: ['ar', 'en']
-  },
-  async redirects() {
-    return redLinks;
-  },
-  images: {
-    domains: ['159.65.230.116']
-  },
-  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  // publicRuntimeConfig: {
-  //   localeSubpaths
-  // },
-  webpack: config => {
-    config.resolve.alias['root'] = path.join(__dirname);
-    config.resolve.alias['src'] = path.join(__dirname);
-    // config.resolve.alias['public'] = path.join(__dirname, 'public');
-    config.plugins.push(
-      // other plugins,
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      })
-    );
-    config.plugins.push(withBundleAnalyzer);
-    config.plugins.push(optimizedImages);
-    return config;
-  }
-};

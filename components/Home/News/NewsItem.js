@@ -15,7 +15,7 @@ function NewsItem({ news, t }) {
       <Link
         href={`/${locale}/media-center/news/post/${
           language && String(news[language].title).split(' ').join('-')
-        }?id=${news.id}`}
+        }/?id=${news.id}`}
       >
         <a>
           <img src={news.thumbnail} alt="" srcSet="" />
@@ -51,7 +51,7 @@ function NewsItem({ news, t }) {
                 language &&
                 `/${locale}/media-center/news/post/${
                   language && String(news[language].title).split(' ').join('-')
-                }?id=${news.id}`
+                }/?id=${news.id}`
               }
             >
               <a className="details_link">{t('read_more')}</a>

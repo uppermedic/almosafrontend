@@ -39,20 +39,22 @@ function index({ data, getMediaCategories }) {
   const handleSelectTap = value => {
     settapId(value);
     if (value === 'all') {
-      router.push(`/${locale}/media-center/photo-gallery?page=1`);
+      router.push(`/${locale}/media-center/photo-gallery/?page=1`);
     } else if (value !== 'all') {
       router.push(
-        `/${locale}/media-center/photo-gallery?category=${value}&page=1`
+        `/${locale}/media-center/photo-gallery/?category=${value}&page=1`
       );
     }
   };
 
   const handlePageClick = ({ selected }) => {
     if (tapId === 'all') {
-      router.push(`/${locale}/media-center/photo-gallery?page=${selected + 1}`);
+      router.push(
+        `/${locale}/media-center/photo-gallery/?page=${selected + 1}`
+      );
     } else {
       router.push(
-        `/${locale}/media-center/photo-gallery?category=${tapId}&page=${
+        `/${locale}/media-center/photo-gallery/?category=${tapId}&page=${
           selected + 1
         }`
       );

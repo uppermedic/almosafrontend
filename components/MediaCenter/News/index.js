@@ -21,7 +21,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
   }, [language]);
 
   const handlePageClick = ({ selected }) => {
-    router.push(`/${locale}/media-center/news?page=${selected + 1}`);
+    router.push(`/${locale}/media-center/news/?page=${selected + 1}`);
   };
   return (
     <section className="content-wrapper">
@@ -92,7 +92,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/news?cats=${cat.slug}`}
+                      href={`/${locale}/media-center/news/?cats=${cat.slug}`}
                     >
                       <a>{cat[language].category_name}</a>
                     </Link>
@@ -114,7 +114,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           language ? post[language]?.title : ''
                         )
                           .split(' ')
-                          .join('-')}?id=${post.id}`}
+                          .join('-')}/?id=${post.id}`}
                       >
                         <a>
                           <img src={post.image} />
@@ -164,7 +164,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                 {tags.map(tag => (
                   <li key={tag.id}>
                     <Link
-                      href={`/${locale}/media-center/news?tags=${tag?.tag_name}`}
+                      href={`/${locale}/media-center/news/?tags=${tag?.tag_name}`}
                     >
                       <a>{tag.tag_name}</a>
                     </Link>

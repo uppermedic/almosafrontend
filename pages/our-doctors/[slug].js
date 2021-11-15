@@ -24,7 +24,7 @@ const SingleDoctor = ({ doctor }) => {
       router.push(
         `/${lang}/our-doctors/${String(doctor?.data[lang]?.name)
           .split(' ')
-          .join('-')}?id=${doctor?.data?.id}`
+          .join('-')}/?id=${doctor?.data?.id}`
       );
     }
   }, [lang, locale]);

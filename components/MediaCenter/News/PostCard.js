@@ -37,7 +37,7 @@ function Post({ article, t }) {
           <Link
             href={`/${locale}/media-center/news/post/${String(title)
               .split(' ')
-              .join('-')}?id=${id}`}
+              .join('-')}/?id=${id}`}
           >
             <a className="d-block py-3">
               <strong>{t('read_more')}</strong>

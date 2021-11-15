@@ -39,20 +39,22 @@ const Index = ({ data, getMediaCategories }) => {
   const handleSelectChange = ({ target: { value } }) => {
     setselectId(value);
     if (value === 'all') {
-      router.push(`/${locale}/media-center/video-gallery?page=1`);
+      router.push(`/${locale}/media-center/video-gallery/?page=1`);
     } else if (value !== 'all') {
       router.push(
-        `/${locale}/media-center/video-gallery?category=${value}&page=1`
+        `/${locale}/media-center/video-gallery/?category=${value}&page=1`
       );
     }
   };
 
   const handlePageClick = ({ selected }) => {
     if (selectId === 'all') {
-      router.push(`/${locale}/media-center/video-gallery?page=${selected + 1}`);
+      router.push(
+        `/${locale}/media-center/video-gallery/?page=${selected + 1}`
+      );
     } else {
       router.push(
-        `/${locale}/media-center/video-gallery?category=${selectId}&page=${
+        `/${locale}/media-center/video-gallery/?category=${selectId}&page=${
           selected + 1
         }`
       );

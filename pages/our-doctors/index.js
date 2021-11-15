@@ -23,7 +23,7 @@ function Our_Doctors({ data, getCategories, categories }) {
 
   useEffect(() => {
     getCategories('/sections');
-    router.push(`/${locale}/our-doctors?page=1`);
+    router.push(`/${locale}/our-doctors/?page=1`);
     return () => {};
   }, []);
 
@@ -31,10 +31,10 @@ function Our_Doctors({ data, getCategories, categories }) {
     setselectId(value);
     if (value === 'all') {
       setfilter(false);
-      router.push(`/${locale}/our-doctors?page=1`);
+      router.push(`/${locale}/our-doctors/?page=1`);
     } else if (value !== 'all') {
       setfilter(true);
-      router.push(`/${locale}/our-doctors?page=1&id=${value}`);
+      router.push(`/${locale}/our-doctors/?page=1&id=${value}`);
     }
   };
 
@@ -42,9 +42,11 @@ function Our_Doctors({ data, getCategories, categories }) {
 
   const handlePageClick = ({ selected }) => {
     if (selectId === 'all') {
-      router.push(`/${locale}/our-doctors?page=${selected + 1}`);
+      router.push(`/${locale}/our-doctors/?page=${selected + 1}`);
     } else {
-      router.push(`/${locale}/our-doctors?page=${selected + 1}&id=${selectId}`);
+      router.push(
+        `/${locale}/our-doctors/?page=${selected + 1}&id=${selectId}`
+      );
     }
   };
 
@@ -88,10 +90,10 @@ export async function getServerSideProps(context) {
   const { page, id } = context.query;
   let path = '/doctors';
   if (page) {
-    path = `/doctors?page=${page}`;
+    path = `/doctors/?page=${page}`;
   }
   if (page && id) {
-    path = `/doctors/filter/id=${id}?page=${page}`;
+    path = `/doctors/filter/id=${id}/?page=${page}`;
   }
   let { error, data } = await fetchData(path);
   if (error) {
