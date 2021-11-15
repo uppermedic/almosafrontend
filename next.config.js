@@ -5123,7 +5123,7 @@ const Links = [
 
 const redLinks =
   Links.length > 0 &&
-  Links?.map(link => {
+  Links.map(link => {
     if (link?.source.includes('/ar/')) {
       return {
         ...link,
