@@ -4808,7 +4808,7 @@ const Links = [
   {
     source: '/muhammad-saleem/',
     destination:
-      '/en/about/board-directors-and-executive-team/%D9%85%D8%AD%D9%85%D8%AF-%D8%B3%D8%A7%D9%84%D9%85?id=11'
+      '/en/about/board-directors-and-executive-team/muhammed-saleem/?id=11'
   },
   {
     source:
