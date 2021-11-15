@@ -26,7 +26,7 @@ const EventsTraning = ({ eventData, educationData, t }) => {
       <Head data={seo}></Head>
       <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:events')}</h2>
+          <h1 className="title">{t('menu:events')}</h1>
         </div>
       </Hero>
       <EventsPage data={eventData} />

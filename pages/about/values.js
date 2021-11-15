@@ -25,7 +25,7 @@ const Values = ({ t, data }) => {
       <Head data={seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{t('menu:core values')}</h2>
+          <h1 className="title">{t('menu:core values')}</h1>
         </div>
       </Hero>
       <OurValues data={data} />

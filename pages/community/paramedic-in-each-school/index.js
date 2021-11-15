@@ -27,7 +27,7 @@ const Paramedic = ({ data }) => {
       <Head data={head_data} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h2 className="title">{lang && data[lang].title} </h2>
+          <h1 className="title">{lang && data[lang].title} </h1>
         </div>
       </Hero>
 

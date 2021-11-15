@@ -25,9 +25,9 @@ function InpatientPage({ t, services, servicesDataSingle }) {
       <div className="inpatient-units">
         <Hero bg={servicesDataSingle.thumbnail}>
           <div className="hero-content">
-            <h2 className="title">
+            <h1 className="title">
               {lang && servicesDataSingle.seo[lang].title}
-            </h2>
+            </h1>
           </div>
         </Hero>
         <Inpatient
