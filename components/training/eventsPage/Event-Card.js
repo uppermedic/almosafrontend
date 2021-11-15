@@ -35,7 +35,7 @@ const Event_Card = ({ cardData, t }) => {
     <Link
       href={`/${locale}/training-education/events/${
         language && String(cardData[language].title).split(' ').join('-')
-      }?id=${cardData.id}`}
+      }/?id=${cardData.id}`}
     >
       <div className="card">
         <img src={cardData.image} />

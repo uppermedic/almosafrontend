@@ -14,7 +14,7 @@ export default function MedicalCenter({ item }) {
     <Link
       href={`/${locale}/services/medical-centers/${
         language && String(item[language].title).split(' ').join('-')
-      }?id=${item.id}`}
+      }/?id=${item.id}`}
     >
       <div
         className="center-card"

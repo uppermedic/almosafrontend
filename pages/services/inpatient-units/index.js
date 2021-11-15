@@ -14,7 +14,7 @@ function InpatientPage({ t, services, servicesDataSingle }) {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/services/inpatient-units?id=${services.services[0].id}`
+        `/${lang}/services/inpatient-units/?id=${services.services[0].id}`
       );
     }
   }, [lang, locale]);

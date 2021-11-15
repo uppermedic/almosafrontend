@@ -21,7 +21,7 @@ export default function index({ data }) {
         path:
           `services/medical-programs/${
             language && String(item[language].title).split(' ').join('-')
-          }?id=${item.id}` || '#'
+          }/?id=${item.id}` || '#'
       };
     }
   });

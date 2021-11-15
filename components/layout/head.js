@@ -45,13 +45,6 @@ const Head = ({ data, children }) => {
         href="/apple-touch-icon.png"
       />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      {pathname !== '/404' && (
-        <link
-          rel="canonical"
-          hrefLang={locale}
-          href={`${win && window?.location.href}`}
-        />
-      )}
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta property="og:title" content={data && data[lang]?.title} />

@@ -41,7 +41,7 @@ function Post({ article, t }) {
             <Link
               href={`/${locale}/media-center/news/post/${String(title)
                 .split(' ')
-                .join('-')}?id=${id}`}
+                .join('-')}/?id=${id}`}
             >
               <a>{t('read_more')}</a>
             </Link>
