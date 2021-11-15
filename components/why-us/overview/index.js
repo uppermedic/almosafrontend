@@ -110,7 +110,7 @@ const index = ({ t }) => {
                 <Col md={6}>
                   <img
                     src="/images/why_choose_us/overview-section.png"
-                    alt=""
+                    alt="overview-section"
                   />
                 </Col>
               </Row>

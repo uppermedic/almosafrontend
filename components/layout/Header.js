@@ -45,13 +45,17 @@ const Header = ({ t }) => {
           <div className="logos-wrapper">
             <Link href={`/${locale}`}>
               <a className="navbar-brand">
-                <img src="/images/logo.jpg" />
+                <img src="/images/logo.jpg" alt="logo" />
               </a>
             </Link>
           </div>
           <div className="logos-wrapper text-right">
             <div className="navbar-brand brand-right">
-              <img className="pl-2 pr-2 logo1" src="/images/logo1.png" />
+              <img
+                className="pl-2 pr-2 logo1"
+                src="/images/logo1.png"
+                alt="logo1"
+              />
               <Link href={`/${locale}/services/nursing-department`}>
                 <a>
                   <img

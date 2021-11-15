@@ -18,7 +18,7 @@ function Post({ article, t }) {
     <div className="post-card my-4 border-bottom pb-4">
       <Row className="">
         <Col lg={3}>
-          <img src={image} alt="" srcSet="" />
+          <img src={image} alt="search result" />
         </Col>
         <Col lg={6} className="mt-4 mt-lg-0 offset-lg-1">
           <div className="title-wrapper">

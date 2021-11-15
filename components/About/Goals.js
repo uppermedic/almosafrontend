@@ -29,7 +29,7 @@ export default function Goals({ data }) {
             />
           </Col>
           <Col xs={12} lg={6}>
-            <img src={data?.image} alt="" className="half_section_img " />
+            <img src={data?.image} alt="goals" className="half_section_img " />
           </Col>
         </Row>
       </Container>

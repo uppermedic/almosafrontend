@@ -50,6 +50,7 @@ const index = ({ data }) => {
               <img
                 src="/images/community/asha-marathon/marathon-info-bg.png"
                 className="bottom-zigzag"
+                alt="asha-marathon"
               />
 
               <Col md={4}>

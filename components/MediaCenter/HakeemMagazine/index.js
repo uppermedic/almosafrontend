@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import Item from './Item';
 import { withTranslation } from 'root/i18n';
 import { useRouter } from 'next/router';
-import SelectBox from 'src/components/layout/SelectBox';
 import ReactPaginate from 'react-paginate';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';

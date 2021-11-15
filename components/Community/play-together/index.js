@@ -26,7 +26,7 @@ export default function index({ data }) {
               </p>
             </Col>
             <Col xs={12} lg={6}>
-              <img src={data?.contents[0]?.images[0]} alt="" />
+              <img src={data?.contents[0]?.images[0]} alt="play-together" />
             </Col>
           </Row>
         )}
@@ -46,7 +46,7 @@ export default function index({ data }) {
               {data?.contents[2]?.images.map((img, idx) => {
                 return (
                   <Col xs={12} sm={6} key={idx}>
-                    <img src={img} alt="" />
+                    <img src={img} alt="play" />
                   </Col>
                 );
               })}
