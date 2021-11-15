@@ -26,7 +26,7 @@ export default function index({ data }) {
       <Head data={head_data}></Head>
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h2 className="title">{lang && data[lang].title}</h2>
+          <h1 className="title">{lang && data[lang].title}</h1>
         </div>
       </Hero>
       <Content data={data.contents} />

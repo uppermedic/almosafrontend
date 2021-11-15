@@ -29,9 +29,9 @@ function BordDirectors({ t }) {
       <Head data={seo}></Head>
       <Hero bg="/images/about/hero-bg.jpg">
         <div className="hero-content title-directors">
-          <h2 className="title">
+          <h1 className="title">
             {t('menu:board governers and leadership team')}
-          </h2>
+          </h1>
         </div>
       </Hero>
       <BoardGoverners GovernersData={GovernersData} TeamData={TeamData} />

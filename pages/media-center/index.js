@@ -12,7 +12,7 @@ const Media = ({ data, t }) => {
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{language && data.page.seo[language].title}</h2>
+          <h1 className="title">{language && data.page.seo[language].title}</h1>
         </div>
       </Hero>
       <MediaCenter />

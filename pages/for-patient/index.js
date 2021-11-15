@@ -24,7 +24,7 @@ const services = ({ t }) => {
       <Head data={seo}></Head>
       <Hero bg="/images/patient-guide/for_patient/hero.png">
         <div className="hero-content">
-          <h2 className="title">{t('menu:for patient')}</h2>
+          <h1 className="title">{t('menu:for patient')}</h1>
         </div>
       </Hero>
       <ForPatients />

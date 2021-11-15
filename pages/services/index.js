@@ -14,7 +14,7 @@ const Services = ({ data }) => {
         <Head data={data.page.seo}></Head>
         <Hero bg={data.page.page_cover}>
           <div className="hero-content">
-            <h2 className="title">{data && data.page.seo[language]?.title}</h2>
+            <h1 className="title">{data && data.page.seo[language]?.title}</h1>
           </div>
         </Hero>
         <ServicesContent data={data.categories} seo={data.page.seo} />

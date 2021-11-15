@@ -12,7 +12,7 @@ export default function index({ data }) {
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">{lang && data.page.seo[lang].title}</h2>
+          <h1 className="title">{lang && data.page.seo[lang].title}</h1>
         </div>
       </Hero>
       <ContactUs data={data} />

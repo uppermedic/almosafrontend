@@ -36,7 +36,7 @@ const Index = ({
       <Head data={seo}></Head>
       <Hero bg={page_cover}>
         <div className="hero-content">
-          <h2 className="title">{lang && seo[lang].title} </h2>
+          <h1 className="title">{lang && seo[lang].title} </h1>
         </div>
       </Hero>
       <Content

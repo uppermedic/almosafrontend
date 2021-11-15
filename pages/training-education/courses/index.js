@@ -27,12 +27,12 @@ const CursesTraning = ({ courseData, educationData, t }) => {
       <Head data={seo}></Head>
       <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
-          <h2 className="title">
+          <h1 className="title">
             {(lang == 'en' && 'BE UP TO DATE WITH LATEST') ||
               'كن على اطلاع بأحدث '}
             <br />
             <span>{t('menu:courses')}</span>
-          </h2>
+          </h1>
         </div>
       </Hero>
       <Coursespage data={courseData} />

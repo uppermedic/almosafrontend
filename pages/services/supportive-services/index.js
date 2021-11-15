@@ -50,11 +50,11 @@ function Supportive({ t, services, servicesDataSingle }) {
         }
       >
         <div className="hero-content">
-          <h2 className="title">
+          <h1 className="title">
             {url?.includes('?')
               ? lang && servicesDataSingle.seo[lang].title
               : lang && pharmacy.seo[lang].title}
-          </h2>
+          </h1>
         </div>
       </Hero>
       <SupportServices
