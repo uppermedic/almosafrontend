@@ -5124,7 +5124,7 @@ const Links = [
 const redLinks =
   Links.length > 0 &&
   Links.map(link => {
-    if (link?.source.includes('/ar/')) {
+    if (link.source.includes('/ar/')) {
       return {
         ...link,
         locale: false,
