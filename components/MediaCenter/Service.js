@@ -9,8 +9,8 @@ export default function Service({ item, t }) {
   }, [language]);
 
   return (
-    <Link href={`${locale}/${item.url}`}>
-      <a>
+    <>
+      <Link href={`${locale}/${item.url}`}>
         <div
           className="center-card"
           style={{ backgroundImage: `url(${item.bg})` }}
@@ -19,7 +19,7 @@ export default function Service({ item, t }) {
             <h3>{t(String('menu:' + item.title).toLowerCase())}</h3>
           </div>
         </div>
-      </a>
-    </Link>
+      </Link>
+    </>
   );
 }

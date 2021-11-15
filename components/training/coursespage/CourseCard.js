@@ -15,7 +15,7 @@ const courseCard = ({ cardData, t }) => {
     <Link
       href={`/${locale}/training-education/courses/${
         language && String(cardData[language].title).split(' ').join('-')
-      }?id=${cardData.id}`}
+      }/?id=${cardData.id}`}
     >
       <div className="course-card">
         <div>

@@ -16,7 +16,7 @@ function CenterItem({ t, center }) {
       <Link
         href={`/${locale}/services/medical-centers/${
           language && String(center[language]?.title).split(' ').join('-')
-        }?id=${center?.id}`}
+        }/?id=${center?.id}`}
       >
         <a>
           <img src={center.ar.thumbnail} alt="" srcSet="" />
@@ -45,7 +45,7 @@ function CenterItem({ t, center }) {
             <Link
               href={`/${locale}/services/medical-centers/${
                 language && String(center[language]?.title).split(' ').join('-')
-              }?id=${center?.id}`}
+              }/?id=${center?.id}`}
             >
               <a className="details_link">{t('read_more')}</a>
             </Link>

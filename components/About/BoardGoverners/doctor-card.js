@@ -19,7 +19,7 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
         hasRef
           ? `/${locale}/about/board-directors-and-executive-team/${
               language && String(doctor[language]?.slug)
-            }?id=${doctor?.id}`
+            }/?id=${doctor?.id}`
           : '#'
       }
     >
