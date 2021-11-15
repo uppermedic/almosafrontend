@@ -25,7 +25,11 @@ class ReactSlickDemo extends Component {
         <Slider {...settings}>
           {data.map((slide, idx) => (
             <div>
-              <img className="carousel-image" src={slide.image} />
+              <img
+                className="carousel-image"
+                src={slide.image}
+                alt="carousel-image"
+              />
               <div className="overlay">
                 <CarouselContent data={slide} index={idx} />
               </div>

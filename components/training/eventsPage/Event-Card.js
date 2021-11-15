@@ -39,7 +39,7 @@ const Event_Card = ({ cardData, t }) => {
     >
       <a>
         <div className="card">
-          <img src={cardData.image} />
+          <img src={cardData.image} alt="event-card" />
           <div className="event-date">
             {/* Need to be cosider */}
             <p>{day}</p>

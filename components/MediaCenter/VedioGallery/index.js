@@ -51,7 +51,7 @@ const index = ({
             return (
               <Col md={6} lg={4} key={index} className="text-center">
                 <div className="video">
-                  <img src={video.image} alt="" className="thumbnail" />
+                  <img src={video.image} alt="video" className="thumbnail" />
                   <div
                     className="overlay"
                     onClick={() => openVideoPlayer(video)}

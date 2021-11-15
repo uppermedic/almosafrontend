@@ -117,7 +117,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           .join('-')}/?id=${post.id}`}
                       >
                         <a>
-                          <img src={post.image} />
+                          <img src={post.image} alt="news" />
                           <div>
                             <h5>
                               <div

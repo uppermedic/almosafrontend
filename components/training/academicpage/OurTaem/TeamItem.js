@@ -13,7 +13,7 @@ function NewsItem({ t, team }) {
     <div className="item caro-card">
       <Link href={`/${locale}/services/medical-centers/${team.id}`}>
         <a>
-          <img src={team.image} alt="" srcSet="" />
+          <img src={team.image} alt="academic" />
           <div className="content-card">
             <h3>{language && team[language].name}</h3>
             <span>{language && team[language].title}</span>

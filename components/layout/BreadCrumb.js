@@ -30,6 +30,7 @@ export const BreadCrumb = ({ t }) => {
         break;
       }
     }
+
     return custom;
   };
 

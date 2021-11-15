@@ -16,7 +16,7 @@ function Post({ article, t }) {
     <div className="post-card mb-4">
       <Row>
         <Col xs={12}>
-          <img src={image} alt="" srcSet="" />
+          <img src={image} alt="post-news" />
         </Col>
       </Row>
       <Row>
