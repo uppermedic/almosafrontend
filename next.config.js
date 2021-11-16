@@ -5142,11 +5142,11 @@ module.exports = {
   minify: true,
   compress: true,
   trailingSlash: true,
-  // i18n: {
-  // localeDetection: true,
-  // defaultLocale: 'en',
-  // locales: ['ar', 'en']
-  // },
+  i18n: {
+    localeDetection: true,
+    defaultLocale: 'en',
+    locales: ['ar', 'en']
+  },
   async redirects() {
     return redLinks;
   },
