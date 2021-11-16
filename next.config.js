@@ -5143,7 +5143,7 @@ module.exports = {
   compress: true,
   trailingSlash: true,
   i18n: {
-    localeDetection: false,
+    localeDetection: true,
     defaultLocale: 'en',
     locales: ['ar', 'en']
   },

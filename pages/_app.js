@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
   const { header, footer } = pageProps.AppPageData;
   const router = useRouter();
   const { locale, asPath, pathname } = router;
-  console.log(router);
+
   useEffect(() => {
     if (pathname !== '/404' && asPath !== `/${locale}`) {
       if (locale == i18n.language) {
