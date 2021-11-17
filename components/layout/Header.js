@@ -43,11 +43,13 @@ const Header = ({ t }) => {
       <Container>
         <div className="top-header align-items-center d-flex justify-content-between">
           <div className="logos-wrapper">
-            <Link href={`/${locale}`}>
-              <a className="navbar-brand">
-                <img src="/images/logo.jpg" alt="logo" />
-              </a>
-            </Link>
+            <h1>
+              <Link href={`/${locale}`}>
+                <a className="navbar-brand">
+                  <img src="/images/logo.jpg" alt="logo" />
+                </a>
+              </Link>
+            </h1>
           </div>
           <div className="logos-wrapper text-right">
             <div className="navbar-brand brand-right">

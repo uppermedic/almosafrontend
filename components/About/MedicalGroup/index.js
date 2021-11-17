@@ -89,6 +89,7 @@ function index({ t }) {
                       <a
                         href="https://www.almoosacollege.edu.sa/"
                         target="_blank"
+                        rel="noopener noreferrer nofollow"
                       >
                         https://www.almoosacollege.edu.sa/
                       </a>
@@ -212,6 +213,7 @@ function index({ t }) {
                       <a
                         href="https://www.almoosacollege.edu.sa"
                         target="_blank"
+                        rel="noopener noreferrer nofollow"
                       >
                         https://www.almoosacollege.edu.sa
                       </a>
