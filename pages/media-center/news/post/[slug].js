@@ -19,7 +19,7 @@ const Post = ({ data }) => {
       );
     }
     return () => {};
-  }, [language, locale, data]);
+  }, [language, locale]);
 
   return (
     <div className="_single-post-page">

@@ -15,6 +15,10 @@ const Head = ({ data, children }) => {
   const router = useRouter();
   const { locale, asPath, pathname } = router;
   const win = typeof window !== 'undefined';
+  const url =
+    win &&
+    window?.location.href?.includes(`/${locale}/`) &&
+    pathname !== '/404';
 
   return (
     <NextHead>
@@ -45,6 +49,8 @@ const Head = ({ data, children }) => {
         href="/apple-touch-icon.png"
       />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+      {url && <link rel="canonical" href={win && window?.location.href} />}
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta
