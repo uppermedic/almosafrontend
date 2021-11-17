@@ -5,23 +5,9 @@ import { fetchData } from 'src/store/Request.js';
 import { serialize } from 'src/utils/helpers';
 
 export default function index({ data }) {
-  const head_data = {
-    ar: {
-      title: 'مجلة حكيم',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Hakeem Magazine',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <div className="hakeem-magazine">
-      <Head data={head_data}></Head>
+      <Head data={data.page.seo}></Head>
       <Content data={data} />
     </div>
   );

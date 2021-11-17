@@ -10,23 +10,10 @@ import { fetchData } from 'src/store/Request.js';
 
 const Cooperation = ({ data }) => {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'التعاون مع الأسر المنتجة',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Cooperation with Produsctive Familes',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+
   return (
     <section className="cooperation">
-      <Head data={head_data} />
+      <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title} </h1>

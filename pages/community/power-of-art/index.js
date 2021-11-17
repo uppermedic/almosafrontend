@@ -10,23 +10,9 @@ import { strippedContent } from 'src/utils/helpers';
 
 const PowerOfArt = ({ data }) => {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'مبادرة قوة الفن',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Power of Art',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <section className="power_of_art">
-      <Head data={head_data} />
+      <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title} </h1>

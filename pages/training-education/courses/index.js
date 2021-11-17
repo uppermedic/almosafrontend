@@ -7,24 +7,9 @@ import { i18n, withTranslation } from 'root/i18n';
 
 const CursesTraning = ({ courseData, educationData, t }) => {
   const lang = i18n.language;
-
-  const seo = {
-    ar: {
-      title: 'الدورات',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'COURSES',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <div className="training-education">
-      <Head data={seo}></Head>
+      <Head data={educationData.page.seo}></Head>
       <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
           <h1 className="title">

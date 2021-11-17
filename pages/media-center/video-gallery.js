@@ -63,7 +63,7 @@ const Index = ({ data, getMediaCategories }) => {
 
   return (
     <div className="video-Gallery">
-      <Head data={head_data}></Head>
+      <Head data={data.page.seo}></Head>
       <Gallery
         data={data}
         handleSelectChange={handleSelectChange}
