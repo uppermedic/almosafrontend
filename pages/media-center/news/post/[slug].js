@@ -11,11 +11,11 @@ const Post = ({ data }) => {
   const { locale } = router;
 
   useEffect(() => {
-    if (language && locale && data[language]) {
+    if (language && locale) {
       router.push(
-        `/${language}/media-center/news/post/${
-          language && String(data[language].title).split(' ').join('-')
-        }/?id=${data.id}`
+        `/${language}/media-center/news/post/${String(data[language].title)
+          .split(' ')
+          .join('-')}/?id=${data.id}`
       );
     }
     return () => {};
