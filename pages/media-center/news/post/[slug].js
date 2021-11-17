@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const { locale } = router;
 
   useEffect(() => {
-    if (language && locale) {
+    if (language && locale && data[language]) {
       router.push(
         `/${language}/media-center/news/post/${
           language && String(data[language].title).split(' ').join('-')
@@ -19,7 +19,7 @@ const Post = ({ data }) => {
       );
     }
     return () => {};
-  }, [language, locale]);
+  }, [language, locale, data]);
 
   return (
     <div className="_single-post-page">
