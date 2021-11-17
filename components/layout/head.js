@@ -15,6 +15,7 @@ const Head = ({ data, children }) => {
   const router = useRouter();
   const { locale, asPath, pathname } = router;
   const win = typeof window !== 'undefined';
+  const lan = locale === 'en' ? 'ar' : 'en';
 
   return (
     <NextHead>
@@ -48,8 +49,14 @@ const Head = ({ data, children }) => {
 
       <link
         rel="alternate"
-        hreflang={locale}
-        href={win && window?.location?.href}
+        hrefLang={lan}
+        href={win && window?.location?.host + '/' + lan + asPath}
+      />
+
+      <link
+        rel="alternate"
+        hrefLang={locale}
+        href={win && window?.location?.host + '/' + locale + asPath}
       />
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
