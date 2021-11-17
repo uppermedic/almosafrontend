@@ -38,7 +38,11 @@ const TopNav = ({ t, router }) => {
             <Row className="right_links">
               <Col sm={12} md={8} className="right_link">
                 <Link href={employee_portal}>
-                  <a className="bt-light" target="_blank">
+                  <a
+                    className="bt-light"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
                     <span className="icon">
                       <i className="fas fa-users"></i>
                     </span>
@@ -47,7 +51,11 @@ const TopNav = ({ t, router }) => {
                 </Link>
 
                 <Link href={volunteering}>
-                  <a className="bt-light" target="_blank">
+                  <a
+                    className="bt-light"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
                     <span className="icon">
                       <i className="fas fa-hand-holding-heart"></i>
                     </span>
@@ -55,7 +63,11 @@ const TopNav = ({ t, router }) => {
                   </a>
                 </Link>
                 <Link href={join_us}>
-                  <a className="bt-blue" target="_blank">
+                  <a
+                    className="bt-blue"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
                     <span className="icon ">
                       <i className="fas fa-user-tie"></i>
                     </span>

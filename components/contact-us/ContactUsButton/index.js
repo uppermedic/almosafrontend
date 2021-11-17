@@ -16,7 +16,7 @@ const ContactUsButton = ({ t, phone }) => {
     <>
       <div className={cn('contact-us-button', 'd-none d-md-block')}>
         <Link href="https://portal.almoosahospital.com.sa:152/">
-          <a>
+          <a target="_blank" rel="noopener noreferrer nofollow">
             <ButtonSVG t={t} />{' '}
           </a>
         </Link>

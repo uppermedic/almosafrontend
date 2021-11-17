@@ -64,12 +64,14 @@ const index = () => {
                     <a
                       href="https://apps.apple.com/sa/app/almoosa-hospital/id1509215027"
                       target="_blank"
+                      rel="noopener noreferrer nofollow"
                     >
                       <FaApple /> <span className="store-name">App Store</span>
                     </a>
                     <a
                       href="https://play.google.com/store/apps/details?id=com.almoosa.almoosa"
                       target="_blank"
+                      rel="noopener noreferrer nofollow"
                     >
                       <DiAndroid />
                       <span className="store-name"> Google Play</span>

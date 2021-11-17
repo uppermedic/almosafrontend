@@ -65,7 +65,11 @@ const Content = () => {
                 return (
                   <Col key={index}>
                     <div className="logo">
-                      <a href={logo.link} target="_blank">
+                      <a
+                        href={logo.link}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                      >
                         <img src={logo.img} alt="logo" />
                       </a>
                     </div>

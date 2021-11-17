@@ -446,7 +446,7 @@ export const Links = [
   },
   {
     source: '/ar/egypt/',
-    destination: 'https://almoosahospital.live/ar'
+    destination: '/ar'
   },
   {
     source: '/ar/departments/allergies-asthma-clinic/',

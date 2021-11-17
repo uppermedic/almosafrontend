@@ -1,10 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
-import https from 'https';
-import querystring from 'querystring';
-import Head from '../../components/layout/head';
-export default function pay({ data, error }) {
-  console.log(data, error);
 
+export default function pay({ data, error }) {
   return <div>sadasd</div>;
 }
 
