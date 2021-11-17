@@ -15,6 +15,10 @@ const Head = ({ data, children }) => {
   const router = useRouter();
   const { locale, asPath, pathname } = router;
   const win = typeof window !== 'undefined';
+  const url =
+    win &&
+    window?.location.href?.includes(`/${locale}/`) &&
+    pathname !== '/404';
   const lan = locale === 'en' ? 'ar' : 'en';
 
   return (
@@ -47,6 +51,7 @@ const Head = ({ data, children }) => {
       />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+      {url && <link rel="canonical" href={win && window?.location.href} />}
       <link
         rel="alternate"
         hrefLang={lan}
