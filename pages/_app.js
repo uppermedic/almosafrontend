@@ -30,6 +30,21 @@ function MyApp({ Component, pageProps }) {
   const { header, footer } = pageProps.AppPageData;
   const router = useRouter();
   const { locale, asPath, pathname } = router;
+  const structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'Organization',
+    name: 'Almoosa Specialist Hospital',
+    url: 'http://almoosahospital.live/',
+    address: 'Dhahran Rd, Al Mubarraz 36342, Saudi Arabia',
+    sameAs: [
+      'https://www.facebook.com/almoosahospital1/',
+      'https://www.youtube.com/channel/UCspHgrLVKETE06FNIFcBy3A',
+      'https://twitter.com/almoosahospital',
+      'https://www.instagram.com/almoosahospital/',
+      'https://foursquare.com/v/almoosa-specialist-hospital--%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A/56161bae498e781bbeb1c068',
+      'https://www.linkedin.com/company/almoosa-specialist-hospital/'
+    ]
+  };
 
   useEffect(() => {
     if (pathname !== '/404' && asPath !== `/${locale}`) {
@@ -79,6 +94,14 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
         <Footer data={footer} />
       </Provider>
+      {asPath === '/' && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
     </div>
   );
 }

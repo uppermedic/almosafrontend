@@ -48,27 +48,42 @@ const Footer = ({ data, customClass, t }) => {
               <div className="social d-block d-lg-flex">
                 <Link href={facebook_url}>
                   <a target="_blank" className="fb">
-                    <FontAwesomeIcon icon={faFacebookSquare} />
+                    <FontAwesomeIcon
+                      icon={faFacebookSquare}
+                      rel="noopener noreferrer nofollow"
+                    />
                   </a>
                 </Link>
                 <Link href={twitter_url}>
                   <a target="_blank" className="twitter">
-                    <FontAwesomeIcon icon={faTwitterSquare} />
+                    <FontAwesomeIcon
+                      icon={faTwitterSquare}
+                      rel="noopener noreferrer nofollow"
+                    />
                   </a>
                 </Link>
                 <Link href={instagram_url}>
                   <a target="_blank" className="insta">
-                    <FontAwesomeIcon icon={faInstagramSquare} />
+                    <FontAwesomeIcon
+                      icon={faInstagramSquare}
+                      rel="noopener noreferrer nofollow"
+                    />
                   </a>
                 </Link>
                 <Link href={youtube_url}>
                   <a target="_blank" className="youtube">
-                    <FontAwesomeIcon icon={faYoutubeSquare} />
+                    <FontAwesomeIcon
+                      icon={faYoutubeSquare}
+                      rel="noopener noreferrer nofollow"
+                    />
                   </a>
                 </Link>
                 <Link href={linkedin_url}>
                   <a target="_blank" className="in">
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      rel="noopener noreferrer nofollow"
+                    />
                   </a>
                 </Link>
               </div>
@@ -82,10 +97,14 @@ const Footer = ({ data, customClass, t }) => {
                   <a>{t('footer:contact_page')}</a>
                 </Link>
                 <Link href={google_play_store_download_app}>
-                  <a rel="nofollow">{t('footer:download_app')}</a>
+                  <a rel="noopener noreferrer nofollow">
+                    {t('footer:download_app')}
+                  </a>
                 </Link>
                 <Link href={location_url}>
-                  <a target="_blank">{t('footer:our_location')}</a>
+                  <a target="_blank" rel="noopener noreferrer nofollow">
+                    {t('footer:our_location')}
+                  </a>
                 </Link>
               </div>
             </div>
@@ -95,7 +114,7 @@ const Footer = ({ data, customClass, t }) => {
               <h3>{t('footer:contact_info')}</h3>
               <div className="d-flex flex-column ">
                 <Link href={location_url}>
-                  <a target="_blank">
+                  <a target="_blank" rel="noopener noreferrer nofollow">
                     <i className="fas fa-map-marker-alt mr-1" />{' '}
                     {location[language]}
                   </a>

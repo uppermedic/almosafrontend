@@ -4,7 +4,7 @@ import { i18n, Link } from 'root/i18n';
 export default function Service({ item }) {
   const lang = i18n.language;
   return (
-    <a target="_blank" href={item.url}>
+    <a target="_blank" href={item.url} rel="noopener noreferrer nofollow">
       <div className="card-item">
         <div className="overlay"></div>
         <div className={`text-center ribbon`}>

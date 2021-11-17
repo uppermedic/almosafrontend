@@ -135,12 +135,12 @@ const Nursing = () => {
             <div className="single-section">
               <Title title="The DAISY AWARD" />
               <img src="/images/services/support/nursing.png" alt="nursing" />
-              <Paragraph paragraph="Help us celebrate the compassion and skills of your fellow extraordinary nurses by nominating them to the DAISY AWARD. <a href='https://www.surveymonkey.com/r/9DC38NY' target='_blank'>https://www.surveymonkey.com/r/9DC38NY</a> <br/> <a href='www.surveymonkey.com' target='_blank'>www.surveymonkey.com </a>" />
+              <Paragraph paragraph="Help us celebrate the compassion and skills of your fellow extraordinary nurses by nominating them to the DAISY AWARD. <a href='https://www.surveymonkey.com/r/9DC38NY' target='_blank' rel='noopener noreferrer nofollow'>https://www.surveymonkey.com/r/9DC38NY</a> <br/> <a href='www.surveymonkey.com' target='_blank'>www.surveymonkey.com </a>" />
               <img src="/images/services/support/external.png" alt="external" />
             </div>
             <div className="single-section">
               <Title title="Join Almoosa Nursing Team" />
-              <Paragraph paragraph="<a href='https://www.linkedin.com/in/almoosa-recruitment-495208142/' target='_blank'>https://www.linkedin.com/in/almoosa-recruitment-495208142/</a>" />
+              <Paragraph paragraph="<a href='https://www.linkedin.com/in/almoosa-recruitment-495208142/' target='_blank' rel='noopener noreferrer nofollow'>https://www.linkedin.com/in/almoosa-recruitment-495208142/</a>" />
             </div>
           </div>
         ) : (
@@ -278,12 +278,12 @@ const Nursing = () => {
               <img src="/images/services/support/nursing.png" alt="nursing" />
               <Paragraph paragraph="اشكر ممرضك\ ممرضتك  اليوم.. <br/> تأسست جائزة DAISY من قبل مؤسسة DAISY لتخليد ذكرى J. Patric Barnes الذي توفي في الـ 33 من عمره من جراء مرض مناعة ذاتية." />
               <Paragraph paragraph="انبهرت عائلة بارنز بالمهارات الطبية والعناية المتميزة للممرضات اللاتي اعتنين بـ باتريك، لذلك ابتكروا هذه الجائزة الدولية ليقولوا 'شكراً' للممرضات في كل مكان." />
-              <Paragraph paragraph="ابحث عن نماذج الترشيح لجائزة DAISY ، تحت رعاية مستشفى الموسى التخصصي <br/> ستتواجد لجنة جائزة DAISY على مدار العام.<br/> <a>https://www.surveymonkey.com/r/9DC38NY</a> <br/> <a>www.surveymonkey.com </a>" />
+              <Paragraph paragraph="ابحث عن نماذج الترشيح لجائزة DAISY ، تحت رعاية مستشفى الموسى التخصصي <br/> ستتواجد لجنة جائزة DAISY على مدار العام.<br/> <a href='https://www.surveymonkey.com/r/9DC38NY' target='_blank' rel='noopener noreferrer nofollow'>https://www.surveymonkey.com/r/9DC38NY</a> <br/> <a href='www.surveymonkey.com' target='_blank' rel='noopener noreferrer nofollow'>www.surveymonkey.com </a>" />
               <img src="/images/services/support/external.png" alt="external" />
             </div>
             <div className="single-section">
               <Title title="انضم لنا" />
-              <Paragraph paragraph="<a href='https://www.linkedin.com/in/almoosa-recruitment-495208142/' target='_blank'>https://www.linkedin.com/in/almoosa-recruitment-495208142/</a>" />
+              <Paragraph paragraph="<a href='https://www.linkedin.com/in/almoosa-recruitment-495208142/' target='_blank' rel='noopener noreferrer nofollow'>https://www.linkedin.com/in/almoosa-recruitment-495208142/</a>" />
             </div>
           </div>
         )}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'i18n';
 const BrandBox = ({ name, image, link }) => {
   return (
     <div className="brand-box">
@@ -8,7 +7,11 @@ const BrandBox = ({ name, image, link }) => {
         <img src={image && image} alt="logo" />
       </div>
       <div className="button-link">
-        <a href={link && link} target="_blank">
+        <a
+          href={link && link}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
           Visit website
         </a>
       </div>

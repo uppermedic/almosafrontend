@@ -14,13 +14,13 @@ function CarouselContent({ data, index, t }) {
     return (
       <div className="container">
         <div className="carosel-content">
-          <h1>
+          <h2>
             <span>
               <Markdown>
                 {(language && strippedContent(data[language]?.title)) || ''}
               </Markdown>
             </span>
-          </h1>
+          </h2>
           <div>
             <p>
               <div
@@ -33,10 +33,18 @@ function CarouselContent({ data, index, t }) {
           </div>
           {index === 0 && (
             <div className="stores-wrapper">
-              <a href={app_store_download_app} target="_blank">
+              <a
+                href={app_store_download_app}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <img src="images/home/app-store-btn.svg" alt="app-store" />
               </a>
-              <a href={google_play_store_download_app} target="_blank">
+              <a
+                href={google_play_store_download_app}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 <img src="images/home/google-play-btn.svg" alt="google-play" />
               </a>
             </div>
@@ -44,7 +52,11 @@ function CarouselContent({ data, index, t }) {
           {language && data[language].btn_text && (
             <div className="book-now">
               <Link href="https://portal.almoosahospital.com.sa:152/">
-                <a className="hvr-grow">
+                <a
+                  className="hvr-grow"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
                   {language && data[language].btn_text}
                 </a>
               </Link>
