@@ -50,13 +50,13 @@ const Head = ({ data, children }) => {
       <link
         rel="alternate"
         hrefLang={lan}
-        href={win && window?.location?.host + '/' + lan + asPath}
+        href={win && window?.location?.origin + '/' + lan + asPath}
       />
 
       <link
         rel="alternate"
         hrefLang={locale}
-        href={win && window?.location?.host + '/' + locale + asPath}
+        href={win && window?.location?.origin + '/' + locale + asPath}
       />
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
