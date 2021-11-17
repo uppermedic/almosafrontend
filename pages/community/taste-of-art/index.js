@@ -9,25 +9,12 @@ import SmallGallery from 'src/components/SmallGallery';
 import { i18n, withTranslation } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
 
-const TasteOfArt = ({ data, t }) => {
+const TasteOfArt = ({ data }) => {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'معرض الصحة مذاق الفن',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Taste of Art',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+
   return (
     <section className="taste_of_art">
-      <Head data={head_data}></Head>
+      <Head data={data.seo}></Head>
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title} </h1>

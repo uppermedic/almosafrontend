@@ -9,20 +9,6 @@ import { useRouter } from 'next/router';
 function Supportive({ t, services, servicesDataSingle }) {
   const router = useRouter();
   const lang = i18n.language;
-  const seo = {
-    ar: {
-      title: 'الخدمات المساندة',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Support Services',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
 
   const [url, seturl] = useState('');
 
@@ -43,7 +29,7 @@ function Supportive({ t, services, servicesDataSingle }) {
   };
   return (
     <div className="support-services">
-      <Head data={seo}></Head>
+      <Head data={services.seo}></Head>
       <Hero
         bg={
           url?.includes('?') ? servicesDataSingle.thumbnail : pharmacy.thumbnail

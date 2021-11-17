@@ -16,20 +16,6 @@ function index({ data, getMediaCategories }) {
   const { locale } = router;
   const [tapId, settapId] = useState('all');
   const { last_page } = data;
-  const head_data = {
-    ar: {
-      title: 'معرض الصور',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Photo Gallery',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
 
   useEffect(() => {
     getMediaCategories('/media/photos/categories');
@@ -63,7 +49,7 @@ function index({ data, getMediaCategories }) {
 
   return (
     <div className="photo-Gallery">
-      <Head data={head_data}></Head>
+      <Head data={data.page.seo}></Head>
       <Gallery
         data={data.images}
         handleSelectTap={handleSelectTap}
