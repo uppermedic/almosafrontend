@@ -47,7 +47,10 @@ const Head = ({ data, children }) => {
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
-      <meta property="og:title" content={data && data[lang]?.title} />
+      <meta
+        property="og:title"
+        content={(data && data[lang]?.meta_title) || data[lang]?.title}
+      />
       <meta
         property="og:description"
         content={(data && data[lang]?.meta_description) || defaultDescription}
