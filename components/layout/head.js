@@ -19,6 +19,7 @@ const Head = ({ data, children }) => {
     win &&
     window?.location.href?.includes(`/${locale}/`) &&
     pathname !== '/404';
+  const lan = locale === 'en' ? 'ar' : 'en';
 
   return (
     <NextHead>
@@ -51,6 +52,17 @@ const Head = ({ data, children }) => {
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       {url && <link rel="canonical" href={win && window?.location.href} />}
+      <link
+        rel="alternate"
+        hrefLang={lan}
+        href={win && window?.location?.origin + '/' + lan + asPath}
+      />
+
+      <link
+        rel="alternate"
+        hrefLang={locale}
+        href={win && window?.location?.origin + '/' + locale + asPath}
+      />
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta
