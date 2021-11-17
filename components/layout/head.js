@@ -46,12 +46,6 @@ const Head = ({ data, children }) => {
       />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-      <link
-        rel="alternate"
-        hreflang={locale}
-        href={win && window?.location?.href}
-      />
-
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta
         property="og:title"
