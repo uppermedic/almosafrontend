@@ -11,6 +11,10 @@ import {
   faYoutubeSquare,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
+import {
+  app_store_download_app,
+  google_play_store_download_app
+} from 'src/constants/Data';
 
 const Footer = ({ data, customClass, t }) => {
   const { language } = i18n;
@@ -77,8 +81,8 @@ const Footer = ({ data, customClass, t }) => {
                 <Link href={`/${locale}/contact-us`}>
                   <a>{t('footer:contact_page')}</a>
                 </Link>
-                <Link href="#!">
-                  <a>{t('footer:download_app')}</a>
+                <Link href={google_play_store_download_app}>
+                  <a rel="nofollow">{t('footer:download_app')}</a>
                 </Link>
                 <Link href={location_url}>
                   <a target="_blank">{t('footer:our_location')}</a>
