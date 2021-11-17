@@ -5120,8 +5120,10 @@ const links_permanent = [
     destination:
       '/en/about/board-directors-and-executive-team/sheikh-abdulaziz-al-mousa/?id=1'
   },
+  //source: '/wp-content/uploads/2020/01/عمار-الخرس-10332-2-scaled.jpg',
   {
-    source: '/wp-content/uploads/2020/01/عمار-الخرس-10332-2-scaled.jpg',
+    source:
+      '/wp-content/uploads/2020/01/%D8%B9%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%AE%D8%B1%D8%B3-10332-2-scaled.jpg',
     destination: '/ar/'
   },
   {
@@ -5132,22 +5134,26 @@ const links_permanent = [
     source: '/wp-content/uploads/2020/07/Surgery.jpg',
     destination: '/ar/'
   },
-  {
-    source: '/wp-content/uploads/2020/08/باسل-اسماعيل.png',
-    destination: '/ar/'
-  },
+  // /wp-content/uploads/2020/08/باسل-اسماعيل.png
   {
     source:
-      '/wp-content/uploads/2020/08/دليلك-الشامل-لكل-ما-يتعلق-بعمليات-الفيمتوليزك-1-941x640.png',
+      '/wp-content/uploads/2020/08/%D8%A8%D8%A7%D8%B3%D9%84-%D8%A7%D8%B3%D9%85%D8%A7%D8%B9%D9%8A%D9%84.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2020/08/دليلك-الشامل-لكل-ما-يتعلق-بعمليات-الفيمتوليزك-1-941x640.png
+  {
+    source:
+      '/wp-content/uploads/2020/08/%D8%AF%D9%84%D9%8A%D9%84%D9%83-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84-%D9%84%D9%83%D9%84-%D9%85%D8%A7-%D9%8A%D8%AA%D8%B9%D9%84%D9%82-%D8%A8%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D9%8A%D9%85%D8%AA%D9%88%D9%84%D9%8A%D8%B2%D9%83-1-941x640.png',
     destination: '/ar/'
   },
   {
     source: '/wp-content/uploads/2020/08/Untitled-design-10-941x640.png',
     destination: '/ar/'
   },
+  // /wp-content/uploads/2020/09/زيارة-للحلاق-تكشف-ورم-نادر-بحجم-بيضة-941x640.png
   {
     source:
-      '/wp-content/uploads/2020/09/زيارة-للحلاق-تكشف-ورم-نادر-بحجم-بيضة-941x640.png',
+      '/wp-content/uploads/2020/09/%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9-%D9%84%D9%84%D8%AD%D9%84%D8%A7%D9%82-%D8%AA%D9%83%D8%B4%D9%81-%D9%88%D8%B1%D9%85-%D9%86%D8%A7%D8%AF%D8%B1-%D8%A8%D8%AD%D8%AC%D9%85-%D8%A8%D9%8A%D8%B6%D8%A9-941x640.png',
     destination: '/ar/'
   },
   {
@@ -5172,6 +5178,190 @@ const links_permanent = [
   },
   {
     source: '/wp-content/uploads/2021/04/Untitled-design-28.png',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/06/psychiatry.jpg',
+    destination: '/ar/'
+  },
+  // '/wp-content/uploads/2019/07/لأول-مرة-بالأحساء_-استخدام-الليزر-في-علاج-البواسير.png'
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%84%D8%A3%D9%88%D9%84-%D9%85%D8%B1%D8%A9-%D8%A8%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1_-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%A7%D9%84%D9%84%D9%8A%D8%B2%D8%B1-%D9%81%D9%8A-%D8%B9%D9%84%D8%A7%D8%AC-%D8%A7%D9%84%D8%A8%D9%88%D8%A7%D8%B3%D9%8A%D8%B1.png',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/themes/almoosa/images/doctor-placeholder.jpg',
+    destination: '/ar/'
+  },
+  {
+    source:
+      '/wp-content/uploads/2017/10/Celebration-of-the-best-EMPLOYEE-OF-THE-3RD-QUARTER-2017.png',
+    destination: '/ar/'
+  },
+  {
+    source:
+      '/wp-content/uploads/2018/09/Successful-Treatment-of-a-Child-with-Paralysis-Caused-by-“Guillain-Barre-Syndrome”.png',
+    destination: '/ar/'
+  },
+  {
+    source:
+      '/wp-content/uploads/2019/01/SUCCESSFUL-KASABACH-MERRITT-SYNDROME-KMS-SURGERY-FOR-A-6-DAY-OLD-BABY-1024x697.png',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/05/b4-300x148.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/05/pulmonary-clinic-941x312.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/05/pulmonary-clinic.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/06/abt.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/06/dermatology.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/06/plastic-surgery.jpg',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/الموسى-يشارك-في-فعاليات-الأسبوع-العالمي-لمكافحة-العدوى.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89-%D9%8A%D8%B4%D8%A7%D8%B1%D9%83-%D9%81%D9%8A-%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A-%D9%84%D9%85%D9%83%D8%A7%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B9%D8%AF%D9%88%D9%89.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/انطلاق-المؤتمر-العلمي-الأول-للعلوم-العصبية-بالأحساء.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D8%A7%D9%86%D8%B7%D9%84%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%84%D9%84%D8%B9%D9%84%D9%88%D9%85-%D8%A7%D9%84%D8%B9%D8%B5%D8%A8%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/حوالي-90-من-مصابي-الصرع-في-الدول-النامية،-منهم-70-لا-يستطيعون-الحصول-على-العلاج.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D8%AD%D9%88%D8%A7%D9%84%D9%8A-90-%D9%85%D9%86-%D9%85%D8%B5%D8%A7%D8%A8%D9%8A-%D8%A7%D9%84%D8%B5%D8%B1%D8%B9-%D9%81%D9%8A-%D8%A7%D9%84%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D9%86%D8%A7%D9%85%D9%8A%D8%A9%D8%8C-%D9%85%D9%86%D9%87%D9%85-70-%D9%84%D8%A7-%D9%8A%D8%B3%D8%AA%D8%B7%D9%8A%D8%B9%D9%88%D9%86-%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/مؤتمر-علمي-بالأحساء-يناقش-المستجدات-في-أمراض-الجهاز-الهضمي-والكبد-1024x697.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%B9%D9%84%D9%85%D9%8A-%D8%A8%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1-%D9%8A%D9%86%D8%A7%D9%82%D8%B4-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AC%D8%AF%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A3%D9%85%D8%B1%D8%A7%D8%B6-%D8%A7%D9%84%D8%AC%D9%87%D8%A7%D8%B2-%D8%A7%D9%84%D9%87%D8%B6%D9%85%D9%8A-%D9%88%D8%A7%D9%84%D9%83%D8%A8%D8%AF-1024x697.png',
+    destination: '/ar/'
+  },
+  ///wp-content/uploads/2019/07/مجموعة-الموسى-تكشف-الستار-عن-خطط-إقامة-واحة-استشفائية-للتأهيل-والرعاية-الممتدة-بالأحساء-1024x697.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89-%D8%AA%D9%83%D8%B4%D9%81-%D8%A7%D9%84%D8%B3%D8%AA%D8%A7%D8%B1-%D8%B9%D9%86-%D8%AE%D8%B7%D8%B7-%D8%A5%D9%82%D8%A7%D9%85%D8%A9-%D9%88%D8%A7%D8%AD%D8%A9-%D8%A7%D8%B3%D8%AA%D8%B4%D9%81%D8%A7%D8%A6%D9%8A%D8%A9-%D9%84%D9%84%D8%AA%D8%A3%D9%87%D9%8A%D9%84-%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D8%AA%D8%AF%D8%A9-%D8%A8%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1-1024x697.png',
+    destination: '/ar/'
+  },
+  ///wp-content/uploads/2019/07/مجموعة-الموسى-تكشف-الستار-عن-خطط-إقامة-واحة-استشفائية-للتأهيل-والرعاية-الممتدة-بالأحساء.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89-%D8%AA%D9%83%D8%B4%D9%81-%D8%A7%D9%84%D8%B3%D8%AA%D8%A7%D8%B1-%D8%B9%D9%86-%D8%AE%D8%B7%D8%B7-%D8%A5%D9%82%D8%A7%D9%85%D8%A9-%D9%88%D8%A7%D8%AD%D8%A9-%D8%A7%D8%B3%D8%AA%D8%B4%D9%81%D8%A7%D8%A6%D9%8A%D8%A9-%D9%84%D9%84%D8%AA%D8%A3%D9%87%D9%8A%D9%84-%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D8%AA%D8%AF%D8%A9-%D8%A8%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1.png',
+    destination: '/ar/'
+  },
+  ///wp-content/uploads/2019/07/محاضرة-تعليمية-من-أجل-ولادة-طبيعية-أسهل.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A9-%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D9%8A%D8%A9-%D9%85%D9%86-%D8%A3%D8%AC%D9%84-%D9%88%D9%84%D8%A7%D8%AF%D8%A9-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-%D8%A3%D8%B3%D9%87%D9%84.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/نجاح-المستشفى-في-التعامل-مع-الكوارث-الخارجية.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%86%D8%AC%D8%A7%D8%AD-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84-%D9%85%D8%B9-%D8%A7%D9%84%D9%83%D9%88%D8%A7%D8%B1%D8%AB-%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%D8%A9.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/نجاح-علاج-طفل-من-الشلل-نتيجة-إصابته-بـ-“غيلان-باريه”.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%86%D8%AC%D8%A7%D8%AD-%D8%B9%D9%84%D8%A7%D8%AC-%D8%B7%D9%81%D9%84-%D9%85%D9%86-%D8%A7%D9%84%D8%B4%D9%84%D9%84-%D9%86%D8%AA%D9%8A%D8%AC%D8%A9-%D8%A5%D8%B5%D8%A7%D8%A8%D8%AA%D9%87-%D8%A8%D9%80-%E2%80%9C%D8%BA%D9%8A%D9%84%D8%A7%D9%86-%D8%A8%D8%A7%D8%B1%D9%8A%D9%87%E2%80%9D.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/07/وزير-الصحة-يزور-مستشفى-الموسى-في-الأحساء-1024x697.png
+  {
+    source:
+      '/wp-content/uploads/2019/07/%D9%88%D8%B2%D9%8A%D8%B1-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D9%8A%D8%B2%D9%88%D8%B1-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89-%D9%81%D9%8A-%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1-1024x697.png',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/01-1-941x312.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/05-941x312.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/05.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/07-1-941x312.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/08.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/ArabiaSheild-254x300-254x300.png',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/Dr.-Hamsa-Noori-600x400-410x273.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/Dr.-Mohamed-El-Awadi.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/07/bupa-1.jpeg',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/09/سيدة-ستينية-تستعيد-وعيها-في-العناية-المركزة-بعد-غيبوبة-استمرت-3-شهور.png
+  {
+    source:
+      '/wp-content/uploads/2019/09/%D8%B3%D9%8A%D8%AF%D8%A9-%D8%B3%D8%AA%D9%8A%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D8%B9%D9%8A%D8%AF-%D9%88%D8%B9%D9%8A%D9%87%D8%A7-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D8%A9-%D8%A8%D8%B9%D8%AF-%D8%BA%D9%8A%D8%A8%D9%88%D8%A8%D8%A9-%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%AA-3-%D8%B4%D9%87%D9%88%D8%B1.png',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/09/مؤتمر-حماية-الطفل-02.jpg
+  {
+    source:
+      '/wp-content/uploads/2019/09/%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%B7%D9%81%D9%84-02.jpg',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2019/09/88.ai-محول.jpg
+  {
+    source: '/wp-content/uploads/2019/09/88.ai-%D9%85%D8%AD%D9%88%D9%84.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/09/Volunteer-1-941x264.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/09/Volunteer-1.jpg',
+    destination: '/ar/'
+  },
+  {
+    source: '/wp-content/uploads/2019/09/cover-eng-19-941x1191.jpg',
+    destination: '/ar/'
+  },
+  // /wp-content/uploads/2020/01/احمد-مبروك--scaled.jpg
+  {
+    source:
+      '/wp-content/uploads/2020/01/%D8%A7%D8%AD%D9%85%D8%AF-%D9%85%D8%A8%D8%B1%D9%88%D9%83--scaled.jpg',
     destination: '/ar/'
   },
   {
