@@ -22,7 +22,7 @@ const Event = ({ data }) => {
 
   return (
     <div>
-      <Head data={data}></Head>
+      <Head data={data.page.seo}></Head>
       <CurseInfo data={data} />
     </div>
   );

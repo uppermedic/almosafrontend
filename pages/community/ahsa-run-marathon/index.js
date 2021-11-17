@@ -7,23 +7,9 @@ import { i18n } from 'root/i18n';
 
 export default function index({ data }) {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'سباق الحسا تركض',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Asha Run Marathon',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <div className="asha-marathon">
-      <Head data={head_data}></Head>
+      <Head data={data.seo}></Head>
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title}</h1>

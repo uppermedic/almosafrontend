@@ -6,21 +6,6 @@ import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/News/SinglePost';
 const Post = ({ data }) => {
-  const head_data = {
-    ar: {
-      title: '',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: '',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
-
   const { language } = i18n;
   const router = useRouter();
   const { locale } = router;
@@ -38,7 +23,7 @@ const Post = ({ data }) => {
 
   return (
     <div className="_single-post-page">
-      <Head data={head_data}></Head>
+      <Head data={data.seo}></Head>
       {data[language] && (
         <Content
           article={data}

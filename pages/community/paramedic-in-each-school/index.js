@@ -8,23 +8,10 @@ import { fetchData } from 'src/store/Request.js';
 
 const Paramedic = ({ data }) => {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'مبادرة مسعف لكل مدرسة',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Paramedic in Each School',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+
   return (
     <section className="paramedic">
-      <Head data={head_data} />
+      <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title} </h1>

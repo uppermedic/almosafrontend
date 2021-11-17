@@ -10,23 +10,10 @@ import { fetchData } from 'src/store/Request.js';
 
 const Cleft = ({ data }) => {
   const lang = i18n.language;
-  const head_data = {
-    ar: {
-      title: 'علاج الشفة الأرنبية',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Cleft Lip Initiative',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+
   return (
     <div className="cleft">
-      <Head data={head_data} />
+      <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
           <h1 className="title">{lang && data[lang].title} </h1>

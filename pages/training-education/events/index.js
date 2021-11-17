@@ -7,23 +7,9 @@ import { i18n, withTranslation } from 'root/i18n';
 
 const EventsTraning = ({ eventData, educationData, t }) => {
   const lang = i18n.language;
-  const seo = {
-    ar: {
-      title: 'الفعاليات',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'EVENTS',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <div className="training-education">
-      <Head data={seo}></Head>
+      <Head data={educationData.page.seo}></Head>
       <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
           <h1 className="title">{t('menu:events')}</h1>
