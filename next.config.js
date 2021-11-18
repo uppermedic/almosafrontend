@@ -2434,10 +2434,6 @@ const links_permanent = [
     destination: '/ar/about/overview'
   },
   {
-    source: '/contact-us/',
-    destination: '/en/contact-us'
-  },
-  {
     source:
       '/ar/%D8%A3%D9%88%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D9%85/',
     destination: '/ar/'
@@ -4829,10 +4825,10 @@ const links_permanent = [
     destination:
       '/en/about/board-directors-and-executive-team/mona-khamis/?id=3'
   },
-  {
-    source: '/contact-us/',
-    destination: '/en/contact-us'
-  },
+  // {
+  //   source: '/contact-us/',
+  //   destination: '/en/contact-us'
+  // },
   {
     source: '/centers/',
     destination: '/en/services/medical-centers'
