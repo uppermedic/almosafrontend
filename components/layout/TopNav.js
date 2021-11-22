@@ -23,6 +23,7 @@ const TopNav = ({ t, router }) => {
     setSearch(router.query.search);
     return () => {};
   }, [router?.query?.search]);
+  const { locale } = router;
   return (
     <div className="top-nav">
       <Container>
@@ -62,12 +63,8 @@ const TopNav = ({ t, router }) => {
                     <span className="text">{t('header:volunteering')}</span>
                   </a>
                 </Link>
-                <Link href={join_us}>
-                  <a
-                    className="bt-blue"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
+                <Link href={`/${locale}/career`}>
+                  <a className="bt-blue">
                     <span className="icon ">
                       <i className="fas fa-user-tie"></i>
                     </span>

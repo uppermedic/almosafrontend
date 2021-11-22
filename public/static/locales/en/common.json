@@ -16,6 +16,8 @@
   "new_search": "New Search",
   "no_results": "No Results Found",
   "search_news": "Search at our news...",
+  "medical articles": "Medical Articles",
+  "search_medical-articles": "Search at our medical articles...",
   "categories": "Categories",
   "popular_posts": "Popular posts",
   "tags": "Tags",
@@ -45,5 +47,6 @@
   "positions held": "Positions Held",
   "member_in": "Member In",
   "worker": "Worker",
-  "all_departments": "All Departments"
+  "all_departments": "All Departments",
+  "career": "Career"
 }
