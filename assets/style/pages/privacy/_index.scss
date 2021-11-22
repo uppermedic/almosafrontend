@@ -3,10 +3,13 @@
     background-color: $medical-centers;
     text-align: center;
     padding: 200px 0;
-    h2 {
+    h1 {
       font-size: 80px;
       font-weight: bolder;
       color: #ffffff;
+      @include respond-below(md) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -72,17 +75,6 @@
             color: rgb(51, 51, 51);
           }
         }
-      }
-    }
-  }
-}
-
-@include respond-below(md) {
-  .privacy {
-    .head-banner {
-      padding: 50px;
-      h2 {
-        font-size: 30px;
       }
     }
   }

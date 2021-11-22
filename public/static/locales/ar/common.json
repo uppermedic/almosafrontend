@@ -15,7 +15,9 @@
   "book_an_appointment": "احجز موعد",
   "new_search": "بحث جديد",
   "no_results": "لا يوجد نتائج ",
-  "search_news": "بحث في الأخبار...",
+  "search_news": "بحث في الأخبار ...",
+  "medical articles": "المقالات الطبية",
+  "search_medical-articles": "بحث في المقالات الطبية ...",
   "categories": "تصنيفات",
   "popular_posts": "الأكثر قراءة",
   "tags": "الوسوم",
@@ -45,5 +47,6 @@
   "positions held": "المناصب التي شغلها",
   "member_in": "عضو ب",
   "worker": "موظف",
-  "all_departments": "جميع الأقسام"
+  "all_departments": "جميع الأقسام",
+  "career": "وظائف"
 }

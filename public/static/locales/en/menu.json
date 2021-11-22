@@ -59,6 +59,7 @@
   "media center": "Media Center",
   "community": "Community",
   "news": "News",
+  "medical articles": "Medical Articles",
   "post": "Post",
   "search result": "Search Results",
   "video gallery": "Video Gallery",
@@ -87,5 +88,6 @@
   "power of art": "Power of art",
   "academic affairs": "Academic Affairs",
   "events": "Events",
-  "courses": "Courses"
+  "courses": "Courses",
+  "career": "Career"
 }
