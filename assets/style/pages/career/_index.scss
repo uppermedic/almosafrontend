@@ -1,0 +1,39 @@
+.career {
+  section.career {
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    @include background-image;
+    h2 {
+      color: $secondary-color;
+      font-size: $heading-size;
+      font-weight: bold;
+      @include Border-bottom(3px, $secondary-color);
+      padding-bottom: 29px;
+      @include respond-below(lg) {
+        font-size: $heading-mob-size;
+      }
+      @include respond-below(sm) {
+        font-size: $heading-sm-size;
+      }
+    }
+
+    .section-content {
+      padding: 30px 0;
+      p {
+        font-family: 'diodrum-arabic-meduim';
+        font-weight: 500;
+        font-size: 16px;
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+        strong {
+          font-family: 'diodrum-arabic-bold';
+          a {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

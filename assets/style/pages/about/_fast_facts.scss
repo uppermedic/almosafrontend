@@ -43,6 +43,9 @@
           font-weight: bold;
           font-size: 16px;
           margin: 10px 0 30px 0;
+          @include respond-below(md) {
+            font-size: 14px;
+          }
         }
         .fast-facts-menu {
           font-weight: bold;

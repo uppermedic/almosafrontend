@@ -4853,10 +4853,10 @@ const links_permanent = [
     source: '/12553-2/',
     destination: '/en/services/inpatient-units/?id=39'
   },
-  {
-    source: '/career/',
-    destination: '/en/'
-  },
+  // {
+  //   source: '/career/',
+  //   destination: '/en/'
+  // },
   {
     source: '/coronary-care-unit-ccu/',
     destination: '/en/services/inpatient-units/?id=39'
