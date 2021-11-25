@@ -31,7 +31,7 @@ function CarouselContent({ data, index, t }) {
               />
             </p>
           </div>
-          {index === 0 && (
+          {index === 2 && (
             <div className="stores-wrapper">
               <a
                 href={app_store_download_app}
@@ -51,7 +51,7 @@ function CarouselContent({ data, index, t }) {
           )}
           {language && data[language].btn_text && (
             <div className="book-now">
-              <Link href="https://portal.almoosahospital.com.sa:152/">
+              <Link href={data.btn_link}>
                 <a
                   className="hvr-grow"
                   target="_blank"
