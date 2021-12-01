@@ -13,15 +13,34 @@ import { useRouter } from 'next/router';
 const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const handleClick = () => {
+    if (window.innerWidth < 992) {
+      window.scrollTo(0, 1100);
+    } else {
+      window.scrollTo(0, 700);
+    }
+  };
   return (
     <Dropdown
       nav
       inNavbar
       isOpen={dropdownOpen}
       toggle={() => setDropdownOpen(!dropdownOpen)}
-      onMouseEnter={() => setDropdownOpen(true)}
-      onMouseLeave={() => setDropdownOpen(false)}
+      // onClick={() =>
+      //   window.innerWidth >= 992
+      //     ? console.log('use hover')
+      //     : setDropdownOpen(!dropdownOpen)
+      // }
+      onMouseEnter={() =>
+        window.innerWidth < 992
+          ? console.log('use click')
+          : setDropdownOpen(true)
+      }
+      onMouseLeave={() =>
+        window.innerWidth < 992
+          ? console.log('use click')
+          : setDropdownOpen(false)
+      }
     >
       <DropdownToggle nav caret className="dropdown-toggle">
         <div>
