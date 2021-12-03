@@ -38,11 +38,11 @@ class MyDocument extends Document {
             async=""
             src="https://www.googletagmanager.com/gtag/js?id=UA-45018493-1"
           ></script>
-          <script>
+          {/* <script>
             window.dataLayer = window.dataLayer || []; function gtag()
             {dataLayer.push(arguments)}
             gtag('js', new Date()); gtag('config', 'UA-45018493-1');
-          </script>
+          </script> */}
           {/* Google Tag Manager */}
 
           {/* <script>
@@ -78,6 +78,16 @@ class MyDocument extends Document {
             baseURL="https://botbuilder.labiba.ai"
           ></script>
           <script type="text/javascript">AOS.init();</script>
+          {/* Google Tag Manager (noscript)*/}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-KJQ33LF"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            ></iframe>
+          </noscript>
+          {/* End Google Tag Manager (noscript)*/}
         </body>
       </Html>
     );
