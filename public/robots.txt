@@ -1,8 +1,0 @@
-User-agent: AhrefsBot
-Allow: /
-User-agent: Screaming Frog SEO Spider
-Allow: /
-User-agent: Googlebot 
-Disallow: /
-User-agent: Bingbot
-Disallow: /
