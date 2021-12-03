@@ -24,6 +24,42 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           />
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script
+            async=""
+            src="https://www.googletagmanager.com/gtm.js?id=GTM-KJQ33LF"
+          ></script>
+          <script
+            type="text/javascript"
+            async=""
+            src="https://www.google-analytics.com/analytics.js"
+          ></script>
+          <script
+            async=""
+            src="https://www.googletagmanager.com/gtag/js?id=UA-45018493-1"
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'UA-45018493-1');
+          </script>
+          {/* Google Tag Manager */}
+
+          {/* <script>
+            (function(w,d,s,l,i){
+            w[l] = w[l] || [] ;
+            w[l].push({'gtm.start':ew Date().getTime(),event:'gtm.js'})
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='
+            +i+dl;f.parentNode.insertBefore(j,f)}
+            )(window,document,'script','dataLayer','GTM-KJQ33LF')
+          </script> */}
+          {/*End Google Tag Manager*/}
+
+          <meta
+            name="google-site-verification"
+            content="5ChBpw2MtkPYHI9TGJa1OOHEfNLylds4NY0OAyM6pls"
+          />
         </Head>
         <body>
           <Main />

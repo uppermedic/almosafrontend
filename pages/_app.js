@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     '@context': 'http://schema.org',
     '@type': 'Organization',
     name: 'Almoosa Specialist Hospital',
-    url: 'http://almoosahospital.live/',
+    url: 'http://almoosahospital.org/',
     address: 'Dhahran Rd, Al Mubarraz 36342, Saudi Arabia',
     sameAs: [
       'https://www.facebook.com/almoosahospital1/',
