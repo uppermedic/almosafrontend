@@ -67,7 +67,7 @@ const Head = ({ data, children }) => {
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta
         property="og:title"
-        content={(data && data[lang]?.meta_title) || data[lang]?.title}
+        content={data && (data[lang]?.meta_title || data[lang]?.title)}
       />
       <meta
         property="og:description"
