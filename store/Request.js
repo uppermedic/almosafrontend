@@ -2,7 +2,7 @@ import axios from 'axios';
 // Set config defaults when creating the instance
 let isSSR = typeof window === 'undefined';
 const instance = axios.create({
-  baseURL: 'http://admin.almoosahospital.org/api/v1/' //'http://159.65.230.116/api/v1/'
+  baseURL: 'https://admin.almoosahospital.org/api/v1/' //'http://143.198.187.120/api/v1/'
 });
 
 //let token = jsCookie.get('token');
