@@ -45,8 +45,6 @@ export default Request = (url = '', type = 'GLOBAL_REQUEST', dispatch) => {
         type: 'LOADING',
         payload: false
       });
-      //dispatch data
-      //console.log(' error ', error);
     });
 };
 /**
