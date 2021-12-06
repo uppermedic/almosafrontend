@@ -13,24 +13,12 @@ import { useRouter } from 'next/router';
 const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const handleClick = () => {
-    if (window.innerWidth < 992) {
-      window.scrollTo(0, 1100);
-    } else {
-      window.scrollTo(0, 700);
-    }
-  };
   return (
     <Dropdown
       nav
       inNavbar
       isOpen={dropdownOpen}
       toggle={() => setDropdownOpen(!dropdownOpen)}
-      // onClick={() =>
-      //   window.innerWidth >= 992
-      //     ? console.log('use hover')
-      //     : setDropdownOpen(!dropdownOpen)
-      // }
       onMouseEnter={() =>
         window.innerWidth < 992
           ? console.log('use click')
@@ -44,14 +32,16 @@ const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
     >
       <DropdownToggle nav caret className="dropdown-toggle">
         <div>
-          <span>{t('menu:' + item.label)}</span>
+          <Link href={item.path ? `/${locale}/${item.path}` : '#'}>
+            <span>{t('menu:' + item.label)}</span>
+          </Link>
         </div>
       </DropdownToggle>
       <DropdownMenu className="dropdown-menu">
         {options.map((option, index) => {
           return (
             <DropdownItem key={index}>
-              <NavItem onClick={() => setIsOpen(false)}>
+              <NavItem>
                 <Link href={`/${locale}/${option.path}`}>
                   <a
                     className={CN('dropdown-item', {

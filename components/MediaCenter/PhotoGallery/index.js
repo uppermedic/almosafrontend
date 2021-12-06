@@ -62,7 +62,7 @@ const index = ({ data, t, categories, handleSelectTap, tapId }) => {
                 />
                 <div
                   className="overlay"
-                  onClick={() => openImgsViewer(index)}
+                  // onClick={() => openImgsViewer(index)}
                 ></div>
               </div>
             </Col>

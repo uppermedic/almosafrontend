@@ -47,6 +47,7 @@ export default [
   {
     isDropDown: true,
     label: 'services',
+    path: 'services',
     icon: 'fab fa-servicestack',
     options: [
       {
@@ -87,7 +88,7 @@ export default [
   },
   {
     isDropDown: true,
-    path: 'training-education',
+    // path: 'training-education',
     label: 'training education',
     icon: 'fas fa-calendar-check',
     options: [
@@ -131,6 +132,10 @@ export default [
       {
         path: 'media-center/news',
         label: 'news'
+      },
+      {
+        path: 'media-center/medical-articles',
+        label: 'medical articles'
       }
     ]
   },

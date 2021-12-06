@@ -53,7 +53,7 @@ const Index = ({ data, router, t }) => {
             {data.data.length === 0 ? (
               <p>{t('no_results')}</p>
             ) : (
-              data.data.map((article, idx) => <ResultPost article={article} />)
+              data.data.map(article => <ResultPost article={article} />)
             )}
           </Col>
         </Row>

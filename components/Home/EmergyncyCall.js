@@ -16,7 +16,7 @@ const emergyncyCall = ({ emergency_phone, t }) => {
             <Link href={`tel:${emergency_phone}`}>
               <a className="emergyncy-phone hvr-icon-grow-rotate">
                 <p>
-                  <i class="fas fa-phone-alt mr-1 hvr-icon"></i>
+                  <i className="fas fa-phone-alt mr-1 hvr-icon"></i>
                   {emergency_phone}
                 </p>
               </a>

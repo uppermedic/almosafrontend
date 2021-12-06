@@ -33,11 +33,18 @@ const data = [
     url: 'media-center/podcast'
   },
   {
-    id: 1,
+    id: 5,
     title: 'News',
     bg: '/images/media-center/blog.png',
     ribbon_class: 'brown',
     url: 'media-center/news'
+  },
+  {
+    id: 6,
+    title: 'Medical Articles',
+    bg: '/images/media-center/blog.png',
+    ribbon_class: 'brown',
+    url: 'media-center/medical-articles'
   }
 ];
 const Index = ({ t }) => {

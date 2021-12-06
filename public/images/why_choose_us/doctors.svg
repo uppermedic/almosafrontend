@@ -11,6 +11,6 @@
           transform="translate(1.28 1.28)"
           fill="none"
           stroke="#fff"
-          stroke-width="4"
+          strokeWidth="4"
         />
       </svg>

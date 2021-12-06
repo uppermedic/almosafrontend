@@ -2,10 +2,6 @@
   font-family: 'diodrum-arabic-meduim';
   padding: 30px 0;
 
-  @include respond-below(lg) {
-    padding: 30px 0;
-  }
-
   .top-section {
     padding-bottom: 5px;
     align-items: center;
@@ -15,13 +11,14 @@
       font-family: 'diodrum-arabic-bold';
       font-size: $sub-heading;
       @include respond-below(lg) {
-        font-size: $sub-heading-md;
-      }
-      @include respond-below(md) {
         font-size: $sub-heading-sm;
       }
+      // @include respond-below(md) {
+      //   // font-size: $sub-heading-sm;
+      // }
       @include respond-below(sm) {
-        font-size: $sub-heading-xs;
+        // font-size: $sub-heading-xs;
+        font-size: $sub-heading-sm-size;
       }
     }
 

@@ -6,11 +6,11 @@
   margin-bottom: 30px;
   padding-top: 30px;
   @include sectionHeading($primary-color);
-  @include respond-below(md) {
-    font-size: $heading-mob-size;
-    margin: 20px 0;
-  }
-  @include respond-below(sm) {
-    font-size: $heading-sm-size;
-  }
+  // @include respond-below(md) {
+  //   font-size: $heading-mob-size;
+  //   margin: 20px 0;
+  // }
+  // @include respond-below(sm) {
+  //   font-size: $heading-sm-size;
+  // }
 }

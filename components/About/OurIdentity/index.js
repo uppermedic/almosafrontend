@@ -25,7 +25,7 @@ export default function index(props) {
               <Container>
                 <Row md="3" className="text-center">
                   {icons.map((icon, idx) => (
-                    <Col>
+                    <Col key={idx}>
                       <div
                         className={
                           idx === indexCard

@@ -49,8 +49,8 @@ const index = ({ doctorData, t }) => {
                   </h3>
                   <ul>
                     {language &&
-                      doctorData[language].qualifications.map(value => (
-                        <li>{value}</li>
+                      doctorData[language].qualifications.map((value, idx) => (
+                        <li key={idx}>{value}</li>
                       ))}
                   </ul>
                 </>
@@ -66,8 +66,8 @@ const index = ({ doctorData, t }) => {
                   </h3>
                   <ul>
                     {language &&
-                      doctorData[language].positions.map(value => (
-                        <li>{value}</li>
+                      doctorData[language].positions.map((value, idx) => (
+                        <li key={idx}>{value}</li>
                       ))}
                   </ul>
                 </>
@@ -83,8 +83,8 @@ const index = ({ doctorData, t }) => {
                   </h3>
                   <ul>
                     {language &&
-                      doctorData[language].member_in.map(value => (
-                        <li>{value}</li>
+                      doctorData[language].member_in.map((value, idx) => (
+                        <li key={idx}>{value}</li>
                       ))}
                   </ul>
                 </>

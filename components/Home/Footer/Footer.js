@@ -47,7 +47,7 @@ const Footer = ({ data, customClass, t }) => {
               <p>{language ? strippedContent(welcome_msg[language]) : ''}</p>
               <div className="social d-block d-lg-flex">
                 <Link href={facebook_url}>
-                  <a target="_blank" className="fb">
+                  <a target="_blank" className="fb" title="facebook">
                     <FontAwesomeIcon
                       icon={faFacebookSquare}
                       rel="noopener noreferrer nofollow"
@@ -55,7 +55,7 @@ const Footer = ({ data, customClass, t }) => {
                   </a>
                 </Link>
                 <Link href={twitter_url}>
-                  <a target="_blank" className="twitter">
+                  <a target="_blank" className="twitter" title="twitter">
                     <FontAwesomeIcon
                       icon={faTwitterSquare}
                       rel="noopener noreferrer nofollow"
@@ -63,7 +63,7 @@ const Footer = ({ data, customClass, t }) => {
                   </a>
                 </Link>
                 <Link href={instagram_url}>
-                  <a target="_blank" className="insta">
+                  <a target="_blank" className="insta" title="instagram">
                     <FontAwesomeIcon
                       icon={faInstagramSquare}
                       rel="noopener noreferrer nofollow"
@@ -71,7 +71,7 @@ const Footer = ({ data, customClass, t }) => {
                   </a>
                 </Link>
                 <Link href={youtube_url}>
-                  <a target="_blank" className="youtube">
+                  <a target="_blank" className="youtube" title="youtube">
                     <FontAwesomeIcon
                       icon={faYoutubeSquare}
                       rel="noopener noreferrer nofollow"
@@ -79,7 +79,7 @@ const Footer = ({ data, customClass, t }) => {
                   </a>
                 </Link>
                 <Link href={linkedin_url}>
-                  <a target="_blank" className="in">
+                  <a target="_blank" className="in" title="linkedin">
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       rel="noopener noreferrer nofollow"

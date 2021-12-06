@@ -438,40 +438,14 @@ const Menu = ({ items }) => {
     <ul className="golden-designation-menu">
       {items.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <strong>{item.text}</strong>
 
             {item.subItems && (
               <ul>
-                {item.subItems.map((subItem, index) => {
+                {item.subItems.map((subItem, idx) => {
                   return (
-                    <li className="sub-item">
-                      <Markdown>{subItem}</Markdown>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
-
-const Menu2 = ({ items }) => {
-  return (
-    <ul className="golden-designation-menu">
-      {items.map((item, index) => {
-        return (
-          <li>
-            <Markdown>{item.text}</Markdown>
-
-            {item.subItems && (
-              <ul>
-                {item.subItems.map((subItem, index) => {
-                  return (
-                    <li className="sub-item">
+                    <li className="sub-item" key={idx}>
                       <Markdown>{subItem}</Markdown>
                     </li>
                   );

@@ -39,13 +39,13 @@ const NewsButton = ({ t, phone }) => {
               viewBox="0 0 80.083 41.338"
             >
               <path
-                id="Path_11"
-                data-name="Path 11"
+                id="Path_14"
+                data-name="Path 14"
                 d="M1767.363,475.182l38.51,19.575,33.816,17.189,6.377,3.242V475.182Z"
                 transform="translate(-1767.136 -474.682)"
                 fill="#55b047"
                 stroke="#fff"
-                stroke-width="1"
+                strokeWidth="1"
               />
             </svg>
           </a>
@@ -65,7 +65,7 @@ const ButtonSVG = ({ t }) => (
   >
     <defs>
       <filter
-        id="Path_10"
+        id="Path_10-6"
         x="0"
         y="0"
         width="97.357"
@@ -74,7 +74,7 @@ const ButtonSVG = ({ t }) => (
       >
         <feOffset dy="3" input="SourceAlpha" />
         <feGaussianBlur stdDeviation="3" result="blur" />
-        <feFlood flood-opacity="0.161" />
+        <feFlood floodOpacity="0.161" />
         <feComposite operator="in" in2="blur" />
         <feComposite in="SourceGraphic" />
       </filter>
@@ -86,7 +86,7 @@ const ButtonSVG = ({ t }) => (
     >
       <g transform="matrix(1, 0, 0, 1, 1828.89, 515.63)" filter="url(#Path_10)">
         <path
-          id="Path_10-2"
+          id="Path_10-7"
           data-name="Path 10"
           d="M1885.508,527.994l-79.357-32.812V712.148l79.357,41.254Z"
           transform="translate(-1797.15 -489.18)"
@@ -102,9 +102,9 @@ const ButtonSVG = ({ t }) => (
           id="News"
           transform="translate(0 40)"
           fill="#fff"
-          font-size="50"
-          font-family="DiodrumArabic-Medium, DiodrumArabic"
-          font-weight="500"
+          fontSize="50"
+          fontFamily="DiodrumArabic-Medium, DiodrumArabic"
+          fontWeight="500"
         >
           <tspan x="0" y="0">
             {t('menu:news')}
@@ -112,13 +112,13 @@ const ButtonSVG = ({ t }) => (
         </text>
       </g>
       <path
-        id="Path_11"
-        data-name="Path 11"
+        id="Path_15"
+        data-name="Path 15"
         d="M1767.363,475.182l39.707,19.575,34.867,17.189,6.576,3.242V475.182Z"
         transform="translate(70.53 46.451)"
         fill="#55b047"
         stroke="#fff"
-        stroke-width="1"
+        strokeWidth="1"
       />
     </g>
   </svg>
