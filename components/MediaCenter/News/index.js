@@ -40,29 +40,31 @@ const Index = ({ data, latest, tags, categories, t }) => {
         <Row className="inner-content justify-content-between">
           <Col xs={12} lg={6}>
             <Row className="m-0 p-0">
-              {data.data.map((article, idx) => (
+              {data.data.map(article => (
                 <Col xs={12} key={article.id} className="border-bottom mb-3">
                   <PostCard article={article} />
                 </Col>
               ))}
             </Row>
-            <Row>
-              <Col xs={12} className="d-flex justify-content-center mb-4">
-                <ReactPaginate
-                  nextLabel={<NextFC />}
-                  previousLabel={<PrevFC />}
-                  breakLabel={'...'}
-                  breakClassName={'break-me'}
-                  pageCount={last_page}
-                  marginPagesDisplayed={2}
-                  pageRangeDisplayed={2}
-                  onPageChange={handlePageClick}
-                  containerClassName={'pagination'}
-                  subContainerClassName={'pages pagination'}
-                  activeClassName={'active'}
-                />
-              </Col>
-            </Row>
+            {data.data.length > 0 && (
+              <Row>
+                <Col xs={12} className="d-flex justify-content-center mb-4">
+                  <ReactPaginate
+                    nextLabel={<NextFC />}
+                    previousLabel={<PrevFC />}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={last_page}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={2}
+                    onPageChange={handlePageClick}
+                    containerClassName={'pagination'}
+                    subContainerClassName={'pages pagination'}
+                    activeClassName={'active'}
+                  />
+                </Col>
+              </Row>
+            )}
           </Col>
           <Col
             lg={5}

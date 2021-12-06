@@ -116,7 +116,7 @@ function index({ data, categories, t }) {
                 {filter ? (
                   dataF && dataF.length > 0 ? (
                     dataF.map(card => (
-                      <Col xl={3} lg={4} sm={6} className="py-3 ">
+                      <Col lg={4} sm={6} className="py-3 ">
                         <CourseCard key={card.id} cardData={card} />
                       </Col>
                     ))
@@ -128,7 +128,7 @@ function index({ data, categories, t }) {
                   )
                 ) : data.data && data.data.length > 0 ? (
                   data.data.map(card => (
-                    <Col xl={3} lg={4} sm={6} className="py-3 ">
+                    <Col lg={4} sm={6} className="py-3 ">
                       <CourseCard key={card.id} cardData={card} />
                     </Col>
                   ))
@@ -137,14 +137,6 @@ function index({ data, categories, t }) {
                     {(lang == 'en' && 'No Courses Yet') || 'لا توجد دورات بعد '}
                   </p>
                 )}
-                {/* {
-            // test data
-            dataM.map(card => (
-              <Col xl={3} lg={4} sm={6} className="py-5 ">
-                <CourseCard key={card.id} cardData={card} />
-              </Col>
-            ))
-          } */}
               </Row>
             </Container>
           </Col>

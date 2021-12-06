@@ -51,7 +51,7 @@ const AcademicTabs = () => {
 
   return (
     <sectio className="academic-sections">
-      <Container className="pb-5">
+      <Container>
         <Row>
           <Col>
             <h2 className="section-title">
@@ -64,7 +64,7 @@ const AcademicTabs = () => {
             <div className="academic-tap">
               <Nav tabs>
                 {dataTap.map((tab, index) => (
-                  <NavItem>
+                  <NavItem key={index}>
                     <NavLink
                       className={classnames({ active: activeTab === index })}
                       onClick={() => {

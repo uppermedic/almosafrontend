@@ -13,19 +13,20 @@ section.home-news {
     }
   }
   h3.section-title-news {
-    color: #fff;
-    padding-bottom: 28px;
-    font-family: 'diodrum-arabic-bold';
-    font-size: $sub-heading;
-    @include respond-below(lg) {
-      font-size: $sub-heading-md;
-      padding-bottom: 20px;
-    }
-    @include respond-below(md) {
-      font-size: $sub-heading-sm;
-      padding-bottom: 10px;
-    }
-    @include Border-bottom(3px, #fff);
+    // color: #fff;
+    // padding-bottom: 28px;
+    // font-family: 'diodrum-arabic-bold';
+    // font-size: $sub-heading;
+    // @include respond-below(lg) {
+    //   font-size: $sub-heading-md;
+    //   padding-bottom: 20px;
+    // }
+    // @include respond-below(md) {
+    //   font-size: $sub-heading-sm;
+    //   padding-bottom: 10px;
+    // }
+    // @include Border-bottom(3px, #fff);
+    @include sectionHeading(#fff);
   }
 
   .owl-carousel {

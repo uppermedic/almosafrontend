@@ -20,8 +20,11 @@ import LangNav from './LangIconNav';
 const TopNav = ({ t, router }) => {
   const [search, setSearch] = useState('');
   useEffect(() => {
-    setSearch(router.query.search);
-    return () => {};
+    if (router?.query?.search) {
+      setSearch(router.query.search);
+    } else {
+      setSearch('');
+    }
   }, [router?.query?.search]);
   const { locale } = router;
   return (
@@ -91,9 +94,15 @@ const TopNav = ({ t, router }) => {
                       onChange={({ target: { value } }) => setSearch(value)}
                     />
                     <InputGroupAddon addonType="append">
-                      <InputGroupText>
-                        <FontAwesomeIcon icon={faSearch} />
-                      </InputGroupText>
+                      <Link
+                        href={`/${locale}/media-center/news/search-result/?search=${search}`}
+                      >
+                        <a>
+                          <InputGroupText>
+                            <FontAwesomeIcon icon={faSearch} />
+                          </InputGroupText>
+                        </a>
+                      </Link>
                     </InputGroupAddon>
                   </InputGroup>
                 </Form>

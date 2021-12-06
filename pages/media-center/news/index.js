@@ -26,7 +26,7 @@ const Index = ({
   const { seo, page_cover } = newsData.page;
   const lang = i18n.language;
   useEffect(() => {
-    getAllPosts('/blog/articles', router.query);
+    getAllPosts('/blog/articles', `type=blog&${router.query}`);
     getNewsTags('/blog/tags');
     getNewsCategories('/blog/categories');
     return () => {};
@@ -62,7 +62,7 @@ export async function getServerSideProps(context) {
 }
 
 const mapStateToProps = state => ({
-  data: state.News.posts,
+  data: state.NewsMedical.posts,
   tags: state.Globals.tags,
   categories: state.Globals.categories
 });
