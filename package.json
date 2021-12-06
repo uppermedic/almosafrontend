@@ -36,7 +36,7 @@
     "react-dom": "17.0.1",
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.1.0",
-    "react-images-viewer": "^1.6.2",
+    "react-images-viewer": "^1.6.7",
     "react-owl-carousel": "^2.3.1",
     "react-paginate": "^7.0.0",
     "react-player": "^2.7.2",

@@ -148,6 +148,7 @@
     font-size: $sub-heading-mob-size;
   }
   @include respond-below(sm) {
-    font-size: $sub-heading-sm-size;
+    // font-size: $sub-heading-sm-size;
+    font-size: $heading-sm-size;
   }
 }

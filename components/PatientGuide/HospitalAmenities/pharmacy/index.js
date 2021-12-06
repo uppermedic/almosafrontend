@@ -183,13 +183,13 @@ const Menu = ({ items }) => {
     <ul className="pharmacy-menu">
       {items.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <Markdown>{item.text}</Markdown>
             {item.subItems && (
               <ul>
-                {item.subItems.map((subItem, index) => {
+                {item.subItems.map((subItem, idx) => {
                   return (
-                    <li className="sub-item">
+                    <li className="sub-item" key={idx}>
                       <Markdown>{subItem}</Markdown>
                     </li>
                   );

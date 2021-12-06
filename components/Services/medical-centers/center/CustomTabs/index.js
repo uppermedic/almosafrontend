@@ -65,7 +65,7 @@ const CustomTabs = ({
           </Col>
           <Col sm="12" md="8">
             <TabContent activeTab={activeItemIndex?.id}>
-              {items.map((item, index) => (
+              {items.map(item => (
                 <TabPane tabId={item.id} key={item?.id}>
                   <Container>
                     {item.items[0] && (

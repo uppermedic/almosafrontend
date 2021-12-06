@@ -228,12 +228,16 @@ const Menu = ({ items }) => {
     <ul className="support-groubs-menu">
       {items.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <strong>{item.text}</strong>
             {item.subItems && (
               <ul>
-                {item.subItems.map((subItem, index) => {
-                  return <li className="sub-item">{subItem}</li>;
+                {item.subItems.map((subItem, idx) => {
+                  return (
+                    <li className="sub-item" key={idx}>
+                      {subItem}
+                    </li>
+                  );
                 })}
               </ul>
             )}

@@ -10,7 +10,7 @@ export default function Service({ item, t }) {
 
   return (
     <>
-      <Link href={`${locale}/${item.url}`}>
+      <Link href={`/${locale}/${item.url}`}>
         <a>
           <div
             className="center-card"

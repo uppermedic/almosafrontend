@@ -125,7 +125,7 @@ const Tabs = withTranslation('common')(props => {
             <Row xs="1" md="2">
               {tab1Data.items.length > 0 &&
                 tab1Data.items.map((item, idx) => (
-                  <Col>
+                  <Col key={idx}>
                     <TabItem
                       title={language && item[language]?.title}
                       content={language && item[language]?.content}

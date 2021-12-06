@@ -24,7 +24,7 @@ class ReactSlickDemo extends Component {
       <div className="carousel">
         <Slider {...settings}>
           {data.map((slide, idx) => (
-            <div>
+            <div key={idx}>
               <img
                 className="carousel-image"
                 src={slide.image}

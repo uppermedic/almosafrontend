@@ -3,8 +3,6 @@ import https from 'https';
 import querystring from 'querystring';
 import Head from '../../components/layout/head';
 export default function pay({ id, error, message, data }) {
-  console.log(id, error, message, data);
-
   return (
     <div>
       {error ? (
@@ -19,7 +17,7 @@ export default function pay({ id, error, message, data }) {
           <h2>Pay</h2>
           <form
             action="http://localhost:3000/pay/done"
-            class="paymentWidgets"
+            className="paymentWidgets"
             data-brands="VISA MASTER AMEX"
           ></form>
         </Fragment>

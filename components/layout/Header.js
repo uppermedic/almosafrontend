@@ -94,7 +94,7 @@ const Header = ({ t }) => {
               navbar
             >
               {Menu.map((item, idx) => (
-                <div key={idx}>
+                <>
                   {!item.isDropDown && (
                     <NavItem
                       onClick={() => setIsOpen(false)}
@@ -119,7 +119,7 @@ const Header = ({ t }) => {
                       locale={locale}
                     />
                   )}
-                </div>
+                </>
               ))}
             </Nav>
           </Collapse>

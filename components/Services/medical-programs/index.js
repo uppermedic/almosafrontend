@@ -12,7 +12,7 @@ export default function index({ data }) {
     setlocale(language);
   }, [language]);
 
-  const editedData = data.map((item, index) => {
+  const editedData = data.map(item => {
     if (item.icon && item.bg) {
       return item;
     } else {

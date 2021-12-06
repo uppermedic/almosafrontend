@@ -220,15 +220,15 @@ const Paragraph = ({ paragraph }) => {
 const Menu = ({ items }) => {
   return (
     <ul className="privacy-menu">
-      {items.map((item, index) => {
+      {items.map((item, idx) => {
         return (
-          <li>
+          <li key={idx}>
             {item.text}
             {item.subItems && (
               <ul>
                 {item.subItems.map((subItem, index) => {
                   return (
-                    <li className="sub-item">
+                    <li className="sub-item" key={index}>
                       <Markdown>{subItem}</Markdown>
                     </li>
                   );

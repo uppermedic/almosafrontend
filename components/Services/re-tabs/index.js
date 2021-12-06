@@ -72,7 +72,7 @@ const ReusableTabs = props => {
           <TabPane tabId="1">
             {itemsExist &&
               tab1Data.items.map((item, idx) => (
-                <div className={classnames({ content: true })}>
+                <div className={classnames({ content: true })} key={idx}>
                   {language && item[language]?.content && (
                     <>
                       <div

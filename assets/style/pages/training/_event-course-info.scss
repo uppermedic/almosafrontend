@@ -2,11 +2,19 @@
 .course-info {
   padding-top: 100px;
   padding-bottom: 100px;
+  @include respond-below(md) {
+    padding-top: 50px;
+  }
+
   img {
     width: 100%;
     height: 500px;
     object-fit: cover;
     border: 2px solid #efeae0;
+    @include respond-below(md) {
+      padding: 20px;
+      height: 300px;
+    }
   }
   .info {
     padding: 70px 40px 20px;
@@ -27,7 +35,13 @@
         height: 100px;
       }
       @include respond-below(md) {
-        font-size: 25px;
+        font-size: 20px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      @include respond-below(sm) {
+        font-size: 18px;
       }
     }
     .date-location {
@@ -127,6 +141,7 @@
         font-weight: medium;
         display: inline-block;
         width: 30%;
+        padding-top: 10px;
         @include respond-below(lg) {
           font-size: 20px;
         }

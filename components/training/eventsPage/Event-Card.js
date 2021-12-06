@@ -40,27 +40,28 @@ const Event_Card = ({ cardData, t }) => {
       <a>
         <div className="card">
           <img src={cardData.image} alt="event-card" />
-          <div className="event-date">
-            {/* Need to be cosider */}
-            <p>{day}</p>
-            <p>{monthNames[month].slice(0, 3)}</p>
-          </div>
-          <div className="banner">
-            <div>
-              <h3>
-                {language &&
-                  cardData[language].title &&
-                  truncate(cardData[language].title, 20, '...')}
-              </h3>
-              <p>{language && cardData[language].speaker_name}</p>
+          <div className="content-event-card">
+            <div className="event-date">
+              <p>{day}</p>
+              <p>{monthNames[month].slice(0, 3)}</p>
             </div>
-            <div>
-              <p>
-                {t('end')} : {moment(cardData.end_date).format('D MMM')}
-              </p>
-              <p>
-                {t('cost')} : {cardData.cost}
-              </p>
+            <div className="banner">
+              <div>
+                <h3>
+                  {language &&
+                    cardData[language].title &&
+                    truncate(cardData[language].title, 20, '...')}
+                </h3>
+                <p>{language && cardData[language].speaker_name}</p>
+              </div>
+              <div>
+                <p>
+                  {t('end')} : {moment(cardData.end_date).format('D MMM')}
+                </p>
+                <p>
+                  {t('cost')} : {cardData.cost}
+                </p>
+              </div>
             </div>
           </div>
         </div>

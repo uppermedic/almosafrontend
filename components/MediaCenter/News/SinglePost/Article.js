@@ -34,8 +34,8 @@ function Article({ article, originalArticle, related, t }) {
           </h5>
           <ul>
             {related?.length > 0 &&
-              related.map(relLink => (
-                <li className="py-2">
+              related.map((relLink, idx) => (
+                <li className="py-2" key={idx}>
                   {language === 'en' ? (
                     <IoIosArrowForward />
                   ) : (

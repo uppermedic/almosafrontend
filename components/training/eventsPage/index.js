@@ -90,7 +90,7 @@ function index({ data, categories, t }) {
                 {filter ? (
                   dataF && dataF.length > 0 ? (
                     dataF.map(card => (
-                      <Col lg={4} md={6} key={card.id} className="px-sm-5 py-3">
+                      <Col lg={4} sm={6} key={card.id} className="py-3">
                         <Event_card cardData={card} />
                       </Col>
                     ))
@@ -102,7 +102,7 @@ function index({ data, categories, t }) {
                   )
                 ) : data.data && data.data.length > 0 ? (
                   data.data.map(card => (
-                    <Col lg={4} md={6} key={card.id} className="px-sm-5 py-3">
+                    <Col lg={4} sm={6} key={card.id} className="py-3">
                       <Event_card cardData={card} />
                     </Col>
                   ))

@@ -24,9 +24,8 @@ const Index = ({ router, data, getAllPosts }) => {
     }
   };
   useEffect(() => {
-    getAllPosts(`/search/${router.query.search}`);
-    return () => {};
-  }, []);
+    getAllPosts(`/search/${router?.query?.search}`);
+  }, [router?.query?.search]);
   return (
     <div className="news-search-result">
       <Head data={head_data}></Head>
@@ -36,7 +35,7 @@ const Index = ({ router, data, getAllPosts }) => {
 };
 
 const mapStateToProps = state => ({
-  data: state.News.posts
+  data: state.NewsMedical.posts
 });
 
 const mapDispatchToProps = {
