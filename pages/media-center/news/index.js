@@ -50,9 +50,10 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   //settings
+  const { page } = context.query;
   let { error: error1, data: news } = await fetchData('/blog');
   let { error: error2, data: newsData } = await fetchData(
-    `/blog/articles?type=blog&${context.query}`
+    `/blog/articles?type=blog&page=${page}`
   );
   if (error1 || error2) {
     return {
