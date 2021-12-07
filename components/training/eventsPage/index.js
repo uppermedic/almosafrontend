@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import SelectBox from 'src/components/layout/SelectBox';
 import SideTabs from 'components/layout/DynamicRouteTabs';
@@ -6,11 +6,15 @@ import Event_card from './Event-Card';
 import { connect } from 'react-redux';
 import { i18n, withTranslation } from 'root/i18n';
 import { postData } from 'src/store/Request.js';
-import Hero from 'src/components/layout/Hero';
 import { dataACademicTabs } from 'utils/datafile';
 import moment from 'moment';
+import ReactPaginate from 'react-paginate';
+import NextFC from 'src/components/layout/ReactPaginate/NextFC';
+import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
+import { useRouter } from 'next/router';
 
 function index({ data, categories, t }) {
+  const router = useRouter();
   const lang = i18n.language;
   const [dataF, setdataF] = useState([]);
   const [filter, setfilter] = useState(false);
@@ -19,6 +23,17 @@ function index({ data, categories, t }) {
     category: '',
     status: ''
   });
+
+  const { last_page } = data;
+  const [locale, setlocale] = useState('');
+  const { language } = i18n;
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
+  const handlePageClick = ({ selected }) => {
+    router.push(`/${locale}/training-education/events/?page=${selected + 1}`);
+  };
 
   const handleChange = (e, name) => {
     const { value } = e.target;
@@ -100,7 +115,7 @@ function index({ data, categories, t }) {
                         'لا توجد أحداث بعد '}
                     </p>
                   )
-                ) : data.data && data.data.length > 0 ? (
+                ) : data?.data?.length > 0 ? (
                   data.data.map(card => (
                     <Col lg={4} sm={6} key={card.id} className="py-3">
                       <Event_card cardData={card} />
@@ -112,6 +127,25 @@ function index({ data, categories, t }) {
                   </p>
                 )}
               </Row>
+              {data?.data?.length > 0 && (
+                <Row>
+                  <Col xs={12} className="d-flex justify-content-center mb-4">
+                    <ReactPaginate
+                      nextLabel={<NextFC />}
+                      previousLabel={<PrevFC />}
+                      breakLabel={'...'}
+                      breakClassName={'break-me'}
+                      pageCount={last_page}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={2}
+                      onPageChange={handlePageClick}
+                      containerClassName={'pagination'}
+                      subContainerClassName={'pages pagination'}
+                      activeClassName={'active'}
+                    />
+                  </Col>
+                </Row>
+              )}
             </Container>
           </Col>
         </Row>

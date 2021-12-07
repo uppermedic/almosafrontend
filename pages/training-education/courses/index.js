@@ -26,9 +26,10 @@ const CursesTraning = ({ courseData, educationData, t }) => {
 };
 
 export async function getServerSideProps(context) {
+  const { page } = context.query;
   const tst = Promise.all([
     fetchData('/education'),
-    fetchData('/education/type/course')
+    fetchData(`/education/type/course?page=${page}`)
   ]).then(
     ([
       { error: error1, data: educationData },
