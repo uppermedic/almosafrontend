@@ -82,10 +82,7 @@ const TopNav = ({ t, router }) => {
                 >
                   <LangNav />
                 </div>
-                <Form
-                  action="/media-center/news/search-result?"
-                  className="w-100"
-                >
+                <Form action="/search-result?" className="w-100">
                   <InputGroup className="search-nav">
                     <Input
                       name="search"
@@ -94,9 +91,7 @@ const TopNav = ({ t, router }) => {
                       onChange={({ target: { value } }) => setSearch(value)}
                     />
                     <InputGroupAddon addonType="append">
-                      <Link
-                        href={`/${locale}/media-center/news/search-result/?search=${search}`}
-                      >
+                      <Link href={`/${locale}/search-result/?search=${search}`}>
                         <a>
                           <InputGroupText>
                             <FontAwesomeIcon icon={faSearch} />

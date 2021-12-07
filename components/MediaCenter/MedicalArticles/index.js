@@ -79,7 +79,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">
-              <Form action="/media-center/medical-articles/search-result?">
+              <Form action="/search-result?">
                 <FormGroup>
                   <Label for="exampleSearch">{t('new_search')}</Label>
                   <Input
@@ -95,13 +95,14 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 {categories?.length > 0 ? (
-                  categories.map(cat => (
-                    <>
-                      <li>
-                        <Link href={`/${locale}/media-center/medical-articles`}>
-                          <a>{t('all')}</a>
-                        </Link>
-                      </li>
+                  <>
+                    <li>
+                      <Link href={`/${locale}/media-center/medical-articles`}>
+                        <a>{t('all')}</a>
+                      </Link>
+                    </li>
+
+                    {categories.map(cat => (
                       <li key={cat.id}>
                         <Link
                           href={`/${locale}/media-center/medical-articles/?cats=${cat.slug}`}
@@ -109,8 +110,8 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <a>{cat[language].category_name}</a>
                         </Link>
                       </li>
-                    </>
-                  ))
+                    ))}
+                  </>
                 ) : (
                   <li>{t('no_results')}</li>
                 )}
@@ -176,13 +177,13 @@ const Index = ({ data, latest, tags, categories, t }) => {
               <h4>{t('tags')}:</h4>
               <ul className="list-unstyled">
                 {tags?.length > 0 ? (
-                  tags?.map(tag => (
-                    <>
-                      <li>
-                        <Link href={`/${locale}/media-center/medical-articles`}>
-                          <a>{t('all')}</a>
-                        </Link>
-                      </li>
+                  <>
+                    <li>
+                      <Link href={`/${locale}/media-center/medical-articles`}>
+                        <a>{t('all')}</a>
+                      </Link>
+                    </li>
+                    {tags?.map(tag => (
                       <li key={tag.id}>
                         <Link
                           href={`/${locale}/media-center/medical-articles/?tags=${tag?.tag_name}`}
@@ -190,8 +191,8 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <a>{tag.tag_name}</a>
                         </Link>
                       </li>
-                    </>
-                  ))
+                    ))}
+                  </>
                 ) : (
                   <li>{t('no_results')}</li>
                 )}

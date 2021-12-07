@@ -71,7 +71,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">
-              <Form action="/media-center/news/search-result?">
+              <Form action="/search-result?">
                 <FormGroup>
                   <Label for="exampleSearch">{t('new_search')}</Label>
                   <Input
@@ -86,20 +86,27 @@ const Index = ({ data, latest, tags, categories, t }) => {
             <div className="categories">
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
-                <li>
-                  <Link href={`/${locale}/media-center/news`}>
-                    <a>{t('all')}</a>
-                  </Link>
-                </li>
-                {categories.map(cat => (
-                  <li key={cat.id}>
-                    <Link
-                      href={`/${locale}/media-center/news/?cats=${cat.slug}`}
-                    >
-                      <a>{cat[language].category_name}</a>
-                    </Link>
-                  </li>
-                ))}
+                {categories?.length > 0 ? (
+                  <>
+                    <li>
+                      <Link href={`/${locale}/media-center/news`}>
+                        <a>{t('all')}</a>
+                      </Link>
+                    </li>
+
+                    {categories.map(cat => (
+                      <li key={cat.id}>
+                        <Link
+                          href={`/${locale}/media-center/news/?cats=${cat.slug}`}
+                        >
+                          <a>{cat[language].category_name}</a>
+                        </Link>
+                      </li>
+                    ))}
+                  </>
+                ) : (
+                  <li>{t('no_results')}</li>
+                )}
               </ul>
             </div>
             {/*
@@ -158,20 +165,26 @@ const Index = ({ data, latest, tags, categories, t }) => {
             <div className="tags">
               <h4>{t('tags')}:</h4>
               <ul className="list-unstyled">
-                <li>
-                  <Link href={`/${locale}/media-center/news`}>
-                    <a>{t('all')}</a>
-                  </Link>
-                </li>
-                {tags.map(tag => (
-                  <li key={tag.id}>
-                    <Link
-                      href={`/${locale}/media-center/news/?tags=${tag?.tag_name}`}
-                    >
-                      <a>{tag.tag_name}</a>
-                    </Link>
-                  </li>
-                ))}
+                {tags?.length > 0 ? (
+                  <>
+                    <li>
+                      <Link href={`/${locale}/media-center/news`}>
+                        <a>{t('all')}</a>
+                      </Link>
+                    </li>
+                    {tags?.map(tag => (
+                      <li key={tag.id}>
+                        <Link
+                          href={`/${locale}/media-center/news/?tags=${tag?.tag_name}`}
+                        >
+                          <a>{tag.tag_name}</a>
+                        </Link>
+                      </li>
+                    ))}
+                  </>
+                ) : (
+                  <li>{t('no_results')}</li>
+                )}
               </ul>
             </div>
           </Col>
