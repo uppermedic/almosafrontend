@@ -42,7 +42,7 @@ const Index = ({ article, categories, related, t }) => {
             className={ClassNames('controller', { open: controllerOpen })}
           >
             <div className="search">
-              <Form action="/media-center/news/search-result?">
+              <Form action="/search-result?">
                 <FormGroup>
                   <Label for="exampleSearch">{t('new_search')}</Label>
                   <Input

@@ -1,8 +1,18 @@
 import { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
+import ClassNames from 'classnames';
 import { withRouter } from 'next/router';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import ResultPost from './ResultPost';
+const data = [
+  {
+    id: 1,
+    title: 'Power of Art Initiative',
+    bg: '/images/community/power-of-art.png',
+    ribbon_class: 'green',
+    url: '/community/for-patients'
+  }
+];
 
 const Index = ({ data, router, t }) => {
   const [search, setSearch] = useState('');
@@ -21,7 +31,7 @@ const Index = ({ data, router, t }) => {
         <Row className="inner-content">
           <Col xs={12}>
             <div className="search">
-              <Form action="/media-center/medical-articles/search-result?">
+              <Form action="/search-result?">
                 <FormGroup
                   row
                   className="m-0 p-0 justify-content-between align-items-center"
@@ -31,7 +41,7 @@ const Index = ({ data, router, t }) => {
                     type="search"
                     name="search"
                     id="exampleSearch"
-                    placeholder={t('search_medical-articles')}
+                    placeholder={t('search_news')}
                     value={search}
                     onChange={({ target: { value } }) => setSearch(value)}
                   />
@@ -43,7 +53,7 @@ const Index = ({ data, router, t }) => {
             {data.data.length === 0 ? (
               <p>{t('no_results')}</p>
             ) : (
-              data.data.map((article, idx) => <ResultPost article={article} />)
+              data.data.map(article => <ResultPost article={article} />)
             )}
           </Col>
         </Row>

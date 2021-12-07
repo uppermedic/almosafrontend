@@ -17,16 +17,16 @@ const Index = ({
   data,
   tags,
   categories,
+  news,
   newsData,
   router,
   getAllPosts,
   getNewsTags,
   getNewsCategories
 }) => {
-  const { seo, page_cover } = newsData.page;
+  const { seo, page_cover } = news?.page;
   const lang = i18n.language;
   useEffect(() => {
-    getAllPosts('/blog/articles', `type=blog&${router.query}`);
     getNewsTags('/blog/tags');
     getNewsCategories('/blog/categories');
     return () => {};
@@ -40,8 +40,8 @@ const Index = ({
         </div>
       </Hero>
       <Content
-        data={data}
-        latest={data.data.slice(0, 3)}
+        data={newsData}
+        latest={newsData?.data?.slice(0, 3)}
         tags={tags}
         categories={categories}
       />
@@ -50,25 +50,28 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   //settings
-  let { error, data: newsData } = await fetchData('/blog');
-  if (error) {
+  let { error: error1, data: news } = await fetchData('/blog');
+  let { error: error2, data: newsData } = await fetchData(
+    `/blog/articles?type=blog&${context.query}`
+  );
+  if (error1 || error2) {
     return {
       notFound: true
     };
   }
   return {
-    props: { newsData }
+    props: { news, newsData }
   };
 }
 
 const mapStateToProps = state => ({
-  data: state.NewsMedical.posts,
+  // data: state.NewsMedical.posts,
   tags: state.Globals.tags,
   categories: state.Globals.categories
 });
 
 const mapDispatchToProps = {
-  getAllPosts: getAllPostsAction,
+  // getAllPosts: getAllPostsAction,
   getNewsTags: getNewsTagsAction,
   getNewsCategories: getNewsCategoriesAction
 };
