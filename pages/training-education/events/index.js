@@ -21,9 +21,10 @@ const EventsTraning = ({ eventData, educationData, t }) => {
 };
 
 export async function getServerSideProps(context) {
+  const { page } = context.query;
   const tst = Promise.all([
     fetchData('/education'),
-    fetchData('/education/type/event')
+    fetchData(`/education/type/event?page=${page}`)
   ]).then(
     ([
       { error: error1, data: educationData },

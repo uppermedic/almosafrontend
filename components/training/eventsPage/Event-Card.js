@@ -52,7 +52,11 @@ const Event_Card = ({ cardData, t }) => {
                     cardData[language].title &&
                     truncate(cardData[language].title, 20, '...')}
                 </h3>
-                <p>{language && cardData[language].speaker_name}</p>
+                <p>
+                  {language && cardData[language].speaker_name !== '-'
+                    ? truncate(cardData[language]?.speaker_name, 20, '...')
+                    : cardData[language].speaker_name}
+                </p>
               </div>
               <div>
                 <p>
