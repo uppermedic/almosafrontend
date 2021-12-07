@@ -17,18 +17,19 @@ const Index = ({
   data,
   tags,
   categories,
+  medicalArticals,
   medicalArticalsData,
   router,
   getAllPosts,
   getMedicalTags,
   getMedicalCategories
 }) => {
-  const { seo, page_cover } = medicalArticalsData.page;
+  const { seo, page_cover } = medicalArticals?.page;
   const lang = i18n.language;
+
   useEffect(() => {
-    // getAllPosts('/blog/articles', `type=medical-articles&${router.query}`);
-    // getMedicalTags('/blog/tags');
-    // getMedicalCategories('/blog/categories');
+    getMedicalTags('/blog/tags');
+    getMedicalCategories('/blog/categories');
   }, [router.query]);
 
   return (
@@ -40,8 +41,8 @@ const Index = ({
         </div>
       </Hero>
       <Content
-        data={data}
-        latest={data.data.slice(0, 3)}
+        data={medicalArticalsData}
+        latest={medicalArticalsData?.data?.slice(0, 3)}
         tags={tags}
         categories={categories}
       />
@@ -50,25 +51,28 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   //settings
-  let { error, data: medicalArticalsData } = await fetchData('/blog');
-  if (error) {
+  let { error: error1, data: medicalArticals } = await fetchData('/blog');
+  let { error: error2, data: medicalArticalsData } = await fetchData(
+    `/blog/articles?type=medical-articles&${context.query}`
+  );
+  if (error1 || error2) {
     return {
       notFound: true
     };
   }
   return {
-    props: { medicalArticalsData }
+    props: { medicalArticals, medicalArticalsData }
   };
 }
 
 const mapStateToProps = state => ({
-  data: state.NewsMedical.posts,
+  // data: state.NewsMedical.posts,
   tags: state.Globals.tags,
   categories: state.Globals.categories
 });
 
 const mapDispatchToProps = {
-  getAllPosts: getAllPostsAction,
+  // getAllPosts: getAllPostsAction,
   getMedicalTags: getMedicalTagsAction,
   getMedicalCategories: getMedicalCategoriesAction
 };
