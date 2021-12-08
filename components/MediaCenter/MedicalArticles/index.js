@@ -105,7 +105,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {categories.map(cat => (
                       <li key={cat.id}>
                         <Link
-                          href={`/${locale}/media-center/medical-articles/?cats=${cat.slug}`}
+                          href={`/${locale}/media-center/filter-results/?cats=${cat.slug}`}
                         >
                           <a>{cat[language].category_name}</a>
                         </Link>
@@ -137,13 +137,9 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <img src={post.image} alt="medical-articles" />
                           <div>
                             <h5>
-                              <div
-                                dangerouslySetInnerHTML={{
-                                  __html: post[language]
-                                    ? truncate(post[language]?.title, 30, '...')
-                                    : ''
-                                }}
-                              />
+                              {post[language]
+                                ? truncate(post[language]?.title, 30, '...')
+                                : ''}
                             </h5>
                             <p>
                               <div
@@ -186,7 +182,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {tags?.map(tag => (
                       <li key={tag.id}>
                         <Link
-                          href={`/${locale}/media-center/medical-articles/?tags=${tag?.tag_name}`}
+                          href={`/${locale}/media-center/filter-results/?tag=${tag?.tag_name}`}
                         >
                           <a>{tag.tag_name}</a>
                         </Link>

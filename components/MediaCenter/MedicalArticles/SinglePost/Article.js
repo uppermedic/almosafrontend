@@ -21,11 +21,13 @@ function Article({ article, originalArticle, related, t }) {
         />
       </Col>
       <Col xs={12} className="post-content">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: article?.content
-          }}
-        />
+        <p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: article?.content
+            }}
+          />
+        </p>
       </Col>
       <Col xs={12}>
         <div className="related-links my-5">

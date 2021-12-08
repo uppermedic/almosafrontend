@@ -30,13 +30,13 @@ const OneDaySurgeryContent = ({ t, data }) => {
             <div className="info-container">
               <div className="surgey-info">
                 {language && seo[language]?.content && (
-                  <>
+                  <p>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: seo[language]?.content
                       }}
                     />
-                  </>
+                  </p>
                 )}
               </div>
             </div>

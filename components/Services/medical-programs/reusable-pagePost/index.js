@@ -10,11 +10,13 @@ const SharedPost = ({ data, cutomImgStyle }) => {
       <Container>
         <Row xs="1" xl="2">
           <Col xl="8">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: language && data.seo[language].content
-              }}
-            />
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: language && data.seo[language].content
+                }}
+              />
+            </p>
           </Col>
           <Col xl="4">
             <img style={cutomImgStyle} src={data.image} alt="hair-plant" />

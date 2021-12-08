@@ -34,8 +34,8 @@ const Event_Card = ({ cardData, t }) => {
     // need to be cosider for this url ===??? /education/single/1
     <Link
       href={`/${locale}/training-education/events/${
-        language && String(cardData[language].title).split(' ').join('-')
-      }/?id=${cardData.id}`}
+        language && String(cardData[language]?.title).split(' ').join('-')
+      }/?id=${cardData?.id}`}
     >
       <a>
         <div className="card">
@@ -43,27 +43,27 @@ const Event_Card = ({ cardData, t }) => {
           <div className="content-event-card">
             <div className="event-date">
               <p>{day}</p>
-              <p>{monthNames[month].slice(0, 3)}</p>
+              <p>{monthNames[month]?.slice(0, 3)}</p>
             </div>
             <div className="banner">
               <div>
                 <h3>
                   {language &&
-                    cardData[language].title &&
-                    truncate(cardData[language].title, 20, '...')}
+                    cardData[language]?.title &&
+                    truncate(cardData[language]?.title, 20, '...')}
                 </h3>
                 <p>
-                  {language && cardData[language].speaker_name !== '-'
+                  {language && cardData[language]?.speaker_name !== '-'
                     ? truncate(cardData[language]?.speaker_name, 20, '...')
-                    : cardData[language].speaker_name}
+                    : cardData[language]?.speaker_name}
                 </p>
               </div>
               <div>
                 <p>
-                  {t('end')} : {moment(cardData.end_date).format('D MMM')}
+                  {t('end')} : {moment(cardData?.end_date).format('D MMM')}
                 </p>
                 <p>
-                  {t('cost')} : {cardData.cost}
+                  {t('cost')} : {cardData?.cost}
                 </p>
               </div>
             </div>

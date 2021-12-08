@@ -54,19 +54,23 @@ const index = ({ data, t }) => {
         <Row className="top-section px-3 py-5">
           <Col lg={6}>
             {lang == 'en' && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: data.page.seo['en'].body
-                }}
-              />
+              <p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: data?.page?.seo['en']?.body
+                  }}
+                />
+              </p>
             )}
 
             {lang == 'ar' && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: data.page.seo['ar'].body
-                }}
-              />
+              <p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: data?.page?.seo['ar']?.body
+                  }}
+                />
+              </p>
             )}
           </Col>
           <Col lg={6} className="pr-0">
