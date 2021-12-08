@@ -24,11 +24,8 @@ const Index = ({ router, data, getAllPosts }) => {
     }
   };
   useEffect(() => {
-    getAllPosts(
-      `/search/${router?.query?.search}`,
-      `page=${router?.query?.page}`
-    );
-  }, [router?.query]);
+    getAllPosts(`/search/${router?.query?.search}`);
+  }, [router?.query?.search]);
   return (
     <div className="news-search-result">
       <Head data={head_data}></Head>

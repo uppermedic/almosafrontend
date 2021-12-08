@@ -74,13 +74,13 @@ const ReusableTabs = props => {
               tab1Data.items.map((item, idx) => (
                 <div className={classnames({ content: true })} key={idx}>
                   {language && item[language]?.content && (
-                    <>
+                    <p>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: item[language]?.content
                         }}
                       />
-                    </>
+                    </p>
                   )}
                 </div>
               ))}

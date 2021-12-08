@@ -20,20 +20,28 @@ function index({ t, data }) {
             <Container>
               <div className="section-content">
                 <div className="description">
-                  <h5>{language ? data.content[0][language].title : ''}</h5>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: language ? data.content[0][language].content : ''
-                    }}
-                  />
+                  <h5>{language ? data?.content[0][language]?.title : ''}</h5>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: language
+                          ? data?.content[0][language]?.content
+                          : ''
+                      }}
+                    />
+                  </p>
                 </div>
                 <div className="description">
-                  <h5>{language ? data.content[1][language].title : ''}</h5>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: language ? data.content[1][language].content : ''
-                    }}
-                  />
+                  <h5>{language ? data?.content[1][language]?.title : ''}</h5>
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: language
+                          ? data?.content[1][language]?.content
+                          : ''
+                      }}
+                    />
+                  </p>
                 </div>
               </div>
             </Container>

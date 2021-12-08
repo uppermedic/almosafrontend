@@ -36,13 +36,15 @@ const Content = ({ physicians, data }) => {
       {active?.items && active?.items[0] && (
         <section className="center-paragraph">
           <div className="container">
-            {language && active?.items[0][language]?.content && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: active?.items[0][language]?.content
-                }}
-              />
-            )}
+            <p>
+              {language && active?.items[0][language]?.content && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: active?.items[0][language]?.content
+                  }}
+                />
+              )}
+            </p>
           </div>
         </section>
       )}

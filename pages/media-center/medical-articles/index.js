@@ -52,9 +52,11 @@ const Index = ({
 export async function getServerSideProps(context) {
   const { page } = context.query;
   //settings
-  let { error: error1, data: medicalArticals } = await fetchData('/blog');
+  let { error: error1, data: medicalArticals } = await fetchData(
+    '/blog/medical-article'
+  );
   let { error: error2, data: medicalArticalsData } = await fetchData(
-    `/blog/articles?type=medical-articles&page=${page}`
+    `/blog/articles?type=medical-article&page=${page}`
   );
   if (error1 || error2) {
     return {

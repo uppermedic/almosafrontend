@@ -12,6 +12,7 @@ import PostCard from './PostCard';
 
 const Index = ({ data, latest, tags, categories, t }) => {
   const router = useRouter();
+  const { page } = router?.query;
   const [controllerOpen, setControllerOpen] = useState(false);
   const { last_page } = data;
   const [locale, setlocale] = useState('');
@@ -40,11 +41,17 @@ const Index = ({ data, latest, tags, categories, t }) => {
         <Row className="inner-content justify-content-between">
           <Col xs={12} lg={6}>
             <Row className="m-0 p-0">
-              {data.data.map(article => (
-                <Col xs={12} key={article.id} className="border-bottom mb-3">
-                  <PostCard article={article} />
+              {data?.data?.length > 0 ? (
+                data.data.map(article => (
+                  <Col xs={12} key={article.id} className="border-bottom mb-3">
+                    <PostCard article={article} />
+                  </Col>
+                ))
+              ) : (
+                <Col xs={12}>
+                  <h4 className="text-center py-5">{t('no_results')}</h4>
                 </Col>
-              ))}
+              )}
             </Row>
             {data.data.length > 0 && (
               <Row>
@@ -97,7 +104,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {categories.map(cat => (
                       <li key={cat.id}>
                         <Link
-                          href={`/${locale}/media-center/news/?cats=${cat.slug}`}
+                          href={`/${locale}/media-center/filter-results/?cats=${cat.slug}`}
                         >
                           <a>{cat[language].category_name}</a>
                         </Link>
@@ -129,13 +136,9 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <img src={post.image} alt="news" />
                           <div>
                             <h5>
-                              <div
-                                dangerouslySetInnerHTML={{
-                                  __html: post[language]
-                                    ? truncate(post[language]?.title, 30, '...')
-                                    : ''
-                                }}
-                              />
+                              {post[language]
+                                ? truncate(post[language]?.title, 30, '...')
+                                : ''}
                             </h5>
                             <p>
                               <div
@@ -175,7 +178,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {tags?.map(tag => (
                       <li key={tag.id}>
                         <Link
-                          href={`/${locale}/media-center/news/?tags=${tag?.tag_name}`}
+                          href={`/${locale}/media-center/filter-results/?tag=${tag?.tag_name}`}
                         >
                           <a>{tag.tag_name}</a>
                         </Link>
