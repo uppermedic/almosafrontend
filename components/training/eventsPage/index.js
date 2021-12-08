@@ -101,7 +101,7 @@ function index({ data, categories, t }) {
                   </button>
                 </Col>
               </Row>
-              <Row className="pt-5">
+              <Row className="pt-5 mx-2">
                 {filter ? (
                   dataF && dataF.length > 0 ? (
                     dataF.map(card => (

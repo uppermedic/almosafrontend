@@ -27,13 +27,13 @@ const Content = props => {
       <div className="page-desc">
         <Container>
           {language && seo[language]?.content && (
-            <>
+            <p>
               <div
                 dangerouslySetInnerHTML={{
                   __html: seo[language]?.content
                 }}
               />
-            </>
+            </p>
           )}
         </Container>
       </div>
@@ -174,7 +174,11 @@ const TabItem = ({ title, content }) => {
         </span>
       </Button>
       <Collapse isOpen={isOpen}>
-        {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
+        {content && (
+          <p>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+          </p>
+        )}
       </Collapse>
     </div>
   );

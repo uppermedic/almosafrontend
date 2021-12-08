@@ -17,13 +17,13 @@ const SharedPost = ({ data, cutomImgStyle }) => {
           <Row xs="1" xl="2">
             <Col xl="8">
               {language && data.seo[language]?.content && (
-                <>
+                <p>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: data.seo[language]?.content
                     }}
                   />
-                </>
+                </p>
               )}
             </Col>
             <Col xl="4">

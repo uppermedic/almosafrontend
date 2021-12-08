@@ -3,23 +3,32 @@ import { i18n, Link, withTranslation } from 'root/i18n';
 import ClassNames from 'classnames';
 import { withRouter } from 'next/router';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import ReactPaginate from 'react-paginate';
+import NextFC from 'src/components/layout/ReactPaginate/NextFC';
+import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
+
 import ResultPost from './ResultPost';
-const data = [
-  {
-    id: 1,
-    title: 'Power of Art Initiative',
-    bg: '/images/community/power-of-art.png',
-    ribbon_class: 'green',
-    url: '/community/for-patients'
-  }
-];
 
 const Index = ({ data, router, t }) => {
+  const { last_page } = data;
+  const { language } = i18n;
   const [search, setSearch] = useState('');
+  const [locale, setlocale] = useState('');
+
   useEffect(() => {
     setSearch(router.query.search);
     return () => {};
   }, [router?.query?.search]);
+
+  useEffect(() => {
+    setlocale(language);
+  }, [language]);
+
+  const handlePageClick = ({ selected }) => {
+    router.push(
+      `/${locale}/search-result/?search=${search}&page=${selected + 1}`
+    );
+  };
   return (
     <section className="content-wrapper">
       <Container>
@@ -36,7 +45,9 @@ const Index = ({ data, router, t }) => {
                   row
                   className="m-0 p-0 justify-content-between align-items-center"
                 >
-                  <Label for="exampleSearch">{t('new_search')}</Label>
+                  <Label for="exampleSearch">
+                    <h4>{t('new_search')}</h4>
+                  </Label>
                   <Input
                     type="search"
                     name="search"
@@ -50,13 +61,32 @@ const Index = ({ data, router, t }) => {
             </div>
           </Col>
           <Col className="border-bottom mb-3">
-            {data.data.length === 0 ? (
-              <p>{t('no_results')}</p>
-            ) : (
+            {data?.data?.length > 0 ? (
               data.data.map(article => <ResultPost article={article} />)
+            ) : (
+              <h4 className="text-center py-5">{t('no_results')}</h4>
             )}
           </Col>
         </Row>
+        {data.data.length > 0 && (
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center mb-4">
+              <ReactPaginate
+                nextLabel={<NextFC />}
+                previousLabel={<PrevFC />}
+                breakLabel={'...'}
+                breakClassName={'break-me'}
+                pageCount={last_page}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={2}
+                onPageChange={handlePageClick}
+                containerClassName={'pagination'}
+                subContainerClassName={'pages pagination'}
+                activeClassName={'active'}
+              />
+            </Col>
+          </Row>
+        )}
       </Container>
     </section>
   );

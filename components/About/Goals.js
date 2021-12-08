@@ -22,11 +22,13 @@ export default function Goals({ data }) {
             lg={6}
             className="d-flex justify-content-center justify-content-lg-start align-items-center"
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: language ? data[language]?.content : ''
-              }}
-            />
+            <p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: language ? data[language]?.content : ''
+                }}
+              />
+            </p>
           </Col>
           <Col xs={12} lg={6}>
             <img src={data?.image} alt="goals" className="half_section_img " />

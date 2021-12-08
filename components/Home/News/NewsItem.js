@@ -21,17 +21,13 @@ function NewsItem({ news, t }) {
           <img src={news.thumbnail} alt="news" />
           <div className="content">
             <h5>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: truncate(
-                    strippedContent(
-                      (language && news[language].title) || 'No Data'
-                    ),
-                    20,
-                    '......'
-                  )
-                }}
-              />
+              {truncate(
+                strippedContent(
+                  (language && news[language]?.title) || 'No Data'
+                ),
+                20,
+                '......'
+              )}
             </h5>
             <p>
               <div

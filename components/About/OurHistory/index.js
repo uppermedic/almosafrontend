@@ -185,12 +185,14 @@ function index({ t, histories }) {
                     <h3 className="history__title">
                       {language && activeTab[language]?.title}
                     </h3>
-                    <div
-                      className="description intro"
-                      dangerouslySetInnerHTML={{
-                        __html: language && activeTab[language]?.description
-                      }}
-                    />
+                    <p>
+                      <div
+                        className="description intro"
+                        dangerouslySetInnerHTML={{
+                          __html: language && activeTab[language]?.description
+                        }}
+                      />
+                    </p>
                   </Col>
                 </Row>
                 {activeTab.histories?.map((single, idx) => (
@@ -203,12 +205,14 @@ function index({ t, histories }) {
                       <Col xs={12} md={5}>
                         <div className="content">
                           <h4 className="title">{single.year}</h4>
-                          <div
-                            className="description"
-                            dangerouslySetInnerHTML={{
-                              __html: language && single[language]?.content
-                            }}
-                          />
+                          <p>
+                            <div
+                              className="description"
+                              dangerouslySetInnerHTML={{
+                                __html: language && single[language]?.content
+                              }}
+                            />
+                          </p>
                         </div>
                       </Col>
                       <Col xs={12} md={7}>

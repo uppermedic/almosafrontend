@@ -17,11 +17,13 @@ const Content = props => {
             <Col>
               <div className="text">
                 {language && seo[language]?.content && (
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: seo[language]?.content
-                    }}
-                  />
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: seo[language]?.content
+                      }}
+                    />
+                  </p>
                 )}
               </div>
             </Col>
@@ -29,11 +31,13 @@ const Content = props => {
               seo[language].content2 &&
               seo[language]?.content2 != '' && (
                 <Col>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: seo[language]?.content2
-                    }}
-                  />
+                  <p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: seo[language]?.content2
+                      }}
+                    />
+                  </p>
                 </Col>
               )}
           </Row>

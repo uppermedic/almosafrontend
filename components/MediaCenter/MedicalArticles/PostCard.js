@@ -27,13 +27,15 @@ function Post({ article, t }) {
           </div>
         </Col>
         <Col xs={12} className="description">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content
-                ? truncate(strippedContent(content), 200, '...')
-                : ''
-            }}
-          />
+          <p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: content
+                  ? truncate(strippedContent(content), 200, '...')
+                  : ''
+              }}
+            />
+          </p>
           <Link
             href={`/${locale}/media-center/news/post/${String(title)
               .split(' ')
