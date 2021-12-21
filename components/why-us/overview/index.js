@@ -22,10 +22,10 @@ const index = ({ t }) => {
                   {language === 'ar' ? (
                     <p>
                       مستشفى الموسى التخصصي هو نظام صحي عالمي موثوق ينشر الصحة و
-                      يحارب المرض ، تأسس المستشفى عامـ1996 كأول مستشفى خاص يقدم
+                      يحارب المرض، تأسس المستشفى عامـ1996 كأول مستشفى خاص يقدم
                       رعاية صحية متكاملة في الأحساء.. تم تصنيف مستشفى الموسى ضمن
                       أفضل عشرة مستشفيات في دول مجلس التعاون الخليجي من حيث رضا
-                      المرضى من قِبل منظمة PressGaney .
+                      المرضى من قِبل منظمة (PressGaney) .
                       <br />
                       <br />
                       نضمن لك أفضل رعاية صحية بمعايير استراتيجية باستخدام أحدث
@@ -34,12 +34,12 @@ const index = ({ t }) => {
                       <br />
                       <br />
                       مستشفى الموسى هو مستشفى تعليمي مُعتمد من الهيئة السعودية
-                      للتخصصات الصحية في 10 برامج للإقامة الطبية و 2 برنامج
-                      زمالة في بيئة تعليمية ثرية تحفز على التعلم والإبداع .
+                      للتخصصات الصحية في 10 برامج للإقامة الطبية و2 برنامج زمالة
+                      في بيئة تعليمية ثرية تحفز على التعلم والإبداع .
                       <br />
                       <br />
                       يوفر المستشفى رعاية تتمحور حول الإنسان بسعة سريرية 460
-                      سريرًا ، مع فريق متنوع يضم أكثر من 3000 مقدم رعاية يعملون
+                      سريرًا، مع فريق متنوع يضم أكثر من 3000 مقدم رعاية يعملون
                       معًا لتحقيق رسالة واحدة: أن نخدم بشغف، ونقود التحول
                       المجتمعي من خلال تقديم خدمات صحية فعالة .
                       <br />
@@ -49,15 +49,15 @@ const index = ({ t }) => {
                         <li>مركز العظام والمفاصل .</li>
                         <li>مركز السرطان .</li>
                         <li>
-                          مركز علم الأعصاب و يقدم برنامج متكامل لإدارة السكتة
-                          الدماغية.
+                          مركز علم الأعصاب ويقدم برنامج متكامل لإدارة السكتة
+                          الدماغية .
                         </li>
                         <li>
                           مركز قلب متقدم مزود بأحدث الأجهزة التكنولوجية القلبية
                           مثل غرف العمليات المتكاملة Hybrid OR ومختبر
                           الفيزيولوجيا الكهربية .
                         </li>
-                        <li>أكبر وأشمل برنامج للأم و الطفل في المنطقة .</li>
+                        <li>أكبر وأشمل برنامج للأم والطفل في المنطقة .</li>
                       </ul>
                     </p>
                   ) : (
@@ -71,19 +71,19 @@ const index = ({ t }) => {
                       Ranked among the best ten hospitals in the GCC, we ensure
                       to provide our patients with the best care in the Kingdom
                       and GCC with qualified, competent caregivers using the
-                      latest technologies and evidence-based techniques.
+                      latest technologies and evidence-based techniques .
                       <br />
                       <br />
                       Almoosa Specialist Hospital is an academic teaching
                       hospital accredited by the Saudi Commission for Health
                       Specialties SCHS, in 12 residency programs and two
-                      fellowships programs.
+                      fellowships programs .
                       <br />
                       <br />
                       The hospital provides the best human-centered care in a
                       capacity of over 460 beds, with a diverse team of more
                       than 3000 caregivers working together to achieve one
-                      mission: To promote hope and well-being for our society.
+                      mission: To promote hope and well-being for our society .
                       <br />
                       <br />
                       Our leading programs and Centers of excellence :

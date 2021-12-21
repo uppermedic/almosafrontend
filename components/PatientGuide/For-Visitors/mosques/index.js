@@ -33,7 +33,7 @@ const Content = ({ t }) => {
                       <i className="fas fa-map-marker-alt" />
                     </span>
                     <span className="txt">
-                      مقابل الاستقبال الرئيسي في الدور الثاني.
+                      مقابل الاستقبال الرئيسي في الدور الثاني .
                     </span>
                   </p>
                 </div>
@@ -50,7 +50,7 @@ const Content = ({ t }) => {
                       <i className="fas fa-map-marker-alt" />
                     </span>
                     <span className="txt">
-                      يقع في الطابق الثالث من البرج الطبي الجنوبي
+                      يقع في الطابق الثالث من البرج الطبي الجنوبي .
                     </span>
                   </p>
                 </div>
@@ -71,8 +71,8 @@ const Content = ({ t }) => {
                       <i className="fas fa-map-marker-alt" />
                     </span>
                     <span className="txt">
-                      Located In front of the main reception on the second
-                      floor.
+                      Located In front of the main reception on the second floor
+                      .
                     </span>
                   </p>
                 </div>
@@ -89,7 +89,7 @@ const Content = ({ t }) => {
                       <i className="fas fa-map-marker-alt" />
                     </span>
                     <span className="txt">
-                      Located on the 3rd floor of the south Medical Tower
+                      Located on the 3rd floor of the south Medical Tower .
                     </span>
                   </p>
                 </div>

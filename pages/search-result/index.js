@@ -25,8 +25,8 @@ const Index = ({ router, data, getAllPosts }) => {
   };
   useEffect(() => {
     getAllPosts(
-      `/search/${router?.query?.search}`,
-      `page=${router?.query?.page}`
+      `/all/search`,
+      `search_query=${router?.query?.search}&page=${router?.query?.page}`
     );
   }, [router?.query]);
   return (

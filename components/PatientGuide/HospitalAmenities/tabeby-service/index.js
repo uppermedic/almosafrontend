@@ -21,16 +21,16 @@ const Content = ({ t }) => {
                     <div className="items-content">
                       خدمة تم تصميمها لمساعدة المرضى على إتمام جميع الإجراءات
                       بسرعة وسهوله بدءاً من حجز الموعد إلى تنسيق مواعيد المتابعة
-                      ونتائج الفحوصات
+                      ونتائج الفحوصات .
                     </div>
 
                     <h6 className="items-title">مميزات بطاقة طبيبي : </h6>
                     <div className="items-content">
                       <ul>
-                        <li>منسقة خاصة لحجز المواعيد وتسهيل الإجراءات.</li>
-                        <li>صالة خاصة للإنتظار.</li>
+                        <li>منسقة خاصة لحجز المواعيد وتسهيل الإجراءات .</li>
+                        <li>صالة خاصة للإنتظار .</li>
                         <li>سهولة الدخول للعيادات والمختبر والأشعة . </li>
-                        <li>عروض وخصومات خاصة لخدمة معينة طوال السنة.</li>
+                        <li>عروض وخصومات خاصة لخدمة معينة طوال السنة .</li>
                         <li>إمكانية ترقية الغرفة حسب المتوفر .</li>
                         <li>توصيل الأدوية للمنزل .</li>
                         <li>خصم 10%على الزيارات المنزلية .</li>
@@ -47,25 +47,25 @@ const Content = ({ t }) => {
                     </h6>
                     <div className="items-content">
                       تشمل <strong>4</strong> أشخاص فقط و
-                      <strong>250 ريال</strong> لكل شخص إضافي.
+                      <strong>250 ريال</strong> لكل شخص إضافي .
                     </div>
 
                     <div className="items-content">
                       <strong>
                         جودة الخدمة المقدمة للمشتركين بخدمة طبيبي نفس جودة
-                        وفعالية الخدمة لباقي المرضى ولا يوجد أي تفرقة.
+                        وفعالية الخدمة لباقي المرضى ولا يوجد أي تفرقة .
                       </strong>
                     </div>
                   </>
                 )}
                 {language === 'en' && (
                   <>
-                    <h6 className="items-title">What is Tabibi Service?</h6>
+                    <h6 className="items-title">What is Tabibi Service ?</h6>
                     <div className="items-content">
                       Tabibi service is designed for your comfort. Through
                       Tabibi, all your procedures and services started by
                       requesting your medical file and ending with taking the
-                      appointment to the next visit will make easy.
+                      appointment to the next visit will make easy .
                     </div>
 
                     <h6 className="items-title">Tabibi card features :</h6>
