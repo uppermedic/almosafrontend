@@ -65,15 +65,15 @@ export const data = [
   },
   {
     ar:
-      ',في الحالات الطارئة، تسجل المتعلقات الشخصية الثمينة الخاصة بالمريض في إيصال المتعلقات الثمينة للمرضى من قبل الممرضة بحضور المريض والمدير المناوب والحصول على توقيع المريض أو أحد مرافقيه كسياسة وإجراءات قيمة للمريض.المستشفى غير مسؤول عن فقدان المتعلقات الشخصية الثمينة داخله، لذلك نرجو منكم تجنب إحضارها إلى المستشفى.',
+      'في الحالات الطارئة، تسجل المتعلقات الشخصية الثمينة الخاصة بالمريض في إيصال المتعلقات الثمينة للمرضى من قبل الممرضة بحضور المريض والمدير المناوب والحصول على توقيع المريض أو أحد مرافقيه كسياسة وإجراءات قيمة للمريض.المستشفى غير مسؤول عن فقدان المتعلقات الشخصية الثمينة داخله، لذلك نرجو منكم تجنب إحضارها إلى المستشفى.',
     en:
-      "Avoid bringing valuable personal things to the hospital since the hospital is not Responsible for keeping them. However, in any emergency cases and unaccompanied admissions, you will have their valuables recorded in the Patients Valuable Receipt by the nurse in the presence of the patient and manager on duty and obtained their signature as patient's valuable policy & procedures."
+      "Avoid bringing valuable personal things to the hospital since the hospital is not Responsible for keeping them. However, in any emergency cases and unaccompanied admissions, you will have their valuables recorded in the Patients' Valuable Receipt by the nurse in the presence of the patient and manager on duty and obtain their signature as patient's valuable policy & procedures."
   },
   {
     ar:
       'يتحمل المريض و/أو أسرته مسؤولية احترام ممتلكات منشأة مستشفى الموسى التخصصي والأشخاص الآخرين داخل المستشفى.',
 
     en:
-      'The patient and his/her family are responsible for being respectful of the property of the ASH facility and other persons in the healthcare facility'
+      'The patient and his/her family are responsible for being respectful of the property of the ASH facility and other persons in the healthcare facility.'
   }
 ];

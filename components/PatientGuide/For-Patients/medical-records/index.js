@@ -17,8 +17,8 @@ const Content = ({ t }) => {
           <Container>
             <p>
               {language === 'ar'
-                ? `يمكن للمريض طلب تقرير طبي من مكتب التقارير الطبية ASH بدون أي رسوم لأول مرة.`
-                : `The patient can request a medical report from ASH medical reports office without any fees for the first time.`}
+                ? `يمكن للمريض طلب تقرير طبي من مكتب التقارير الطبية ASH بدون أي رسوم لأول مرة .`
+                : `The patient can request a medical report from ASH medical reports office without any fees for the first time .`}
             </p>
             <p>
               {language === 'ar'

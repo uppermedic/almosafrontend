@@ -33,18 +33,18 @@ const Content = ({ t }) => {
                 <p>
                   Located In Front of the North Tower: provides recreational
                   attractions such as children's games and seating umbrellas.
-                  The park also represents a natural outlet for patients.
+                  The park also represents a natural outlet for patients .
                 </p>
               </div>
               <div className="description">
                 <h5>Play together Park :</h5>
                 <p>
                   One of the "Play Together initiatives" in Al-Ahsa in Al-Faisal
-                  neighborhood in Al-mubarraz on more than <strong>2200</strong>{' '}
+                  neighborhood in Al-mubarraz on more than <strong>2200</strong>
                   square meters to include more than <strong>12</strong> games
                   specialized in integrating children with disabilities with
                   their healthy peers to contribute to the realization of the
-                  values of integration.
+                  values of integration .
                 </p>
               </div>
             </>
@@ -57,13 +57,13 @@ const Content = ({ t }) => {
                   اعتمد تصميم البرج الشمالي على أسلوب العمارة الخضراء صديقة
                   البيئة، والاستخدام الأمثل للطاقة، وتقليل الضرر على البيئة
                   المحيطة، إضافة إلى دمج العناصر الطبيعية كضوء الشمس والحدائق،
-                  وإمكانية الوصول إليها بسهولة ، في اكثر من طابق " الطابق الثاني
+                  وإمكانية الوصول إليها بسهولة، في أكثر من طابق " الطابق الثاني
                   والخامس"
                   <br />
                   <br />
-                  بالاضافة الى حديقة الفيصل المقابلة للبرج الشمالي و التى توفر
-                  عوامل جذب ترفيهية من العاب الأطفال ومظلات الجلوس ، كما تمثل
-                  الحديقه متنفساً طبيعيا للمرضى
+                  بالإضافة إلى حديقة الفيصل المقابلة للبرج الشمالي والتي توفر
+                  عوامل جذب ترفيهية من ألعاب الأطفال ومظلات الجلوس، كما تمثل
+                  الحديقه متنفساً طبيعيًا للمرضى .
                 </p>
               </div>
               <div className="description">

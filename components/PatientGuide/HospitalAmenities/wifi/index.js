@@ -25,7 +25,7 @@ const Content = ({ t }) => {
               <ul>
                 <li>
                   {language === 'ar' &&
-                    `اختر شبكة مستشفى الموسى من قائمة الشبكة`}
+                    `اختر شبكة مستشفى الموسى من قائمة الشبكة .`}
                   {language === 'en' &&
                     `You can get it by selecting the network of Al-Moosa Hospital from the network list .`}
                 </li>

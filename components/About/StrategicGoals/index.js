@@ -24,9 +24,9 @@ function index({ t, data }) {
                     <div className="description">
                       <h5>People</h5>
                       <p>
-                        Attract, educate, develop, and Retain talented
+                        Attract, educate, develop, and retain talented
                         professionals who deliver excellent care and promote
-                        wellness.
+                        wellness .
                       </p>
                     </div>
                     <div className="description">
@@ -55,9 +55,9 @@ function index({ t, data }) {
                     <div className="description">
                       <h5>Performance</h5>
                       <p>
-                        Continuously improve personal, profession, company, and
-                        financial performance to achieve our Mission and Vission
-                        .
+                        Continuously improve the personal, professional,
+                        company, and financial performance to achieve our
+                        Mission and vision .
                       </p>
                     </div>
                   </>
@@ -76,25 +76,25 @@ function index({ t, data }) {
                       <p>
                         تعزيز الصحة ونشرها بمفهومها الشامل الذي يتضمن جميع
                         الجوانب الجسدية والنفسية والاجتماعية ودمج هذه المفاهيم
-                        في جميع قراراتنا.
+                        في جميع قراراتنا .
                       </p>
                     </div>
                     <div className="description">
                       <h5>الجودة وسلامة المرضى :</h5>
                       <p>
-                        ان نكون القادة في تقديم رعاية صحية ذات جودة عالية تضمن
-                        سلامة المرضى من خلال التطوير الفعال والمستمر.
+                        أن نكون القادة في تقديم رعاية صحية ذات جودة عالية تضمن
+                        سلامة المرضى من خلال التطوير الفعال والمستمر .
                       </p>
                     </div>
                     <div className="description">
                       <h5>تحسين تجربة المرضى :</h5>
-                      <p>تحقيق الريادة في تطوير تجرية المرضى وعائلاتهم.</p>
+                      <p>تحقيق الريادة في تطوير تجرية المرضى وعائلاتهم .</p>
                     </div>
                     <div className="description">
                       <h5>تحسين الأداء :</h5>
                       <p>
                         تحسين الاداء على المستوى الشخصي والمهني والمؤسسي والمالي
-                        لتحقيق رؤيتنا.
+                        لتحقيق رؤيتنا .
                       </p>
                     </div>
                   </>
