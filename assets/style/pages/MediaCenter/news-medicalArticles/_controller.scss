@@ -8,6 +8,7 @@
     transition: 0.4s;
     &.open {
       right: 0;
+      overflow-y: scroll;
     }
   }
   .search {

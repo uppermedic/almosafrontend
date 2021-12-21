@@ -8,6 +8,9 @@
       padding: 30px 0;
       position: relative;
       overflow: hidden;
+      @include respond-below(lg) {
+        overflow-y: scroll;
+      }
     }
     h2 {
       @include sectionHeading($secondary-color);

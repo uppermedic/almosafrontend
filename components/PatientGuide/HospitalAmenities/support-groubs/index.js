@@ -21,18 +21,18 @@ const Content = ({ t }) => {
                   <div className="sections">
                     <div className="single-section">
                       <Title title="Post TKR (Total knee replacement) :" />
-                      <Paragraph paragraph="Attendees : 11 to 14 patients (between females and males)" />
+                      <Paragraph paragraph="Attendees :  11 to 14 patients (females and males) ." />
                       <Menu
                         items={[
                           {
                             text: 'Objectives : ',
                             subItems: [
-                              'Enhance Patient education ',
-                              'Copping with the new joint',
-                              'Enhance Lifestyle ',
-                              'Motivation for exercises ',
-                              'Self-pain management ',
-                              'Sharing experience '
+                              'Enhance Patient education . ',
+                              'Copping with the new joint .',
+                              'Enhance Lifestyle .',
+                              'Motivation for exercises .',
+                              'Self-pain management .',
+                              'Sharing experience .'
                             ]
                           }
                         ]}
@@ -40,17 +40,17 @@ const Content = ({ t }) => {
                     </div>
 
                     <div className="single-section">
-                      <Title title="Epilepsy support group  : Attendees : 9 " />
+                      <Title title="Epilepsy support group : Attendees : 9 " />
                       <Menu
                         items={[
                           {
                             text: 'Objectives : ',
                             subItems: [
-                              'Enhance Patient education',
-                              'Sharing experience',
-                              'Living with epilepsy',
-                              'Enhance wellness',
-                              'Stress management'
+                              'Enhance Patient education .',
+                              'Sharing experience .',
+                              'Living with epilepsy .',
+                              'Enhance wellness .',
+                              'Stress management .'
                             ]
                           }
                         ]}
@@ -58,39 +58,39 @@ const Content = ({ t }) => {
                     </div>
                     <div className="single-section">
                       <Title title="Oncology support group :" />
-                      <Paragraph paragraph="Established: 2020 with more than 29 members , sessions are held (face to face virtually)" />
+                      <Paragraph paragraph="Established : 2020 with more than 29 members , sessions are held (face to face virtually) ." />
                       <Menu
                         items={[
                           {
                             text: 'who should join : ',
                             subItems: [
-                              'Patients with current condition of cancer',
-                              'Recovered patients',
-                              'Families of cancer patient',
-                              'Open for the community not only Almoosa Hospital patient'
+                              'Patients with current condition of cancer .',
+                              'Recovered patients .',
+                              'Families of cancer patient .',
+                              'Open for the community not only Almoosa Hospital patient .'
                             ]
                           },
                           {
                             text: 'Objectives :',
                             subItems: [
-                              'Help patients feel supported socially, emotionally and not isolated.',
-                              'provide a safe place to share and work through feelings and challenges of cancer patients.',
-                              'Allow members to learn from others facing similar situations.',
-                              'Partner with members to enhance their journey in our hospital',
-                              'Provide them with educational sessions in many aspects of their journey of healing',
-                              'Professional hospital workers : supporting members all the time and answer their questions.',
-                              'Applying the person-centered care approach in the group to enhance their overall experience.'
+                              'Help patients feel supported socially, emotionally and not isolated .',
+                              'provide a safe place to share and work through feelings and challenges of cancer patients .',
+                              'Allow members to learn from others facing similar situations .',
+                              'Partner with members to enhance their journey in our hospital .',
+                              'Provide them with educational sessions in many aspects of their journey of healing .',
+                              'Professional hospital workers : supporting members all the time and answer their questions .',
+                              'Applying the person-centered care approach in the group to enhance their overall experience .'
                             ]
                           },
                           {
                             text: 'Hospital members :',
                             subItems: [
-                              'Dr. Taraq Mohammed ( Oncology consultant )',
-                              'Dr. Ahmed Anter ( Oncology and hematology consultant )',
-                              'Ghina Alarab ( CPD Manager and oncology nurse)',
-                              'Fatimah Alghadeeb ( Chief of transformation)',
-                              'Fatimah Alali ( psychologist)',
-                              'Omnih Alkhalifa (Central Staff)'
+                              'Dr. Taraq Mohammed ( Oncology consultant ) .',
+                              'Dr. Ahmed Anter ( Oncology and hematology consultant ) .',
+                              'Ghina Alarab ( CPD Manager and oncology nurse) .',
+                              'Fatimah Alghadeeb ( Chief of transformation) .',
+                              'Fatimah Alali ( psychologist) .',
+                              'Omnih Alkhalifa (Central Staff) .'
                             ]
                           }
                         ]}
@@ -101,18 +101,18 @@ const Content = ({ t }) => {
                   <div className="sections">
                     <div className="single-section">
                       <Title title="استبدال الركبة بالكامل :" />
-                      <Paragraph paragraph="يختلف الحضور من 11 إلى 14 مريضًا (بين الإناث والذكور)" />
+                      <Paragraph paragraph="يختلف الحضور من 11 إلى 14 مريضًا (بين الإناث والذكور) ." />
                       <Menu
                         items={[
                           {
                             text: 'الأهداف : ',
                             subItems: [
-                              'تعزيز تثقيف المريض',
-                              'التعامل مع المفصل الجديد',
-                              'تعزيز أسلوب الحياة',
-                              'الدافع للتمارين',
-                              'إدارة الألم الذاتي',
-                              'مشاركة الخبرة'
+                              'تعزيز تثقيف المريض .',
+                              'التعامل مع المفصل الجديد .',
+                              'تعزيز أسلوب الحياة .',
+                              'الدافع للتمارين .',
+                              'إدارة الألم الذاتي .',
+                              'مشاركة الخبرة .'
                             ]
                           }
                         ]}
@@ -126,11 +126,11 @@ const Content = ({ t }) => {
                           {
                             text: 'الأهداف : ',
                             subItems: [
-                              'تعزيز تثقيف المريض',
-                              'مشاركة الخبرة',
-                              'التعايش مع الصرع',
-                              'تعزيز العافية',
-                              'ادارة الاجهاد'
+                              'تعزيز تثقيف المريض .',
+                              'مشاركة الخبرة .',
+                              'التعايش مع الصرع .',
+                              'تعزيز العافية .',
+                              'إدارة الإجهاد .'
                             ]
                           }
                         ]}
@@ -138,39 +138,39 @@ const Content = ({ t }) => {
                     </div>
                     <div className="single-section">
                       <Title title="مجموعة دعم الأورام :" />
-                      <Paragraph paragraph="التأسيس: 2020 مع أكثر من 29 عضوًا 10 جلسات (وجهًا لوجه وعبر الإنترنت)" />
+                      <Paragraph paragraph="التأسيس: 2020 مع أكثر من 29 عضوًا 10 جلسات (وجهًا لوجه وعبر الإنترنت) ." />
                       <Menu
                         items={[
                           {
                             text: 'من يجب أن ينضم : ',
                             subItems: [
-                              'المرضى الذين يعانون من حالة السرطان الحالية',
-                              'المرضى المتعافين',
-                              'أسر مرضى السرطان',
-                              'مفتوح للمجتمع ليس فقط مريض مستشفى الموسى'
+                              'المرضى الذين يعانون من حالة السرطان الحالية .',
+                              'المرضى المتعافين .',
+                              ' أسر مرضى السرطان .',
+                              ' مفتوح للمجتمع ليس فقط مريض مستشفى الموسى .'
                             ]
                           },
                           {
                             text: 'الأهداف :',
                             subItems: [
-                              ' مساعدة المرضى على الشعور بالدعم الاجتماعي والعاطفي وعدم العزلة.',
-                              'توفير مكان آمن للمشاركة والعمل من خلال مشاعر وتحديات مرضى السرطان.',
-                              'اسمح للأعضاء بالتعلم من الآخرين الذين يواجهون مواقف مماثلة.',
-                              'شارك مع الأعضاء لتعزيز رحلتهم في مستشفانا',
-                              'قدم لهم جلسات تثقيفية في العديد من جوانب رحلتهم العلاجية',
-                              'أعضاء المستشفى المحترفين يدعمون الأعضاء طوال الوقت للإجابة على أسئلتهم.',
-                              'تطبيق نهج الرعاية المتمحورة حول الشخص في المجموعة لتعزيز تجربتهم الشاملة.'
+                              'مساعدة المرضى على الشعور بالدعم الاجتماعي والعاطفي وعدم العزلة .',
+                              'توفير مكان آمن للمشاركة والعمل من خلال مشاعر وتحديات مرضى السرطان .',
+                              'اسمح للأعضاء بالتعلم من الآخرين الذين يواجهون مواقف مماثلة .',
+                              'شارك مع الأعضاء لتعزيز رحلتهم في مستشفانا .',
+                              'قدم لهم جلسات تثقيفية في العديد من جوانب رحلتهم العلاجية .',
+                              'أعضاء المستشفى المحترفين يدعمون الأعضاء طوال الوقت للإجابة على أسئلتهم .',
+                              'تطبيق نهج الرعاية المتمحورة حول الشخص في المجموعة لتعزيز تجربتهم الشاملة .'
                             ]
                           },
                           {
                             text: ' أعضاء المستشفى :',
                             subItems: [
-                              'د.طارق محمد (استشاري الأورام)',
-                              ' د.أحمد عنتر (إستشاري الأورام وأمراض الدم)',
-                              'غنى العرب (مدير التطوير المهني المستمر وممرضة الأورام)',
-                              '  فاطمة الغديب (رئيس التحويل)',
-                              'فاطمة العلي (أخصائية نفسية)',
-                              'أمنيه الخليفة (طاقم المركز) '
+                              'د.طارق محمد (استشاري الأورام) .',
+                              'د.أحمد عنتر (إستشاري الأورام وأمراض الدم) .',
+                              'غنى العرب (مدير التطوير المهني المستمر وممرضة الأورام) .',
+                              'فاطمة الغديب (رئيس التحويل) .',
+                              'فاطمة العلي (أخصائية نفسية) .',
+                              'أمنيه الخليفة (طاقم المركز) .'
                             ]
                           }
                         ]}

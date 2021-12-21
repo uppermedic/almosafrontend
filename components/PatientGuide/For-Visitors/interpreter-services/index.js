@@ -23,7 +23,9 @@ const Content = ({ t }) => {
                     داخل مستشفى الموسى التخصصي، أو بحاجة إلى معلومات طبية بلغة
                     غير العربية، فإننا نوفر لكم خدمات الترجمة الشفوية ولأحبابكم،
                     ترجمة فورية ومجانية وبجودة عالية، للوصول إلى خدمة طبية
-                    متكاملة دون وجود أي حواجز. الترجمات المتوفرة للغة العربية:
+                    متكاملة دون وجود أي حواجز . <br />
+                    <br />
+                    <strong>الترجمات المتوفرة للغة العربية : </strong>{' '}
                     الإنجليزية – الروسية – التاغلوغية – الأردية – الهندية
                     مالايالامية – البرتغالية - البنجلادشية – الكشميرية –
                     الإيطالية – الفرنسية .
@@ -37,12 +39,15 @@ const Content = ({ t }) => {
                     If the language is a hindrance, or you have difficulty
                     understanding medical instructions inside Al-Moosa
                     Specialist Hospital or need medical information in a
-                    language other than Arabic.
-                    <br />
-                    In that case, we provide interpretation services for you and
-                    your loved ones Available : Arabic translations- English -
-                    Russian - Tagalog - Urdu - Hindi - Malayalam - Portuguese -
-                    Bangladeshi - Kashmiri - Italian - French.
+                    language other than Arabic .
+                    <br /> <br />
+                    <strong>
+                      In that case, we provide interpretation services for you
+                      and your loved ones Available :
+                    </strong>{' '}
+                    Arabic translations- English - Russian - Tagalog - Urdu -
+                    Hindi - Malayalam - Portuguese - Bangladeshi - Kashmiri -
+                    Italian - French .
                   </p>
                 )}
               </div>

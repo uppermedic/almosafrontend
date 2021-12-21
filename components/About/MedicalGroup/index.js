@@ -33,11 +33,11 @@ function index({ t }) {
                     <br /> <br />
                     Almoosa Health Group consists of :
                     <ul>
-                      <li>Almoosa Specialist Hospital</li>
-                      <li>Almoosa for rehabilitation and LTC</li>
-                      <li>Almoosa College of health sciences</li>
-                      <li>Almoosa Home Health Care</li>
-                      <li>Almoosa Pharmacies</li>
+                      <li>Almoosa Specialist Hospital .</li>
+                      <li>Almoosa for rehabilitation and LTC .</li>
+                      <li>Almoosa College of health sciences .</li>
+                      <li>Almoosa Home Health Care .</li>
+                      <li>Almoosa Pharmacies .</li>
                     </ul>
                   </p>
                   <br />
@@ -55,7 +55,7 @@ function index({ t }) {
                     </p>
                   </div> */}
                   <div className="description">
-                    <h6>Almoosa for rehabilitation and long term care : </h6>
+                    <h6>Almost for rehabilitation and long term care : </h6>
                     <p>
                       The new 300-bed facility will be a rehabilitation and
                       long-term care oasis in the region, including
@@ -82,9 +82,9 @@ function index({ t }) {
                       not-for-profit private college in the eastern region. The
                       college opened its doors in September 2020 with innovative
                       programs focusing on inter-professional education, state
-                      of the art simulation labs and a curriculum developed in
+                      of the art simulation labs, and a curriculum developed in
                       collaboration with the MGH Institute of Health professions
-                      in Boston
+                      in Boston .
                       <br />
                       <a
                         href="https://www.almoosacollege.edu.sa/"
@@ -109,7 +109,7 @@ function index({ t }) {
                     <h6>Outpatient Pharmacy (south tower) :</h6>
                     <p>
                       Outpatient pharmacy located on the ground floor in the
-                      south tower, it operates around the clock (24 hours) and
+                      south tower operates around the clock (24 hours) and
                       provides several services .
                     </p>
                   </div>
@@ -119,7 +119,7 @@ function index({ t }) {
                     <p>
                       A Smart Robotic Outpatient Pharmacy, which is the use of
                       high-tech robotic machines in pharmacy practice and in the
-                      healthcare sector, which has many added values .
+                      healthcare sector, has many added values .
                     </p>
                   </div>
 
@@ -134,7 +134,7 @@ function index({ t }) {
                   <div className="description">
                     <h6>Inpatient pharmacies :</h6>
                     <p>
-                      Operate around the clock (24 hours) and provides several
+                      Operate around the clock (24 hours) and provide several
                       services .
                     </p>
                   </div>
@@ -146,7 +146,7 @@ function index({ t }) {
                       drug dispensing system (Omnicell), which consists of
                       medicine cabinets linked to the health information system
                       "HIS" these cabinets identify each patient through his
-                      file number, dose are perfectly specified by the doctor
+                      file number, dose perfectly specified by the doctor
                       promptly automatically and without any human intervention
                       .
                       <br />
@@ -170,20 +170,20 @@ function index({ t }) {
                   <p>
                     استثمرت المجموعة في العديد من مشاريع الرعاية الصحية خلال
                     السنوات الماضية لتوفير خدمات صحية ذات جودة عالمية يستحقها
-                    أهلنا في الأحساء و مرضانا من كافة المملكة و الخليج ، كانت
+                    أهلنا في الأحساء ومرضانا من كافة المملكة الخليج، كانت
                     البداية مع المستشفى الرئيسي الذي أُنشئ عام 1996 كأول مستشفى
-                    خاص في منطقة الأحساء ، تلاه البرج الجنوبي ، حتى افتتاح البرج
+                    خاص في منطقة الأحساء، تلاه البرج الجنوبي، حتى افتتاح البرج
                     الشمالي في نهاية 2021 والذي يتميز بتصميم عالمي يناسب
-                    احتياجات مرضانا و خدمات متميزة باستخدام أحدث التقنيات
+                    احتياجات مرضانا وخدمات متميزة باستخدام أحدث التقنيات
                     التكنولوجية .
                     <br /> <br />
                     تتكون مجموعة الموسى الصحية من :
                     <ul>
-                      <li>مسشتفى الموسى التخصصي </li>
-                      <li>مستشفى الموسى للتأهيل و الرعاية الممتدة</li>
-                      <li>كلية الموسى للعلوم الصحية</li>
-                      <li>الموسى للرعاية الصحية المنزلية</li>
-                      <li>صيدليات الموسى</li>
+                      <li>مسشتفى الموسى التخصصي . </li>
+                      <li>مستشفى الموسى للتوأهيل والرعاية الممتدة .</li>
+                      <li>كلية الموسى للعلوم الصحية .</li>
+                      <li>الموسى للرعاية الصحية المنزلية .</li>
+                      <li>صيدليات الموسى .</li>
                     </ul>
                   </p>
                   <br />
@@ -195,21 +195,21 @@ function index({ t }) {
                       ويمتد على أرض مساحتها 30 ألف متر مربع، وسيكون المركز
                       الجديد الأول من نوعه في المملكة بإذن الله، حيث سيكون
                       المركز واحة استشفائية شاملة تخدم أهالي المنطقة والمملكة
-                      والخليج.
+                      والخليج .
                     </p>
                   </div>
                   <div className="description">
                     <h6>كلية الموسى للعلوم الصحية :</h6>
                     <p>
                       تم تأسيس كلية الموسى للعلوم الصحية عام ٢٠١٩ وتعد أول كلية
-                      خاصة غير ربحية في المنطقة.
+                      خاصة غير ربحية في المنطقة .
                       <br />
                       تتطلع كلية الموسى للعلوم الصحية لتخريج نخبة من ممرضات
                       المستقبل بتوفير بيئة تشجع على التعلم مزودة بالتكنولوجيا
                       الحديثة ومناهج مطورة بطرق تدريس مبتكرة من خلال تعاونهامع
                       معهد MGH للمهن الصحية في بوستن. ويلتزم جميع العاملين في
-                      الكلية بتوفير مستوى تعليمي راقي على قدر من الكفاءة
-                      والجودة. <br />
+                      الكلية بتوفير مستوى تعليمي راقي على قدر من الكفاءة والجودة
+                      . <br />
                       <a
                         href="https://www.almoosacollege.edu.sa"
                         target="_blank"
@@ -225,8 +225,8 @@ function index({ t }) {
                       يقدم مستشفى الموسى للرعاية المنزلية خدمات رعاية شاملة على
                       يد كفاءات طبية وتمريضية متميزة، بما في ذلك الرعاية
                       التمريضية، والعلاج الطبيعي والتأهيلي، رعاية كبار السن،
-                      رعاية ما بعد العمليات الجراحية وادارة الأمراض المزمنة
-                      بالمنزل
+                      رعاية ما بعد العمليات الجراحية وإدارة الأمراض المزمنة
+                      بالمنزل .
                     </p>
                   </div>
 
@@ -234,7 +234,7 @@ function index({ t }) {
                     <h6>الصيدلية الخارجية في البرج الجنوبي :</h6>
                     <p>
                       تقع في الطابق الأرضي، وتعمل على مدار الساعة (24 ساعة)
-                      وتقدم العديد من الخدمات .{' '}
+                      وتقدم العديد من الخدمات .
                     </p>
                   </div>
 
@@ -262,7 +262,7 @@ function index({ t }) {
                   </div>
 
                   <div className="description">
-                    <h6>نظام صرف الأدوية الآلي (Omnicell) :</h6>
+                    <h6>نظام صرف الأدوية الآلي(Omnicell) :</h6>
                     <p>
                       نفخر بوجود نظام صرف الأدوية الآلي في أجنحة التنويم
                       (Omnicell) وهو مكون من خزائن للأدوية مربوطة بنظام
@@ -279,7 +279,7 @@ function index({ t }) {
                       <br />
                       يساعد النظام أيضًا على تتبع مخزون الأدوية بحيث نستطيع
                       تأمين حاجة كل قسم من الأدوية بوقت مسبق ونتجنب خطورة نقص
-                      الأدوية وخصوصا الأدوية التي يترتب عليها أنقاذ حياة المرضى
+                      الأدوية وخصوصا الأدوية التي يترتب عليها إنقاذ حياة المرضى
                       .
                     </p>
                   </div>
