@@ -104,7 +104,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {categories.map(cat => (
                       <li key={cat.id}>
                         <Link
-                          href={`/${locale}/media-center/filter-results/?cats=${cat.slug}`}
+                          href={`/${locale}/media-center/filter-results/?cats=${cat[language].category_name}`}
                         >
                           <a>{cat[language].category_name}</a>
                         </Link>
