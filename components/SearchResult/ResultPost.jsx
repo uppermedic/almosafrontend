@@ -9,19 +9,91 @@ function Post({ article, t }) {
   const { title, slug, content } = language ? article[language] : {};
 
   const [locale, setlocale] = useState('');
-  const [articleType, setarticleType] = useState('news');
+  const [urlResult, seturlResult] = useState('');
 
   useEffect(() => {
     setlocale(language);
   }, [language]);
 
   useEffect(() => {
-    if (type === 'blog') {
-      setarticleType('news');
-    } else if (type === 'medical-article') {
-      setarticleType('medical-articles');
+    /*
+    supportive-services
+    inpatient-units
+    medical-centers
+    medical-programs
+    doctor
+    blog
+    medical-article
+    EVENT
+    COURSE
+     */
+    switch (type) {
+      case 'supportive-services':
+        seturlResult(`/${locale}/services/supportive-services/?id=${id}`);
+        break;
+
+      case 'inpatient-units':
+        seturlResult(
+          `/${locale}/services/inpatient-units/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'medical-centers':
+        seturlResult(
+          `/${locale}/services/medical-centers/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'medical-programs':
+        seturlResult(
+          `/${locale}/services/medical-programs/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'doctor':
+        seturlResult(
+          `/${locale}/our-doctors/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+
+      case 'blog':
+        seturlResult(
+          `/${locale}/media-center/news/post/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'medical-article':
+        seturlResult(
+          `/${locale}/media-center/medical-articles/post/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'EVENT':
+        seturlResult(
+          `/${locale}/training-education/events/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+      case 'COURSE':
+        seturlResult(
+          `/${locale}/training-education/courses/${String(title)
+            .split(' ')
+            .join('-')}/?id=${id}`
+        );
+        break;
+
+      default:
+        break;
     }
-  }, [article]);
+  }, [article, language]);
 
   return (
     <div className="post-card my-4 border-bottom pb-4">
@@ -47,11 +119,7 @@ function Post({ article, t }) {
                 }}
               />
             </p>
-            <Link
-              href={`/${locale}/media-center/${articleType}/post/${String(title)
-                .split(' ')
-                .join('-')}/?id=${id}`}
-            >
+            <Link href={urlResult}>
               <a>{t('read_more')}</a>
             </Link>
           </div>
