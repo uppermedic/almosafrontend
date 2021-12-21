@@ -49,7 +49,7 @@ const Index = ({ article, categories, related, t }) => {
                     type="search"
                     name="search"
                     id="exampleSearch"
-                    placeholder={t('search_news')}
+                    placeholder={t('search_medical-articles')}
                   />
                 </FormGroup>
               </Form>
@@ -58,14 +58,14 @@ const Index = ({ article, categories, related, t }) => {
               <h4>{t('categories')}:</h4>
               <ul className="list-unstyled">
                 <li>
-                  <Link href={`/${locale}/media-center/news`}>
+                  <Link href={`/${locale}/media-center/medical-articles`}>
                     <a>{t('all')}</a>
                   </Link>
                 </li>
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/news/?cats=${cat.slug}`}
+                      href={`/${locale}/media-center/filter-results/?cats=${cat[language].category_name}`}
                     >
                       <a>{cat[language].category_name}</a>
                     </Link>
