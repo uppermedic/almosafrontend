@@ -214,7 +214,7 @@ export const GovernersData = [
         'Deputy Chief Executive Officer for Finance at Ahdaf holding Development Company, ahsa'
       ]
     }
-  } /*******/,
+  },
   {
     image: '/images/about/leadership-team/moaz.png',
     id: 7,
