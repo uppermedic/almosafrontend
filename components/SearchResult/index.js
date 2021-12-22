@@ -29,6 +29,7 @@ const Index = ({ data, router, t }) => {
       `/${locale}/search-result/?search=${search}&page=${selected + 1}`
     );
   };
+
   return (
     <section className="content-wrapper">
       <Container>
@@ -61,14 +62,16 @@ const Index = ({ data, router, t }) => {
             </div>
           </Col>
           <Col className="border-bottom mb-3">
-            {data?.data?.length > 0 ? (
-              data.data.map(article => <ResultPost article={article} />)
+            {Object.values(data?.data).length > 0 ? (
+              Object.values(data?.data)?.map(article => (
+                <ResultPost article={article} />
+              ))
             ) : (
               <h4 className="text-center py-5">{t('no_results')}</h4>
             )}
           </Col>
         </Row>
-        {data.data.length > 0 && (
+        {Object.values(data?.data).length > 0 && (
           <Row>
             <Col xs={12} className="d-flex justify-content-center mb-4">
               <ReactPaginate

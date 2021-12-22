@@ -12,13 +12,14 @@ function InpatientPage({ t, services, servicesDataSingle }) {
   const lang = i18n.language;
 
   useEffect(() => {
-    if (lang && locale) {
+    if (lang && locale && router?.asPath == '/services/inpatient-units/') {
       router.push(
         `/${lang}/services/inpatient-units/?id=${services.services[0].id}`
       );
     }
-  }, [lang, locale]);
+  }, []);
 
+  console.log('router', router);
   return (
     <React.Fragment>
       <Head data={services.seo}></Head>
