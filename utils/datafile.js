@@ -216,7 +216,7 @@ export const GovernersData = [
     }
   },
   {
-    image: '/images/about/leadership-team/moaz.png',
+    image: '/images/about/leadership-team/moaz.PNG',
     id: 7,
     ar: {
       name: 'السيد معاذ النعيم',
@@ -248,7 +248,7 @@ export const GovernersData = [
     }
   },
   {
-    image: '/images/about/leadership-team/mark.png',
+    image: '/images/about/leadership-team/mark.PNG',
     id: 7,
     ar: {
       name: 'د. مارك جيبهاردت',
@@ -276,7 +276,7 @@ export const GovernersData = [
     }
   },
   {
-    image: '/images/about/leadership-team/patric.png',
+    image: '/images/about/leadership-team/patric.PNG',
     id: 7,
     ar: {
       name: 'باتريك أ.شارمل',
