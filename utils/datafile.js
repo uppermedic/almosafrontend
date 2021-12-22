@@ -214,6 +214,96 @@ export const GovernersData = [
         'Deputy Chief Executive Officer for Finance at Ahdaf holding Development Company, ahsa'
       ]
     }
+  } /*******/,
+  {
+    image: '/images/about/leadership-team/moaz.png',
+    id: 7,
+    ar: {
+      name: 'السيد معاذ النعيم',
+      slug: 'أ-معاذ-النعيم',
+      title: 'عضو مجلس الإدارة',
+      paragraph: ``,
+      qualifications: [
+        'بكالوريوس في إدارة الأعمال من جامعة نورث كارولينا في شارلوت',
+        'ماجستير في إدارة الأعمال من جامعة إمبريال كوليدج بلندن'
+      ],
+      positions: [
+        'مؤسس مشارك ورئيس مكتب الاستثمار في Alpha Capital',
+        'عمل في شركة أرامكو سابقاً كمدير محفظة في إدارة الاستثمار لمدة 10 سنوات'
+      ]
+    },
+    en: {
+      name: 'Mr. Moath alnaem',
+      slug: 'mr-moath-alnaem',
+      title: 'Board Member',
+      paragraph: ``,
+      qualifications: [
+        'Bachelor Degree in Bussiness Administration from the University of North Carolina At Charlotte',
+        'MBA from Imperial College in London'
+      ],
+      positions: [
+        'Co-Founder & Chief Investment Office at Alpha Capital',
+        'Former Aramco as Portfolio Manager at the Investment Management Department for 10 Years'
+      ]
+    }
+  },
+  {
+    image: '/images/about/leadership-team/mark.png',
+    id: 7,
+    ar: {
+      name: 'د. مارك جيبهاردت',
+      slug: 'د-مارك-جيبهاردت',
+      title: 'عضو مجلس الإدارة',
+      paragraph: ``,
+      qualifications: [],
+      positions: [
+        'أستاذ جراحة العظام - كلية الطب بجامعة هارفارد',
+        'مركز باث اسرائيل ديكونيس الطبي',
+        'رئيس جراحة العظام السابق في مستشفى بوسطن للأطفال'
+      ]
+    },
+    en: {
+      name: 'Dr. Mark Gebhardt',
+      slug: 'dr-mark-gebhardt',
+      title: 'Board Member',
+      paragraph: ``,
+      qualifications: [],
+      positions: [
+        'Proffesor of orthopedic surgery - Harvard Medical School',
+        'Bath Israel Deaconess Medical Center',
+        'Former Chief of Orthopedic in Boston Children`s Hospital'
+      ]
+    }
+  },
+  {
+    image: '/images/about/leadership-team/patric.png',
+    id: 7,
+    ar: {
+      name: 'باتريك أ.شارمل',
+      slug: 'باتريك-أ-شارمل',
+      title: 'عضو مجلس الإدارة',
+      paragraph: ``,
+      qualifications: [],
+      positions: [
+        'الرئيس والمدير التنفيذي لمستشفى جريفين',
+        'رئيس مؤسسة خدمات مستشفى جريفين',
+        'الرئيس والمدير التنفيذي لشركة Plantree inc.',
+        'مؤلف مشارك لكتاب "وضع المرضى أولاً" الذي حصل على جائزة كتاب الرعاية الصحية للعام من الكلية الأمريكية للرعاية الصحية لعام 2004'
+      ]
+    },
+    en: {
+      name: 'Patrick A. Charmel',
+      slug: 'patrick-a-charmel',
+      title: 'Board Member',
+      paragraph: ``,
+      qualifications: [],
+      positions: [
+        'President & Chief Executive officer of Griffin Hospital',
+        'President of Griffin Hospital services corporation',
+        'Chair & Chief executive officer of Plantree inc.',
+        'Co-author of the book "Putting patients first" Which received the American College of Healthcare executives health care book of the year award in 2004'
+      ]
+    }
   }
 ];
 

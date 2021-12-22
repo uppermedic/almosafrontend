@@ -1,7 +1,19 @@
 .almoosa-doctors {
+  .bord-governers {
+    padding-top: 70px;
+  }
   .our-doctors {
     .title {
       @include sectionHeading($almoosa-light-green-color);
+    }
+    .doctor-content-page {
+      margin-top: 30px !important;
+      .doctor-img {
+        img.governer-doctor {
+          max-height: 350px !important;
+          max-width: 300px !important;
+        }
+      }
     }
   }
 }

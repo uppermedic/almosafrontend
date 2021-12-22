@@ -11,7 +11,7 @@ const index = ({ GovernersData, TeamData, t }) => {
   const [currentDoctor, setcurrentDoctor] = useState({});
 
   return (
-    <section className="our-doctors">
+    <section className="our-doctors bord-governers">
       <div className="container-fluid">
         <Row>
           <Col sm="12" md="3">

@@ -8,7 +8,7 @@ const index = ({ doctorData, t }) => {
   return (
     <section className="our-doctors">
       <Container>
-        <Row className="doctor-details m-auto">
+        <Row className="doctor-details m-auto doctor-content-page">
           {/*  the comming data will come when create main doctor key and value  */}
           <Col lg={4} className="doctor-img">
             <img
@@ -16,7 +16,7 @@ const index = ({ doctorData, t }) => {
               alt={
                 language && doctorData[language] && doctorData[language]?.name
               }
-              className="shadow"
+              className="shadow governer-doctor"
             />
           </Col>
           <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 pt-4">
