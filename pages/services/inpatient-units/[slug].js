@@ -17,7 +17,7 @@ const IntensiveCare = ({ data }) => {
           .join('-')}/?id=${data.id}` || '#'
       );
     }
-  }, [lang, locale]);
+  }, [lang, locale, data]);
 
   return (
     <div className="intensive-care mb-50">

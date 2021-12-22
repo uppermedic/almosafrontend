@@ -93,6 +93,9 @@
           color: #142e48;
           display: block;
           text-align: left;
+          @include respond-below(lg) {
+            text-align: center;
+          }
           @include rtl() {
             text-align: right;
           }
