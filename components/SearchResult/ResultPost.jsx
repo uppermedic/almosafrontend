@@ -33,11 +33,7 @@ function Post({ article, t }) {
         break;
 
       case 'inpatient-units':
-        seturlResult(
-          `/${locale}/services/inpatient-units/${String(title)
-            .split(' ')
-            .join('-')}/?id=${id}`
-        );
+        seturlResult(`/${locale}/services/inpatient-units/?id=${id}`);
         break;
       case 'medical-centers':
         seturlResult(
