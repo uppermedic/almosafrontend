@@ -283,7 +283,10 @@ export const GovernersData = [
       slug: 'باتريك-أ-شارمل',
       title: 'عضو مجلس الإدارة',
       paragraph: ``,
-      qualifications: [],
+      qualifications: [
+        'بكالوريوس العلوم - إدارة الخدمات الصحية - جامعة كوينيبياك',
+        'ماجستير في الصحة العامة - إدارة الخدمات الصحية - جامعة ييل'
+      ],
       positions: [
         'الرئيس والمدير التنفيذي لمستشفى جريفين',
         'رئيس مؤسسة خدمات مستشفى جريفين',
@@ -296,7 +299,10 @@ export const GovernersData = [
       slug: 'patrick-a-charmel',
       title: 'Board Member',
       paragraph: ``,
-      qualifications: [],
+      qualifications: [
+        'Bachelor of science, health services administration - Quinnipiac university',
+        'Master of public health,health services administration - Yale university'
+      ],
       positions: [
         'President & Chief Executive officer of Griffin Hospital',
         'President of Griffin Hospital services corporation',
