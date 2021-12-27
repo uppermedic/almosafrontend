@@ -82,47 +82,50 @@ const index = ({ data, t }) => {
             </Link>
           </Col>
         </Row>
-        <Row className="about pb-5">
-          <Col xs={12}>
-            <h2>{language == 'en' ? 'About THE EVENT' : 'عن الحدث'}</h2>
-          </Col>
-          <Col xs={12}>
-            <p>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html:
-                    language && data[language] && data[language].content
-                      ? strippedContent(data[language].content)
+        {language && data[language]?.content && (
+          <Row className="about pb-5">
+            <Col xs={12}>
+              <h2>{language == 'en' ? 'About THE EVENT' : 'عن الحدث'}</h2>
+            </Col>
+            <Col xs={12}>
+              <p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: data[language]?.content
+                      ? data[language].content
                       : ''
-                }}
-              />
-            </p>
-          </Col>
-        </Row>
-        <Row className="topics">
-          <Col xs={12}>
-            <h2> {language == 'en' ? 'Topics Time line:' : 'المواعيد'} </h2>
-          </Col>
-          <Col xs={12}>
-            {data.timelines.map((time, index) => {
-              return (
-                <div key={index}>
-                  <h4 className="pt-3">{language && time[language].title}</h4>
-                  <div className="times">
-                    <p>
-                      <span> {time.start.slice(0, -3)} </span> :{' '}
-                      <span>{time.end.slice(0, -3)}</span>
-                    </p>
-                    <p className="lecture">
-                      {language == 'en' ? 'Lecture' : 'محاضرة'} :
-                      {language && time[language].lecture_title}
-                    </p>
+                  }}
+                />
+              </p>
+            </Col>
+          </Row>
+        )}
+        {data?.timelines?.length > 0 && (
+          <Row className="topics">
+            <Col xs={12}>
+              <h2> {language == 'en' ? 'Topics Time line:' : 'المواعيد'} </h2>
+            </Col>
+            <Col xs={12}>
+              {data.timelines.map((time, index) => {
+                return (
+                  <div key={index}>
+                    <h4 className="pt-3">{language && time[language].title}</h4>
+                    <div className="times">
+                      <p>
+                        <span> {time.start.slice(0, -3)} </span> :{' '}
+                        <span>{time.end.slice(0, -3)}</span>
+                      </p>
+                      <p className="lecture">
+                        {language == 'en' ? 'Lecture' : 'محاضرة'} :
+                        {language && time[language].lecture_title}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
+                );
+              })}
+            </Col>
+          </Row>
+        )}
       </Container>
     </section>
   );
