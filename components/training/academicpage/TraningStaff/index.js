@@ -71,7 +71,10 @@ const index = ({ t }) => {
           <Col key={idx} sm={12} md={6} lg={4}>
             <div className="boxes">
               <div className="title">{lang && box[lang].title}</div>
-              <div className="box-content">
+              <div
+                className="box-content"
+                style={{ height: box.readMore ? 'auto' : 310 }}
+              >
                 <Markdown>
                   {box.readMore
                     ? lang && box[lang].content
