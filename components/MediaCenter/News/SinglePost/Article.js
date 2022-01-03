@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'reactstrap';
 import { withTranslation, i18n, Link } from 'root/i18n';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import { removeSpChar } from 'src/utils/helpers';
 
 function Article({ article, originalArticle, related, t }) {
   const { language } = i18n;
@@ -29,14 +30,14 @@ function Article({ article, originalArticle, related, t }) {
           />
         </p>
       </Col>
-      <Col xs={12}>
-        <div className="related-links my-5">
-          <h5>
-            <strong>{t('read_more')} : -</strong>
-          </h5>
-          <ul>
-            {related?.length > 0 &&
-              related.map((relLink, idx) => (
+      {related?.length > 0 && (
+        <Col xs={12}>
+          <div className="related-links my-5">
+            <h5>
+              <strong>{t('read_more')} : -</strong>
+            </h5>
+            <ul>
+              {related.map((relLink, idx) => (
                 <li className="py-2" key={idx}>
                   {language === 'en' ? (
                     <IoIosArrowForward />
@@ -44,8 +45,8 @@ function Article({ article, originalArticle, related, t }) {
                     <IoIosArrowBack />
                   )}
                   <Link
-                    href={`/${locale}/media-center/news/post/${String(
-                      relLink[language]?.title
+                    href={`/${locale}/media-center/news/post/${removeSpChar(
+                      String(relLink[language]?.title)
                     )
                       .split(' ')
                       .join('-')}/?id=${relLink?.id}`}
@@ -54,9 +55,10 @@ function Article({ article, originalArticle, related, t }) {
                   </Link>
                 </li>
               ))}
-          </ul>
-        </div>
-      </Col>
+            </ul>
+          </div>
+        </Col>
+      )}
     </Row>
   );
 }

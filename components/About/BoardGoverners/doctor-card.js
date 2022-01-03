@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link } from 'root/i18n';
+import { removeSpChar } from 'src/utils/helpers';
 
 const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
   const { language } = i18n;
@@ -18,7 +19,7 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
       href={
         hasRef
           ? `/${locale}/about/board-directors-and-executive-team/${
-              language && String(doctor[language]?.slug)
+              language && removeSpChar(String(doctor[language]?.slug))
             }/?id=${doctor?.id}`
           : '#'
       }

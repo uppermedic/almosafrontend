@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
-import { strippedContent, truncate } from 'src/utils/helpers';
+import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
 import moment from 'moment';
 
 const Event_Card = ({ cardData, t }) => {
@@ -34,7 +34,8 @@ const Event_Card = ({ cardData, t }) => {
     // need to be cosider for this url ===??? /education/single/1
     <Link
       href={`/${locale}/training-education/events/${
-        language && String(cardData[language]?.title).split(' ').join('-')
+        language &&
+        removeSpChar(String(cardData[language]?.title)).split(' ').join('-')
       }/?id=${cardData?.id}`}
     >
       <a>

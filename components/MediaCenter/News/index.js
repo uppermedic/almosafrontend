@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import ClassNames from 'classnames';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
-import { strippedContent, truncate } from 'src/utils/helpers';
+import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
 import ReactPaginate from 'react-paginate';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
@@ -126,8 +126,8 @@ const Index = ({ data, latest, tags, categories, t }) => {
                   latest?.map((post, idx) => (
                     <li key={String(post.id)}>
                       <Link
-                        href={`/${locale}/media-center/news/post/${String(
-                          language ? post[language]?.title : ''
+                        href={`/${locale}/media-center/news/post/${removeSpChar(
+                          String(language ? post[language]?.title : '')
                         )
                           .split(' ')
                           .join('-')}/?id=${post.id}`}

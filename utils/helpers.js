@@ -37,3 +37,8 @@ export const toArabicDigits = function (str = '') {
     return id[+w];
   });
 };
+
+/**remove some special expressions fro string**/
+export const removeSpChar = function (str = '') {
+  return str.replace(/[\/\\#,+()":*?؟<>{}@!^&=_`]/g, '');
+};

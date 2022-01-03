@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { i18n } from 'root/i18n';
 import Link from 'next/link';
+import { removeSpChar } from 'src/utils/helpers';
 
 const doctor_card = ({ doctor, setcurrentDoctor }) => {
   const { language } = i18n;
@@ -20,7 +21,9 @@ const doctor_card = ({ doctor, setcurrentDoctor }) => {
   };
   return (
     <Link
-      href={`/${locale}/our-doctors/${String(doctor[language]?.name)
+      href={`/${locale}/our-doctors/${removeSpChar(
+        String(doctor[language]?.name)
+      )
         .split(' ')
         .join('-')}/?id=${doctor?.id}`}
     >

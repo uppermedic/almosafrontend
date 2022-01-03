@@ -5,6 +5,7 @@ import Content from 'src/components/Services/medical-programs/program/content';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
+import { removeSpChar } from 'src/utils/helpers';
 
 const HairTranplant = ({ data }) => {
   const lang = i18n.language;
@@ -14,7 +15,9 @@ const HairTranplant = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/services/medical-programs/${String(data.seo[lang].title)
+        `/${lang}/services/medical-programs/${removeSpChar(
+          String(data.seo[lang].title)
+        )
           .split(' ')
           .join('-')}/?id=${data.id}`
       );

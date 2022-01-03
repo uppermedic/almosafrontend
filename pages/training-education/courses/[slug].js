@@ -4,6 +4,7 @@ import Head from 'src/components/layout/head';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
+import { removeSpChar } from 'src/utils/helpers';
 
 const Event = ({ data }) => {
   const lang = i18n.language;
@@ -13,7 +14,9 @@ const Event = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/training-education/courses/${String(data[lang].title)
+        `/${lang}/training-education/courses/${removeSpChar(
+          String(data[lang].title)
+        )
           .split(' ')
           .join('-')}/?id=${data.id}`
       );

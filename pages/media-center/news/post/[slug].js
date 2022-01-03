@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { fetchData } from 'src/store/Request.js';
-
+import { removeSpChar } from 'src/utils/helpers';
 import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/News/SinglePost';
+
 const Post = ({ data }) => {
   const { language } = i18n;
   const router = useRouter();
@@ -13,7 +14,9 @@ const Post = ({ data }) => {
   useEffect(() => {
     if (language && locale) {
       router.push(
-        `/${language}/media-center/news/post/${String(data[language].title)
+        `/${language}/media-center/news/post/${removeSpChar(
+          String(data[language].title)
+        )
           .split(' ')
           .join('-')}/?id=${data.id}`
       );
