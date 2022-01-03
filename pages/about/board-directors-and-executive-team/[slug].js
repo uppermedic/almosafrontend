@@ -7,6 +7,7 @@ import { i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import { useRouter } from 'next/router';
+import { removeSpChar } from 'src/utils/helpers';
 
 function BordDirectors() {
   const { language } = i18n;
@@ -32,9 +33,11 @@ function BordDirectors() {
     if (language && locale) {
       const data = JSON.parse(localStorage.getItem('doctor'));
       router.push(
-        `/${language}/about/board-directors-and-executive-team/${String(
-          data[language]?.slug
-        )}/?id=${data?.id}`
+        `/${language}/about/board-directors-and-executive-team/${removeSpChar(
+          String(data[language]?.slug)
+        )
+          .split(' ')
+          .join('-')}/?id=${data?.id}`
       );
     }
   }, [language, locale]);

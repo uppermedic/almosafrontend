@@ -6,6 +6,7 @@ import Head from 'src/components/layout/head';
 import { Col, Container, Row, Table } from 'reactstrap';
 import { FaFacebookF, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import { removeSpChar } from 'src/utils/helpers';
 
 const SingleDoctor = ({ doctor }) => {
   const [qualifications, setQualifications] = useState({});
@@ -22,7 +23,7 @@ const SingleDoctor = ({ doctor }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/our-doctors/${String(doctor?.data[lang]?.name)
+        `/${lang}/our-doctors/${removeSpChar(String(doctor?.data[lang]?.name))
           .split(' ')
           .join('-')}/?id=${doctor?.data?.id}`
       );

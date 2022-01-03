@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import { truncate, strippedContent } from 'src/utils/helpers.js';
+import { truncate, strippedContent, removeSpChar } from 'src/utils/helpers.js';
 
 function NewsItem({ news, t }) {
   const { language } = i18n;
@@ -14,7 +14,8 @@ function NewsItem({ news, t }) {
     <div className="item caro-card">
       <Link
         href={`/${locale}/media-center/news/post/${
-          language && String(news[language].title).split(' ').join('-')
+          language &&
+          removeSpChar(String(news[language].title)).split(' ').join('-')
         }/?id=${news.id}`}
       >
         <a>
@@ -46,7 +47,10 @@ function NewsItem({ news, t }) {
               href={
                 language &&
                 `/${locale}/media-center/news/post/${
-                  language && String(news[language].title).split(' ').join('-')
+                  language &&
+                  removeSpChar(String(news[language].title))
+                    .split(' ')
+                    .join('-')
                 }/?id=${news.id}`
               }
             >

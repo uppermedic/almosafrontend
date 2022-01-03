@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link } from 'root/i18n';
+import { removeSpChar } from 'src/utils/helpers';
 
 export default function MedicalCenter({ item }) {
   const { language } = i18n;
@@ -12,7 +13,8 @@ export default function MedicalCenter({ item }) {
   return (
     <Link
       href={`/${locale}/services/medical-centers/${
-        language && String(item[language].title).split(' ').join('-')
+        language &&
+        removeSpChar(String(item[language].title)).split(' ').join('-')
       }/?id=${item.id}`}
     >
       <a>

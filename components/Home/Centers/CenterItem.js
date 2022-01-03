@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import { truncate, strippedContent } from 'src/utils/helpers.js';
+import { truncate, strippedContent, removeSpChar } from 'src/utils/helpers.js';
 import Markdown from 'markdown-to-jsx';
 
 function CenterItem({ t, center }) {
@@ -15,7 +15,8 @@ function CenterItem({ t, center }) {
     <div className="item caro-card">
       <Link
         href={`/${locale}/services/medical-centers/${
-          language && String(center[language]?.title).split(' ').join('-')
+          language &&
+          removeSpChar(String(center[language]?.title)).split(' ').join('-')
         }/?id=${center?.id}`}
       >
         <a>
@@ -44,7 +45,10 @@ function CenterItem({ t, center }) {
             </p>
             <Link
               href={`/${locale}/services/medical-centers/${
-                language && String(center[language]?.title).split(' ').join('-')
+                language &&
+                removeSpChar(String(center[language]?.title))
+                  .split(' ')
+                  .join('-')
               }/?id=${center?.id}`}
             >
               <a className="details_link">{t('read_more')}</a>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
-import { strippedContent, truncate } from 'src/utils/helpers';
+import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
 import { Row, Col } from 'reactstrap';
 function Post({ article, t }) {
   const { id, image, created_at } = article;
@@ -37,7 +37,9 @@ function Post({ article, t }) {
             />
           </p>
           <Link
-            href={`/${locale}/media-center/news/post/${String(title)
+            href={`/${locale}/media-center/news/post/${removeSpChar(
+              String(title)
+            )
               .split(' ')
               .join('-')}/?id=${id}`}
           >
