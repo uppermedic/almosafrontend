@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { i18n, Link, withTranslation } from 'root/i18n';
 import { Row, Col } from 'reactstrap';
-import { strippedContent, truncate } from 'src/utils/helpers';
+import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
 
 function Post({ article, t }) {
   const { id, image, created_at, type } = article;
@@ -37,21 +37,21 @@ function Post({ article, t }) {
         break;
       case 'medical-centers':
         seturlResult(
-          `/${locale}/services/medical-centers/${String(title)
+          `/${locale}/services/medical-centers/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );
         break;
       case 'medical-programs':
         seturlResult(
-          `/${locale}/services/medical-programs/${String(title)
+          `/${locale}/services/medical-programs/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );
         break;
       case 'doctor':
         seturlResult(
-          `/${locale}/our-doctors/${String(title)
+          `/${locale}/our-doctors/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );
@@ -59,28 +59,30 @@ function Post({ article, t }) {
 
       case 'blog':
         seturlResult(
-          `/${locale}/media-center/news/post/${String(title)
+          `/${locale}/media-center/news/post/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );
         break;
       case 'medical-article':
         seturlResult(
-          `/${locale}/media-center/medical-articles/post/${String(title)
+          `/${locale}/media-center/medical-articles/post/${removeSpChar(
+            String(title)
+          )
             .split(' ')
             .join('-')}/?id=${id}`
         );
         break;
       case 'EVENT':
         seturlResult(
-          `/${locale}/training-education/events/${String(title)
+          `/${locale}/training-education/events/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );
         break;
       case 'COURSE':
         seturlResult(
-          `/${locale}/training-education/courses/${String(title)
+          `/${locale}/training-education/courses/${removeSpChar(String(title))
             .split(' ')
             .join('-')}/?id=${id}`
         );

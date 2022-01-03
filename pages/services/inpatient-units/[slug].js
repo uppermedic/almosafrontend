@@ -4,6 +4,8 @@ import Content from 'src/components/Services/inpatient/Single';
 import { fetchData } from 'src/store/Request.js';
 import { i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
+import { removeSpChar } from 'src/utils/helpers';
+
 const IntensiveCare = ({ data }) => {
   const lang = i18n.language;
   const router = useRouter();
@@ -12,7 +14,9 @@ const IntensiveCare = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/services/inpatient-units/${String(data.seo[lang].title)
+        `/${lang}/services/inpatient-units/${removeSpChar(
+          String(data.seo[lang].title)
+        )
           .split(' ')
           .join('-')}/?id=${data.id}` || '#'
       );

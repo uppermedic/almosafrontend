@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { fetchData } from 'src/store/Request.js';
-
+import { removeSpChar } from 'src/utils/helpers';
 import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/MedicalArticles/SinglePost';
@@ -13,8 +13,8 @@ const Post = ({ data }) => {
   useEffect(() => {
     if (language && locale) {
       router.push(
-        `/${language}/media-center/medical-articles/post/${String(
-          data[language].title
+        `/${language}/media-center/medical-articles/post/${removeSpChar(
+          String(data[language].title)
         )
           .split(' ')
           .join('-')}/?id=${data.id}`

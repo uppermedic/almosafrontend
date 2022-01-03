@@ -5,6 +5,7 @@ import Center from 'src/components/Services/medical-centers/center';
 import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from '../../../components/layout/Hero';
+import { removeSpChar } from 'src/utils/helpers';
 
 const Post = ({ data }) => {
   const lang = i18n.language;
@@ -13,7 +14,9 @@ const Post = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${locale}/services/medical-centers/${String(data.seo[locale].title)
+        `/${locale}/services/medical-centers/${removeSpChar(
+          String(data.seo[locale].title)
+        )
           .split(' ')
           .join('-')}/?id=${data.id}`
       );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, i18n, withTranslation } from 'root/i18n';
 import { truncate } from 'src/utils/helpers';
 import moment from 'moment';
+import { removeSpChar } from 'src/utils/helpers';
 
 const courseCard = ({ cardData, t }) => {
   const { language } = i18n;
@@ -14,7 +15,8 @@ const courseCard = ({ cardData, t }) => {
   return (
     <Link
       href={`/${locale}/training-education/courses/${
-        language && String(cardData[language]?.title).split(' ').join('-')
+        language &&
+        removeSpChar(String(cardData[language]?.title)).split(' ').join('-')
       }/?id=${cardData?.id}`}
     >
       <a>

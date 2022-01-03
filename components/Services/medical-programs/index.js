@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Card from '../Card';
 import { i18n } from 'root/i18n';
+import { removeSpChar } from 'src/utils/helpers';
 
 export default function index({ data }) {
   const { language } = i18n;
@@ -20,7 +21,8 @@ export default function index({ data }) {
         ...item,
         path:
           `services/medical-programs/${
-            language && String(item[language].title).split(' ').join('-')
+            language &&
+            removeSpChar(String(item[language].title)).split(' ').join('-')
           }/?id=${item.id}` || '#'
       };
     }
