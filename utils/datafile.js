@@ -34,6 +34,10 @@ export const dataAboutTabs = [
   {
     path: 'about/almoosa-medical-group',
     label: 'almoosa medical group'
+  },
+  {
+    path: 'about/annual-report',
+    label: 'annual report'
   }
 ];
 

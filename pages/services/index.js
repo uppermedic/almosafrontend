@@ -7,6 +7,8 @@ import { fetchData } from 'src/store/Request.js';
 
 const Services = ({ data }) => {
   const { language } = i18n;
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
 
   if (data) {
     return (
@@ -14,7 +16,7 @@ const Services = ({ data }) => {
         <Head data={data.page.seo}></Head>
         <Hero bg={data.page.page_cover}>
           <div className="hero-content">
-            <h1 className="title">{data && data.page.seo[language]?.title}</h1>
+            <h1 className="title">{titleHero}</h1>
           </div>
         </Hero>
         <ServicesContent data={data.categories} seo={data.page.seo} />

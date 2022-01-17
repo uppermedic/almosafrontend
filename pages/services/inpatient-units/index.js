@@ -19,7 +19,6 @@ function InpatientPage({ t, services, servicesDataSingle }) {
     }
   }, []);
 
-  console.log('router', router);
   return (
     <React.Fragment>
       <Head data={services.seo}></Head>
@@ -27,7 +26,7 @@ function InpatientPage({ t, services, servicesDataSingle }) {
         <Hero bg={servicesDataSingle.thumbnail}>
           <div className="hero-content">
             <h1 className="title">
-              {lang && servicesDataSingle.seo[lang].title}
+              {lang && servicesDataSingle.seo[lang]?.title}
             </h1>
           </div>
         </Hero>

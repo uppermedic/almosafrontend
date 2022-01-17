@@ -7,12 +7,13 @@ import { withTranslation, i18n } from 'root/i18n';
 
 const Media = ({ data, t }) => {
   const { language } = i18n;
+  const titleHero = language && data.page.seo[language]?.title;
   return (
     <div className="media-center">
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{language && data.page.seo[language].title}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
       <MediaCenter />

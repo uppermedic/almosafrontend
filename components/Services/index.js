@@ -20,21 +20,6 @@ const ServicesContent = ({ data }) => {
               <Service item={item} />
             </Col>
           ))}
-          <Col className="m-auto card-wrapper">
-            <Service
-              item={{
-                thumbnail: '/images/services/nursingS.png',
-                en: {
-                  slug: 'nursing-department',
-                  title: 'Nursing Department'
-                },
-                ar: {
-                  slug: 'nursing-department',
-                  title: 'قسم التمريض'
-                }
-              }}
-            />
-          </Col>
         </Row>
       </Container>
     </section>

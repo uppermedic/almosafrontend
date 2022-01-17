@@ -62,7 +62,7 @@ const Header = ({ t }) => {
                 <a>
                   <img
                     className="logo2"
-                    src="/images/logo2.png"
+                    src="/images/logo2.jpeg"
                     alt="magent"
                     style={{ cursor: 'pointer' }}
                   />

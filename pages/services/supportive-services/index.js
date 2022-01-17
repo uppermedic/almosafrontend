@@ -9,38 +9,29 @@ import { useRouter } from 'next/router';
 function Supportive({ t, services, servicesDataSingle }) {
   const router = useRouter();
   const lang = i18n.language;
+  const { locale } = router;
+  const titleHero = lang && servicesDataSingle.seo[lang]?.title;
 
   const [url, seturl] = useState('');
+
+  useEffect(() => {
+    if (lang && locale && router?.asPath == '/services/supportive-services/') {
+      router.push(
+        `/${lang}/services/supportive-services/?id=${services.services[0].id}`
+      );
+    }
+  }, []);
 
   useEffect(() => {
     seturl(window.location.href);
   });
 
-  const pharmacy = {
-    thumbnail: '/images/services/support/pharmacy.png',
-    seo: {
-      en: {
-        title: 'The Pharmacy'
-      },
-      ar: {
-        title: 'الصيدلية'
-      }
-    }
-  };
   return (
     <div className="support-services">
       <Head data={services.seo}></Head>
-      <Hero
-        bg={
-          url?.includes('?') ? servicesDataSingle.thumbnail : pharmacy.thumbnail
-        }
-      >
+      <Hero bg={servicesDataSingle.thumbnail}>
         <div className="hero-content">
-          <h1 className="title">
-            {url?.includes('?')
-              ? lang && servicesDataSingle.seo[lang].title
-              : lang && pharmacy.seo[lang].title}
-          </h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
       <SupportServices

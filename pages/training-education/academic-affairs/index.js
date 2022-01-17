@@ -5,45 +5,36 @@ import Academicpage from 'components/training/academicpage';
 import { fetchData } from 'src/store/Request.js';
 import { i18n, withTranslation } from 'root/i18n';
 
-const AcademicTraning = ({ data, t }) => {
+const AcademicTraning = ({ academicData, academicTeam, t }) => {
   const lang = i18n.language;
+  const titleHero = lang && academicData.page?.seo[lang]?.title;
 
-  const seo = {
-    ar: {
-      title: 'الشؤون الأكاديمية',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Academic Affairs',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   return (
     <div className="training-education">
-      <Head data={seo}></Head>
-      <Hero bg="/images/training/academic/academic-banner1.jpg">
+      <Head data={academicData.page.seo}></Head>
+      <Hero bg={academicData.page?.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:academic affairs')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <Academicpage data={data} />
+      <Academicpage academicTeam={academicTeam} data={academicData?.contents} />
     </div>
   );
 };
 
 export async function getServerSideProps(context) {
-  let { error, data } = await fetchData('education/academic/team');
-  if (error) {
+  let { error: error1, data: academicData } = await fetchData('/page/17');
+  let { error: error2, data: academicTeam } = await fetchData(
+    '/education/academic/team'
+  );
+
+  if (error1 || error2) {
     return {
       notFound: true
     };
   }
   return {
-    props: { data }
+    props: { academicData, academicTeam }
   };
 }
 

@@ -1,57 +1,57 @@
-.goals {
-  padding-top: 30px;
-  padding-bottom: 50px;
-  @include background-image;
-  h2 {
-    @include sectionHeading($primary-color);
-  }
-  ul {
-    @include respond-below(lg) {
-      margin-bottom: 1em !important;
-    }
-    li {
-      list-style-type: none !important;
-      position: relative;
-      &::before {
-        position: absolute;
-        content: '';
-        top: 50%;
-        left: -30px;
-        transform: translateY(-50%);
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        background-color: $primary-color;
-        border: 1px solid $primary-color;
-        box-shadow: 0 0rem 0.5rem $primary-color;
-        @include respond-below(lg) {
-          display: none;
-        }
-      }
-      @include rtl() {
-        &::before {
-          left: 0;
-          right: -30px;
-        }
-      }
-    }
-  }
-  ul * {
-    font-size: 20px !important;
-    font-family: 'diodrum-arabic-meduim' !important;
-    @include respond-below(lg) {
-      text-align: center;
-      font-size: 18px !important;
-    }
-    @include respond-below(sm) {
-      font-size: 16px !important;
-    }
-  }
+// .goals {
+//   padding-top: 30px;
+//   padding-bottom: 50px;
+//   @include background-image;
+//   h2 {
+//     @include sectionHeading($primary-color);
+//   }
+//   ul {
+//     @include respond-below(lg) {
+//       margin-bottom: 1em !important;
+//     }
+//     li {
+//       list-style-type: none !important;
+//       position: relative;
+//       &::before {
+//         position: absolute;
+//         content: '';
+//         top: 50%;
+//         left: -30px;
+//         transform: translateY(-50%);
+//         height: 15px;
+//         width: 15px;
+//         border-radius: 50%;
+//         background-color: $primary-color;
+//         border: 1px solid $primary-color;
+//         box-shadow: 0 0rem 0.5rem $primary-color;
+//         @include respond-below(lg) {
+//           display: none;
+//         }
+//       }
+//       @include rtl() {
+//         &::before {
+//           left: 0;
+//           right: -30px;
+//         }
+//       }
+//     }
+//   }
+//   ul * {
+//     font-size: 20px !important;
+//     font-family: 'diodrum-arabic-meduim' !important;
+//     @include respond-below(lg) {
+//       text-align: center;
+//       font-size: 18px !important;
+//     }
+//     @include respond-below(sm) {
+//       font-size: 16px !important;
+//     }
+//   }
 
-  img {
-    display: block;
-    @include respond-below(md) {
-      height: 100%;
-    }
-  }
-}
+//   img {
+//     display: block;
+//     @include respond-below(md) {
+//       height: 100%;
+//     }
+//   }
+// }

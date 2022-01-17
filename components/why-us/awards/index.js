@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { i18n, withTranslation } from 'root/i18n';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
+import PageContent from 'components/reusableComponents/PageContent';
 
 import Card from './Card';
 const data = [
@@ -221,7 +222,7 @@ const data = [
     }
   }
 ];
-const index = ({ t }) => {
+const index = ({ t, contentData }) => {
   const { language } = i18n;
   return (
     <section className="awards">
@@ -231,20 +232,29 @@ const index = ({ t }) => {
             <SideTabs items={dataAboutTabs} index={4} />
           </Col>
           <Col sm="12" md="8">
-            <Row>
-              <Col>
-                <h2>{t('menu:awards')}</h2>
-              </Col>
-            </Row>
-            <Container>
-              <Row className="mt-5">
-                {data.map(item => (
-                  <Col xl={6} className="col_1">
-                    <Card item={item} key={item.id} />
-                  </Col>
-                ))}
-              </Row>
-            </Container>
+            {contentData?.length > 0 &&
+              contentData?.map(cont => (
+                <>
+                  {/* <Row>
+                    <Col>
+                      <h2>{language && cont[language]?.title}</h2>
+                    </Col>
+                  </Row> */}
+                  <PageContent itemContent={cont} />
+
+                  <Container>
+                    <Row className="">
+                      {Array.isArray(cont?.page_items) &&
+                        cont?.page_items?.length > 0 &&
+                        cont.page_items?.map((item, idx) => (
+                          <Col xl={6} className="col_1">
+                            <Card item={item} key={idx} />
+                          </Col>
+                        ))}
+                    </Row>
+                  </Container>
+                </>
+              ))}
           </Col>
         </Row>
       </div>

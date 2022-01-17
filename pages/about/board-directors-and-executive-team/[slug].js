@@ -8,23 +8,11 @@ import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import { useRouter } from 'next/router';
 import { removeSpChar } from 'src/utils/helpers';
+import { fetchData } from 'src/store/Request.js';
 
-function BordDirectors() {
+function BordDirectors({ data }) {
   const { language } = i18n;
-  const seo = {
-    ar: {
-      title: 'أعضاء مجلس الإدارة والفريق التنفيذي',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Board Directors & Executive Team',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+
   const router = useRouter();
   const { locale } = router;
   const [doctorData, setdoctorData] = useState({});
@@ -54,10 +42,22 @@ function BordDirectors() {
 
   return (
     <div className="almoosa-doctors doctor-slug-page">
-      <Head data={seo}></Head>
-      <DoctorPage doctorData={doctorData} />
+      <Head data={language && data[language]}></Head>
+      <DoctorPage doctorData={data} />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  let { error, data } = await fetchData(`/page-item/${context.query.id}`);
+  if (error) {
+    return {
+      notFound: true
+    };
+  }
+  return {
+    props: { data }
+  };
 }
 
 export default connect(null, { getCategories })(BordDirectors);

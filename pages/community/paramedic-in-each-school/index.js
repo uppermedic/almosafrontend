@@ -8,13 +8,14 @@ import { fetchData } from 'src/store/Request.js';
 
 const Paramedic = ({ data }) => {
   const lang = i18n.language;
+  const titleHero = lang && data[lang]?.title;
 
   return (
     <section className="paramedic">
       <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h1 className="title">{lang && data[lang].title} </h1>
+          <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
 

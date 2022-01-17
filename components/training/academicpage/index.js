@@ -9,8 +9,9 @@ import AcademicTabs from './AcademicTabs';
 import Fellowship from './Fellowship';
 import { dataACademicTabs } from 'utils/datafile';
 
-const index = ({ data, t }) => {
+const index = ({ data, academicTeam, t }) => {
   const lang = i18n.language;
+
   return (
     <section className="academic-affairs">
       <div className="container-fluid">
@@ -19,58 +20,40 @@ const index = ({ data, t }) => {
             <SideTabs items={dataACademicTabs} index={2} />
           </Col>
           <Col sm="12" md="8">
-            <h2 className="title">{t('menu:academic affairs')}</h2>
+            <h2 className="title">{data[0][lang]?.title}</h2>
 
             <Container>
               <div className="content-sections">
                 <section className="intro-section">
-                  {lang === 'en' && (
+                  {lang && (
                     <p>
-                      With clear vision to “be a trusted world-class health
-                      system that promotes wellness and heals illness”, Almoosa
-                      Medical Group has emphasized the importance of
-                      establishing the Academic Affairs. The Academic Affairs
-                      Project was officially launched on November 2018. It was
-                      established to achieve standard goals such as teaching,
-                      training, scientific research and community service. The
-                      Academic Affairs assumes rapid changes at Almoosa Medical
-                      Group in order to build a closer connection to its
-                      environment and create higher flexibility to meet the
-                      community expectations.
-                      <br />
-                      <br />
-                      Six dimensions in Academic Affairs have been established
-                      to achieve its vision which are Research Center (RC), Life
-                      Support Training Center (LSTC) Continuing Professional
-                      Development (CPD), Training and Staff Development (TSD),
-                      Postgraduate Education (PE), and Medical Library (ML).
-                    </p>
-                  )}
-                  {lang === 'ar' && (
-                    <p>
-                      رؤية مستشفانا هى ان نكون "نظامًا صحيًا عالمي موثوقً ينشر
-                      الصحة ويحارب المرض" ، أولت مجموعة الموسى الطبية أهمية قصوى
-                      لإنشاء قسماً للشؤون الأكاديمية و تم إطلاق مشروع الشؤون
-                      الأكاديمية رسميًا في نوفمبر 2018. وقد تم إنشاؤه لتحقيق
-                      أهداف معيارية مثل التدريس والتدريب والبحث العلمي ، وخلق
-                      مرونة أعلى لتلبية توقعات المجتمع.
-                      <br />
-                      <br />
-                      تم وضع ستة أبعاد في الشؤون الأكاديمية لتحقيق رؤيتها وهي
-                      مركز الأبحاث (RC) ، ومركز التدريب على دعم الحياة (LSTC) ،
-                      والتعليم المهني المستمر (CPD) ، والتدريب وتطوير الموظفين
-                      (TSD) ، والتعليم العالي (PE) ، والمكتبة الطبية (ML)
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: data[0][lang]?.content || ' '
+                        }}
+                      />
                     </p>
                   )}
                 </section>
 
-                <VisionValue />
+                {data[0]?.page_items?.length > 0 && (
+                  <VisionValue visionValueData={data[0]?.page_items} />
+                )}
 
-                <OurTeam ourTeamData={data} />
+                {academicTeam?.length > 0 && (
+                  <OurTeam ourTeamData={academicTeam} />
+                )}
 
-                <AcademicTabs />
+                {data[1]?.page_items?.length > 0 && (
+                  <AcademicTabs
+                    sectionContentData={data[1]}
+                    sectionsData={data[1]?.page_items}
+                  />
+                )}
 
-                <Fellowship />
+                {data[2]?.page_items?.length > 0 && (
+                  <Fellowship fellowshipData={data[2]} />
+                )}
               </div>
             </Container>
           </Col>

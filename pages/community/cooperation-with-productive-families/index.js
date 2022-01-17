@@ -10,13 +10,14 @@ import { fetchData } from 'src/store/Request.js';
 
 const Cooperation = ({ data }) => {
   const lang = i18n.language;
+  const titleHero = lang && data[lang]?.title;
 
   return (
     <section className="cooperation">
       <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h1 className="title">{lang && data[lang].title} </h1>
+          <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
       {data.contents[0] && (

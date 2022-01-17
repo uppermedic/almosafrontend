@@ -13,20 +13,6 @@ import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 const Index = ({ data, getMediaCategories }) => {
-  const head_data = {
-    ar: {
-      title: 'معرض الفيديو',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Video Gallery',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
   const router = useRouter();
   const { locale } = router;
   const { last_page } = data;

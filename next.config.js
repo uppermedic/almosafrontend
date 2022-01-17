@@ -1333,17 +1333,17 @@ const links_permanent = [
   {
     source: '/ar/dr-mahmmoud-mustafa/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D9%85%D8%B5%D8%B7%D9%81%D9%89/?id=5'
+      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D9%85%D8%B5%D8%B7%D9%81%D9%89/?id=36'
   },
   {
     source: '/ar/dr-mohammed-kandil/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%AD%D9%85%D8%AF-%D9%82%D9%86%D8%AF%D9%8A%D9%84/?id=10'
+      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%AD%D9%85%D8%AF-%D9%82%D9%86%D8%AF%D9%8A%D9%84/?id=40'
   },
   {
     source: '/ar/dr-moustafa-saad/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D8%B3%D8%B9%D8%AF/?id=12'
+      '/ar/about/board-directors-and-executive-team/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D8%B3%D8%B9%D8%AF/?id=42'
   },
   {
     source: '/ar/dr-rida-khadra/',
@@ -1353,17 +1353,17 @@ const links_permanent = [
   {
     source: '/ar/dr-samer-qara/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%AF-%D8%B3%D8%A7%D9%85%D8%B1-%D9%82%D8%A7%D8%B1%D8%A9/?id=13'
+      '/ar/about/board-directors-and-executive-team/%D8%AF-%D8%B3%D8%A7%D9%85%D8%B1-%D9%82%D8%A7%D8%B1%D8%A9/?id=44'
   },
   {
     source: '/ar/dr-zainab-almoosa/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=4'
+      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=26'
   },
   {
     source: '/ar/eng-mahmoud-yaseen/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D9%85-%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D9%8A%D8%A7%D8%B3%D9%8A%D9%86/?id=9'
+      '/ar/about/board-directors-and-executive-team/%D9%85-%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D9%8A%D8%A7%D8%B3%D9%8A%D9%86/?id=39'
   },
   {
     source:
@@ -2303,17 +2303,17 @@ const links_permanent = [
   {
     source: '/ar/mrs-sara-almoosa-ar/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=3'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=25'
   },
   {
     source: '/ar/malek-almoosa/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=2'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=24'
   },
   {
     source: '/ar/mouhammad-saleem/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D9%85%D8%AD%D9%85%D8%AF-%D8%B3%D8%A7%D9%84%D9%85/?id=11'
+      '/ar/about/board-directors-and-executive-team/%D9%85%D8%AD%D9%85%D8%AF-%D8%B3%D8%A7%D9%84%D9%85/?id=41'
   },
   {
     source: '/ar/doctors/',
@@ -2567,19 +2567,19 @@ const links_permanent = [
     source:
       '/ar/team/%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=2'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=24'
   },
   {
     source:
       '/ar/team/%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=5'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=27'
   },
   {
     source:
       '/ar/team/%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%D8%A9-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=3'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=25'
   },
   {
     source:
@@ -2590,12 +2590,12 @@ const links_permanent = [
     source:
       '/ar/team/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=1'
+      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=23'
   },
   {
     source: '/ar/team/114/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=4'
+      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=26'
   },
   {
     source: '/ar/team/mr-ahmed-al-bader/',
@@ -2608,32 +2608,32 @@ const links_permanent = [
   {
     source: '/ar/board-of-governors-ar/dr-zainab-al-moosa-ar/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=2'
+      '/ar/about/board-directors-and-executive-team/%D8%AF-%D8%B2%D9%8A%D9%86%D8%A8-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=33'
   },
   {
     source: '/ar/board-of-governors-ar/mr-hassan-afaleq-ar/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%AD%D8%B3%D9%86-%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D9%84%D9%82/?id=7'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%AD%D8%B3%D9%86-%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D9%84%D9%82/?id=28'
   },
   {
     source: '/ar/board-of-governors-ar/mr-malek-almoosa-ar/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=2'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%A7%D9%84%D9%83-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=24'
   },
   {
     source: '/ar/board-of-governors-ar/mr-musaed-almoosa-ar/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=5'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%85%D8%B3%D8%A7%D8%B9%D8%AF-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=27'
   },
   {
     source: '/ar/hera/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%87%D9%8A%D8%B1%D8%A7-%D8%AA%D8%A7%D8%B4%D8%AC%D9%8A%D8%A7%D9%86/?id=6'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D9%87%D9%8A%D8%B1%D8%A7-%D8%AA%D8%A7%D8%B4%D8%AC%D9%8A%D8%A7%D9%86/?id=37'
   },
   {
     source: '/ar/mrs-sara-almoosa/',
     destination:
-      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=3'
+      '/ar/about/board-directors-and-executive-team/%D8%A3-%D8%B3%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%89/?id=25'
   },
   {
     source: '/%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7/',
@@ -4736,37 +4736,37 @@ const links_permanent = [
   {
     source: '/board-of-governors/dr-zainab-al-moosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=4'
+      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=26'
   },
   {
     source: '/board-of-governors/mr-hassan-afaleq/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-hassen-al-afaaleq/?id=7'
+      '/en/about/board-directors-and-executive-team/mr-hassen-al-afaaleq/?id=28'
   },
   {
     source: '/board-of-governors/mr-malek-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=2'
+      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=24'
   },
   {
     source: '/board-of-governors/mr-musaed-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-musaed-almoosa/?id=5'
+      '/en/about/board-directors-and-executive-team/mr-musaed-almoosa/?id=27'
   },
   {
     source: '/dr-mahmoud-mustafa/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-mahmoud-mustafa/?id=5'
+      '/en/about/board-directors-and-executive-team/dr-mahmoud-mustafa/?id=36'
   },
   {
     source: '/dr-mohammed-kandil/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-mohammed-kandil/?id=10'
+      '/en/about/board-directors-and-executive-team/dr-mohammed-kandil/?id=40'
   },
   {
     source: '/dr-mustafa-saad/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-mustafa-saad/?id=12'
+      '/en/about/board-directors-and-executive-team/dr-mustafa-saad/?id=42'
   },
   {
     source: '/dr-rida-khadra/',
@@ -4779,32 +4779,32 @@ const links_permanent = [
   {
     source: '/dr-zainab-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=4'
+      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=26'
   },
   {
     source: '/eng-mahmoud-yaseen/',
     destination:
-      '/en/about/board-directors-and-executive-team/eng-mahmoud-yaseen/?id=9'
+      '/en/about/board-directors-and-executive-team/eng-mahmoud-yaseen/?id=39'
   },
   {
     source: '/mrs-hera-tashjian/',
     destination:
-      '/en/about/board-directors-and-executive-team/mrs-hera-tashjian/?id=6'
+      '/en/about/board-directors-and-executive-team/mrs-hera-tashjian/?id=37'
   },
   {
     source: '/mrs-sara-almoosa-2/',
     destination:
-      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=3'
+      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=25'
   },
   {
     source: '/mrs-sara-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=3'
+      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=25'
   },
   {
     source: '/muhammad-saleem/',
     destination:
-      '/en/about/board-directors-and-executive-team/muhammed-saleem/?id=11'
+      '/en/about/board-directors-and-executive-team/muhammed-saleem/?id=41'
   },
   {
     source:
@@ -4814,7 +4814,7 @@ const links_permanent = [
   {
     source: '/malek-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=2'
+      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=24'
   },
   {
     source: '/find-doctors/',
@@ -4823,7 +4823,7 @@ const links_permanent = [
   {
     source: '/mona-khamis/',
     destination:
-      '/en/about/board-directors-and-executive-team/mona-khamis/?id=3'
+      '/en/about/board-directors-and-executive-team/mona-khamis/?id=34'
   },
   // {
   //   source: '/contact-us/',
@@ -5053,7 +5053,7 @@ const links_permanent = [
   {
     source: '/abdul-rahim-al-natour/',
     destination:
-      '/en/about/board-directors-and-executive-team/abdul-rahim-al-natour/?id=4'
+      '/en/about/board-directors-and-executive-team/abdul-rahim-al-natour/?id=35'
   },
   {
     source: '/about-us/',
@@ -5086,7 +5086,7 @@ const links_permanent = [
   {
     source: '/team/114/',
     destination:
-      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=4'
+      '/en/about/board-directors-and-executive-team/dr-zainab-al-moosa/?id=26'
   },
   {
     source: '/team/dr-ghannam-aldossary/',
@@ -5099,22 +5099,22 @@ const links_permanent = [
   {
     source: '/team/mr-malek-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=2'
+      '/en/about/board-directors-and-executive-team/mr-malek-almoosa/?id=24'
   },
   {
     source: '/team/mr-musaed-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mr-musaed-almoosa/?id=5'
+      '/en/about/board-directors-and-executive-team/mr-musaed-almoosa/?id=27'
   },
   {
     source: '/team/mrs-sarah-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=3'
+      '/en/about/board-directors-and-executive-team/mrs-sara-almoosa/?id=25'
   },
   {
     source: '/team/sheikh-abdulaziz-almoosa/',
     destination:
-      '/en/about/board-directors-and-executive-team/sheikh-abdulaziz-al-mousa/?id=1'
+      '/en/about/board-directors-and-executive-team/sheikh-abdulaziz-al-mousa/?id=23'
   },
   //source: '/wp-content/uploads/2020/01/عمار-الخرس-10332-2-scaled.jpg',
   {
