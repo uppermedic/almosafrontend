@@ -40,7 +40,7 @@ const dataTap = [
   }
 ];
 
-const AcademicTabs = () => {
+const AcademicTabs = ({ sectionContentData, sectionsData }) => {
   const lang = i18n.language;
 
   const [activeTab, setActiveTab] = useState(0);
@@ -49,21 +49,58 @@ const AcademicTabs = () => {
     activeTab !== tab && setActiveTab(tab);
   };
 
+  // let secData = sectionsData.map(obj => {
+  //   return {
+  //     ...obj,
+  //     section_id: obj?.section?.id,
+  //     en: { ...obj['en'], section_title: obj?.section['en']?.title },
+  //     ar: { ...obj['ar'], section_title: obj?.section['ar']?.title }
+  //   };
+  // });
+
+  let group = sectionsData.reduce((r, a) => {
+    r[a.section.id] = [...(r[a.section.id] || []), a];
+    return r;
+  }, {});
+
+  const tabsData = Object.values(group)?.map((obj, idx) => {
+    return {
+      section: obj[0].section,
+      section_data: obj,
+      component: dataTap[idx]?.component
+    };
+  });
+
+  console.log('tabsData', tabsData);
+
   return (
     <sectio className="academic-sections">
       <Container>
         <Row>
           <Col>
             <h2 className="section-title">
-              {(lang === 'en' && 'Sections') || 'الأقسام'}
+              {lang && sectionContentData[lang]?.title}
             </h2>
           </Col>
         </Row>
+        {lang && sectionContentData[lang]?.content && (
+          <Row>
+            <Col>
+              <p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: sectionContentData[lang]?.content || ' '
+                  }}
+                />
+              </p>
+            </Col>
+          </Row>
+        )}
         <Row>
           <Col>
             <div className="academic-tap">
               <Nav tabs>
-                {dataTap.map((tab, index) => (
+                {tabsData.map((tab, index) => (
                   <NavItem key={index}>
                     <NavLink
                       className={classnames({ active: activeTab === index })}
@@ -71,16 +108,16 @@ const AcademicTabs = () => {
                         toggle(index);
                       }}
                     >
-                      {lang && tab.tabName[lang]}
+                      {lang && tab?.section[lang]?.title}
                     </NavLink>
                   </NavItem>
                 ))}
               </Nav>
 
               <TabContent activeTab={activeTab}>
-                {dataTap.map((tab, index) => (
+                {tabsData?.map((tab, index) => (
                   <TabPane tabId={index}>
-                    <tab.component />
+                    <tab.component sectionData={tab?.section_data} />
                   </TabPane>
                 ))}
               </TabContent>

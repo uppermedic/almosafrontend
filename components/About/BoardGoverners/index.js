@@ -4,8 +4,9 @@ import { i18n, withTranslation } from 'root/i18n';
 import DoctorCard from './doctor-card';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
+import PageContent from 'components/reusableComponents/PageContent';
 
-const index = ({ GovernersData, TeamData, t }) => {
+const index = ({ GovernersData, TeamData, contentData }) => {
   const { language } = i18n;
 
   const [currentDoctor, setcurrentDoctor] = useState({});
@@ -18,7 +19,31 @@ const index = ({ GovernersData, TeamData, t }) => {
             <SideTabs items={dataAboutTabs} index={6} />
           </Col>
           <Col sm="12" md="8">
-            <Row>
+            {contentData?.length > 0 &&
+              contentData?.map(cont => (
+                <>
+                  <PageContent itemContent={cont} />
+                  <Container>
+                    <Row xs="1" sm="2" md="3" lg="4" className="doctors-cards">
+                      {Array.isArray(cont?.page_items) &&
+                        cont?.page_items?.length > 0 &&
+                        cont.page_items?.map((item, idx) => (
+                          <Col>
+                            <DoctorCard
+                              key={idx}
+                              doctor={item}
+                              setcurrentDoctor={setcurrentDoctor}
+                              currentDoctor={currentDoctor}
+                              hasRef={true}
+                            />
+                          </Col>
+                        ))}
+                    </Row>
+                  </Container>
+                </>
+              ))}
+
+            {/* <Row>
               <Col>
                 <h2 className="title">
                   {(language == 'en' && 'Board of Governers') ||
@@ -67,7 +92,7 @@ const index = ({ GovernersData, TeamData, t }) => {
                     ))}
                 </Row>
               </div>
-            </Container>
+            </Container> */}
           </Col>
         </Row>
       </div>

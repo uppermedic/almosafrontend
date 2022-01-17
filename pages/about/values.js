@@ -1,26 +1,29 @@
 import React from 'react';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import OurValues from 'src/components/About/Values';
+import OurValues from 'src/components/About/AboutContentPages';
 import { fetchData } from 'src/store/Request.js';
 
-const Values = ({ t, data }) => {
+const Values = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
-    <div className="values">
+    <div className="about-page">
       <Head data={data.page.seo}></Head>
-      <Hero bg={data.page.page_cover}>
+      <Hero bg={data.page?.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:core values')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <OurValues data={data} />
+      <OurValues contentData={data?.contents} sideTabIndex={2} />
     </div>
   );
 };
 
 export async function getServerSideProps(context) {
-  let { error, data } = await fetchData('/about');
+  let { error, data } = await fetchData('/page/25');
   if (error) {
     return {
       notFound: true

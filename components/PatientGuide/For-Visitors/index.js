@@ -1,7 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import { withTranslation } from 'root/i18n';
-import Card from '../Card';
 import CustomTabs from 'components/layout/CustomTabs';
 
 /*Content Components */
@@ -16,92 +14,41 @@ import wifi from '../HospitalAmenities/wifi';
 import atms from '../HospitalAmenities/atms';
 import gardens from '../For-Patients/Gardens';
 import giftShop from './giftShop';
+import PageContent from 'components/reusableComponents/PageContent';
 
-const data = [
-  {
-    id: 1,
-    title: { en: 'Visiting Hours and Policies', ar: 'ساعات الزيارة' },
-    component: visitingHours,
-    className: 'visiting-hours'
-  },
-  {
-    id: 2,
-    title: { en: 'Waiting Areas', ar: 'أماكن الإنتظار' },
-    component: waitingAreas,
-    className: 'waiting-areas'
-  },
-  {
-    id: 4,
-    title: { en: 'Mosques', ar: 'المسجد' },
-    component: mosques,
-    className: 'mosques'
-  },
-  {
-    id: 5,
-    title: { en: 'Parking and Valet', ar: 'المواقف وخدمة صف السيارات' },
-    component: parking,
-    className: 'directions'
-  },
-  {
-    id: 6,
-    title: { en: 'Hospitality Services', ar: 'خدمات الضيافة' },
-    component: hospitalitServices,
-    className: 'hospitality-services'
-  },
-  {
-    id: 7,
-    title: { en: 'Wi-Fi', ar: 'خدمة الواي فاي' },
-    component: wifi,
-    className: 'wifi-page'
-  },
-  {
-    id: 8,
-    title: {
-      en: 'Gardens and greenery',
-      ar: 'الحدائق والمساحات الخارجية '
-    },
-    component: gardens,
-    className: 'gardens'
-  },
-  {
-    id: 9,
-    title: { en: 'ATMs', ar: 'أجهزة الصراف الالي' },
-    component: atms,
-    className: 'atms'
-  },
-  {
-    id: 10,
-    title: {
-      en: 'Gift shop',
-      ar: 'متجر الورد والهدايا '
-    },
-    component: giftShop,
-    className: 'gift-shop'
-  },
-  {
-    id: 11,
-    title: {
-      en: 'library',
-      ar: 'المكتبة'
-    },
-    component: library,
-    className: 'library'
-  },
-  {
-    id: 12,
-    title: {
-      en: 'Disabled Access & Services',
-      ar: 'خدمات ذوي الاحتياجات الخاصة'
-    },
-    component: disabledAccess,
-    className: 'disabled-access'
-  }
-];
-const ForVisitors = ({ t }) => {
+const ForVisitors = ({ contentData }) => {
+  const items =
+    contentData?.length > 0
+      ? contentData.map((cont, idx) => {
+          return {
+            id: idx + 1,
+            title: {
+              en: cont['en']?.title,
+              ar: cont['ar'].title
+            },
+            component: PageContent,
+            content: cont
+          };
+        })
+      : [];
+
+  const itemsData = [
+    ...items,
+    {
+      id: 11,
+      title: {
+        en: 'library',
+        ar: 'المكتبة'
+      },
+      component: library,
+      className: 'library'
+    }
+  ];
+
   return (
     <section className="guide-cards">
       <div className="container-fluid">
-        <CustomTabs items={data} />
+        <CustomTabs items={itemsData} />
       </div>
     </section>
   );

@@ -67,7 +67,7 @@ const Content = props => {
               </Row>
             </Container>
           )}
-        {sections[0] && (
+        {sections[0] || physicians?.length > 0 ? (
           <div className="container">
             <div className="tabs">
               <ReusableTabs
@@ -77,6 +77,8 @@ const Content = props => {
               />
             </div>
           </div>
+        ) : (
+          ''
         )}
       </div>
     </div>

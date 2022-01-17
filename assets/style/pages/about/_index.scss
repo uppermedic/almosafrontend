@@ -8,3 +8,17 @@
 @import './medical_group';
 @import './values';
 @import './vision_message';
+
+.about-page {
+  .page-section {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    .post_with_title .two_columns_post,
+    .post_with_title .one_column_post_content {
+      margin: 0 !important;
+      .post_title {
+        padding-top: 0;
+      }
+    }
+  }
+}

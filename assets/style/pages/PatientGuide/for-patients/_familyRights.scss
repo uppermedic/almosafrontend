@@ -33,13 +33,27 @@
         hr {
           background-color: $almoosa-light-green;
         }
-        .info-list {
+        ul {
           margin-top: 20px;
-          list-style: none;
-          padding: 0;
+          // list-style;
+          // padding: 0;
+          padding: 5px 20px;
+
           li {
-            display: flex;
+            // display: flex;
             margin: 20px 0;
+            font-size: 14px;
+            color: $gray-2;
+            @include respond-below(md) {
+              font-size: 12px;
+            }
+
+            ul {
+              list-style: circle;
+              li {
+                margin: 5px 0;
+              }
+            }
             .num {
               font-size: $paragraph-text-mob-size;
               height: fit-content;
@@ -56,20 +70,6 @@
                 margin-left: 10px;
               }
             }
-            .desc {
-              font-size: 14px;
-              color: $gray-2;
-              @include respond-below(md) {
-                font-size: 12px;
-              }
-            }
-
-            ul {
-              list-style: circle;
-              li {
-                margin: 5px 0;
-              }
-            }
           }
         }
       }
@@ -83,56 +83,56 @@
           display: none;
         }
       }
-      .second-rights {
-        .info {
-          height: 100%;
-          background-color: $almoosa-light-green;
-          color: #ffffff;
-          .title {
-            margin: 20px;
-            font-size: $font-sm;
-            font-weight: bold;
-          }
-          hr {
-            background-color: #fff;
-          }
-          ul {
-            margin-top: 20px;
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            li {
-              display: flex;
-              margin: 20px 0;
-              .num {
-                font-size: $paragraph-text-mob-size;
-                height: fit-content;
-                padding-right: 5px;
-                margin-right: 10px;
-                font-weight: bold;
-                border-right: 4px solid #fff;
-                @include rtl() {
-                  padding-right: 0;
-                  margin-right: 0;
-                  border-right: 0;
-                  border-left: 4px solid #fff;
-                  padding-left: 5px;
-                  margin-left: 10px;
-                }
-              }
-              .desc {
-                font-size: $paragraph-text-xs-size;
-                color: rgba(255, 255, 255, 0.801);
-                @include respond-below(sm) {
-                  font-size: $font-xxs;
-                }
-              }
-            }
-          }
-        }
-      }
+      // .second-rights {
+      //   .info {
+      //     height: 100%;
+      //     background-color: $almoosa-light-green;
+      //     color: #ffffff;
+      //     .title {
+      //       margin: 20px;
+      //       font-size: $font-sm;
+      //       font-weight: bold;
+      //     }
+      //     hr {
+      //       background-color: #fff;
+      //     }
+      //     ul {
+      //       margin-top: 20px;
+      //       list-style: none;
+      //       padding: 0;
+      //       display: flex;
+      //       flex-direction: column;
+      //       justify-content: space-between;
+      //       li {
+      //         display: flex;
+      //         margin: 20px 0;
+      //         .num {
+      //           font-size: $paragraph-text-mob-size;
+      //           height: fit-content;
+      //           padding-right: 5px;
+      //           margin-right: 10px;
+      //           font-weight: bold;
+      //           border-right: 4px solid #fff;
+      //           @include rtl() {
+      //             padding-right: 0;
+      //             margin-right: 0;
+      //             border-right: 0;
+      //             border-left: 4px solid #fff;
+      //             padding-left: 5px;
+      //             margin-left: 10px;
+      //           }
+      //         }
+      //         .desc {
+      //           font-size: $paragraph-text-xs-size;
+      //           color: rgba(255, 255, 255, 0.801);
+      //           @include respond-below(sm) {
+      //             font-size: $font-xxs;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
 }

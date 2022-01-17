@@ -79,12 +79,18 @@ const CustomTabs = ({ items, dataContent }) => {
                     tabId={item.dataType === 'dynamic' ? item.id : index}
                     key={item.id}
                   >
-                    <div className={item.className}>
+                    <div className={item?.className}>
                       {Component && (
                         <Component
                           contentData={
                             dataContent && Object.entries(dataContent).length
                               ? dataContent
+                              : {}
+                          }
+                          itemContent={
+                            item?.content &&
+                            Object.entries(item?.content)?.length
+                              ? item?.content
                               : {}
                           }
                         />

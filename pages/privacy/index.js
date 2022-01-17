@@ -1,36 +1,37 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
+import Hero from 'src/components/layout/Hero';
 import i18n from 'root/i18n';
 import Content from 'src/components/Privacy';
 import { withTranslation } from 'root/i18n';
+import { fetchData } from 'src/store/Request.js';
 
-const index = ({ t }) => {
-  const { language } = i18n;
-  const seo = {
-    ar: {
-      title: 'سياسة الخصوصية',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Privacy Policy',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+const index = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
     <div className="privacy">
-      <Head data={seo} />
-      <div className="head-banner">
-        <div className="container">
-          <h1>{t('menu:privacy')}</h1>
+      <Head data={data.page.seo}></Head>
+      <Hero bg={data.page?.page_cover}>
+        <div className="hero-content">
+          <h1 className="title">{titleHero}</h1>
         </div>
-      </div>
-      <Content />
+      </Hero>
+      <Content contentData={data?.contents} />
     </div>
   );
 };
 
+export async function getServerSideProps(context) {
+  let { error, data } = await fetchData('/page/28');
+  if (error) {
+    return {
+      notFound: true
+    };
+  }
+  return {
+    props: { data }
+  };
+}
 export default withTranslation(['menu'])(index);

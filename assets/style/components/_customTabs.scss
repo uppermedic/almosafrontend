@@ -102,4 +102,12 @@
       }
     }
   }
+
+  .post_with_title .two_columns_post,
+  .post_with_title .one_column_post_content {
+    margin: 0 !important;
+    .post_title {
+      padding-top: 0;
+    }
+  }
 }

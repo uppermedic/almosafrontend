@@ -11,13 +11,14 @@ import { fetchData } from 'src/store/Request.js';
 
 const TasteOfArt = ({ data }) => {
   const lang = i18n.language;
+  const titleHero = lang && data[lang]?.title;
 
   return (
     <section className="taste_of_art">
       <Head data={data.seo}></Head>
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h1 className="title">{lang && data[lang].title} </h1>
+          <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
       <PostWithCenterImg

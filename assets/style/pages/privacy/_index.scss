@@ -1,80 +1,94 @@
-.privacy {
-  .head-banner {
-    background-color: $medical-centers;
-    text-align: center;
-    padding: 200px 0;
-    h1 {
-      font-size: 80px;
-      font-weight: bolder;
-      color: #ffffff;
-      @include respond-below(md) {
-        font-size: 30px;
-      }
-    }
-  }
+// .privacy {
+//   .head-banner {
+//     background-color: $medical-centers;
+//     text-align: center;
+//     padding: 200px 0;
+//     h1 {
+//       font-size: 80px;
+//       font-weight: bolder;
+//       color: #ffffff;
+//       @include respond-below(md) {
+//         font-size: 30px;
+//       }
+//     }
+//   }
 
-  section.privacy {
+//   section.privacy {
+//     padding-top: 70px;
+//     padding-bottom: 100px;
+//     .title {
+//       @include sectionHeading($almoosa-light-green-color);
+//       h2 {
+//         font-family: 'diodrum-arabic-bold' !important;
+//       }
+//     }
+//     .content {
+//       margin-top: 30px;
+//       .single-section {
+//         margin-bottom: 50px;
+//         .privacy-title,
+//         .privacy-subtitle {
+//           font-weight: bold;
+//           color: $secondary-color-light;
+//           font-size: 20px;
+//           text-decoration: underline;
+//           font-family: 'diodrum-arabic-bold';
+//           @include respond-below(md) {
+//             font-size: 16px;
+//           }
+//         }
+//         .sub-single-section {
+//           padding: 0 20px;
+//           .privacy-subtitle {
+//             font-size: 19px;
+//             margin-top: 30px;
+//             color: $primary-color;
+//           }
+
+//           .privacy-sub-subtitle {
+//             font-size: 17px;
+//             margin-top: 30px;
+//             color: $dark-blue;
+//           }
+//           .privacy-paragraph,
+//           .privacy-menu {
+//             font-size: 15px;
+//           }
+//         }
+
+//         .privacy-paragraph {
+//           font-weight: bold;
+//           font-size: 16px;
+//           margin: 10px 0 30px 0;
+//         }
+//         .privacy-menu {
+//           font-weight: bold;
+//           font-size: 16px;
+//           & > li {
+//             margin-top: 20px;
+//             font-size: 16px;
+//             @include respond-below(md) {
+//               font-size: 14px;
+//             }
+//           }
+//           .sub-item {
+//             color: rgb(51, 51, 51);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.privacy {
+  .page-section {
     padding-top: 70px;
     padding-bottom: 100px;
-    .title {
-      @include sectionHeading($almoosa-light-green-color);
-      h2 {
-        font-family: 'diodrum-arabic-bold' !important;
-      }
-    }
-    .content {
-      margin-top: 30px;
-      .single-section {
-        margin-bottom: 50px;
-        .privacy-title,
-        .privacy-subtitle {
-          font-weight: bold;
-          color: $secondary-color-light;
-          font-size: 20px;
-          text-decoration: underline;
-          font-family: 'diodrum-arabic-bold';
-          @include respond-below(md) {
-            font-size: 16px;
-          }
-        }
-        .sub-single-section {
-          padding: 0 20px;
-          .privacy-subtitle {
-            font-size: 19px;
-            margin-top: 30px;
-            color: $primary-color;
-          }
-
-          .privacy-sub-subtitle {
-            font-size: 17px;
-            margin-top: 30px;
-            color: $dark-blue;
-          }
-          .privacy-paragraph,
-          .privacy-menu {
-            font-size: 15px;
-          }
-        }
-
-        .privacy-paragraph {
-          font-weight: bold;
-          font-size: 16px;
-          margin: 10px 0 30px 0;
-        }
-        .privacy-menu {
-          font-weight: bold;
-          font-size: 16px;
-          & > li {
-            margin-top: 20px;
-            font-size: 16px;
-            @include respond-below(md) {
-              font-size: 14px;
-            }
-          }
-          .sub-item {
-            color: rgb(51, 51, 51);
-          }
-        }
+    .post_with_title .two_columns_post,
+    .post_with_title .one_column_post_content {
+      margin: 0 !important;
+      .post_title {
+        padding-top: 0;
       }
     }
   }

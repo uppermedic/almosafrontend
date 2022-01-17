@@ -1,34 +1,23 @@
 import React from 'react';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import VisionAndMessage from 'src/components/About/VisionMessage';
+import VisionAndMessage from 'src/components/About/AboutContentPages';
 import { fetchData } from 'src/store/Request.js';
 
-const VisionMessage = ({ t, data }) => {
-  const seo = {
-    ar: {
-      title: 'الرؤية والرسالة',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Vision and Mission',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+const VisionMessage = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
-    <div className="vision-mission">
-      <Head data={seo}></Head>
-      <Hero bg={data.page.page_cover}>
+    <div className="about-page">
+      <Head data={data.page.seo}></Head>
+      <Hero bg={data.page?.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:vision and mission')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <VisionAndMessage data={data} />
+      <VisionAndMessage contentData={data?.contents} sideTabIndex={1} />
     </div>
   );
 };
@@ -36,7 +25,7 @@ const VisionMessage = ({ t, data }) => {
 export default withTranslation(['menu'])(VisionMessage);
 
 export async function getServerSideProps(context) {
-  let { error, data } = await fetchData('/about');
+  let { error, data } = await fetchData('/page/24');
   if (error) {
     return {
       notFound: true

@@ -12,7 +12,7 @@ const index = ({ doctorData, t }) => {
           {/*  the comming data will come when create main doctor key and value  */}
           <Col lg={4} className="doctor-img">
             <img
-              src={doctorData.image}
+              src={doctorData.image[0]}
               alt={
                 language && doctorData[language] && doctorData[language]?.name
               }
@@ -26,69 +26,15 @@ const index = ({ doctorData, t }) => {
             <p className="py-2 doctor-title">
               {language && doctorData[language] && doctorData[language]?.title}
             </p>
-            {language &&
-              doctorData[language] &&
-              doctorData[language].paragraph &&
-              doctorData[language].paragraph.length > 0 && (
-                <p className="doctor-paragraph">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: doctorData[language].paragraph
-                    }}
-                  />
-                </p>
-              )}
-
-            {language &&
-              doctorData[language] &&
-              doctorData[language].qualifications &&
-              doctorData[language].qualifications.length > 0 && (
-                <>
-                  <h3 className="doctor-qualifications mt-5">
-                    {t('common:qualifications')}
-                  </h3>
-                  <ul>
-                    {language &&
-                      doctorData[language].qualifications.map((value, idx) => (
-                        <li key={idx}>{value}</li>
-                      ))}
-                  </ul>
-                </>
-              )}
-
-            {language &&
-              doctorData[language] &&
-              doctorData[language].positions &&
-              doctorData[language].positions.length > 0 && (
-                <>
-                  <h3 className="doctor-qualifications mt-5">
-                    {t('common:positions held')}
-                  </h3>
-                  <ul>
-                    {language &&
-                      doctorData[language].positions.map((value, idx) => (
-                        <li key={idx}>{value}</li>
-                      ))}
-                  </ul>
-                </>
-              )}
-
-            {language &&
-              doctorData[language] &&
-              doctorData[language].member_in &&
-              doctorData[language].member_in.length > 0 && (
-                <>
-                  <h3 className="doctor-qualifications mt-5">
-                    {t('common:member_in')}
-                  </h3>
-                  <ul>
-                    {language &&
-                      doctorData[language].member_in.map((value, idx) => (
-                        <li key={idx}>{value}</li>
-                      ))}
-                  </ul>
-                </>
-              )}
+            {language && doctorData[language]?.content?.length > 0 && (
+              <p className="doctor-paragraph">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: doctorData[language]?.content
+                  }}
+                />
+              </p>
+            )}
           </Col>
         </Row>
       </Container>

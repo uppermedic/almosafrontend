@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 /*Content Components */
 import SupportServiceSengle from './single';
-import pharmacy from '../../PatientGuide/HospitalAmenities/pharmacy';
 
 export default function index({ dataSectionTabs, dataSectionContent }) {
   const router = useRouter();
@@ -20,23 +19,10 @@ export default function index({ dataSectionTabs, dataSectionContent }) {
     };
   });
 
-  const pharmacyData = [
-    {
-      id: 1,
-      title: { en: 'The Pharmacy', ar: 'الصيدلية' },
-      component: pharmacy,
-      className: 'pharmacy',
-      path: '/services/supportive-services',
-      dataType: 'static'
-    }
-  ];
   return (
     <section className="support-services-card">
       <div className="container-fluid">
-        <CustomTabs
-          items={[...pharmacyData, ...data]}
-          dataContent={dataSectionContent}
-        />
+        <CustomTabs items={data} dataContent={dataSectionContent} />
       </div>
     </section>
   );

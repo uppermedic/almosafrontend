@@ -1,36 +1,37 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import { i18n, withTranslation } from 'root/i18n';
-import Content from 'src/components/About/FastFacts';
+import Content from 'src/components/About/AboutContentPages';
 import Hero from 'src/components/layout/Hero';
+import { fetchData } from 'src/store/Request.js';
 
-const index = ({ t }) => {
-  const { language } = i18n;
-  const seo = {
-    ar: {
-      title: 'حقائق سريعة',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Fast Facts',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+const index = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
-    <div className="fast-facts">
-      <Head data={seo}></Head>
-      <Hero bg="/images/about/hero-bg.png">
+    <div className="about-page">
+      <Head data={data.page.seo}></Head>
+      <Hero bg={data.page?.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:fast facts')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <Content />
+      <Content contentData={data?.contents} sideTabIndex={7} />
     </div>
   );
 };
+
+export async function getServerSideProps(context) {
+  let { error, data } = await fetchData('/page/22');
+  if (error) {
+    return {
+      notFound: true
+    };
+  }
+  return {
+    props: { data }
+  };
+}
 
 export default withTranslation(['menu'])(index);

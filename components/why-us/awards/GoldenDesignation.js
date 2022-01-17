@@ -1,12 +1,16 @@
 import React from 'react';
 import { i18n } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
+import PageContent from 'components/reusableComponents/PageContent';
 
-const GoldenDesignation = () => {
+const GoldenDesignation = ({ contentData }) => {
   const { language } = i18n;
   return (
-    <section className="golden-designation">
-      <div className="head-banner">
+    <section className="page-section">
+      {contentData?.length > 0 &&
+        contentData?.map(cont => <PageContent itemContent={cont} />)}
+
+      {/* <div className="head-banner">
         <div className="container">
           <h2>
             {(language == 'en' &&
@@ -14,10 +18,10 @@ const GoldenDesignation = () => {
               'الوسام الذهبي من منظمة بلانتري '}
           </h2>
         </div>
-      </div>
-      <div className="container">
-        {/* ***********English Content*********** */}
-        {language == 'en' && (
+      </div> */}
+      {/* <div className="container"> */}
+      {/* ***********English Content*********** */}
+      {/* {language == 'en' && (
           <div className="content">
             <div className="single-section">
               <Paragraph paragraph="At Al Moosa Specialist Hospital, we turn Illness to Wellness. We believe that in order to achieve this, it requires more than just a treatment regimen but a caring attitude and an atmosphere conducive to healing. Thus, Person-Centered Care is a key element in a thriving healthcare organization to achieve such holistic care that will benefit not only the patients but the staff and community alike." />
@@ -233,11 +237,11 @@ const GoldenDesignation = () => {
               />
             </div>
           </div>
-        )}
+        )} */}
 
-        {/* ***********Arabic Content*********** */}
+      {/* ***********Arabic Content*********** */}
 
-        {language == 'ar' && (
+      {/* {language == 'ar' && (
           <div className="content">
             <div className="single-section">
               <Paragraph paragraph="تعمل منظمة البلانتري الغير ربحية مع المستشفيات حول العالم على تأسيس معايير لمقدمي الرعاية الصحية تناسب احتياجات المرضى، ووتعمل أيضا على تعزيز التفاعل البشري في رعاية المرضى، وتثقيف المرضى ووتزويدهم بجميع المعلومات اللازمة عن حالتهم الصحية كما  تولي اهتماما بالغا لدور والأسرة والأصدقاء والدعم الاجتماعي في رحلة العلاج " />
@@ -412,8 +416,8 @@ const GoldenDesignation = () => {
               />
             </div>
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
     </section>
   );
 };
@@ -421,42 +425,42 @@ const GoldenDesignation = () => {
 export default GoldenDesignation;
 
 // small components
-const Title = ({ title }) => {
-  return <h3 className="golden-designation-title">{title}</h3>;
-};
+// const Title = ({ title }) => {
+//   return <h3 className="golden-designation-title">{title}</h3>;
+// };
 
-const Paragraph = ({ paragraph }) => {
-  return (
-    <p className="golden-designation-paragraph">
-      <Markdown>{paragraph}</Markdown>
-    </p>
-  );
-};
+// const Paragraph = ({ paragraph }) => {
+//   return (
+//     <p className="golden-designation-paragraph">
+//       <Markdown>{paragraph}</Markdown>
+//     </p>
+//   );
+// };
 
-const Menu = ({ items }) => {
-  return (
-    <ul className="golden-designation-menu">
-      {items.map((item, index) => {
-        return (
-          <li key={index}>
-            <strong>{item.text}</strong>
+// const Menu = ({ items }) => {
+//   return (
+//     <ul className="golden-designation-menu">
+//       {items.map((item, index) => {
+//         return (
+//           <li key={index}>
+//             <strong>{item.text}</strong>
 
-            {item.subItems && (
-              <ul>
-                {item.subItems.map((subItem, idx) => {
-                  return (
-                    <li className="sub-item" key={idx}>
-                      <Markdown>{subItem}</Markdown>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+//             {item.subItems && (
+//               <ul>
+//                 {item.subItems.map((subItem, idx) => {
+//                   return (
+//                     <li className="sub-item" key={idx}>
+//                       <Markdown>{subItem}</Markdown>
+//                     </li>
+//                   );
+//                 })}
+//               </ul>
+//             )}
+//           </li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
 /* */

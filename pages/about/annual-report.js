@@ -2,10 +2,10 @@ import React from 'react';
 import { withTranslation, i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import OverviewComp from 'src/components/About/AboutContentPages';
+import AnnualReport from 'src/components/About/AboutContentPages';
 import { fetchData } from 'src/store/Request.js';
 
-const Overview = ({ t, data }) => {
+const Values = ({ data }) => {
   const lang = i18n.language;
   const titleHero = lang && data.page?.seo[lang]?.title;
 
@@ -17,13 +17,13 @@ const Overview = ({ t, data }) => {
           <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <OverviewComp contentData={data?.contents} sideTabIndex={0} />
+      <AnnualReport contentData={data?.contents} sideTabIndex={9} />
     </div>
   );
 };
 
 export async function getServerSideProps(context) {
-  let { error, data } = await fetchData('/page/20');
+  let { error, data } = await fetchData('/page/26');
   if (error) {
     return {
       notFound: true
@@ -34,4 +34,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default withTranslation(['menu'])(Overview);
+export default withTranslation(['menu'])(Values);

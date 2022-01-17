@@ -50,12 +50,14 @@ function Our_Doctors({ data, getCategories, categories }) {
     }
   };
 
+  const titleHero = language && data.page?.seo[language]?.title;
+
   return (
     <div className="almoosa-doctors">
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{data.page.seo[language]?.title}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
       <div className="container">
