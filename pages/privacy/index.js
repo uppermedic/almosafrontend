@@ -1,9 +1,8 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import i18n from 'root/i18n';
 import Content from 'src/components/Privacy';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
 
 const index = ({ data }) => {
