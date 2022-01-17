@@ -5,14 +5,16 @@ import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/About/OurHistory';
 import { fetchData } from 'src/store/Request.js';
 
-const History = ({ data, t }) => {
-  const { language } = i18n;
+const History = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
     <div className="our-history-page">
       <Head data={data.page.seo}></Head>
       <Hero bg={data.page.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:history')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
       <Content histories={data.data} />

@@ -13,7 +13,7 @@ function OurTeam({ ourTeamData, t }) {
     if (showToggle) {
       await setobjectIndex(4);
     } else {
-      await setobjectIndex(ourTeamData.length);
+      await setobjectIndex(ourTeamData?.length);
     }
   };
 
@@ -28,15 +28,14 @@ function OurTeam({ ourTeamData, t }) {
           </Col>
         </Row>
         <Row xs="1" sm="2" md="3" lg="4" style={{ marginTop: 44 }}>
-          {ourTeamData &&
-            ourTeamData.length > 0 &&
-            ourTeamData.slice(0, objectIndex).map((item, index) => (
+          {ourTeamData?.length > 0 &&
+            ourTeamData?.slice(0, objectIndex)?.map((item, index) => (
               <Col>
                 <TeamItem team={item} key={index} />
               </Col>
             ))}
         </Row>
-        {ourTeamData.length > 4 && (
+        {ourTeamData?.length > 4 && (
           <Row>
             <Col>
               <button

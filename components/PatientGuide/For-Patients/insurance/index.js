@@ -5,18 +5,27 @@ import BrandBox from './re-brandBox';
 import { i18n, withTranslation } from 'root/i18n';
 
 import data from './data';
-const Content = ({ t }) => {
+const Content = ({ t, itemContent }) => {
   let { language } = i18n;
 
   return (
     <div className="content">
       <div className="title">
-        <h2>{t('patient_guide:Insurance')}</h2>
+        <h2>{language && itemContent[language]?.title}</h2>
       </div>
       <div className="brands">
         <Container>
           <Row xs="1" sm="2" md="3" lg="4">
-            {language === 'ar' && (
+            {itemContent.page_items.map((item, index) => (
+              <Col key={index}>
+                <BrandBox
+                  name={language && item[language]?.title}
+                  image={item?.image[0]}
+                  link={item?.url}
+                />
+              </Col>
+            ))}
+            {/* {language === 'ar' && (
               <>
                 {data.map((item, index) => (
                   <Col key={index}>
@@ -28,8 +37,8 @@ const Content = ({ t }) => {
                   </Col>
                 ))}
               </>
-            )}
-            {language === 'en' && (
+            )} */}
+            {/* {language === 'en' && (
               <>
                 {data.map((item, index) => (
                   <Col key={index}>
@@ -41,7 +50,7 @@ const Content = ({ t }) => {
                   </Col>
                 ))}
               </>
-            )}
+            )} */}
           </Row>
         </Container>
       </div>

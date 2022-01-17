@@ -1,18 +1,22 @@
 import React from 'react';
 import { i18n } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
+import PageContent from 'components/reusableComponents/PageContent';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = ({ contentData }) => {
   const { language } = i18n;
   return (
     <section className="privacy">
-      <div className="container">
-        <div className="title">
-          <h2>{(language == 'en' && 'Privacy Policy') || 'سياسة الخصوصية'}</h2>
-        </div>
-        {/* **********English Content ********** */}
+      {contentData?.length > 0 &&
+        contentData?.map(cont => <PageContent itemContent={cont} />)}
 
-        {language == 'en' && (
+      {/* <div className="container"> */}
+      {/* <div className="title">
+          <h2>{(language == 'en' && 'Privacy Policy') || 'سياسة الخصوصية'}</h2>
+        </div> */}
+      {/* **********English Content ********** */}
+
+      {/* {language == 'en' && (
           <div className="content">
             <div className="single-section">
               <Paragraph paragraph="Almoosa Specialist Hospital website puts the confidential information of its users and visitors at the top of the list of priorities, and its management makes every effort to provide valuable services to all its participants." />
@@ -102,11 +106,11 @@ const PrivacyPolicy = () => {
               <Paragraph paragraph=' Almoosa Specialist Hospital may, from time to time, send you email regarding our programs and services. If at any time you wish to be removed from our mailing list you can reply as directed to any incoming email, or send an email to  <a target="_blank" href="mailto:Unsubscribe@almoosahospital.com.sa">Unsubscribe@almoosahospital.com.sa </a>' />
             </div>
           </div>
-        )}
+        )} */}
 
-        {/* **********Arabic Content ********** */}
+      {/* **********Arabic Content ********** */}
 
-        {language == 'ar' && (
+      {/* {language == 'ar' && (
           <div className="content">
             <div className="single-section">
               <Paragraph paragraph="تضع بوابة مستشفي الموسي التخصصي سرية معلومات مستخدميها وزوارها على رأس قائمة الأولويات، وتبذل إدارة البوابة كل جهودها لتقديم خدمة ذات جودة عالية لكل المستفيدين." />
@@ -196,8 +200,8 @@ const PrivacyPolicy = () => {
               <Paragraph paragraph='قد ترسل لكم مستشفي الموسي التخصصي، من حين لآخر، بريدًا إليكترونيًا بخصوص برامجنا وخدماتنا. وإذا رغبتم في أي وقت في شطبكم من قائمتنا البريدية، يمكنكم إرسال الرد على أي بريد إليكتروني وارد حسب التوجيهات، أو إرسال بريد اليكتروني إلى: <a target="_blank" href="mailto:Unsubscribe@almoosahospital.com.sa">Unsubscribe@almoosahospital.com.sa </a>' />
             </div>
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
     </section>
   );
 };
@@ -205,41 +209,41 @@ const PrivacyPolicy = () => {
 export default PrivacyPolicy;
 
 // small components
-const Title = ({ title }) => {
-  return <h3 className="privacy-title">{title}</h3>;
-};
+// const Title = ({ title }) => {
+//   return <h3 className="privacy-title">{title}</h3>;
+// };
 
-const Paragraph = ({ paragraph }) => {
-  return (
-    <p className="privacy-paragraph">
-      <Markdown>{paragraph}</Markdown>
-    </p>
-  );
-};
+// const Paragraph = ({ paragraph }) => {
+//   return (
+//     <p className="privacy-paragraph">
+//       <Markdown>{paragraph}</Markdown>
+//     </p>
+//   );
+// };
 
-const Menu = ({ items }) => {
-  return (
-    <ul className="privacy-menu">
-      {items.map((item, idx) => {
-        return (
-          <li key={idx}>
-            {item.text}
-            {item.subItems && (
-              <ul>
-                {item.subItems.map((subItem, index) => {
-                  return (
-                    <li className="sub-item" key={index}>
-                      <Markdown>{subItem}</Markdown>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+// const Menu = ({ items }) => {
+//   return (
+//     <ul className="privacy-menu">
+//       {items.map((item, idx) => {
+//         return (
+//           <li key={idx}>
+//             {item.text}
+//             {item.subItems && (
+//               <ul>
+//                 {item.subItems.map((subItem, index) => {
+//                   return (
+//                     <li className="sub-item" key={index}>
+//                       <Markdown>{subItem}</Markdown>
+//                     </li>
+//                   );
+//                 })}
+//               </ul>
+//             )}
+//           </li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
 /* */

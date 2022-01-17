@@ -13,13 +13,14 @@ import { strippedContent } from 'src/utils/helpers';
 
 const LetsLearn = ({ data }) => {
   const lang = i18n.language;
+  const titleHero = lang && data[lang]?.title;
 
   return (
     <section className="lets_learn_section">
       <Head data={data.seo} />
       <Hero bg={data.cover_image}>
         <div className="hero-content">
-          <h1 className="title">{lang && data[lang]?.title} </h1>
+          <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
 

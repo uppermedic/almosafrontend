@@ -26,6 +26,7 @@ const Index = ({
 }) => {
   const { seo, page_cover } = medicalArticals?.page;
   const lang = i18n.language;
+  const titleHero = lang && seo[lang]?.title;
 
   useEffect(() => {
     getMedicalTags('/blog/tags');
@@ -37,7 +38,7 @@ const Index = ({
       <Head data={seo}></Head>
       <Hero bg={page_cover}>
         <div className="hero-content">
-          <h1 className="title">{lang && seo[lang].title} </h1>
+          <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
       <Content

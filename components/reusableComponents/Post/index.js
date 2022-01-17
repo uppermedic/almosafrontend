@@ -3,8 +3,110 @@ import { Container, Row, Col } from 'reactstrap';
 import PostHeading from '../PostHeading';
 import Markdown from 'markdown-to-jsx';
 import { strippedContent, getEmbedVid } from 'src/utils/helpers.js';
+import { i18n } from 'root/i18n';
+import CardItem from './CardItem';
 
-const PostWithRightImg = ({ title, color, theImg, paragraphs }) => {
+const PostContent = ({ title, color, paragraphs, theVideo }) => {
+  return (
+    <div className="post_with_title">
+      <div className="container">
+        {/* if it's a post with two columns one paragraph and one img */}
+        <div className="one_column_post_content">
+          {title && <PostHeading title={title} color={color} />}
+          <Container>
+            <Row xs="1">
+              {paragraphs && (
+                <Col>
+                  <div className="post-paragraph ">
+                    {paragraphs?.map((paragraph, index) => {
+                      return (
+                        <p key={index} className="single_paragraph">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: paragraph || ' '
+                            }}
+                          />
+                        </p>
+                      );
+                    })}
+                  </div>
+                </Col>
+              )}
+            </Row>
+            {theVideo && (
+              <Row className="top-section">
+                <Col>
+                  <div className="video-wrapper">
+                    <div className="video-div">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={getEmbedVid(theVideo)}
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            )}
+          </Container>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const PostContentWithCards = ({ title, color, paragraphs, items }) => {
+  const { language } = i18n;
+
+  return (
+    <div className="post_with_title">
+      <div className="container">
+        {/* if it's a post with two columns one paragraph and one img */}
+        <div className="one_column_post_content">
+          {title && <PostHeading title={title} color={color} />}
+          <Container>
+            <Row xs="1">
+              {paragraphs && (
+                <Col>
+                  <div className="post-paragraph ">
+                    {paragraphs?.map((paragraph, index) => {
+                      return (
+                        <p key={index} className="single_paragraph">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: paragraph || ' '
+                            }}
+                          />
+                        </p>
+                      );
+                    })}
+                  </div>
+                </Col>
+              )}
+            </Row>
+            <Row xs="1" sm="2" md="3" lg="4" className="mt-3">
+              {items.length > 0 &&
+                items?.map((item, index) => (
+                  <Col key={index}>
+                    <CardItem
+                      name={language && item[language]?.name}
+                      title={language && item[language]?.title}
+                      image={item?.image[0]}
+                      link={item?.url}
+                    />
+                  </Col>
+                ))}
+            </Row>
+          </Container>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const PostWithRightImg = ({ title, color, theImg, paragraphs, theVideo }) => {
   return (
     <div className="post_with_title">
       <div className="container">
@@ -14,16 +116,14 @@ const PostWithRightImg = ({ title, color, theImg, paragraphs }) => {
           <Container>
             <Row xs="1" xl="2">
               {paragraphs && (
-                <Col>
+                <Col xl="7">
                   <div className="post-paragraph d-flex flex-column justify-content-center align-items-center">
                     {paragraphs.map((paragraph, index) => {
                       return (
                         <p key={index} className="single_paragraph">
                           <div
                             dangerouslySetInnerHTML={{
-                              __html:
-                                (paragraph && strippedContent(paragraph)) ||
-                                'No Data'
+                              __html: paragraph || ' '
                             }}
                           />
                         </p>
@@ -32,14 +132,41 @@ const PostWithRightImg = ({ title, color, theImg, paragraphs }) => {
                   </div>
                 </Col>
               )}
-              {theImg && (
-                <Col>
+              {typeof theImg === 'string' && (
+                <Col xl="5">
                   <div className="post-img">
                     <img src={theImg} alt="post-img" />
                   </div>
                 </Col>
               )}
+
+              {typeof theImg === 'object' && theImg?.length > 0 && (
+                <Col className="d-flex" xl="5">
+                  {theImg.map(img => (
+                    <div className="post-img mx-2">
+                      <img src={img} alt="post-img" />
+                    </div>
+                  ))}
+                </Col>
+              )}
             </Row>
+            {theVideo && (
+              <Row className="top-section">
+                <Col>
+                  <div className="video-wrapper">
+                    <div className="video-div">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={getEmbedVid(theVideo)}
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            )}
           </Container>
         </div>
       </div>
@@ -70,9 +197,7 @@ const PostWithLeftImg = ({ title, color, theImg, paragraphs }) => {
                         <p key={index} className="single_paragraph">
                           <div
                             dangerouslySetInnerHTML={{
-                              __html:
-                                (paragraph && strippedContent(paragraph)) ||
-                                'No Data'
+                              __html: paragraph || ' '
                             }}
                           />
                         </p>
@@ -108,7 +233,7 @@ const PostWithCenterImg = ({
                 return (
                   <h2 key={index} className="subtitle">
                     <Markdown>
-                      {(subTitle && strippedContent(subTitle)) || 'No Data'}
+                      {(subTitle && strippedContent(subTitle)) || ' '}
                     </Markdown>
                   </h2>
                 );
@@ -122,8 +247,7 @@ const PostWithCenterImg = ({
                   <p>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html:
-                          (paragraph && strippedContent(paragraph)) || 'No Data'
+                        __html: paragraph || ' '
                       }}
                     />
                   </p>
@@ -154,4 +278,10 @@ const PostWithCenterImg = ({
   );
 };
 
-export { PostWithCenterImg, PostWithRightImg, PostWithLeftImg };
+export {
+  PostContent,
+  PostWithCenterImg,
+  PostWithRightImg,
+  PostWithLeftImg,
+  PostContentWithCards
+};

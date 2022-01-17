@@ -1,35 +1,37 @@
 import React from 'react';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import StrategicGoals from 'src/components/About/StrategicGoals';
+import StrategicGoals from 'src/components/About/AboutContentPages';
+import { fetchData } from 'src/store/Request.js';
 
-const FutureProjects = ({ t }) => {
-  const seo = {
-    ar: {
-      title: 'أهدافنا الإستراتيجية',
-      meta_description: 'ميتا',
-      meta_keywords: 'ميتا',
-      url: ''
-    },
-    en: {
-      title: 'Strategic Priorities',
-      meta_description: 'meta',
-      meta_keywords: '',
-      url: ''
-    }
-  };
+const FutureProjects = ({ data }) => {
+  const lang = i18n.language;
+  const titleHero = lang && data.page?.seo[lang]?.title;
+
   return (
-    <div className="strategic-goals">
-      <Head data={seo}></Head>
-      <Hero bg="/images/about/hero-bg.png">
+    <div className="about-page">
+      <Head data={data.page.seo}></Head>
+      <Hero bg={data.page?.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:strategic priorities')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
-      <StrategicGoals />
+      <StrategicGoals contentData={data?.contents} sideTabIndex={3} />
     </div>
   );
 };
+
+export async function getServerSideProps(context) {
+  let { error, data } = await fetchData('/page/23');
+  if (error) {
+    return {
+      notFound: true
+    };
+  }
+  return {
+    props: { data }
+  };
+}
 
 export default withTranslation(['menu'])(FutureProjects);

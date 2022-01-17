@@ -3,15 +3,18 @@ import Head from '../../../components/layout/head';
 import Hero from '../../../components/layout/Hero';
 import MedicalCentersComp from 'src/components/Services/medical-centers';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation } from 'root/i18n';
+import { withTranslation, i18n } from 'root/i18n';
 
-function MedicalCenters({ t, data }) {
+function MedicalCenters({ data }) {
+  const lang = i18n.language;
+  const titleHero = lang && data?.seo[lang]?.title;
+
   return (
     <div className="medical-centers">
       <Head data={data.seo || false}></Head>
       <Hero bg={data.page_cover}>
         <div className="hero-content">
-          <h1 className="title">{t('menu:medical centers')}</h1>
+          <h1 className="title">{titleHero}</h1>
         </div>
       </Hero>
       <MedicalCentersComp data={data.services} />
