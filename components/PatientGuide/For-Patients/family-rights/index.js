@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { i18n, withTranslation } from 'root/i18n';
-import { data } from './data';
-const Content = ({ t, itemContent }) => {
+
+const Content = ({ itemContent }) => {
   let { language } = i18n;
 
   return (

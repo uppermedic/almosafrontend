@@ -47,7 +47,11 @@ function MyApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
-    if (pathname !== '/404' && asPath !== `/${locale}`) {
+    if (
+      pathname !== '/404' &&
+      asPath !== `/${locale}` &&
+      !asPath.includes(locale)
+    ) {
       if (locale == i18n.language) {
         i18n.changeLanguage(i18n.language);
         document
@@ -69,9 +73,15 @@ function MyApp({ Component, pageProps }) {
           locale: locale
         });
       }
-    }
-    if (asPath == `/${locale}`) {
-      router.push(`/404`);
+    } else if (
+      asPath == `/${locale}` ||
+      asPath.includes('/en/') ||
+      asPath.includes('/ar/')
+    ) {
+      i18n.changeLanguage(locale);
+      document.getElementsByTagName('html')[0].setAttribute('lang', locale);
+
+      router.push(`/${locale}/404`);
     }
   }, [locale, i18n.language]);
 

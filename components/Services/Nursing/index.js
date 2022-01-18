@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import { i18n } from 'root/i18n';
 import { PostContent } from 'src/components/reusableComponents/Post';
 
