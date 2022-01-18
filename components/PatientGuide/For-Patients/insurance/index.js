@@ -4,8 +4,7 @@ import Hero from 'src/components/layout/Hero';
 import BrandBox from './re-brandBox';
 import { i18n, withTranslation } from 'root/i18n';
 
-import data from './data';
-const Content = ({ t, itemContent }) => {
+const Content = ({ itemContent }) => {
   let { language } = i18n;
 
   return (
