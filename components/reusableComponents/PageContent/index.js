@@ -3,9 +3,7 @@ import { Container } from 'reactstrap';
 import { i18n } from 'root/i18n';
 import {
   PostContent,
-  PostWithRightImg,
-  PostContentWithCards,
-  PostWithCenterImg
+  PostWithRightImg
 } from 'src/components/reusableComponents/Post';
 
 const PageContent = ({ itemContent }) => {

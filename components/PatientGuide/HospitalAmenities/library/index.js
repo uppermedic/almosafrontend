@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import PageTitle from 'src/components/PatientGuide/HospitalAmenities/re-page-title/index.js';
 import { withTranslation, i18n } from 'root/i18n';
 
 const Content = ({ t }) => {

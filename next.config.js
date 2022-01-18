@@ -2501,7 +2501,7 @@ const links_permanent = [
   },
   {
     source: '/ar/pharmacy/',
-    destination: '/ar/services/supportive-services'
+    destination: '/ar/services/supportive-services/?id=54'
   },
   {
     source:
@@ -4992,7 +4992,7 @@ const links_permanent = [
   },
   {
     source: '/pharmacy/',
-    destination: '/en/services/supportive-services'
+    destination: '/en/services/supportive-services/?id=54'
   },
   {
     source: '/library/',
