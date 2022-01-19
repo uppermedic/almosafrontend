@@ -14,6 +14,8 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 function index({ data, getMediaCategories }) {
   const router = useRouter();
   const { locale } = router;
+  const { page } = router?.query;
+
   const [tapId, settapId] = useState('all');
   const { last_page } = data;
 
@@ -62,7 +64,7 @@ function index({ data, getMediaCategories }) {
             previousLabel={<PrevFC />}
             breakLabel={'...'}
             breakClassName={'break-me'}
-            initialPage={0}
+            // initialPage={0}
             pageCount={last_page}
             marginPagesDisplayed={2}
             pageRangeDisplayed={2}
@@ -70,6 +72,7 @@ function index({ data, getMediaCategories }) {
             containerClassName={'pagination'}
             subContainerClassName={'pages pagination'}
             activeClassName={'active'}
+            forcePage={(page ? page : 1) - 1}
           />
         </Col>
       </Row>

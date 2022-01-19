@@ -15,6 +15,7 @@ import { useRouter } from 'next/router';
 
 function index({ data, categories, t }) {
   const router = useRouter();
+  const { page } = router?.query;
   const lang = i18n.language;
   const [dataF, setdataF] = useState([]);
   const [filter, setfilter] = useState(false);
@@ -142,6 +143,7 @@ function index({ data, categories, t }) {
                       containerClassName={'pagination'}
                       subContainerClassName={'pages pagination'}
                       activeClassName={'active'}
+                      forcePage={(page ? page : 1) - 1}
                     />
                   </Col>
                 </Row>

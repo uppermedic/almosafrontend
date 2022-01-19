@@ -6,9 +6,12 @@ import { connect } from 'react-redux';
 import ReactPaginate from 'react-paginate';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
+import { useRouter } from 'next/router';
 
 const index = ({ data, handlePageClick, last_page }) => {
   const [currentDoctor, setcurrentDoctor] = useState([]);
+  const router = useRouter();
+  const { page } = router?.query;
 
   useEffect(() => {
     setcurrentDoctor(data.our_doctors.data);
@@ -42,6 +45,7 @@ const index = ({ data, handlePageClick, last_page }) => {
             containerClassName={'pagination'}
             subContainerClassName={'pages pagination'}
             activeClassName={'active'}
+            forcePage={(page ? page : 1) - 1}
           />
         </Col>
       </Row>
