@@ -12,6 +12,8 @@ import PostCard from './PostCard';
 
 const Index = ({ data, latest, tags, categories, t }) => {
   const router = useRouter();
+  const { page } = router?.query;
+
   const [controllerOpen, setControllerOpen] = useState(false);
   const { last_page } = data;
   const [locale, setlocale] = useState('');
@@ -69,6 +71,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     containerClassName={'pagination'}
                     subContainerClassName={'pages pagination'}
                     activeClassName={'active'}
+                    forcePage={(page ? page : 1) - 1}
                   />
                 </Col>
               </Row>

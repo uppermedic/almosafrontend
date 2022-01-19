@@ -14,6 +14,7 @@ const Index = ({ data, router, t }) => {
   const { language } = i18n;
   const [search, setSearch] = useState('');
   const [locale, setlocale] = useState('');
+  const { page } = router?.query;
 
   useEffect(() => {
     setSearch(router.query.search);
@@ -86,6 +87,7 @@ const Index = ({ data, router, t }) => {
                 containerClassName={'pagination'}
                 subContainerClassName={'pages pagination'}
                 activeClassName={'active'}
+                forcePage={(page ? page : 1) - 1}
               />
             </Col>
           </Row>

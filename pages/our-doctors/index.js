@@ -23,7 +23,7 @@ function Our_Doctors({ data, getCategories, categories }) {
 
   useEffect(() => {
     getCategories('/sections');
-    router.push(`/${locale}/our-doctors/?page=1`);
+    // router.push(`/${locale}/our-doctors`);
     return () => {};
   }, []);
 

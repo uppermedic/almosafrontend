@@ -68,6 +68,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     containerClassName={'pagination'}
                     subContainerClassName={'pages pagination'}
                     activeClassName={'active'}
+                    forcePage={(page ? page : 1) - 1}
                   />
                 </Col>
               </Row>

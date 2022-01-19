@@ -21,7 +21,6 @@ const Index = ({ data, latest, tags, categories, t }) => {
     setlocale(language);
   }, [language]);
 
-  console.log('page', router.query);
   const handlePageClick = ({ selected }) => {
     router.push(`/${locale}/media-center/news/?page=${selected + 1}`);
   };
@@ -130,6 +129,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     containerClassName={'pagination'}
                     subContainerClassName={'pages pagination'}
                     activeClassName={'active'}
+                    forcePage={(page ? page : 1) - 1}
                   />
                 </Col>
               </Row>
