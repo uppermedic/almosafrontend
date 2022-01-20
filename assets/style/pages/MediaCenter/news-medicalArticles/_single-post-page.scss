@@ -19,7 +19,11 @@
     }
 
     .post-content {
-      * {
+      p,
+      div,
+      strong span,
+      li,
+      a {
         font-size: 16px !important;
         @include respond-below(md) {
           font-size: 14px !important;
