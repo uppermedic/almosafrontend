@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://almoosahospital.org/ar/about/overview/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/overview/"/>
+  </url>
+
+   <url>
+    <loc>https://almoosahospital.org/ar/about/vision-mission/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/vision-mission/"/>
+  </url>
+
+  <url>
+    <loc>https://almoosahospital.org/ar/about/values/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/values/"/>
+  </url>
+
+  <url>
+    <loc>https://almoosahospital.org/ar/about/strategic-priorities/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/values/"/>
+  </url>
+
+
+  <url>
+    <loc>https://almoosahospital.org/ar/about/strategic-priorities/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/strategic-priorities/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/awards/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/awards/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/our-history/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/our-history/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/board-directors-and-executive-team/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/board-directors-and-executive-team/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/fast-facts/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/fast-facts/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/almoosa-medical-group/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/almoosa-medical-group/"/>
+  </url>
+
+<url>
+    <loc>https://almoosahospital.org/ar/about/annual-report/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://almoosahospital.org/en/about/annual-report/"/>
+  </url>
+
+
+  
+</urlset>
