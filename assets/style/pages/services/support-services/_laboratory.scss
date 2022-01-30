@@ -15,11 +15,7 @@
           font-size: $sub-heading-sm-size;
         }
       }
-      li,
-      p,
-      span,
-      h3,
-      a {
+      &:not(h1, h2, h3, h4, h5, h6) {
         font-size: 16px !important;
         font-family: 'diodrum-arabic-meduim' !important ;
         @include respond-below(md) {

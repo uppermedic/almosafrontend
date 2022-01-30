@@ -10,12 +10,7 @@
       // padding-right: 50px;
       font-weight: bold;
       height: 100%;
-      p,
-      span,
-      li,
-      strong,
-      div,
-      a {
+      &:not(h1, h2, h3, h4, h5, h6) {
         font-size: 16px !important;
         font-family: 'diodrum-arabic-meduim' !important ;
         @include respond-below(md) {
@@ -25,12 +20,7 @@
 
       .single_paragraph {
         margin: 20px auto;
-        p,
-        span,
-        li,
-        strong,
-        div,
-        a {
+        &:not(h1, h2, h3, h4, h5, h6) {
           font-size: 16px !important;
           font-family: 'diodrum-arabic-meduim' !important ;
           @include respond-below(md) {
@@ -109,12 +99,7 @@
       font-weight: bold;
       text-align: center;
       margin: 50px auto;
-      p,
-      span,
-      li,
-      strong,
-      div,
-      a {
+      &:not(h1, h2, h3, h4, h5, h6) {
         font-size: 16px !important;
         font-family: 'diodrum-arabic-meduim' !important ;
         @include respond-below(md) {
