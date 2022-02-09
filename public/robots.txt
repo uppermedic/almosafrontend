@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://almoosahospital.org/sitemap.xml
+Sitemap: https://almoosahospital.org/Sitemap.xml
 Sitemap: https://almoosahospital.org/Medical-articles-sitemap.xml
-Sitemap: https://almoosahospital.org/ٍServices-sitemap.xml
-Sitemap: https://almoosahospital.org/ٍNews-sitemap.xml
+Sitemap: https://almoosahospital.org/Services-sitemap.xml
+Sitemap: https://almoosahospital.org/News-sitemap.xml
 Sitemap: https://almoosahospital.org/About-sitemap.xml

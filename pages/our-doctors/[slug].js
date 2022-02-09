@@ -57,22 +57,22 @@ const SingleDoctor = ({ doctor }) => {
             <div className="doctor-social">
               <Link href={doctor.social.facebook || '#!'}>
                 <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaFacebookF />
+                  <FaFacebookF className="facebook" />
                 </a>
               </Link>
               <Link href={doctor.social.twitter || '#!'}>
                 <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaTwitter />
+                  <FaTwitter className="twitter" />
                 </a>
               </Link>
               <Link href={doctor.social.linkedin || '#!'}>
                 <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaLinkedin />
+                  <FaLinkedin className="linkedin" />
                 </a>
               </Link>
               <Link href={`tel:${doctor.social.whatsapp_number}`}>
                 <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaWhatsapp />
+                  <FaWhatsapp className="watsapp" />
                 </a>
               </Link>
             </div>
