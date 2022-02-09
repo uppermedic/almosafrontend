@@ -44,7 +44,7 @@ const index = ({ doctorData, t }) => {
               </div>
             )}
           </Col>
-          <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 pt-4">
+          <Col lg={{ size: 8 }} className="pl-sm-5 pr-4">
             <h3 className="doctor-name">
               {language && doctorData[language] && doctorData[language]?.name}
             </h3>

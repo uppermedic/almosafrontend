@@ -35,88 +35,93 @@ const SingleDoctor = ({ doctor }) => {
       <Head data={doctor.page.seo}></Head>
 
       <div
-        className="text-white mb-4"
+        className="text-white mb-4 "
         style={{
           padding: '1em',
           backgroundColor: '#537435',
           textAlign: 'center'
         }}
       >
-        <h1>{lang && doctor.data[lang].name}</h1>
+        <h2>{lang && doctor.data[lang].name}</h2>
         <p className="title">{lang && doctor.data[lang].title}</p>
       </div>
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs={10} md={4}>
-            <img
-              className="d-block w-100"
-              src={doctor.data.image}
-              alt={lang && doctor.data[lang].name}
-            />
+      <div className="our-doctors">
+        <Container>
+          <Row className="justify-content-center doctor-details">
+            <Col xs={12} lg={4}>
+              <div className="doctor-img">
+                <img
+                  // className="d-block w-100"
+                  className="doctorimg"
+                  src={doctor.data.image}
+                  alt={lang && doctor.data[lang].name}
+                />
 
-            <div className="doctor-social">
-              <Link href={doctor.social.facebook || '#!'}>
-                <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaFacebookF className="facebook" />
-                </a>
-              </Link>
-              <Link href={doctor.social.twitter || '#!'}>
-                <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaTwitter className="twitter" />
-                </a>
-              </Link>
-              <Link href={doctor.social.linkedin || '#!'}>
-                <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaLinkedin className="linkedin" />
-                </a>
-              </Link>
-              <Link href={`tel:${doctor.social.whatsapp_number}`}>
-                <a target="_blank" rel="noopener noreferrer nofollow">
-                  <FaWhatsapp className="watsapp" />
-                </a>
-              </Link>
-            </div>
-          </Col>
-          <Col xs={12} md={6}>
-            <Table responsive>
-              <tbody>
-                {Object.keys(qualifications).map((key, i) => (
-                  <tr key={key}>
-                    <td
-                      style={{
-                        padding: '35px 20px 35px 0',
-                        borderBottom: '1px solid #eee',
-                        borderTop: 'none'
-                      }}
-                    >
-                      <strong>{key}</strong>
-                    </td>
-                    <td
-                      style={{
-                        padding: '35px 20px 35px 0',
-                        borderBottom: '1px solid #eee',
-                        borderTop: 'none'
-                      }}
-                    >
-                      <span
+                <div className="doctor-social">
+                  <Link href={doctor.social.facebook || '#!'}>
+                    <a target="_blank" rel="noopener noreferrer nofollow">
+                      <FaFacebookF className="facebook" />
+                    </a>
+                  </Link>
+                  <Link href={doctor.social.twitter || '#!'}>
+                    <a target="_blank" rel="noopener noreferrer nofollow">
+                      <FaTwitter className="twitter" />
+                    </a>
+                  </Link>
+                  <Link href={doctor.social.linkedin || '#!'}>
+                    <a target="_blank" rel="noopener noreferrer nofollow">
+                      <FaLinkedin className="linkedin" />
+                    </a>
+                  </Link>
+                  <Link href={`tel:${doctor.social.whatsapp_number}`}>
+                    <a target="_blank" rel="noopener noreferrer nofollow">
+                      <FaWhatsapp className="watsapp" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </Col>
+            <Col xs={12} lg={8}>
+              <Table responsive>
+                <tbody>
+                  {Object.keys(qualifications).map((key, i) => (
+                    <tr key={key}>
+                      <td
                         style={{
-                          marginRight: lang === 'ar' && '-20px',
-                          marginLeft: lang === 'en' && '-20px',
-                          position: 'absolute',
-                          color: '#78a748'
+                          padding: '35px 20px 35px 0',
+                          borderBottom: '1px solid #eee',
+                          borderTop: 'none'
                         }}
                       >
-                        {'>>'}
-                      </span>
-                      {qualifications[key]}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
-      </Container>
+                        <strong>{key}</strong>
+                      </td>
+                      <td
+                        style={{
+                          padding: '35px 20px 35px 0',
+                          borderBottom: '1px solid #eee',
+                          borderTop: 'none'
+                        }}
+                      >
+                        <span
+                          style={{
+                            marginRight: lang === 'ar' && '-20px',
+                            marginLeft: lang === 'en' && '-20px',
+                            position: 'absolute',
+                            color: '#78a748'
+                          }}
+                        >
+                          {'>>'}
+                        </span>
+                        {qualifications[key]}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
