@@ -14,8 +14,8 @@ const Event = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/training-education/events/${removeSpChar(
-          String(data[lang].title)
+        `/${locale}/training-education/events/${removeSpChar(
+          String(data[locale].title)
         )
           .split(' ')
           .join('-')}/?id=${data.id}`

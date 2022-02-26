@@ -21,8 +21,8 @@ function BordDirectors({ data }) {
     if (language && locale) {
       const data = JSON.parse(localStorage.getItem('doctor'));
       router.push(
-        `/${language}/about/board-directors-and-executive-team/${removeSpChar(
-          String(data[language]?.slug)
+        `/${locale}/about/board-directors-and-executive-team/${removeSpChar(
+          String(data[locale]?.slug)
         )
           .split(' ')
           .join('-')}/?id=${data?.id}`

@@ -23,7 +23,9 @@ const SingleDoctor = ({ doctor }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/our-doctors/${removeSpChar(String(doctor?.data[lang]?.name))
+        `/${locale}/our-doctors/${removeSpChar(
+          String(doctor?.data[locale]?.name)
+        )
           .split(' ')
           .join('-')}/?id=${doctor?.data?.id}`
       );

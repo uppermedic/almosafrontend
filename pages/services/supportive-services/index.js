@@ -17,7 +17,7 @@ function Supportive({ t, services, servicesDataSingle }) {
   useEffect(() => {
     if (lang && locale && router?.asPath == '/services/supportive-services/') {
       router.push(
-        `/${lang}/services/supportive-services/?id=${services.services[0].id}`
+        `/${locale}/services/supportive-services/?id=${services.services[0].id}`
       );
     }
   }, []);

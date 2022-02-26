@@ -13,8 +13,8 @@ const Post = ({ data }) => {
   useEffect(() => {
     if (language && locale) {
       router.push(
-        `/${language}/media-center/medical-articles/post/${removeSpChar(
-          String(data[language].title)
+        `/${locale}/media-center/medical-articles/post/${removeSpChar(
+          String(data[locale].title)
         )
           .split(' ')
           .join('-')}/?id=${data.id}`
