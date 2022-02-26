@@ -6558,7 +6558,7 @@ module.exports = {
   i18n: {
     localeDetection: false,
     defaultLocale: 'en',
-    locales: ['ar', 'en']
+    locales: ['en', 'ar']
   },
   async redirects() {
     return redLinks;

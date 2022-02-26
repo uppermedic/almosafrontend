@@ -15,8 +15,8 @@ const HairTranplant = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/services/medical-programs/${removeSpChar(
-          String(data.seo[lang].title)
+        `/${locale}/services/medical-programs/${removeSpChar(
+          String(data.seo[locale].title)
         )
           .split(' ')
           .join('-')}/?id=${data.id}`

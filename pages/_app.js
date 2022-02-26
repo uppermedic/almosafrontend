@@ -47,10 +47,11 @@ function MyApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
+    // console.log('hiiiii', asPath.includes(`/${locale}/`));
     if (
       pathname !== '/404' &&
       asPath !== `/${locale}` &&
-      !asPath.includes(locale)
+      !asPath.includes(`/${locale}/`)
     ) {
       if (locale == i18n.language) {
         i18n.changeLanguage(i18n.language);
