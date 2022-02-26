@@ -14,8 +14,8 @@ const IntensiveCare = ({ data }) => {
   useEffect(() => {
     if (lang && locale) {
       router.push(
-        `/${lang}/services/inpatient-units/${removeSpChar(
-          String(data.seo[lang].title)
+        `/${locale}/services/inpatient-units/${removeSpChar(
+          String(data.seo[locale].title)
         )
           .split(' ')
           .join('-')}/?id=${data.id}` || '#'

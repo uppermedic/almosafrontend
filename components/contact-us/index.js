@@ -11,6 +11,8 @@ const TEST_SITE_KEY = '6LeVVRIaAAAAAC6mKFfCOeZKUX-vv9hFQlwIVDbj';
 const index = ({ data, t }) => {
   const router = useRouter();
   const lang = i18n.language;
+  const { locale } = router;
+
   const [verified, setVerified] = useState(false);
   let _reCaptchaRef = useRef(null);
 
@@ -27,14 +29,15 @@ const index = ({ data, t }) => {
           'success'
         ).then(result => {
           if (result) {
-            router.push(`/${lang}`);
+            router.push(`/${locale}`);
           }
         });
       })
       .catch(error => {
         Swal.fire(
           t('faild'),
-          (lang == 'en' && 'Unexpected error occurred') || 'حدث خطأ غير متوقع ',
+          (locale == 'en' && 'Unexpected error occurred') ||
+            'حدث خطأ غير متوقع ',
           'error'
         );
       });

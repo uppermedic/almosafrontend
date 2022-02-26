@@ -133,6 +133,24 @@
     .right_link {
       margin: 5px auto;
       height: 30px;
+      .big-screens {
+        display: flex;
+        width: 100%;
+        @include respond-below(sm) {
+          display: none;
+        }
+      }
+      .small-screens {
+        display: none;
+        width: 100%;
+        @include respond-below(sm) {
+          display: block;
+        }
+      }
+
+      @include respond-below(sm) {
+        margin: 15px auto;
+      }
       @include respond-below(xs) {
         display: none;
       }
