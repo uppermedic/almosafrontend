@@ -6557,8 +6557,8 @@ module.exports = {
   trailingSlash: true,
   i18n: {
     localeDetection: false,
-    defaultLocale: 'en',
-    locales: ['en', 'ar']
+    defaultLocale: 'ar',
+    locales: ['ar', 'en']
   },
   async redirects() {
     return redLinks;
