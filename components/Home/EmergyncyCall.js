@@ -17,7 +17,7 @@ const emergyncyCall = ({ emergency_phone, t }) => {
               <a className="emergyncy-phone hvr-icon-grow-rotate">
                 <p>
                   <i className="fas fa-phone-alt mr-1 hvr-icon"></i>
-                  {emergency_phone}
+                  {emergency_phone?.split(' ').join('')}
                 </p>
               </a>
             </Link>

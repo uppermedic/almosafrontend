@@ -120,7 +120,8 @@ const Footer = ({ data, customClass, t }) => {
                   </a>
                 </Link>
                 <a target="_blank" href={`tel:${contact_phone}`}>
-                  <i className="fas fa-phone-alt mr-1" /> {contact_phone}
+                  <i className="fas fa-phone-alt mr-1" />{' '}
+                  {contact_phone?.split(' ').join('')}
                 </a>
                 <a target="_blank" href={`mailto:${contact_email}`}>
                   <i className="fas fa-envelope mr-1" /> {contact_email}
