@@ -55,7 +55,7 @@ const index = ({ data, t }) => {
                 </li>
                 <li>
                   <i className="fas fa-phone-square-alt"></i>
-                  {data.phone}
+                  {data.phone?.split(' ').join('')}
                 </li>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
