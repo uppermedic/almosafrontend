@@ -10,6 +10,7 @@ import Carousel from 'src/components/layout/Carousel';
 import IconsSection from 'src/components/Home/IconsSection';
 import EmergyncyCall from 'src/components/Home/EmergyncyCall';
 import News from 'src/components/Home/News';
+import VirtualTour from 'components/Home/VirtualTour';
 
 const Homepage = props => {
   if (props.data) {
@@ -19,6 +20,7 @@ const Homepage = props => {
         <Carousel data={props.data.sliders} />
         <IconsSection />
         <WhyMosa data={props.data.content[1]} />
+        <VirtualTour />
         <Centers data={props.data.home_services} />
         <Testimonial data={props.data.testimonials} />
         <Statistics
