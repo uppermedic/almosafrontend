@@ -6510,6 +6510,10 @@ links_temporary = [
   {
     source: '/your-voice-matters/',
     destination: '/en/'
+  },
+  {
+    source: '/virtual-tour/',
+    destination: '/virtual-tour/'
   }
 ];
 
