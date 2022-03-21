@@ -11,15 +11,13 @@ function NewsItem({ t, team }) {
 
   return (
     <div className="item caro-card">
-      <Link href={`/${locale}/services/medical-centers/${team.id}`}>
-        <a>
-          <img src={team.image} alt="academic" />
-          <div className="content-card">
-            <h3>{language && team[language].name}</h3>
-            <span>{language && team[language].title}</span>
-          </div>
-        </a>
-      </Link>
+      <a href={language ? String(team[language]?.url) : '#'} target="_blank">
+        <img src={team.image} alt="academic" />
+        <div className="content-card">
+          <h3>{language && team[language]?.name}</h3>
+          <span>{language && team[language]?.title}</span>
+        </div>
+      </a>
     </div>
   );
 }
