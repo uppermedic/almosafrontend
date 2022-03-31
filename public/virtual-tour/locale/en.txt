@@ -1,0 +1,51 @@
+#: locale=en
+
+## Media
+
+### Title
+panorama_133E6DC0_1CF9_C5FA_41A4_F5DF7DCAC661.label =  منطقة الإستقبال
+panorama_13396399_1CFE_3D8A_41B2_D6D6E58AEBC6.label = الصيدلية
+panorama_3C07F4FD_2387_DEF9_41B0_430C280EB1E2.label = المختبر
+panorama_1339A106_1CFF_FA86_4195_045BA437ED72.label = المدخل الرئيسي
+panorama_13386141_1CFE_3AFA_41B1_7547E315FDE3.label = المطعم
+panorama_133932FB_1CFE_7F8E_41B9_1D17AEAF419D.label = النادي الرّياضي
+panorama_13380F9F_1CFE_4586_417E_B85EB3619578.label = اماكن الانتظار
+panorama_3FDF4444_2381_FD0F_41B6_3CE668E906D8.label = بنك الدّم
+panorama_1338C903_1CFE_CA7E_41A0_07372F627B6B.label = جناح الشّيح
+panorama_13398BF3_1CFE_CD9E_41A9_212E8AAB0F34.label = جناح الشّيح
+panorama_13399323_1CFE_3EBE_4163_1700873A2F77.label = عيادة خارجيّة
+panorama_12B1AE62_1CFA_46BE_41A6_30A9219664F5.label = غرفة تنويم
+panorama_133891BD_1CFE_7D8A_41B1_C201B3473643.label = غرفة عمليّات
+panorama_1339335D_1CFE_FE8A_41A6_9667B0496F60.label = غرفة عناية
+panorama_1339F0D4_1CFE_7B9A_4182_7910B9D5D3CE.label = قاعة المؤتمرات
+panorama_1338027E_1CFE_7E86_4198_471B6562EADA.label = لقطة جوّية
+
+## Skin
+
+### Image
+Image_439F59F4_1C4E_CD9A_41B3_AEEB830ED988.url = skin/Image_439F59F4_1C4E_CD9A_41B3_AEEB830ED988_en.png
+
+### Label
+Label_7DD2B18A_1C49_FD8E_4195_268F1CA541B6.text = الصيدلية
+Label_7D51C191_1C36_3D9A_41B3_949E31CB52A2.text = المختبر
+Label_42D0D475_1C56_3A9A_41BD_3AE1D7BFACE4.text = المدخل الرئيسي
+Label_412B6091_1CCA_3B9A_417B_575F0D31AD4B.text = المطعم
+Label_7E1DF4D0_1CCA_5B9A_41AC_938B72A67CD0.text = النادي الرّياضي
+Label_7F9BACE9_1C36_CB8A_41B6_9AFDFBD52AA6.text = اماكن الانتظار
+Label_7F48033E_1C3A_3E86_41B3_B20744BFDC3A.text = بنك الدّم
+Label_7DE1207D_1C3A_3A8A_41BA_F37AA943F5A7.text = جناح الشّيح
+Label_41A18CB5_1C36_CB9A_4197_AFAC1D58A360.text = عيادة خارجيّة
+Label_7A6CECE5_1C3E_CBBA_4193_25CA3D306E26.text = غرفة تنويم
+Label_7EA811FB_1C3B_DD8E_41A4_9709C3888DC3.text = غرفة عمليّات
+Label_7EA7A234_1C3E_FE9A_419C_6D735A62FAEE.text = غرفة عناية
+Label_7BD074AD_1C36_DB8A_419B_A7E7918378ED.text = قاعة المؤتمرات
+Label_464243DF_1C56_3D86_41AF_322F825E35DC.text = لقطة جوّية
+Label_7E7DE1CB_1C4A_DD8E_41BD_8CE2F4698964.text = منطقة الإستقبال
+
+## Tour
+
+### Description
+tour.description = مستشفى الموسى التخصصي 
+
+### Title
+tour.name = مستشفى الموسى التخصصي 
