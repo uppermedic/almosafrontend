@@ -45,30 +45,35 @@
           color: #fff;
         }
       }
-      .ribbon-1 {
+      .ribbon-1,
+      .ribbon-5,
+      .ribbon-9 {
         background-color: $almoosa-light-green;
       }
-      .ribbon-2 {
-        background-color: $secondary-color-purple;
-      }
-      .ribbon-3 {
-        background-color: $almoosa-brown-color;
-      }
-      .ribbon-4 {
-        background-color: $dark-blue;
-      }
-      .ribbon-5 {
-        background-color: $almoosa-light-green;
-      }
+      .ribbon-2,
       .ribbon-6 {
         background-color: $secondary-color-purple;
       }
+      .ribbon-3,
       .ribbon-7 {
         background-color: $almoosa-brown-color;
       }
+      .ribbon-4,
       .ribbon-8 {
         background-color: $dark-blue;
       }
+      // .ribbon-5 {
+      //   background-color: $almoosa-light-green;
+      // }
+      // .ribbon-6 {
+      //   background-color: $secondary-color-purple;
+      // }
+      // .ribbon-7 {
+      //   background-color: $almoosa-brown-color;
+      // }
+      // .ribbon-8 {
+      //   background-color: $dark-blue;
+      // }
     }
   }
 }
