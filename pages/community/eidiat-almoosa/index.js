@@ -19,7 +19,7 @@ const LetsLearn = ({ data }) => {
           <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
-      {data?.contents[0]?.video && (
+      {data?.contents[0]?.images && (
         <div className="eidiat-almoosa">
           <Container>
             <Row>
@@ -32,7 +32,7 @@ const LetsLearn = ({ data }) => {
             <Row style={{ marginTop: 44 }}>
               <Col xs={12}>
                 <iframe
-                  src={data?.contents[0]?.video}
+                  src={data?.contents[0]?.images[0]}
                   width="100%"
                   height="600"
                   frameborder="0"
