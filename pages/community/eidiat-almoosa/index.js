@@ -19,28 +19,29 @@ const LetsLearn = ({ data }) => {
           <h1 className="title">{titleHero} </h1>
         </div>
       </Hero>
-
-      {data?.contents[0]?.images && (
-        <>
-          <PostWithCenterImg
-            title={lang && data.contents[0][lang].title}
-            color="#55B047"
-            paragraphs={[lang && data.contents[0][lang].content]}
-          />
+      {data?.contents[0]?.video && (
+        <div className="eidiat-almoosa">
           <Container>
-            <Row className="mb-5">
+            <Row>
+              <Col xs={12}>
+                <h3 className="section-title">
+                  {lang && data.contents[0][lang].title}
+                </h3>
+              </Col>
+            </Row>
+            <Row style={{ marginTop: 44 }}>
               <Col xs={12}>
                 <iframe
-                  src={data?.contents[0]?.images[0]}
+                  src={data?.contents[0]?.video}
                   width="100%"
                   height="600"
                   frameborder="0"
                   allowfullscreen
-                />
+                ></iframe>
               </Col>
             </Row>
           </Container>
-        </>
+        </div>
       )}
     </section>
   );
