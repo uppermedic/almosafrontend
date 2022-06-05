@@ -10,7 +10,7 @@
       .post-img {
         // width: 100%;
         img {
-          height: 450px;
+          // height: 450px;
         }
       }
     }
@@ -42,13 +42,16 @@
       .col {
         margin: 30px 0;
         .img-container {
-          height: 266px;
+          height: 360px;
           img {
             width: 100%;
             height: 100%;
             max-width: 100%;
             max-height: 100%;
-            object-fit: fill;
+            // object-fit: fill;
+          }
+          @include respond-below(sm) {
+            height: 260px;
           }
         }
       }
