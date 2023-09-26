@@ -9,12 +9,17 @@ import {
   Col
 } from 'reactstrap';
 import classnames from 'classnames';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import DoctorCard from 'src/components/Services/physician-card';
+import { useRouter } from 'next/router';
 
 const ReusableTabs = props => {
-  const { physicians, tab1Data, t } = props;
-  const { language } = i18n;
+const { t } = useTranslation('common');
+
+  const { physicians, tab1Data } = props;
+  const router = useRouter();
+  const { locale } = router;
+
   const [activeTab, setActiveTab] = useState('1');
   const physiciansExist = physicians && physicians.length > 0;
   const itemsExist = tab1Data && tab1Data.items.length > 0;
@@ -48,7 +53,7 @@ const ReusableTabs = props => {
                   toggle('1');
                 }}
               >
-                {language && tab1Data[language]?.title}
+                {locale && tab1Data[locale]?.title}
               </NavLink>
             </NavItem>
           )}
@@ -63,7 +68,7 @@ const ReusableTabs = props => {
                   toggle('2');
                 }}
               >
-                {t('our physicians')}
+                {t('our_physicians')}
               </NavLink>
             </NavItem>
           )}
@@ -73,11 +78,11 @@ const ReusableTabs = props => {
             {itemsExist &&
               tab1Data.items.map((item, idx) => (
                 <div className={classnames({ content: true })} key={idx}>
-                  {language && item[language]?.content && (
+                  {locale && item[locale]?.content && (
                     <p>
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: item[language]?.content
+                          __html: item[locale]?.content
                         }}
                       />
                     </p>
@@ -104,10 +109,5 @@ const ReusableTabs = props => {
     </div>
   );
 };
+export default ReusableTabs;
 
-export default withTranslation('common')(ReusableTabs);
-
-/*
-
-•  • •  •  •  • 
-*/

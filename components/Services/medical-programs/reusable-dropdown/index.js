@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 /* 
 
@@ -13,13 +14,15 @@ import { i18n, withTranslation } from 'root/i18n';
 */
 
 const ReusableDropdown = ({
-  t,
   physicians,
   items,
   clickItemFun,
   activeItemIndex
 }) => {
-  const { language } = i18n;
+const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="reusable-dropdown">
@@ -34,7 +37,7 @@ const ReusableDropdown = ({
                   onClick={() => clickItemFun(item)}
                 >
                   {/* <i className={item.iconClass}></i> */}
-                  <span> {language && item[language].title} </span>
+                  <span> {locale && item[locale].title} </span>
                 </li>
               );
             })}
@@ -44,7 +47,7 @@ const ReusableDropdown = ({
               onClick={() => clickItemFun({ id: 'physicians' })}
             >
               {/* <i className={item.iconClass}></i> */}
-              <span> {t('our physicians')}</span>
+              <span> {t('our_physicians')}</span>
             </li>
           )}
         </ul>
@@ -52,5 +55,4 @@ const ReusableDropdown = ({
     </section>
   );
 };
-
-export default withTranslation('common')(ReusableDropdown);
+export default ReusableDropdown;

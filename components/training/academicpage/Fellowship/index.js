@@ -1,28 +1,29 @@
 import React from 'react';
 import { Row, Col, Card } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const index = ({ fellowshipData }) => {
-  const lang = i18n.language;
-  console.log('fellowshipData[lang]?.page_items', fellowshipData?.page_items);
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <section className="fellowship">
       <Row>
         <Col>
           <h2 className="section-title">
-            {lang && fellowshipData[lang]?.title}
+            {locale && fellowshipData[locale]?.title}
           </h2>
         </Col>
       </Row>
       <Row>
         <Col>
-          {lang && (
+          {locale && (
             <div className="section-content">
               {
                 <p>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: fellowshipData[lang]?.content || ' '
+                      __html: fellowshipData[locale]?.content || ' '
                     }}
                   />
                 </p>
@@ -34,7 +35,7 @@ const index = ({ fellowshipData }) => {
                       dangerouslySetInnerHTML={{
                         __html:
                           (fellowshipData?.page_items?.length > 0 &&
-                            fellowshipData?.page_items[0][lang]?.content) ||
+                            fellowshipData?.page_items[0][locale]?.content) ||
                           ' '
                       }}
                     />

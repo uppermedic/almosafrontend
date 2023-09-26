@@ -2,12 +2,15 @@ import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import ForVisitors from 'src/components/PatientGuide/For-Visitors';
-import { withTranslation, i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const services = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data.page?.seo[lang]?.title;
+const Services = ({ data }) => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="for-visitors">
@@ -22,7 +25,7 @@ const services = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/page/15');
   if (error) {
     return {
@@ -30,8 +33,19 @@ export async function getServerSideProps() {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(services);
+export default Services;

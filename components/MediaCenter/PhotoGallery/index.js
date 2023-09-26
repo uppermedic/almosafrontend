@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Taps from './Taps';
-import { Link, withTranslation, i18n } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { connect } from 'react-redux';
-import { useRouter } from 'next/router';
 import ImageViewer from 'components/layout/ImgsViewerSlider';
 import { Container, Row, Col } from 'reactstrap';
 
 const dataTap = ['All', 'North tower', 'Eye Center'];
 
-const index = ({ data, t, categories, handleSelectTap, tapId }) => {
+const Index = ({ data, categories, handleSelectTap, tapId }) => {
+  const { t } = useTranslation(['common','menu']);
+
   const [isOpen, setisOpen] = useState(false);
   const [imageIndex, setimageIndex] = useState(0);
 
@@ -28,7 +29,7 @@ const index = ({ data, t, categories, handleSelectTap, tapId }) => {
       <Container className="pb-5">
         <Row>
           <Col className="pt-5">
-            <h2>{t('menu:photo gallery')}</h2>
+            <h2>{t('menu:photo_gallery')}</h2>
           </Col>
         </Row>
         <Row className="categories">
@@ -87,7 +88,4 @@ const mapStateToProps = state => ({
   tags: state.Globals.tags,
   categories: state.Globals.categories
 });
-
-export default withTranslation(['common', 'menu'])(
-  connect(mapStateToProps)(index)
-);
+export default connect(mapStateToProps)(Index);

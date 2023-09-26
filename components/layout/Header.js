@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CN from 'classnames';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import Classnames from 'classnames';
 import {
@@ -14,16 +14,14 @@ import {
 import Dropdown from './Dropdown';
 import Menu from 'src/constants/Menu';
 
-const Header = ({ t }) => {
+const Header = () => {
+const { t } = useTranslation(['common', 'menu', 'header']);
+
   const router = useRouter();
-  const { language } = i18n;
+  const { locale , pathname } = router;
+
   const [isOpen, setIsOpen] = useState(false);
   const [transform, setTransform] = useState(0);
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -103,7 +101,7 @@ const Header = ({ t }) => {
                       <Link href={`/${locale}/${item.path}`}>
                         <a
                           className={Classnames('nav-link', {
-                            active: router.pathname === item.path
+                            active: pathname === item.path
                           })}
                         >
                           {t('menu:' + item.label)}
@@ -128,7 +126,5 @@ const Header = ({ t }) => {
     </header>
   );
 };
-Header.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'menu', 'header']
-});
-export default withTranslation('common')(Header);
+
+export default Header;

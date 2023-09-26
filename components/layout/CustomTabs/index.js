@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { i18n, withTranslation } from 'root/i18n';
 import {
   TabContent,
   TabPane,
   Nav,
   NavItem,
   NavLink,
-  Container,
   Row,
   Col
 } from 'reactstrap';
@@ -14,9 +12,9 @@ import classnames from 'classnames';
 import { useRouter } from 'next/router';
 
 const CustomTabs = ({ items, dataContent }) => {
-  const { language } = i18n;
   const [activeTab, setActiveTab] = useState(0);
   const router = useRouter();
+  const { locale } = router;
 
   const toggle = tab => {
     setActiveTab(tab);
@@ -33,9 +31,9 @@ const CustomTabs = ({ items, dataContent }) => {
   const handleRouteById = item => {
     if (item.dataType) {
       if (item.dataType === 'dynamic') {
-        router.push(`/${language}` + item.path + `?id=${item.id}`);
+        router.push(`/${locale}` + item.path + `?id=${item.id}`);
       } else {
-        router.push(`/${language}` + item.path);
+        router.push(`/${locale}` + item.path);
       }
     }
   };
@@ -62,7 +60,7 @@ const CustomTabs = ({ items, dataContent }) => {
                       toggle(item.dataType === 'dynamic' ? item.id : index);
                     }}
                   >
-                    {language && item.title[language]}
+                    {locale && item.title[locale]}
                   </NavLink>
                 </NavItem>
               );
@@ -107,4 +105,4 @@ const CustomTabs = ({ items, dataContent }) => {
   );
 };
 
-export default withTranslation('common')(CustomTabs);
+export default CustomTabs;

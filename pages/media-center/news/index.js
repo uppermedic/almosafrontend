@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'next/router';
+import { useRouter, withRouter } from 'next/router';
 
 import {
   getAllPosts as getAllPostsAction,
@@ -11,7 +11,7 @@ import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/MediaCenter/News';
-import { i18n } from 'root/i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Index = ({
   data,
@@ -19,14 +19,15 @@ const Index = ({
   categories,
   news,
   newsData,
-  router,
   getAllPosts,
   getNewsTags,
   getNewsCategories
 }) => {
   const { seo, page_cover } = news?.page;
-  const lang = i18n.language;
-  const titleHero = lang && seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && seo[locale]?.title;
   useEffect(() => {
     getNewsTags('/blog/tags');
     getNewsCategories('/blog/categories');
@@ -51,6 +52,7 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   //settings
+  const locale=context.locale
   const { page } = context.query;
   let { error: error1, data: news } = await fetchData('/blog');
   let { error: error2, data: newsData } = await fetchData(
@@ -62,7 +64,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { news, newsData }
+    props: {
+      news,
+      newsData,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 

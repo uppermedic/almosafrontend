@@ -11,6 +11,7 @@ import { getCategories as getMediaCategoriesAction } from 'src/store/actions';
 import { serialize } from 'src/utils/helpers';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Index = ({ data, getMediaCategories }) => {
   const router = useRouter();
@@ -85,7 +86,7 @@ const Index = ({ data, getMediaCategories }) => {
 };
 
 export async function getServerSideProps(context) {
-  const { page, category } = context.query;
+  const { page, category , locale } = context.query;
   const { query } = context;
   let path = `/media/videos?${serialize(query)}`;
   let { error, data } = await fetchData(path);
@@ -96,7 +97,18 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 const mapDispatchToProps = { getMediaCategories: getMediaCategoriesAction };

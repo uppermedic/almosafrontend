@@ -4,11 +4,13 @@ import { Container, Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import Carouseltem from './Carouseltem';
+import { useRouter } from 'next/router';
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
-import { i18n } from 'root/i18n';
 
 export default function Testimonial({ data }) {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <section
       className="testimonial"
@@ -20,7 +22,7 @@ export default function Testimonial({ data }) {
         <Row>
           <Col xs={12} className="top-head d-flex justify-content-center">
             <div>
-              <h3>{language == 'en' ? 'Testimonials' : 'يقولون عنا'}</h3>
+              <h3>{locale == 'en' ? 'Testimonials' : 'يقولون عنا'}</h3>
               <span className="qoutes">
                 <FontAwesomeIcon icon={faQuoteLeft} />
               </span>
@@ -48,7 +50,7 @@ export default function Testimonial({ data }) {
             >
               {data.map((item, index) => (
                 <Carouseltem
-                  item={language ? item[language] : 'loading'}
+                  item={locale ? item[locale] : 'loading'}
                   key={index}
                 />
               ))}

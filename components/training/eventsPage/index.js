@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import SelectBox from 'src/components/layout/SelectBox';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import Event_card from './Event-Card';
 import { connect } from 'react-redux';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { postData } from 'src/store/Request.js';
 import { dataACademicTabs } from 'utils/datafile';
 import moment from 'moment';
@@ -13,10 +13,13 @@ import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 import { useRouter } from 'next/router';
 
-function index({ data, categories, t }) {
+function Index({ data, categories}) {
+const { t } = useTranslation('menu');
+
   const router = useRouter();
-  const { page } = router?.query;
-  const lang = i18n.language;
+  const { locale, query } = router;
+  const { page } = query;
+
   const [dataF, setdataF] = useState([]);
   const [filter, setfilter] = useState(false);
   const [filterData, setfilterData] = useState({
@@ -26,12 +29,6 @@ function index({ data, categories, t }) {
   });
 
   const { last_page } = data;
-  const [locale, setlocale] = useState('');
-  const { language } = i18n;
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
-
   const handlePageClick = ({ selected }) => {
     router.push(`/${locale}/training-education/events/?page=${selected + 1}`);
   };
@@ -98,7 +95,7 @@ function index({ data, categories, t }) {
                 </Col>
                 <Col md={4} lg={{ size: 3, offset: 1 }} xs={12}>
                   <button onClick={handleFilter}>
-                    {(lang == 'en' && 'Find Events') || 'البحث عن الأحداث '}
+                    {(locale == 'en' && 'Find Events') || 'البحث عن الأحداث '}
                   </button>
                 </Col>
               </Row>
@@ -112,7 +109,7 @@ function index({ data, categories, t }) {
                     ))
                   ) : (
                     <p className="noData">
-                      {(lang == 'en' && 'No Events Yet') ||
+                      {(locale == 'en' && 'No Events Yet') ||
                         'لا توجد أحداث بعد '}
                     </p>
                   )
@@ -124,7 +121,8 @@ function index({ data, categories, t }) {
                   ))
                 ) : (
                   <p className="noData">
-                    {(lang == 'en' && 'No Events Yet') || 'لا توجد أحداث بعد '}
+                    {(locale == 'en' && 'No Events Yet') ||
+                      'لا توجد أحداث بعد '}
                   </p>
                 )}
               </Row>
@@ -159,5 +157,4 @@ function index({ data, categories, t }) {
 const mapStateToProps = state => ({
   categories: state.Globals.categories
 });
-
-export default withTranslation('menu')(connect(mapStateToProps)(index));
+export default connect(mapStateToProps)(Index);

@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Link, i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { strippedContent } from 'src/utils/helpers';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const WhyMosa = ({ data, t }) => {
-  const { language } = i18n;
-
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+const WhyMosa = ({ data}) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   return (
     <div className="whyalmoosaWrapper">
@@ -18,7 +16,7 @@ const WhyMosa = ({ data, t }) => {
         <Row className="top-section m-0">
           <Col xs={12} lg={6} className="p-0">
             <h2>
-              {language ? strippedContent(data[language]?.title) : 'Loading'}
+              {locale ? strippedContent(data[locale]?.title) : 'Loading'}
             </h2>
           </Col>
           <Col className="link_div p-0" xs={12} lg={6}>
@@ -43,8 +41,8 @@ const WhyMosa = ({ data, t }) => {
             <p>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: language
-                    ? strippedContent(data[language]?.content)
+                  __html: locale
+                    ? strippedContent(data[locale]?.content)
                     : 'Loading'
                 }}
               />
@@ -55,7 +53,4 @@ const WhyMosa = ({ data, t }) => {
     </div>
   );
 };
-WhyMosa.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(WhyMosa);
+export default WhyMosa;

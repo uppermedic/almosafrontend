@@ -1,25 +1,28 @@
-import React, { useEffect } from 'react';
-import { i18n, withTranslation } from 'root/i18n';
-import { Container, Row, Col, Nav, NavItem } from 'reactstrap';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import { Nav, NavItem } from 'reactstrap';
 import { useRouter } from 'next/router';
 //icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 //components
 
-const LangIcon = ({ t }) => {
-  const router = useRouter();
-  const { asPath } = router;
+const LangIcon = () => {
+  const { t } = useTranslation('common');
 
-  const handleChangeLang = () => {
-    let langTo = i18n.language === 'ar' ? 'en' : 'ar';
-    i18n.changeLanguage(langTo);
-    document.getElementsByTagName('html')[0].setAttribute('lang', langTo);
+  const router = useRouter();
+  const { asPath, locale } = router;
+  const handleChangeLang = async () => {
+    let langTo = locale === 'ar' ? 'en' : 'ar';
 
     langTo &&
-      router.push(`/${langTo}` + asPath, `/${langTo}` + asPath, {
-        locale: langTo
-      });
+      router
+        .push(`/${langTo}` + asPath, `/${langTo}` + asPath, {
+          locale: langTo
+        })
+        .then(() =>
+          document.getElementsByTagName('html')[0].setAttribute('lang', langTo)
+        );
   };
 
   return (
@@ -33,7 +36,4 @@ const LangIcon = ({ t }) => {
   );
 };
 
-LangIcon.getInitialProps = async () => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(LangIcon);
+export default LangIcon;

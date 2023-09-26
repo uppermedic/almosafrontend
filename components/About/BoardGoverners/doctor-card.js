@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { i18n, Link } from 'root/i18n';
+import React from 'react';
 import { removeSpChar } from 'src/utils/helpers';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   const handleClick = async () => {
     setcurrentDoctor(doctor);
@@ -18,18 +15,18 @@ const doctor_card = ({ doctor, setcurrentDoctor, hasRef }) => {
     <Link
       href={
         hasRef
-          ? `/${locale}/about/board-directors-and-executive-team/${
-              language && removeSpChar(String(doctor[language]?.slug))
-            }/?id=${doctor?.id}`
+          ? `/${locale}/about/board-directors-and-executive-team/${removeSpChar(
+              String(doctor[locale]?.slug)
+            )}/?id=${doctor?.id}`
           : '#'
       }
     >
       <a>
         <div className="card" onClick={handleClick}>
-          <img src={doctor.image} alt={language && doctor[language].name} />
+          <img src={doctor.image} alt={locale && doctor[locale].name} />
           <div className="banner">
-            <h4>{language && doctor[language].name}</h4>
-            <p>{language && doctor[language].title}</p>
+            <h4>{locale && doctor[locale].name}</h4>
+            <p>{locale && doctor[locale].title}</p>
           </div>
         </div>
       </a>

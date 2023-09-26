@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import Slider from 'react-slick';
 import { Container, TabContent, TabPane, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
+import { useRouter } from 'next/router';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -62,8 +63,11 @@ function SamplePrevArrow(props) {
   );
 }
 
-function index({ t, histories }) {
-  const { language } = i18n;
+function Index({histories }) {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('menu');
+
   const [activeTab, setActiveTab] = useState({});
   const [data, setData] = useState([]);
   const [transform, setTransform] = useState(0);
@@ -76,12 +80,12 @@ function index({ t, histories }) {
   };
 
   useEffect(() => {
-    if (language == 'en') {
+    if (locale == 'en') {
       setslideDir(1);
-    } else if (language == 'ar') {
+    } else if (locale == 'ar') {
       setslideDir(-1);
     }
-  }, [language]);
+  }, [locale]);
 
   useEffect(() => {
     setData(Array.isArray(histories) ? histories.reverse() : []);
@@ -183,13 +187,13 @@ function index({ t, histories }) {
                 <Row className="history__header_wrapper">
                   <Col>
                     <h3 className="history__title">
-                      {language && activeTab[language]?.title}
+                      {locale && activeTab[locale]?.title}
                     </h3>
                     <p>
                       <div
                         className="description intro"
                         dangerouslySetInnerHTML={{
-                          __html: language && activeTab[language]?.description
+                          __html: locale && activeTab[locale]?.description
                         }}
                       />
                     </p>
@@ -209,7 +213,7 @@ function index({ t, histories }) {
                             <div
                               className="description"
                               dangerouslySetInnerHTML={{
-                                __html: language && single[language]?.content
+                                __html: locale && single[locale]?.content
                               }}
                             />
                           </p>
@@ -234,4 +238,4 @@ function index({ t, histories }) {
     </section>
   );
 }
-export default withTranslation('menu')(index);
+export default Index;

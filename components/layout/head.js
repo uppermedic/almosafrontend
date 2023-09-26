@@ -1,8 +1,7 @@
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import { string, shape, object } from 'prop-types';
+import { string, shape } from 'prop-types';
 export const config = { amp: true };
-import { i18n } from 'root/i18n';
 
 const defaultDescription = 'Almoosa';
 const defaultKeywords = '';
@@ -10,8 +9,6 @@ const defaultOGURL = '';
 const defaultOGImage = '';
 
 const Head = ({ data, children }) => {
-  const { language: lang } = i18n;
-  const seoLang = data && data[lang];
   const router = useRouter();
   const { locale, asPath, pathname } = router;
   const win = typeof window !== 'undefined';
@@ -24,12 +21,12 @@ const Head = ({ data, children }) => {
   return (
     <NextHead>
       <meta charSet="UTF-8" />
-      <title>{data && data[lang]?.title}</title>
+      <title>{data && data[locale]?.title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content={data && data[lang]?.meta_description} />
+      <meta name="description" content={data && data[locale]?.meta_description} />
       <meta
         name="keywords"
-        content={(data && data[lang]?.meta_keywords) || defaultKeywords}
+        content={(data && data[locale]?.meta_keywords) || defaultKeywords}
       />
       <link
         rel="icon"
@@ -54,24 +51,24 @@ const Head = ({ data, children }) => {
       {url && <link rel="canonical" href={win && window?.location.href} />}
       <link
         rel="alternate"
-        hrefLang={lan}
+        hreflocale={lan}
         href={win && window?.location?.origin + '/' + lan + asPath}
       />
 
       <link
         rel="alternate"
-        hrefLang={locale}
+        hreflocale={locale}
         href={win && window?.location?.origin + '/' + locale + asPath}
       />
 
       <meta property="og:url" content={(data && data.url) || defaultOGURL} />
       <meta
         property="og:title"
-        content={data && (data[lang]?.meta_title || data[lang]?.title)}
+        content={data && (data[locale]?.meta_title || data[locale]?.title)}
       />
       <meta
         property="og:description"
-        content={(data && data[lang]?.meta_description) || defaultDescription}
+        content={(data && data[locale]?.meta_description) || defaultDescription}
       />
       <meta name="twitter:site" content={(data && data.url) || defaultOGURL} />
       <meta name="twitter:card" content="summary_large_image" />

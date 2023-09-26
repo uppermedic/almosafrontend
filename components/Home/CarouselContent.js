@@ -1,14 +1,16 @@
 import React from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
 import Markdown from 'markdown-to-jsx';
 import {
   app_store_download_app,
   google_play_store_download_app
 } from 'src/constants/Data';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function CarouselContent({ data, index, t }) {
-  const { language } = i18n;
+function CarouselContent({ data, index }) {
+  const router = useRouter();
+  const { locale } = router;
 
   if (data) {
     return (
@@ -17,7 +19,7 @@ function CarouselContent({ data, index, t }) {
           <h2>
             <span>
               <Markdown>
-                {(language && strippedContent(data[language]?.title)) || ''}
+                {(locale && strippedContent(data[locale]?.title)) || ''}
               </Markdown>
             </span>
           </h2>
@@ -26,7 +28,7 @@ function CarouselContent({ data, index, t }) {
               <div
                 dangerouslySetInnerHTML={{
                   __html:
-                    (language && strippedContent(data[language]?.content)) || ''
+                    (locale && strippedContent(data[locale]?.content)) || ''
                 }}
               />
             </p>
@@ -49,15 +51,15 @@ function CarouselContent({ data, index, t }) {
               </a>
             </div>
           )}
-          {language && data[language].btn_text && (
+          {locale && data[locale]?.btn_text && (
             <div className="book-now">
-              <Link href={data.btn_link}>
+              <Link href={data?.btn_link}>
                 <a
                   className="hvr-grow"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  {language && data[language].btn_text}
+                  {locale && data[locale].btn_text}
                 </a>
               </Link>
             </div>
@@ -70,4 +72,4 @@ function CarouselContent({ data, index, t }) {
   }
 }
 
-export default withTranslation('common')(CarouselContent);
+export default CarouselContent

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { withTranslation, i18n } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
-const Content = ({ t }) => {
-  const { language } = i18n;
+const Content = () => {
+const { t } = useTranslation('patient_guide');
+
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <div className="library-content">
       <div className="title">
@@ -20,8 +25,8 @@ const Content = ({ t }) => {
                       <i className={item.iconClass}></i>
                     </div>
                     <div className="title">
-                      {language === 'ar' && item.title['ar']}
-                      {language === 'en' && item.title['en']}
+                      {locale === 'ar' && item.title['ar']}
+                      {locale === 'en' && item.title['en']}
                     </div>
                   </div>
                 </Col>
@@ -33,8 +38,7 @@ const Content = ({ t }) => {
     </div>
   );
 };
-
-export default withTranslation(['patient_guide'])(Content);
+export default Content;
 
 const libraryData = [
   {

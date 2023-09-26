@@ -1,16 +1,16 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import Hero from 'src/components/layout/Hero';
 import BrandBox from './re-brandBox';
-import { i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const Content = ({ itemContent }) => {
-  let { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="content">
       <div className="title">
-        <h2>{language && itemContent[language]?.title}</h2>
+        <h2>{locale && itemContent[locale]?.title}</h2>
       </div>
       <div className="brands">
         <Container>
@@ -18,13 +18,13 @@ const Content = ({ itemContent }) => {
             {itemContent.page_items.map((item, index) => (
               <Col key={index}>
                 <BrandBox
-                  name={language && item[language]?.title}
+                  name={locale && item[locale]?.title}
                   image={item?.image[0]}
                   link={item?.url}
                 />
               </Col>
             ))}
-            {/* {language === 'ar' && (
+            {/* {locale === 'ar' && (
               <>
                 {data.map((item, index) => (
                   <Col key={index}>
@@ -37,7 +37,7 @@ const Content = ({ itemContent }) => {
                 ))}
               </>
             )} */}
-            {/* {language === 'en' && (
+            {/* {locale === 'en' && (
               <>
                 {data.map((item, index) => (
                   <Col key={index}>
@@ -57,4 +57,4 @@ const Content = ({ itemContent }) => {
   );
 };
 
-export default withTranslation('patient_guide')(Content);
+export default Content;

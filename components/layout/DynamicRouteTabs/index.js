@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, withTranslation } from 'root/i18n';
+import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import { useRouter } from 'next/router';
 
-const DynamicRouteTabs = ({ t, items, index }) => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+const DynamicRouteTabs = ({ items, index }) => {
+  const { t } = useTranslation('menu');
 
   const [activeTab, setActiveTab] = useState(index);
   const router = useRouter();
+  const { locale } = router;
+
 
   const toggle = tab => {
     setActiveTab(tab);
@@ -47,5 +44,4 @@ const DynamicRouteTabs = ({ t, items, index }) => {
     </div>
   );
 };
-
-export default withTranslation('menu')(DynamicRouteTabs);
+export default DynamicRouteTabs;

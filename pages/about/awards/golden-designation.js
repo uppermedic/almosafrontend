@@ -1,13 +1,16 @@
 import React from 'react';
-import { withTranslation, i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import GoldenDesignation from 'src/components/why-us/awards/GoldenDesignation';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const golden_designation = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data.page?.seo[lang]?.title;
+const GoldenDesignation = ({ data }) => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="about-page">
@@ -22,7 +25,7 @@ const golden_designation = ({ data }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/page/27');
   if (error) {
     return {
@@ -30,7 +33,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
-export default withTranslation(['menu'])(golden_designation);
+
+export default GoldenDesignation;

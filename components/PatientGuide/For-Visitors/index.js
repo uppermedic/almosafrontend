@@ -1,5 +1,4 @@
 import React from 'react';
-import { withTranslation } from 'root/i18n';
 import CustomTabs from 'components/layout/CustomTabs';
 
 /*Content Components */
@@ -43,4 +42,4 @@ const ForVisitors = ({ contentData }) => {
     </section>
   );
 };
-export default withTranslation(['menu', 'patient_guide'])(ForVisitors);
+export default ForVisitors;

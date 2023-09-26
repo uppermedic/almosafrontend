@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import { toggleMediaPlayer as toggleMediaPlayerAction } from 'src/store/actions';
 import { Container, Row, Col } from 'reactstrap';
 import SelectBox from 'src/components/layout/SelectBox';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import ReactPlayer from 'react-player';
 import { truncate } from 'src/utils/helpers';
 
-const index = ({
+const Index = ({
   data,
   toggleMediaPlayer,
-  t,
   categories,
   handleSelectChange
 }) => {
+  const { t } = useTranslation(['common','menu']);
   const router = useRouter();
-  const lang = i18n.language;
-  const [showAll, setShowAll] = useState(false);
+  const { locale } = router;
+
   const openVideoPlayer = video => {
-    toggleMediaPlayer(true, video.url, lang && video[lang].title);
+    toggleMediaPlayer(true, video.url, locale && video[locale].title);
   };
 
   return (
@@ -33,7 +33,7 @@ const index = ({
         />
       </div>
       <Container className="pb-5 pt-5">
-        <h2>{t('menu:video gallery')}</h2>
+        <h2>{t('menu:video_gallery')}</h2>
         <Row className="filters pt-5">
           <Col xl={1} md={2} sm={3}>
             <span>{t('playlist')}</span>
@@ -60,9 +60,9 @@ const index = ({
                   </div>
                 </div>
                 <h3>
-                  {lang &&
-                    video[lang].title &&
-                    truncate(video[lang].title, 40, '...')}
+                  {locale &&
+                    video[locale].title &&
+                    truncate(video[locale].title, 40, '...')}
                 </h3>
               </Col>
             );
@@ -81,7 +81,4 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   toggleMediaPlayer: toggleMediaPlayerAction
 };
-
-export default withTranslation(['common', 'menu'])(
-  connect(mapStateToProps, mapDispatchToProps)(index)
-);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);

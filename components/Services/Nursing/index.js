@@ -1,17 +1,18 @@
 import React from 'react';
-import { i18n } from 'root/i18n';
 import { PostContent } from 'src/components/reusableComponents/Post';
+import { useRouter } from 'next/router';
 
 const Nursing = ({ data }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="nursing" id="nursing-section">
-      {data && language && (
+      {data && locale && (
         <PostContent
-          title={data[language]?.title}
+          title={data[locale]?.title}
           color="#55B047"
-          paragraphs={[data[language]?.excerpt]}
+          paragraphs={[data[locale]?.excerpt]}
         />
       )}
     </section>

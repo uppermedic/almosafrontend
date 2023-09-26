@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { strippedContent, truncate } from 'src/utils/helpers';
 import { Row, Col } from 'reactstrap';
 import { removeSpChar } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
 
-function Post({ article, t }) {
+function Post({ article }) {
+  const { t } = useTranslation('common');
+
   const { id, image, created_at } = article;
-  const { language } = i18n;
-  const { title, slug, content } = language ? article[language] : {};
-  const [locale, setlocale] = useState('');
+  const router = useRouter();
+  const { locale } = router;
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const { title, slug, content } = locale ? article[locale] : {};
 
   return (
     <div className="post-card mb-4">
@@ -54,7 +55,4 @@ function Post({ article, t }) {
     </div>
   );
 }
-Post.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(Post);
+export default Post;

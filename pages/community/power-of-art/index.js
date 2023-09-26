@@ -4,13 +4,16 @@ import PostHeading from 'src/components/reusableComponents/PostHeading';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
 import { strippedContent } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const PowerOfArt = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="power_of_art">
@@ -22,9 +25,9 @@ const PowerOfArt = ({ data }) => {
       </Hero>
       {data?.contents[0] && (
         <PostWithRightImg
-          title={lang && data.contents[0][lang].title}
+          title={locale && data.contents[0][locale].title}
           color="#55B047"
-          paragraphs={[lang && data.contents[0][lang].content]}
+          paragraphs={[locale && data.contents[0][locale].content]}
           theImg={data.contents[0].images[0]}
           customParagraphSize="27px"
         />
@@ -37,7 +40,7 @@ const PowerOfArt = ({ data }) => {
           {data?.contents[1] && (
             <>
               <PostHeading
-                title={lang && data.contents[1][lang].title}
+                title={locale && data.contents[1][locale].title}
                 color="#1E455C"
               />
               <div className="location_paragraph">
@@ -45,8 +48,8 @@ const PowerOfArt = ({ data }) => {
                   <div
                     dangerouslySetInnerHTML={{
                       __html:
-                        (lang &&
-                          strippedContent(data.contents[1][lang]?.content)) ||
+                        (locale &&
+                          strippedContent(data.contents[1][locale]?.content)) ||
                         'Loading....'
                     }}
                   />
@@ -82,7 +85,7 @@ const PowerOfArt = ({ data }) => {
           {data?.objectives?.length > 0 && (
             <div className="objectives">
               <PostHeading
-                title={(lang == 'en' && 'Objectives') || 'الأهداف'}
+                title={(locale == 'en' && 'Objectives') || 'الأهداف'}
                 color="#55B047"
               />
               <Row xs="1" lg="3">
@@ -92,7 +95,7 @@ const PowerOfArt = ({ data }) => {
                       <SingleObjectiev
                         index={index}
                         icon={obj.icon}
-                        text={(lang && obj[lang].title) || 'Loading'}
+                        text={(locale && obj[locale].title) || 'Loading'}
                       />
                     </Col>
                   );
@@ -105,14 +108,14 @@ const PowerOfArt = ({ data }) => {
             <div className="par_groups">
               <PostHeading
                 title={
-                  (lang == 'en' && 'Participating groups') ||
+                  (locale == 'en' && 'Participating groups') ||
                   'المجموعات المشاركة'
                 }
                 color="#1E455C"
               />
               <div className="par_groups_paragraph">
                 <p>
-                  {lang == 'en'
+                  {locale == 'en'
                     ? 'Artwork falling under the following categories will be accepted'
                     : 'سيتم قبول الأعمال الفنية التي تندرج تحت الفئات التالية'}
                 </p>
@@ -123,7 +126,7 @@ const PowerOfArt = ({ data }) => {
                     return (
                       <Col key={index}>
                         <div className="single_col">
-                          <h4>{lang && item[lang].title}</h4>
+                          <h4>{locale && item[locale].title}</h4>
                         </div>
                         <div className="col_img">
                           <img src={item.image} alt="colums-img" />
@@ -140,7 +143,7 @@ const PowerOfArt = ({ data }) => {
             {data?.contents[2] && (
               <PostHeading
                 title={
-                  (lang && data.contents[2][lang].title) ||
+                  (locale && data.contents[2][locale].title) ||
                   'Why participate in the Power of Art initiative?'
                 }
                 color="#55B047"
@@ -166,7 +169,7 @@ const PowerOfArt = ({ data }) => {
                     <div
                       dangerouslySetInnerHTML={{
                         __html:
-                          (lang && data.contents[2][lang]?.content) ||
+                          (locale && data.contents[2][locale]?.content) ||
                           'Loading ...'
                       }}
                     />
@@ -177,7 +180,7 @@ const PowerOfArt = ({ data }) => {
                     <div
                       dangerouslySetInnerHTML={{
                         __html:
-                          (lang && data.contents[3][lang].content) ||
+                          (locale && data.contents[3][locale].content) ||
                           'Loading ...'
                       }}
                     />
@@ -188,7 +191,7 @@ const PowerOfArt = ({ data }) => {
                     <div
                       dangerouslySetInnerHTML={{
                         __html:
-                          (lang && data.contents[4][lang]?.content) ||
+                          (locale && data.contents[4][locale]?.content) ||
                           'Loading ...'
                       }}
                     />
@@ -199,7 +202,7 @@ const PowerOfArt = ({ data }) => {
                     <div
                       dangerouslySetInnerHTML={{
                         __html:
-                          (lang && data.contents[5][lang]?.content) ||
+                          (locale && data.contents[5][locale]?.content) ||
                           'Loading ...'
                       }}
                     />
@@ -232,7 +235,7 @@ const SingleObjectiev = ({ icon, text, index }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/community/1');
   if (error) {
     return {
@@ -240,6 +243,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

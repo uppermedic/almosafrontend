@@ -6,11 +6,13 @@ import Events from './eventsPage';
 import Academic from './academicpage';
 import { getCategories as getEventsCategoriesAction } from 'src/store/actions';
 import { connect } from 'react-redux';
-import { i18n } from 'root/i18n';
 import moment from 'moment';
+import { useRouter } from 'next/router';
 
 const ReusableTabs = ({ data, getEventsCategories }) => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   const { eventData, courseData, educationData, ourTeamData } = data;
   const YEARS = () => {
     const years = [];
@@ -55,7 +57,7 @@ const ReusableTabs = ({ data, getEventsCategories }) => {
                 toggle(0);
               }}
             >
-              {(lang == 'en' && 'Events') || 'الأحداث'}
+              {(locale == 'en' && 'Events') || 'الأحداث'}
             </NavLink>
           </NavItem>
           <NavItem>
@@ -65,7 +67,7 @@ const ReusableTabs = ({ data, getEventsCategories }) => {
                 toggle(1);
               }}
             >
-              {(lang == 'en' && 'Academic Affairs') || 'الشؤون الأكاديمية'}
+              {(locale == 'en' && 'Academic Affairs') || 'الشؤون الأكاديمية'}
             </NavLink>
           </NavItem>
           <NavItem>
@@ -75,7 +77,7 @@ const ReusableTabs = ({ data, getEventsCategories }) => {
                 toggle(2);
               }}
             >
-              {(lang == 'en' && 'Courses') || 'الدورات'}
+              {(locale == 'en' && 'Courses') || 'الدورات'}
             </NavLink>
           </NavItem>
         </Nav>

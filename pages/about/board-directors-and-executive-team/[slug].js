@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'reactstrap';
 import Head from 'src/components/layout/head';
-import Hero from 'src/components/layout/Hero';
 import DoctorPage from 'src/components/About/BoardGoverners/doctore-page';
-import { i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import { useRouter } from 'next/router';
 import { removeSpChar } from 'src/utils/helpers';
 import { fetchData } from 'src/store/Request.js';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function BordDirectors({ data }) {
-  const { language } = i18n;
-
   const router = useRouter();
   const { locale } = router;
   const [doctorData, setdoctorData] = useState({});
 
   useEffect(() => {
-    if (language && locale) {
+    if (locale) {
       const data = JSON.parse(localStorage.getItem('doctor'));
       router.push(
         `/${locale}/about/board-directors-and-executive-team/${removeSpChar(
@@ -28,7 +24,7 @@ function BordDirectors({ data }) {
           .join('-')}/?id=${data?.id}`
       );
     }
-  }, [language, locale]);
+  }, [locale]);
 
   useEffect(() => {
     setdoctorData(
@@ -42,13 +38,14 @@ function BordDirectors({ data }) {
 
   return (
     <div className="almoosa-doctors doctor-slug-page">
-      <Head data={language && data[language]}></Head>
+      <Head data={locale && data[locale]}></Head>
       <DoctorPage doctorData={data} />
     </div>
   );
 }
 
 export async function getServerSideProps(context) {
+  const locale=context.locale
   let { error, data } = await fetchData(`/page-item/${context.query.id}`);
   if (error) {
     return {
@@ -56,7 +53,18 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 

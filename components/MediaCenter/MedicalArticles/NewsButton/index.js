@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link, withTranslation, i18n } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
 
-const NewsButton = ({ t, phone }) => {
-  const router = useRouter();
-  const [locale, setlocale] = useState('');
+const NewsButton = ({ phone }) => {
+  const { t } = useTranslation(['common','menu']);
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <>
@@ -107,7 +106,7 @@ const ButtonSVG = ({ t }) => (
           fontWeight="500"
         >
           <tspan x="0" y="0">
-            {t('menu:medical-articles')}
+            {t('menu:medical_articles')}
           </tspan>
         </text>
       </g>
@@ -123,5 +122,4 @@ const ButtonSVG = ({ t }) => (
     </g>
   </svg>
 );
-
-export default withTranslation(['common', 'menu'])(NewsButton);
+export default NewsButton;

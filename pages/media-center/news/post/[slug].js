@@ -2,17 +2,16 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { fetchData } from 'src/store/Request.js';
 import { removeSpChar } from 'src/utils/helpers';
-import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/News/SinglePost';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Post = ({ data }) => {
-  const { language } = i18n;
   const router = useRouter();
   const { locale } = router;
 
   useEffect(() => {
-    if (language && locale) {
+    if (locale) {
       router.push(
         `/${locale}/media-center/news/post/${removeSpChar(
           String(data[locale].title)
@@ -21,13 +20,12 @@ const Post = ({ data }) => {
           .join('-')}/?id=${data.id}`
       );
     }
-    return () => {};
-  }, [language, locale]);
+  }, [locale]);
 
   return (
     <div className="_single-post-page">
       <Head data={data.seo}></Head>
-      {data[language] && (
+      {data[locale] && (
         <Content
           article={data}
           tags={data['tags']}
@@ -39,6 +37,7 @@ const Post = ({ data }) => {
   );
 };
 export async function getServerSideProps(context) {
+  const locale=context.locale
   if (context.query.id) {
     //settings
     let { error, data } = await fetchData(
@@ -50,7 +49,18 @@ export async function getServerSideProps(context) {
       };
     }
     return {
-      props: { data }
+      props: {
+        data,
+        ...(await serverSideTranslations(locale, [
+          'common',
+          'about',
+          'news',
+          'menu',
+          'header',
+          'footer',
+          'patient_guide'
+        ]))
+      }
     };
   } else {
     return {

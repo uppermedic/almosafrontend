@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { toArabicDigits } from 'utils/helpers';
-const Statistics = ({ hospital, emergency_phone, t }) => {
-  const { language } = i18n;
+import { useRouter } from 'next/router';
+
+const Statistics = ({ hospital, emergency_phone}) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   return (
     <div className="statistics">
@@ -17,7 +21,7 @@ const Statistics = ({ hospital, emergency_phone, t }) => {
             >
               <i className="fas fa-user" />
               <p className="st-value">
-                {language === 'ar'
+                {locale === 'ar'
                   ? toArabicDigits(hospital.doctor)
                   : hospital.doctor}
               </p>
@@ -32,7 +36,7 @@ const Statistics = ({ hospital, emergency_phone, t }) => {
             >
               <i className="fas fa-user-friends" />
               <p className="st-value">
-                {language === 'ar'
+                {locale === 'ar'
                   ? toArabicDigits(hospital.worker)
                   : hospital.worker}
               </p>
@@ -47,7 +51,7 @@ const Statistics = ({ hospital, emergency_phone, t }) => {
             >
               <i className="fas fa-bed" />
               <p className="st-value">
-                {language === 'ar'
+                {locale === 'ar'
                   ? toArabicDigits(hospital.single_bed)
                   : hospital.single_bed}
               </p>
@@ -62,7 +66,7 @@ const Statistics = ({ hospital, emergency_phone, t }) => {
             >
               <i className="fas fa-cut" />
               <p className="st-value">
-                {language === 'ar'
+                {locale === 'ar'
                   ? toArabicDigits(hospital.surgery)
                   : hospital.surgery}
               </p>
@@ -75,4 +79,4 @@ const Statistics = ({ hospital, emergency_phone, t }) => {
   );
 };
 
-export default withTranslation('common')(Statistics);
+export default Statistics;

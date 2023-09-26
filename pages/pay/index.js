@@ -1,7 +1,7 @@
-import React, { useEffect, Fragment } from 'react';
-import https from 'https';
-import querystring from 'querystring';
+import React, { Fragment } from 'react';
 import Head from '../../components/layout/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 export default function pay({ id, error, message, data }) {
   return (
     <div>
@@ -14,7 +14,6 @@ export default function pay({ id, error, message, data }) {
               src={`https://test.oppwa.com/v1/paymentWidgets.js?checkoutId=${id}`}
             ></script>
           </Head>
-          <h2>Pay</h2>
           <form
             action="http://localhost:3000/pay/done"
             className="paymentWidgets"
@@ -26,7 +25,7 @@ export default function pay({ id, error, message, data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   const https = require('https');
   //entityId=8a8294174b7ecb28014b9699220015ca&
   const request = async () => {
@@ -72,10 +71,31 @@ export async function getServerSideProps(context) {
   if (!!error || !data.id) {
     let message = data ? data?.result?.description : 'error 404';
     return {
-      props: { error: true, message, data }
+      props: {
+        error: true,
+        message,
+        data,
+        ...(await serverSideTranslations(locale, [
+          'common',
+          'about',
+          'news',
+          'menu',
+          'header',
+          'footer',
+          'patient_guide'
+        ]))
+      }
     };
   }
   return {
-    props: { id: data.id, error: false, message: data.result.description }
+    props: { id: data.id, error: false, message: data.result.description ,...(await serverSideTranslations(locale, [
+      'common',
+      'about',
+      'news',
+      'menu',
+      'header',
+      'footer',
+      'patient_guide'
+    ]))}
   };
 }

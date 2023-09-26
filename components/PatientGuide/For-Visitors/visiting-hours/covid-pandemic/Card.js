@@ -1,17 +1,19 @@
 import React from 'react';
-import { i18n } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
+import { useRouter } from 'next/router';
 
 const card = ({ item }) => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <div className="covid-card">
       <h3>
-        <Markdown>{lang ? item[lang]?.title : ''}</Markdown>
+        <Markdown>{locale ? item[locale]?.title : ''}</Markdown>
       </h3>
       <div className="card-content">
-        {lang
-          ? item[lang]?.content.map(sContent => (
+        {locale
+          ? item[locale]?.content.map(sContent => (
               <div key={sContent?.id}>
                 {sContent?.question && <h4>{sContent?.question}</h4>}
                 <p>

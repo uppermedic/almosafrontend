@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link, i18n, withTranslation } from 'root/i18n';
-import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { truncate, removeSpChar } from 'src/utils/helpers';
 import moment from 'moment';
+import { useRouter } from 'next/router';
 
-const Event_Card = ({ cardData, t }) => {
-  const { language } = i18n;
+const EventCard = ({ cardData}) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   const monthNames = [
     'January',
@@ -24,18 +28,13 @@ const Event_Card = ({ cardData, t }) => {
   const theDate = new Date(cardData.start_date);
   const day = theDate.getDate();
   const month = theDate.getMonth();
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   return (
     // need to be cosider for this url ===??? /education/single/1
     <Link
       href={`/${locale}/training-education/events/${
-        language &&
-        removeSpChar(String(cardData[language]?.title)).split(' ').join('-')
+        locale &&
+        removeSpChar(String(cardData[locale]?.title)).split(' ').join('-')
       }/?id=${cardData?.id}`}
     >
       <a>
@@ -49,14 +48,14 @@ const Event_Card = ({ cardData, t }) => {
             <div className="banner">
               <div>
                 <h3>
-                  {language &&
-                    cardData[language]?.title &&
-                    truncate(cardData[language]?.title, 20, '...')}
+                  {locale &&
+                    cardData[locale]?.title &&
+                    truncate(cardData[locale]?.title, 20, '...')}
                 </h3>
                 <p>
-                  {language && cardData[language]?.speaker_name !== '-'
-                    ? truncate(cardData[language]?.speaker_name, 20, '...')
-                    : cardData[language]?.speaker_name}
+                  {locale && cardData[locale]?.speaker_name !== '-'
+                    ? truncate(cardData[locale]?.speaker_name, 20, '...')
+                    : cardData[locale]?.speaker_name}
                 </p>
               </div>
               <div>
@@ -75,4 +74,4 @@ const Event_Card = ({ cardData, t }) => {
   );
 };
 
-export default withTranslation('common')(Event_Card);
+export default EventCard;

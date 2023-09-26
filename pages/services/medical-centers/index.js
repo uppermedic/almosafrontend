@@ -3,11 +3,14 @@ import Head from '../../../components/layout/head';
 import Hero from '../../../components/layout/Hero';
 import MedicalCentersComp from 'src/components/Services/medical-centers';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation, i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function MedicalCenters({ data }) {
-  const lang = i18n.language;
-  const titleHero = lang && data?.seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data?.seo[locale]?.title;
 
   return (
     <div className="medical-centers">
@@ -22,7 +25,7 @@ function MedicalCenters({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/services/2');
   if (error) {
     return {
@@ -30,7 +33,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
-export default withTranslation(['menu'])(MedicalCenters);
+
+export default MedicalCenters;

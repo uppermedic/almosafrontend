@@ -4,14 +4,13 @@ import { useRouter } from 'next/router';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import OurDoctors from 'src/components/why-us/our-doctors';
-import { fetchData, postData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
+import { fetchData } from 'src/store/Request.js';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import SelectBox from 'src/components/layout/SelectBox';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Our_Doctors({ data, getCategories, categories }) {
-  const { language } = i18n;
   const router = useRouter();
   const { locale } = router;
   const {
@@ -26,7 +25,7 @@ function Our_Doctors({ data, getCategories, categories }) {
     // router.push(`/${locale}/our-doctors`);
     return () => {};
   }, []);
-
+ 
   const handleFilter = ({ target: { value } }) => {
     setselectId(value);
     if (value === 'all') {
@@ -50,7 +49,7 @@ function Our_Doctors({ data, getCategories, categories }) {
     }
   };
 
-  const titleHero = language && data.page?.seo[language]?.title;
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="almoosa-doctors">
@@ -64,7 +63,7 @@ function Our_Doctors({ data, getCategories, categories }) {
         <Row className="filters mt-5 mb-5">
           <Col xl={2} md={3} sm={3}>
             <span className="pb-3">
-              {(language === 'en' && 'Department ') || ' القسم'} :
+              {(locale === 'en' && 'Department ') || ' القسم'} :
             </span>
           </Col>
           <Col xl={4} md={5} sm={9}>
@@ -89,6 +88,7 @@ function Our_Doctors({ data, getCategories, categories }) {
 }
 
 export async function getServerSideProps(context) {
+  const locale =context.locale
   const { page, id } = context.query;
   let path = '/doctors';
   if (page) {
@@ -104,7 +104,15 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: { data , ...(await serverSideTranslations(locale, [
+      'common',
+      'about',
+      'news',
+      'menu',
+      'header',
+      'footer',
+      'patient_guide'
+    ])) }
   };
 }
 

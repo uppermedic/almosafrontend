@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React from 'react';
+import {  useTranslation } from 'next-i18next';
 import { truncate, strippedContent, removeSpChar } from 'src/utils/helpers.js';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function NewsItem({ news, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+function NewsItem({ news}) {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   return (
     <div className="item caro-card">
       <Link
         href={`/${locale}/media-center/news/post/${
-          language &&
-          removeSpChar(String(news[language].title)).split(' ').join('-')
+          locale &&
+          removeSpChar(String(news[locale].title)).split(' ').join('-')
         }/?id=${news.id}`}
       >
         <a>
@@ -24,7 +23,7 @@ function NewsItem({ news, t }) {
             <h5>
               {truncate(
                 strippedContent(
-                  (language && news[language]?.title) || 'No Data'
+                  (locale && news[locale]?.title) || 'No Data'
                 ),
                 20,
                 '......'
@@ -35,7 +34,7 @@ function NewsItem({ news, t }) {
                 dangerouslySetInnerHTML={{
                   __html: truncate(
                     strippedContent(
-                      (language && news[language].content) || 'No Data'
+                      (locale && news[locale].content) || 'No Data'
                     ),
                     60,
                     '......'
@@ -45,10 +44,10 @@ function NewsItem({ news, t }) {
             </p>
             <Link
               href={
-                language &&
+                locale &&
                 `/${locale}/media-center/news/post/${
-                  language &&
-                  removeSpChar(String(news[language].title))
+                  locale &&
+                  removeSpChar(String(news[locale].title))
                     .split(' ')
                     .join('-')
                 }/?id=${news.id}`
@@ -62,7 +61,5 @@ function NewsItem({ news, t }) {
     </div>
   );
 }
-NewsItem.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(NewsItem);
+
+export default NewsItem;

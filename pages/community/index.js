@@ -2,12 +2,15 @@ import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Community from 'src/components/Community';
-import { i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function index({ data }) {
-  const lang = i18n.language;
-  const titleHero = lang && data.page?.seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="community">
@@ -22,7 +25,7 @@ export default function index({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/community');
   if (error) {
     return {
@@ -30,6 +33,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

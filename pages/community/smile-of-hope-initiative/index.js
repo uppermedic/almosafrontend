@@ -5,12 +5,15 @@ import {
   PostWithCenterImg,
   PostWithRightImg
 } from 'src/components/reusableComponents/Post';
-import { i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Cleft = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <div className="cleft">
@@ -23,9 +26,9 @@ const Cleft = ({ data }) => {
 
       {data.contents[0] && (
         <PostWithRightImg
-          title={(lang && data.contents[0][lang].title) || 'No Title Yet'}
+          title={(locale && data.contents[0][locale].title) || 'No Title Yet'}
           paragraphs={[
-            (lang && data.contents[0][lang].content) || 'No Content Yet'
+            (locale && data.contents[0][locale].content) || 'No Content Yet'
           ]}
           theImg={data.contents[0].images[0]}
           color="#55B047"
@@ -34,9 +37,9 @@ const Cleft = ({ data }) => {
 
       {data.contents[1] && (
         <PostWithCenterImg
-          title={(lang && data.contents[1][lang].title) || 'No Title Yet'}
+          title={(locale && data.contents[1][locale].title) || 'No Title Yet'}
           paragraphs={[
-            (lang && data.contents[1][lang].content) || 'No Content Yet'
+            (locale && data.contents[1][locale].content) || 'No Content Yet'
           ]}
           theVideo={data.contents[1].video}
           color="#1E455C"
@@ -48,7 +51,7 @@ const Cleft = ({ data }) => {
 
 export default Cleft;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/community/7');
   if (error) {
     return {
@@ -56,6 +59,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

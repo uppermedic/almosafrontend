@@ -1,10 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Card from './Card';
-import { i18n } from 'root/i18n';
 
 const index = () => {
-  const { language } = i18n;
   const data = [
     {
       id: 1,

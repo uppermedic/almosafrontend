@@ -1,16 +1,17 @@
 import React from 'react';
-import Hero from 'src/components/layout/Hero';
 import { Container, Row, Col } from 'reactstrap';
 import SideTabs from 'components/layout/DynamicRouteTabs';
-import { i18n, withTranslation } from 'root/i18n';
 import VisionValue from './VisionValue';
 import OurTeam from './OurTaem';
 import AcademicTabs from './AcademicTabs';
 import Fellowship from './Fellowship';
 import { dataACademicTabs } from 'utils/datafile';
+import { useRouter } from 'next/router';
 
-const index = ({ data, academicTeam, t }) => {
-  const lang = i18n.language;
+const Index = ({ data, academicTeam }) => {
+  const router = useRouter();
+  const { locale } = router;
+
 
   return (
     <section className="academic-affairs">
@@ -20,16 +21,16 @@ const index = ({ data, academicTeam, t }) => {
             <SideTabs items={dataACademicTabs} index={2} />
           </Col>
           <Col sm="12" md="8">
-            <h2 className="title">{data[0][lang]?.title}</h2>
+            <h2 className="title">{data[0][locale]?.title}</h2>
 
             <Container>
               <div className="content-sections">
                 <section className="intro-section">
-                  {lang && (
+                  {locale && (
                     <p>
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: data[0][lang]?.content || ' '
+                          __html: data[0][locale]?.content || ' '
                         }}
                       />
                     </p>
@@ -63,4 +64,4 @@ const index = ({ data, academicTeam, t }) => {
   );
 };
 
-export default withTranslation('menu')(index);
+export default Index;

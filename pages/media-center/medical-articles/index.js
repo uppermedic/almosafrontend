@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'next/router';
-
+import { useRouter, withRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import {
   getAllPosts as getAllPostsAction,
   getTags as getMedicalTagsAction,
@@ -11,7 +11,6 @@ import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/MediaCenter/MedicalArticles';
-import { i18n } from 'root/i18n';
 
 const Index = ({
   data,
@@ -19,14 +18,15 @@ const Index = ({
   categories,
   medicalArticals,
   medicalArticalsData,
-  router,
   getAllPosts,
   getMedicalTags,
   getMedicalCategories
 }) => {
   const { seo, page_cover } = medicalArticals?.page;
-  const lang = i18n.language;
-  const titleHero = lang && seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && seo[locale]?.title;
 
   useEffect(() => {
     getMedicalTags('/blog/tags');
@@ -52,6 +52,7 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   const { page } = context.query;
+  const locale=context.locale
   //settings
   let { error: error1, data: medicalArticals } = await fetchData(
     '/blog/medical-article'
@@ -65,7 +66,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { medicalArticals, medicalArticalsData }
+    props: {
+      medicalArticals,
+      medicalArticalsData,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 

@@ -10,16 +10,16 @@ export default [
       },
       {
         path: 'about/vision-mission',
-        label: 'vision and mission'
+        label: 'vision_and_mission'
       },
       {
-        path: 'about/values',
-        label: 'core values'
+        path: 'about/values', 
+        label: 'core_values'
       },
 
       {
         path: 'about/strategic-priorities',
-        label: 'strategic priorities'
+        label: 'strategic_priorities'
       },
       {
         path: 'about/awards',
@@ -32,19 +32,19 @@ export default [
 
       {
         path: 'about/board-directors-and-executive-team',
-        label: 'board governers and leadership team'
+        label: 'board_governers_and_leadership_team'
       },
       {
         path: 'about/fast-facts',
-        label: 'fast facts'
+        label: 'fast_facts'
       },
       {
         path: 'about/almoosa-medical-group',
-        label: 'almoosa medical group'
+        label: 'almoosa_medical_group'
       },
       {
         path: 'about/annual-report',
-        label: 'annual report'
+        label: 'annual_report'
       }
     ]
   },
@@ -56,19 +56,19 @@ export default [
     options: [
       {
         path: 'services',
-        label: 'all services'
+        label: 'all_services'
       },
       {
         path: 'services/medical-centers',
-        label: 'medical centers'
+        label: 'medical_centers'
       },
       {
         path: 'services/medical-programs',
-        label: 'medical programs'
+        label: 'medical_programs'
       },
       {
         path: 'services/supportive-services',
-        label: 'support services'
+        label: 'support_services'
       },
       {
         path: 'services/inpatient-units',
@@ -76,24 +76,24 @@ export default [
       },
       {
         path: 'services/nursing-department',
-        label: 'nursing department'
+        label: 'nursing_department'
       }
     ]
   },
   {
     path: 'for-patient',
-    label: 'for patient',
+    label: 'for_patient',
     icon: 'fas fa-file-medical-alt'
   },
   {
     path: 'for-visitors',
-    label: 'for visitors',
+    label: 'for_visitors',
     icon: 'fas fa-file-medical-alt'
   },
   {
     isDropDown: true,
     // path: 'training-education',
-    label: 'training education',
+    label: 'training_education',
     icon: 'fas fa-calendar-check',
     options: [
       {
@@ -106,7 +106,7 @@ export default [
       },
       {
         path: 'training-education/academic-affairs',
-        label: 'academic affairs'
+        label: 'academic_affairs'
       }
     ]
   },
@@ -114,16 +114,16 @@ export default [
   {
     isDropDown: true,
     path: 'media-center',
-    label: 'media center',
+    label: 'media_center',
     icon: 'fas fa-images',
     options: [
       {
         path: 'media-center/video-gallery',
-        label: 'video gallery'
+        label: 'video_gallery'
       },
       {
         path: 'media-center/photo-gallery',
-        label: 'photo gallery'
+        label: 'photo_gallery'
       },
       {
         path: 'media-center/podcast',
@@ -131,7 +131,7 @@ export default [
       },
       {
         path: 'media-center/hakeem-magazine',
-        label: 'hakeem magazine'
+        label: 'hakeem_magazine'
       },
       {
         path: 'media-center/news',
@@ -139,7 +139,7 @@ export default [
       },
       {
         path: 'media-center/medical-articles',
-        label: 'medical articles'
+        label: 'medical_articles'
       }
     ]
   },

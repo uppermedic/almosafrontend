@@ -3,16 +3,15 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Inpatient from 'src/components/Services/inpatient';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation, i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-function InpatientPage({ t, services, servicesDataSingle }) {
+function InpatientPage({ services, servicesDataSingle }) {
   const router = useRouter();
   const { locale } = router;
-  const lang = i18n.language;
 
   useEffect(() => {
-    if (lang && locale && router?.asPath == '/services/inpatient-units/') {
+    if (locale && locale && router?.asPath == '/services/inpatient-units/') {
       router.push(
         `/${locale}/services/inpatient-units/?id=${services.services[0].id}`
       );
@@ -26,7 +25,7 @@ function InpatientPage({ t, services, servicesDataSingle }) {
         <Hero bg={servicesDataSingle.thumbnail}>
           <div className="hero-content">
             <h1 className="title">
-              {lang && servicesDataSingle.seo[lang]?.title}
+              {locale && servicesDataSingle.seo[locale]?.title}
             </h1>
           </div>
         </Hero>
@@ -40,6 +39,7 @@ function InpatientPage({ t, services, servicesDataSingle }) {
 }
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   let { error: error1, data: services } = await fetchData('/services/4');
   let { error: error2, data: servicesDataSingle } = await fetchData(
     `/services/single/${
@@ -53,8 +53,20 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { services, servicesDataSingle }
+    props: {
+      services,
+      servicesDataSingle,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(InpatientPage);
+export default InpatientPage;

@@ -1,14 +1,16 @@
 import React from 'react';
-import { i18n, Link } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 export default function Service({ item }) {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <a target="_blank" href={item.url} rel="noopener noreferrer nofollow">
       <div className="card-item">
         <div className="overlay"></div>
         <div className={`text-center ribbon`}>
-          <h3>{lang && item[lang].title}</h3>
+          <h3>{locale && item[locale].title}</h3>
         </div>
         <img src={item.image} alt="hakeem-magazine" />
       </div>

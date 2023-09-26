@@ -1,5 +1,4 @@
 import React from 'react';
-import { i18n } from 'root/i18n';
 import PageContent from 'components/reusableComponents/PageContent';
 
 const GoldenDesignation = ({ contentData }) => {

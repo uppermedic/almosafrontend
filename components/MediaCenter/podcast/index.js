@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const logos = [
   {
@@ -24,7 +24,9 @@ const logos = [
 ];
 
 const Content = () => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <div className="content">
       <div className="container">
@@ -35,10 +37,10 @@ const Content = () => {
                 <div className="left-side w-100">
                   <div className="title">
                     <h2>
-                      {(lang == 'en' && 'Listen To') || 'استمع إلى'}
+                      {(locale == 'en' && 'Listen To') || 'استمع إلى'}
                       <br />
-                      {(lang == 'en' && 'Our') || ''}
-                      <span>{(lang == 'en' && 'Podcast') || 'اذاعتنا'}</span>
+                      {(locale == 'en' && 'Our') || ''}
+                      <span>{(locale == 'en' && 'Podcast') || 'اذاعتنا'}</span>
                     </h2>
                   </div>
                   <div className="arrow">

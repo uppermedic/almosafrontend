@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import dynamic from 'next/dynamic';
 import NewsItem from './NewsItem';
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function News({ data, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+function News({ data}) {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   return (
     <section className="home-news">
@@ -23,7 +22,7 @@ function News({ data, t }) {
           <Row>
             <Col>
               <h3 className="section-title-news">
-                {language == 'en' ? 'News' : 'المدونات'}
+                {locale == 'en' ? 'News' : 'المدونات'}
               </h3>
             </Col>
           </Row>
@@ -86,4 +85,4 @@ function News({ data, t }) {
   );
 }
 
-export default withTranslation('common')(News);
+export default News;

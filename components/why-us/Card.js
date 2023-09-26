@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Link, i18n } from 'root/i18n';
+import React from 'react';
+import Link from 'next/link';
 import { Row, Col } from 'reactstrap';
+import { useRouter } from 'next/router';
 
 export default function Why_Us_Card({ item, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+  const router = useRouter();
+  const { locale } = router;
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
   return (
     <Link href={`/${locale}/${item.url}`}>
       <a>

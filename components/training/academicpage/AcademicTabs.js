@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { withTranslation, i18n } from 'root/i18n';
 import { connect } from 'react-redux';
 import {
   Container,
@@ -16,7 +15,7 @@ import ResearchCenter from './ResearchCenter';
 import TrainingStaff from './TraningStaff';
 import LifeSupport from './LifeSupport';
 import CPDD from './CPDD';
-import Fellowship from './Fellowship';
+import { useRouter } from 'next/router';
 
 const dataTap = [
   {
@@ -41,7 +40,8 @@ const dataTap = [
 ];
 
 const AcademicTabs = ({ sectionContentData, sectionsData }) => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -79,17 +79,17 @@ const AcademicTabs = ({ sectionContentData, sectionsData }) => {
         <Row>
           <Col>
             <h2 className="section-title">
-              {lang && sectionContentData[lang]?.title}
+              {locale && sectionContentData[locale]?.title}
             </h2>
           </Col>
         </Row>
-        {lang && sectionContentData[lang]?.content && (
+        {locale && sectionContentData[locale]?.content && (
           <Row>
             <Col>
               <p>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: sectionContentData[lang]?.content || ' '
+                    __html: sectionContentData[locale]?.content || ' '
                   }}
                 />
               </p>
@@ -108,7 +108,7 @@ const AcademicTabs = ({ sectionContentData, sectionsData }) => {
                         toggle(index);
                       }}
                     >
-                      {lang && tab?.section[lang]?.title}
+                      {locale && tab?.section[locale]?.title}
                     </NavLink>
                   </NavItem>
                 ))}
@@ -134,6 +134,4 @@ const mapStateToProps = state => ({
   categories: state.Globals.categories
 });
 
-export default withTranslation(['common', 'menu'])(
-  connect(mapStateToProps)(AcademicTabs)
-);
+export default connect(mapStateToProps)(AcademicTabs);

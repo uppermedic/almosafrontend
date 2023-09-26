@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { i18n, Link } from 'root/i18n';
+import React from 'react';
+import Link from 'next/link';
 import { removeSpChar } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
 
 export default function MedicalCenter({ item }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <Link
       href={`/${locale}/services/medical-centers/${
-        language &&
-        removeSpChar(String(item[language].title)).split(' ').join('-')
+        locale &&
+        removeSpChar(String(item[locale].title)).split(' ').join('-')
       }/?id=${item.id}`}
     >
       <a>
@@ -24,7 +21,7 @@ export default function MedicalCenter({ item }) {
         >
           <div className={`text-center overlay`}>
             <div className="ribbon">
-              <h3>{(language && item[language].title) || 'No Title Here'}</h3>
+              <h3>{(locale && item[locale].title) || 'No Title Here'}</h3>
             </div>
           </div>
         </div>

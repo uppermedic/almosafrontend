@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, Link } from 'root/i18n';
-export default function FooterRights() {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+export default function FooterRights() {
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="footer-rights">
@@ -15,13 +13,13 @@ export default function FooterRights() {
         <Row>
           <Col md={6} className="order-2 order-lg-1">
             <p className="m-0">
-              {language === 'en' && (
+              {locale === 'en' && (
                 <>
                   ALMOOSA HOSPITAL © {new Date().getFullYear()} All Rights
                   Reserved
                 </>
               )}
-              {language === 'ar' && (
+              {locale === 'ar' && (
                 <>
                   مستشفى الموسى {new Date().getFullYear()} © جميع الحقوق محفوظة
                 </>
@@ -32,8 +30,8 @@ export default function FooterRights() {
             <div className="d-lg-flex justify-content-md-end">
               <Link href={`/${locale}/privacy`}>
                 <a>
-                  {language === 'en' && 'Privacy Policy'}
-                  {language === 'ar' && 'سياسة الخصوصية'}
+                  {locale === 'en' && 'Privacy Policy'}
+                  {locale === 'ar' && 'سياسة الخصوصية'}
                 </a>
               </Link>
             </div>

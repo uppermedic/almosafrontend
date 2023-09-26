@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container } from 'reactstrap';
-import { i18n } from 'root/i18n';
 import {
   PostContent,
   PostWithRightImg
 } from 'src/components/reusableComponents/Post';
+import { useRouter } from 'next/router';
 
 const PageContent = ({ itemContent }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   const ImgFile =
     itemContent?.files?.length > 0 &&
@@ -32,23 +32,23 @@ const PageContent = ({ itemContent }) => {
 
   const Content =
     pdfFile?.length > 0
-      ? [itemContent[language]?.content, ...pdfFile]
-      : [itemContent[language]?.content];
+      ? [itemContent[locale]?.content, ...pdfFile]
+      : [itemContent[locale]?.content];
 
   // Array.isArray(itemContent?.page_items) ? (
   //   <PostContentWithCards
-  //     title={itemContent[language]?.title}
+  //     title={itemContent[locale]?.title}
   //     color="#55B047"
   //     paragraphs={Content}
   //     items={itemContent?.page_items}
   //   />
   return (
     <section className="dynamic-content">
-      {itemContent && language && (
+      {itemContent && locale && (
         <>
           {ImgFile?.length > 0 ? (
             <PostWithRightImg
-              title={itemContent[language]?.title}
+              title={itemContent[locale]?.title}
               color="#55B047"
               paragraphs={Content}
               theImg={ImgFile}
@@ -56,7 +56,7 @@ const PageContent = ({ itemContent }) => {
             />
           ) : (
             <PostContent
-              title={itemContent[language]?.title}
+              title={itemContent[locale]?.title}
               color="#55B047"
               paragraphs={Content}
               theVideo={youtube}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import Card from './Card';
 
 const data = [
@@ -23,13 +23,15 @@ const data = [
     url: 'our-doctors'
   }
 ];
-const index = ({ t }) => {
+const Index = () => {
+const { t } = useTranslation('menu');
+
   return (
     <section className="why-us">
       <Container>
         <Row>
           <Col>
-            <h2>{t('menu:why choose us')}</h2>
+            <h2>{t('menu:why_choose_us')}</h2>
           </Col>
         </Row>
         <Row>
@@ -44,4 +46,4 @@ const index = ({ t }) => {
   );
 };
 
-export default withTranslation('menu')(index);
+export default Index;

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Row, Col } from 'reactstrap';
-import { withTranslation } from 'root/i18n';
 import DoctorCard from './doctor-card';
 import { connect } from 'react-redux';
 import ReactPaginate from 'react-paginate';
@@ -8,7 +7,7 @@ import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 import { useRouter } from 'next/router';
 
-const index = ({ data, handlePageClick, last_page }) => {
+const Index = ({ data, handlePageClick, last_page }) => {
   const [currentDoctor, setcurrentDoctor] = useState([]);
   const router = useRouter();
   const { page } = router?.query;
@@ -57,6 +56,4 @@ const mapStateToProps = state => ({
   categories: state.Globals.categories
 });
 
-export default withTranslation(['common', 'menu'])(
-  connect(mapStateToProps)(index)
-);
+export default connect(mapStateToProps)(Index);

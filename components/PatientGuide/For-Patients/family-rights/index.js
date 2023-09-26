@@ -1,16 +1,17 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const Content = ({ itemContent }) => {
-  let { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="family-rights-content">
       <div className="top-content">
         <div className="title">
           <div className="container">
-            <h2>{language && itemContent[language]?.title}</h2>
+            <h2>{locale && itemContent[locale]?.title}</h2>
           </div>
         </div>
         <div className="description">
@@ -18,7 +19,7 @@ const Content = ({ itemContent }) => {
             <p>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: language && itemContent[language]?.content
+                  __html: locale && itemContent[locale]?.content
                 }}
               ></div>
             </p>
@@ -34,9 +35,9 @@ const Content = ({ itemContent }) => {
                   <Row xs="1" lg="2" key={index}>
                     <Col key={index}>
                       <div className="info">
-                        {language && item[language]?.title && (
+                        {locale && item[locale]?.title && (
                           <div className="info-title">
-                            <p>{language && item[language]?.title}</p>
+                            <p>{locale && item[locale]?.title}</p>
                             <hr />
                           </div>
                         )}
@@ -44,12 +45,12 @@ const Content = ({ itemContent }) => {
                           <div
                             className="desc"
                             dangerouslySetInnerHTML={{
-                              __html: item[language]?.content
+                              __html: item[locale]?.content
                             }}
                           />
                         </p>
                         {/* <ul className="info-list">
-                          {language && (
+                          {locale && (
                             <>
                               {item.rights.map((right, index) => {
                                 return (
@@ -60,7 +61,7 @@ const Content = ({ itemContent }) => {
                                     <div
                                       className="desc"
                                       dangerouslySetInnerHTML={{
-                                        __html: right[language]?.content
+                                        __html: right[locale]?.content
                                       }}
                                     ></div>
                                   </li>
@@ -94,9 +95,9 @@ const Content = ({ itemContent }) => {
                     </Col>
                     <Col key={index}>
                       <div className="info">
-                        {language && item[language]?.title && (
+                        {locale && item[locale]?.title && (
                           <div className="info-title">
-                            <p>{language && item[language]?.title}</p>
+                            <p>{locale && item[locale]?.title}</p>
                             <hr />
                           </div>
                         )}
@@ -104,7 +105,7 @@ const Content = ({ itemContent }) => {
                           <div
                             className="desc"
                             dangerouslySetInnerHTML={{
-                              __html: item[language]?.content
+                              __html: item[locale]?.content
                             }}
                           />
                         </p>
@@ -120,4 +121,4 @@ const Content = ({ itemContent }) => {
   );
 };
 
-export default withTranslation(['menu'])(Content);
+export default Content;

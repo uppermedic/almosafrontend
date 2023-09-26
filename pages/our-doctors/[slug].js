@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { fetchData } from 'src/store/Request.js';
 import Link from 'next/link';
-import { i18n } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import { Col, Container, Row, Table } from 'reactstrap';
 import { FaFacebookF, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { removeSpChar } from 'src/utils/helpers';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const SingleDoctor = ({ doctor }) => {
   const [qualifications, setQualifications] = useState({});
-  const lang = i18n.language;
   const router = useRouter();
   const { locale } = router;
 
   useEffect(() => {
-    if (lang) {
-      setQualifications(doctor.data[lang].qualifications);
+    if (locale) {
+      setQualifications(doctor.data[locale].qualifications);
     }
-  }, [doctor, lang]);
+  }, [doctor, locale]);
 
   useEffect(() => {
-    if (lang && locale) {
+    if (locale) {
       router.push(
         `/${locale}/our-doctors/${removeSpChar(
           String(doctor?.data[locale]?.name)
@@ -30,7 +29,7 @@ const SingleDoctor = ({ doctor }) => {
           .join('-')}/?id=${doctor?.data?.id}`
       );
     }
-  }, [lang, locale]);
+  }, [locale]);
 
   return (
     <div className="almoosa-doctors">
@@ -44,8 +43,8 @@ const SingleDoctor = ({ doctor }) => {
           textAlign: 'center'
         }}
       >
-        <h2>{lang && doctor.data[lang].name}</h2>
-        <p className="title">{lang && doctor.data[lang].title}</p>
+        <h2>{locale && doctor.data[locale].name}</h2>
+        <p className="title">{locale && doctor.data[locale].title}</p>
       </div>
       <div className="our-doctors">
         <Container>
@@ -56,7 +55,7 @@ const SingleDoctor = ({ doctor }) => {
                   // className="d-block w-100"
                   className="doctorimg"
                   src={doctor.data.image}
-                  alt={lang && doctor.data[lang].name}
+                  alt={locale && doctor.data[locale].name}
                 />
 
                 <div className="doctor-social">
@@ -106,8 +105,8 @@ const SingleDoctor = ({ doctor }) => {
                       >
                         <span
                           style={{
-                            marginRight: lang === 'ar' && '-20px',
-                            marginLeft: lang === 'en' && '-20px',
+                            marginRight: locale === 'ar' && '-20px',
+                            marginLeft: locale === 'en' && '-20px',
                             position: 'absolute',
                             color: '#78a748'
                           }}
@@ -129,6 +128,7 @@ const SingleDoctor = ({ doctor }) => {
 };
 
 export async function getServerSideProps(context) {
+  const locale =context.locale
   if (context.query.slug) {
     //settings
     let { error, data } = await fetchData(`/doctors/${context.query.id}`);
@@ -138,7 +138,18 @@ export async function getServerSideProps(context) {
       };
     }
     return {
-      props: { doctor: data }
+      props: {
+        doctor: data,
+        ...(await serverSideTranslations(locale, [
+          'common',
+          'about',
+          'news',
+          'menu',
+          'header',
+          'footer',
+          'patient_guide'
+        ]))
+      }
     };
   } else {
     return {

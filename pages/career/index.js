@@ -2,9 +2,11 @@ import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/Career';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const index = ({ t }) => {
+const Index = () => {
+  const { t } = useTranslation('common');
   const seo = {
     ar: {
       title: 'وظائف',
@@ -32,4 +34,20 @@ const index = ({ t }) => {
   );
 };
 
-export default withTranslation(['common'])(index);
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
+  };
+}
+
+export default Index;

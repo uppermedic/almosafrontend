@@ -1,5 +1,5 @@
 import React from 'react';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import {
   TabContent,
   TabPane,
@@ -11,16 +11,19 @@ import {
   Col
 } from 'reactstrap';
 import classnames from 'classnames';
+import { useRouter } from 'next/router';
 
 const CustomTabs = ({
-  t,
   physicians,
   items,
   clickItemFun,
   activeItemIndex,
   children
 }) => {
-  const { language } = i18n;
+const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="custom-tabs">
@@ -41,7 +44,7 @@ const CustomTabs = ({
                         clickItemFun(item);
                       }}
                     >
-                      {language && item[language].title}
+                      {locale && item[locale].title}
                     </NavLink>
                   </NavItem>
                 );
@@ -57,7 +60,7 @@ const CustomTabs = ({
                       clickItemFun({ id: 'physicians' });
                     }}
                   >
-                    {t('our physicians')}
+                    {t('our_physicians')}
                   </NavLink>
                 </NavItem>
               )}
@@ -70,13 +73,13 @@ const CustomTabs = ({
                   <Container>
                     {item.items[0] && (
                       <>
-                        <h2>{language && item.items[0][language].title}</h2>
+                        <h2>{locale && item.items[0][locale].title}</h2>
                         <p>
-                          {language && item.items[0][language]?.content && (
+                          {locale && item.items[0][locale]?.content && (
                             <div
                               className="tab-details"
                               dangerouslySetInnerHTML={{
-                                __html: item.items[0][language]?.content
+                                __html: item.items[0][locale]?.content
                               }}
                             />
                           )}
@@ -96,4 +99,4 @@ const CustomTabs = ({
   );
 };
 
-export default withTranslation('common')(CustomTabs);
+export default CustomTabs;

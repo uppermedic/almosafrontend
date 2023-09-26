@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
 import { BsChevronDoubleRight, BsChevronDoubleLeft } from 'react-icons/bs';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
+
 export default function NextFC() {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <Fragment>
-      {language === 'en' && <BsChevronDoubleRight />}
-      {language === 'ar' && <BsChevronDoubleLeft />}
+      {locale === 'en' && <BsChevronDoubleRight />}
+      {locale === 'ar' && <BsChevronDoubleLeft />}
     </Fragment>
   );
 }

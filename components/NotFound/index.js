@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { i18n, Link } from 'root/i18n';
-import { Container, Row, Col, Button } from 'reactstrap';
+import React from 'react';
+import Link from 'next/link';
+import { Container, Row, Col } from 'reactstrap';
+import { useRouter } from 'next/router';
 
-export default function index() {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+function Index() {
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="content-wrapper">
@@ -33,3 +30,6 @@ export default function index() {
     </div>
   );
 }
+
+
+export default Index;

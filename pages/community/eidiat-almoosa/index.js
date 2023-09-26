@@ -2,14 +2,15 @@ import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import { Container, Row, Col } from 'reactstrap';
-import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
 import { fetchData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const LetsLearn = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="eidiat-almoosa">
@@ -25,7 +26,7 @@ const LetsLearn = ({ data }) => {
             <Row>
               <Col xs={12}>
                 <h3 className="section-title">
-                  {lang && data.contents[0][lang].title}
+                  {locale && data.contents[0][locale].title}
                 </h3>
               </Col>
             </Row>
@@ -35,8 +36,8 @@ const LetsLearn = ({ data }) => {
                   src={data?.contents[0]?.video}
                   width="100%"
                   height="600"
-                  frameborder="0"
-                  allowfullscreen
+                  frameBorder="0"
+                  allowFullScreen
                 ></iframe>
               </Col>
             </Row>
@@ -49,7 +50,7 @@ const LetsLearn = ({ data }) => {
 
 export default LetsLearn;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/community/10');
   if (error) {
     return {
@@ -57,6 +58,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

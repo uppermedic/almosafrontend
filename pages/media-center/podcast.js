@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/podcast/index.js';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Podcast = () => {
   const head_data = {
@@ -25,4 +26,20 @@ const Podcast = () => {
   );
 };
 
-export default Podcast;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
+  };
+}
+
+export default Podcast; 

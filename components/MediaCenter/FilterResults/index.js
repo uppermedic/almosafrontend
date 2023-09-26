@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import { i18n, Link, withTranslation } from 'root/i18n';
-import ClassNames from 'classnames';
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
-import { strippedContent, truncate } from 'src/utils/helpers';
+import { useTranslation } from 'next-i18next';
+import { Container, Row, Col } from 'reactstrap';
 import ReactPaginate from 'react-paginate';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 import ResultPost from './ResultPost';
 
-const Index = ({ data, latest, tags, categories, t }) => {
+const Index = ({ data, latest, tags, categories}) => {
+const { t } = useTranslation(['common', 'menu', 'news']);
+
   const router = useRouter();
-  const { page, cats, tag } = router?.query;
+  const { locale,query } = router;
+
+  const { page, cats, tag } = query;
   const [controllerOpen, setControllerOpen] = useState(false);
   const { last_page } = data;
-  const [locale, setlocale] = useState('');
-  const { language } = i18n;
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   const handlePageClick = ({ selected }) => {
     router.push(`/${locale}/media-center/news/?page=${selected + 1}`);
@@ -63,7 +60,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                         <Link
                           href={`/${locale}/media-center/news/?cats=${cat.slug}`}
                         >
-                          <a>{cat[language].category_name}</a>
+                          <a>{cat[locale].category_name}</a>
                         </Link>
                       </li>
                     ))}
@@ -140,7 +137,5 @@ const Index = ({ data, latest, tags, categories, t }) => {
     </section>
   );
 };
-Index.getInitialProps = async context => ({
-  namespacesRequired: ['common', 'menu', 'news']
-});
-export default withTranslation('common')(Index);
+
+export default Index;

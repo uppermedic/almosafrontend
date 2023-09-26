@@ -1,17 +1,18 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import MedicalCenter from './MedicalCenter';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 export default function index({ data }) {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="centers">
       <div className="container">
         <Row>
           <Col>
-            <h2>{(lang == 'en' && 'Medical Centers') || 'مراكز طبية'}</h2>
+            <h2>{(locale == 'en' && 'Medical Centers') || 'مراكز طبية'}</h2>
           </Col>
         </Row>
         <Row xs="1" sm="1" md="2" lg="3">

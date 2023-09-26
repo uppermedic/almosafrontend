@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React, { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import ClassNames from 'classnames';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import Article from './Article';
+import { useRouter } from 'next/router';
 
-const Index = ({ article, categories, related, t }) => {
+const Index = ({ article, categories, related }) => {
+  const { t } = useTranslation('common');
+
   const [controllerOpen, setControllerOpen] = useState(false);
-  const { language } = i18n;
-  let contentWithLang = article[language];
-  const [locale, setlocale] = useState('');
+  const router = useRouter();
+  const { locale } = router;
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  let contentWithLang = article[locale];
 
   return (
     <section className="content-wrapper">
@@ -65,9 +66,9 @@ const Index = ({ article, categories, related, t }) => {
                 {categories.map(cat => (
                   <li key={cat.id}>
                     <Link
-                      href={`/${locale}/media-center/filter-results/?cats=${cat[language].category_name}`}
+                      href={`/${locale}/media-center/filter-results/?cats=${cat[locale].category_name}`}
                     >
-                      <a>{cat[language].category_name}</a>
+                      <a>{cat[locale].category_name}</a>
                     </Link>
                   </li>
                 ))}
@@ -80,7 +81,4 @@ const Index = ({ article, categories, related, t }) => {
   );
 };
 
-Index.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(Index);
+export default Index;

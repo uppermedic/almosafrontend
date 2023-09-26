@@ -1,13 +1,14 @@
+import { useRouter } from 'next/router';
 import React from 'react';
-import { i18n } from 'root/i18n';
 
 const CovidMessage = () => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="covid-message">
       {/* ************ English Content ************ */}
-      {language == 'en' && (
+      {locale == 'en' && (
         <div className="content">
           <h2>
             Visitor, Family, and Care Partner Restrictions Related to COVID-19
@@ -41,7 +42,7 @@ const CovidMessage = () => {
       )}
 
       {/* ************ Arabic Content ************ */}
-      {language == 'ar' && (
+      {locale == 'ar' && (
         <div className="content">
           <h2>قيود الزيارة والأسرة وشركاء الرعاية المتعلقة بجائحة COVID-19</h2>
           <h3>رسالة إلى زائرينا وشركاء الرعاية الأعزاء</h3>

@@ -77,8 +77,8 @@ class MyDocument extends Document {
             src="https://cdn.labiba.ai/static/js/bundle.js"
             id="labibaWebChat"
             cdn="https://cdn.labiba.ai"
-            storyId="dded4da5-f160-4074-beb3-86116ec4535b"
-            baseURL="https://botbuilder.labiba.ai"
+            storyid="dded4da5-f160-4074-beb3-86116ec4535b"
+            baseurl="https://botbuilder.labiba.ai"
           ></script>
           <script type="text/javascript">AOS.init();</script>
           {/* Google Tag Manager (noscript)*/}

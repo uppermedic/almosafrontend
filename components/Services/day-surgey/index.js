@@ -11,12 +11,17 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 import { strippedContent } from 'src/utils/helpers';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import DoctorCard from 'src/components/Services/physician-card';
+import { useRouter } from 'next/router';
 
-const OneDaySurgeryContent = ({ t, data }) => {
+const OneDaySurgeryContent = ({  data }) => {
+const { t } = useTranslation('common');
+
   const { seo, sections, physicians } = data;
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   const [activeTab, setActiveTab] = useState(1);
 
   const toggle = tab => {
@@ -29,11 +34,11 @@ const OneDaySurgeryContent = ({ t, data }) => {
           <Col lg={6} className="mx-3">
             <div className="info-container">
               <div className="surgey-info">
-                {language && seo[language]?.content && (
+                {locale && seo[locale]?.content && (
                   <p>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: seo[language]?.content
+                        __html: seo[locale]?.content
                       }}
                     />
                   </p>
@@ -52,7 +57,7 @@ const OneDaySurgeryContent = ({ t, data }) => {
                     toggle(1);
                   }}
                 >
-                  {language && sections[0][language].title}
+                  {locale && sections[0][locale].title}
                 </NavLink>
               </NavItem>
             )}
@@ -64,24 +69,24 @@ const OneDaySurgeryContent = ({ t, data }) => {
                     toggle(2);
                   }}
                 >
-                  {t('our physicians')}
+                  {t('our_physicians')}
                 </NavLink>
               </NavItem>
             )}
           </Nav>
           <TabContent activeTab={activeTab}>
-            {language && sections && sections[0] && (
+            {locale && sections && sections[0] && (
               <TabPane tabId={1}>
                 <Row>
                   <Col xs={6}>
                     {sections[0].items.map((item, idx) => (
                       <>
-                        <p className="tab-item-title">{item[language].title}</p>
+                        <p className="tab-item-title">{item[locale].title}</p>
                         <div className="tab-item-content">
                           <p>
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: strippedContent(item[language].content)
+                                __html: strippedContent(item[locale].content)
                               }}
                             />
                           </p>
@@ -92,7 +97,7 @@ const OneDaySurgeryContent = ({ t, data }) => {
                 </Row>
               </TabPane>
             )}
-            {language && physicians && (
+            {locale && physicians && (
               <TabPane tabId={2} className="physician">
                 <Row
                   xs="1"
@@ -120,4 +125,4 @@ const OneDaySurgeryContent = ({ t, data }) => {
   );
 };
 
-export default withTranslation('common')(OneDaySurgeryContent);
+export default OneDaySurgeryContent;

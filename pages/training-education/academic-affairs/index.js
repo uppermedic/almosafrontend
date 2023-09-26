@@ -3,11 +3,14 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Academicpage from 'components/training/academicpage';
 import { fetchData } from 'src/store/Request.js';
-import { i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const AcademicTraning = ({ academicData, academicTeam, t }) => {
-  const lang = i18n.language;
-  const titleHero = lang && academicData.page?.seo[lang]?.title;
+const AcademicTraning = ({ academicData, academicTeam }) => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && academicData.page?.seo[locale]?.title;
 
   return (
     <div className="training-education">
@@ -22,7 +25,7 @@ const AcademicTraning = ({ academicData, academicTeam, t }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error: error1, data: academicData } = await fetchData('/page/17');
   let { error: error2, data: academicTeam } = await fetchData(
     '/education/academic/team'
@@ -34,8 +37,20 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { academicData, academicTeam }
+    props: {
+      academicData,
+      academicTeam,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(AcademicTraning);
+export default AcademicTraning;

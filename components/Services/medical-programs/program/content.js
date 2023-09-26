@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { i18n } from 'root/i18n';
 import { Col, Container, Row } from 'reactstrap';
 import { strippedContent } from 'src/utils/helpers';
 import ReusableDropdown from 'src/components/Services/medical-programs/reusable-dropdown/';
 import BlockWithTitle from 'src/components/Services/medical-programs/reusable-element/';
 import DoctorCard from 'src/components/Services/physician-card';
+import { useRouter } from 'next/router';
 
 const Content = ({ physicians, data }) => {
   const [active, setActive] = useState({ id: '0', items: [] });
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   useEffect(() => {
     if (data?.length > 0) {
       setActive(data && data[0]);
@@ -37,10 +39,10 @@ const Content = ({ physicians, data }) => {
         <section className="center-paragraph">
           <div className="container">
             <p>
-              {language && active?.items[0][language]?.content && (
+              {locale && active?.items[0][locale]?.content && (
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: active?.items[0][language]?.content
+                    __html: active?.items[0][locale]?.content
                   }}
                 />
               )}
@@ -53,7 +55,7 @@ const Content = ({ physicians, data }) => {
         <Container>
           {active?.id === 'physicians' ? (
             <>
-              {language && physicians && (
+              {locale && physicians && (
                 <div className="physician">
                   <Row
                     xs="1"
@@ -82,12 +84,12 @@ const Content = ({ physicians, data }) => {
                 .map((item, index) => {
                   return (
                     <Col key={index}>
-                      <BlockWithTitle title={item[language].title}>
+                      <BlockWithTitle title={item[locale].title}>
                         <p>
-                          {language && item[language]?.content && (
+                          {locale && item[locale]?.content && (
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: strippedContent(item[language]?.content)
+                                __html: strippedContent(item[locale]?.content)
                               }}
                             />
                           )}

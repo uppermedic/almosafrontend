@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
 import DoctorCard from './doctor-card';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
 import PageContent from 'components/reusableComponents/PageContent';
 
-const index = ({ contentData }) => {
+const Index = ({ contentData }) => {
   const [currentDoctor, setcurrentDoctor] = useState({});
 
   return (
@@ -46,5 +45,4 @@ const index = ({ contentData }) => {
     </section>
   );
 };
-
-export default withTranslation(['common', 'menu'])(index);
+export default Index;

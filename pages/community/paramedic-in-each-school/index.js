@@ -3,12 +3,15 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
 import SmallGallery from 'src/components/SmallGallery';
-import { i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Paramedic = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="paramedic">
@@ -21,8 +24,8 @@ const Paramedic = ({ data }) => {
 
       {data.contents[0] && (
         <PostWithCenterImg
-          title={lang && data.contents[0][lang].title}
-          paragraphs={[lang && data.contents[0][lang].content]}
+          title={locale && data.contents[0][locale].title}
+          paragraphs={[locale && data.contents[0][locale].content]}
           theVideo={data.contents[0].video}
           color="#1E455C"
         />
@@ -30,8 +33,8 @@ const Paramedic = ({ data }) => {
 
       {data.contents[1] && (
         <PostWithCenterImg
-          title={lang && data.contents[1][lang].title}
-          paragraphs={[lang && data.contents[1][lang].content]}
+          title={locale && data.contents[1][locale].title}
+          paragraphs={[locale && data.contents[1][locale].content]}
           color="#54AF46"
         />
       )}
@@ -45,7 +48,7 @@ const Paramedic = ({ data }) => {
       )}
       {data.contents[3] && (
         <PostWithCenterImg
-          title={lang && data.contents[3][lang].title}
+          title={locale && data.contents[3][locale].title}
           theVideo={data.contents[3].video}
           color="#1E455C"
         />
@@ -56,7 +59,7 @@ const Paramedic = ({ data }) => {
 
 export default Paramedic;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/community/9');
   if (error) {
     return {
@@ -64,6 +67,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

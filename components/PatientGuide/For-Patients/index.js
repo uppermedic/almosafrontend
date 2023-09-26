@@ -1,7 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import ForPatients from '../Card';
-import { i18n, withTranslation } from 'root/i18n';
 import CustomTabs from 'components/layout/CustomTabs';
 
 /*Content Components */
@@ -61,4 +58,4 @@ const Index = ({ contentData }) => {
   );
 };
 
-export default withTranslation(['menu', 'patient_guide'])(Index);
+export default Index;

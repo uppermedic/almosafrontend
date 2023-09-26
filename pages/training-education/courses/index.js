@@ -3,17 +3,22 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Coursespage from 'components/training/coursespage';
 import { fetchData } from 'src/store/Request.js';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const CursesTraning = ({ courseData, educationData, t }) => {
-  const lang = i18n.language;
+const CursesTraning = ({ courseData, educationData }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('menu');
+
   return (
     <div className="training-education">
       <Head data={educationData.page.seo}></Head>
       <Hero bg={educationData.page.page_cover}>
         <div className="hero-content">
           <h1 className="title">
-            {(lang == 'en' && 'BE UP TO DATE WITH LATEST') ||
+            {(locale == 'en' && 'BE UP TO DATE WITH LATEST') ||
               'كن على اطلاع بأحدث '}
             <br />
             <span>{t('menu:courses')}</span>
@@ -26,7 +31,18 @@ const CursesTraning = ({ courseData, educationData, t }) => {
 };
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   const { page } = context.query;
+
+  const tranlation = await serverSideTranslations(locale, [
+    'common',
+    'about',
+    'news',
+    'menu',
+    'header',
+    'footer',
+    'patient_guide'
+  ]);
   const tst = Promise.all([
     fetchData('/education'),
     fetchData(`/education/type/course?page=${page}`)
@@ -43,7 +59,8 @@ export async function getServerSideProps(context) {
       return {
         props: {
           educationData,
-          courseData
+          courseData,
+          ...tranlation
         }
       };
     }
@@ -52,4 +69,4 @@ export async function getServerSideProps(context) {
   return tst;
 }
 
-export default withTranslation(['menu'])(CursesTraning);
+export default CursesTraning;

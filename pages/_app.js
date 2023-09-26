@@ -1,9 +1,8 @@
 import App from 'next/app';
 import { useEffect } from 'react';
-import { appWithTranslation, i18n } from 'root/i18n';
+import { appWithTranslation } from 'next-i18next';
 import { Provider } from 'react-redux';
 import reduxStore from 'src/store/store';
-import Head from 'src/components/layout/head';
 import Nav from 'src/components/layout/TopNav';
 import Header from 'src/components/layout/Header';
 import Footer from 'src/components/Home/Footer';
@@ -27,7 +26,7 @@ import '../assets/style/style.scss';
 
 let isSSR = typeof window === 'undefined';
 function MyApp({ Component, pageProps }) {
-  const { header, footer } = pageProps.AppPageData;
+  // const { header, footer } = pageProps.AppPageData;
   const router = useRouter();
   const { locale, asPath, pathname } = router;
   const structuredData = {
@@ -45,52 +44,62 @@ function MyApp({ Component, pageProps }) {
       'https://www.linkedin.com/company/almoosa-specialist-hospital/'
     ]
   };
+  const header = pageProps?.AppPageData?.header || {}; // Ensure that header is defined
+  const footer = pageProps?.AppPageData?.footer || {}; // Ensure that footer is defined
 
   useEffect(() => {
-    // console.log('hiiiii', asPath.includes(`/${locale}/`));
     if (
       pathname !== '/404' &&
       asPath !== `/${locale}` &&
       !asPath.includes(`/${locale}/`)
     ) {
-      if (locale == i18n.language) {
-        i18n.changeLanguage(i18n.language);
-        document
-          .getElementsByTagName('html')[0]
-          .setAttribute('lang', i18n.language);
+      // if (locale == i18n.language) {
+      //   i18n.changeLanguage(i18n.language);
+      //   document
+      //     .getElementsByTagName('html')[0]
+      //     .setAttribute('lang', i18n.language);
 
-        router.push(
-          `/${i18n.language}` + asPath,
-          `/${i18n.language}` + asPath,
-          {
-            locale: i18n.language
-          }
-        );
-      } else if (locale != i18n.language) {
-        i18n.changeLanguage(locale);
-        document.getElementsByTagName('html')[0].setAttribute('lang', locale);
+      //   router.push(
+      //     `/${i18n.language}` + asPath,
+      //     `/${i18n.language}` + asPath,
+      //     {
+      //       locale: i18n.language
+      //     }
+      //   );
+      // } else if (locale != i18n.language) {
+      //   i18n.changeLanguage(locale);
+      //   document.getElementsByTagName('html')[0].setAttribute('lang', locale);
 
-        router.push(`/${locale}` + asPath, `/${locale}` + asPath, {
+      //   router.push(`/${locale}` + asPath, `/${locale}` + asPath, {
+      //     locale: locale
+      //   });
+      // }
+      // i18n.changeLanguage(locale);
+
+      router
+        .push(`/${locale}` + asPath, `/${locale}` + asPath, {
           locale: locale
-        });
-      }
+        })
+        .then(() =>
+          document.getElementsByTagName('html')[0].setAttribute('lang', locale)
+        );
     } else if (
       asPath == `/${locale}` ||
       asPath.includes('/en/') ||
       asPath.includes('/ar/')
     ) {
-      i18n.changeLanguage(locale);
-      document.getElementsByTagName('html')[0].setAttribute('lang', locale);
-
-      router.push(`/${locale}/404`);
+      // i18n.changeLanguage(locale);
+      router
+        .push(`/${locale}/404`)
+        .then(() =>
+          document.getElementsByTagName('html')[0].setAttribute('lang', locale)
+        );
     }
-  }, [locale, i18n.language]);
+  }, [locale]);
 
   useEffect(() => {
     if (!isSSR) {
-      document
-        .getElementsByTagName('html')[0]
-        .setAttribute('lang', i18n.language);
+      document.getElementsByTagName('html')[0].setAttribute('lang', locale);
     }
   }, []);
 
@@ -98,7 +107,6 @@ function MyApp({ Component, pageProps }) {
     <div style={{ overflow: 'hidden' }}>
       <Provider store={reduxStore}>
         <ContactUsButton phone={footer?.contact_us?.contact_phone} />
-        {/* <Head /> */}
         <Nav />
         <Header data={header} />
         <BreadCrumb />
@@ -123,4 +131,5 @@ MyApp.getInitialProps = async appContext => {
   appProps.pageProps['AppPageData'] = data;
   return { ...appProps };
 };
+
 export default appWithTranslation(MyApp);

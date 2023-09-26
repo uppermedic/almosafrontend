@@ -1,9 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const SharedPost = ({ data, cutomImgStyle }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="hair-post">
@@ -13,7 +14,7 @@ const SharedPost = ({ data, cutomImgStyle }) => {
             <p>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: language && data.seo[language].content
+                  __html: locale && data.seo[locale].content
                 }}
               />
             </p>

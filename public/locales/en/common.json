@@ -18,13 +18,12 @@
   "new_search": "New Search",
   "no_results": "No Results Found",
   "search_news": "Search at our news...",
-  "medical articles": "Medical Articles",
+  "medical_articles": "Medical Articles",
   "search_medical-articles": "Search at our medical articles...",
   "categories": "Categories",
   "popular_posts": "Popular posts",
   "tags": "Tags",
-  "search_results": "Search Results",
-  "search result": "Search Results",
+  "search_result": "Search Results",
   "doctor": "doctor",
   "patient": "patient",
   "single_bed": "Single Bed",
@@ -43,7 +42,7 @@
   "register": "Register",
   "faild": "Faild",
   "all_times": "All Times",
-  "our physicians": "Our Physicians",
+  "our_physicians": "Our Physicians",
   "send": "Send",
   "successfully": "Successfully",
   "positions held": "Positions Held",
@@ -51,5 +50,5 @@
   "worker": "Worker",
   "all_departments": "All Departments",
   "career": "Career",
-  "virtual tour of almoosa specialist hospital": "Virtual Tour Of Almoosa Specialist Hospital"
+  "virtual_tour_of_almoosa_specialist_hospital": "Virtual Tour Of Almoosa Specialist Hospital"
 }

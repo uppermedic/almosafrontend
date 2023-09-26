@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import { toggleMediaPlayer as toggleMediaPlayerAction } from 'src/store/actions';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ReactPlayer from 'react-player';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 
-const VideoPlayer = ({ media_player, toggleMediaPlayer, t }) => {
+const VideoPlayer = ({ media_player, toggleMediaPlayer}) => {
+  const { t } = useTranslation('common');
+
   const toggle = () => {
     //close
     toggleMediaPlayer(false);
@@ -45,6 +47,6 @@ const mapDispatchToProps = {
   toggleMediaPlayer: toggleMediaPlayerAction
 };
 
-export default withTranslation('common')(
+export default (
   connect(mapStateToProps, mapDispatchToProps)(VideoPlayer)
 );

@@ -3,19 +3,18 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import SupportServices from 'src/components/Services/support-services';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation, i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-function Supportive({ t, services, servicesDataSingle }) {
+function Supportive({ services, servicesDataSingle }) {
   const router = useRouter();
-  const lang = i18n.language;
   const { locale } = router;
-  const titleHero = lang && servicesDataSingle.seo[lang]?.title;
+  const titleHero = locale && servicesDataSingle.seo[locale]?.title;
 
   const [url, seturl] = useState('');
 
   useEffect(() => {
-    if (lang && locale && router?.asPath == '/services/supportive-services/') {
+    if (locale && router?.asPath == '/services/supportive-services/') {
       router.push(
         `/${locale}/services/supportive-services/?id=${services.services[0].id}`
       );
@@ -43,6 +42,7 @@ function Supportive({ t, services, servicesDataSingle }) {
 }
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   let { error: error1, data: services } = await fetchData('/services/5');
   let { error: error2, data: servicesDataSingle } = await fetchData(
     `/services/single/${
@@ -56,7 +56,20 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { services, servicesDataSingle }
+    props: {
+      services,
+      servicesDataSingle,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
-export default withTranslation(['menu'])(Supportive);
+
+export default Supportive;

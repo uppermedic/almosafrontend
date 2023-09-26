@@ -1,7 +1,11 @@
 import React from 'react';
-import { i18n, withTranslation } from 'root/i18n';
-const Selectbox = ({ options, handleChange, t, default_title, withoutAll }) => {
-  const { language } = i18n;
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+const Selectbox = ({ options, handleChange, default_title, withoutAll }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
+
   return (
     <label>
       <select required onChange={handleChange}>
@@ -12,8 +16,8 @@ const Selectbox = ({ options, handleChange, t, default_title, withoutAll }) => {
         )}
         {options.map((opt, index) => (
           <option value={opt.id} key={index}>
-            {opt[language]
-              ? opt[language].title || opt[language].name
+            {opt[locale]
+              ? opt[locale].title || opt[locale].name
               : 'No Data'}
           </option>
         ))}
@@ -24,4 +28,4 @@ const Selectbox = ({ options, handleChange, t, default_title, withoutAll }) => {
   );
 };
 
-export default withTranslation('common')(Selectbox);
+export default Selectbox;

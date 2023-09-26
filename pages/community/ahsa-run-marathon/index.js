@@ -3,11 +3,14 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/Community/asha-marathon';
 import { fetchData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function index({ data }) {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <div className="asha-marathon">
@@ -22,7 +25,7 @@ export default function index({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/community/6');
   if (error) {
     return {
@@ -30,6 +33,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

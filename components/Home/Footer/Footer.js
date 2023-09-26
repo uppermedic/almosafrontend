@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import { strippedContent } from 'src/utils/helpers.js';
@@ -12,22 +13,20 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  app_store_download_app,
   google_play_store_download_app
 } from 'src/constants/Data';
+import { useRouter } from 'next/router';
 
-const Footer = ({ data, customClass, t }) => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+const Footer = ({ data, customClass}) => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation(['common','footer']);
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   const {
     welcome_title,
     welcome_msg,
-    contact_us: { location, location_url, contact_phone, contact_email },
+    contact_us,
     facebook_url,
     instagram_url,
     twitter_url,
@@ -43,8 +42,8 @@ const Footer = ({ data, customClass, t }) => {
         <Row className="justify-content-center justify-content-sm-start">
           <Col lg={{ size: 4 }}>
             <div className="intro">
-              <h2>{welcome_title[language]}</h2>
-              <p>{language ? strippedContent(welcome_msg[language]) : ''}</p>
+              <h2>{welcome_title[locale] || ''}</h2>
+              <p>{welcome_msg[locale]?strippedContent(welcome_msg[locale]):"" || ''}</p>
               <div className="social d-block d-lg-flex">
                 <Link href={facebook_url}>
                   <a target="_blank" className="fb" title="facebook">
@@ -101,7 +100,7 @@ const Footer = ({ data, customClass, t }) => {
                     {t('footer:download_app')}
                   </a>
                 </Link>
-                <Link href={location_url}>
+                <Link href={contact_us?.location_url}>
                   <a target="_blank" rel="noopener noreferrer nofollow">
                     {t('footer:our_location')}
                   </a>
@@ -113,18 +112,18 @@ const Footer = ({ data, customClass, t }) => {
             <div className="links mt-4 mt-lg-0">
               <h3>{t('footer:contact_info')}</h3>
               <div className="d-flex flex-column ">
-                <Link href={location_url}>
+                <Link href={contact_us?.location_url}>
                   <a target="_blank" rel="noopener noreferrer nofollow">
                     <i className="fas fa-map-marker-alt mr-1" />{' '}
-                    {location[language]}
+                    {contact_us?.location[locale] || ''}
                   </a>
                 </Link>
-                <a target="_blank" href={`tel:${contact_phone}`}>
+                <a target="_blank" href={`tel:${contact_us?.contact_phone}`}>
                   <i className="fas fa-phone-alt mr-1" />{' '}
-                  {contact_phone?.split(' ').join('')}
+                  {contact_us?.contact_phone?.split(' ').join('')}
                 </a>
-                <a target="_blank" href={`mailto:${contact_email}`}>
-                  <i className="fas fa-envelope mr-1" /> {contact_email}
+                <a target="_blank" href={`mailto:${contact_us?.contact_email}`}>
+                  <i className="fas fa-envelope mr-1" /> {contact_us?.contact_email}
                 </a>
               </div>
             </div>
@@ -146,8 +145,5 @@ const Footer = ({ data, customClass, t }) => {
     </div>
   );
 };
-Footer.getInitialProps = async context => ({
-  namespacesRequired: ['common', 'footer']
-});
 
-export default withTranslation('common')(Footer);
+export default Footer;

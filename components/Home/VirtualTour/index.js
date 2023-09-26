@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Link, i18n, withTranslation } from 'root/i18n';
-import { strippedContent } from 'src/utils/helpers';
+import {useTranslation } from 'next-i18next';
 
-const index = ({ data, t }) => {
-  const { language } = i18n;
-
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+const Index = ({ data }) => {
+  const { t } = useTranslation('common');
 
   return (
     <div className="virtual-tour">
@@ -18,7 +11,7 @@ const index = ({ data, t }) => {
         <Row>
           <Col xs={12}>
             <h3 className="section-title">
-              {t('virtual tour of almoosa specialist hospital')}
+              {t('virtual_tour_of_almoosa_specialist_hospital')}
             </h3>
           </Col>
         </Row>
@@ -28,8 +21,8 @@ const index = ({ data, t }) => {
               src="https://almoosahospital.org/virtual-tour/"
               width="100%"
               height="600"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             ></iframe>
           </Col>
         </Row>
@@ -37,7 +30,5 @@ const index = ({ data, t }) => {
     </div>
   );
 };
-index.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(index);
+
+export default Index;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Service from './Service';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 
 const data = [
   {
@@ -47,13 +47,15 @@ const data = [
     url: 'media-center/medical-articles'
   }
 ];
-const Index = ({ t }) => {
+const Index = () => {
+  const { t } = useTranslation(['common','menu']);
+
   return (
     <section className="centers">
       <Container>
         <Row>
           <Col>
-            <h2> {t('menu:media center')} </h2>
+            <h2> {t('menu:media_center')} </h2>
           </Col>
         </Row>
         <Row className="d-flex justify-content-around">
@@ -68,4 +70,4 @@ const Index = ({ t }) => {
   );
 };
 
-export default withTranslation(['common', 'menu'])(Index);
+export default Index;

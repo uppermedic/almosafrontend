@@ -1,10 +1,12 @@
-import React, { useEffect, Fragment } from 'react';
+import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function pay({ data, error }) {
   return <div>sadasd</div>;
 }
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   const https = require('https');
 
   const request = async () => {
@@ -46,6 +48,18 @@ export async function getServerSideProps(context) {
     .then(data => ({ data, error: false }))
     .catch(e => ({ data: false, error: e }));
   return {
-    props: { data: data, error }
+    props: {
+      data: data,
+      error,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

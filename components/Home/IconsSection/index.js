@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { IoCloudDownload, IoCallSharp } from 'react-icons/io5';
 import { BsFillCalendarFill, BsSearch } from 'react-icons/bs';
 import { FaApple } from 'react-icons/fa';
 import { DiAndroid } from 'react-icons/di';
 import { Card, Row, Col, Container } from 'reactstrap';
-import { Link, i18n } from 'root/i18n';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const index = () => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   const data = [
     {
@@ -55,7 +52,7 @@ const index = () => {
                       <span className="icon">
                         <box.icon />
                       </span>
-                      <h4>{language && box.content[language]}</h4>
+                      <h4>{locale && box.content[locale]}</h4>
                     </div>
                   </a>
                 </Link>

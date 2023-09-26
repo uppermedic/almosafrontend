@@ -1,13 +1,16 @@
 import React from 'react';
-import { i18n, withTranslation } from 'root/i18n';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import Content from 'src/components/About/OurHistory';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const History = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data.page?.seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="our-history-page">
@@ -22,7 +25,7 @@ const History = ({ data }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/history');
   if (error) {
     return {
@@ -30,8 +33,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(History);
+export default History;

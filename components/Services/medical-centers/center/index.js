@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { strippedContent } from 'src/utils/helpers';
 import CustomTabs from './CustomTabs';
 import BlockWithTitle from 'src/components/Services/medical-programs/reusable-element';
 import DoctorCard from 'src/components/Services/physician-card';
+import { useRouter } from 'next/router';
 
-const Content = ({ data, sections, seo, t }) => {
+const Content = ({ data, sections, seo }) => {
+  const { t } = useTranslation(['common', 'menu']);
   const [activeTab, setActive] = useState({ id: '0', items: [] });
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   const [currentDoctor, setcurrentDoctor] = useState(
     data.physicians.length > 0 ? data.physicians[0] : []
   );
@@ -37,9 +41,9 @@ const Content = ({ data, sections, seo, t }) => {
       >
         {activeTab.id === 'physicians' ? (
           <>
-            {language && data?.physicians && (
+            {locale && data?.physicians && (
               <div className="physician">
-                <h2>{t('common:our physicians')}</h2>
+                <h2>{t('common:our_physicians')}</h2>
 
                 <Row className="physician-details m-auto">
                   {/*  the comming data will come when create main doctor key and value  */}
@@ -47,28 +51,28 @@ const Content = ({ data, sections, seo, t }) => {
                     <img
                       src={currentDoctor?.image}
                       alt={
-                        language &&
+                        locale &&
                         currentDoctor &&
-                        currentDoctor[language]?.name
+                        currentDoctor[locale]?.name
                       }
                       className="shadow"
                     />
                   </Col>
                   <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 ">
                     <h3 className="physician-name">
-                      {language &&
+                      {locale &&
                         currentDoctor &&
-                        currentDoctor[language]?.name}
+                        currentDoctor[locale]?.name}
                     </h3>
                     <p className="py-2 physician-title">
-                      {language &&
+                      {locale &&
                         currentDoctor &&
-                        currentDoctor[language]?.title}
+                        currentDoctor[locale]?.title}
                     </p>
-                    {language &&
+                    {locale &&
                       currentDoctor &&
-                      currentDoctor[language]?.qualifications &&
-                      currentDoctor[language].qualifications.length > 0 && (
+                      currentDoctor[locale]?.qualifications &&
+                      currentDoctor[locale].qualifications.length > 0 && (
                         <>
                           <h3 className="physician-qualifications">
                             {t('common:qualifications')}
@@ -77,9 +81,9 @@ const Content = ({ data, sections, seo, t }) => {
                           <p>
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: language
+                                __html: locale
                                   ? strippedContent(
-                                      currentDoctor[language].qualifications
+                                      currentDoctor[locale].qualifications
                                     )
                                   : ''
                               }}
@@ -87,10 +91,10 @@ const Content = ({ data, sections, seo, t }) => {
                           </p>
                         </>
                       )}
-                    {language &&
+                    {locale &&
                       currentDoctor &&
-                      currentDoctor[language].current_positions &&
-                      currentDoctor[language].current_positions.length > 0 && (
+                      currentDoctor[locale].current_positions &&
+                      currentDoctor[locale].current_positions.length > 0 && (
                         <>
                           <h3 className="physician-position">
                             {t('common:current_positions')}
@@ -99,9 +103,9 @@ const Content = ({ data, sections, seo, t }) => {
                             <div
                               dangerouslySetInnerHTML={{
                                 __html:
-                                  language && currentDoctor
+                                  locale && currentDoctor
                                     ? strippedContent(
-                                        currentDoctor[language]
+                                        currentDoctor[locale]
                                           .current_positions || ''
                                       )
                                     : ''
@@ -142,14 +146,14 @@ const Content = ({ data, sections, seo, t }) => {
                   return (
                     <Col key={index}>
                       <BlockWithTitle
-                        title={language && item[language].title}
+                        title={locale && item[locale].title}
                         titleBg="#55b047"
                       >
-                        {language && item[language]?.content && (
+                        {locale && item[locale]?.content && (
                           <p>
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: strippedContent(item[language]?.content)
+                                __html: strippedContent(item[locale]?.content)
                               }}
                             />
                           </p>
@@ -164,4 +168,4 @@ const Content = ({ data, sections, seo, t }) => {
     </div>
   );
 };
-export default withTranslation(['common', 'menu'])(Content);
+export default Content;

@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
 import { truncate, strippedContent, removeSpChar } from 'src/utils/helpers.js';
 import Markdown from 'markdown-to-jsx';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function CenterItem({ t, center }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
-
+function CenterItem({ center }) {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
   return (
     <div className="item caro-card">
       <Link
         href={`/${locale}/services/medical-centers/${
-          language &&
-          removeSpChar(String(center[language]?.title)).split(' ').join('-')
+          locale &&
+          removeSpChar(String(center[locale]?.title)).split(' ').join('-')
         }/?id=${center?.id}`}
       >
         <a>
@@ -25,7 +23,7 @@ function CenterItem({ t, center }) {
             <h3>
               <Markdown>
                 {truncate(
-                  strippedContent((language && center[language]?.title) || ' '),
+                  strippedContent((locale && center[locale]?.title) || ' '),
                   20,
                   '......'
                 )}
@@ -36,7 +34,7 @@ function CenterItem({ t, center }) {
                 dangerouslySetInnerHTML={{
                   __html:
                     truncate(
-                      strippedContent(language && center[language]?.excerpt),
+                      strippedContent(locale && center[locale]?.excerpt),
                       70,
                       '......'
                     ) || ' '
@@ -45,8 +43,8 @@ function CenterItem({ t, center }) {
             </p>
             <Link
               href={`/${locale}/services/medical-centers/${
-                language &&
-                removeSpChar(String(center[language]?.title))
+                locale &&
+                removeSpChar(String(center[locale]?.title))
                   .split(' ')
                   .join('-')
               }/?id=${center?.id}`}
@@ -59,7 +57,5 @@ function CenterItem({ t, center }) {
     </div>
   );
 }
-CenterItem.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(CenterItem);
+
+export default CenterItem;

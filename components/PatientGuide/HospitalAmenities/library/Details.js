@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Markdown from 'markdown-to-jsx';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 
-const ReadMore = ({ open, toggle, item, language, t }) => {
+const ReadMore = ({ open, toggle, item, language }) => {
+const { t } = useTranslation('common');
+
   return (
     <div className="read-more-modal">
       <Modal
@@ -28,5 +30,4 @@ const ReadMore = ({ open, toggle, item, language, t }) => {
     </div>
   );
 };
-
-export default withTranslation('common')(ReadMore);
+export default ReadMore;

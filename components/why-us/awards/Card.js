@@ -1,20 +1,25 @@
 import React from 'react';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
-const Card = ({ t, item }) => {
-  const { language } = i18n;
+const Card = ({ item }) => {
+const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <div className="card-item">
       <div>
         <h4 style={{ backgroundColor: item?.color }}>
-          {language ? item[language]?.title : ''}
+          {locale ? item[locale]?.title : ''}
         </h4>
       </div>
       <div className="px-3">
         <p>
           <div
             dangerouslySetInnerHTML={{
-              __html: language ? item[language]?.content : ''
+              __html: locale ? item[locale]?.content : ''
             }}
           />
         </p>
@@ -30,5 +35,4 @@ const Card = ({ t, item }) => {
     </div>
   );
 };
-
-export default withTranslation('common')(Card);
+export default Card;

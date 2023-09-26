@@ -6,12 +6,15 @@ import {
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import SmallGallery from 'src/components/SmallGallery';
-import { i18n, withTranslation } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const TasteOfArt = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="taste_of_art">
@@ -22,9 +25,9 @@ const TasteOfArt = ({ data }) => {
         </div>
       </Hero>
       <PostWithCenterImg
-        title={lang && data.contents[0][lang].title}
+        title={locale && data.contents[0][locale].title}
         color="#67AF5A"
-        paragraphs={[lang && data.contents[0][lang].content]}
+        paragraphs={[locale && data.contents[0][locale].content]}
       />
 
       <SmallGallery
@@ -33,22 +36,22 @@ const TasteOfArt = ({ data }) => {
       />
 
       <PostWithCenterImg
-        title={lang && data.contents[2][lang].title}
+        title={locale && data.contents[2][locale].title}
         color="#1E455C"
-        paragraphs={[lang && data.contents[3][lang].content]}
+        paragraphs={[locale && data.contents[3][locale].content]}
       />
 
       <PostWithRightImg
         theImg={data.contents[2].images[0]}
-        paragraphs={[lang && data.contents[2][lang].content]}
+        paragraphs={[locale && data.contents[2][locale].content]}
       />
     </section>
   );
 };
 
-export default withTranslation('menu')(TasteOfArt);
+export default TasteOfArt;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/community/5');
   if (error) {
     return {
@@ -56,6 +59,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

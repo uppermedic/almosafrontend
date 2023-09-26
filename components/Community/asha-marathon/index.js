@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardImg } from 'reactstrap';
-import { i18n } from 'root/i18n';
 import Markdown from 'markdown-to-jsx';
 import { strippedContent } from 'src/utils/helpers.js';
 import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
 import PostHeading from 'src/components/reusableComponents/PostHeading';
+import { useRouter } from 'next/router';
 
 const index = ({ data }) => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="content-wrapper">
@@ -16,7 +17,7 @@ const index = ({ data }) => {
           <Row>
             <Col>
               <PostHeading
-                title={lang && data[0][lang]?.title}
+                title={locale && data[0][locale]?.title}
                 color="#1E455C"
               />
             </Col>
@@ -26,7 +27,7 @@ const index = ({ data }) => {
               <p>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: lang && strippedContent(data[0][lang]?.content)
+                    __html: locale && strippedContent(data[0][locale]?.content)
                   }}
                 />
               </p>
@@ -56,7 +57,7 @@ const index = ({ data }) => {
               <Col md={4}>
                 <h4>
                   <Markdown>
-                    {(lang && strippedContent(data[1][lang]?.title)) ||
+                    {(locale && strippedContent(data[1][locale]?.title)) ||
                       'No Data'}
                   </Markdown>
                 </h4>
@@ -65,7 +66,7 @@ const index = ({ data }) => {
                 <p className="p-3 py-5">
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: lang && strippedContent(data[1][lang]?.content)
+                      __html: locale && strippedContent(data[1][locale]?.content)
                     }}
                   />
                 </p>
@@ -76,7 +77,7 @@ const index = ({ data }) => {
       )}
       {data[1] && data[2] && (
         <PostWithCenterImg
-          title={lang && data[1][lang].title}
+          title={locale && data[1][locale].title}
           color="#55B047"
           theVideo={data[2].video}
         />

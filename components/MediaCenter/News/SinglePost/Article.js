@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Row, Col } from 'reactstrap';
-import { withTranslation, i18n, Link } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { removeSpChar } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
 
-function Article({ article, originalArticle, related, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+function Article({ article, originalArticle, related }) {
+  const { t } = useTranslation('common');
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <Row>
@@ -39,19 +39,19 @@ function Article({ article, originalArticle, related, t }) {
             <ul>
               {related.map((relLink, idx) => (
                 <li className="py-2" key={idx}>
-                  {language === 'en' ? (
+                  {locale === 'en' ? (
                     <IoIosArrowForward />
                   ) : (
                     <IoIosArrowBack />
                   )}
                   <Link
                     href={`/${locale}/media-center/news/post/${removeSpChar(
-                      String(relLink[language]?.title)
+                      String(relLink[locale]?.title)
                     )
                       .split(' ')
                       .join('-')}/?id=${relLink?.id}`}
                   >
-                    <a>{relLink[language]?.title + ' . '}</a>
+                    <a>{relLink[locale]?.title + ' . '}</a>
                   </Link>
                 </li>
               ))}
@@ -63,7 +63,4 @@ function Article({ article, originalArticle, related, t }) {
   );
 }
 
-Article.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(Article);
+export default Article;

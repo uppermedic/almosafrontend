@@ -5,12 +5,15 @@ import {
 } from 'src/components/reusableComponents/Post';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
-import { i18n } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Cooperation = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="cooperation">
@@ -22,18 +25,18 @@ const Cooperation = ({ data }) => {
       </Hero>
       {data.contents[0] && (
         <PostWithLeftImg
-          title={lang && data.contents[0][lang].title}
+          title={locale && data.contents[0][locale].title}
           color="#55B047"
           theImg={data.contents[0].images[0]}
-          paragraphs={[lang && data.contents[0][lang].content]}
+          paragraphs={[locale && data.contents[0][locale].content]}
         />
       )}
 
       {data.contents[1] && (
         <PostWithCenterImg
-          title={lang && data.contents[1][lang].title}
+          title={locale && data.contents[1][locale].title}
           color="#55B047"
-          paragraphs={[lang && data.contents[1][lang].content]}
+          paragraphs={[locale && data.contents[1][locale].content]}
           theVideo={data.contents[1].video}
         />
       )}
@@ -43,7 +46,7 @@ const Cooperation = ({ data }) => {
 
 export default Cooperation;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let { error, data } = await fetchData('/community/3');
   if (error) {
     return {
@@ -51,6 +54,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

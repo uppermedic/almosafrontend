@@ -8,12 +8,15 @@ import {
 } from 'src/components/reusableComponents/Post';
 import SmallGallery from 'src/components/SmallGallery';
 import { fetchData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
 import { strippedContent } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const LetsLearn = ({ data }) => {
-  const lang = i18n.language;
-  const titleHero = lang && data[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data[locale]?.title;
 
   return (
     <section className="lets_learn_section">
@@ -26,9 +29,9 @@ const LetsLearn = ({ data }) => {
 
       {data?.contents[0] && (
         <PostWithRightImg
-          title={(lang && data?.contents[0][lang]?.title) || ''}
+          title={(locale && data?.contents[0][locale]?.title) || ''}
           color="#1E455C"
-          paragraphs={[(lang && data?.contents[0][lang]?.content) || '']}
+          paragraphs={[(locale && data?.contents[0][locale]?.content) || '']}
           theImg={data?.contents[0]?.images[0]}
         />
       )}
@@ -40,8 +43,8 @@ const LetsLearn = ({ data }) => {
               <div
                 dangerouslySetInnerHTML={{
                   __html:
-                    (lang &&
-                      strippedContent(data?.contents[1][lang]?.content)) ||
+                    (locale &&
+                      strippedContent(data?.contents[1][locale]?.content)) ||
                     ''
                 }}
               />
@@ -66,8 +69,8 @@ const LetsLearn = ({ data }) => {
               <div
                 dangerouslySetInnerHTML={{
                   __html:
-                    (lang &&
-                      strippedContent(data?.contents[3][lang]?.content)) ||
+                    (locale &&
+                      strippedContent(data?.contents[3][locale]?.content)) ||
                     ' '
                 }}
               />
@@ -87,16 +90,16 @@ const LetsLearn = ({ data }) => {
                   </div>
                 </Col>
               )}
-              {data?.contents[4][lang]?.content && (
+              {data?.contents[4][locale]?.content && (
                 <Col>
                   <div className="post-paragraph">
                     <p>
                       <div
                         dangerouslySetInnerHTML={{
                           __html:
-                            (lang &&
+                            (locale &&
                               strippedContent(
-                                data?.contents[4][lang]?.content
+                                data?.contents[4][locale]?.content
                               )) ||
                             ' '
                         }}
@@ -113,10 +116,11 @@ const LetsLearn = ({ data }) => {
       {data?.contents[5] && (
         <PostWithCenterImg
           title={
-            (lang && strippedContent(data?.contents[5][lang]?.title)) || ''
+            (locale && strippedContent(data?.contents[5][locale]?.title)) || ''
           }
           paragraphs={[
-            (lang && strippedContent(data?.contents[5][lang]?.content)) || ''
+            (locale && strippedContent(data?.contents[5][locale]?.content)) ||
+              ''
           ]}
           theImg={data?.contents[5]?.images[0]}
           color="#1E455C"
@@ -128,7 +132,7 @@ const LetsLearn = ({ data }) => {
 
 export default LetsLearn;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/community/2');
   if (error) {
     return {
@@ -136,6 +140,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

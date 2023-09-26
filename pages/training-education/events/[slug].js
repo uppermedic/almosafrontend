@@ -2,17 +2,16 @@ import React, { useEffect } from 'react';
 import EventInfo from 'src/components/training/event-info';
 import Head from 'src/components/layout/head';
 import { fetchData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
 import { removeSpChar } from 'src/utils/helpers';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Event = ({ data }) => {
-  const lang = i18n.language;
   const router = useRouter();
   const { locale } = router;
 
   useEffect(() => {
-    if (lang && locale) {
+    if (locale) {
       router.push(
         `/${locale}/training-education/events/${removeSpChar(
           String(data[locale].title)
@@ -21,7 +20,7 @@ const Event = ({ data }) => {
           .join('-')}/?id=${data.id}`
       );
     }
-  }, [lang, locale]);
+  }, [locale]);
 
   return (
     <div>
@@ -34,6 +33,7 @@ const Event = ({ data }) => {
 export default Event;
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   if (context.query.id) {
     let { error, data } = await fetchData(
       `/education/single/${context.query.id}`
@@ -44,7 +44,18 @@ export async function getServerSideProps(context) {
       };
     }
     return {
-      props: { data }
+      props: {
+        data,
+        ...(await serverSideTranslations(locale, [
+          'common',
+          'about',
+          'news',
+          'menu',
+          'header',
+          'footer',
+          'patient_guide'
+        ]))
+      }
     };
   } else {
     return {

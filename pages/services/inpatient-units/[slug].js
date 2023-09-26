@@ -2,17 +2,16 @@ import React, { useEffect } from 'react';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/Services/inpatient/Single';
 import { fetchData } from 'src/store/Request.js';
-import { i18n } from 'root/i18n';
 import { useRouter } from 'next/router';
 import { removeSpChar } from 'src/utils/helpers';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const IntensiveCare = ({ data }) => {
-  const lang = i18n.language;
   const router = useRouter();
   const { locale } = router;
 
   useEffect(() => {
-    if (lang && locale) {
+    if (locale) {
       router.push(
         `/${locale}/services/inpatient-units/${removeSpChar(
           String(data.seo[locale].title)
@@ -21,7 +20,7 @@ const IntensiveCare = ({ data }) => {
           .join('-')}/?id=${data.id}` || '#'
       );
     }
-  }, [lang, locale, data]);
+  }, [locale, data]);
 
   return (
     <div className="intensive-care mb-50">
@@ -37,6 +36,7 @@ const IntensiveCare = ({ data }) => {
 };
 
 export async function getServerSideProps(context) {
+  const locale = context.locale;
   if (context.query.id) {
     let { error, data } = await fetchData(
       `/services/single/${context.query.id}`
@@ -47,7 +47,18 @@ export async function getServerSideProps(context) {
       };
     }
     return {
-      props: { data }
+      props: {
+        data,
+        ...(await serverSideTranslations(locale, [
+          'common',
+          'about',
+          'news',
+          'menu',
+          'header',
+          'footer',
+          'patient_guide'
+        ]))
+      }
     };
   } else {
     return {

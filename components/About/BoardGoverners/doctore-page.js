@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Link, i18n, withTranslation } from 'root/i18n';
 import {
-  FaFacebookF,
   FaTwitter,
   FaLinkedin,
   FaInstagramSquare
 } from 'react-icons/fa';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const index = ({ doctorData, t }) => {
-  const { language } = i18n;
+const Index = ({ doctorData }) => {
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="our-doctors">
@@ -20,7 +20,7 @@ const index = ({ doctorData, t }) => {
             <img
               src={doctorData.image[0]}
               alt={
-                language && doctorData[language] && doctorData[language]?.name
+                locale && doctorData[locale] && doctorData[locale]?.name
               }
               className="shadow governer-doctor"
             />
@@ -46,16 +46,16 @@ const index = ({ doctorData, t }) => {
           </Col>
           <Col lg={{ size: 8 }} className="pl-sm-5 pr-4">
             <h3 className="doctor-name">
-              {language && doctorData[language] && doctorData[language]?.name}
+              {locale && doctorData[locale] && doctorData[locale]?.name}
             </h3>
             <p className="py-2 doctor-title">
-              {language && doctorData[language] && doctorData[language]?.title}
+              {locale && doctorData[locale] && doctorData[locale]?.title}
             </p>
-            {language && doctorData[language]?.content?.length > 0 && (
+            {locale && doctorData[locale]?.content?.length > 0 && (
               <p className="doctor-paragraph">
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: doctorData[language]?.content
+                    __html: doctorData[locale]?.content
                   }}
                 />
               </p>
@@ -67,4 +67,4 @@ const index = ({ doctorData, t }) => {
   );
 };
 
-export default withTranslation(['common', 'menu'])(index);
+export default Index;

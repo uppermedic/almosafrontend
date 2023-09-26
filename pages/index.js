@@ -1,5 +1,4 @@
 import React from 'react';
-import { i18n, withTranslation } from 'root/i18n';
 import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
 import Centers from 'src/components/Home/Centers';
@@ -11,24 +10,25 @@ import IconsSection from 'src/components/Home/IconsSection';
 import EmergyncyCall from 'src/components/Home/EmergyncyCall';
 import News from 'src/components/Home/News';
 import VirtualTour from 'components/Home/VirtualTour';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const Homepage = props => {
-  if (props.data) {
+const Homepage = ({data}) => {
+  if (data) {
     return (
       <div className="home">
-        <Head data={props.data.page.seo}></Head>
-        <Carousel data={props.data.sliders} />
+        <Head data={data.page.seo}></Head>
+        <Carousel data={data.sliders} />
         <IconsSection />
-        <WhyMosa data={props.data.content[1]} />
+        <WhyMosa data={data.content[1]} />
         <VirtualTour />
-        <Centers data={props.data.home_services} />
-        <Testimonial data={props.data.testimonials} />
+        <Centers data={data.home_services} />
+        <Testimonial data={data.testimonials} />
         <Statistics
-          hospital={props.data?.hospital || ''}
-          emergency_phone={props.data?.emergency_phone || ''}
+          hospital={data?.hospital || ''}
+          emergency_phone={data?.emergency_phone || ''}
         />
-        <News data={props.data.blogs} />
-        <EmergyncyCall emergency_phone={props.data?.emergency_phone || ''} />
+        <News data={data.blogs} />
+        <EmergyncyCall emergency_phone={data?.emergency_phone || ''} />
       </div>
     );
   } else {
@@ -36,16 +36,28 @@ const Homepage = props => {
   }
 };
 
-export async function getServerSideProps(context) {
-  let { error, data } = await fetchData('/home');
+export async function getStaticProps({locale}) {
+  
+  const { error, data } = await fetchData('/home');
   if (error) {
     return {
       notFound: true
     };
   }
+
   return {
-    props: { data, namespacesRequired: ['common', 'menu', 'header'] }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ])),
+    },
   };
 }
-
-export default withTranslation('common')(Homepage);
+export default Homepage

@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
 import { Row, Col, Card } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
-import Markdown from 'markdown-to-jsx';
+import { useTranslation } from 'next-i18next';
 import { truncate, strippedContent } from 'src/utils/helpers.js';
+import { useRouter } from 'next/router';
 
-const index = ({ t, sectionData }) => {
-  const lang = i18n.language;
+const Index = ({ sectionData }) => {
+  const { t } = useTranslation(['common', 'menu']);
+  const router = useRouter();
+  const { locale } = router;
 
   const [readmore, setReadmore] = useState(false);
   return (
     <section className="life-support">
-      {/* <Row>
-        <Col>
-          <h2 className="section-title">
-            {lang == 'en' ? 'Life Support Center ' : 'مركز دعم الحياة المتقدم'}
-          </h2>
-        </Col>
-      </Row> */}
       <Row>
         <Col>
           <div className="card-contend">
@@ -30,17 +25,17 @@ const index = ({ t, sectionData }) => {
                 </div>
                 <Row>
                   <Col md="8">
-                    <h4>{lang && sectionData[0][lang]?.title}</h4>
+                    <h4>{locale && sectionData[0][locale]?.title}</h4>
 
-                    {lang && (
+                    {locale && (
                       <p>
                         <div
                           dangerouslySetInnerHTML={{
                             __html: readmore
-                              ? sectionData[0][lang]?.content
+                              ? sectionData[0][locale]?.content
                               : truncate(
                                   strippedContent(
-                                    sectionData[0][lang]?.content
+                                    sectionData[0][locale]?.content
                                   ),
                                   600,
                                   '......'
@@ -79,13 +74,13 @@ const index = ({ t, sectionData }) => {
                 </div>
                 <Row>
                   <Col>
-                    <h4>{lang && sectionData[1][lang]?.title}</h4>
+                    <h4>{locale && sectionData[1][locale]?.title}</h4>
 
-                    {lang && (
+                    {locale && (
                       <p>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: sectionData[1][lang]?.content || ' '
+                            __html: sectionData[1][locale]?.content || ' '
                           }}
                         />
                       </p>
@@ -101,4 +96,4 @@ const index = ({ t, sectionData }) => {
   );
 };
 
-export default withTranslation('common')(index);
+export default Index;

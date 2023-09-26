@@ -1,26 +1,27 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const SharedPost = ({ data, cutomImgStyle }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div>
       <div className="page-heading">
         <div className="container">
-          <h1>{language && data.seo[language].title}</h1>
+          <h1>{locale && data.seo[locale].title}</h1>
         </div>
       </div>
       <section className="hair-post">
         <Container>
           <Row xs="1" xl="2">
             <Col xl="8">
-              {language && data.seo[language]?.content && (
+              {locale && data.seo[locale]?.content && (
                 <p>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: data.seo[language]?.content
+                      __html: data.seo[locale]?.content
                     }}
                   />
                 </p>

@@ -3,6 +3,7 @@ import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/HakeemMagazine';
 import { fetchData } from 'src/store/Request.js';
 import { serialize } from 'src/utils/helpers';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function index({ data }) {
   return (
@@ -14,7 +15,7 @@ export default function index({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const { query } = context;
+  const { query , locale } = context;
   let path = `/media/magazine?${serialize(query)}`;
   let { error, data } = await fetchData(path);
   if (error) {
@@ -23,6 +24,17 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }

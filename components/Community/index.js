@@ -1,17 +1,19 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n } from 'root/i18n';
 import Service from './Service';
+import { useRouter } from 'next/router';
 
 export default function index({ data }) {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <section className="content-wrapper">
       <Container>
         <Row>
           <Col>
             <h2 className="post_title">
-              {(lang == 'en' && 'Initiatives') || 'المبادرات'}
+              {(locale == 'en' && 'Initiatives') || 'المبادرات'}
             </h2>
           </Col>
         </Row>

@@ -1,13 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Item from './Item';
-import { withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import ReactPaginate from 'react-paginate';
 import NextFC from 'src/components/layout/ReactPaginate/NextFC';
 import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
-const Index = ({ data, t }) => {
+const Index = ({ data }) => {
+  const { t } = useTranslation(['common','menu']);
+
   const router = useRouter();
   const { locale } = router;
   const { page } = router?.query;
@@ -23,7 +25,7 @@ const Index = ({ data, t }) => {
       <Container>
         <Row className="headingSection pb-2 mx-2">
           <Col lg={6} className="px-1">
-            <span>{t('menu:hakeem magazine')}</span>
+            <span>{t('menu:hakeem_magazine')}</span>
           </Col>
         </Row>
         <Row className="mx-1">
@@ -55,4 +57,4 @@ const Index = ({ data, t }) => {
     </section>
   );
 };
-export default withTranslation(['common', 'menu'])(Index);
+export default Index;

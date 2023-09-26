@@ -4,7 +4,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: true
 });
 const optimizedImages = require('next-optimized-images');
-const { nextI18NextRewrites } = require('next-i18next/rewrites');
+// const { nextI18NextRewrites } = require('next-i18next/rewrites');
+const { i18n } = require('./next-i18next.config');
 const localeSubpaths = {};
 
 /* redirect permanent links */
@@ -5543,7 +5544,7 @@ const links_permanent = [
 ];
 
 /* redirect temporary links */
-links_temporary = [
+const links_temporary = [
   {
     source: '/ar/a-29-year-old-with-a-mysterious-disease/',
     destination: '/ar/'
@@ -6559,21 +6560,22 @@ module.exports = {
   minify: true,
   compress: true,
   trailingSlash: true,
-  i18n: {
-    localeDetection: false,
-    defaultLocale: 'ar',
-    locales: ['ar', 'en']
-  },
+  i18n,
+  // i18n: nextI18next.config({
+  //   localeDetection: false,
+  //   defaultLocale: 'ar',
+  //   locales: ['ar', 'en']
+  // }),
   async redirects() {
     return redLinks;
   },
   images: {
     domains: ['159.65.230.116']
   },
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths
-  },
+  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  // publicRuntimeConfig: {
+  //   localeSubpaths
+  // },
   webpack: config => {
     config.resolve.alias['root'] = path.join(__dirname);
     config.resolve.alias['src'] = path.join(__dirname);

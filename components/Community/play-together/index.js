@@ -1,26 +1,27 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n } from 'root/i18n';
 import { PostWithCenterImg } from 'src/components/reusableComponents/Post';
+import { useRouter } from 'next/router';
 
 export default function index({ data }) {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="content-wrapper">
       <Container>
         <Row>
           <Col>
-            <h2>{lang && data?.contents[0][lang]?.title}</h2>
+            <h2>{locale && data?.contents[0][locale]?.title}</h2>
           </Col>
         </Row>
-        {data?.contents[0][lang]?.content && (
+        {data?.contents[0][locale]?.content && (
           <Row className="d-flex justify-content-between align-items-center section-one no-gutters">
             <Col xs={12} lg={6}>
               <p>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: (lang && data?.contents[0][lang]?.content) || ''
+                    __html: (locale && data?.contents[0][locale]?.content) || ''
                   }}
                 />
               </p>
@@ -31,10 +32,10 @@ export default function index({ data }) {
           </Row>
         )}
 
-        {lang && data?.contents[1][lang]?.content && (
+        {locale && data?.contents[1][locale]?.content && (
           <div className="section-two">
             <PostWithCenterImg
-              paragraphs={[lang && data?.contents[1][lang]?.content]}
+              paragraphs={[locale && data?.contents[1][locale]?.content]}
             />
             <p></p>
           </div>

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Modal, ModalBody } from 'reactstrap';
-import { Link, i18n } from 'root/i18n';
+import Link from 'next/link';
 import { MdPayment } from 'react-icons/md';
+import { useRouter } from 'next/router';
 
 const RegistrationPopup = ({ open, toggle }) => {
-  const lang = i18n.language;
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <div className="read-more-modal">
       <Modal
@@ -19,13 +22,13 @@ const RegistrationPopup = ({ open, toggle }) => {
           <div className="content">
             <MdPayment />
             <p>
-              {(lang == 'en' && 'Now You will be directed to') ||
+              {(locale == 'en' && 'Now You will be directed to') ||
                 'الآن سيتم توجيهك إلى'}
             </p>
             <Link href="#">
               <a>
                 <span className="pay-getway-link">
-                  {(lang == 'en' && 'The payment gateway') || 'بوابة الدفع '}
+                  {(locale == 'en' && 'The payment gateway') || 'بوابة الدفع '}
                 </span>
               </a>
             </Link>

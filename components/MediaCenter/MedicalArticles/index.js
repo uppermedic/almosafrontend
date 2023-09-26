@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import {  useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import ClassNames from 'classnames';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { strippedContent, truncate, removeSpChar } from 'src/utils/helpers';
@@ -10,17 +11,15 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 import PostCard from './PostCard';
 
-const Index = ({ data, latest, tags, categories, t }) => {
+const Index = ({ data, latest, tags, categories }) => {
+  const { t } = useTranslation(['common','menu']);
+
   const router = useRouter();
-  const { page } = router?.query;
+  const { locale , query} = router;
+  const { page } = query;
 
   const [controllerOpen, setControllerOpen] = useState(false);
   const { last_page } = data;
-  const [locale, setlocale] = useState('');
-  const { language } = i18n;
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   const handlePageClick = ({ selected }) => {
     router.push(
@@ -108,9 +107,9 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     {categories.map(cat => (
                       <li key={cat.id}>
                         <Link
-                          href={`/${locale}/media-center/filter-results/?cats=${cat[language].category_name}`}
+                          href={`/${locale}/media-center/filter-results/?cats=${cat[locale].category_name}`}
                         >
-                          <a>{cat[language].category_name}</a>
+                          <a>{cat[locale].category_name}</a>
                         </Link>
                       </li>
                     ))}
@@ -131,7 +130,7 @@ const Index = ({ data, latest, tags, categories, t }) => {
                     <li key={String(post.id)}>
                       <Link
                         href={`/${locale}/media-center/medical-articles/post/${removeSpChar(
-                          String(language ? post[language]?.title : '')
+                          String(locale ? post[locale]?.title : '')
                         )
                           .split(' ')
                           .join('-')}/?id=${post.id}`}
@@ -140,17 +139,17 @@ const Index = ({ data, latest, tags, categories, t }) => {
                           <img src={post.image} alt="medical-articles" />
                           <div>
                             <h5>
-                              {post[language]
-                                ? truncate(post[language]?.title, 30, '...')
+                              {post[locale]
+                                ? truncate(post[locale]?.title, 30, '...')
                                 : ''}
                             </h5>
                             <p>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: post[language]
+                                  __html: post[locale]
                                     ? truncate(
                                         strippedContent(
-                                          post[language]?.content
+                                          post[locale]?.content
                                         ),
                                         120,
                                         '...'
@@ -203,7 +202,4 @@ const Index = ({ data, latest, tags, categories, t }) => {
     </section>
   );
 };
-Index.getInitialProps = async context => ({
-  namespacesRequired: ['common', 'menu']
-});
-export default withTranslation('common')(Index);
+export default Index;

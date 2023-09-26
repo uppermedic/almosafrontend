@@ -1,19 +1,13 @@
 import React from 'react';
 import { Row, Col, Card } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
 
-const index = ({ sectionData }) => {
-  const lang = i18n.language;
+const Index = ({ sectionData }) => {
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <section className="research-center">
-      {/* <Row>
-        <Col xs={12}>
-          <h2 className="section-title">
-            {lang == 'en' ? 'Research Center (RC)' : 'مركز الأبحاث (RC)'}
-          </h2>
-        </Col>
-      </Row> */}
       <Row>
         <Col xs={12}>
           <div
@@ -21,11 +15,11 @@ const index = ({ sectionData }) => {
             style={{ backgroundImage: `url(${sectionData[0].image[0]})` }}
           >
             <Card>
-              {lang && (
+              {locale && (
                 <p>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: sectionData[0][lang]?.content || ' '
+                      __html: sectionData[0][locale]?.content || ' '
                     }}
                   />
                 </p>
@@ -41,11 +35,11 @@ const index = ({ sectionData }) => {
       </Row>
       <Row>
         <Col xs={12}>
-          {lang && (
+          {locale && (
             <p>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: sectionData[1][lang]?.content || ' '
+                  __html: sectionData[1][locale]?.content || ' '
                 }}
               />
             </p>
@@ -56,4 +50,4 @@ const index = ({ sectionData }) => {
   );
 };
 
-export default withTranslation('common')(index);
+export default Index;

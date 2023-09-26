@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/Services/support-services/operation-rooms';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const OperationRooms = () => {
   const seo = {
@@ -13,7 +14,7 @@ const OperationRooms = () => {
     en: {
       title: 'Operation Rooms',
       meta_description: 'meta',
-      meta_keywords: '',
+      meta_keywords: '', 
       url: ''
     }
   };
@@ -23,6 +24,22 @@ const OperationRooms = () => {
       <Content />
     </div>
   );
-};
+}; 
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
+  };
+}
 
 export default OperationRooms;

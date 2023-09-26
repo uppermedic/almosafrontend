@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
-import { withRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter, withRouter } from 'next/router';
 
 import {
   Form,
@@ -17,16 +18,20 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { employee_portal, volunteering, join_us } from 'src/constants/Data';
 import LangNav from './LangIconNav';
 
-const TopNav = ({ t, router }) => {
+const TopNav = () => {
+  const { t } = useTranslation('header');
+
+  const router=useRouter()
+  const { locale , query} = router;
+
   const [search, setSearch] = useState('');
   useEffect(() => {
-    if (router?.query?.search) {
-      setSearch(router.query.search);
+    if (query?.search) {
+      setSearch(query.search);
     } else {
       setSearch('');
     }
-  }, [router?.query?.search]);
-  const { locale } = router;
+  }, [query?.search]);
   return (
     <div className="top-nav">
       <Container>
@@ -170,7 +175,4 @@ const TopNav = ({ t, router }) => {
     </div>
   );
 };
-TopNav.getInitialProps = async () => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(withRouter(TopNav));
+export default (withRouter(TopNav));

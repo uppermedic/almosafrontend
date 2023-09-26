@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, withTranslation, Link } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const PatientFeatures = ({ item, withShapes, withBg, withTwoBg, t }) => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+const PatientFeatures = ({ item, withShapes, withBg, withTwoBg }) => {
+const { t } = useTranslation(['patient_guide','menu']);
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="guide-card-item">
@@ -63,4 +63,4 @@ const SVG = (
   </svg>
 );
 
-export default withTranslation(['menu', 'patient_guide'])(PatientFeatures);
+export default PatientFeatures;

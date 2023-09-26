@@ -3,11 +3,14 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import MediaCenter from 'src/components/MediaCenter';
 import { fetchData } from 'src/store/Request.js';
-import { withTranslation, i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const Media = ({ data, t }) => {
-  const { language } = i18n;
-  const titleHero = language && data.page.seo[language]?.title;
+const Media = ({ data }) => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page.seo[locale]?.title;
   return (
     <div className="media-center">
       <Head data={data.page.seo}></Head>
@@ -21,7 +24,7 @@ const Media = ({ data, t }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/media');
   if (error) {
     return {
@@ -29,8 +32,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(Media);
+export default Media;

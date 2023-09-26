@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Container } from 'reactstrap';
-export const BreadCrumb = ({ t }) => {
+
+export const BreadCrumb = () => {
+  const { t } = useTranslation(['common', 'menu', 'header']);
+
   const router = useRouter();
-  const pathArr = router?.pathname?.split('/');
-  const isHome = router?.pathname == '/';
+  const { locale, pathname , query } = router;
+
+  const pathArr = pathname?.split('/');
+  const isHome = pathname == '/';
 
   //remove home
   pathArr.shift();
   const current = pathArr.pop();
-
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   // function return the all pthnames routes
 
@@ -55,7 +54,7 @@ export const BreadCrumb = ({ t }) => {
                       <span>
                         <Link href={`/${locale}` + `${getTheRightPath(item)}`}>
                           <a>
-                            {t(`menu:${String(item).split('-').join(' ')}`)}
+                            {t(`menu:${String(item).split('-').join('_')}`)}
                           </a>
                         </Link>
                       </span>
@@ -64,9 +63,9 @@ export const BreadCrumb = ({ t }) => {
                   );
                 })}
                 <span className="active">
-                  {router.query.hasOwnProperty('slug')
-                    ? router?.query?.slug.split('-').join(' ')
-                    : t(`menu:${String(current).split('-').join(' ')}`)}
+                  {query.hasOwnProperty('slug')
+                    ? query?.slug.split('-').join(' ')
+                    : t(`menu:${String(current).split('-').join('_')}`)}
                 </span>
               </span>
             )}
@@ -77,7 +76,4 @@ export const BreadCrumb = ({ t }) => {
   );
 };
 
-BreadCrumb.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'menu', 'header']
-});
-export default withTranslation('common')(BreadCrumb);
+export default BreadCrumb;

@@ -1,17 +1,17 @@
 import React, { useState, useRef } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { i18n, withTranslation } from 'root/i18n';
+// import ReCAPTCHA from 'react-google-recaptcha';
+import { useTranslation } from 'next-i18next';
 import Swal from 'sweetalert2';
 import { postData } from 'src/store/Request';
 import { useRouter } from 'next/router';
 
 const TEST_SITE_KEY = '6LeVVRIaAAAAAC6mKFfCOeZKUX-vv9hFQlwIVDbj';
-const index = ({ data, t }) => {
+const Index = ({ data}) => {
   const router = useRouter();
-  const lang = i18n.language;
   const { locale } = router;
+  const { t } = useTranslation('common');
 
   const [verified, setVerified] = useState(false);
   let _reCaptchaRef = useRef(null);
@@ -24,7 +24,7 @@ const index = ({ data, t }) => {
       .then(({ payload }) => {
         Swal.fire(
           t('successfully'),
-          (lang == 'en' && 'message successfully sent') ||
+          (locale == 'en' && 'message successfully sent') ||
             'تم ارسال الرسالة بنجاح ',
           'success'
         ).then(result => {
@@ -51,12 +51,12 @@ const index = ({ data, t }) => {
       <Container>
         <Row>
           <Col>
-            <h2>{lang && data.page.seo[lang].title}</h2>
+            <h2>{locale && data.page.seo[locale].title}</h2>
           </Col>
         </Row>
         <Row className="top-section px-3 py-5">
           <Col lg={6}>
-            {lang == 'en' && (
+            {locale == 'en' && (
               <p>
                 <div
                   dangerouslySetInnerHTML={{
@@ -66,7 +66,7 @@ const index = ({ data, t }) => {
               </p>
             )}
 
-            {lang == 'ar' && (
+            {locale == 'ar' && (
               <p>
                 <div
                   dangerouslySetInnerHTML={{
@@ -85,49 +85,49 @@ const index = ({ data, t }) => {
         </Row>
         <Row className="contact-form m-0">
           <Col md={6} className="form">
-            <h3>{(lang == 'en' && 'Contact Form') || 'نموذج الاتصال '}</h3>
+            <h3>{(locale == 'en' && 'Contact Form') || 'نموذج الاتصال '}</h3>
             <AvForm onValidSubmit={handleValidSubmit}>
               <AvField
                 name="name"
-                placeholder={(lang == 'en' && 'Name') || 'الإسم'}
+                placeholder={(locale == 'en' && 'Name') || 'الإسم'}
                 validate={{
                   required: {
                     value: true,
-                    errorMessage: (lang == 'en' && 'Enter Name') || 'ادخل الاسم'
+                    errorMessage: (locale == 'en' && 'Enter Name') || 'ادخل الاسم'
                   }
                 }}
               />
               <AvField
                 name="email"
                 type="email"
-                placeholder={(lang == 'en' && 'Email') || 'إيميل'}
+                placeholder={(locale == 'en' && 'Email') || 'إيميل'}
                 validate={{
                   required: {
                     value: true,
                     errorMessage:
-                      (lang == 'en' && 'Enter Email') || 'ادخل الايميل'
+                      (locale == 'en' && 'Enter Email') || 'ادخل الايميل'
                   }
                 }}
               />
               <AvField
                 name="subject"
-                placeholder={(lang == 'en' && 'Subject') || 'موضوع'}
+                placeholder={(locale == 'en' && 'Subject') || 'موضوع'}
                 validate={{
                   required: {
                     value: true,
                     errorMessage:
-                      (lang == 'en' && 'Enter Subject') || 'ادخل موضوع'
+                      (locale == 'en' && 'Enter Subject') || 'ادخل موضوع'
                   }
                 }}
               />
               <AvField
                 name="message"
-                placeholder={(lang == 'en' && 'Message') || 'الرسالة'}
+                placeholder={(locale == 'en' && 'Message') || 'الرسالة'}
                 validate={{
                   required: {
                     value: true,
                     errorMessage:
-                      (lang == 'en' && 'Enter Message') || 'ادخل الرسالة'
+                      (locale == 'en' && 'Enter Message') || 'ادخل الرسالة'
                   }
                 }}
                 rows={5}
@@ -140,38 +140,38 @@ const index = ({ data, t }) => {
           </Col>
           <Col md={5} className="info offset-md-1">
             <h4 className="underline">
-              {(lang == 'en' && 'Hospital Address') || 'عنوان المستشفى'}
+              {(locale == 'en' && 'Hospital Address') || 'عنوان المستشفى'}
             </h4>
             <p>
-              {(lang == 'en' &&
+              {(locale == 'en' &&
                 'Almoosa Specialist Hospital is located at the following address') ||
                 'يقع مستشفى الموسى التخصصي في العنوان التالي '}
               :
             </p>
             <h4 className="underline">
-              {(lang == 'en' && 'Location') || 'موقع'}:
+              {(locale == 'en' && 'Location') || 'موقع'}:
             </h4>
             <p>
-              {(lang == 'en' && 'Dharan St | Alfaisal District | Al-Ahsa') ||
+              {(locale == 'en' && 'Dharan St | Alfaisal District | Al-Ahsa') ||
                 'شارع الظهران | حي الفيصل | الأحساء'}
             </p>
-            <h4>{(lang == 'en' && 'P.O. Box') || 'صندوق مكتب البريد'}:</h4>
+            <h4>{(locale == 'en' && 'P.O. Box') || 'صندوق مكتب البريد'}:</h4>
             <p>
-              {(lang == 'en' && '5098 Eastern Province | Saudi Arabia') ||
+              {(locale == 'en' && '5098 Eastern Province | Saudi Arabia') ||
                 '5098 المنطقة الشرقية | المملكة العربية السعودية'}
             </p>
             <h4 className="underline">
-              {(lang == 'en' && 'Telephone') || 'هاتف'}:
+              {(locale == 'en' && 'Telephone') || 'هاتف'}:
             </h4>
             <p>
               <a href="tel:+966-13-5369666">+966-13-5369666</a>
             </p>
-            <h4 className="underline">{(lang == 'en' && 'Fax') || 'فاكس'}:</h4>
+            <h4 className="underline">{(locale == 'en' && 'Fax') || 'فاكس'}:</h4>
             <p>
               <a href="tel:+966-13-5369600">+966-13-5369600</a>
             </p>
             <h4 className="underline">
-              {(lang == 'en' && 'Email') || 'إيميل'}:
+              {(locale == 'en' && 'Email') || 'إيميل'}:
             </h4>
             <p>
               <a target="_blank" href="mailto:info@almoosahospital.com.sa">
@@ -182,7 +182,7 @@ const index = ({ data, t }) => {
         </Row>
       </Container>
     </section>
-  );
+  ); 
 };
 
-export default withTranslation('common')(index);
+export default Index;

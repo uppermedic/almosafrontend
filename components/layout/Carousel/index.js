@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import CarouselContent from 'src/components/Home/CarouselContent';
-import { i18n, withTranslation } from 'root/i18n';
 
 class ReactSlickDemo extends Component {
   render() {
@@ -18,7 +17,6 @@ class ReactSlickDemo extends Component {
       ]
     };
 
-    const { language } = i18n;
     const { data } = this.props;
     return (
       <div className="carousel">

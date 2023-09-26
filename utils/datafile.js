@@ -5,15 +5,15 @@ export const dataAboutTabs = [
   },
   {
     path: 'about/vision-mission',
-    label: 'vision and mission'
+    label: 'vision_and_mission' 
   },
   {
     path: 'about/values',
-    label: 'core values'
+    label: 'core_values'
   },
   {
     path: 'about/strategic-priorities',
-    label: 'strategic priorities'
+    label: 'strategic_priorities'
   },
   {
     path: 'about/awards',
@@ -25,19 +25,19 @@ export const dataAboutTabs = [
   },
   {
     path: 'about/board-directors-and-executive-team',
-    label: 'board governers and leadership team'
+    label: 'board_governers_and_leadership_team'
   },
   {
     path: 'about/fast-facts',
-    label: 'fast facts'
+    label: 'fast_facts'
   },
   {
     path: 'about/almoosa-medical-group',
-    label: 'almoosa medical group'
+    label: 'almoosa_medical_group'
   },
   {
     path: 'about/annual-report',
-    label: 'annual report'
+    label: 'annual_report'
   }
 ];
 
@@ -52,7 +52,7 @@ export const dataACademicTabs = [
   },
   {
     path: 'training-education/academic-affairs',
-    label: 'academic affairs'
+    label: 'academic_affairs'
   }
 ];
 

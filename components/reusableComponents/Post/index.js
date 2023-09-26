@@ -3,8 +3,8 @@ import { Container, Row, Col } from 'reactstrap';
 import PostHeading from '../PostHeading';
 import Markdown from 'markdown-to-jsx';
 import { strippedContent, getEmbedVid } from 'src/utils/helpers.js';
-import { i18n } from 'root/i18n';
 import CardItem from './CardItem';
+import { useRouter } from 'next/router';
 
 const PostContent = ({ title, color, paragraphs, theVideo }) => {
   return (
@@ -42,8 +42,8 @@ const PostContent = ({ title, color, paragraphs, theVideo }) => {
                         width="100%"
                         height="100%"
                         src={getEmbedVid(theVideo)}
-                        frameborder="0"
-                        allowfullscreen
+                        frameBorder="0"
+                        allowFullScreen
                       ></iframe>
                     </div>
                   </div>
@@ -58,7 +58,8 @@ const PostContent = ({ title, color, paragraphs, theVideo }) => {
 };
 
 const PostContentWithCards = ({ title, color, paragraphs, items }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="post_with_title">
@@ -91,8 +92,8 @@ const PostContentWithCards = ({ title, color, paragraphs, items }) => {
                 items?.map((item, index) => (
                   <Col key={index}>
                     <CardItem
-                      name={language && item[language]?.name}
-                      title={language && item[language]?.title}
+                      name={locale && item[locale]?.name}
+                      title={locale && item[locale]?.title}
                       image={item?.image[0]}
                       link={item?.url}
                     />
@@ -159,8 +160,8 @@ const PostWithRightImg = ({ title, color, theImg, paragraphs, theVideo }) => {
                         width="100%"
                         height="100%"
                         src={getEmbedVid(theVideo)}
-                        frameborder="0"
-                        allowfullscreen
+                        frameBorder="0"
+                        allowFullScreen
                       ></iframe>
                     </div>
                   </div>
@@ -266,8 +267,8 @@ const PostWithCenterImg = ({
                   width="100%"
                   height="100%"
                   src={getEmbedVid(theVideo)}
-                  frameborder="0"
-                  allowfullscreen
+                  frameBorder="0"
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>

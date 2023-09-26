@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import BoardGoverners from 'src/components/About/BoardGoverners';
-import { withTranslation, i18n } from 'root/i18n';
 import { getCategories } from 'src/store/actions';
 import { connect } from 'react-redux';
 import { GovernersData, TeamData } from 'utils/datafile';
 import { fetchData } from 'src/store/Request.js';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function BordDirectors({ data }) {
-  const lang = i18n.language;
-  const titleHero = lang && data.page?.seo[lang]?.title;
+  const router = useRouter();
+  const { locale } = router;
+
+  const titleHero = locale && data.page?.seo[locale]?.title;
 
   return (
     <div className="almoosa-doctors">
@@ -29,7 +32,7 @@ function BordDirectors({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let { error, data } = await fetchData('/page/18');
   if (error) {
     return {
@@ -37,10 +40,19 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 
-export default withTranslation(['menu'])(
-  connect(null, { getCategories })(BordDirectors)
-);
+export default connect(null, { getCategories })(BordDirectors);

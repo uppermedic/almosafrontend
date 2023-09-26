@@ -18,13 +18,12 @@
   "new_search": "بحث جديد",
   "no_results": "لا يوجد نتائج ",
   "search_news": "بحث في الأخبار ...",
-  "medical articles": "المقالات الطبية",
+  "medical_articles": "المقالات الطبية",
   "search_medical-articles": "بحث في المقالات الطبية ...",
   "categories": "تصنيفات",
   "popular_posts": "الأكثر قراءة",
   "tags": "الوسوم",
-  "search_results": "نتائج البحث",
-  "search result": "نتائج البحث",
+  "search_result": "نتائج البحث",
   "doctor": "طبيب",
   "patient": "مريض",
   "single_bed": "سرير فردي",
@@ -43,7 +42,7 @@
   "register": "سجّل",
   "faild": "فشل",
   "all_times": "كل الأوقات",
-  "our physicians": "أطباؤنا",
+  "our_physicians": "أطباؤنا",
   "send": "أرسل",
   "successfully": "بنجاح",
   "positions held": "المناصب التي شغلها",
@@ -51,5 +50,5 @@
   "worker": "موظف",
   "all_departments": "جميع الأقسام",
   "career": "وظائف",
-  "virtual tour of almoosa specialist hospital": "جولة افتراضية لمستشفى الموسى التخصصي"
+  "virtual_tour_of_almoosa_specialist_hospital": "جولة افتراضية لمستشفى الموسى التخصصي"
 }

@@ -1,15 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { withTranslation, Link, i18n } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const History = ({ t }) => {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
-
+const History = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('about');
   return (
     <section className="history">
       <Container>
@@ -26,7 +24,7 @@ const History = ({ t }) => {
           <Col>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              xmlns="http://www.w3.org/1999/xlink"
+              // xmlns="http://www.w3.org/1999/xlink"
               width="1516.624"
               height="585"
               viewBox="0 0 1516.624 585"
@@ -449,4 +447,4 @@ const History = ({ t }) => {
     </section>
   );
 };
-export default withTranslation('about')(History);
+export default History;

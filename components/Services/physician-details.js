@@ -1,9 +1,14 @@
 import { Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import { strippedContent } from 'src/utils/helpers.js';
+import { useRouter } from 'next/router';
 
-const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
-  const { language } = i18n;
+const Index = ({ data, setcurrentDoctor, currentDoctor }) => {
+const { t } = useTranslation(['common', 'menu']);
+
+  const router = useRouter();
+  const { locale } = router;
+
 
   return (
     <div className="physician">
@@ -12,18 +17,18 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
         <Col lg={4} className="physician-img">
           <img
             src={currentDoctor.image}
-            alt={language && currentDoctor[language].name}
+            alt={locale && currentDoctor[locale].name}
             className="shadow"
           />
         </Col>
         <Col lg={{ size: 8 }} className="pl-sm-5 pr-4 pt-4">
           <h3 className="physician-name">
-            {language && currentDoctor[language]?.name}
+            {locale && currentDoctor[locale]?.name}
           </h3>
-          <p className="py-2">{language && currentDoctor[language]?.title}</p>
-          {language &&
-            currentDoctor[language]?.qualifications &&
-            currentDoctor[language].qualifications.length > 0 && (
+          <p className="py-2">{locale && currentDoctor[locale]?.title}</p>
+          {locale &&
+            currentDoctor[locale]?.qualifications &&
+            currentDoctor[locale].qualifications.length > 0 && (
               <>
                 <h3 className="physician-qualifications">
                   {t('common:qualifications')}
@@ -32,9 +37,9 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
                 <p>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: language
+                      __html: locale
                         ? strippedContent(
-                            currentDoctor[language]?.qualifications
+                            currentDoctor[locale]?.qualifications
                           )
                         : ''
                     }}
@@ -42,9 +47,9 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
                 </p>
               </>
             )}
-          {language &&
-            currentDoctor[language]?.current_positions &&
-            currentDoctor[language]?.current_positions.length > 0 && (
+          {locale &&
+            currentDoctor[locale]?.current_positions &&
+            currentDoctor[locale]?.current_positions.length > 0 && (
               <>
                 <h3 className="physician-position">
                   {t('common:current_positions')}
@@ -52,9 +57,9 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
                 <p>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: language
+                      __html: locale
                         ? strippedContent(
-                            currentDoctor[language]?.qualifications
+                            currentDoctor[locale]?.qualifications
                           )
                         : ''
                     }}
@@ -67,5 +72,4 @@ const index = ({ data, t, setcurrentDoctor, currentDoctor }) => {
     </div>
   );
 };
-
-export default withTranslation(['common', 'menu'])(index);
+export default Index;

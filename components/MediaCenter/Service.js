@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Link, i18n } from 'root/i18n';
-export default function Service({ item, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+export default function Service({ item, t }) {
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <>

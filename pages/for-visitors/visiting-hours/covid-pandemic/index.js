@@ -1,13 +1,17 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import CovidMessage from 'src/components/PatientGuide/For-Visitors/visiting-hours/covid-pandemic/CovidMessage';
 import Covid from 'src/components/PatientGuide/For-Visitors/visiting-hours/covid-pandemic';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 
 export default function index() {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   const seo = {
     ar: {
       title: 'جائحة مرض فيروس كورونا',
@@ -27,7 +31,7 @@ export default function index() {
       <Head data={seo}></Head>
       <Hero
         bg={
-          (language == 'ar' &&
+          (locale == 'ar' &&
             '/images/patient-guide/covid-pandemic/hero-ar.png') ||
           '/images/patient-guide/covid-pandemic/hero.png'
         }
@@ -45,4 +49,20 @@ export default function index() {
       <Covid />
     </div>
   );
+}
+ 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
+  };
 }

@@ -1,7 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { Link, withTranslation } from 'root/i18n';
-const emergyncyCall = ({ emergency_phone, t }) => {
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+
+const EmergyncyCall = ({ emergency_phone}) => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="emergyncyContainer">
       <Container className="position-relative">
@@ -27,5 +31,4 @@ const emergyncyCall = ({ emergency_phone, t }) => {
     </div>
   );
 };
-
-export default withTranslation('common')(emergyncyCall);
+export default EmergyncyCall;

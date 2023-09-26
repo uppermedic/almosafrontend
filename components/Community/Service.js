@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { i18n, Link } from 'root/i18n';
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 export default function Service({ item, index }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+  const router = useRouter();
+  const { locale } = router;
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   return (
     <Link href={`/${locale}/community/${item.en.slug}`}>
@@ -17,7 +16,7 @@ export default function Service({ item, index }) {
           style={{ backgroundImage: `url(${item.thumbnail})` }} // will be handle according to the slug
         >
           <div className={`text-center ribbon ribbon-${index}`}>
-            <h4>{language && item[language].title}</h4>
+            <h4>{locale && item[locale].title}</h4>
           </div>
         </div>
       </a>

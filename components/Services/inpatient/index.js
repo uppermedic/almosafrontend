@@ -1,4 +1,3 @@
-import { i18n, Link, withTranslation } from 'root/i18n';
 import React from 'react';
 import CustomTabs from 'components/layout/CustomTabs';
 import { useRouter } from 'next/router';
@@ -27,4 +26,5 @@ const Inpatient = ({ dataSectionTabs, dataSectionContent }) => {
     </section>
   );
 };
-export default withTranslation('common')(Inpatient);
+
+export default Inpatient;

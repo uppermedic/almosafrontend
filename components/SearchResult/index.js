@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { i18n, Link, withTranslation } from 'root/i18n';
-import ClassNames from 'classnames';
+import {useTranslation } from 'next-i18next';
 import { withRouter } from 'next/router';
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import ReactPaginate from 'react-paginate';
@@ -9,21 +8,19 @@ import PrevFC from 'src/components/layout/ReactPaginate/PrevFC';
 
 import ResultPost from './ResultPost';
 
-const Index = ({ data, router, t }) => {
+const Index = ({ data, router}) => {
+const { t } = useTranslation('common');
+
   const { last_page } = data;
-  const { language } = i18n;
+  const { locale,query } = router;
+
   const [search, setSearch] = useState('');
-  const [locale, setlocale] = useState('');
   const { page } = router?.query;
 
   useEffect(() => {
-    setSearch(router.query.search);
+    setSearch(query.search);
     return () => {};
   }, [router?.query?.search]);
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
 
   const handlePageClick = ({ selected }) => {
     router.push(
@@ -36,7 +33,7 @@ const Index = ({ data, router, t }) => {
       <Container>
         <Row>
           <Col>
-            <h2>{t('search_results')}</h2>
+            <h2>{t('search_result')}</h2>
           </Col>
         </Row>
         <Row className="inner-content">
@@ -96,7 +93,4 @@ const Index = ({ data, router, t }) => {
     </section>
   );
 };
-Index.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(withRouter(Index));
+export default (withRouter(Index));

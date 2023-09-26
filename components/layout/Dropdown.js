@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CN from 'classnames';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import {
   NavItem,
   DropdownToggle,
@@ -10,7 +11,9 @@ import {
 } from 'reactstrap';
 import { useRouter } from 'next/router';
 
-const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
+const DropdownMenuBar = ({ item, options, setIsOpen, locale }) => {
+  const { t } = useTranslation('menu');
+
   const router = useRouter();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
@@ -59,7 +62,4 @@ const DropdownMenuBar = ({ t, item, options, setIsOpen, locale }) => {
     </Dropdown>
   );
 };
-Dropdown.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('menu')(DropdownMenuBar);
+export default DropdownMenuBar;

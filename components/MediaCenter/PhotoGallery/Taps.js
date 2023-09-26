@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link, i18n, withTranslation } from 'root/i18n';
+import { useRouter } from 'next/router';
 
-const Taps = ({ t, tap, handleClick, tapId }) => {
-  const lang = i18n.language;
+const Taps = ({tap, handleClick, tapId }) => {
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <li className="tap mx-1" onClick={handleClick}>
       <a className={tapId === tap.id ? 'active' : ''}>
-        {lang && tap[lang].title}
+        {locale && tap[locale].title}
       </a>
     </li>
   );
 };
 
-export default withTranslation('common')(Taps);
+export default Taps;

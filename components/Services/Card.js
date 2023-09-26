@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Link, i18n, withTranslation } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { strippedContent, truncate } from 'src/utils/helpers';
+import { useRouter } from 'next/router';
 
-function PatientFeatures({ t, item }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
+function PatientFeatures({ item }) {
+const { t } = useTranslation('common');
 
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <div className="card-item">
       <Link href={`/${locale}/${item.path}` || '#'}>
         <a>
-          <h3>{language && truncate(item[language]?.title, 20, '...')}</h3>
+          <h3>{locale && truncate(item[locale]?.title, 20, '...')}</h3>
         </a>
       </Link>
       <p>
         <div
           dangerouslySetInnerHTML={{
             __html:
-              (language &&
+              (locale &&
                 truncate(
-                  strippedContent(item[language]?.excerpt || ''),
+                  strippedContent(item[locale]?.excerpt || ''),
                   100,
                   '...'
                 )) ||
@@ -41,7 +41,4 @@ function PatientFeatures({ t, item }) {
   );
 }
 
-PatientFeatures.getInitialProps = async context => ({
-  namespacesRequired: ['common']
-});
-export default withTranslation('common')(PatientFeatures);
+export default PatientFeatures;

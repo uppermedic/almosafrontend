@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
 import RegistrationPopup from './RegistrationPopup';
 import { postData, fetchData } from 'src/store/Request';
 import Swal from 'sweetalert2';
+import { useRouter } from 'next/router';
 const TEST_SITE_KEY = '6LeVVRIaAAAAAC6mKFfCOeZKUX-vv9hFQlwIVDbj';
 
 const data = [
@@ -133,8 +133,11 @@ const data = [
     }
   }
 ];
-const Register = ({ t }) => {
-  const lang = i18n.language;
+const Register = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
+
   const [verified, setVerified] = useState(false);
   const [open, setopen] = useState(false);
   let _reCaptchaRef = useRef(null);
@@ -157,14 +160,14 @@ const Register = ({ t }) => {
         ) {
           Swal.fire(
             t('faild'),
-            (lang == 'en' && 'The event/course you register to not exist') ||
+            (locale == 'en' && 'The event/course you register to not exist') ||
               'الحدث/الدورة الذي قمت بتسجيله غير موجود ',
             'error'
           );
         } else {
           Swal.fire(
             t('faild'),
-            (lang == 'en' && 'Unexpected error occurred') ||
+            (locale == 'en' && 'Unexpected error occurred') ||
               'حدث خطأ غير متوقع ',
             'error'
           );
@@ -181,7 +184,7 @@ const Register = ({ t }) => {
       <Container>
         <Row>
           <Col>
-            <h2> {lang == 'en' ? 'Registration Form' : 'إستمارة تسجيل'}</h2>
+            <h2> {locale == 'en' ? 'Registration Form' : 'إستمارة تسجيل'}</h2>
           </Col>
         </Row>
         <AvForm onValidSubmit={handleValidSubmit}>
@@ -191,16 +194,16 @@ const Register = ({ t }) => {
                 <AvField
                   name={item.name}
                   label={
-                    (lang && item[lang].label) + (item.required ? ' *' : '')
+                    (locale && item[locale].label) + (item.required ? ' *' : '')
                   }
-                  placeholder={lang && item[lang].label}
+                  placeholder={locale && item[locale].label}
                   type={item.type}
                   required={item.required}
                   validate={{
                     required: {
                       value: item.required,
                       errorMessage:
-                        lang && item.required && item[lang].validate_message
+                        locale && item.required && item[locale].validate_message
                     }
                   }}
                 />
@@ -228,5 +231,4 @@ const Register = ({ t }) => {
     </section>
   );
 };
-
-export default withTranslation('common')(Register);
+export default Register;

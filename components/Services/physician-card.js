@@ -1,8 +1,10 @@
 import React from 'react';
-import { i18n } from 'root/i18n';
+import { useRouter } from 'next/router';
 
 const Physician = ({ doctor, setcurrentDoctor }) => {
-  const { language } = i18n;
+  const router = useRouter();
+  const { locale } = router;
+
   const handleClick = () => {
     setcurrentDoctor(doctor);
     if (window.innerWidth < 992) {
@@ -13,10 +15,10 @@ const Physician = ({ doctor, setcurrentDoctor }) => {
   };
   return (
     <div className="card" onClick={handleClick}>
-      <img src={doctor.image} alt={language && doctor[language].name} />
+      <img src={doctor.image} alt={locale && doctor[locale].name} />
       <div className="banner">
-        <h4>{language && doctor[language].name}</h4>
-        <p>{language && doctor[language].title}</p>
+        <h4>{locale && doctor[locale].name}</h4>
+        <p>{locale && doctor[locale].title}</p>
       </div>
     </div>
   );

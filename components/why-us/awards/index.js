@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
 import SideTabs from 'components/layout/DynamicRouteTabs';
 import { dataAboutTabs } from 'utils/datafile';
 import PageContent from 'components/reusableComponents/PageContent';
 
 import Card from './Card';
 
-const index = ({ contentData }) => {
+const Index = ({ contentData }) => {
   return (
     <section className="awards">
       <div className="container-fluid">
@@ -19,11 +18,6 @@ const index = ({ contentData }) => {
             {contentData?.length > 0 &&
               contentData?.map(cont => (
                 <>
-                  {/* <Row>
-                    <Col>
-                      <h2>{language && cont[language]?.title}</h2>
-                    </Col>
-                  </Row> */}
                   <PageContent itemContent={cont} />
 
                   <Container>
@@ -46,4 +40,4 @@ const index = ({ contentData }) => {
   );
 };
 
-export default withTranslation('menu')(index);
+export default Index;

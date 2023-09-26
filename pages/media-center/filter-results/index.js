@@ -10,7 +10,7 @@ import {
 import { fetchData } from 'src/store/Request.js';
 import Head from 'src/components/layout/head';
 import Content from 'src/components/MediaCenter/FilterResults';
-import { i18n } from 'root/i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Index = ({
   tags,
@@ -21,7 +21,6 @@ const Index = ({
   getNewsTags,
   getNewsCategories
 }) => {
-  const lang = i18n.language;
   const seo = {
     ar: {
       title: 'مستشفى الموسى',
@@ -55,6 +54,7 @@ const Index = ({
 };
 export async function getServerSideProps(context) {
   //settings
+  const locale = context.locale;
   const { page, cats, tag } = context.query;
   let { error, data } = await fetchData(
     encodeURI(`/blog/articles?cats=${cats}&tags=${tag}&page=${page}`)
@@ -65,7 +65,18 @@ export async function getServerSideProps(context) {
     };
   }
   return {
-    props: { data }
+    props: {
+      data,
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'about',
+        'news',
+        'menu',
+        'header',
+        'footer',
+        'patient_guide'
+      ]))
+    }
   };
 }
 

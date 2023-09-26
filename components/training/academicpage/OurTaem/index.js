@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import TeamItem from './TeamItem';
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
-function OurTeam({ ourTeamData, t }) {
-  const lang = i18n.language;
+function OurTeam({ ourTeamData }) {
+const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const { locale } = router;
+
   const [objectIndex, setobjectIndex] = useState(4);
   const [showToggle, setshowToggle] = useState(false);
 
@@ -23,7 +28,7 @@ function OurTeam({ ourTeamData, t }) {
         <Row>
           <Col>
             <h2 className="section-title">
-              {lang == 'en' ? 'Our Team' : 'فريقنا'}
+              {locale == 'en' ? 'Our Team' : 'فريقنا'}
             </h2>
           </Col>
         </Row>
@@ -51,5 +56,4 @@ function OurTeam({ ourTeamData, t }) {
     </section>
   );
 }
-
-export default withTranslation('common')(OurTeam);
+export default OurTeam;

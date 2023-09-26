@@ -3,10 +3,12 @@ import Head from 'src/components/layout/head';
 import Hero from 'src/components/layout/Hero';
 import EventsPage from 'components/training/eventsPage';
 import { fetchData } from 'src/store/Request.js';
-import { i18n, withTranslation } from 'root/i18n';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const EventsTraning = ({ eventData, educationData, t }) => {
-  const lang = i18n.language;
+const EventsTraning = ({ eventData, educationData}) => {
+  const { t } = useTranslation('menu');
+
   return (
     <div className="training-education">
       <Head data={educationData.page.seo}></Head>
@@ -22,6 +24,16 @@ const EventsTraning = ({ eventData, educationData, t }) => {
 
 export async function getServerSideProps(context) {
   const { page } = context.query;
+  const locale =context.locale
+  const tranlation = await serverSideTranslations(locale, [
+    'common',
+    'about',
+    'news',
+    'menu',
+    'header',
+    'footer',
+    'patient_guide'
+  ]);
   const tst = Promise.all([
     fetchData('/education'),
     fetchData(`/education/type/event?page=${page}`)
@@ -38,7 +50,8 @@ export async function getServerSideProps(context) {
       return {
         props: {
           educationData,
-          eventData
+          eventData,
+          ...tranlation
         }
       };
     }
@@ -47,4 +60,5 @@ export async function getServerSideProps(context) {
   return tst;
 }
 
-export default withTranslation(['menu'])(EventsTraning);
+export default EventsTraning;
+ 

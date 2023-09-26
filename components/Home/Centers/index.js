@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import dynamic from 'next/dynamic';
 import CenterItem from './CenterItem';
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
-import { i18n, Link, withTranslation } from 'root/i18n';
+import { useTranslation} from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-function Centers({ data, t }) {
-  const { language } = i18n;
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
-
+export default function Centers({ data }) {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation('common');
   return (
     <section className="home-centers">
       <Container>
         <Row>
           <Col>
             <h3 className="section-title-center">
-              {language == 'en' ? 'Centers' : 'المراكز'}
+              {locale == 'en' ? 'Centers' : 'المراكز'}
             </h3>
           </Col>
         </Row>
@@ -80,5 +78,3 @@ function Centers({ data, t }) {
     </section>
   );
 }
-
-export default withTranslation('common')(Centers);

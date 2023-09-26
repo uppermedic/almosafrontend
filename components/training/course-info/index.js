@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link, i18n, withTranslation } from 'root/i18n';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
 import { Container, Row, Col } from 'reactstrap';
-import { strippedContent } from 'src/utils/helpers';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const index = ({ data, t }) => {
-  const { language } = i18n;
+
+const Index = ({ data }) => {
+const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const { locale } = router;
+
   const monthNames = [
     'January',
     'February',
@@ -26,12 +32,6 @@ const index = ({ data, t }) => {
     sessionStorage.setItem('reg_id', data.id);
   };
 
-  const [locale, setlocale] = useState('');
-
-  useEffect(() => {
-    setlocale(language);
-  }, [language]);
-
   return (
     <section className="course-info">
       <Container>
@@ -40,7 +40,7 @@ const index = ({ data, t }) => {
             <img src={data.image} alt="course-info" />
           </Col>
           <Col md={6} className="info">
-            <h2> {language && data[language].title} </h2>
+            <h2> {locale && data[locale].title} </h2>
             <div className="date-location">
               <ul>
                 <li>
@@ -59,7 +59,7 @@ const index = ({ data, t }) => {
                 </li>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  {language && data[language].location}
+                  {locale && data[locale].location}
                 </li>
               </ul>
             </div>
@@ -70,29 +70,29 @@ const index = ({ data, t }) => {
               </p>
               <p>
                 <i className="fas fa-microphone"></i>
-                {language && data[language].speaker_name}
+                {locale && data[locale].speaker_name}
               </p>
             </div>
             <Link href={`/${locale}/training-education/register`}>
               <a>
                 <button onClick={handleClickReg}>
-                  {language == 'en' ? 'Register' : 'سجل الأن'}
+                  {locale == 'en' ? 'Register' : 'سجل الأن'}
                 </button>
               </a>
             </Link>
           </Col>
         </Row>
-        {language && data[language]?.content && (
+        {locale && data[locale]?.content && (
           <Row className="about pb-5">
             <Col xs={12}>
-              <h2>{language == 'en' ? 'About THE Course' : 'عن الدورة'}</h2>
+              <h2>{locale == 'en' ? 'About THE Course' : 'عن الدورة'}</h2>
             </Col>
             <Col xs={12}>
               <p>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: data[language]?.content
-                      ? data[language].content
+                    __html: data[locale]?.content
+                      ? data[locale].content
                       : ''
                   }}
                 />
@@ -103,21 +103,21 @@ const index = ({ data, t }) => {
         {data?.timelines?.length > 0 && (
           <Row className="topics">
             <Col xs={12} className="mb-3">
-              <h2> {language == 'en' ? 'Topics Time line:' : 'المواعيد'} </h2>
+              <h2> {locale == 'en' ? 'Topics Time line:' : 'المواعيد'} </h2>
             </Col>
             <Col xs={12}>
               {data.timelines.map((time, index) => {
                 return (
                   <div key={index}>
-                    <h4>{language && time[language].title} :</h4>
+                    <h4>{locale && time[locale].title} :</h4>
                     <div className="times">
                       <p>
                         <span> {time.start.slice(0, -3)} </span> :{' '}
                         <span>{time.end.slice(0, -3)}</span>
                       </p>
                       <p className="lecture">
-                        {language == 'en' ? 'Lecture' : 'محاضرة'} :
-                        <span> {language && time[language].lecture_title}</span>
+                        {locale == 'en' ? 'Lecture' : 'محاضرة'} :
+                        <span> {locale && time[locale].lecture_title}</span>
                       </p>
                     </div>
                   </div>
@@ -131,4 +131,4 @@ const index = ({ data, t }) => {
   );
 };
 
-export default withTranslation('common')(index);
+export default Index;

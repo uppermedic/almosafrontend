@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { i18n, withTranslation } from 'root/i18n';
+import {useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 
-const index = ({ t }) => {
+const Index = () => {
   const router = useRouter();
-  const lang = i18n.language;
+  const { locale } = router;
+  const { t } = useTranslation('common');
 
   return (
     <section className="career">
@@ -17,7 +18,7 @@ const index = ({ t }) => {
         </Row>
         <Row className="section-content">
           <Col>
-            {lang == 'en' && (
+            {locale == 'en' && (
               <p>
                 Almoosa Specialist Hospital employs 2,000 of the best medical,
                 technical and administrative staff from more than 30
@@ -45,7 +46,7 @@ const index = ({ t }) => {
               </p>
             )}
 
-            {lang == 'ar' && (
+            {locale == 'ar' && (
               <p>
                 يعمل في الوقت الراهن بالمستشفى نحو 2000 موظف من أفضل الكوادر
                 الطبية والفنية والادارية، يتبعون أكثر من 30 جنسية حول العالم،
@@ -76,5 +77,4 @@ const index = ({ t }) => {
     </section>
   );
 };
-
-export default withTranslation('common')(index);
+export default Index;
