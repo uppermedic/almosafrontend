@@ -48,4 +48,4 @@ export async function getServerSideProps({locale}) {
   };
 }
 
-export default GoldenDesignation;
+export default GoldenDesignationPage;
