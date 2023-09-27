@@ -6,7 +6,7 @@ import { fetchData } from 'src/store/Request.js';
 import { useRouter } from 'next/router';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const GoldenDesignation = ({ data }) => {
+const GoldenDesignationPage = ({ data }) => {
   const router = useRouter();
   const { locale } = router;
 
